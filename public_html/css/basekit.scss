@@ -1,93 +1,108 @@
 @charset "UTF-8";
 
 // GLOBAL SETTINGS
-@import "settings/set.base-colors";
-@import "settings/set.layout";
-@import "settings/set.text";
-@import "settings/set.animation";
-@import "settings/set.nav";
-@import "settings/set.media";
-@import "settings/set.forms";
-@import "settings/set.links";
-@import "settings/set.icons";
-@import "settings/set.user-content";
-@import "settings/set.border-radius";
-@import "settings/set.tables";
-@import "settings/set.hider";
-@import "settings/set.misc";
+@import
+  "settings/set.base-colors",
+  "settings/set.layout",
+  "settings/set.text",
+  "settings/set.animation",
+  "settings/set.nav",
+  "settings/set.media",
+  "settings/set.forms",
+  "settings/set.links",
+  "settings/set.icons",
+  "settings/set.user-content",
+  "settings/set.border-radius",
+  "settings/set.tables",
+  "settings/set.hider",
+  "settings/set.misc",
+  "settings/vendor.set.animate";
 
 // THIRD PARTY TOOLS
-@import "core/vendor.tool.unit-conversion";
-@import "core/vendor.tool.media-queries";
-@import "core/vendor.tool.reverse-list";
-@import "core/vendor.tool.andy";
-@import "core/vendor.tool.pesticide";
+@import
+  "core/vendor.tool.unit-conversion",
+  "core/vendor.tool.media-queries",
+  "core/vendor.tool.reverse-list",
+  "core/vendor.tool.andy",
+  "core/vendor.tool.pesticide";
 
 // MIXINS & FUNCTONS
-@import "core/tool.colums";
-@import "core/tool.colums-span";
-@import "core/tool.image-url";
-@import "core/tool.percentage";
-@import "core/tool.rem";
-@import "core/tool.attribute-module";
-@import "core/tool.fit-media";
-@import "core/tool.position-over";
-@import "core/tool.inline-block";
-@import "core/tool.z-index";
-@import "core/tool.aspect-ratio";
-@import "core/tool.strip-unit";
-@import "core/tool.ios-smooth-scroll";
-@import "core/tool.transforms";
-@import "core/tool.viewport-unit-convert";
-@import "core/tool.viewport-font.scss";
+@import
+  "core/tool.colums",
+  "core/tool.colums-span",
+  "core/tool.image-url",
+  "core/tool.percentage",
+  "core/tool.rem",
+  "core/tool.attribute-module",
+  "core/tool.fit-media",
+  "core/tool.position-over",
+  "core/tool.inline-block",
+  "core/tool.z-index",
+  "core/tool.aspect-ratio",
+  "core/tool.strip-unit",
+  "core/tool.ios-smooth-scroll",
+  "core/tool.transforms",
+  "core/tool.viewport-unit-convert",
+  "core/tool.viewport-font.scss";
 
 // LAYOUT GRID
-@import "core/grid.alignment";
-@import "core/grid.columns";
-@import "core/grid.indent";
-@import "core/grid.gutters";
+@import
+  "core/grid.alignment",
+  "core/grid.columns",
+  "core/grid.indent",
+  "core/grid.gutters";
 
 // GLOBALS
-@import "core/global.box-model";
-@import "core/global.document";
-@import "core/global.text";
-@import "core/global.media";
-@import "core/global.tables";
-@import "core/global.forms";
+@import
+  "core/global.box-model",
+  "core/global.document",
+  "core/global.text",
+  "core/global.media",
+  "core/global.tables",
+  "core/global.forms";
 
 // UTILITY CLASSES
-@import "core/utility.display";
-@import "core/utility.alignment";
-@import "core/utility.margins";
-@import "core/utility.padding-spacer";
-@import "core/utility.position-over";
-@import "core/utility.site-width";
-@import "core/utility.fit-media";
-@import "core/utility.hide";
-@import "core/utility.icons";
-@import "core/utility.list-styles";
-@import "core/utility.border-corners";
-@import "core/utility.error";
-@import "core/utility.nav";
-@import "core/utility.user-content";
-@import "core/utility.overflow-text";
-@import "core/utility.float";
+@import
+  "core/utility.display",
+  "core/utility.alignment",
+  "core/utility.margins",
+  "core/utility.padding-spacer",
+  "core/utility.position-over",
+  "core/utility.site-width",
+  "core/utility.fit-media",
+  "core/utility.hide",
+  "core/utility.icons",
+  "core/utility.list-styles",
+  "core/utility.border-corners",
+  "core/utility.error",
+  "core/utility.nav",
+  "core/utility.user-content",
+  "core/utility.overflow-text",
+  "core/utility.float";
 
 // LAYOUT GRID UTILITY CLASSES
-@import "core/grid.builder";
+@import
+  "core/grid.builder";
+
+// THIRD PARTY PACKAGES
+@import
+  "core/animate-sass/animate",
+  "core/vendor.utility.animate";
 
 // ————————————————————————————————————————————————————————————————————————————
 // PROJECT FILES:
 // ————————————————————————————————————————————————————————————————————————————
 
 // UTILITY CLASSES
-@import "utility.site-colors";
-@import "utility.site-backgrounds";
-@import "utility.site-text";
-@import "utility.site-links";
+@import
+  "utility.site-colors",
+  "utility.site-backgrounds",
+  "utility.site-text",
+  "utility.site-links";
 
 // COMPONENTS
-@import "component.site-logo";
-@import "component.site-footer";
-@import "component.buttons";
-@import "component.site-mobile-nav";
+@import
+  "component.site-logo",
+  "component.site-footer",
+  "component.buttons",
+  "component.site-mobile-nav";
