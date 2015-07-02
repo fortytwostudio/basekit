@@ -85,13 +85,15 @@
       <section class="pad--large" id="fonts">
         <h1 class="font--xxl  margin--b  color--primary">Grid system</h1>
 
-        <div class="userContent">
-          <p>The <i>basekit</i> grid system or scaffolding uses the <code>data-bkg</code> attribute as opposed to more traditional classes. This allows style and layout structure to remain separate from each other.</p>
+        <div data-bkg="gtr:0  lap:7" class="userContent  pad--small--bottom">
+          <div data-bkg class="bg--white">
+            <p>The <i>basekit</i> grid system or scaffolding uses the <code>data-bkg</code> attribute as opposed to more traditional classes. This allows style and layout structure to remain separate from each other.</p>
 
-          <p>All column widths can be defined at each breakpoint defined in the <code>$mq-breakpoints</code> variable, this also includes up <code>to:</code> each breakpoint.</p>
+            <p>All column widths can be defined at each breakpoint defined in the <code>$mq-breakpoints</code> variable, this also includes up <code>to:</code> each breakpoint.</p>
+          </div>
         </div>
 
-        <ul class="color--white  pad--bottom  pad--small--top">
+        <ul class="color--white  pad--bottom">
           <li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
           --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
           --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
@@ -155,12 +157,21 @@
       <section class="pad--large" id="fonts">
         <h1 class="font--xxl  margin--b  color--primary">Font sizing</h1>
 
-        <h1 class="font--s">Font sizing<br> and line-height test LYoWAT</h1>
-        <h1>Font sizing<br> and line-height test LYoWAT</h1>
-        <h1 class="font--l ">Font sizing<br> and line-height test LYoWAT</h1>
-        <h1 data-bkg="lap:6  gtr:r" class="font--xl  margin--b">Font sizing<br> and line-height test LYoWAT</h1>
+        <div data-bkg="gtr:0  lap:7" class="userContent  pad--small--bottom">
+          <div data-bkg class="bg--white">
+            <p>The font utility defines a standard set of classes to handle various font styles but primarily responsive font sizing. The examples below demonstrate fixed small and default font sizes alongside three font sizes that scale with the browser width until it reaches a specified min-width.</p>
+          </div>
+        </div>
 
-        <div class="setLinks  setLinks--inverted"><h1 class="color--tertiary  font--xxl  margin--b"><a href="#">Font sizing<br> and line-height test</a> LYoWAT</h1></div>
+        <h1 class="font--s  margin--b">Font sizing - small<br> line-height and kerning test LYoWAT</h1>
+
+        <h1 class="margin--b">Font sizing - default<br> line-height and kerning test LYoWAT</h1>
+
+        <h1 class="font--l  margin--b">Font sizing - <span class="font--normal">large</span><br> line-height and kerning test LYoWAT</h1>
+
+        <h1 class="font--xl  margin--b">Font sizing - <span class="font--normal">extra-large</span><br> line-height and kerning test LYoWAT</h1>
+
+        <h1 class="font--xxl">Font sizing - <span class="font--normal">extra-extra-large</span><br> line-height and kerning test LYoWAT</h1>
       </section>
 
 
@@ -169,6 +180,12 @@
 
       <section class="pad--large" id="link">
         <h1 class="font--xxl  margin--b  color--primary">Links &amp; buttons</h1>
+
+        <div data-bkg="gtr:0  lap:7" class="userContent  pad--small--bottom">
+          <div data-bkg class="bg--white">
+            <p>The font utility defines a standard set of classes to handle various font styles but primarily responsive font sizing. The examples below demonstrate fixed small and default font sizes alongside three font sizes that scale with the browser width until it reaches a specified min-width.</p>
+          </div>
+        </div>
 
         <div class="userContent  setLinks">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. <a href="#">Sed dapibus est id enim facilisis</a>, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
@@ -197,9 +214,13 @@
       <section class="pad--large" id="padding">
         <h1 class="font--xxl  margin--b  color--primary">Padding spacer</h1>
 
-        <p>The padding (spacer) utility class is used to space out blocks of content across the x-axis. This class will over-ride the <i>basekit</i> grid padding.</p>
+        <div data-bkg="gtr:0  lap:7" class="userContent  pad--small--bottom">
+          <div data-bkg class="bg--white">
+            <p>The padding (spacer) class is used to space out blocks of content across the x-axis. This class will over-ride the <i>basekit</i> grid padding.</p>
+          </div>
+        </div>
 
-        <div class="font--l  align--center  color--white  pad--small--top">
+        <div class="font--l  align--center  color--white">
           <div class="pad--small  bg--secondary--light"><code>pad--small</code></div>
           <div class="pad  bg--secondary"><code>pad</code></div>
           <div class="pad--large  bg--secondary--dark"><code>pad--large</code></div>
@@ -208,8 +229,8 @@
           <div class="pad--top  align--center  bg--tertiary--dark"><code>pad--top</code></div>
         </div>
 
-        <div class="pad--top  pad--large--bottom">
-          <div data-bkg="gtr:large" class="bg--white">
+        <div data-bkg="gtr:0  lap:7" class="pad--small--top  pad--large--bottom">
+          <div data-bkg class="bg--white">
             <h2 class="font--m  margin--b">Additional options include:</h2>
 
             <ul class="list--bulleted">
