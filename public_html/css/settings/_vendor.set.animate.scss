@@ -1,0 +1,125 @@
+// Base module settings
+$base-duration: 1s;
+$base-origin: top center;
+
+// used in fade, shake and bounce modules
+$base-distance: 10px;
+
+// used in fadeBig and bounce modules
+$base-distance-big: 1000px;
+
+// Fade Enter
+$use-fadeIn:	false;
+$use-fadeInUp 			:	false;
+$use-fadeInUpBig 		:	false;
+$use-fadeInDown 		:	false;
+$use-fadeInDownBig 		:	false;
+$use-fadeInLeft 		:	false;
+$use-fadeInLeftBig 		:	false;
+$use-fadeInRight 		:	false;
+$use-fadeInRightBig 	:	false;
+
+
+// Fade Exit
+$use-fadeOut			:   false;
+$use-fadeOutUp			:	false;
+$use-fadeOutUpBig   	:	false;
+$use-fadeOutDown		:	false;
+$use-fadeOutDownBig 	:	false;
+$use-fadeOutLeft		:	false;
+$use-fadeOutLeftBig 	:	false;
+$use-fadeOutRight		:	false;
+$use-fadeOutRightBig	:	false;
+
+
+// Bounce Enter
+$use-bounceIn			:	false;
+$use-bounceInUp			: 	false;
+$use-bounceInDown 		: 	false;
+$use-bounceInLeft 		: 	false;
+$use-bounceInRight 		: 	false;
+
+
+// Bounce Exit
+$use-bounceOut			:	false;
+$use-bounceOutUp		: 	false;
+$use-bounceOutDown 		: 	false;
+$use-bounceOutLeft 		: 	false;
+$use-bounceOutRight 	: 	false;
+
+
+
+// Rotate Enter
+$use-rotateIn 			:	false;
+$use-rotateInUpLeft 	: 	false;
+$use-rotateInUpRight 	: 	false;
+$use-rotateInDownLeft 	: 	false;
+$use-rotateInDownRight 	: 	false;
+
+
+// Rotate Exit
+$use-rotateOut 			:	false;
+$use-rotateOutUpLeft 	: 	false;
+$use-rotateOutUpRight 	: 	false;
+$use-rotateOutDownLeft 	: 	false;
+$use-rotateOutDownRight : 	false;
+
+
+// Slide Enter
+$use-slideIn			:   false;
+$use-slideInUp			:   false;
+$use-slideInDown		:   false;
+$use-slideInLeft		:   false;
+$use-slideInRight		:   false;
+
+// Slide Exit
+$use-slideOut			:   false;
+$use-slideOutUp			:   false;
+$use-slideOutDown		:   false;
+$use-slideOutLeft		:   false;
+$use-slideOutRight		:   false;
+
+// Flippers
+$use-flip				:	false;
+$use-flipInX			:	false;
+$use-flipInY			:	false;
+$use-flipOutX			:	false;
+$use-flipOutY			:	false;
+
+
+// Lightspeed
+$use-lightSpeedIn 		:	false;
+$use-lightSpeedOut 		:	false;
+
+
+// Attention Seekers
+$use-bounce				:	true;
+$use-flash				:	false;
+$use-pulse				:	false;
+$use-wiggle				:	false;
+$use-swing				:	false;
+$use-shake				:	false;
+$use-tada				:	false;
+$use-wobble				:	false;
+
+
+// Special
+$use-hinge				:	false;
+$use-rollIn				: 	false;
+$use-rollOut 			:	false;
+
+
+// Zoom In
+$use-zoomIn 			:	false;
+$use-zoomInDown 		:	false;
+$use-zoomInLeft 		:	false;
+$use-zoomInRight 		:	false;
+$use-zoomInUp 			:	false;
+
+
+// Zoom Out
+$use-zoomOut			:	false;
+$use-zoomOutDown		:	false;
+$use-zoomOutLeft		:	false;
+$use-zoomOutRight		:	false;
+$use-zoomOutUp			:	false;

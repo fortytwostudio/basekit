@@ -11,6 +11,7 @@ body {
   background: $body unquote($body-media);
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
+  backface-visibility: hidden;
   @if $ios-smooth-scroll {
     @include smooth-scroll
   }
