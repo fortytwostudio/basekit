@@ -54,6 +54,9 @@ $alignment-css: true;
 // Output the fit-media utility class.
 $fit-media-css: true;
 
+// Output CSS for the fit-media fallback.
+$fit-media-fallback-css: true;
+
 // Output the margin utility class.
 $margin-css: true;
 
@@ -103,3 +106,10 @@ $_16-9: 56.25%;
 $_1-1: $whole;
 $_2-1: $half;
 $_4-3: $half * 3;
+
+// Set some base z-index layers to work with
+$z-layers: (
+  "min": 1,
+  "content": 100,
+  "max": 200
+);
