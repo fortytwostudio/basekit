@@ -1,4 +1,4 @@
-@mixin fit-media($fit-pct: 100%, $fit-flip-position: left, $fit-adjust-z-index: 5000) {
+@mixin fit-media($fit-pct: 100%, $fit-flip-position: left, $fit-adjust-z-index: z(fit-media)) {
 
   position: absolute;
   z-index: $fit-adjust-z-index;

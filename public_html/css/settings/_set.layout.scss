@@ -111,5 +111,8 @@ $_4-3: $half * 3;
 $z-layers: (
   "min": 1,
   "content": 100,
-  "max": 200
+  "fit-media": 200,
+  "position-over": 300,
+  "mobile-nav": 400,
+  "max": 500
 );

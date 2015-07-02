@@ -223,7 +223,7 @@ input[type="button"] {
   .position-over__item {
     top: 0;
     position: absolute;
-    z-index: 10000; }
+    z-index: 300; }
     .position-over__item--tr {
       right: 0; }
     .position-over__item--br {
@@ -276,7 +276,7 @@ input[type="button"] {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: absolute;
-  z-index: 5000;
+  z-index: 200;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1684,7 +1684,7 @@ input[type="button"] {
       padding-top: 4.07801418%; } }
   .siteLogo a {
     position: absolute;
-    z-index: 5000;
+    z-index: 200;
     top: 0;
     right: 0;
     bottom: 0;
@@ -1743,7 +1743,7 @@ input[type="button"] {
       width: 100%; }
     .mobile-nav__list {
       position: absolute;
-      z-index: 1000;
+      z-index: 400;
       width: 100%; }
     .mobile-nav__item {
       display: block;
