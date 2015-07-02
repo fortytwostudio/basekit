@@ -1,0 +1,12 @@
+// Enable hider utility.
+$hidden-css: true;
+
+// Make responsive for hiding at specific breakpoints.
+$hidden-responsive: true;
+
+// Either use the default $mq-breakpoints or define your own breakpoints in a
+// Sass list.
+$hidden-responsive-breakpoints: $mq-breakpoints;
+
+// Enable utility to hide text (not responsive)
+$hide-text-css: true;

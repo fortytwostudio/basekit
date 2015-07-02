@@ -1,4 +1,4 @@
-@if $visually-hidden-css {
+@if $hidden-css {
   .hide {
     clip: rect(0 0 0 0);
     position: absolute;
@@ -8,5 +8,32 @@
     margin: -1px;
     overflow: hidden;
     border: 0;
+  }
+
+  @if $hidden-responsive {
+    @each $mq-name, $mq-unit in $hidden-responsive-breakpoints {
+      @include mq($until: $mq-name) {
+        .hide-until-#{$mq-name} {
+          clip: rect(0 0 0 0);
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+@if $hide-text-css {
+  .hide-text {
+    display: block;
+    height: 100%;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
   }
 }
