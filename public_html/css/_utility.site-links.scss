@@ -1,0 +1,30 @@
+@if $link-scope-css {
+
+  @each $link, $linkVal in $links {
+
+    $emphasize: map-get($linkVal, emphasize);
+    $emphasize-hover: map-get($linkVal, emphasize-hover);
+
+    .#{unquote($link-scope-name)}#{if($link, "--#{$link}", "")} {
+      a {
+        color: map-get($linkVal, color);
+        @if $emphasize {
+          font-weight: unquote($emphasize);
+        }
+
+        // Only output on the base level link style
+        @if $link == null {
+          transition: color $speed-normal ease;
+        }
+      }
+      a:hover,
+      a:focus {
+        color: map-get($linkVal, color-hover);
+        @if $emphasize-hover {
+          font-weight: unquote($emphasize-hover);
+        }
+      }
+    }
+
+  }
+}

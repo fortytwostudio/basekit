@@ -1,0 +1,12 @@
+@if $fit-media-css {
+
+  .fit-media {
+    @include transform-style(preserve-3d);
+    @include fit-media;
+
+    &--fallback {
+      z-index: 1;
+    }
+  }
+
+}

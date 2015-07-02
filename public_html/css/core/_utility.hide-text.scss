@@ -1,0 +1,11 @@
+@if $hide-text-css {
+
+  .hide-text {
+    display: block;
+    height: 100%;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+  }
+
+}

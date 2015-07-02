@@ -1,0 +1,40 @@
+/// Adapted from Eduardo Boucas's mixin
+/// https://eduardoboucas.com/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html
+///
+/// @example scss - 5vw font size (with 40px fallback),
+///                 minumum of 35px and maximum of 150px
+///                 and viewport unit of vh
+///  @include responsive-font(50px, 35px, 150px, 40px, vh);
+///
+@mixin responsive-font($size, $min: false, $max: false, $fallback: false, $unit: vw, $breakpoint: hands) {
+
+  // If the unit dimension is vh then set MQs to height based, otherwise use width
+  $dimension: if($unit == 'vh', 'height', 'width');
+
+  // Define the minimum breakpoint
+  @if $max {
+    $min-breakpoint: em(map-get($mq-breakpoints, $breakpoint));
+
+    // Set the minimum breakpoint font size in px
+    @media (max-#{$dimension}: #{$min-breakpoint}) {
+      @include rem(font-size, $min);
+    }
+  }
+
+  // If there's a max value (based on site $font-viewport-unit-max-width then set the max font size in px)
+  @if $max {
+    $max-breakpoint: px($font-viewport-unit-max-width);
+
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      @include rem(font-size, $max);
+    }
+  }
+
+  // Output the fallback font size in px if necessary
+  @if $fallback {
+    @include rem(font-size, $fallback);
+  }
+
+  // Finally output the real thing converting from px to vw or vh
+  font-size: vp($size, $unit);
+}

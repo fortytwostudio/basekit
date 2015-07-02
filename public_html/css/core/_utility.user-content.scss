@@ -1,0 +1,40 @@
+@if $user-content-css {
+
+  .#{unquote($user-content-name)} {
+
+    p:not(:last-of-type) {
+      @include rem(margin-bottom, px($margin));
+    }
+
+    @if $user-content-inline-images {
+      p, li {
+        img {
+          @include inline-block(middle);
+        }
+      }
+    }
+
+    ul {
+      @include rem(margin-left, 17px);
+      @include rem(margin-bottom, px($margin));
+      & > li {
+        list-style: disc outside none;
+      }
+      & ul {
+        margin-bottom: 0;
+      }
+    }
+
+    ol {
+      @include rem(margin-left, 30px);
+      @include rem(margin-bottom, px($margin));
+      & > li {
+        list-style: decimal-leading-zero outside none;
+      }
+      & ol {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

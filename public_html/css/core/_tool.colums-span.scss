@@ -1,0 +1,11 @@
+@function colspan($input: $columns, $parent: $max-width) {
+
+  @if $parent > $columns {
+    @return pct(cols($input), $parent);
+  }
+
+  @else {
+    @return pct(cols($input), cols($parent));
+  }
+
+}

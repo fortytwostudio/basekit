@@ -1,0 +1,69 @@
+@if $nav-mobile {
+
+  @include mq($until: $nav-mobile-breakpoint) {
+
+    .#{unquote($nav-mobile-name)} {
+      position: relative;
+      overflow: hidden;
+      width: $nav-mobile-hit-area;
+
+      &--open {
+        overflow: visible;
+        width: 100%;
+      }
+
+      &__list {
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+      }
+
+      &__item {
+        display: block;
+        width: 100%;
+        border-top: 1px solid $nav-mobile-borders;
+      }
+
+      &__link {
+        display: block;
+        padding-right: ($nav-mobile-hit-area - $nav-mobile-icon-size) / 2;
+        padding-left: ($nav-mobile-hit-area - $nav-mobile-icon-size) / 2;
+        line-height: $nav-mobile-hit-area;
+        width: 100%;
+        background-color: $nav-mobile-background;
+
+        &:hover,
+        &:focus {
+          background-color: $nav-mobile-background;
+        }
+      }
+
+      &__toggle {
+        position: relative;
+        display: block;
+        width: $nav-mobile-hit-area;
+        height: $nav-mobile-hit-area;
+        background-color: $nav-mobile-background;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: $nav-mobile-hit-area;
+          height: $nav-mobile-hit-area;
+          background-image: $nav-mobile-toggle;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: $nav-mobile-icon-size;
+        }
+
+        .#{unquote($nav-mobile-name)}--open & {
+          width: 100%;
+          &:before {
+            background-image: $nav-mobile-open-toggle;
+          }
+        }
+      }
+    }
+  }
+
+}

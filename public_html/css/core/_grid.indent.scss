@@ -1,0 +1,39 @@
+// Tweaked version of the standard cols and colspan functions.
+//
+@function bk-pad-colspan($input: $columns, $parent: $max-width) {
+  @return pct($column-width * $input + $gutter * $input, $parent);
+}
+
+@mixin grid-indent($gw-value: null) {
+
+  // INDENT FROM LEFT
+  @for $i from 1 through $bk-indent-columns {
+    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"in:"}#{$i}) {
+      margin-left: bk-pad-colspan($i);
+    }
+  }
+
+  // OUTDENT
+  @if $bk-outdent {
+
+    // Target this attributes with this selector pattern
+    @mixin attr-target($module, $trait: null) {
+      @if $trait != null {
+        [#{$module}*="#{$trait}"] {
+          @content;
+        }
+      }
+    }
+
+    @include attr-target(unquote($bk-grid-name), #{$gw-value}#{"out:"}) {
+      position: relative;
+    }
+
+    @for $i from 1 through $bk-outdent-columns {
+      @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"out:"}#{$i}) {
+        left: -#{bk-pad-colspan($i)};
+      }
+    }
+  }
+
+}

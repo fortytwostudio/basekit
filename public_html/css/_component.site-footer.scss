@@ -1,0 +1,15 @@
+.colophon {
+
+  &__logo {
+    width: 37px;
+    height: 12px;
+
+    @if $mq-responsive == false {
+      background-image: image-url("logos/eq.png");
+    }
+    @else {
+      background: image-url("logos/eq.svg") no-repeat;
+      background-size: cover;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin z($key) {
+
+  $z-index-map: ();
+  $counter: 100;
+  $z-indexed-items: "footer", "content", "sidebar", "header", "modal";
+
+  @each $item in $z-indexed-items {
+    $z-index-map: map-merge($z-index-map, ($item: $counter));
+    $counter: $counter + 10;
+  }
+
+  z-index: map-get($z-index-map, $key);
+
+}

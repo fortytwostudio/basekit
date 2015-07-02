@@ -1,0 +1,14 @@
+@if $site-width-css {
+
+  .#{unquote($site-width-name)} {
+    @if $mq-responsive {
+      width: $site-width;
+      max-width: px($max-width);
+    }
+
+    @else {
+      width: px($max-width);
+    }
+  }
+
+}

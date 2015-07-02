@@ -1,10 +1,229 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Untitled Document</title>
-    </head>
-    
-    <body>
-    </body>
+<!doctype html>
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+    <title>basekit</title>
+    <meta name="description" content="a frontend starter kit from EQ Design">
+
+    <link rel="stylesheet" href="css/basekit.css">
+
+    <meta name="apple-mobile-web-app-title" content="basekit">
+    <!--
+
+    ICONS:
+    - Go to: http://realfavicongenerator.net
+    - Generate icons and put the code here (see below example).
+    - Put images in the images/device-icons/ directory.
+
+    <link rel="apple-touch-icon" sizes="57x57" href="imgs/web-icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="imgs/web-icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="imgs/web-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="imgs/web-icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="imgs/web-icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="imgs/web-icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="imgs/web-icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="imgs/web-icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/web-icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="imgs/web-icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="imgs/web-icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="imgs/web-icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="imgs/web-icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="imgs/web-icons/manifest.json">
+    <link rel="shortcut icon" href="imgs/web-icons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Basekit">
+    <meta name="application-name" content="Basekit">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="imgs/web-icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="imgs/web-icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    -->
+
+    <!--
+
+    OPEN GRAPH / TWITTER CARD:
+    - Update the following meta tags and replace the image
+
+    -->
+    <meta property="og:title" content="Basis">
+    <meta property="og:description" content="Basis is a full featured starter kit from EQ Design">
+    <meta property="og:image" content="http://og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="http://">
+    <meta property="og:type" content="website"> <!-- https://developers.facebook.com/docs/reference/opengraph -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"> <!-- https://dev.twitter.com/cards/types -->
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+
+    <!--
+
+    GOOGLE ANALYTICS:
+    - Uncomment and add your analytics ID below.
+    - Or remove the below code and add what Google gives you.
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*newDate();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXXXXX-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    -->
+
+  </head>
+
+  <body>
+    <div class="max-width  margin--auto  pad">
+
+
+      <section class="pad--large" id="fonts">
+        <h1 class="font--xxl  margin--b  color--primary">Grid system</h1>
+
+        <div class="userContent">
+          <p>The <i>basekit</i> grid system or scaffolding uses the <code>data-bkg</code> attribute as opposed to more traditional classes. This allows style and layout structure to remain separate from each other.</p>
+
+          <p>All column widths can be defined at each breakpoint defined in the <code>$mq-breakpoints</code> variable, this also includes up <code>to:</code> each breakpoint.</p>
+        </div>
+
+        <ul class="color--white  pad--bottom  pad--small--top">
+          <li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li>
+
+          <li data-bkg="gtr:large  lap:2" class="bg--black" style="outline: 1px solid whitesmoke">2</li><!--
+          --><li data-bkg="gtr:large  lap:2" class="bg--black" style="outline: 1px solid whitesmoke">2</li><!--
+          --><li data-bkg="gtr:large  lap:2" class="bg--black" style="outline: 1px solid whitesmoke">2</li><!--
+          --><li data-bkg="gtr:large  lap:2" class="bg--black" style="outline: 1px solid whitesmoke">2</li><!--
+          --><li data-bkg="gtr:large  lap:2" class="bg--black" style="outline: 1px solid whitesmoke">2</li><!--
+          --><li data-bkg="gtr:large  lap:2" class="bg--black" style="outline: 1px solid whitesmoke">2</li>
+
+          <li data-bkg="gtr:large  lap:3" class="bg--black" style="outline: 1px solid whitesmoke">3</li><!--
+          --><li data-bkg="gtr:large  lap:3" class="bg--black" style="outline: 1px solid whitesmoke">3</li><!--
+          --><li data-bkg="gtr:large  lap:3" class="bg--black" style="outline: 1px solid whitesmoke">3</li><!--
+          --><li data-bkg="gtr:large  lap:3" class="bg--black" style="outline: 1px solid whitesmoke">3</li>
+
+          <li data-bkg="gtr:large  lap:4" class="bg--black" style="outline: 1px solid whitesmoke">4</li><!--
+          --><li data-bkg="gtr:large  lap:4" class="bg--black" style="outline: 1px solid whitesmoke">4</li><!--
+          --><li data-bkg="gtr:large  lap:4" class="bg--black" style="outline: 1px solid whitesmoke">4</li>
+
+          <li data-bkg="gtr:large  lap:6" class="bg--black" style="outline: 1px solid whitesmoke">6</li><!--
+          --><li data-bkg="gtr:large  lap:6" class="bg--black" style="outline: 1px solid whitesmoke">6</li>
+
+          <li data-bkg="gtr:large  lap:7" class="bg--black" style="outline: 1px solid whitesmoke">7</li><!--
+          --><li data-bkg="gtr:large  lap:5" class="bg--black" style="outline: 1px solid whitesmoke">5</li>
+
+          <li data-bkg="gtr:large  lap:12" class="bg--black" style="outline: 1px solid whitesmoke">12</li>
+
+          <li data-bkg="gtr:large  lap:11" class="bg--black" style="outline: 1px solid whitesmoke">11</li>
+
+          <li data-bkg="gtr:large  lap:10" class="bg--black" style="outline: 1px solid whitesmoke">10</li>
+
+          <li data-bkg="gtr:large  lap:9" class="bg--black" style="outline: 1px solid whitesmoke">9</li>
+
+          <li data-bkg="gtr:large  lap:8" class="bg--black" style="outline: 1px solid whitesmoke">8</li>
+        </ul>
+
+        <h2 class="font--m">Indenting:</h2>
+
+        <ul class="color--white  pad--small--top">
+          <li data-bkg="gtr:large  lap:1" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:1  lap:in:2" class="bg--black" style="outline: 1px solid whitesmoke">1</li><!--
+          --><li data-bkg="gtr:large  lap:4  lap:in:4" class="bg--black" style="outline: 1px solid whitesmoke">4</li>
+        </ul>
+      </section>
+
+
+
+
+
+
+      <section class="pad--large" id="fonts">
+        <h1 class="font--xxl  margin--b  color--primary">Font sizing</h1>
+
+        <h1 class="font--s">Font sizing<br> and line-height test LYoWAT</h1>
+        <h1>Font sizing<br> and line-height test LYoWAT</h1>
+        <h1 class="font--l ">Font sizing<br> and line-height test LYoWAT</h1>
+        <h1 data-bkg="lap:6  gtr:r" class="font--xl  margin--b">Font sizing<br> and line-height test LYoWAT</h1>
+
+        <div class="setLinks  setLinks--inverted"><h1 class="color--tertiary  font--xxl  margin--b"><a href="#">Font sizing<br> and line-height test</a> LYoWAT</h1></div>
+      </section>
+
+
+
+
+
+      <section class="pad--large" id="link">
+        <h1 class="font--xxl  margin--b  color--primary">Links &amp; buttons</h1>
+
+        <div class="userContent  setLinks">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. <a href="#">Sed dapibus est id enim facilisis</a>, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
+
+          <p>Duis rhoncus velit nec est condimentum feugiat. Donec aliquam augue nec gravida lobortis. <a class="btn  btn--natural" href="#">Nunc arcu mi</a>, pretium quis dolor id, iaculis euismod ligula. Donec tincidunt gravida lacus eget lacinia.</p>
+        </div>
+
+        <ul class="nav  nav--block  setLinks--nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="userContent  setLinks">
+          <p><a href="#" class="btn">Button</a></p>
+          <p><a href="#" class="btn  btn--medium">Button</a></p>
+          <p><a href="#" class="btn  btn--large">Button</a></p>
+          <p><a href="#" class="btn  btn--natural">Button</a></p>
+          <p><a href="#" class="btn  btn--fill">Button</a></p>
+        </div>
+      </section>
+
+
+
+      <section class="pad--large" id="padding">
+        <h1 class="font--xxl  margin--b  color--primary">Padding spacer</h1>
+
+        <p>The padding (spacer) utility class is used to space out blocks of content across the x-axis. This class will over-ride the <i>basekit</i> grid padding.</p>
+
+        <div class="font--l  align--center  color--white  pad--small--top">
+          <div class="pad--small  bg--secondary--light"><code>pad--small</code></div>
+          <div class="pad  bg--secondary"><code>pad</code></div>
+          <div class="pad--large  bg--secondary--dark"><code>pad--large</code></div>
+
+          <div class="pad--bottom  align--center  bg--tertiary  color--secondary"><code>pad--bottom</code></div>
+          <div class="pad--top  align--center  bg--tertiary--dark"><code>pad--top</code></div>
+        </div>
+
+        <div class="pad--top  pad--large--bottom">
+          <div data-bkg="gtr:large" class="bg--white">
+            <h2 class="font--m  margin--b">Additional options include:</h2>
+
+            <ul class="list--bulleted">
+              <li><code>pad--small--bottom</code></li>
+              <li><code>pad--large--bottom</code></li>
+              <li><code>pad--small--top</code></li>
+              <li><code>pad--large--top</code></li>
+              <li>Classes can be combined, e.g. <code>pad--top  pad--large--bottom</code> will result in a normal top padding space and a larger bottom padding.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  </body>
 </html>

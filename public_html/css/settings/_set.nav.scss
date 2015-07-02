@@ -1,0 +1,27 @@
+// Enable or disable the navigation utility helper and alternative styles.
+// See: core/utility.nav.scss
+// NOTE: this is a true utility class, it does not style colours or other
+// visual stuff. Consider it structural.
+$nav-css: true;
+$nav-stacked-css: true;
+$nav-block-css: true;
+$nav-fit-css: true;
+
+// Enable disable all mobile nav CSS.
+$nav-mobile: true;
+
+// Define the class name.
+$nav-mobile-name: "mobile-nav";
+
+// At which breakpoint (or px value) should it kick in?
+$nav-mobile-breakpoint: hands;
+
+// Define the icon dimensions and click/tap-able area.
+$nav-mobile-icon-size: 28px;
+$nav-mobile-hit-area: 44px;
+
+// Define the colours and icon image.
+$nav-mobile-background: $secondary;
+$nav-mobile-borders: $secondary;
+$nav-mobile-toggle: image-url("ui/menu--white.svg");
+$nav-mobile-open-toggle: image-url("ui/menu--close--white.svg");

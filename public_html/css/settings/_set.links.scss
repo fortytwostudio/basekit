@@ -1,0 +1,42 @@
+// Enable or completely disable the Link Scope utility class.
+// Found in the project utility.site-links.scss
+$link-scope-css: true;
+
+// Define the class name for use in HTML.
+$link-scope-name: "setLinks";
+
+// Configure your various link scopes.
+// These will be output in the project utility.site-links.scss file.
+//
+// `null` is required and will be applied to the base $link-scope-name.
+//
+// All others are optional and configurable, they will be applied as BEM
+// modifiers (e.g. if you have a `setLinks` scope with `inverted` modifier
+// the class would be written as setLinks--inverted).
+//
+// Available keys include:
+// - colors
+// - color-hover
+// - emphasize
+// - emphasize-hover
+
+$links: (
+  null: (
+    color: $primary,
+    color-hover: $secondary
+  ),
+  inverted: (
+    color: $secondary,
+    color-hover: $primary
+  ),
+  contrasted: (
+    color: white,
+    color-hover: $grey-light
+  ),
+  nav: (
+    color: $primary,
+    color-hover: $primary--light,
+    emphasize: "700",
+    emphasize-hover: "700"
+  )
+);

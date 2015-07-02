@@ -1,0 +1,49 @@
+@if $bk-grid {
+
+  // Output the default element at 100% width
+  // And reduce the default padding
+  @include attr-module(unquote($bk-grid-name)) {
+    width: 100%;
+    @include inline-block;
+    @include rem(padding, px($margin / 2));
+
+    // Increase the padding size
+    @include mq(hands) {
+      @include rem(padding, px($margin));
+    }
+  }
+
+  // Output the _base_ set of properties (mobile first, no MQ)
+  @include grid-columns;
+  @include grid-gutters;
+  @include grid-indent;
+  @include grid-alignments;
+
+  // Iterate through the media queries and output properties for each without the base props
+  @each $breakpoint, $gw-value in $mq-breakpoints {
+    // @if $gw-value != null {
+      @include mq($breakpoint) {
+        @include grid-columns("#{$breakpoint}:");
+        @include grid-gutters("#{$breakpoint}:");
+        @include grid-indent("#{$breakpoint}:");
+        @include grid-alignments("#{$breakpoint}:");
+      }
+    // }
+  }
+
+  // Same as above but instead of `from` this one is up `to` without the base props
+  @if $bk-grid-mq-to {
+
+    @each $breakpoint, $gw-value in reverse($mq-breakpoints) {
+      // @if $gw-value != null {
+        @include mq($until: $breakpoint) {
+          @include grid-columns("to:#{$breakpoint}:");
+          @include grid-gutters("to:#{$breakpoint}:");
+          @include grid-indent("to:#{$breakpoint}:");
+          @include grid-alignments("to:#{$breakpoint}:");
+        }
+      // }
+    }
+
+  }
+}
