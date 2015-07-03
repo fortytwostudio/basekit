@@ -1956,6 +1956,8 @@ input[type="button"] {
   z-index: 100;
   clip: auto;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
   text-align: center; }
 
 .js-nav-active body {
