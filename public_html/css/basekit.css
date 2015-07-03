@@ -1976,7 +1976,7 @@ input[type="button"] {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   z-index: 500; }
