@@ -1946,7 +1946,7 @@ input[type="button"] {
 .js body .nav-collapse.opened {
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
