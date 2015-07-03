@@ -1,69 +1,79 @@
 @if $nav-mobile {
 
-  @include mq($until: $nav-mobile-breakpoint) {
+  // Dont use this for now
+  // @include mq($until: $nav-mobile-breakpoint) {
 
-    .#{unquote($nav-mobile-name)} {
-      position: relative;
-      overflow: hidden;
-      width: $nav-mobile-hit-area;
+  /*! responsive-nav.js 1.0.39 by @viljamis */
 
-      &--open {
-        overflow: visible;
-        width: 100%;
-      }
-
-      &__list {
-        position: absolute;
-        z-index: z(mobile-nav);
-        width: 100%;
-      }
-
-      &__item {
-        display: block;
-        width: 100%;
-        border-top: 1px solid $nav-mobile-borders;
-      }
-
-      &__link {
-        display: block;
-        padding-right: ($nav-mobile-hit-area - $nav-mobile-icon-size) / 2;
-        padding-left: ($nav-mobile-hit-area - $nav-mobile-icon-size) / 2;
-        line-height: $nav-mobile-hit-area;
-        width: 100%;
-        background-color: $nav-mobile-background;
-
-        &:hover,
-        &:focus {
-          background-color: $nav-mobile-background;
-        }
-      }
-
-      &__toggle {
-        position: relative;
-        display: block;
-        width: $nav-mobile-hit-area;
-        height: $nav-mobile-hit-area;
-        background-color: $nav-mobile-background;
-
-        &:before {
-          content: "";
-          position: absolute;
-          width: $nav-mobile-hit-area;
-          height: $nav-mobile-hit-area;
-          background-image: $nav-mobile-toggle;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: $nav-mobile-icon-size;
-        }
-
-        .#{unquote($nav-mobile-name)}--open & {
-          width: 100%;
-          &:before {
-            background-image: $nav-mobile-open-toggle;
-          }
-        }
-      }
-    }
+  .nav-collapse ul {
+    display: block;
   }
+
+  .js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  .js body .nav-collapse.opened {
+    animation-duration: 0.3s;
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh!important;
+    max-height: 100vh!important;
+    background: white;
+    z-index: 100;
+    clip: auto;
+    overflow: scroll;
+    text-align: center;
+  }
+
+  .js-nav-active body {
+    overflow: hidden;
+  }
+
+
+  .nav {
+    display: block;
+    padding-top: 10%;
+    padding-top: 10vh;
+    padding-bottom: 10%;
+    padding-bottom: 10vh;
+  }
+
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: z(mobile-nav-toggle);
+  }
+
+  // @media screen and (min-width: 40em) {
+  //   .js .nav-collapse {
+  //     position: relative;
+  //   }
+  //   .js .nav-collapse.closed {
+  //     max-height: none;
+  //   }
+  //   .nav-toggle {
+  //     display: none;
+  //   }
+  // }
+
+  // MQ closing bracket
+  // }
 
 }

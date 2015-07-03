@@ -79,7 +79,22 @@
     <div class="max-width  margin--auto  pad">
 
       <header>
-        <h1 class="font--xxl  margin--b  color--primary"><span class="animated bounceIn">Basekit</span></h1>
+        <h1 class="font--xxl  margin--b  color--primary"><span class="animated  bounceIn">Basekit</span></h1>
+
+        <nav class="animated  setLinks  setLinks--nav" id="js-nav">
+          <h1 class="hide">Navigation</h1>
+
+          <ul class="nav  nav--block  nav--stacked  font--xl" data-bkg="gtr:large">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Portfolio</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Technology</a></li>
+            <li><a href="/">Culture</a></li>
+            <li><a href="/">Contact</a></li>
+            <li><a href="/">Client Login</a></li>
+          </ul>
+        </nav>
 
         <div data-bkg="gtr:large" class="bg--white  userContent  setLinks">
           <p>Basekit is a collection of front-end files and techniques used to build EQ Design web projects as of mid-late 2015.</p>
@@ -290,5 +305,22 @@
 
 
     </div>
+
+    <script src="js/responsive-nav.js"></script>
+    <script>
+      var navContainer = document.getElementById('js-nav');
+      var nav = responsiveNav("#js-nav", {
+        animate: false,
+        transition: 300,
+        open: function(){
+          navContainer.classList.add("fadeIn");
+          navContainer.classList.remove("fadeOut");
+        },
+        close: function(){
+          navContainer.classList.add("fadeOut");
+          navContainer.classList.remove("fadeIn");
+        }
+      });
+    </script>
   </body>
 </html>
