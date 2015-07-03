@@ -30,6 +30,7 @@
     z-index: 100;
     clip: auto;
     overflow: scroll;
+    @include smooth-scroll
     text-align: center;
   }
 
