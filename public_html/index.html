@@ -85,7 +85,7 @@
           <h1 class="hide">Navigation</h1>
 
           <ul class="nav  nav--block  nav--stacked  font--xl" data-bkg="gtr:large">
-            <li><a href="/">Home</a></li>
+            <li><a href="http://google.com">Home</a></li>
             <li><a href="/">Services</a></li>
             <li><a href="/">Portfolio</a></li>
             <li><a href="/">About</a></li>
@@ -312,6 +312,7 @@
       var nav = responsiveNav("#js-nav", {
         animate: false,
         transition: 300,
+        closeOnNavClick: true,
         open: function(){
           navContainer.classList.add("fadeIn");
           navContainer.classList.remove("fadeOut");
