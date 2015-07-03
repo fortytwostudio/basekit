@@ -55,7 +55,7 @@
     -o-user-select: none;
     user-select: none;
 
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     z-index: z(mobile-nav-toggle);
