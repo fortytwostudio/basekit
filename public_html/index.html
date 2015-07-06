@@ -325,10 +325,12 @@
         open: function(){
           navContainer.classList.add("fadeIn");
           navContainer.classList.remove("fadeOut");
+          document.ontouchmove = function(e){ e.preventDefault(); }
         },
         close: function(){
           navContainer.classList.add("fadeOut");
           navContainer.classList.remove("fadeIn");
+          document.ontouchmove = function(e){ return true; }
         }
       });
     </script>
