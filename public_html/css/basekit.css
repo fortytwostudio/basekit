@@ -1969,9 +1969,6 @@ input[type="button"] {
   padding-bottom: 20%;
   padding-bottom: 20vh; }
 
-.js-has-rnav-active body {
-  overflow: hidden; }
-
 .nav-toggle {
   position: absolute;
   top: 14px;
@@ -1985,4 +1982,10 @@ input[type="button"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+
+.js-has-rnav-active body {
+  overflow: hidden; }
+
+.js-has-rnav-active .nav-toggle {
+  position: fixed; }
 /*# sourceMappingURL=basekit.css.map */

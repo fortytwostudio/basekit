@@ -43,13 +43,6 @@
     }
   }
 
-  // Prevent site body from scrolling when the nav is open.
-  .js-has-rnav-active {
-    body {
-      overflow: hidden;
-    }
-  }
-
   .nav-toggle {
     position: absolute;
     @include rem(top, px($margin));
@@ -58,6 +51,17 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
     user-select: none;
+  }
+
+  // Prevent site body from scrolling when the nav is open.
+  .js-has-rnav-active {
+    body {
+      overflow: hidden;
+    }
+
+    .nav-toggle {
+      position: fixed;
+    }
   }
 
   // @media screen and (min-width: 40em) {
