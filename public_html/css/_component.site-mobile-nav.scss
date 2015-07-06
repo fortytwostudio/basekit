@@ -27,7 +27,7 @@
        z-index: 100;
        clip: auto;
        backface-visibility: hidden;
-       overflow: auto!important;
+       overflow-y: scroll!important;
        -webkit-overflow-scrolling: touch!important;
        overflow-scrolling: touch;
        text-align: center;
@@ -46,10 +46,6 @@
   // Prevent site body from scrolling when the nav is open.
   .js-has-rnav-active body {
     overflow: hidden;
-
-    @include mq($until: 768, $and: "(-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)") {
-      position: fixed;
-    }
   }
 
   .nav-toggle {

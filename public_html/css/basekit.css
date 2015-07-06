@@ -1957,7 +1957,7 @@ input[type="button"] {
   clip: auto;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  overflow: auto !important;
+  overflow-y: scroll !important;
   -webkit-overflow-scrolling: touch !important;
   overflow-scrolling: touch;
   text-align: center; }
@@ -1971,9 +1971,6 @@ input[type="button"] {
 
 .js-has-rnav-active body {
   overflow: hidden; }
-  @media (max-width: 48em) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    .js-has-rnav-active body {
-      position: fixed; } }
 
 .nav-toggle {
   position: absolute;
