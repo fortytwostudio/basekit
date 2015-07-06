@@ -3,6 +3,8 @@
   // @include mq($until: $nav-mobile-breakpoint) {
 
   .rnav {
+
+
     .js-has-rnav & {
       clip: rect(0 0 0 0);
       max-height: 0;
@@ -44,6 +46,10 @@
   // Prevent site body from scrolling when the nav is open.
   .js-has-rnav-active body {
     overflow: hidden;
+
+    @include mq($until: 768, $and: "(-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)") {
+      position: fixed;
+    }
   }
 
   .nav-toggle {
