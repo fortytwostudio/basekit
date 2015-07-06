@@ -1931,7 +1931,6 @@ input[type="button"] {
   .btn--fill {
     width: 100%; }
 
-/*! responsive-nav.js-has-rnav 1.0.39 by @viljamis */
 .js-has-rnav .rnav {
   clip: rect(0 0 0 0);
   max-height: 0;
@@ -1953,7 +1952,7 @@ input[type="button"] {
   z-index: 100;
   clip: auto;
   overflow: scroll;
-  overflow-scrolling: touch;
+  overflow-scrolling: touch !important;
   text-align: center; }
 
 .rnav__list {

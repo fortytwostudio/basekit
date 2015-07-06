@@ -1,9 +1,6 @@
 @if $nav-mobile {
 
-  // Dont use this for now
   // @include mq($until: $nav-mobile-breakpoint) {
-
-  /*! responsive-nav.js-has-rnav 1.0.39 by @viljamis */
 
   .rnav {
     .js-has-rnav & {
@@ -28,7 +25,7 @@
        z-index: 100;
        clip: auto;
        overflow: scroll;
-       @include smooth-scroll;
+       overflow-scrolling: touch!important;
        text-align: center;
      }
     }
