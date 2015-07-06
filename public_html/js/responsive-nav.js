@@ -206,6 +206,7 @@
           navClass: "nav-collapse",         // String: Default CSS class. If changed, you need to edit the CSS too!
           navActiveClass: "js-nav-active",  // String: Class that is added to <html> element when nav is active
           jsClass: "js",                    // String: 'JS enabled' class which is added to <html> element
+          toggleName: "rnav-toggle",         // String: Default class name for the toggle link
           init: function(){},               // Function: Init callback
           open: function(){},               // Function: Open callback
           close: function(){}               // Function: Close callback
@@ -481,7 +482,7 @@
           toggle.innerHTML = opts.label;
           setAttributes(toggle, {
             "href": "#",
-            "class": "nav-toggle"
+            "class": opts.toggleName
           });
 
           // Determine where to insert the toggle

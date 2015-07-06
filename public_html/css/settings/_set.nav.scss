@@ -11,17 +11,15 @@ $nav-fit-css: true;
 $nav-mobile: true;
 
 // Define the class name.
-$nav-mobile-name: "mobile-nav";
+$nav-mobile-name: "rnav";
 
 // At which breakpoint (or px value) should it kick in?
 $nav-mobile-breakpoint: hands;
 
 // Define the icon dimensions and click/tap-able area.
-$nav-mobile-icon-size: 28px;
 $nav-mobile-hit-area: 44px;
 
 // Define the colours and icon image.
-$nav-mobile-background: $secondary;
-$nav-mobile-borders: $secondary;
-$nav-mobile-toggle: image-url("ui/menu--white.svg");
-$nav-mobile-open-toggle: image-url("ui/menu--close--white.svg");
+$nav-mobile-background: white;
+$nav-mobile-toggle: "ui/menu.svg";
+$nav-mobile-open-toggle: "ui/menu--close.svg";

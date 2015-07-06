@@ -2,90 +2,105 @@
 
   // @include mq($until: $nav-mobile-breakpoint) {
 
-  .rnav {
+    .rnav {
+      .js-has-rnav & {
+        // Hide by default. This CSS is the same as the hide utility class.
+        clip: rect(0 0 0 0);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        border: 0;
+      }
+
+      .js-has-rnav-active & {
+        // Remove clipping.
+        clip: auto;
+        // Set the animate.css duration speed.
+        animation-duration: 0.3s;
+        // Fix the position to the viewport so it won't scroll.
+        position: fixed!important;
+        // Fit it to the viewport dimensions.
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // Define the z-index via set.layout.scss
+        z-index: z(mobile-nav);
+        // Override the hide CSS width and height.
+        width: 100%;
+        min-height: 100%;
+        //  Use the set.nav.scss background color
+        background: $nav-mobile-background;
+      }
+
+      // The main content wrapper whether it's a UL or bock of content.
+      &__content {
+        // Setup some basic padding, I tend to give the bottom more padding to
+        // account for UI in mobile browsers.
+        padding: 5% 5% 10%;
+        // Fit it within the overlay container.
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // Make sure the height is definitely 100%.
+        height: 100%;
+        // Make sure users can scroll if the nav is taller than the container.
+        overflow-y: scroll!important;
+        // Make sure it has nice smooth scrolling on iOS.
+        -webkit-overflow-scrolling: touch!important;
+        overflow-scrolling: touch;
+      }
+    }
 
 
-    .js-has-rnav & {
-      clip: rect(0 0 0 0);
-      max-height: 0;
+    // Style the 'hamburger' button.
+    .rnav-toggle {
+      // Position at the top, but don't make this 'fixed' just yet.
       position: absolute;
+      @include rem(top, px($margin));
+      @include rem(right, px($margin));
+      z-index: z(mobile-nav-toggle);
+
+      // Style the button.
+      @include rem(width, $nav-mobile-hit-area);
+      @include rem(height, $nav-mobile-hit-area);
+      background: img-url($nav-mobile-toggle) center center no-repeat;
+      // Make it a wee bit smaller while retaining hit area.
+      background-size: 75%;
+
+      // Prevent wonkiness in iOS.
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+      user-select: none;
+
+      // Hide text. Same as hide-text utility class.
       display: block;
-      overflow: hidden;
-      zoom: 1;
+      text-align: left;
+      text-indent: -9999px;
+      direction: ltr;
     }
 
-    &.opened {
-      .js-has-rnav body & {
-       animation-duration: 0.3s;
-       position: fixed!important;
-       top: 0;
-       right: 0;
-       bottom: 0;
-       left: 0;
-       width: 100%;
-       min-height: 100%;
-       background: white;
-       z-index: z(mobile-nav);
-       clip: auto;
-       backface-visibility: hidden;
-       text-align: center;
-     }
+
+    .js-has-rnav-active {
+      // Prevent site body from scrolling when the nav is open.
+      body {
+        overflow: hidden;
+      }
+
+      .rnav-toggle {
+        // Fix the toggler 'hamburger' button in position while the nav is open.
+        position: fixed;
+        // Switch out the icon image and tweak the size.
+        background-image: img-url($nav-mobile-open-toggle);
+        background-size: 70%;
+      }
     }
-
-    &__list {
-      display: block;
-      padding-top: 5%;
-      padding-top: 5vh;
-      padding-bottom: 20%;
-      padding-bottom: 20vh;
-
-      height: 100%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      overflow-y: scroll!important;
-      -webkit-overflow-scrolling: touch!important;
-      overflow-scrolling: touch;
-      background: red;
-    }
-  }
-
-  .nav-toggle {
-    position: absolute;
-    @include rem(top, px($margin));
-    @include rem(right, px($margin));
-    z-index: z(mobile-nav-toggle);
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-touch-callout: none;
-    user-select: none;
-  }
-
-  // Prevent site body from scrolling when the nav is open.
-  .js-has-rnav-active {
-    body {
-      overflow: hidden;
-    }
-
-    .nav-toggle {
-      position: fixed;
-    }
-  }
-
-  // @media screen and (min-width: 40em) {
-  //   .js-has-rnav .rnav {
-  //     position: relative;
-  //   }
-  //   .js-has-rnav .rnav.closed {
-  //     max-height: none;
-  //   }
-  //   .nav-toggle {
-  //     display: none;
-  //   }
-  // }
 
   // MQ closing bracket
   // }
-
 }

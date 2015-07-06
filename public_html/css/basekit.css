@@ -1937,13 +1937,16 @@ input[type="button"] {
 
 .js-has-rnav .rnav {
   clip: rect(0 0 0 0);
-  max-height: 0;
   position: absolute;
-  display: block;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
   overflow: hidden;
-  zoom: 1; }
+  border: 0; }
 
-.js-has-rnav body .rnav.opened {
+.js-has-rnav-active .rnav {
+  clip: auto;
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
   position: fixed !important;
@@ -1951,49 +1954,52 @@ input[type="button"] {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 400;
   width: 100%;
   min-height: 100%;
-  background: white;
-  z-index: 400;
-  clip: auto;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  text-align: center; }
+  background: white; }
 
-.rnav__list {
-  display: block;
-  padding-top: 5%;
-  padding-top: 5vh;
-  padding-bottom: 20%;
-  padding-bottom: 20vh;
-  height: 100%;
+.rnav__content {
+  padding: 5% 5% 10%;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100%;
   overflow-y: scroll !important;
   -webkit-overflow-scrolling: touch !important;
-  overflow-scrolling: touch;
-  background: red; }
+  overflow-scrolling: touch; }
 
-.nav-toggle {
+.rnav-toggle {
   position: absolute;
   top: 14px;
   top: 0.875rem;
   right: 14px;
   right: 0.875rem;
   z-index: 500;
+  width: 44px;
+  width: 2.75rem;
+  height: 44px;
+  height: 2.75rem;
+  background: url(../imgs/ui/menu.svg) center center no-repeat;
+  background-size: 75%;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  display: block;
+  text-align: left;
+  text-indent: -9999px;
+  direction: ltr; }
 
 .js-has-rnav-active body {
   overflow: hidden; }
 
-.js-has-rnav-active .nav-toggle {
-  position: fixed; }
+.js-has-rnav-active .rnav-toggle {
+  position: fixed;
+  background-image: url(../imgs/ui/menu--close.svg);
+  background-size: 70%; }
 /*# sourceMappingURL=basekit.css.map */

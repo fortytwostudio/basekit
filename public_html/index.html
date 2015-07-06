@@ -84,7 +84,7 @@
         <nav class="site-nav  animated  setLinks  setLinks--nav" id="js-rnav">
           <h1 class="hide">Navigation</h1>
 
-          <ul class="site-nav__list  rnav__list  nav  nav--block  nav--stacked  font--xl" data-bkg="gtr:large">
+          <ul class="site-nav__content  rnav__content  nav  nav--block  nav--stacked  font--xl">
             <li><a href="http://google.com">Home</a></li>
             <li><a href="/">Services</a></li>
             <li><a href="/">Portfolio</a></li>
@@ -319,7 +319,9 @@
         transition: 300,
         closeOnNavClick: true,
         navClass: "rnav",
+        toggleName: "rnav-toggle",
         openPos: "",
+        label: "<span>Menu</span>",
         navActiveClass: "js-has-rnav-active",
         jsClass: "js-has-rnav",
         open: function(){
