@@ -332,6 +332,9 @@
         close: function(){
           navContainer.classList.add("fadeOut");
           navContainer.classList.remove("fadeIn");
+          document.body.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+          }, true);
         }
       });
     </script>
