@@ -327,13 +327,13 @@
             if (opts.animate) {
               hasAnimFinished = false;
               setTimeout(function () {
-                nav.style.position = "absolute";
+                // nav.style.position = "absolute";
                 hasAnimFinished = true;
               }, opts.transition + 10);
 
             // Animations aren't enabled, we can do these immediately
             } else {
-              nav.style.position = "absolute";
+              // nav.style.position = "absolute";
             }
 
             navOpen = false;
@@ -361,7 +361,7 @@
           // If the navigation is hidden
           if (nav.className.match(/(^|\s)closed(\s|$)/)) {
             setAttributes(nav, {"aria-hidden": "true"});
-            nav.style.position = "absolute";
+            // nav.style.position = "absolute";
           }
 
           this._createStyles();
