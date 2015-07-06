@@ -44,11 +44,9 @@
   }
 
   // Prevent site body from scrolling when the nav is open.
-  .js-has-rnav-active body {
-    overflow: hidden;
-
-    @include mq($until: 768, $and: "(max-height: #{em(1024px)})") {
-      position: fixed;
+  .js-has-rnav-active {
+    html, body {
+      overflow: hidden;
     }
   }
 
