@@ -59,6 +59,65 @@
 
 
     // Style the 'hamburger' button.
+    // .rnav-toggle {
+    //   // Position at the top, but don't make this 'fixed' just yet.
+    //   position: absolute;
+    //   @include rem(top, px($margin));
+    //   @include rem(right, px($margin));
+    //   z-index: z(mobile-nav-toggle);
+    //
+    //   // Style the button.
+    //   @include rem(width, $nav-mobile-hit-area);
+    //   @include rem(height, $nav-mobile-hit-area);
+    //   background: img-url($nav-mobile-toggle) center center no-repeat;
+    //   // Make it a wee bit smaller while retaining hit area.
+    //   background-size: 75%;
+    //
+    //   // Prevent wonkiness in iOS.
+    //   -webkit-tap-highlight-color: rgba(0,0,0,0);
+    //   -webkit-touch-callout: none;
+    //   user-select: none;
+    //
+    //   // Hide text. Same as hide-text utility class.
+    //   display: block;
+    //   text-align: left;
+    //   text-indent: -9999px;
+    //   direction: ltr;
+    // }
+
+    @keyframes toggleTop {
+      0% {
+        top: 0;
+      }
+      50%, 100% {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      50% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(45deg);
+      }
+    }
+    @keyframes toggleBottom {
+      0% {
+        bottom: 0;
+      }
+      50%, 100% {
+        bottom: 50%;
+        transform: translateY(50%);
+      }
+      50% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(-45deg);
+      }
+    }
+
+
+
     .rnav-toggle {
       // Position at the top, but don't make this 'fixed' just yet.
       position: absolute;
@@ -69,22 +128,47 @@
       // Style the button.
       @include rem(width, $nav-mobile-hit-area);
       @include rem(height, $nav-mobile-hit-area);
-      background: img-url($nav-mobile-toggle) center center no-repeat;
-      // Make it a wee bit smaller while retaining hit area.
-      background-size: 75%;
 
       // Prevent wonkiness in iOS.
       -webkit-tap-highlight-color: rgba(0,0,0,0);
       -webkit-touch-callout: none;
       user-select: none;
 
-      // Hide text. Same as hide-text utility class.
-      display: block;
-      text-align: left;
-      text-indent: -9999px;
-      direction: ltr;
-    }
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include rem(height, $nav-mobile-hit-area / 5.75);
+        width: 100%;
+        background-color: black;
+        // transition: all $speed-normal ease-in-out;
+      }
 
+      &:after {
+        top: auto;
+        bottom: 0;
+      }
+
+      span {
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include rem(height, $nav-mobile-hit-area / 5.75);
+        width: 100%;
+        transform: translateY(-50%);
+        background-color: black;
+
+        // Hide text. Same as hide-text utility class.
+        display: block;
+        text-align: left;
+        text-indent: -9999px;
+        direction: ltr;
+      }
+    }
 
     .js-has-rnav-active {
       // Prevent site body from scrolling when the nav is open.
@@ -92,12 +176,29 @@
         overflow: hidden;
       }
 
+      // .rnav-toggle {
+      //   // Fix the toggler 'hamburger' button in position while the nav is open.
+      //   position: fixed;
+      //   // Switch out the icon image and tweak the size.
+      //   background-image: img-url($nav-mobile-open-toggle);
+      //   background-size: 70%;
+      // }
+
       .rnav-toggle {
         // Fix the toggler 'hamburger' button in position while the nav is open.
         position: fixed;
-        // Switch out the icon image and tweak the size.
-        background-image: img-url($nav-mobile-open-toggle);
-        background-size: 70%;
+
+        &:before {
+          animation: toggleTop $speed-slow forwards;
+        }
+        &:after {
+          animation: toggleBottom $speed-slow forwards;
+        }
+
+        span {
+          background-color: transparent;
+          transition: background-color $speed-fast;
+        }
       }
     }
 

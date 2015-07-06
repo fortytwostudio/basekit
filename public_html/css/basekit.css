@@ -1971,6 +1971,62 @@ input[type="button"] {
   -webkit-overflow-scrolling: touch !important;
   overflow-scrolling: touch; }
 
+@-webkit-keyframes toggleTop {
+  0% {
+    top: 0; }
+  50%, 100% {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@keyframes toggleTop {
+  0% {
+    top: 0; }
+  50%, 100% {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@-webkit-keyframes toggleBottom {
+  0% {
+    bottom: 0; }
+  50%, 100% {
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
+@keyframes toggleBottom {
+  0% {
+    bottom: 0; }
+  50%, 100% {
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%); }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); } }
+
 .rnav-toggle {
   position: absolute;
   top: 14px;
@@ -1982,24 +2038,56 @@ input[type="button"] {
   width: 2.75rem;
   height: 44px;
   height: 2.75rem;
-  background: url(../imgs/ui/menu.svg) center center no-repeat;
-  background-size: 75%;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;
-  display: block;
-  text-align: left;
-  text-indent: -9999px;
-  direction: ltr; }
+          user-select: none; }
+  .rnav-toggle:before,
+  .rnav-toggle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7.65217391px;
+    height: 0.47826087rem;
+    width: 100%;
+    background-color: black; }
+  .rnav-toggle:after {
+    top: auto;
+    bottom: 0; }
+  .rnav-toggle span {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 7.65217391px;
+    height: 0.47826087rem;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: black;
+    display: block;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr; }
 
 .js-has-rnav-active body {
   overflow: hidden; }
 
 .js-has-rnav-active .rnav-toggle {
-  position: fixed;
-  background-image: url(../imgs/ui/menu--close.svg);
-  background-size: 70%; }
+  position: fixed; }
+  .js-has-rnav-active .rnav-toggle:before {
+    -webkit-animation: toggleTop 0.5s forwards;
+            animation: toggleTop 0.5s forwards; }
+  .js-has-rnav-active .rnav-toggle:after {
+    -webkit-animation: toggleBottom 0.5s forwards;
+            animation: toggleBottom 0.5s forwards; }
+  .js-has-rnav-active .rnav-toggle span {
+    background-color: transparent;
+    -webkit-transition: background-color 0.1s;
+            transition: background-color 0.1s; }
 /*# sourceMappingURL=basekit.css.map */
