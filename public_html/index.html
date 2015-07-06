@@ -81,10 +81,10 @@
       <header>
         <h1 class="font--xxl  margin--b  color--primary"><span class="animated  bounceIn">Basekit</span></h1>
 
-        <nav class="animated  setLinks  setLinks--nav" id="js-nav">
+        <nav class="site-nav  animated  setLinks  setLinks--nav" id="js-rnav">
           <h1 class="hide">Navigation</h1>
 
-          <ul class="nav  nav--block  nav--stacked  font--xl" data-bkg="gtr:large">
+          <ul class="site-nav__list  rnav__list  nav  nav--block  nav--stacked  font--xl" data-bkg="gtr:large">
             <li><a href="http://google.com">Home</a></li>
             <li><a href="/">Services</a></li>
             <li><a href="/">Portfolio</a></li>
@@ -308,11 +308,14 @@
 
     <script src="js/responsive-nav.js"></script>
     <script>
-      var navContainer = document.getElementById('js-nav');
-      var nav = responsiveNav("#js-nav", {
+      var navContainer = document.getElementById('js-rnav');
+      var nav = responsiveNav("#js-rnav", {
         animate: false,
         transition: 300,
         closeOnNavClick: true,
+        navClass: "rnav",
+        navActiveClass: "js-has-rnav-active",
+        jsClass: "js-has-rnav",
         open: function(){
           navContainer.classList.add("fadeIn");
           navContainer.classList.remove("fadeOut");

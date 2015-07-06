@@ -1931,11 +1931,8 @@ input[type="button"] {
   .btn--fill {
     width: 100%; }
 
-/*! responsive-nav.js 1.0.39 by @viljamis */
-.nav-collapse ul {
-  display: block; }
-
-.js .nav-collapse {
+/*! responsive-nav.js-has-rnav 1.0.39 by @viljamis */
+.js-has-rnav .rnav {
   clip: rect(0 0 0 0);
   max-height: 0;
   position: absolute;
@@ -1943,7 +1940,7 @@ input[type="button"] {
   overflow: hidden;
   zoom: 1; }
 
-.js body .nav-collapse.opened {
+.js-has-rnav body .rnav.opened {
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
   position: fixed !important;
@@ -1956,30 +1953,31 @@ input[type="button"] {
   z-index: 100;
   clip: auto;
   overflow: scroll;
-  -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
   text-align: center; }
 
-.js-nav-active body {
-  overflow: hidden; }
-
-.nav {
+.rnav__list {
   display: block;
   padding-top: 10%;
   padding-top: 10vh;
   padding-bottom: 10%;
   padding-bottom: 10vh; }
 
+.js-has-rnav-active body {
+  overflow: hidden;
+  position: fixed; }
+
 .nav-toggle {
+  position: fixed;
+  top: 14px;
+  top: 0.875rem;
+  right: 14px;
+  right: 0.875rem;
+  z-index: 500;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 500; }
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 /*# sourceMappingURL=basekit.css.map */
