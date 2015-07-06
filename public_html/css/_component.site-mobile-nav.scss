@@ -45,8 +45,11 @@
 
   // Prevent site body from scrolling when the nav is open.
   .js-has-rnav-active {
-    body {
+    html, body {
+      position: fixed;
       overflow: hidden;
+      width: 100%;
+      height: 100%;
     }
   }
 
