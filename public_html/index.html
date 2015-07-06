@@ -326,11 +326,13 @@
           navContainer.classList.add("fadeIn");
           navContainer.classList.remove("fadeOut");
           document.ontouchmove = function(e){ e.preventDefault(); }
+          document.getElementById('js-rnav').ontouchmove = function(e){ return true; }
         },
         close: function(){
           navContainer.classList.add("fadeOut");
           navContainer.classList.remove("fadeIn");
           document.ontouchmove = function(e){ return true; }
+          document.getElementById('js-rnav').ontouchmove = function(e){ e.preventDefault(); }
         }
       });
     </script>
