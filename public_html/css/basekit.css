@@ -1971,6 +1971,9 @@ input[type="button"] {
 
 .js-has-rnav-active body {
   overflow: hidden; }
+  @media (max-width: 48em) and (max-height: 64em) {
+    .js-has-rnav-active body {
+      position: fixed; } }
 
 .nav-toggle {
   position: absolute;
