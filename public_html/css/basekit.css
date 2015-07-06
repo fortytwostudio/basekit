@@ -1970,10 +1970,9 @@ input[type="button"] {
   padding-bottom: 20vh; }
 
 .js-has-rnav-active html, .js-has-rnav-active body {
-  height: 100%;
   overflow: hidden;
   width: 100%;
-  position: fixed; }
+  height: 100%; }
 
 .nav-toggle {
   position: absolute;
