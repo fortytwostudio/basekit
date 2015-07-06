@@ -2117,7 +2117,9 @@ input[type="button"] {
       height: 0.3928571429rem;
       width: 100%;
       background-color: black;
+      -webkit-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
+      transition: top 0.25s 0.5s ease, -webkit-transform 0.25s ease;
       transition: top 0.25s 0.5s ease, transform 0.25s ease;
       border-radius: 10px; }
     .rnav-toggle .lines:after {
@@ -2133,8 +2135,11 @@ input[type="button"] {
     transition: background-color 0.25s 0s ease; }
     .js-has-rnav-active .rnav-toggle .lines:before,
     .js-has-rnav-active .rnav-toggle .lines:after {
+      -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
       top: 0;
+      transition: top 0.25s ease, -webkit-transform 0.25s 0.5s ease;
       transition: top 0.25s ease, transform 0.25s 0.5s ease; }
     .js-has-rnav-active .rnav-toggle .lines:after {
+      -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg); }

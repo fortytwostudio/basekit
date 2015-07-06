@@ -100,7 +100,11 @@
           @include rem(height, $burger-bar);
           width: 100%;
           background-color: black;
+          -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
+          transition:
+            top $speed-normal $speed-slow ease,
+            -webkit-transform $speed-normal ease;
           transition:
             top $speed-normal $speed-slow ease,
             transform $speed-normal ease;
@@ -128,13 +132,18 @@
 
           &:before,
           &:after {
+            -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
             top: 0;
+            transition:
+              top $speed-normal ease,
+              -webkit-transform $speed-normal $speed-slow ease;
             transition:
               top $speed-normal ease,
               transform $speed-normal $speed-slow ease;
           }
           &:after {
+            -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
           }
         }
