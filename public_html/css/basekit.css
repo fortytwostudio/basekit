@@ -1964,9 +1964,9 @@ input[type="button"] {
 
 .rnav__list {
   display: block;
-  padding-top: 10%;
-  padding-top: 10vh;
-  padding-bottom: 10%;
+  padding-top: 5%;
+  padding-top: 5vh;
+  padding-bottom: 20%;
   padding-bottom: 20vh; }
 
 .js-has-rnav-active body {
@@ -1985,6 +1985,4 @@ input[type="button"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .js-has-rnav-active .nav-toggle {
-    position: fixed; }
 /*# sourceMappingURL=basekit.css.map */

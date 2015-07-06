@@ -34,9 +34,9 @@
 
     &__list {
       display: block;
-      padding-top: 10%;
-      padding-top: 10vh;
-      padding-bottom: 10%;
+      padding-top: 5%;
+      padding-top: 5vh;
+      padding-bottom: 20%;
       padding-bottom: 20vh;
     }
   }
@@ -55,9 +55,9 @@
     -webkit-touch-callout: none;
     user-select: none;
 
-    .js-has-rnav-active & {
-      position: fixed;
-    }
+    // .js-has-rnav-active & {
+    //   position: fixed;
+    // }
   }
 
   // @media screen and (min-width: 40em) {
