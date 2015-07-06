@@ -2086,19 +2086,19 @@ input[type="button"] {
   right: 14px;
   right: 0.875rem;
   z-index: 500;
-  width: 44px;
-  width: 2.75rem;
-  height: 44px;
-  height: 2.75rem;
+  width: 40px;
+  width: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   user-select: none; }
   .rnav-toggle .lines {
     position: absolute;
-    top: 18.8571428571px;
-    top: 1.1785714286rem;
-    height: 6.2857142857px;
-    height: 0.3928571429rem;
+    top: 17.1428571429px;
+    top: 1.0714285714rem;
+    height: 5.7142857143px;
+    height: 0.3571428571rem;
     width: 100%;
     background-color: black;
     transition: background-color 0.25s 0.5s ease;
@@ -2112,9 +2112,9 @@ input[type="button"] {
       content: "";
       display: block;
       position: absolute;
-      top: 12.5714285714px;
-      height: 6.2857142857px;
-      height: 0.3928571429rem;
+      top: 11.4285714286px;
+      height: 5.7142857143px;
+      height: 0.3571428571rem;
       width: 100%;
       background-color: black;
       -webkit-transform-origin: 50% 50%;
@@ -2123,7 +2123,7 @@ input[type="button"] {
       transition: top 0.25s 0.5s ease, transform 0.25s ease;
       border-radius: 10px; }
     .rnav-toggle .lines:after {
-      top: -12.5714285714px; }
+      top: -11.4285714286px; }
 
 .js-has-rnav-active body {
   overflow: hidden; }
