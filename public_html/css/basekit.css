@@ -8,6 +8,10 @@
   padding: 0;
   margin: 0; }
 
+html,
+body {
+  height: 100%; }
+
 body {
   font: 400 1em/1.25 helvetica, arial, helmet, freesans, "numbus sans l", verdana, sans-serif;
   color: dimgrey;
@@ -1951,8 +1955,11 @@ input[type="button"] {
   background: white;
   z-index: 100;
   clip: auto;
-  overflow: scroll;
-  overflow-scrolling: touch !important;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-scrolling: touch;
   text-align: center; }
 
 .rnav__list {
@@ -1963,11 +1970,10 @@ input[type="button"] {
   padding-bottom: 20vh; }
 
 .js-has-rnav-active body {
-  overflow: hidden;
-  position: fixed; }
+  overflow: hidden; }
 
 .nav-toggle {
-  position: fixed;
+  position: absolute;
   top: 14px;
   top: 0.875rem;
   right: 14px;
@@ -1979,4 +1985,6 @@ input[type="button"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+  .js-has-rnav-active .nav-toggle {
+    position: fixed; }
 /*# sourceMappingURL=basekit.css.map */

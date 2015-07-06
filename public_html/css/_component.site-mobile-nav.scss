@@ -24,8 +24,10 @@
        background: white;
        z-index: 100;
        clip: auto;
-       overflow: scroll;
-       overflow-scrolling: touch!important;
+       backface-visibility: hidden;
+       overflow: auto!important;
+       -webkit-overflow-scrolling: touch!important;
+       overflow-scrolling: touch;
        text-align: center;
      }
     }
@@ -40,20 +42,22 @@
   }
 
   // Prevent site body from scrolling when the nav is open.
-  // Position fixed is required for iOS.
   .js-has-rnav-active body {
     overflow: hidden;
-    position: fixed;
   }
 
   .nav-toggle {
-    position: fixed;
+    position: absolute;
     @include rem(top, px($margin));
     @include rem(right, px($margin));
     z-index: z(mobile-nav-toggle);
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
     user-select: none;
+
+    .js-has-rnav-active & {
+      position: fixed;
+    }
   }
 
   // @media screen and (min-width: 40em) {
