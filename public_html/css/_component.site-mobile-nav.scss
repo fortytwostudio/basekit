@@ -59,6 +59,11 @@
       overflow: hidden;
     }
 
+    body,
+    html {
+      position: fixed;
+    }
+
     .nav-toggle {
       position: fixed;
     }

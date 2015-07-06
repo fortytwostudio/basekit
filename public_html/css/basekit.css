@@ -1986,6 +1986,10 @@ input[type="button"] {
 .js-has-rnav-active body {
   overflow: hidden; }
 
+.js-has-rnav-active body,
+.js-has-rnav-active html {
+  position: fixed; }
+
 .js-has-rnav-active .nav-toggle {
   position: fixed; }
 /*# sourceMappingURL=basekit.css.map */
