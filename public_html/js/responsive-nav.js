@@ -314,34 +314,14 @@
 
         if (navOpen) {
 
-          // ADDED BY RYAN @ EQ
           setTimeout(function () {
-          // END
-
             addClass(nav, "closed");
             removeClass(nav, "opened");
             removeClass(htmlEl, opts.navActiveClass);
             removeClass(navToggle, "active");
             setAttributes(nav, {"aria-hidden": "true"});
-
-            // If animations are enabled, wait until they finish
-            if (opts.animate) {
-              hasAnimFinished = false;
-              setTimeout(function () {
-                // nav.style.position = "absolute";
-                hasAnimFinished = true;
-              }, opts.transition + 10);
-
-            // Animations aren't enabled, we can do these immediately
-            } else {
-              // nav.style.position = "absolute";
-            }
-
             navOpen = false;
-
-          // ADDED BY RYAN @ EQ
-          }, opts.transition + 10);
-          // END
+          }, opts.transition);
 
           opts.close();
         }
