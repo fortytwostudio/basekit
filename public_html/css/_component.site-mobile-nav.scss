@@ -1,13 +1,16 @@
 @if $nav-mobile {
 
-.rnav-toggle {
-  display: none;
-}
+  // Disabled the toggler button by default, we don't want it on large screens.
+  .#{$nav-mobile-name}-toggle { display: none; }
 
+  // Typically we only want the nav to be responsive at small screen sizes. In
+  // set.nav.scss you'll want to define when the MQ stops showing.
   @include mq($until: $nav-mobile-breakpoint) {
 
-    .rnav {
-      .js-has-rnav & {
+    // In set.nav.scss the class name is defined, make sure it matches the
+    // javascript 'navClass' option otherwise things won't work.
+    .#{$nav-mobile-name} {
+      .js-has-#{$nav-mobile-name} & {
         // Hide by default. This CSS is the same as the hide utility class.
         clip: rect(0 0 0 0);
         position: absolute;
@@ -19,11 +22,11 @@
         border: 0;
       }
 
-      .js-has-rnav-active & {
+      .js-has-#{$nav-mobile-name}-active & {
         // Remove clipping.
         clip: auto;
         // Set the animate.css duration speed.
-        animation-duration: 0.3s;
+        animation-duration: $speed-slow;
         // Fix the position to the viewport so it won't scroll.
         position: fixed!important;
         // Fit it to the viewport dimensions.
@@ -64,7 +67,7 @@
 
     $burger-bar: $nav-mobile-hit-area / 7;
 
-    .rnav-toggle {
+    .#{$nav-mobile-name}-toggle {
       background-color: red;
 
       display: block;
@@ -125,13 +128,13 @@
       }
     }
 
-    .js-has-rnav-active {
+    .js-has-#{$nav-mobile-name}-active {
       // Prevent site body from scrolling when the nav is open.
       body {
         overflow: hidden;
       }
 
-      .rnav-toggle {
+      .#{$nav-mobile-name}-toggle {
         // Fix the toggler 'hamburger' button in position while the nav is open.
         position: fixed;
 

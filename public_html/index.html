@@ -81,10 +81,10 @@
       <header>
         <h1 class="font--xxl  margin--b  color--primary"><span class="animated  bounceIn">Basekit</span></h1>
 
-        <nav class="site-nav  animated  setLinks  setLinks--nav" id="js-rnav">
+        <nav class="site-nav  animated" id="js-rnav">
           <h1 class="hide">Navigation</h1>
 
-          <ul class="site-nav__content  rnav__content  nav  nav--block  nav--stacked  font--xl">
+          <ul class="site-nav__content  rnav__content">
             <li><a href="http://google.com">Home</a></li>
             <li><a href="/">Services</a></li>
             <li><a href="/">Portfolio</a></li>
@@ -314,9 +314,11 @@
     <script src="js/responsive-nav.js"></script>
     <script>
       var navContainer = document.getElementById('js-rnav');
+      var animSpeed = 250;
+
       var nav = responsiveNav("#js-rnav", {
         animate: false,
-        transition: 300,
+        transition: animSpeed,
         closeOnNavClick: true,
         navClass: "rnav",
         toggleName: "rnav-toggle",
@@ -324,13 +326,18 @@
         label: "<span class='lines'>Menu</span>",
         navActiveClass: "js-has-rnav-active",
         jsClass: "js-has-rnav",
+
         open: function(){
           navContainer.classList.add("fadeIn");
           navContainer.classList.remove("fadeOut");
         },
+
         close: function(){
           navContainer.classList.add("fadeOut");
-          navContainer.classList.remove("fadeIn");
+          setTimeout(function () {
+            navContainer.classList.remove("fadeIn");
+            navContainer.classList.remove("fadeOut");
+          }, animSpeed);
         }
       });
     </script>

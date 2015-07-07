@@ -1938,7 +1938,7 @@ input[type="button"] {
 .rnav-toggle {
   display: none; }
 
-@media (max-width: 37.49em) {
+@media (max-width: 48em) {
   .js-has-rnav .rnav {
     clip: rect(0 0 0 0);
     position: absolute;
@@ -1950,8 +1950,8 @@ input[type="button"] {
     border: 0; }
   .js-has-rnav-active .rnav {
     clip: auto;
-    -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
     position: fixed !important;
     top: 0;
     right: 0;
