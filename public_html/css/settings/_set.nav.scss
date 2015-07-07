@@ -1,10 +1,13 @@
 // Enable or disable the navigation utility helper and alternative styles.
 // See: core/utility.nav.scss
 // NOTE: this is a true utility class, it does not style colours or other
-// visual stuff. Consider it structural.
+// "decorative" stuff.
 $nav-css: true;
+// Utility class for stacked nav lists.
 $nav-stacked-css: true;
+// Utility class for bigger button like nav items.
 $nav-block-css: true;
+// Utility class to fit the nav to its container width.
 $nav-fit-css: true;
 
 // Enable disable all mobile nav CSS.
@@ -15,21 +18,31 @@ $nav-mobile-name: rnav;
 $nav-mobile-breakpoint: 768px;
 // Define the icon dimensions and click/tap-able area.
 $nav-mobile-hit-area: 35px;
-
-$nav-mobile-anim-duration: $speed-slow;
+// Set the fade-in/out speed, this is dependent on animation.css
+$nav-mobile-anim-speed: $speed-slow;
+// Define padding of the overlay
 $nav-mobile-padding: 5% 5% 10%;
 
 // Define the colours and icon image.
 $nav-mobile-background: white;
+// Set a background colour to the toggle button.
+$nav-mobile-toggle-background: null;
+// Set the toggle hamburger bar colours.
+$nav-mobile-toggle-bar-bg: $grey-dark;
+// Define the hamburger bar height, there are three bars so by default lets
+// divide the height by 7.
+$nav-mobile-burger-bar: $nav-mobile-hit-area / 7;
+// Calculate the centre point for the bars to work from, if you've changed the
+// bar height then you'll need to tweak this.
+$nav-mobile-burger-bar-center: $nav-mobile-burger-bar * 3;
+// Define the speed at which each bar is animated.
+$nav-mobile-burger-bar-transition-speed: $speed-fast;
+// You can have a slight delay between the outer bars moving along the y-axis
+// and their rotating 45deg, set that here.
+$nav-mobile-burger-bar-transition-delay: $speed-fast;
+// Do you like a border radius on each bar?
+$nav-mobile-burger-bar-border-radius: null;
 
-
+// Legacy images:
 // $nav-mobile-toggle: "ui/menu.svg";
 // $nav-mobile-open-toggle: "ui/menu--close.svg";
-
-$nav-mobile-toggle-background: null;
-$nav-mobile-toggle-bar-bg: $grey-dark;
-
-$nav-mobile-burger-bar: $nav-mobile-hit-area / 7;
-$nav-mobile-burger-bar-transition-speed: $speed-fast;
-$nav-mobile-burger-bar-transition-delay: $speed-fast;
-$nav-mobile-burger-bar-border-radius: null;
