@@ -113,11 +113,7 @@
           @include rem(height, $nav-mobile-burger-bar);
           width: 100%;
           background-color: $nav-mobile-toggle-bar-bg;
-          -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-          transition:
-            top $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-in,
-            -webkit-transform $nav-mobile-burger-bar-transition-speed ease-in;
           transition:
             top $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-in,
             transform $nav-mobile-burger-bar-transition-speed ease-in;
@@ -145,18 +141,13 @@
 
           &:before,
           &:after {
-            -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
             top: 0;
-            transition:
-              top $nav-mobile-burger-bar-transition-speed ease-out,
-              -webkit-transform $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-out;
             transition:
               top $nav-mobile-burger-bar-transition-speed ease-out,
               transform $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-out;
           }
           &:after {
-            -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
           }
         }

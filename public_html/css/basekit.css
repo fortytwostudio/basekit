@@ -1999,8 +1999,8 @@ input[type="button"] {
       height: 5px;
       height: 0.3125rem;
       background-color: dimgrey;
-      -webkit-transition: background-color 0.25s 0.25s;
-              transition: background-color 0.25s 0.25s;
+      -webkit-transition: background-color 0.1s 0.1s;
+              transition: background-color 0.1s 0.1s;
       display: block;
       text-align: left;
       text-indent: -9999px;
@@ -2016,32 +2016,30 @@ input[type="button"] {
         width: 100%;
         background-color: dimgrey;
         -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-        -webkit-transition: top 0.25s 0.25s ease-in, -webkit-transform 0.25s ease-in;
-                transition: top 0.25s 0.25s ease-in, -webkit-transform 0.25s ease-in;
-        transition: top 0.25s 0.25s ease-in, transform 0.25s ease-in; }
+            -ms-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-transition: top 0.1s 0.1s ease-in, -webkit-transform 0.1s ease-in;
+                transition: top 0.1s 0.1s ease-in, transform 0.1s ease-in; }
       .rnav-toggle .burger-bars:after {
         top: -10px; }
   .js-has-rnav-active .rnav-toggle {
     position: fixed; }
     .js-has-rnav-active .rnav-toggle .burger-bars {
       background-color: transparent;
-      -webkit-transition: background-color 0.25s 0s;
-              transition: background-color 0.25s 0s; }
+      -webkit-transition: background-color 0.1s 0s;
+              transition: background-color 0.1s 0s; }
       .js-has-rnav-active .rnav-toggle .burger-bars:before,
       .js-has-rnav-active .rnav-toggle .burger-bars:after {
         -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
         top: 0;
-        -webkit-transition: top 0.25s ease-out, -webkit-transform 0.25s 0.25s ease-out;
-                transition: top 0.25s ease-out, -webkit-transform 0.25s 0.25s ease-out;
-        transition: top 0.25s ease-out, transform 0.25s 0.25s ease-out; }
+        -webkit-transition: top 0.1s ease-out, -webkit-transform 0.1s 0.1s ease-out;
+                transition: top 0.1s ease-out, transform 0.1s 0.1s ease-out; }
       .js-has-rnav-active .rnav-toggle .burger-bars:after {
         -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
   .js-has-rnav-active body {
     overflow: hidden; } }
 /*# sourceMappingURL=basekit.css.map */
