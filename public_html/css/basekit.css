@@ -1935,6 +1935,9 @@ input[type="button"] {
   .btn--fill {
     width: 100%; }
 
+.rnav-toggle {
+  display: none; }
+
 @media (max-width: 37.49em) {
   .js-has-rnav .rnav {
     clip: rect(0 0 0 0);
@@ -1970,16 +1973,22 @@ input[type="button"] {
     -webkit-overflow-scrolling: touch !important;
     overflow-scrolling: touch; }
   .rnav-toggle {
+    background-color: red;
+    display: block;
     position: absolute;
     top: 14px;
     top: 0.875rem;
     right: 14px;
     right: 0.875rem;
     z-index: 500;
-    width: 28px;
-    width: 1.75rem;
-    height: 28px;
-    height: 1.75rem;
+    width: 44px;
+    width: 2.75rem;
+    height: 44px;
+    height: 2.75rem;
+    padding-right: 8px;
+    padding-right: 0.5rem;
+    padding-left: 8px;
+    padding-left: 0.5rem;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -1988,11 +1997,12 @@ input[type="button"] {
             user-select: none; }
     .rnav-toggle .lines {
       position: absolute;
-      top: 12px;
-      top: 0.75rem;
-      height: 4px;
-      height: 0.25rem;
-      width: 100%;
+      top: 18.85714286px;
+      top: 1.17857143rem;
+      width: 30px;
+      width: 1.875rem;
+      height: 6.28571429px;
+      height: 0.39285714rem;
       background-color: black;
       -webkit-transition: background-color 0.25s 0.5s ease;
               transition: background-color 0.25s 0.5s ease;
@@ -2006,9 +2016,9 @@ input[type="button"] {
         content: "";
         display: block;
         position: absolute;
-        top: 8px;
-        height: 4px;
-        height: 0.25rem;
+        top: 12.57142857px;
+        height: 6.28571429px;
+        height: 0.39285714rem;
         width: 100%;
         background-color: black;
         -webkit-transform-origin: 50% 50%;
@@ -2019,7 +2029,7 @@ input[type="button"] {
         transition: top 0.25s 0.5s ease, transform 0.25s ease;
         border-radius: 10px; }
       .rnav-toggle .lines:after {
-        top: -8px; }
+        top: -12.57142857px; }
   .js-has-rnav-active body {
     overflow: hidden; }
   .js-has-rnav-active .rnav-toggle {

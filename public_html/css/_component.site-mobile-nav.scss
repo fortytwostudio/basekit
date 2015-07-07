@@ -1,5 +1,9 @@
 @if $nav-mobile {
 
+.rnav-toggle {
+  display: none;
+}
+
   @include mq($until: $nav-mobile-breakpoint) {
 
     .rnav {
@@ -61,6 +65,9 @@
     $burger-bar: $nav-mobile-hit-area / 7;
 
     .rnav-toggle {
+      background-color: red;
+
+      display: block;
       // Position at the top, but don't make this 'fixed' just yet.
       position: absolute;
       @include rem(top, px($margin));
@@ -70,6 +77,8 @@
       // Style the button.
       @include rem(width, $nav-mobile-hit-area);
       @include rem(height, $nav-mobile-hit-area);
+      @include rem(padding-right, 8px);
+      @include rem(padding-left, 8px);
 
       // Prevent wonkiness in iOS.
       -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -79,8 +88,8 @@
       .lines {
         position: absolute;
         @include rem(top, $burger-bar * 3);
+        @include rem(width, $nav-mobile-hit-area - 14px);
         @include rem(height, $burger-bar);
-        width: 100%;
         background-color: black;
         transition: background-color $speed-normal $speed-slow ease;
         border-radius: 10px;
