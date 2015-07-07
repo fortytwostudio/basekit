@@ -2001,7 +2001,6 @@ input[type="button"] {
       background-color: dimgrey;
       -webkit-transition: background-color 0.25s 0.25s;
               transition: background-color 0.25s 0.25s;
-      border-radius: 10px;
       display: block;
       text-align: left;
       text-indent: -9999px;
@@ -2021,8 +2020,7 @@ input[type="button"] {
             transform-origin: 50% 50%;
         -webkit-transition: top 0.25s 0.25s ease-in, -webkit-transform 0.25s ease-in;
                 transition: top 0.25s 0.25s ease-in, -webkit-transform 0.25s ease-in;
-        transition: top 0.25s 0.25s ease-in, transform 0.25s ease-in;
-        border-radius: 10px; }
+        transition: top 0.25s 0.25s ease-in, transform 0.25s ease-in; }
       .rnav-toggle .burger-bars:after {
         top: -10px; }
   .js-has-rnav-active .rnav-toggle {

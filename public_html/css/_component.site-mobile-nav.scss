@@ -94,7 +94,9 @@
         @include rem(height, $nav-mobile-burger-bar);
         background-color: $nav-mobile-toggle-bar-bg;
         transition: background-color $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay;
-        border-radius: 10px;
+        @if $nav-mobile-burger-bar-border-radius {
+          border-radius: $nav-mobile-burger-bar-border-radius;
+        }
 
         // Hide text. Same as hide-text utility class.
         display: block;
@@ -119,7 +121,9 @@
           transition:
             top $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-in,
             transform $nav-mobile-burger-bar-transition-speed ease-in;
-          border-radius: 10px;
+          @if $nav-mobile-burger-bar-border-radius {
+            border-radius: $nav-mobile-burger-bar-border-radius;
+          }
         }
         &:after {
           top: -$nav-mobile-burger-bar * 2;
@@ -165,6 +169,5 @@
       }
     }
 
-  // MQ closing bracket
-  }
+  } // MQ closing bracket
 }
