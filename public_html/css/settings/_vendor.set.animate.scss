@@ -4,15 +4,15 @@
 
 
 // Base module settings
-$base-duration	: 1s;           // used in 1-base module
+$base-duration: 1s;           // used in 1-base module
 $base-origin: top center;
 $base-degrees: 30deg;        // used in lightspeed & special modules
-$base-fill-mode	: both;
+$base-fill-mode: both;
 $base-iteration-count: infinite;
 
 $base-timing-function-in: ease-in;
 $base-timing-function-out: ease-out;
-$base-timing-function-in-out	: ease-in-out;
+$base-timing-function-in-out: ease-in-out;
 
 $base-distance	: 10px; 		// used in fade, shake and bounce modules
 $base-distance-big: 1000px;       // used in fadeBig and bounce modules
@@ -48,7 +48,7 @@ $hinge-translate: 700px;
 //==================================================================================================//
 
 // Fade Enter
-$use-fadeIn:true;
+$use-fadeIn: true;
 $use-fadeInUp: false;
 $use-fadeInUpBig: false;
 $use-fadeInDown: false;
@@ -72,7 +72,7 @@ $use-fadeOutRightBig: false;
 
 
 // Bounce Enter
-$use-bounceIn:	true;
+$use-bounceIn: true;
 $use-bounceInUp: false;
 $use-bounceInDown: false;
 $use-bounceInLeft: false;
@@ -157,7 +157,7 @@ $use-zoomInUp: true;
 
 
 // Zoom Out
-$use-zoomOut:	true;
+$use-zoomOut: true;
 $use-zoomOutDown: false;
 $use-zoomOutLeft: false;
 $use-zoomOutRight: false;

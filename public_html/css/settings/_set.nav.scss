@@ -14,9 +14,21 @@ $nav-mobile-name: rnav;
 // At which breakpoint (or px value) should it kick in?
 $nav-mobile-breakpoint: 768px;
 // Define the icon dimensions and click/tap-able area.
-$nav-mobile-hit-area: 44px;
+$nav-mobile-hit-area: 35px;
+
+$nav-mobile-anim-duration: $speed-slow;
+$nav-mobile-padding: 5% 5% 10%;
 
 // Define the colours and icon image.
 $nav-mobile-background: white;
-$nav-mobile-toggle: "ui/menu.svg";
-$nav-mobile-open-toggle: "ui/menu--close.svg";
+
+
+// $nav-mobile-toggle: "ui/menu.svg";
+// $nav-mobile-open-toggle: "ui/menu--close.svg";
+
+$nav-mobile-toggle-background: null;
+$nav-mobile-toggle-bar-bg: $grey-dark;
+
+$nav-mobile-burger-bar: $nav-mobile-hit-area / 7;
+$nav-mobile-burger-bar-transition-speed: $speed-normal;
+$nav-mobile-burger-bar-transition-delay: $speed-normal;

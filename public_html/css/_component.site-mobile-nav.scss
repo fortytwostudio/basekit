@@ -26,7 +26,7 @@
         // Remove clipping.
         clip: auto;
         // Set the animate.css duration speed.
-        animation-duration: $speed-slow;
+        animation-duration: $nav-mobile-anim-duration;
         // Fix the position to the viewport so it won't scroll.
         position: fixed!important;
         // Fit it to the viewport dimensions.
@@ -43,11 +43,11 @@
         background: $nav-mobile-background;
       }
 
-      // The main content wrapper whether it's a UL or bock of content.
+      // Nav inner content wrapper, whether it's a UL or other content.
       &__content {
         // Setup some basic padding, I tend to give the bottom more padding to
         // account for UI in mobile browsers.
-        padding: 5% 5% 10%;
+        padding: $nav-mobile-padding;
         // Fit it within the overlay container.
         position: absolute;
         top: 0;
@@ -65,36 +65,35 @@
     }
 
 
-    $burger-bar: $nav-mobile-hit-area / 7;
 
     .#{$nav-mobile-name}-toggle {
-      background-color: red;
 
       display: block;
-      // Position at the top, but don't make this 'fixed' just yet.
+      // Position at the top, we don't want this 'fixed' just yet.
       position: absolute;
       @include rem(top, px($margin));
       @include rem(right, px($margin));
       z-index: z(mobile-nav-toggle);
 
-      // Style the button.
+      // Define the toggler dimensions.
       @include rem(width, $nav-mobile-hit-area);
       @include rem(height, $nav-mobile-hit-area);
-      @include rem(padding-right, 8px);
-      @include rem(padding-left, 8px);
+      @if $nav-mobile-toggle-background {
+        background-color: $nav-mobile-toggle-background;
+      }
 
       // Prevent wonkiness in iOS.
       -webkit-tap-highlight-color: rgba(0,0,0,0);
       -webkit-touch-callout: none;
       user-select: none;
 
-      .lines {
+      .burger-bars {
         position: absolute;
-        @include rem(top, $burger-bar * 3);
-        @include rem(width, $nav-mobile-hit-area - 14px);
-        @include rem(height, $burger-bar);
-        background-color: black;
-        transition: background-color $speed-normal $speed-slow ease;
+        @include rem(top, $nav-mobile-burger-bar * 3);
+        @include rem(width, $nav-mobile-hit-area);
+        @include rem(height, $nav-mobile-burger-bar);
+        background-color: $nav-mobile-toggle-bar-bg;
+        transition: background-color $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay;
         border-radius: 10px;
 
         // Hide text. Same as hide-text utility class.
@@ -108,39 +107,37 @@
           content: "";
           display: block;
           position: absolute;
-          top: $burger-bar * 2;
-          @include rem(height, $burger-bar);
+          top: $nav-mobile-burger-bar * 2;
+          @include rem(height, $nav-mobile-burger-bar);
           width: 100%;
-          background-color: black;
+          background-color: $nav-mobile-toggle-bar-bg;
           -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
           transition:
-            top $speed-normal $speed-slow ease,
-            -webkit-transform $speed-normal ease;
+            top $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-in,
+            -webkit-transform $nav-mobile-burger-bar-transition-speed ease-in;
           transition:
-            top $speed-normal $speed-slow ease,
-            transform $speed-normal ease;
+            top $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-in,
+            transform $nav-mobile-burger-bar-transition-speed ease-in;
           border-radius: 10px;
         }
         &:after {
-          top: -$burger-bar * 2;
+          top: -$nav-mobile-burger-bar * 2;
         }
       }
     }
 
     .js-has-#{$nav-mobile-name}-active {
-      // Prevent site body from scrolling when the nav is open.
-      body {
-        overflow: hidden;
-      }
 
       .#{$nav-mobile-name}-toggle {
         // Fix the toggler 'hamburger' button in position while the nav is open.
         position: fixed;
 
-        .lines {
+        .burger-bars {
+          // We don't want the middle bar to be visible when the x is formed so
+          // make it invisible.
           background-color: transparent;
-          transition: background-color $speed-normal 0s ease;
+          transition: background-color $nav-mobile-burger-bar-transition-speed 0s;
 
           &:before,
           &:after {
@@ -148,11 +145,11 @@
             transform: rotate(45deg);
             top: 0;
             transition:
-              top $speed-normal ease,
-              -webkit-transform $speed-normal $speed-slow ease;
+              top $nav-mobile-burger-bar-transition-speed ease-out,
+              -webkit-transform $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-out;
             transition:
-              top $speed-normal ease,
-              transform $speed-normal $speed-slow ease;
+              top $nav-mobile-burger-bar-transition-speed ease-out,
+              transform $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-out;
           }
           &:after {
             -webkit-transform: rotate(-45deg);
@@ -160,6 +157,11 @@
           }
         }
 
+      }
+
+      // Prevent site body from scrolling when the nav is open.
+      body {
+        overflow: hidden;
       }
     }
 
