@@ -1,22 +1,11 @@
 @if $hidden-css {
   .hide {
-    clip: rect(0 0 0 0);
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0;
+    @include hide()
   }
 }
 
 @if $hide-text-css {
   .hide-text {
-    display: block;
-    height: 100%;
-    text-align: left;
-    text-indent: -9999px;
-    direction: ltr;
+    @include hide(text)
   }
 }
