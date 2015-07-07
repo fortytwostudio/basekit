@@ -302,50 +302,6 @@ input[type="button"] {
   overflow: hidden;
   border: 0; }
 
-@media (max-width: 29.99em) {
-  .hide-until-palm {
-    clip: rect(0 0 0 0);
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0; } }
-
-@media (max-width: 37.49em) {
-  .hide-until-hands {
-    clip: rect(0 0 0 0);
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0; } }
-
-@media (max-width: 47.99em) {
-  .hide-until-lap {
-    clip: rect(0 0 0 0);
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0; } }
-
-@media (max-width: 63.99em) {
-  .hide-until-desk {
-    clip: rect(0 0 0 0);
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0; } }
-
 .hide-text {
   display: block;
   height: 100%;
