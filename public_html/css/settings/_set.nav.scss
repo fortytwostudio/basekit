@@ -9,15 +9,12 @@ $nav-fit-css: true;
 
 // Enable disable all mobile nav CSS.
 $nav-mobile: true;
-
 // Define the class name.
 $nav-mobile-name: "rnav";
-
 // At which breakpoint (or px value) should it kick in?
 $nav-mobile-breakpoint: hands;
-
 // Define the icon dimensions and click/tap-able area.
-$nav-mobile-hit-area: 40px;
+$nav-mobile-hit-area: 28px;
 
 // Define the colours and icon image.
 $nav-mobile-background: white;

@@ -1,6 +1,6 @@
 @if $nav-mobile {
 
-  // @include mq($until: $nav-mobile-breakpoint) {
+  @include mq($until: $nav-mobile-breakpoint) {
 
     .rnav {
       .js-has-rnav & {
@@ -152,5 +152,5 @@
     }
 
   // MQ closing bracket
-  // }
+  }
 }
