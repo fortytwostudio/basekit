@@ -12,9 +12,6 @@ body {
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
   backface-visibility: hidden;
-  @if $ios-smooth-scroll {
-    @include smooth-scroll
-  }
 
   @if $font-size > $font-size-small-screen {
     @include mq($until: hands) {

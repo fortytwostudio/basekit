@@ -1,5 +1,6 @@
-@mixin smooth-scroll {
+@mixin smooth-scroll($important: null) {
 
-  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch#{unquote($important)};
+  overflow-scrolling: touch#{unquote($important)};
 
 }

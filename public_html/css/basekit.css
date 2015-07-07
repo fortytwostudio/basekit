@@ -1925,8 +1925,8 @@ input[type="button"] {
     left: 0;
     height: 100%;
     overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch !important;
-    overflow-scrolling: touch; }
+    -webkit-overflow-scrolling: touch!important;
+    overflow-scrolling: touch!important; }
   .rnav-toggle {
     display: block;
     position: absolute;
