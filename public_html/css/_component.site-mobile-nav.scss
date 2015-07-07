@@ -11,15 +11,7 @@
     // javascript 'navClass' option otherwise things won't work.
     .#{$nav-mobile-name} {
       .js-has-#{$nav-mobile-name} & {
-        // Hide by default. This CSS is the same as the hide utility class.
-        clip: rect(0 0 0 0);
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        border: 0;
+        @include hide()
       }
 
       .js-has-#{$nav-mobile-name}-active & {
@@ -99,12 +91,8 @@
         @if $nav-mobile-burger-bar-border-radius {
           border-radius: $nav-mobile-burger-bar-border-radius;
         }
-
         // Hide text. Same as hide-text utility class.
-        display: block;
-        text-align: left;
-        text-indent: -9999px;
-        direction: ltr;
+        @include hide(text);
 
         &:before,
         &:after {

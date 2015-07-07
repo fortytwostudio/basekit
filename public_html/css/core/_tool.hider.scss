@@ -1,7 +1,6 @@
 @mixin hide($kind: content) {
   @if $kind == text {
     display: block;
-    height: 100%;
     text-align: left;
     text-indent: -9999px;
     direction: ltr;
