@@ -360,17 +360,22 @@ input[type="button"] {
   padding: 14px;
   padding: 0.875rem;
   margin: 5px 0 0;
+  margin: 0.3125rem 0 0;
   background-color: orangered; }
   .alert:before {
     position: absolute;
     top: -10px;
+    top: -0.625rem;
     left: 14px;
+    left: 0.875rem;
     content: "";
     width: 0;
     height: 0;
     background: transparent;
     border: 10px solid;
+    border: 0.625rem solid;
     border-width: 0 12px 18px 12px;
+    border-width: 0 0.75rem 1.125rem 0.75rem;
     border-color: transparent transparent orangered transparent; }
   .alert--neutral {
     background-color: dodgerblue; }
