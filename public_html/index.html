@@ -315,6 +315,42 @@
 
 
 
+      <section class="pad--large--bottom" id="fonts">
+        <h1 class="font--xxl  margin--b  color--primary">Image Optimisation</h1>
+
+        <style>
+          .img-optims { max-width: 800px }
+          .img-optims__title { margin-bottom: 10px }
+          .img-optims__item:not(:last-child) { margin-bottom: 50px }
+          .img-optims .error { display: inline-block }
+        </style>
+
+        <ul class="img-optims  userContent">
+          <li class="img-optims__item">
+            <h2 class="img-optims__title">Original unoptimised image at 1600px wide resized in browser to 800px.</h2>
+            <img src="imgs/placeholders/optim-example-original.jpg" alt="optim example original">
+            <p class="error  brad"><strong>1MB</strong></p>
+          </li>
+          <li class="img-optims__item">
+            <h2 class="img-optims__title">Original optimised image at 1600px wide resized in browser to 800px.</h2>
+            <img src="imgs/placeholders/optim-example-optimised.jpg" alt="optim example optimised">
+            <p class="error  brad"><strong>955KB</strong></p>
+          </li>
+          <li class="img-optims__item">
+            <h2 class="img-optims__title">Optimised image resized to 800px wide and saved at 85% jpg quality.</h2>
+            <img src="imgs/placeholders/optim-example-800-web-85.jpg" alt="optim example 800 web 85">
+            <p class="error  brad"><strong>193KB</strong></p>
+          </li>
+          <li class="img-optims__item">
+            <h2 class="img-optims__title">Optimised image at 1600px wide resized in browser to 800px and saved at 20% jpg quality.</h2>
+            <img src="imgs/placeholders/optim-example-optimised-web-20.jpg" alt="optim example optimised web 20">
+            <p class="error  brad"><strong>167KB</strong></p>
+          </li>
+        </ul>
+      </section>
+
+
+
     </div>
 
     <script src="js/responsive-nav.js"></script>
