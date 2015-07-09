@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   code {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
     @include rem(font-size, px($font-size-small-screen));
-    color: $error-bg;
+    color: $alert-bg;
     padding: 0 3px 2px;
     background-color: lighten($grey-light, 12.5%);
     border: 1px solid $grey-light;

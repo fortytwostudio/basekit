@@ -1,0 +1,51 @@
+@if $form-error-css {
+
+  .#{unquote($form-error-name)} {
+    color: $alert-text;
+    line-height: 1;
+    position: relative;
+    @include rem(padding, px($margin));
+    margin: 5px 0 0;
+    background-color: $alert-bg;
+
+    &:before {
+      position: absolute;
+      top: -10px;
+      left: px($margin);
+      content: "";
+      width: 0;
+      height: 0;
+      background: transparent;
+      border: 10px solid;
+      border-width: 0 12px 18px 12px;
+      border-color: transparent transparent $alert-bg transparent;
+    }
+
+    @if $alert-bg--neutral {
+      &--neutral {
+        background-color: $alert-bg--neutral;
+
+        &:before {
+          border-bottom-color: $alert-bg--neutral;
+        }
+      }
+    }
+
+    @if $alert-bg--positive {
+      &--positive {
+        background-color: $alert-bg--positive;
+
+        &:before {
+          border-bottom-color: $alert-bg--positive;
+        }
+      }
+    }
+
+    @if $alert-inline-block {
+      &--ib {
+        @include inline-block()
+      }
+    }
+  }
+
+}

@@ -32,6 +32,9 @@ $text: $grey-dark;
 // colours.
 $heading: $text;
 
-// Error colours should be something nice and impactful
-$error-text: white;
-$error-bg: orangered;
+// Error colours should be something nice and impactful.
+$alert-text: white;
+$alert-bg: orangered;
+// Set the following to null to prevent any CSS being needlessly compiled.
+$alert-bg--neutral: dodgerblue;
+$alert-bg--positive: limegreen;
