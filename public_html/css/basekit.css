@@ -2014,4 +2014,12 @@ input[type="button"] {
                 transform: rotate(-45deg); }
   .js-has-rnav-active body {
     overflow: hidden; } }
+
+.fit-y {
+  width: 100%;
+  max-height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom; }
 /*# sourceMappingURL=basekit.css.map */

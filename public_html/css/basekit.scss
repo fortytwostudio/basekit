@@ -107,3 +107,11 @@
   "component.site-footer",
   "component.buttons",
   "component.site-mobile-nav";
+
+
+.fit-y {
+  width: 100%;
+  max-height: 700px;
+  object-fit: cover;
+  object-position: bottom; // not supported in Safari
+}
