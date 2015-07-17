@@ -35,7 +35,7 @@ $bk-grid-gutter-large: $margin * 2;
 $bk-push-columns: $columns - 1;
 
 $bk-push-right: true;
-$bk-push-left: true;
+$bk-push-left: false;
 
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;

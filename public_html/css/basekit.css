@@ -607,39 +607,6 @@ input[type="button"] {
 [data-bkg~="pr:11"] {
   margin-left: 91.66666667%; }
 
-[data-bkg~="pl:1"] {
-  margin-right: 8.33333333%; }
-
-[data-bkg~="pl:2"] {
-  margin-right: 16.66666667%; }
-
-[data-bkg~="pl:3"] {
-  margin-right: 25%; }
-
-[data-bkg~="pl:4"] {
-  margin-right: 33.33333333%; }
-
-[data-bkg~="pl:5"] {
-  margin-right: 41.66666667%; }
-
-[data-bkg~="pl:6"] {
-  margin-right: 50%; }
-
-[data-bkg~="pl:7"] {
-  margin-right: 58.33333333%; }
-
-[data-bkg~="pl:8"] {
-  margin-right: 66.66666667%; }
-
-[data-bkg~="pl:9"] {
-  margin-right: 75%; }
-
-[data-bkg~="pl:10"] {
-  margin-right: 83.33333333%; }
-
-[data-bkg~="pl:11"] {
-  margin-right: 91.66666667%; }
-
 [data-bkg~="middle"] > [data-bkg] {
   vertical-align: middle; }
 
@@ -754,28 +721,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="palm:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="palm:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="palm:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="palm:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="palm:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="palm:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="palm:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="palm:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="palm:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="palm:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="palm:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="palm:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="palm:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="palm:bottom"] > [data-bkg] {
@@ -886,28 +831,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="hands:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="hands:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="hands:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="hands:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="hands:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="hands:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="hands:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="hands:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="hands:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="hands:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="hands:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="hands:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="hands:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="hands:bottom"] > [data-bkg] {
@@ -1018,28 +941,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="lap:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="lap:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="lap:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="lap:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="lap:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="lap:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="lap:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="lap:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="lap:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="lap:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="lap:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="lap:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="lap:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="lap:bottom"] > [data-bkg] {
@@ -1150,28 +1051,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="desk:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="desk:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="desk:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="desk:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="desk:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="desk:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="desk:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="desk:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="desk:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="desk:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="desk:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="desk:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="desk:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="desk:bottom"] > [data-bkg] {
@@ -1282,28 +1161,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="to:desk:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="to:desk:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="to:desk:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="to:desk:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="to:desk:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="to:desk:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="to:desk:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="to:desk:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="to:desk:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="to:desk:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="to:desk:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="to:desk:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="to:desk:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:desk:bottom"] > [data-bkg] {
@@ -1414,28 +1271,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="to:lap:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="to:lap:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="to:lap:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="to:lap:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="to:lap:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="to:lap:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="to:lap:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="to:lap:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="to:lap:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="to:lap:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="to:lap:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="to:lap:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="to:lap:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:lap:bottom"] > [data-bkg] {
@@ -1546,28 +1381,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="to:hands:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="to:hands:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="to:hands:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="to:hands:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="to:hands:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="to:hands:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="to:hands:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="to:hands:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="to:hands:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="to:hands:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="to:hands:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="to:hands:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="to:hands:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:hands:bottom"] > [data-bkg] {
@@ -1678,28 +1491,6 @@ input[type="button"] {
     margin-left: 83.33333333%; }
   [data-bkg~="to:palm:pr:11"] {
     margin-left: 91.66666667%; }
-  [data-bkg~="to:palm:pl:1"] {
-    margin-right: 8.33333333%; }
-  [data-bkg~="to:palm:pl:2"] {
-    margin-right: 16.66666667%; }
-  [data-bkg~="to:palm:pl:3"] {
-    margin-right: 25%; }
-  [data-bkg~="to:palm:pl:4"] {
-    margin-right: 33.33333333%; }
-  [data-bkg~="to:palm:pl:5"] {
-    margin-right: 41.66666667%; }
-  [data-bkg~="to:palm:pl:6"] {
-    margin-right: 50%; }
-  [data-bkg~="to:palm:pl:7"] {
-    margin-right: 58.33333333%; }
-  [data-bkg~="to:palm:pl:8"] {
-    margin-right: 66.66666667%; }
-  [data-bkg~="to:palm:pl:9"] {
-    margin-right: 75%; }
-  [data-bkg~="to:palm:pl:10"] {
-    margin-right: 83.33333333%; }
-  [data-bkg~="to:palm:pl:11"] {
-    margin-right: 91.66666667%; }
   [data-bkg~="to:palm:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:palm:bottom"] > [data-bkg] {
