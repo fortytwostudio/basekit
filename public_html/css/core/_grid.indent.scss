@@ -1,39 +1,49 @@
 // Tweaked version of the standard cols and colspan functions.
 //
-@function bk-pad-colspan($input: $columns, $parent: $max-width) {
+@function bk-pp-colspan($input: $columns, $parent: $max-width) {
   @return pct($column-width * $input + $gutter * $input, $parent);
 }
 
 @mixin grid-indent($gw-value: null) {
 
-  // INDENT FROM LEFT
-  @for $i from 1 through $bk-indent-columns {
-    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"in:"}#{$i}) {
-      margin-left: bk-pad-colspan($i);
+  // PUSH RIGHT
+  @for $i from 1 through $bk-push-columns {
+    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pr:"}#{$i}) {
+      margin-left: bk-pp-colspan($i);
+    }
+  }
+  // PUSH LEFT
+  @for $i from 1 through $bk-push-columns {
+    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pl:"}#{$i}) {
+      margin-right: bk-pp-colspan($i);
     }
   }
 
-  // OUTDENT
-  @if $bk-outdent {
-
-    // Target this attributes with this selector pattern
-    @mixin attr-target($module, $trait: null) {
-      @if $trait != null {
-        [#{$module}*="#{$trait}"] {
-          @content;
-        }
-      }
-    }
-
-    @include attr-target(unquote($bk-grid-name), #{$gw-value}#{"out:"}) {
-      position: relative;
-    }
-
-    @for $i from 1 through $bk-outdent-columns {
-      @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"out:"}#{$i}) {
-        left: -#{bk-pad-colspan($i)};
-      }
-    }
-  }
+  // Output an outdent configuation too? Best to avoid this though.
+  // $bk-outdent: true;
+  // $bk-outdent-columns: $columns - 1;
+  //
+  // OFFSET
+  // @if $bk-outdent {
+  //
+  //   // Target this attributes with this selector pattern
+  //   @mixin attr-target($module, $trait: null) {
+  //     @if $trait != null {
+  //       [#{$module}*="#{$trait}"] {
+  //         @content;
+  //       }
+  //     }
+  //   }
+  //
+  //   @include attr-target(unquote($bk-grid-name), #{$gw-value}#{"offset:"}) {
+  //     position: relative;
+  //   }
+  //
+  //   @for $i from 1 through $bk-outdent-columns {
+  //     @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"offset:"}#{$i}) {
+  //       left: -#{bk-pp-colspan($i)};
+  //     }
+  //   }
+  // }
 
 }

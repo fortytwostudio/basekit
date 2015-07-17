@@ -574,38 +574,71 @@ input[type="button"] {
 [data-bkg~="gtr:trl"] {
   padding-bottom: 0; }
 
-[data-bkg~="in:1"] {
+[data-bkg~="pr:1"] {
   margin-left: 8.33333333%; }
 
-[data-bkg~="in:2"] {
+[data-bkg~="pr:2"] {
   margin-left: 16.66666667%; }
 
-[data-bkg~="in:3"] {
+[data-bkg~="pr:3"] {
   margin-left: 25%; }
 
-[data-bkg~="in:4"] {
+[data-bkg~="pr:4"] {
   margin-left: 33.33333333%; }
 
-[data-bkg~="in:5"] {
+[data-bkg~="pr:5"] {
   margin-left: 41.66666667%; }
 
-[data-bkg~="in:6"] {
+[data-bkg~="pr:6"] {
   margin-left: 50%; }
 
-[data-bkg~="in:7"] {
+[data-bkg~="pr:7"] {
   margin-left: 58.33333333%; }
 
-[data-bkg~="in:8"] {
+[data-bkg~="pr:8"] {
   margin-left: 66.66666667%; }
 
-[data-bkg~="in:9"] {
+[data-bkg~="pr:9"] {
   margin-left: 75%; }
 
-[data-bkg~="in:10"] {
+[data-bkg~="pr:10"] {
   margin-left: 83.33333333%; }
 
-[data-bkg~="in:11"] {
+[data-bkg~="pr:11"] {
   margin-left: 91.66666667%; }
+
+[data-bkg~="pl:1"] {
+  margin-right: 8.33333333%; }
+
+[data-bkg~="pl:2"] {
+  margin-right: 16.66666667%; }
+
+[data-bkg~="pl:3"] {
+  margin-right: 25%; }
+
+[data-bkg~="pl:4"] {
+  margin-right: 33.33333333%; }
+
+[data-bkg~="pl:5"] {
+  margin-right: 41.66666667%; }
+
+[data-bkg~="pl:6"] {
+  margin-right: 50%; }
+
+[data-bkg~="pl:7"] {
+  margin-right: 58.33333333%; }
+
+[data-bkg~="pl:8"] {
+  margin-right: 66.66666667%; }
+
+[data-bkg~="pl:9"] {
+  margin-right: 75%; }
+
+[data-bkg~="pl:10"] {
+  margin-right: 83.33333333%; }
+
+[data-bkg~="pl:11"] {
+  margin-right: 91.66666667%; }
 
 [data-bkg~="middle"] > [data-bkg] {
   vertical-align: middle; }
@@ -699,28 +732,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="palm:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="palm:in:1"] {
+  [data-bkg~="palm:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="palm:in:2"] {
+  [data-bkg~="palm:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="palm:in:3"] {
+  [data-bkg~="palm:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="palm:in:4"] {
+  [data-bkg~="palm:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="palm:in:5"] {
+  [data-bkg~="palm:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="palm:in:6"] {
+  [data-bkg~="palm:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="palm:in:7"] {
+  [data-bkg~="palm:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="palm:in:8"] {
+  [data-bkg~="palm:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="palm:in:9"] {
+  [data-bkg~="palm:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="palm:in:10"] {
+  [data-bkg~="palm:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="palm:in:11"] {
+  [data-bkg~="palm:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="palm:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="palm:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="palm:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="palm:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="palm:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="palm:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="palm:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="palm:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="palm:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="palm:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="palm:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="palm:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="palm:bottom"] > [data-bkg] {
@@ -809,28 +864,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="hands:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="hands:in:1"] {
+  [data-bkg~="hands:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="hands:in:2"] {
+  [data-bkg~="hands:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="hands:in:3"] {
+  [data-bkg~="hands:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="hands:in:4"] {
+  [data-bkg~="hands:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="hands:in:5"] {
+  [data-bkg~="hands:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="hands:in:6"] {
+  [data-bkg~="hands:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="hands:in:7"] {
+  [data-bkg~="hands:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="hands:in:8"] {
+  [data-bkg~="hands:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="hands:in:9"] {
+  [data-bkg~="hands:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="hands:in:10"] {
+  [data-bkg~="hands:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="hands:in:11"] {
+  [data-bkg~="hands:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="hands:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="hands:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="hands:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="hands:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="hands:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="hands:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="hands:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="hands:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="hands:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="hands:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="hands:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="hands:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="hands:bottom"] > [data-bkg] {
@@ -919,28 +996,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="lap:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="lap:in:1"] {
+  [data-bkg~="lap:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="lap:in:2"] {
+  [data-bkg~="lap:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="lap:in:3"] {
+  [data-bkg~="lap:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="lap:in:4"] {
+  [data-bkg~="lap:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="lap:in:5"] {
+  [data-bkg~="lap:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="lap:in:6"] {
+  [data-bkg~="lap:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="lap:in:7"] {
+  [data-bkg~="lap:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="lap:in:8"] {
+  [data-bkg~="lap:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="lap:in:9"] {
+  [data-bkg~="lap:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="lap:in:10"] {
+  [data-bkg~="lap:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="lap:in:11"] {
+  [data-bkg~="lap:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="lap:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="lap:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="lap:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="lap:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="lap:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="lap:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="lap:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="lap:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="lap:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="lap:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="lap:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="lap:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="lap:bottom"] > [data-bkg] {
@@ -1029,28 +1128,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="desk:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="desk:in:1"] {
+  [data-bkg~="desk:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="desk:in:2"] {
+  [data-bkg~="desk:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="desk:in:3"] {
+  [data-bkg~="desk:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="desk:in:4"] {
+  [data-bkg~="desk:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="desk:in:5"] {
+  [data-bkg~="desk:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="desk:in:6"] {
+  [data-bkg~="desk:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="desk:in:7"] {
+  [data-bkg~="desk:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="desk:in:8"] {
+  [data-bkg~="desk:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="desk:in:9"] {
+  [data-bkg~="desk:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="desk:in:10"] {
+  [data-bkg~="desk:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="desk:in:11"] {
+  [data-bkg~="desk:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="desk:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="desk:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="desk:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="desk:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="desk:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="desk:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="desk:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="desk:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="desk:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="desk:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="desk:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="desk:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="desk:bottom"] > [data-bkg] {
@@ -1139,28 +1260,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="to:desk:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="to:desk:in:1"] {
+  [data-bkg~="to:desk:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="to:desk:in:2"] {
+  [data-bkg~="to:desk:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="to:desk:in:3"] {
+  [data-bkg~="to:desk:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="to:desk:in:4"] {
+  [data-bkg~="to:desk:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="to:desk:in:5"] {
+  [data-bkg~="to:desk:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="to:desk:in:6"] {
+  [data-bkg~="to:desk:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="to:desk:in:7"] {
+  [data-bkg~="to:desk:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="to:desk:in:8"] {
+  [data-bkg~="to:desk:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="to:desk:in:9"] {
+  [data-bkg~="to:desk:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="to:desk:in:10"] {
+  [data-bkg~="to:desk:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="to:desk:in:11"] {
+  [data-bkg~="to:desk:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="to:desk:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="to:desk:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="to:desk:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="to:desk:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="to:desk:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="to:desk:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="to:desk:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="to:desk:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="to:desk:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="to:desk:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="to:desk:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="to:desk:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:desk:bottom"] > [data-bkg] {
@@ -1249,28 +1392,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="to:lap:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="to:lap:in:1"] {
+  [data-bkg~="to:lap:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="to:lap:in:2"] {
+  [data-bkg~="to:lap:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="to:lap:in:3"] {
+  [data-bkg~="to:lap:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="to:lap:in:4"] {
+  [data-bkg~="to:lap:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="to:lap:in:5"] {
+  [data-bkg~="to:lap:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="to:lap:in:6"] {
+  [data-bkg~="to:lap:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="to:lap:in:7"] {
+  [data-bkg~="to:lap:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="to:lap:in:8"] {
+  [data-bkg~="to:lap:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="to:lap:in:9"] {
+  [data-bkg~="to:lap:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="to:lap:in:10"] {
+  [data-bkg~="to:lap:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="to:lap:in:11"] {
+  [data-bkg~="to:lap:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="to:lap:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="to:lap:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="to:lap:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="to:lap:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="to:lap:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="to:lap:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="to:lap:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="to:lap:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="to:lap:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="to:lap:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="to:lap:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="to:lap:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:lap:bottom"] > [data-bkg] {
@@ -1359,28 +1524,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="to:hands:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="to:hands:in:1"] {
+  [data-bkg~="to:hands:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="to:hands:in:2"] {
+  [data-bkg~="to:hands:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="to:hands:in:3"] {
+  [data-bkg~="to:hands:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="to:hands:in:4"] {
+  [data-bkg~="to:hands:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="to:hands:in:5"] {
+  [data-bkg~="to:hands:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="to:hands:in:6"] {
+  [data-bkg~="to:hands:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="to:hands:in:7"] {
+  [data-bkg~="to:hands:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="to:hands:in:8"] {
+  [data-bkg~="to:hands:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="to:hands:in:9"] {
+  [data-bkg~="to:hands:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="to:hands:in:10"] {
+  [data-bkg~="to:hands:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="to:hands:in:11"] {
+  [data-bkg~="to:hands:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="to:hands:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="to:hands:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="to:hands:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="to:hands:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="to:hands:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="to:hands:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="to:hands:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="to:hands:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="to:hands:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="to:hands:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="to:hands:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="to:hands:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:hands:bottom"] > [data-bkg] {
@@ -1469,28 +1656,50 @@ input[type="button"] {
     padding-bottom: 0; }
   [data-bkg~="to:palm:gtr:trl"] {
     padding-bottom: 0; }
-  [data-bkg~="to:palm:in:1"] {
+  [data-bkg~="to:palm:pr:1"] {
     margin-left: 8.33333333%; }
-  [data-bkg~="to:palm:in:2"] {
+  [data-bkg~="to:palm:pr:2"] {
     margin-left: 16.66666667%; }
-  [data-bkg~="to:palm:in:3"] {
+  [data-bkg~="to:palm:pr:3"] {
     margin-left: 25%; }
-  [data-bkg~="to:palm:in:4"] {
+  [data-bkg~="to:palm:pr:4"] {
     margin-left: 33.33333333%; }
-  [data-bkg~="to:palm:in:5"] {
+  [data-bkg~="to:palm:pr:5"] {
     margin-left: 41.66666667%; }
-  [data-bkg~="to:palm:in:6"] {
+  [data-bkg~="to:palm:pr:6"] {
     margin-left: 50%; }
-  [data-bkg~="to:palm:in:7"] {
+  [data-bkg~="to:palm:pr:7"] {
     margin-left: 58.33333333%; }
-  [data-bkg~="to:palm:in:8"] {
+  [data-bkg~="to:palm:pr:8"] {
     margin-left: 66.66666667%; }
-  [data-bkg~="to:palm:in:9"] {
+  [data-bkg~="to:palm:pr:9"] {
     margin-left: 75%; }
-  [data-bkg~="to:palm:in:10"] {
+  [data-bkg~="to:palm:pr:10"] {
     margin-left: 83.33333333%; }
-  [data-bkg~="to:palm:in:11"] {
+  [data-bkg~="to:palm:pr:11"] {
     margin-left: 91.66666667%; }
+  [data-bkg~="to:palm:pl:1"] {
+    margin-right: 8.33333333%; }
+  [data-bkg~="to:palm:pl:2"] {
+    margin-right: 16.66666667%; }
+  [data-bkg~="to:palm:pl:3"] {
+    margin-right: 25%; }
+  [data-bkg~="to:palm:pl:4"] {
+    margin-right: 33.33333333%; }
+  [data-bkg~="to:palm:pl:5"] {
+    margin-right: 41.66666667%; }
+  [data-bkg~="to:palm:pl:6"] {
+    margin-right: 50%; }
+  [data-bkg~="to:palm:pl:7"] {
+    margin-right: 58.33333333%; }
+  [data-bkg~="to:palm:pl:8"] {
+    margin-right: 66.66666667%; }
+  [data-bkg~="to:palm:pl:9"] {
+    margin-right: 75%; }
+  [data-bkg~="to:palm:pl:10"] {
+    margin-right: 83.33333333%; }
+  [data-bkg~="to:palm:pl:11"] {
+    margin-right: 91.66666667%; }
   [data-bkg~="to:palm:middle"] > [data-bkg] {
     vertical-align: middle; }
   [data-bkg~="to:palm:bottom"] > [data-bkg] {
