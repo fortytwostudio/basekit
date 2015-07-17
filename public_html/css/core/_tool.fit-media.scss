@@ -1,5 +1,4 @@
 @mixin fit-media($fit-pct: 100%, $fit-flip-position: left, $fit-adjust-z-index: z(fit-media)) {
-
   position: absolute;
   z-index: $fit-adjust-z-index;
   top: 0;
@@ -19,4 +18,9 @@
     width: nth($fit-pct, 1);
     height: nth($fit-pct, 2);
   }
+}
+
+@mixin fit-media-height($height: 700px, $fit: cover) {
+  max-height: $height;
+  object-fit: $fit;
 }

@@ -1,6 +1,5 @@
-@charset "UTF-8";
-
 // GLOBAL SETTINGS
+//
 @import
   "settings/set.base-colors",
   "settings/set.layout",
@@ -54,6 +53,7 @@
   "core/grid.gutters";
 
 // GLOBALS
+@charset "UTF-8";
 @import
   "core/global.box-model",
   "core/global.document",
@@ -107,11 +107,3 @@
   "component.site-footer",
   "component.buttons",
   "component.site-mobile-nav";
-
-
-.fit-y {
-  width: 100%;
-  max-height: 700px;
-  object-fit: cover;
-  object-position: bottom; // not supported in Safari
-}
