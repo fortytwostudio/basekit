@@ -34,6 +34,9 @@ $bk-grid-gutter-large: $margin * 2;
 // Define how many `indent` columns there should be, default is $columns - 1.
 $bk-push-columns: $columns - 1;
 
+$bk-push-right: true;
+$bk-push-left: true;
+
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;
 $site-width-name: "max-width";

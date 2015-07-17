@@ -7,15 +7,19 @@
 @mixin grid-indent($gw-value: null) {
 
   // PUSH RIGHT
-  @for $i from 1 through $bk-push-columns {
-    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pr:"}#{$i}) {
-      margin-left: bk-pp-colspan($i);
+  @if $bk-push-right {
+    @for $i from 1 through $bk-push-columns {
+      @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pr:"}#{$i}) {
+        margin-left: bk-pp-colspan($i);
+      }
     }
   }
   // PUSH LEFT
-  @for $i from 1 through $bk-push-columns {
-    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pl:"}#{$i}) {
-      margin-right: bk-pp-colspan($i);
+  @if $bk-push-left {
+    @for $i from 1 through $bk-push-columns {
+      @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pl:"}#{$i}) {
+        margin-right: bk-pp-colspan($i);
+      }
     }
   }
 
