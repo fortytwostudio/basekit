@@ -459,6 +459,39 @@ input[type="button"] {
 .float--none {
   float: none; }
 
+.setLinks a {
+  color: tomato;
+  -webkit-transition: color 0.25s ease;
+          transition: color 0.25s ease; }
+
+.setLinks a:hover,
+.setLinks a:focus {
+  color: grey; }
+
+.setLinks--inverted a {
+  color: grey; }
+
+.setLinks--inverted a:hover,
+.setLinks--inverted a:focus {
+  color: tomato; }
+
+.setLinks--contrasted a {
+  color: white; }
+
+.setLinks--contrasted a:hover,
+.setLinks--contrasted a:focus {
+  color: lightgrey; }
+
+.setLinks--nav a {
+  color: white;
+  font-weight: 700;
+  background: red; }
+
+.setLinks--nav a:hover,
+.setLinks--nav a:focus {
+  color: #ffa493;
+  background: blue; }
+
 [data-bkg] {
   width: 100%;
   display: inline-block;
@@ -1820,39 +1853,6 @@ input[type="button"] {
     .font--xxl {
       font-size: 60px;
       font-size: 3.75rem; } }
-
-.setLinks a {
-  color: tomato;
-  -webkit-transition: color 0.25s ease;
-          transition: color 0.25s ease; }
-
-.setLinks a:hover,
-.setLinks a:focus {
-  color: grey; }
-
-.setLinks--inverted a {
-  color: grey; }
-
-.setLinks--inverted a:hover,
-.setLinks--inverted a:focus {
-  color: tomato; }
-
-.setLinks--contrasted a {
-  color: white; }
-
-.setLinks--contrasted a:hover,
-.setLinks--contrasted a:focus {
-  color: lightgrey; }
-
-.setLinks--nav a {
-  color: white;
-  font-weight: 700;
-  background: red; }
-
-.setLinks--nav a:hover,
-.setLinks--nav a:focus {
-  color: #ffa493;
-  background: blue; }
 
 .siteLogo {
   position: relative;
