@@ -1810,16 +1810,16 @@ input[type="button"] {
     -webkit-animation-duration: 0.75s;
     animation-duration: 0.75s; }
 
-.color--white {
+.color-white {
   color: white; }
 
-.color--primary {
+.color-primary {
   color: tomato; }
 
-.color--secondary {
+.color-secondary {
   color: grey; }
 
-.color--tertiary {
+.color-tertiary {
   color: lightgrey; }
 
 .bg-white {
