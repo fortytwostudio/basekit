@@ -14,7 +14,7 @@
 
         // Only output on the base level link style
         @if $link == null {
-          transition: color $speed-normal ease;
+          transition: color $speed-normal ease-in-out;
         }
       }
       a:hover,

@@ -1823,8 +1823,8 @@ input[type="button"] {
 
 .setLinks a {
   color: tomato;
-  -webkit-transition: color 0.25s ease;
-          transition: color 0.25s ease; }
+  -webkit-transition: color 0.25s ease-in-out;
+          transition: color 0.25s ease-in-out; }
 
 .setLinks a:hover,
 .setLinks a:focus {
