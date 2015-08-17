@@ -1864,13 +1864,13 @@ input[type="button"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: image-url("logos/site-logo.svg");
+    background-image: url(../imgs/logos/site-logo.svg);
     background-size: cover; }
 
 .colophon__logo {
   width: 37px;
   height: 12px;
-  background: image-url("logos/eq.svg") no-repeat;
+  background: url(../imgs/logos/eq.svg) no-repeat;
   background-size: cover; }
 
 .btn {
