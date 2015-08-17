@@ -3,7 +3,7 @@
   .#{unquote($user-content-name)} {
 
     p:not(:last-of-type) {
-      @include rem(margin-bottom, px($margin));
+      @include rem(margin-bottom, px($font-default-bottom-margin));
     }
 
     @if $user-content-inline-images {

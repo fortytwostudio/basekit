@@ -20,6 +20,9 @@ $font-size-small-screen: 14;
 $font-heading-family: $font-family;
 $font-heading-weight: 700;
 
+// Set a default bottom margin size for consistency across text elements.
+$font-default-bottom-margin: $margin * 1.5;
+
 // Output the font utility class.
 $font-css: true;
 
