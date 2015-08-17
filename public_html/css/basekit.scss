@@ -80,7 +80,8 @@
   "core/utility.user-content",
   "core/utility.overflow-text",
   "core/utility.float",
-  "core/utility.site-links";
+  "core/utility.site-links",
+  "core/utility.site-text";
 
 // LAYOUT GRID UTILITY CLASSES
 @import
@@ -98,8 +99,7 @@
 // UTILITY CLASSES
 @import
   "utility.site-colors",
-  "utility.site-backgrounds",
-  "utility.site-text";
+  "utility.site-backgrounds";
 
 // COMPONENTS
 @import

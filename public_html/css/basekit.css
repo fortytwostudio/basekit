@@ -492,6 +492,83 @@ input[type="button"] {
   color: #ffa493;
   background: blue; }
 
+.font--bold {
+  font-weight: 700; }
+
+.font--normal {
+  font-weight: 400; }
+
+.font--italic {
+  font-style: italic; }
+
+.font--s {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-size: 1.15248227vw; }
+  @media (max-width: 64em) {
+    .font--s {
+      font-size: 13px;
+      font-size: 0.8125rem; } }
+  @media (min-width: 1128px) {
+    .font--s {
+      font-size: 13px;
+      font-size: 0.8125rem; } }
+
+.font--m {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-size: 1.77304965vw; }
+  @media (max-width: 48em) {
+    .font--m {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media (min-width: 1128px) {
+    .font--m {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+.font--l {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-size: 2.12765957vw;
+  line-height: 1.25; }
+  @media (max-width: 48em) {
+    .font--l {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media (min-width: 1128px) {
+    .font--l {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+.font--xl {
+  font-size: 32px;
+  font-size: 2rem;
+  font-size: 2.83687943vw;
+  line-height: 1.15; }
+  @media (max-width: 37.5em) {
+    .font--xl {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+  @media (min-width: 1128px) {
+    .font--xl {
+      font-size: 32px;
+      font-size: 2rem; } }
+
+.font--xxl {
+  font-size: 60px;
+  font-size: 3.75rem;
+  font-size: 5.31914894vw;
+  line-height: 1.1; }
+  @media (max-width: 37.5em) {
+    .font--xxl {
+      font-size: 32px;
+      font-size: 2rem; } }
+  @media (min-width: 1128px) {
+    .font--xxl {
+      font-size: 60px;
+      font-size: 3.75rem; } }
+
 [data-bkg] {
   width: 100%;
   display: inline-block;
@@ -1776,83 +1853,6 @@ input[type="button"] {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain; }
-
-.font--bold {
-  font-weight: 700; }
-
-.font--normal {
-  font-weight: 400; }
-
-.font--italic {
-  font-style: italic; }
-
-.font--s {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  font-size: 1.15248227vw; }
-  @media (max-width: 64em) {
-    .font--s {
-      font-size: 13px;
-      font-size: 0.8125rem; } }
-  @media (min-width: 1128px) {
-    .font--s {
-      font-size: 13px;
-      font-size: 0.8125rem; } }
-
-.font--m {
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-size: 1.77304965vw; }
-  @media (max-width: 48em) {
-    .font--m {
-      font-size: 18px;
-      font-size: 1.125rem; } }
-  @media (min-width: 1128px) {
-    .font--m {
-      font-size: 20px;
-      font-size: 1.25rem; } }
-
-.font--l {
-  font-size: 24px;
-  font-size: 1.5rem;
-  font-size: 2.12765957vw;
-  line-height: 1.25; }
-  @media (max-width: 48em) {
-    .font--l {
-      font-size: 18px;
-      font-size: 1.125rem; } }
-  @media (min-width: 1128px) {
-    .font--l {
-      font-size: 24px;
-      font-size: 1.5rem; } }
-
-.font--xl {
-  font-size: 32px;
-  font-size: 2rem;
-  font-size: 2.83687943vw;
-  line-height: 1.15; }
-  @media (max-width: 37.5em) {
-    .font--xl {
-      font-size: 24px;
-      font-size: 1.5rem; } }
-  @media (min-width: 1128px) {
-    .font--xl {
-      font-size: 32px;
-      font-size: 2rem; } }
-
-.font--xxl {
-  font-size: 60px;
-  font-size: 3.75rem;
-  font-size: 5.31914894vw;
-  line-height: 1.1; }
-  @media (max-width: 37.5em) {
-    .font--xxl {
-      font-size: 32px;
-      font-size: 2rem; } }
-  @media (min-width: 1128px) {
-    .font--xxl {
-      font-size: 60px;
-      font-size: 3.75rem; } }
 
 .siteLogo {
   position: relative;
