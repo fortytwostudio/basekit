@@ -6,7 +6,7 @@
 
     @if $fit-media-fallback-css {
       &--fallback {
-        z-index: z(min)
+        z-index: $z-min;
       }
     }
   }

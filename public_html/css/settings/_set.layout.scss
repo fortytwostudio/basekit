@@ -107,12 +107,21 @@ $_2-1: $half;
 $_4-3: $half * 3;
 
 // Set some base z-index layers to work with
-$z-layers: (
-  "min": 1,
-  "content": 100,
-  "fit-media": 200,
-  "position-over": 300,
-  "mobile-nav": 400,
-  "mobile-nav-toggle": 500,
-  "max": 600
-);
+$z-min: 1;
+$z-content: 100;
+$z-fit-media: 200;
+$z-position-over: 300;
+$z-mobile-nav: 400;
+$z-mobile-nav-toggle: 500;
+$z-max: 600;
+
+// Old:
+// $z-layers: (
+//   "min": 1,
+//   "content": 100,
+//   "fit-media": 200,
+//   "position-over": 300,
+//   "mobile-nav": 400,
+//   "mobile-nav-toggle": 500,
+//   "max": 600
+// );

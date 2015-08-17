@@ -29,7 +29,7 @@
         bottom: 0;
         left: 0;
         // Define the z-index via set.layout.scss
-        z-index: z(mobile-nav);
+        z-index: $z-mobile-nav;
         // Override the hide CSS width and height.
         width: 100%;
         min-height: 100%;
@@ -67,7 +67,7 @@
       position: absolute;
       @include rem(top, px($margin));
       @include rem(right, px($margin));
-      z-index: z(mobile-nav-toggle);
+      z-index: $z-mobile-nav-toggle;
 
       // Define the toggler dimensions.
       @include rem(width, $nav-mobile-hit-area);

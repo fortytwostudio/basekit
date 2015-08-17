@@ -1,4 +1,4 @@
-@mixin position-over($fom-anchor-to: top-left, $fom-setup: null, $fom-adjust-z-index: z(position-over)) {
+@mixin position-over($fom-anchor-to: top-left, $fom-setup: null, $fom-adjust-z-index: $z-position-over) {
 
   @if $fom-setup != basic {
     top: 0;
