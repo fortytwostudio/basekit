@@ -23,20 +23,28 @@ $link-scope-name: "setLinks";
 $links: (
   null: (
     color: $primary,
-    color-hover: $secondary
+    color-hover: $secondary,
+    custom: ()
   ),
   inverted: (
     color: $secondary,
-    color-hover: $primary
+    color-hover: $primary,
+    custom: ()
   ),
   contrasted: (
     color: white,
-    color-hover: $grey-light
+    color-hover: $grey-light,
+    custom: ()
   ),
   nav: (
-    color: $primary,
+    color: white,
     color-hover: $primary--light,
     emphasize: "700",
-    emphasize-hover: "700"
+    custom: (
+      background: red
+    ),
+    custom-hover: (
+      background: blue
+    )
   )
 );

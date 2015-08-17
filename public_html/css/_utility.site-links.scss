@@ -14,7 +14,12 @@
 
         // Only output on the base level link style
         @if $link == null {
-          transition: color $speed-normal ease-in-out;
+          transition: color $speed-normal ease;
+        }
+
+        $custom: map-get($linkVal, custom);
+        @each $custom-name, $custom-name-value in $custom {
+          #{$custom-name}: $custom-name-value;
         }
       }
       a:hover,
@@ -22,6 +27,11 @@
         color: map-get($linkVal, color-hover);
         @if $emphasize-hover {
           font-weight: unquote($emphasize-hover);
+        }
+
+        $custom-hover: map-get($linkVal, custom-hover);
+        @each $custom-name-hover, $custom-name-hover-value in $custom-hover {
+          #{$custom-name-hover}: $custom-name-hover-value;
         }
       }
     }

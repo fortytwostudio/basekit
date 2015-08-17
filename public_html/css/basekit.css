@@ -1823,8 +1823,8 @@ input[type="button"] {
 
 .setLinks a {
   color: tomato;
-  -webkit-transition: color 0.25s ease-in-out;
-          transition: color 0.25s ease-in-out; }
+  -webkit-transition: color 0.25s ease;
+          transition: color 0.25s ease; }
 
 .setLinks a:hover,
 .setLinks a:focus {
@@ -1845,13 +1845,14 @@ input[type="button"] {
   color: lightgrey; }
 
 .setLinks--nav a {
-  color: tomato;
-  font-weight: 700; }
+  color: white;
+  font-weight: 700;
+  background: red; }
 
 .setLinks--nav a:hover,
 .setLinks--nav a:focus {
   color: #ffa493;
-  font-weight: 700; }
+  background: blue; }
 
 .siteLogo {
   position: relative;
