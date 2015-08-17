@@ -274,9 +274,11 @@ input[type="button"] {
     .position-over__item--fit-height {
       height: 100%; }
 
-.max-width {
+.site-container {
   width: 94%;
-  max-width: 1128px; }
+  max-width: 1128px;
+  margin-right: auto;
+  margin-left: auto; }
 
 .fit-media {
   -webkit-transform-style: preserve-3d;
@@ -1710,32 +1712,37 @@ input[type="button"] {
 .color--tertiary {
   color: lightgrey; }
 
-.bg--white {
+.bg-white {
   background-color: white; }
 
-.bg--black {
+.bg-black {
   background-color: black; }
 
-.bg--primary {
+.bg-primary {
   background-color: tomato; }
-  .bg--primary--light {
+  .bg-primary--light {
     background-color: #ffa493; }
-  .bg--primary--dark {
+  .bg-primary--dark {
     background-color: #e02200; }
 
-.bg--secondary {
+.bg-secondary {
   background-color: grey; }
-  .bg--secondary--light {
+  .bg-secondary--light {
     background-color: #a6a6a6; }
-  .bg--secondary--dark {
+  .bg-secondary--dark {
     background-color: #4d4d4d; }
 
-.bg--tertiary {
+.bg-tertiary {
   background-color: lightgrey; }
-  .bg--tertiary--light {
+  .bg-tertiary--light {
     background-color: #f9f9f9; }
-  .bg--tertiary--dark {
+  .bg-tertiary--dark {
     background-color: #b9b9b9; }
+
+.bg-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 .font--bold {
   font-weight: 700; }

@@ -1,36 +1,30 @@
 .bg {
 
-  &--white { background-color: white; }
-  &--black { background-color: black; }
+  &-white { background-color: white; }
+  &-black { background-color: black; }
 
-  &--primary {
+  &-primary {
     background-color: $primary;
     &--light { background-color: $primary--light; }
     &--dark { background-color: $primary--dark; }
   }
 
-  &--secondary {
+  &-secondary {
     background-color: $secondary;
     &--light { background-color: $secondary--light; }
     &--dark { background-color: $secondary--dark; }
   }
 
-  &--tertiary {
+  &-tertiary {
     background-color: $tertiary;
     &--light { background-color: $tertiary--light; }
     &--dark { background-color: $tertiary--dark; }
   }
 
-
-
-//   &--image {
-//     background-image: image-url("placeholders/content-bg-02.jpg");
-//     background-position: center center;
-//     background-size: cover;
-//   }
-//   &--pattern {
-//     background-image: image-url("ui/bg-pattern.png");
-//     background-position: top center;
-//   }
+  &-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
 }

@@ -39,7 +39,8 @@ $bk-push-left: false;
 
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;
-$site-width-name: "max-width";
+$site-width-name: site-container;
+$site-width-position: auto;
 
 // Output the float utility class… ooh nasty.
 $float-css: true;
