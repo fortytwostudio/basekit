@@ -1,0 +1,48 @@
+@mixin position-over($fom-anchor-to: top-left, $fom-setup: null, $fom-adjust-z-index: $z-position-over) {
+
+  @if $fom-setup != basic {
+    top: 0;
+    position: absolute;
+    z-index: $fom-adjust-z-index;
+  }
+  @if $fom-anchor-to == middle {
+    top: 50%;
+    left: 50%;
+    @include transform(translateY(-50%) translateX(-50%));
+  }
+  @if $fom-anchor-to == middle-left {
+    top: 50%;
+    left: 0;
+    @include transform(translateY(-50%) translateX(0));
+  }
+  @if $fom-anchor-to == middle-right {
+    top: 50%;
+    right: 0;
+    @include transform(translateY(-50%) translateX(0));
+  }
+  @if $fom-anchor-to == middle-bottom {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+    @include transform(translateY(0) translateX(50%));
+  }
+  @if $fom-anchor-to == middle-top {
+    top: 0;
+    right: 50%;
+    @include transform(translateY(0) translateX(50%));
+  }
+  @else if $fom-anchor-to == top-right {
+    right: 0;
+  }
+  @else if $fom-anchor-to == bottom-right {
+    top: auto;
+    right: 0;
+    bottom: 0;
+  }
+  @else if $fom-anchor-to == bottom-left {
+    top: auto;
+    bottom: 0;
+    left: 0;
+  }
+
+}

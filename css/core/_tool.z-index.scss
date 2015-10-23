@@ -1,0 +1,9 @@
+@function z($z-key) {
+
+  @if not map-has-key($z-layers, $z-key) {
+    @error "No layer found for `#{$z-key}` in $z-layers map.";
+  }
+
+  @return map-get($z-layers, $z-key);
+
+}

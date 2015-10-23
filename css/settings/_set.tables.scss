@@ -1,0 +1,17 @@
+// Output default table styles.
+$tables-css: true;
+
+// Width of the table borders.
+$tables-width: 1px;
+
+// Border colours.
+$tables-color: $grey-light;
+
+// Alignment within th and td cells.
+$tables-cell-text-align: left;
+
+// Vertical alignment within cells.
+$tables-cell-vertical-align: top;
+
+// Padding within cells.
+$tables-cell-padding: $margin;

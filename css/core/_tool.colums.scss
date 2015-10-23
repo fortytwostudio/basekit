@@ -1,0 +1,5 @@
+@function cols($cols: $columns) {
+
+  @return $column-width * $cols + $gutter * $cols - $gutter;
+
+}

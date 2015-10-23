@@ -1,0 +1,22 @@
+@if $site-width-css {
+
+  .#{$site-width-name} {
+    @if $mq-responsive {
+      width: $site-width;
+      max-width: px($max-width);
+      @if $site-width-position {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    @else {
+      width: px($max-width);
+      @if $site-width-position {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+
+}

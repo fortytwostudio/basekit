@@ -1,0 +1,44 @@
+@if $margin-css {
+
+  .margin {
+
+    @include rem(margin, px($margin));
+
+    &--0 {
+      margin: 0;
+    }
+
+    &--t {
+      @include rem(margin-top, px($margin));
+    }
+
+    &--r {
+      @include rem(margin-right, px($margin));
+    }
+
+    &--b {
+      @include rem(margin-bottom, px($margin));
+    }
+
+    &--l {
+      @include rem(margin-left, px($margin));
+    }
+
+    &--tb {
+      @include rem(margin-top, px($margin));
+      @include rem(margin-bottom, px($margin));
+    }
+
+    &--rl {
+      @include rem(margin-right, px($margin));
+      @include rem(margin-left, px($margin));
+    }
+
+    &--auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+}

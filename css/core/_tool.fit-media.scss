@@ -1,0 +1,26 @@
+@mixin fit-media($fit-pct: 100%, $fit-flip-position: left, $fit-adjust-z-index: $z-fit-media) {
+  position: absolute;
+  z-index: $fit-adjust-z-index;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @if $fit-flip-position != right {
+    left: 0;
+  }
+
+  @if length($fit-pct) == 1 {
+    width: $fit-pct;
+    height: $fit-pct;
+  }
+
+  @else {
+    width: nth($fit-pct, 1);
+    height: nth($fit-pct, 2);
+  }
+}
+
+@mixin fit-media-height($height: 700px, $fit: cover) {
+  max-height: $height;
+  object-fit: $fit;
+}

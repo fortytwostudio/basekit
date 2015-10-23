@@ -1,0 +1,15 @@
+@mixin attr-module($module, $trait: null) {
+
+  @if $trait != null {
+    [#{$module}~="#{$trait}"] {
+      @content;
+    }
+  }
+
+  @else {
+    [#{$module}] {
+      @content;
+    }
+  }
+
+}

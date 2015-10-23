@@ -1,0 +1,31 @@
+// Tweaked version of the standard cols and colspan functions.
+
+// For widths:
+@function bk-cols($cols: $columns) {
+  @return $column-width * $cols + $gutter * $cols;
+}
+
+@function bk-colspan($input: $columns, $parent: $max-width) {
+  @return pct(bk-cols($input), $parent);
+}
+
+// LEGACY:
+// @function bk-pad-cols($cols: $columns) {
+//   @return $column-width * $cols + $gutter * $cols + $margin;
+// }
+// @function bk-pad-colspan($input: $columns, $parent: $max-width) {
+//   @return pct(bk-pad-cols($input), $parent);
+// }
+
+// The mixin itself
+@mixin grid-columns($gw-value: null) {
+  @include attr-module(unquote($bk-grid-name), #{$gw-value}auto) {
+    width: auto;
+  }
+
+  @for $i from 1 through $columns {
+    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{$i}) {
+      width: bk-colspan($i);
+    }
+  }
+}

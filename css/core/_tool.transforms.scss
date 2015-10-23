@@ -1,0 +1,11 @@
+@mixin transform($property: none) {
+  transform: $property;
+}
+
+@mixin transform-origin($axes: 50%) {
+  transform-origin: $axes;
+}
+
+@mixin transform-style($style: flat) {
+  transform-style: $style;
+}

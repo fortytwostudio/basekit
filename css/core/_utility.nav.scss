@@ -1,0 +1,49 @@
+@if $nav-css {
+
+  .nav {
+    > li {
+      &,
+      > a {
+        @include inline-block(middle);
+      }
+    }
+
+    @if $nav-stacked-css {
+      &--stacked {
+        > li {
+          display: list-item;
+          > a {
+            display: block;
+          }
+        }
+      }
+    }
+
+    @if $nav-block-css {
+      &--block {
+        line-height: 1;
+        > li {
+          letter-spacing: normal;
+          word-spacing: normal;
+          > a {
+            padding: 0.5em;
+          }
+        }
+      }
+    }
+
+    @if $nav-fit-css {
+      &--fit {
+        display: table;
+        width: 100%;
+        > li {
+          display: table-cell;
+          > a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+}

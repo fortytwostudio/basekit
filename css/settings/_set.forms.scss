@@ -1,0 +1,33 @@
+// Output default form styles.
+// Found in core/global.forms.scss
+$form-default-css: true;
+
+// Output form styles for additional elements.
+// Found in core/global.forms.scss
+$form-extended-css: true;
+
+// When focusing on a field, what colour should it change to?
+// Set to null if nothing should be output for this.
+$form-focus-color: null;
+
+// Enable and configure a default border around fieldsets.
+$form-fieldset-border: false;
+$form-fieldset-color: $grey-mid;
+$form-fieldset-size: 1px;
+
+// Ouput default CSS for key form features.
+$form-legend-style: false;
+$form-optgroup-style: false;
+$form-search-decoration-style: false;
+$form-disabled-style: false;
+
+// Define a default min-height for textarea fields.
+$form-textarea-min-height: 160px;
+
+// Ouput CSS to nicely style form error messages.
+// Found in core/utility.error.scss
+$form-error-css: true;
+// Define the error class name.
+$form-error-name: "alert";
+// Optional inline block modifier class.
+$alert-inline-block: true;

@@ -1,0 +1,27 @@
+.siteLogo {
+
+  $siteLogo-width: 206px;
+  $siteLogo-height: 46px;
+
+  position: relative;
+  width: $siteLogo-width / 2;
+  height: $siteLogo-height / 2;
+
+  @include mq(palm) {
+    width: pct($siteLogo-width, $max-width);
+    height: 0;
+    padding-top: pct($siteLogo-height, $max-width);
+  }
+
+  a {
+    @include fit-media;
+
+    @if $mq-responsive == false {
+      background-image: image-url("logos/site-logo.png");
+    }
+    @else {
+      background-image: image-url("logos/site-logo.svg");
+      background-size: cover;
+    }
+  }
+}

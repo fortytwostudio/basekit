@@ -1,0 +1,9 @@
+@if $overflow-ellipsis-css {
+
+  .overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
