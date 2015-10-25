@@ -1,3 +1,5 @@
+node_modules
+
 # Sass remove #
 #####################
 /.sass-cache
