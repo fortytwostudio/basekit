@@ -1,0 +1,28 @@
+{
+  "name": "eq-design-gulp-tasks",
+  "version": "0.2.0",
+  "description": "Base Gulp tasks for EQ Design projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eq-design/gulp.git"
+  },
+  "keywords": [
+    "gulp",
+    "task",
+    "runner",
+    "build",
+    "tools"
+  ],
+  "author": "EQ Design",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eq-design/gulp/issues"
+  },
+  "homepage": "https://github.com/eq-design/gulp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
