@@ -5,11 +5,11 @@
   @include attr-module(unquote($bk-grid-name)) {
     width: 100%;
     @include inline-block;
-    @include rem(padding, px($margin / 2));
+    padding: rem(px($margin / 2));
 
     // Increase the padding size
     @include mq(hands) {
-      @include rem(padding, px($margin));
+      padding: rem(px($margin));
     }
   }
 

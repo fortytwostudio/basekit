@@ -1,7 +1,7 @@
 @if $tables-css {
 
   table {
-    @include rem(margin-bottom, px($margin));
+    margin-bottom: rem(px($margin));
     border-collapse: collapse;
     border-spacing: 0;
     border-top: $tables-width solid $tables-color;
@@ -11,7 +11,7 @@
   th, td {
     text-align: $tables-cell-text-align;
     vertical-align: $tables-cell-vertical-align;
-    @include rem(padding, px($tables-cell-padding));
+    padding: rem(px($tables-cell-padding));
     border-bottom: $tables-width solid $tables-color;
     border-right: $tables-width solid $tables-color;
   }

@@ -2,11 +2,11 @@
 
   // Reduce the gutte size on the module
   @include attr-module(unquote($bk-grid-name), #{$gg-value}#{"gtr:small"}) {
-    @include rem(padding, px($bk-grid-gutter-small));
+    padding: rem(px($bk-grid-gutter-small));
   }
 
   @include attr-module(unquote($bk-grid-name), #{$gg-value}#{"gtr:large"}) {
-    @include rem(padding, px($bk-grid-gutter-large));
+    padding: rem(px($bk-grid-gutter-large));
   }
 
   // Disable gutter completely on the module

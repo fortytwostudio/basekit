@@ -2,36 +2,36 @@
 
   .margin {
 
-    @include rem(margin, px($margin));
+    margin: rem(px($margin));
 
     &--0 {
       margin: 0;
     }
 
     &--t {
-      @include rem(margin-top, px($margin));
+      margin-top: rem(px($margin));
     }
 
     &--r {
-      @include rem(margin-right, px($margin));
+      margin-right: rem(px($margin));
     }
 
     &--b {
-      @include rem(margin-bottom, px($margin));
+      margin-bottom: rem(px($margin));
     }
 
     &--l {
-      @include rem(margin-left, px($margin));
+      margin-left: rem(px($margin));
     }
 
     &--tb {
-      @include rem(margin-top, px($margin));
-      @include rem(margin-bottom, px($margin));
+      margin-top: rem(px($margin));
+      margin-bottom: rem(px($margin));
     }
 
     &--rl {
-      @include rem(margin-right, px($margin));
-      @include rem(margin-left, px($margin));
+      margin-right: rem(px($margin));
+      margin-left: rem(px($margin));
     }
 
     &--auto {
