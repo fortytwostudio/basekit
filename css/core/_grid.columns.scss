@@ -19,12 +19,12 @@
 
 // The mixin itself
 @mixin grid-columns($gw-value: null) {
-  @include attr-module(unquote($bk-grid-name), #{$gw-value}auto) {
+  @include attr-module($bk-grid-name, #{$gw-value}auto) {
     width: auto;
   }
 
   @for $i from 1 through $columns {
-    @include attr-module(unquote($bk-grid-name), #{$gw-value}#{$i}) {
+    @include attr-module($bk-grid-name, #{$gw-value}#{$i}) {
       width: bk-colspan($i);
     }
   }

@@ -2,7 +2,7 @@
 $icon-font-face: true;
 
 // @font-face icon name for use through your CSS.
-$icon-font-face-name: "eqicons";
+$icon-font-face-name: eqicons;
 
 // The file path and name of the font files (files they must be the same name).
 // Note there is no / at the start and no file extension on the file name.
@@ -10,7 +10,7 @@ $icon-font-face-path-file-name: "icon-font/eqicons";
 
 // Enable and configure the icon class for use throughout HTML.
 $icon-class: true;
-$icon-class-name: "icon";
+$icon-class-name: icon;
 $icon-line-size: 0.8em;
 $icon-line-height: 1;
 $icon-vert-align: middle;

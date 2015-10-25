@@ -2,7 +2,7 @@
 
   // Output the default element at 100% width
   // And reduce the default padding
-  @include attr-module(unquote($bk-grid-name)) {
+  @include attr-module($bk-grid-name) {
     width: 100%;
     @include inline-block;
     padding: rem(px($margin / 2));

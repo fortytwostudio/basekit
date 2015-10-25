@@ -1,0 +1,12 @@
+// Output the button CSS.
+$btn-css: true;
+// Define the button utility class name.
+$btn-name: btn;
+// Set to null for no corner radius.
+$btn-corners: 4px;
+// Configure colours and speed.
+$btn-bg: $primary;
+$btn-bg--hover: $secondary;
+$btn-txt: white;
+$btn-txt--hover: $btn-txt;
+$btn-transition-speed: $speed-normal;

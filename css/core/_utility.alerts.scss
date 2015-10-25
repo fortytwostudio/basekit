@@ -1,6 +1,6 @@
 @if $form-error-css {
 
-  .#{unquote($form-error-name)} {
+  .#{$form-error-name} {
     color: $alert-text;
     line-height: 1;
     position: relative;

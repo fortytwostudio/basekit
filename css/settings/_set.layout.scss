@@ -25,7 +25,7 @@ $bk-grid: true;
 $bk-grid-mq-to: true;
 
 // Define the attribute name.
-$bk-grid-name: "data-bkg";
+$bk-grid-name: data-bkg;
 
 // Define small and large column gutters.
 $bk-grid-gutter-small: $margin / 2;
@@ -66,7 +66,7 @@ $html-body-full-height: true;
 // Output and configure the padding spacer utility, this is used to add
 // additional top/bottom padding where necessary.
 $padding-spacer-css: true;
-$padding-spacer-name: "pad";
+$padding-spacer-name: pad;
 $padding-spacer-size: 60px;
 
 // Convert the padding spacer to % if fixed padding is causing trouble.

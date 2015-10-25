@@ -1,6 +1,6 @@
 @if $padding-spacer-css {
 
-  .#{unquote($padding-spacer-name)} {
+  .#{$padding-spacer-name} {
 
     // If percentage spacing is set in the compile options use %, otherwise
     // default to rem sizing

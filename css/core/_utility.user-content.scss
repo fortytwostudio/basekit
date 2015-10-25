@@ -1,6 +1,6 @@
 @if $user-content-css {
 
-  .#{unquote($user-content-name)} {
+  .#{$user-content-name} {
 
     p:not(:last-of-type) {
       margin-bottom: rem(px($font-default-bottom-margin));
