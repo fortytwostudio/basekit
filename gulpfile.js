@@ -1,7 +1,9 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     nano        = require('gulp-cssnano'),
-    deploy      = require('gulp-gh-pages');
+    deploy      = require('gulp-gh-pages'),
+    concat      = require('gulp-concat'),
+    uglify      = require('gulp-uglify');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
@@ -17,7 +19,14 @@ gulp.task('deploy', function () {
     .pipe(deploy());
 });
 
-gulp.task('watch', ['scss'], function() {
+gulp.task('js', function() {
+  gulp.src('js/*.js')
+    .pipe(uglify())
+    .pipe(concat('basekit.js'))
+    .pipe(gulp.dest('js/min'));
+});
+
+gulp.task('watch', ['scss', 'js'], function() {
   gulp.watch('css/**/*.scss', ['scss']);
 });
 
