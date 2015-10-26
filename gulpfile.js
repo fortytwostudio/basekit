@@ -1,14 +1,11 @@
-var gulp    = require('gulp');
-var sass    = require('gulp-sass');
-var nano    = require('gulp-cssnano');
-var sourcemaps  = require('gulp-sourcemaps');
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    nano        = require('gulp-cssnano');
 
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.init())
     .pipe(nano({autoprefixer: {browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}}))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css'));
 });
 
