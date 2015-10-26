@@ -1,4 +1,7 @@
+# Node stuff #
+#####################
 node_modules
+npm-debug.log
 
 # Sass remove #
 #####################
