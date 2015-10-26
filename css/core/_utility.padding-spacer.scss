@@ -52,35 +52,35 @@
 
         &,
         &--top {
-          @include rem(padding-top, $padding-spacer-size);
+          padding-top: rem($padding-spacer-size);
         }
 
         &,
         &--bottom {
-          @include rem(padding-bottom, $padding-spacer-size);
+          padding-bottom: rem($padding-spacer-size);
         }
 
         &--small {
           &,
           &--top {
-            @include rem(padding-top, $padding-spacer-size / 2);
+            padding-top: rem($padding-spacer-size / 2);
           }
 
           &,
           &--bottom {
-            @include rem(padding-bottom, $padding-spacer-size / 2);
+            padding-bottom: rem($padding-spacer-size / 2);
           }
         }
 
         &--large {
           &,
           &--top {
-            @include rem(padding-top, $padding-spacer-size * 2);
+            padding-top: rem($padding-spacer-size * 2);
           }
 
           &,
           &--bottom {
-            @include rem(padding-bottom, $padding-spacer-size * 2);
+            padding-bottom: rem($padding-spacer-size * 2);
           }
         }
 

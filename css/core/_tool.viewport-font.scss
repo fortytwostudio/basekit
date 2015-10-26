@@ -17,7 +17,7 @@
 
     // Set the minimum breakpoint font size in px
     @media (max-#{$dimension}: #{$min-breakpoint}) {
-      @include rem(font-size, $min);
+      font-size: rem($min);
     }
   }
 
@@ -26,13 +26,13 @@
     $max-breakpoint: px($font-viewport-unit-max-width);
 
     @media (min-#{$dimension}: #{$max-breakpoint}) {
-      @include rem(font-size, $max);
+      font-size: rem($max);
     }
   }
 
   // Output the fallback font size in px if necessary
   @if $fallback {
-    @include rem(font-size, $fallback);
+    font-size: rem($fallback);
   }
 
   // Finally output the real thing converting from px to vw or vh
