@@ -3,6 +3,7 @@ var gulp        = require('gulp'),
     nano        = require('gulp-cssnano'),
     deploy      = require('gulp-gh-pages');
 
+// Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
@@ -10,6 +11,7 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('css'));
 });
 
+// Easy deploy to gh-pages branch
 gulp.task('deploy', function () {
   return gulp.src('**/*')
     .pipe(deploy());
