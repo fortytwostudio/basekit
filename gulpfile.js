@@ -19,6 +19,7 @@ gulp.task('deploy', function () {
     .pipe(deploy());
 });
 
+// Minify and concat the js files for use
 gulp.task('js', function() {
   gulp.src('js/*.js')
     .pipe(uglify())
