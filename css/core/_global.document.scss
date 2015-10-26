@@ -6,7 +6,7 @@
 }
 
 body {
-  font: $font-weight em($font-size, 16)/#{$font-line-height / $font-size} $font-family;
+  font: $font-weight #{em($font-size, 16)}/#{$font-line-height / $font-size} $font-family;
   color: $text;
   background: $body unquote($body-media);
   text-rendering: optimizeSpeed;
