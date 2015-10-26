@@ -3,7 +3,7 @@
   @each $corner, $val in $border-radius-settings {
     $name: $corner;
 
-    .#{unquote($border-radius-name)}#{if($name, "--", "")}#{$name} {
+    .#{$border-radius-name}#{if($name, "--", "")}#{$name} {
       border-radius: map-get($val, radius);
     }
   }

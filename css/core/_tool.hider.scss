@@ -3,6 +3,7 @@
     display: block;
     text-align: left;
     text-indent: -9999px;
+    line-height: 0;
     direction: ltr;
   } @else {
     clip: rect(0 0 0 0);

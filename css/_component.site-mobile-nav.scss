@@ -65,13 +65,13 @@
       display: block;
       // Position at the top, we don't want this 'fixed' just yet.
       position: absolute;
-      @include rem(top, px($margin));
-      @include rem(right, px($margin));
+      top: rem(px($margin));
+      right: rem(px($margin));
       z-index: $z-mobile-nav-toggle;
 
       // Define the toggler dimensions.
-      @include rem(width, $nav-mobile-hit-area);
-      @include rem(height, $nav-mobile-hit-area);
+      width: rem($nav-mobile-hit-area);
+      height: rem($nav-mobile-hit-area);
       @if $nav-mobile-toggle-background {
         background-color: $nav-mobile-toggle-background;
       }
@@ -83,9 +83,9 @@
 
       .burger-bars {
         position: absolute;
-        @include rem(top, $nav-mobile-burger-bar-center);
-        @include rem(width, $nav-mobile-hit-area);
-        @include rem(height, $nav-mobile-burger-bar);
+        top: rem($nav-mobile-burger-bar-center);
+        width: rem($nav-mobile-hit-area);
+        height: rem($nav-mobile-burger-bar);
         background-color: $nav-mobile-toggle-bar-bg;
         transition: background-color $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay;
         @if $nav-mobile-burger-bar-border-radius {
@@ -100,7 +100,7 @@
           display: block;
           position: absolute;
           top: $nav-mobile-burger-bar * 2;
-          @include rem(height, $nav-mobile-burger-bar);
+          height: rem($nav-mobile-burger-bar);
           width: 100%;
           background-color: $nav-mobile-toggle-bar-bg;
           transform-origin: 50% 50%;

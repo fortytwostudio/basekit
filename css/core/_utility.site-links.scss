@@ -5,7 +5,7 @@
     $emphasize: map-get($linkVal, emphasize);
     $emphasize-hover: map-get($linkVal, emphasize-hover);
 
-    .#{unquote($link-scope-name)}#{if($link, "--#{$link}", "")} {
+    .#{$link-scope-name}#{if($link, "--#{$link}", "")} {
       a {
         color: map-get($linkVal, color);
         @if $emphasize {

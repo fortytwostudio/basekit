@@ -10,13 +10,13 @@
 
   @if $form-legend-style {
     legend {
-      @include rem(padding, px($font-line-height / 4) px($font-line-height / 2) px($font-line-height / 5));
-      @include rem(margin-left, px($font-line-height / 2));
+      padding: rem(px($font-line-height / 4) px($font-line-height / 2) px($font-line-height / 5));
+      margin-left: rem(px($font-line-height / 2));
     }
   }
   textarea {
     width: 100%;
-    @include rem(min-height, $form-textarea-min-height);
+    min-height: rem($form-textarea-min-height);
     resize: vertical;
   }
   @if $form-optgroup-style {

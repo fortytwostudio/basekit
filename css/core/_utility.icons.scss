@@ -1,17 +1,17 @@
 @if $icon-font-face {
   @font-face {
-    font-family: "#{unquote($icon-font-face-name)}";
+    font-family: "#{$icon-font-face-name}";
     src: url("../#{unquote($icon-font-face-path-file-name)}.eot?r6sblq");
-    src: url("../#{unquote($icon-font-face-path-file-name)}.eot?#iefixr6sblq") format("embedded-opentype"), url("../#{unquote($icon-font-face-path-file-name)}.woff?r6sblq") format("woff"), url("../#{unquote($icon-font-face-path-file-name)}.ttf?r6sblq") format("truetype"), url("../#{unquote($icon-font-face-path-file-name)}.svg?r6sblq##{unquote($icon-font-face-name)}") format("svg");
+    src: url("../#{unquote($icon-font-face-path-file-name)}.eot?#iefixr6sblq") format("embedded-opentype"), url("../#{unquote($icon-font-face-path-file-name)}.woff?r6sblq") format("woff"), url("../#{unquote($icon-font-face-path-file-name)}.ttf?r6sblq") format("truetype"), url("../#{unquote($icon-font-face-path-file-name)}.svg?r6sblq##{$icon-font-face-name}") format("svg");
     font-weight: normal;
     font-style: normal;
   }
 
   @if $icon-font-face and $icon-class {
-    .#{unquote($icon-class-name)} {
+    .#{$icon-class-name} {
 
       font: {
-        family: "#{unquote($icon-font-face-name)}", $font-family;
+        family: "#{$icon-font-face-name}", $font-family;
         size: $icon-line-size;
         style: normal;
         weight: normal;

@@ -9,7 +9,7 @@
   // PUSH RIGHT
   @if $bk-push-right {
     @for $i from 1 through $bk-push-columns {
-      @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pr:"}#{$i}) {
+      @include attr-module($bk-grid-name, #{$gw-value}#{"pr:"}#{$i}) {
         margin-left: bk-pp-colspan($i);
       }
     }
@@ -17,7 +17,7 @@
   // PUSH LEFT
   @if $bk-push-left {
     @for $i from 1 through $bk-push-columns {
-      @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"pl:"}#{$i}) {
+      @include attr-module($bk-grid-name, #{$gw-value}#{"pl:"}#{$i}) {
         margin-right: bk-pp-colspan($i);
       }
     }
@@ -39,12 +39,12 @@
   //     }
   //   }
   //
-  //   @include attr-target(unquote($bk-grid-name), #{$gw-value}#{"offset:"}) {
+  //   @include attr-target($bk-grid-name, #{$gw-value}#{"offset:"}) {
   //     position: relative;
   //   }
   //
   //   @for $i from 1 through $bk-outdent-columns {
-  //     @include attr-module(unquote($bk-grid-name), #{$gw-value}#{"offset:"}#{$i}) {
+  //     @include attr-module($bk-grid-name, #{$gw-value}#{"offset:"}#{$i}) {
   //       left: -#{bk-pp-colspan($i)};
   //     }
   //   }

@@ -1,19 +1,6 @@
-// Output the button CSS.
-$btn-css: true;
-// Define the button utility class name.
-$btn-name: "btn";
-// Set to null for no corner radius.
-$btn-corners: 4px;
-// Configure colours and speed.
-$btn-bg: $primary;
-$btn-bg--hover: $secondary;
-$btn-txt: white;
-$btn-txt--hover: $btn-txt;
-$btn-transition-speed: $speed-normal;
-
 @if $btn-css {
 
-  .#{unquote($btn-name)} {
+  .#{$btn-name} {
 
     @include inline-block(middle);
     color: $btn-txt!important;
@@ -26,7 +13,7 @@ $btn-transition-speed: $speed-normal;
     background-color: $btn-bg;
 
     @if $btn-corners {
-      @include rem(border-radius, $btn-corners);
+      border-radius: rem($btn-corners);
     }
 
     transition: all $btn-transition-speed ease-in-out!important;
@@ -60,7 +47,7 @@ $btn-transition-speed: $speed-normal;
 
     // FOR IE8
     // @if $mq-responsive == false {
-    //  .#{unquote($link-scope-name)} & {
+    //  .#{$link-scope-name} & {
     //    @extend .#{$btn-name};
     //  }
     // }

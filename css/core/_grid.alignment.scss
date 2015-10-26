@@ -1,30 +1,30 @@
 @mixin grid-alignments($ga-value: null) {
 
-  @include attr-module(unquote($bk-grid-name), #{$ga-value}#{"middle"}) {
+  @include attr-module($bk-grid-name, #{$ga-value}#{"middle"}) {
     > {
-      @include attr-module(unquote($bk-grid-name)) {
+      @include attr-module($bk-grid-name) {
         vertical-align: middle;
       }
     }
   }
 
-  @include attr-module(unquote($bk-grid-name), #{$ga-value}#{"bottom"}) {
+  @include attr-module($bk-grid-name, #{$ga-value}#{"bottom"}) {
     > {
-      @include attr-module(unquote($bk-grid-name)) {
+      @include attr-module($bk-grid-name) {
         vertical-align: bottom;
       }
     }
   }
 
-  @include attr-module(unquote($bk-grid-name), #{$ga-value}#{"center"}) {
+  @include attr-module($bk-grid-name, #{$ga-value}#{"center"}) {
     text-align: center;
   }
 
-  @include attr-module(unquote($bk-grid-name), #{$ga-value}#{"right"}) {
+  @include attr-module($bk-grid-name, #{$ga-value}#{"right"}) {
     text-align: right;
   }
 
-  @include attr-module(unquote($bk-grid-name), #{$ga-value}#{"left"}) {
+  @include attr-module($bk-grid-name, #{$ga-value}#{"left"}) {
     text-align: left;
   }
 
