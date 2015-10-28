@@ -18,7 +18,7 @@ gulp.task('scss', function() {
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
-// Easy deploy to gh-pages branch
+// Easy deploy to the gh-pages branch
 gulp.task('deploy', function () {
   return gulp.src('**/*')
     .pipe(deploy());
@@ -33,6 +33,7 @@ gulp.task('js', function() {
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
+// Optimise images
 gulp.task('img', function () {
   return gulp.src('imgs/*')
     .pipe(imagemin({
@@ -44,6 +45,7 @@ gulp.task('img', function () {
     .pipe(gulp.dest('imgs'));
 });
 
+// Only watch Sass and JS files
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
