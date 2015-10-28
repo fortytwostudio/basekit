@@ -1,10 +1,10 @@
 {
-  "name": "eq-design-gulp-tasks",
+  "name": "basekit-gulp-workflow",
   "version": "0.2.0",
-  "description": "Base Gulp tasks for EQ Design projects",
+  "description": "basekit gulp workflow",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eq-design/gulp.git"
+    "url": "git+https://github.com/eq-design/basekit.git"
   },
   "keywords": [
     "gulp",
@@ -13,12 +13,12 @@
     "build",
     "tools"
   ],
-  "author": "EQ Design",
+  "author": "eq design",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eq-design/gulp/issues"
+    "url": "https://github.com/eq-design/basekit/issues"
   },
-  "homepage": "https://github.com/eq-design/gulp#readme",
+  "homepage": "https://github.com/eq-design/basekit#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
