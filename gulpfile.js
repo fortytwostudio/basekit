@@ -1,11 +1,13 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
+    rename      = require('gulp-rename'),
     nano        = require('gulp-cssnano'),
     deploy      = require('gulp-gh-pages'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
+    minifyHTML  = require('gulp-minify-html'),
     size        = require('gulp-size');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
@@ -44,10 +46,20 @@ gulp.task('img', function () {
     .pipe(gulp.dest('imgs'));
 });
 
+// Minify HTML source and rename the index-dev file
+gulp.task('html', function() {
+  gulp.src('index-dev.html')
+  .pipe(rename('index-dev.html'))
+  .pipe(minifyHTML({cdata: true, conditionals: true, quotes: true, spare: true}))
+  .pipe(rename({ basename: "index" }))
+  .pipe(gulp.dest('./'));
+});
+
 // Only watch Sass and JS files
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
+  gulp.watch('index-dev.html', ['html']);
 });
 
 gulp.task('default', ['watch']);
