@@ -6,7 +6,7 @@
 
 @mixin grid-indent($gw-value: null) {
 
-  // PUSH RIGHT
+  // PUSH COLUMN TO THE RIGHT
   @if $bk-push-right {
     @for $i from 1 through $bk-push-columns {
       @include attr-module($bk-grid-name, #{$gw-value}#{"pr:"}#{$i}) {
@@ -14,7 +14,7 @@
       }
     }
   }
-  // PUSH LEFT
+  // PUSH COLUMN TO THE LEFT
   @if $bk-push-left {
     @for $i from 1 through $bk-push-columns {
       @include attr-module($bk-grid-name, #{$gw-value}#{"pl:"}#{$i}) {
