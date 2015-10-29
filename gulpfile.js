@@ -6,7 +6,7 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
-    // minifyHTML  = require('gulp-minify-html'),
+    minifyHTML  = require('gulp-minify-html'),
     size        = require('gulp-size');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
@@ -46,17 +46,17 @@ gulp.task('img', function () {
 });
 
 // Minify HTML source and rename the index-dev file
-// gulp.task('html', function() {
-//   gulp.src(['**/*.html', '!**/*.dev.html'])
-//   .pipe(minifyHTML({cdata: true, conditionals: true, quotes: true, spare: true}))
-//   .pipe(gulp.dest('./'));
-// });
+gulp.task('html', function() {
+  gulp.src('./html/*.html')
+    .pipe(minifyHTML({cdata: true}))
+    .pipe(gulp.dest('./'));
+});
 
 // Only watch Sass and JS files
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
-  // gulp.watch('index.dev.html', ['html']);
+  gulp.watch('html');
 });
 
 gulp.task('default', ['watch']);
