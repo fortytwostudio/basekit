@@ -44,13 +44,6 @@
     &--fill {
       width: 100%;
     }
-
-    // FOR IE8
-    // @if $mq-responsive == false {
-    //  .#{$link-scope-name} & {
-    //    @extend .#{$btn-name};
-    //  }
-    // }
   }
 
 }
