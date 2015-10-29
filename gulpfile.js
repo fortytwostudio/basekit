@@ -1,13 +1,14 @@
-var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
-    nano        = require('gulp-cssnano'),
-    deploy      = require('gulp-gh-pages'),
-    concat      = require('gulp-concat'),
-    uglify      = require('gulp-uglify'),
-    imagemin    = require('gulp-imagemin'),
-    pngquant    = require('imagemin-pngquant'),
-    minifyHTML  = require('gulp-minify-html'),
-    size        = require('gulp-size');
+var gulp          = require('gulp'),
+    sass          = require('gulp-sass'),
+    nano          = require('gulp-cssnano'),
+    deploy        = require('gulp-gh-pages'),
+    concat        = require('gulp-concat'),
+    uglify        = require('gulp-uglify'),
+    imagemin      = require('gulp-imagemin'),
+    pngquant      = require('imagemin-pngquant'),
+    minifyHTML    = require('gulp-minify-html'),
+    minifyInline  = require('gulp-minify-inline'),
+    size          = require('gulp-size');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
@@ -49,6 +50,7 @@ gulp.task('img', function () {
 gulp.task('html', function() {
   gulp.src('./html/*.html')
     .pipe(minifyHTML({cdata: true}))
+    .pipe(minifyInline())
     .pipe(gulp.dest('./'));
 });
 
