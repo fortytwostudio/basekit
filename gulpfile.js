@@ -16,7 +16,7 @@ gulp.task('scss', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({autoprefixer: {browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}}))
     .pipe(gulp.dest('css'))
-    .pipe(size({ /* gzip: true,*/ showFiles: true }));
+    .pipe(size({ gzip: true, showFiles: true }));
 });
 
 // Easy deploy to the gh-pages branch
@@ -31,7 +31,7 @@ gulp.task('js', function() {
     .pipe(concat('basekit.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js/min'))
-    .pipe(size({ /* gzip: true,*/ showFiles: true }));
+    .pipe(size({ gzip: true, showFiles: true }));
 });
 
 // Optimise images
