@@ -107,6 +107,16 @@
       </header>
 
 
+      <picture class="pad">
+        <!--[if IE 9]><video style="display:none;"><![endif]-->
+        <source media="(min-width: 1024px)" srcset="/imgs/placeholders/hero--deep.png">
+        <source media="(min-width: 600px)" srcset="/imgs/placeholders/hero.png">
+        <source media="(min-width: 320px)" srcset="/imgs/placeholders/hero--narrow.png">
+        <!--[if IE 9]></video><![endif]-->
+        <img data-bk="gtr:rl" srcset="/imgs/placeholders/hero.png" alt="Responsive hero example">
+      </picture>
+
+
 
 
       <section class="pad--large--bottom" id="fonts">
@@ -393,6 +403,7 @@
 
 
 
-    <script src="js/min/basekit.js"></script>
+    <script src="/js/min/basekit.js"></script>
+    <script src="/bower_components/picturefill/dist/picturefill.min.js"></script>
   </body>
 </html>
