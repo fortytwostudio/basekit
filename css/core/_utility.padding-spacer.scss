@@ -46,41 +46,29 @@
 
     // Set max dimensions to prevent huge spaces at large screen sizes
     // Only applies if spacing is in % and isn't necessary for small padding
-    @if $padding-spacer-is-percentage == false {
+    @if $padding-spacer-is-percentage == true {
 
       @include mq(px($max-width)) {
 
         &,
         &--top {
-          padding-top: rem($padding-spacer-size);
+          padding-top: rem($padding-spacer-size)!important;
         }
 
         &,
         &--bottom {
-          padding-bottom: rem($padding-spacer-size);
-        }
-
-        &--small {
-          &,
-          &--top {
-            padding-top: rem($padding-spacer-size / 2);
-          }
-
-          &,
-          &--bottom {
-            padding-bottom: rem($padding-spacer-size / 2);
-          }
+          padding-bottom: rem($padding-spacer-size)!important;
         }
 
         &--large {
           &,
           &--top {
-            padding-top: rem($padding-spacer-size * 2);
+            padding-top: rem($padding-spacer-size * 2)!important;
           }
 
           &,
           &--bottom {
-            padding-bottom: rem($padding-spacer-size * 2);
+            padding-bottom: rem($padding-spacer-size * 2)!important;
           }
         }
 
