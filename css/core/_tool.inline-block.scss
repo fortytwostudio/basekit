@@ -1,12 +1,4 @@
 @mixin inline-block($alignment: top) {
-
   display: inline-block;
   vertical-align: $alignment;
-
-  @if $mq-responsive == false {
-    *vertical-align: auto;
-    *zoom: 1;
-    *display: inline;
-  }
-
 }

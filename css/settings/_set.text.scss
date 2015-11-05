@@ -77,7 +77,10 @@ $font-config: (
     dimension: vw,
     breakpoint: hands,
     custom: (
-      line-height: 1.15
+      line-height: 1.05,
+      text-rendering: optimizeLegibility,
+      font-feature-settings: "kern" 1,
+      font-kerning: normal
     )
   ),
   xxl: (
@@ -88,7 +91,10 @@ $font-config: (
     dimension: vw,
     breakpoint: hands,
     custom: (
-      line-height: 1.1
+      line-height: 1.025,
+      text-rendering: optimizeLegibility,
+      font-feature-settings: "kern" 1,
+      font-kerning: normal
     )
   )
 );
