@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
 
     // imagemin      = require('gulp-imagemin'),
     // pngquant      = require('imagemin-pngquant'),
+    svgSymbols    = require('gulp-svg-symbols'),
 
     minifyHTML    = require('gulp-minify-html'),
     minifyInline  = require('gulp-minify-inline'),
@@ -36,6 +37,12 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(gulp.dest('js/min'))
     .pipe(size({ gzip: true, showFiles: true }));
+});
+
+gulp.task('svg', function () {
+  return gulp.src('imgs/svg/*.svg')
+    .pipe(svgSymbols())
+    .pipe(gulp.dest('imgs'));
 });
 
 // Optimise images

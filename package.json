@@ -29,6 +29,7 @@
     "gulp-minify-inline": "^0.1.1",
     "gulp-sass": "^2.1.0",
     "gulp-size": "~2.0.0",
+    "gulp-svg-symbols": "^1.0.0",
     "gulp-uglify": "^1.4.2",
     "imagemin-pngquant": "^4.2.0"
   }
