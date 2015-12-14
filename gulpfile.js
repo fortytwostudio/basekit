@@ -1,18 +1,35 @@
 var gulp          = require('gulp'),
+    // Process and compile scss/css files
     sass          = require('gulp-sass'),
+    // Optimise css
     nano          = require('gulp-cssnano'),
-
+    // Join js files into one
     concat        = require('gulp-concat'),
+    // Minify js
     uglify        = require('gulp-uglify'),
-
-    // imagemin      = require('gulp-imagemin'),
-    // pngquant      = require('imagemin-pngquant'),
-
+      // Optimise images
+      // imagemin      = require('gulp-imagemin'),
+      // pngquant      = require('imagemin-pngquant'),
+    // Generate svg symbols file
+    svgSymbols    = require('gulp-svg-symbols'),
+    // Minify HTML
     minifyHTML    = require('gulp-minify-html'),
+    // Minify css and js within html files
     minifyInline  = require('gulp-minify-inline'),
-
+    // Deploy to gh pages
     deploy        = require('gulp-gh-pages'),
-    size          = require('gulp-size');
+    // Report file sizes
+    size          = require('gulp-size'),
+    // CSS optimisation report
+    parker        = require('gulp-parker');
+
+gulp.task('parker', function() {
+  return gulp.src('css/basekit.css')
+    .pipe(parker({
+      file: 'css/style-report.md',
+      title: 'CSS analysis'
+    }));
+});
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
@@ -36,6 +53,15 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(gulp.dest('js/min'))
     .pipe(size({ gzip: true, showFiles: true }));
+});
+
+gulp.task('svg', function () {
+  return gulp.src('imgs/svg/*.svg')
+    .pipe(svgSymbols({
+      templates: ['default-svg'],
+      title: '%f'
+    }))
+    .pipe(gulp.dest('imgs/svg'));
 });
 
 // Optimise images
