@@ -47,6 +47,10 @@ $float-css: true;
 
 // Output the display (block, inline-block, inline, etc) utility class.
 $display-css: true;
+$display-block-class: true;
+$display-inline-class: false;
+$display-inline-block-class: true;
+$display-table-class: false;
 
 // Output the alignments utility class.
 $alignment-css: true;

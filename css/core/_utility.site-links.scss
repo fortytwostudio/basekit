@@ -14,7 +14,7 @@
 
         // Only output on the base level link style
         @if $link == null {
-          transition: color $speed-normal ease;
+          transition: all $speed-normal ease;
         }
 
         $custom: map-get($linkVal, custom);
@@ -22,6 +22,7 @@
           #{$custom-name}: $custom-name-value;
         }
       }
+
       a:hover,
       a:focus {
         color: map-get($linkVal, color-hover);
