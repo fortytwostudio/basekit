@@ -51,7 +51,7 @@ gulp.task('svg', function () {
       templates: ['default-svg'],
       title: '%f'
     }))
-    .pipe(gulp.dest('imgs'));
+    .pipe(gulp.dest('imgs/svg'));
 });
 
 // Optimise images
