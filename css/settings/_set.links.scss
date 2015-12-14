@@ -36,15 +36,14 @@ $links: (
     color-hover: $grey-light,
     custom: ()
   ),
-  nav: (
-    color: white,
-    color-hover: $primary--light,
-    emphasize: "700",
-    custom: (
-      background: red
-    ),
-    custom-hover: (
-      background: blue
-    )
-  )
+  // custom-example: (
+  //   color: white,
+  //   color-hover: $primary--light,
+  //   custom: (
+  //     background: red
+  //   ),
+  //   custom-hover: (
+  //     background: blue
+  //   )
+  // )
 );
