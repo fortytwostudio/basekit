@@ -1,19 +1,27 @@
 @if $display-css {
 
-  .block {
-    display: block;
+  @if $display-block-class {
+    .block {
+      display: block;
+    }
   }
 
-  .inline {
-    display: inline;
+  @if $display-inline-class  {
+    .inline {
+      display: inline;
+    }
+  }
 
-    &-block {
+  @if $display-inline-block-class  {
+    .inline-block {
       display: inline-block;
     }
   }
 
-  .table {
-    display: table;
+  @if $display-table-class  {
+    .table {
+      display: table;
+    }
   }
 
 }
