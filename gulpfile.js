@@ -19,7 +19,17 @@ var gulp          = require('gulp'),
     // Deploy to gh pages
     deploy        = require('gulp-gh-pages'),
     // Report file sizes
-    size          = require('gulp-size');
+    size          = require('gulp-size'),
+    // CSS optimisation report
+    parker        = require('gulp-parker');
+
+gulp.task('parker', function() {
+  return gulp.src('css/basekit.css')
+    .pipe(parker({
+      file: 'css/style-report.md',
+      title: 'CSS analysis'
+    }));
+});
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
