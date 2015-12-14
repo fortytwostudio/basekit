@@ -1,21 +1,19 @@
 @if $display-css {
 
-  .display {
-    &--block {
-      display: block;
-    }
+  .block {
+    display: block;
+  }
 
-    &--inline {
-      display: inline;
+  .inline {
+    display: inline;
 
-      &-block {
-        display: inline-block;
-      }
+    &-block {
+      display: inline-block;
     }
+  }
 
-    &--table {
-      display: table;
-    }
+  .table {
+    display: table;
   }
 
 }
