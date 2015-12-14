@@ -84,10 +84,10 @@
         </h1>
 
         <nav class="site-nav  animated" id="js-rnav">
-          <div class="site-nav__content  rnav__content  user-content">
+          <div class="site-nav__content  rnav__content">
             <h1 class="hide">Main Navigation</h1>
 
-            <ul class="set-links  set-links--nav">
+            <ul class="set-links  set-links--nav  nav  nav--block  pad--bottom">
               <li><a href="http://google.com">Home</a></li>
               <li><a href="/">Services</a></li>
               <li><a href="/">Portfolio</a></li>
@@ -99,9 +99,11 @@
               <li><a href="/">EQ design</a></li>
             </ul>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
+            <div class="user-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
+            </div>
           </div>
         </nav>
       </header>
@@ -401,6 +403,55 @@
 
     </div>
 
+
+    <div class="site-container  pad--small--bottom  setLinks">
+      <div data-bk="gtr:0  bottom">
+        <div data-bk="6">
+          <ul class="font--m  margin--tb">
+            <li data-bk="gtr:on  gtr:trb  auto">
+              <a href="https://www.linkedin.com/company/eq-design-ltd" target="_blank">
+                <svg class="social-icon  social-icon--linkedin" width="28" height="28">
+                  <use xlink:href="/imgs/symbols.svg#linkedin"></use>
+                </svg>
+                <span class="hide">Linkedin</span>
+              </a>
+            </li>
+            <li data-bk="gtr:on  gtr:trb  auto">
+              <a href="https://twitter.com/eq_design" target="_blank">
+                <svg class="social-icon  social-icon--twitter" width="26" height="28">
+                  <use xlink:href="/imgs/symbols.svg#twitter"></use>
+                </svg>
+                <span class="hide">Twitter</span>
+              </a>
+            </li>
+            <li data-bk="gtr:on  gtr:trb  auto">
+              <a href="https://www.facebook.com/eqdesign" target="_blank">
+                <svg class="social-icon  social-icon--facebook" width="12" height="28">
+                  <use xlink:href="/imgs/symbols.svg#facebook"></use>
+                </svg>
+                <span class="hide">Facebook</span>
+              </a>
+            </li>
+            <li data-bk="gtr:on  gtr:trb  auto">
+              <a href="https://plus.google.com/+EqdesignCoUk" target="_blank">
+                <svg class="social-icon  social-icon--googleplus" width="28" height="28">
+                  <use xlink:href="/imgs/symbols.svg#googleplus"></use>
+                </svg>
+                <span class="hide">Google+</span>
+              </a>
+            </li>
+          </ul>
+
+          <p class="font--s">Copyright <b>{{ siteName }}</b> {{ now | date('Y') }}</p>
+        </div>
+
+        <div class="eq-ident" data-bk="6  right">
+          <svg class="eq-ident__item  display--inline" width="37" height="12">
+            <use xlink:href="/imgs/symbols.svg#eq"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
 
 
     <script src="/js/min/basekit.js"></script>
