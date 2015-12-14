@@ -41,7 +41,10 @@ gulp.task('js', function() {
 
 gulp.task('svg', function () {
   return gulp.src('imgs/svg/*.svg')
-    .pipe(svgSymbols())
+    .pipe(svgSymbols({
+      templates: ['default-svg'],
+      title: '%f'
+    }))
     .pipe(gulp.dest('imgs'));
 });
 
