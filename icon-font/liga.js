@@ -137,7 +137,7 @@
 					break;
 				}
 				classes = el.className;
-				if (/js-liga/.test(classes)) {
+				if (/icon-/.test(classes)) {
 					innerHTML = el.innerHTML;
 					if (innerHTML && innerHTML.length > 1) {
 						for (key in icons) {
