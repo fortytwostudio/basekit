@@ -1,7 +1,7 @@
 @if $fit-media-css {
 
   .fit-media {
-    @include transform-style(preserve-3d);
+    transform-style:preserve-3d;
     @include fit-media;
 
     @if $fit-media-fallback-css {
