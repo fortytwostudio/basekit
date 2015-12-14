@@ -1,0 +1,29 @@
+# Node stuff #
+#####################
+node_modules
+npm-debug.log
+.publish
+
+# Sass remove #
+#####################
+/.sass-cache
+*.sass-cache
+.sass-cache
+*.css.map
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+# Codekit files #
+######################
+config.codekit
+*.codekit
