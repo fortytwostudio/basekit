@@ -1,13 +1,17 @@
 var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     nano          = require('gulp-cssnano'),
-    deploy        = require('gulp-gh-pages'),
+
     concat        = require('gulp-concat'),
     uglify        = require('gulp-uglify'),
-    imagemin      = require('gulp-imagemin'),
-    pngquant      = require('imagemin-pngquant'),
+
+    // imagemin      = require('gulp-imagemin'),
+    // pngquant      = require('imagemin-pngquant'),
+
     minifyHTML    = require('gulp-minify-html'),
     minifyInline  = require('gulp-minify-inline'),
+
+    deploy        = require('gulp-gh-pages'),
     size          = require('gulp-size');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
@@ -35,16 +39,16 @@ gulp.task('js', function() {
 });
 
 // Optimise images
-gulp.task('img', function () {
-  return gulp.src('imgs/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-      multipass: true,
-      use: [pngquant()]
-    }))
-    .pipe(gulp.dest('imgs'));
-});
+// gulp.task('img', function () {
+//   return gulp.src('imgs/*')
+//     .pipe(imagemin({
+//       progressive: true,
+//       svgoPlugins: [{removeViewBox: false}],
+//       multipass: true,
+//       use: [pngquant()]
+//     }))
+//     .pipe(gulp.dest('imgs'));
+// });
 
 // Minify HTML source and rename the index-dev file
 gulp.task('html', function() {
