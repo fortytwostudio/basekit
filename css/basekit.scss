@@ -19,75 +19,75 @@
 
 // THIRD PARTY TOOLS
 @import
-  "core/vendor.tool.unit-conversion",
-  "core/vendor.tool.media-queries",
-  "core/vendor.tool.reverse-list",
-  "core/vendor.tool.font-face";
+  "core/vendor/tool.unit-conversion",
+  "core/vendor/tool.media-queries",
+  "core/vendor/tool.reverse-list",
+  "core/vendor/tool.font-face";
 
 // MIXINS & FUNCTONS
 @import
-  "core/tool.colums",
-  "core/tool.colums-span",
-  "core/tool.image-url",
-  "core/tool.percentage",
-  "core/tool.rem",
-  "core/tool.attribute-module",
-  "core/tool.fit-media",
-  "core/tool.position-over",
-  "core/tool.inline-block",
-  "core/tool.aspect-ratio",
-  "core/tool.strip-unit",
-  "core/tool.ios-smooth-scroll",
-  "core/tool.viewport-unit-convert",
-  "core/tool.viewport-font.scss",
-  "core/tool.hider.scss";
+  "core/tools/colums",
+  "core/tools/colums-span",
+  "core/tools/image-url",
+  "core/tools/percentage",
+  "core/tools/rem",
+  "core/tools/attribute-module",
+  "core/tools/fit-media",
+  "core/tools/position-over",
+  "core/tools/inline-block",
+  "core/tools/aspect-ratio",
+  "core/tools/strip-unit",
+  "core/tools/ios-smooth-scroll",
+  "core/tools/viewport-unit-convert",
+  "core/tools/viewport-font.scss",
+  "core/tools/hider.scss";
 
 // LAYOUT GRID
 @import
-  "core/grid.alignment",
-  "core/grid.columns",
-  "core/grid.indent",
-  "core/grid.gutters";
+  "core/layout/alignment",
+  "core/layout/columns",
+  "core/layout/indent",
+  "core/layout/gutters";
 
 // GLOBALS
 @charset "UTF-8";
 @import
-  "core/global.box-model",
-  "core/global.document",
-  "core/global.text",
-  "core/global.media",
-  "core/global.tables",
-  "core/global.forms";
+  "core/global/box-model",
+  "core/global/document",
+  "core/global/text",
+  "core/global/media",
+  "core/global/tables",
+  "core/global/forms";
 
 // UTILITY CLASSES
 @import
-  "core/utility.display",
-  "core/utility.alignment",
-  "core/utility.margins",
-  "core/utility.padding-spacer",
-  "core/utility.position-over",
-  "core/utility.site-width",
-  "core/utility.fit-media",
-  "core/utility.hide",
-  "core/utility.icons",
-  "core/utility.list-styles",
-  "core/utility.border-corners",
-  "core/utility.alerts",
-  "core/utility.nav",
-  "core/utility.user-content",
-  "core/utility.overflow-text",
-  "core/utility.float",
-  "core/utility.site-links",
-  "core/utility.site-text";
+  "core/utility-classes/display",
+  "core/utility-classes/alignment",
+  "core/utility-classes/margins",
+  "core/utility-classes/padding-spacer",
+  "core/utility-classes/position-over",
+  "core/utility-classes/site-width",
+  "core/utility-classes/fit-media",
+  "core/utility-classes/hide",
+  "core/utility-classes/icons",
+  "core/utility-classes/list-styles",
+  "core/utility-classes/border-corners",
+  "core/utility-classes/alerts",
+  "core/utility-classes/nav",
+  "core/utility-classes/user-content",
+  "core/utility-classes/overflow-text",
+  "core/utility-classes/float",
+  "core/utility-classes/site-links",
+  "core/utility-classes/site-text";
 
 // LAYOUT GRID UTILITY CLASSES
 @import
-  "core/grid.builder";
+  "core/layout/builder";
 
 // THIRD PARTY PACKAGES
 @import
   "core/animate-sass/animate",
-  "core/vendor.utility.animate";
+  "core/vendor/utility.animate";
 
 // ————————————————————————————————————————————————————————————————————————————
 // PROJECT FILES:
