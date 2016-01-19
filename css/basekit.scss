@@ -1,5 +1,5 @@
-// GLOBAL SETTINGS
-//
+@charset "UTF-8";
+
 @import
   "settings/set.colors",
   "settings/set.layout",
@@ -15,17 +15,15 @@
   "settings/set.buttons",
   "settings/set.tables",
   "settings/set.hider",
-  "settings/vendor.set.animate";
+  "settings/vendor.set.animate",
 
-// THIRD PARTY TOOLS
-@import
-  "core/vendor/tool.unit-conversion",
-  "core/vendor/tool.media-queries",
-  "core/vendor/tool.reverse-list",
-  "core/vendor/tool.font-face";
+  // THIRD PARTY TOOLS
+  "core/vendor/unit-conversion",
+  "core/vendor/media-queries",
+  "core/vendor/reverse-list",
+  "core/vendor/font-face",
 
-// MIXINS & FUNCTONS
-@import
+  // MIXINS & FUNCTONS
   "core/tools/colums",
   "core/tools/colums-span",
   "core/tools/image-url",
@@ -40,27 +38,23 @@
   "core/tools/ios-smooth-scroll",
   "core/tools/viewport-unit-convert",
   "core/tools/viewport-font.scss",
-  "core/tools/hider.scss";
+  "core/tools/hider.scss",
 
-// LAYOUT GRID
-@import
+  // LAYOUT GRID
   "core/layout/alignment",
   "core/layout/columns",
   "core/layout/indent",
-  "core/layout/gutters";
+  "core/layout/gutters",
 
-// GLOBALS
-@charset "UTF-8";
-@import
+  // GLOBALS
   "core/global/box-model",
   "core/global/document",
   "core/global/text",
   "core/global/media",
   "core/global/tables",
-  "core/global/forms";
+  "core/global/forms",
 
-// UTILITY CLASSES
-@import
+  // UTILITY CLASSES
   "core/utility-classes/display",
   "core/utility-classes/alignment",
   "core/utility-classes/margins",
@@ -78,30 +72,21 @@
   "core/utility-classes/overflow-text",
   "core/utility-classes/float",
   "core/utility-classes/site-links",
-  "core/utility-classes/site-text";
+  "core/utility-classes/site-text",
 
-// LAYOUT GRID UTILITY CLASSES
-@import
-  "core/layout/builder";
+  // LAYOUT GRID UTILITY CLASSES
+  "core/layout/builder",
 
-// THIRD PARTY PACKAGES
-@import
+  // THIRD PARTY PACKAGES
   "core/vendor/animate-sass/animate",
-  "core/vendor/utility.animate";
 
-// ————————————————————————————————————————————————————————————————————————————
-// PROJECT FILES:
-// ————————————————————————————————————————————————————————————————————————————
-
-// UTILITY CLASSES
-@import
-  "utility.site-colors",
-  "utility.site-backgrounds";
-
-// COMPONENTS
-@import
-  "component.site-logo",
-  "component.site-footer",
-  "component.buttons",
-  "component.site-nav",
-  "component.site-mobile-nav";
+  // PROJECT FILES:
+  // ————————————————————————————————————————————————————————————————————————————
+  "animate",
+  "site-colors",
+  "site-backgrounds",
+  "site-logo",
+  "site-footer",
+  "buttons",
+  "site-nav",
+  "site-mobile-nav";
