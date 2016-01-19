@@ -56,7 +56,7 @@ gulp.task('parker', function() {
 gulp.task('scss', function() {
   gulp.src(styleSrc)
     .pipe(sass().on('error', sass.logError))
-    .pipe(nano({autoprefixer: {browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}}))
+    .pipe(nano({autoprefixer: {add: true, browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}}))
     .pipe(gulp.dest(styleDest))
     .pipe(size({ gzip: true, showFiles: true }));
 });
