@@ -11,35 +11,35 @@
     }
 
     &,
-    &--t {
+    &-t {
       padding-top: $padding-spacer!important;
     }
 
     &,
-    &--b {
+    &-b {
       padding-bottom: $padding-spacer!important;
     }
 
-    &--s {
+    &-s {
       &,
-      &--t {
+      &-t {
         padding-top: $padding-spacer / 2!important;
       }
 
       &,
-      &--b {
+      &-b {
         padding-bottom: $padding-spacer / 2!important;
       }
     }
 
-    &--l {
+    &-l {
       &,
-      &--t {
+      &-t {
         padding-top: $padding-spacer * 2!important;
       }
 
       &,
-      &--b {
+      &-b {
         padding-bottom: $padding-spacer * 2!important;
       }
     }
@@ -50,35 +50,35 @@
       @include mq(px($max-width)) {
 
         &,
-        &--t {
+        &-t {
           padding-top: rem($padding-spacer-size)!important;
         }
 
         &,
-        &--b {
+        &-b {
           padding-bottom: rem($padding-spacer-size)!important;
         }
 
-        &--s {
+        &-s {
           &,
-          &--t {
+          &-t {
             padding-top: rem($padding-spacer-size / 2)!important;
           }
 
           &,
-          &--b {
+          &-b {
             padding-bottom: rem($padding-spacer-size / 2)!important;
           }
         }
 
-        &--l {
+        &-l {
           &,
-          &--t {
+          &-t {
             padding-top: rem($padding-spacer-size * 2)!important;
           }
 
           &,
-          &--b {
+          &-b {
             padding-bottom: rem($padding-spacer-size * 2)!important;
           }
         }

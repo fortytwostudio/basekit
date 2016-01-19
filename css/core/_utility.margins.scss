@@ -4,37 +4,37 @@
 
     // margin: rem(px($margin));
 
-    &--0 {
+    &-0 {
       margin: 0;
     }
 
-    &--t {
+    &-t {
       margin-top: rem(px($margin));
     }
 
-    &--r {
+    &-r {
       margin-right: rem(px($margin));
     }
 
-    &--b {
+    &-b {
       margin-bottom: rem(px($margin));
     }
 
-    &--l {
+    &-l {
       margin-left: rem(px($margin));
     }
 
-    &--tb {
+    &-tb {
       margin-top: rem(px($margin));
       margin-bottom: rem(px($margin));
     }
 
-    &--rl {
+    &-rl {
       margin-right: rem(px($margin));
       margin-left: rem(px($margin));
     }
 
-    &--auto {
+    &-auto {
       margin-left: auto;
       margin-right: auto;
     }

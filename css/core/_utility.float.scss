@@ -1,16 +1,28 @@
 @if $float-css {
 
   .float {
-    &--r {
+    &-r {
       float: right;
     }
 
-    &--l {
+    &-l {
       float: left;
     }
 
-    &--n {
+    &-n {
       float: none;
+    }
+  }
+
+  .clear {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+
+    &:after {
+      clear: both;
     }
   }
 
