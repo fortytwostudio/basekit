@@ -1,15 +1,15 @@
 @if $float-css {
 
   .float {
-    &--right {
+    &--r {
       float: right;
     }
 
-    &--left {
+    &--l {
       float: left;
     }
 
-    &--none {
+    &--n {
       float: none;
     }
   }
