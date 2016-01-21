@@ -1,9 +1,3 @@
-@if $hidden-css {
-  .hide {
-    @include hide()
-  }
-}
-
 @if $hide-text-css {
   .hide-text {
     @include hide(text)
