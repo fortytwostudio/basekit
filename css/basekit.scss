@@ -40,12 +40,6 @@
   "core/tools/viewport-font.scss",
   "core/tools/hider.scss",
 
-  // LAYOUT GRID
-  "core/layout/alignment",
-  "core/layout/columns",
-  "core/layout/indent",
-  "core/layout/gutters",
-
   // GLOBALS
   "core/global/box-model",
   "core/global/document",
@@ -54,28 +48,37 @@
   "core/global/tables",
   "core/global/forms",
 
+  // LAYOUT GRID
+  "core/utility-layout/grid-alignment",
+  "core/utility-layout/grid-columns",
+  "core/utility-layout/grid-indent",
+  "core/utility-layout/grid-gutters",
+  "core/utility-layout/display",
+  "core/utility-layout/alignment",
+  "core/utility-layout/margins",
+  "core/utility-layout/padding-spacer",
+  "core/utility-layout/site-width",
+  "core/utility-layout/float",
+  "core/utility-layout/hide-content",
+  "core/utility-layout/position-over",
+  "core/utility-layout/fit-media",
+
   // UTILITY CLASSES
-  "core/utility-classes/display",
-  "core/utility-classes/alignment",
-  "core/utility-classes/margins",
-  "core/utility-classes/padding-spacer",
-  "core/utility-classes/position-over",
-  "core/utility-classes/site-width",
-  "core/utility-classes/fit-media",
-  "core/utility-classes/hide",
-  "core/utility-classes/icons",
-  "core/utility-classes/list-styles",
-  "core/utility-classes/border-corners",
-  "core/utility-classes/alerts",
-  "core/utility-classes/nav",
-  "core/utility-classes/user-content",
-  "core/utility-classes/overflow-text",
-  "core/utility-classes/float",
-  "core/utility-classes/site-links",
-  "core/utility-classes/site-text",
+  "core/utility-general/icons",
+  "core/utility-general/border-corners",
+  "core/utility-general/alerts",
+  "core/utility-general/nav",
+  "core/utility-general/forms-extended",
+
+  "core/utility-text/list-styles",
+  "core/utility-text/user-content",
+  "core/utility-text/overflow-text",
+  "core/utility-text/site-links",
+  "core/utility-text/site-text",
+  "core/utility-text/hide-text",
 
   // LAYOUT GRID UTILITY CLASSES
-  "core/layout/builder",
+  "core/utility-layout/grid-builder",
 
   // THIRD PARTY PACKAGES
   "core/vendor/animate-sass/animate",
