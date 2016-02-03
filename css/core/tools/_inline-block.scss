@@ -1,3 +1,4 @@
+// A simple mixin to simplify writing inline block CSS
 @mixin inline-block($alignment: top) {
   display: inline-block;
   vertical-align: $alignment;
