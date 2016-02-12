@@ -1,14 +1,14 @@
 @if $list-css {
 
   .list {
-    &--bulleted {
+    &--bull {
       margin-left: rem(17px);
       & > li {
         list-style: unquote($list-bullet) unquote($list-bullet-position) none;
       }
     }
 
-    &--numbered {
+    &--num {
       margin-left: rem(30px);
       & > li {
         list-style: unquote($list-number) unquote($list-number-position) none;

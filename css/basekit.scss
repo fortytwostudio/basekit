@@ -4,14 +4,13 @@
   "settings/colors",
   "settings/layout",
   "settings/text",
-  "settings/animation-speed",
+  "settings/speed",
   "settings/nav",
   "settings/media",
   "settings/forms",
   "settings/links",
   "settings/icons",
   "settings/user-content",
-  "settings/border-radius",
   "settings/buttons",
   "settings/tables",
   "settings/hider",
@@ -29,7 +28,6 @@
   "core/tools/image-url",
   "core/tools/percentage",
   "core/tools/rem",
-  "core/tools/attribute-module",
   "core/tools/fit-media",
   "core/tools/position-over",
   "core/tools/inline-block",
@@ -49,12 +47,7 @@
   "core/global/forms",
 
   // LAYOUT GRID
-  "core/utility-layout/grid-alignment",
-  "core/utility-layout/grid-columns",
-  "core/utility-layout/grid-indent",
-  "core/utility-layout/grid-gutters",
   "core/utility-layout/display",
-  "core/utility-layout/alignment",
   "core/utility-layout/margins",
   "core/utility-layout/padding-spacer",
   "core/utility-layout/site-width",
@@ -65,11 +58,11 @@
 
   // UTILITY CLASSES
   "core/utility-general/icons",
-  "core/utility-general/border-corners",
   "core/utility-general/alerts",
   "core/utility-general/nav",
   "core/utility-general/forms-extended",
 
+  "core/utility-text/alignment",
   "core/utility-text/list-styles",
   "core/utility-text/user-content",
   "core/utility-text/overflow-text",
@@ -77,19 +70,16 @@
   "core/utility-text/site-text",
   "core/utility-text/hide-text",
 
-  // LAYOUT GRID UTILITY CLASSES
-  "core/utility-layout/grid-builder",
-
   // THIRD PARTY PACKAGES
   "core/vendor/animate-sass/animate",
 
   // PROJECT FILES:
   // ————————————————————————————————————————————————————————————————————————————
   "animate",
-  "site-colors",
-  "site-backgrounds",
+  "colors",
+  "backgrounds",
   "site-logo",
   "site-footer",
   "buttons",
   "site-nav",
-  "site-mobile-nav";
+  "mobile-nav";
