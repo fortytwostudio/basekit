@@ -12,12 +12,12 @@
   a {
     color: $primary;
     // By default a simple transition is applied to link states.
-    transition: all $speed-normal ease;
+    transition: all $speed-slow ease;
 
-    // Always include focus in the link styles as it is unstyled by default.
     &:focus,
     &:hover {
       color: $secondary;
+      transition-duration: $speed-normal;
     }
   }
 
@@ -43,6 +43,21 @@
       &:focus,
       &:hover {
         color: $grey-dark;
+      }
+    }
+  }
+
+  // This is an example used in the documentation for styling a nav list.
+  &--nav {
+    a {
+      color: white;
+      background: $primary;
+
+      &:focus,
+      &:hover {
+        // Unfortunatly the specificity requires white be set again here.
+        color: white;
+        background: $secondary
       }
     }
   }
