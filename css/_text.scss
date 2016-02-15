@@ -22,11 +22,12 @@
   // }
 
 
+  // Small font size doesn't need to be fancy responsive, just a tweak is enough.
   &--s {
-    font-size: rem(14px);
+    font-size: rem(12px);
 
-    @include mq($until: lap) {
-      font-size: rem(12px);
+    @include mq(lap) {
+      font-size: rem(14px);
     }
   }
 
@@ -85,6 +86,7 @@
     }
   }
 
+  // Instead of adding kerning to xl and xxl let's just utilise a class.
   &--kern {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
