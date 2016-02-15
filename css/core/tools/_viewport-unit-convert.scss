@@ -1,4 +1,4 @@
-@function vp($target, $dimension: vw, $context: $font-viewport-unit-max-width) {
+@function vp($target, $context: $max-width, $dimension: vw) {
 
   $vw-context: ($context*.01) * 1px;
 

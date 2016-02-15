@@ -48,7 +48,77 @@
 
     <div class="site-container  pad" id="links">
 
-      <h2 class="font--l">Links &amp; Navigation</h2>
+      <h2 class="font--l  pad-s-b">Font Sizing &amp; Styles</h2>
+
+      <div class="user-content  pad-s-b">
+        <p>
+          Responsive, viewport based, fonts should be restricted to use on headings
+          and isolated blocks of text. Avoid using it on copy paragraphs and long
+          blocks of text. I would also advise against using medium or large sizes
+          nearby normal (non-responsive) blocks of text because these viewport
+          based texts can actually end up <em>smaller</em> at certain screen sizes.
+        </p>
+
+        <p>
+          I've never been a fan of styling <code>h1, h2, h3</code>, etc directly or by tying their
+          size and style to their heading number. What if h2 and h4 should visually
+          look the same but not in every instance? Over time and with multiple
+          maintainers the CSS and HTML end up tied in knots.
+        </p>
+
+        <p>
+          The solution is simple; just define font styles to utility classes and apply
+          where required regardless of the markup. If you want to style one list item
+          to look like some hero text, go right ahead! It does not matter, the semantics
+          are in your HTML markup and content.
+        </p>
+      </div>
+
+      <p class="font--s  margin-tb">
+        Slightly responsive small text
+      </p>
+
+      <p class="margin-tb">
+        This is normal non-responsive body text. Vivamus turpis tellus, malesuada ac erat vitae, pulvinar venenatis turpis. Quisque interdum blandit est id volutpat. Etiam in ipsum sagittis, accumsan ipsum vitae.
+      </p>
+
+      <p class="font--m  margin-tb">
+        This is medium responsive body text for short paragraphs (like lede text). Fusce ac consectetur enim. pulvinar venenatis turpis. Quisque interdum blandit est id volutpa tincidunt metus.
+      </p>
+
+      <p class="font--l  margin-tb">
+        This is responsive large header text
+      </p>
+
+      <p class="font--xl  margin-tb">
+        This is responsive extra large header text
+      </p>
+
+      <p class="font--hero  font--kern  margin-tb">
+        This is responsive hero header text
+      </p>
+
+    </div>
+
+    <div class="site-container  pad" id="links">
+
+      <h2 class="font--l  pad-s-b">Links &amp; Navigation</h2>
+
+      <div class="user-content  pad-s-b">
+        <p>
+          For years the traditional mathod of styling links would inevitably over
+          time drive me insane with specificity problems and overrides. So eventually
+          I came to the conclusion that links should simply be scoped, via classes.
+        </p>
+
+        <p>
+          This does mean that you have to be sure to catch every link in your templates,
+          otherwise they'll appear unstyled. It also means you'll be using unsemantic
+          blah blah blah classes. However it does produce easier to maintain code with
+          fewer long-term headaches. Just create a link style on a class and stick it
+          where it needs to go in your markup (be sensible!).
+        </p>
+      </div>
 
       <div class="set-links  user-content">
         <h3 class="margin-tb">Standard links within a paragraph</h3>
