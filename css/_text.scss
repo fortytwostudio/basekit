@@ -71,9 +71,6 @@
     font-size: rem(60px);
     font-size: vp(60px);
     line-height: 1.05;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
 
     @include mq($until: hands) {
       font-size: rem(40px);
@@ -82,5 +79,10 @@
     @include mq($max-width) {
       font-size: rem(60px);
     }
+  }
+
+  &--kern {
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
   }
 }
