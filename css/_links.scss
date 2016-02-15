@@ -14,6 +14,7 @@
     // By default a simple transition is applied to link states.
     transition: all $speed-normal ease;
 
+    // Always include focus in the link styles as it is unstyled by default.
     &:focus,
     &:hover {
       color: $secondary;
