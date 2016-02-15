@@ -3,7 +3,7 @@
   .#{$user-content-name} {
 
     * + * {
-      margin-bottom: rem(px($font-default-bottom-margin));
+      margin-top: rem(px($font-default-bottom-margin));
     }
 
     // p:not(:last-of-type) {
