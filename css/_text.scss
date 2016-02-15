@@ -1,0 +1,86 @@
+// Text and Font Styles
+// —————————————————————————————————————————————————————————————————————————————
+//
+
+
+.font {
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+
+  &--s {
+    font-size: rem(14px);
+
+    @include mq($until: lap) {
+      font-size: rem(12px);
+    }
+  }
+
+  &--m {
+    // Define the standard non-responsive font size:
+    font-size: rem(20px);
+    // Now define the same font size but using the vp function:
+    font-size: vp(20px);
+    // Override the defaults until this break point with a fixed size:
+    @include mq($until: lap) {
+      font-size: rem(18px);
+    }
+    // At the max site width, lock the font to its full size so it doesn't grow:
+    @include mq($max-width) {
+      font-size: rem(20px);
+    }
+  }
+
+  &--l {
+    font-size: rem(26px);
+    font-size: vp(26px);
+
+    @include mq($until: lap) {
+      font-size: rem(22px);
+    }
+
+    @include mq($max-width) {
+      font-size: rem(26px);
+    }
+  }
+
+  &--xl {
+    font-size: rem(36px);
+    font-size: vp(36px);
+
+    @include mq($until: lap) {
+      font-size: rem(30px);
+    }
+
+    @include mq($max-width) {
+      font-size: rem(36px);
+    }
+  }
+
+  &--xxl {
+    font-size: rem(60px);
+    font-size: vp(60px);
+    line-height: 1.05;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+
+    @include mq($until: hands) {
+      font-size: rem(40px);
+    }
+
+    @include mq($max-width) {
+      font-size: rem(60px);
+    }
+  }
+}

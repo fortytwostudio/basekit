@@ -1,40 +1,28 @@
-@if $font-css {
-
-  .font {
-
-    &--bold {
-      font-weight: 700;
-    }
-
-    &--normal {
-      font-weight: 400;
-    }
-
-    &--italic {
-      font-style: italic;
-    }
-
-    // Generate the font size utility classes
-    // See the $font-config map in set.text.scss
-    @each $font-name, $font-name-value in $font-config {
-      $size: map-get($font-name-value, size);
-      $min: map-get($font-name-value, min);
-      $max: map-get($font-name-value, max);
-      $fallback: map-get($font-name-value, fallback);
-      $dimension: map-get($font-name-value, dimension);
-      $breakpoint: map-get($font-name-value, breakpoint);
-
-      $custom: map-get($font-name-value, custom);
-
-      &--#{$font-name} {
-        @if $size {
-          @include responsive-font($size, $min, $max, $fallback, $dimension, $breakpoint);
-        }
-
-        @each $custom-name, $custom-name-value in $custom {
-          #{$custom-name}: $custom-name-value;
-        }
-      }
-    }
-  }
-}
+// @if $font-css {
+//
+//   .font {
+//
+//     // Generate the font size utility classes
+//     // See the $font-config map in set.text.scss
+//     @each $font-name, $font-name-value in $font-config {
+//       $size: map-get($font-name-value, size);
+//       $min: map-get($font-name-value, min);
+//       $max: map-get($font-name-value, max);
+//       $fallback: map-get($font-name-value, fallback);
+//       $dimension: map-get($font-name-value, dimension);
+//       $breakpoint: map-get($font-name-value, breakpoint);
+//
+//       $custom: map-get($font-name-value, custom);
+//
+//       &--#{$font-name} {
+//         @if $size {
+//           @include responsive-font($size, $min, $max, $fallback, $dimension, $breakpoint);
+//         }
+//
+//         @each $custom-name, $custom-name-value in $custom {
+//           #{$custom-name}: $custom-name-value;
+//         }
+//       }
+//     }
+//   }
+// }
