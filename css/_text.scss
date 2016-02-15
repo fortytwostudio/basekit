@@ -33,16 +33,16 @@
 
   &--m {
     // Define the standard non-responsive font size:
-    font-size: rem(20px);
+    font-size: rem(22px);
     // Now define the same font size but using the vp function:
-    font-size: vp(20px);
+    font-size: vp(22px);
     // Override the defaults until this break point with a fixed size:
     @include mq($until: lap) {
-      font-size: rem(18px);
+      font-size: rem(16px);
     }
     // At the max site width, lock the font to its full size so it doesn't grow:
     @include mq($max-width) {
-      font-size: rem(20px);
+      font-size: rem(22px);
     }
   }
 
