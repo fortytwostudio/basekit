@@ -21,6 +21,12 @@
   //   font-style: italic;
   // }
 
+  // Instead of adding kerning to xl and xxl let's just utilise a class.
+  &--kern {
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+  }
+
 
   // Small font size doesn't need to be fancy responsive, just a tweak is enough.
   &--s {
@@ -38,7 +44,7 @@
     font-size: vp(22px);
     // Override the defaults until this break point with a fixed size:
     @include mq($until: lap) {
-      font-size: rem(16px);
+      font-size: rem(18px);
     }
     // At the max site width, lock the font to its full size so it doesn't grow:
     @include mq($max-width) {
@@ -72,7 +78,7 @@
     }
   }
 
-  &--xxl {
+  &--hero {
     font-size: rem(60px);
     font-size: vp(60px);
     line-height: 1.05;
@@ -84,11 +90,5 @@
     @include mq($max-width) {
       font-size: rem(60px);
     }
-  }
-
-  // Instead of adding kerning to xl and xxl let's just utilise a class.
-  &--kern {
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
   }
 }
