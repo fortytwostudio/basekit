@@ -54,8 +54,126 @@
 
   <body>
 
+    <section id="form" class="site-container  pad  user-content  set-links">
+      <h3 class="font--l  font--bold  color-text">Example Form</h3>
+
+      <p>Fields marked with <em>*</em> are required.</p>
+
+      <form class="form" id="enquiry-form" method="post" action="">
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="enquiry-nature">Nature of enquiry <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formNatureOfEnquiry]" id="enquiry-nature">
+            <option>Request an appointment</option>
+            <option>Find out more about our services</option>
+            <option>Vacancy enquiry</option>
+            <option>Make a complaint</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="name">Name <span class="form__required">*</span></label>
+          <input class="form__text" type="text" id="name" name="fields[formName]">
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="email">Email Address <span class="form__required">*</span></label>
+          <input class="form__text" id="email" name="fields[formEmail]" type="email">
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="tel">Telephone <span class="form__required">*</span></label>
+          <input class="form__text" id="tel" name="fields[formTelephone]" type="tel">
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="person-dob">Date of Birth</label>
+          <input class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy">
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label data-bk="gtr:b" for="fields[formExistingCustomer]">Already a customer?</label>
+
+          <div data-bk="gtr:0  4  hands:3  lap:3  middle">
+            <input class="form__radio" data-bk="gtr:0  auto" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label data-bk="gtr:rl  auto" for="irb1">Yes</label>
+          </div>
+          <div data-bk="gtr:0  4  hands:3  lap:3  middle">
+            <input class="form__radio" data-bk="gtr:0  auto" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label data-bk="gtr:l  auto" for="irb2">No</label>
+          </div>
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="branch-of-interest">Branch of Interest <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formBranchOfInterest]" id="branch-of-interest">
+            <option disabled selected>Please select a branch</option>
+
+            <optgroup label="Aberdeen">
+              <option value="Belmont Street">Belmont Street</option>
+              <option value="Dyce">Dyce</option>
+              <option value="Trinity Centre">Trinity Centre</option>
+            </optgroup>
+            <optgroup label="Angus">
+              <option value="Arbroath">Arbroath</option>
+              <option value="Forfar">Forfar</option>
+              <option value="Kirriemuir">Kirriemuir</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="enquiry">Enquiry <span class="form__required">*</span></label>
+
+          <textarea class="form__text  form__text--area" id="enquiry" name="fields[formEnquiry]" data-msg-required="Please enter a message" data-rule-required="true"></textarea>
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="appointment-type">Appointment type</label>
+          <select class="form__select" name="fields[formAppointmentType]" id="appointment-type">
+            <option>Eye exam</option>
+            <option>Contact lens fitting</option>
+            <option>Check-up</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div data-bk="gtr:tb">
+          <label class="form__label" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
+
+          <div data-bk="gtr:l  6">
+            <select class="form__select" name="fields[formAppointmentTime]" id="appointment-time">
+              <option disabled selected>Time of day</option>
+              <option>9am – 12pm</option>
+              <option>12pm – 3pm</option>
+              <option>3pm – 6pm</option>
+            </select>
+          </div>
+        </div>
+
+        <div data-bk="gtr:tb  middle" class="set-links">
+          <input class="form__check" data-bk="gtr:0  auto" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms">
+
+          <label data-bk="gtr:l  auto" for="terms-option">
+            I agree with the Terms &amp; Conditions <span class="form__required">*</span>
+          </label>
+
+          &nbsp;<span class="font--s  set-links--muted"><a href="/terms-privacy" target="_blank">(view)</a></span></div>
+
+        <div data-bk="gtr:tb">
+          <button class="form__btn  btn" type="submit" name="submit">Send</button>
+          <button disabled class="form__btn  btn" type="submit" name="submit">Disabled</button>
+        </div>
+      </form>
+    </section>
+
 
     <section id="user-content" class="site-container  pad  user-content  set-links">
+      <h3>User Content Styling</h3>
+
       <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
 
       <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>

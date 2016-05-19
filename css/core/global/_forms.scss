@@ -10,7 +10,7 @@
 
   @if $form-legend-style {
     legend {
-      padding: rem(($font-line-height / 4) ($font-line-height / 2) ($font-line-height / 5));
+      padding: 0.25em;
       margin-left: rem($font-line-height / 2);
     }
   }
