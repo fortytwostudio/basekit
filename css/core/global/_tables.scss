@@ -1,31 +1,16 @@
-// Output default table styles.
-$tables-css: true;
-// Width of the table borders.
-$tables-width: 1px;
-// Border colours.
-$tables-color: $grey-light;
-// Alignment within th and td cells.
-$tables-cell-text-align: left;
-// Vertical alignment within cells.
-$tables-cell-vertical-align: top;
-// Padding within cells.
-$tables-cell-padding: $margin + 0px;
+$tables-width: thin;
+$tables-color: currentColor;
 
-@if $tables-css {
+table {
+  border-collapse: collapse;
+  border-left: $tables-width solid $tables-color;
+  border-spacing: 0;
+  border-top: $tables-width solid $tables-color;
+}
 
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-top: $tables-width solid $tables-color;
-    border-left: $tables-width solid $tables-color;
-  }
-
-  th, td {
-    text-align: $tables-cell-text-align;
-    vertical-align: $tables-cell-vertical-align;
-    padding: rem($tables-cell-padding);
-    border-bottom: $tables-width solid $tables-color;
-    border-right: $tables-width solid $tables-color;
-  }
-
+th, td {
+  border-bottom: $tables-width solid $tables-color;
+  border-right: $tables-width solid $tables-color;
+  padding: rem($margin + 0px);
+  vertical-align: top;
 }
