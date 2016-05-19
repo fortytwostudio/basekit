@@ -2,11 +2,13 @@
 
   .#{$site-width-name} {
     width: $site-width;
-    max-width: px($max-width);
+    max-width: rem($max-width + 0px);
+
     @if $site-width-position == auto {
       margin-right: auto;
       margin-left: auto;
     }
+
   }
 
 }
