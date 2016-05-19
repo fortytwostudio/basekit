@@ -1,7 +1,6 @@
 @if $tables-css {
 
   table {
-    margin-bottom: rem(px($margin));
     border-collapse: collapse;
     border-spacing: 0;
     border-top: $tables-width solid $tables-color;
