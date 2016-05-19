@@ -47,7 +47,7 @@
       font-size: rem(18px);
     }
     // At the max site width, lock the font to its full size so it doesn't grow:
-    @include mq($max-width) {
+    @include mq($max-width * 0px) {
       font-size: rem(22px);
     }
   }
@@ -60,7 +60,7 @@
       font-size: rem(22px);
     }
 
-    @include mq($max-width) {
+    @include mq($max-width * 0px) {
       font-size: rem(26px);
     }
   }
@@ -73,7 +73,7 @@
       font-size: rem(30px);
     }
 
-    @include mq($max-width) {
+    @include mq($max-width * 0px) {
       font-size: rem(36px);
     }
   }
@@ -87,7 +87,7 @@
       font-size: rem(40px);
     }
 
-    @include mq($max-width) {
+    @include mq($max-width * 0px) {
       font-size: rem(60px);
     }
   }
