@@ -1,4 +1,7 @@
 @if $form-extended-css {
+
+  $form-element-bg-color: white;
+
   .form {
     // Prevent iOS zooming forms
     @media (-webkit-min-device-pixel-ratio: 2) and (max-width: rem(600px)) {
@@ -7,7 +10,7 @@
 
     // quick label styling
     &__label {
-      background: #fff;
+      background: $form-element-bg-color;
       color: #999;
       display: block;
       font-size: 75%;
@@ -20,7 +23,7 @@
     &__btn {
       appearance: none;
       background-clip: padding-box;
-      background-color: white;
+      background-color: $form-element-bg-color;
       border: 0;
       border-radius: 0;
       color: $text;
@@ -34,12 +37,12 @@
       width: 100%;
 
       &:focus {
-        background-color: mix(yellow, white, 10%);
+        background-color: mix(yellow, $form-element-bg-color, 10%);
       }
     }
 
     &__select {
-      background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAQAAAD3ApbNAAAAXUlEQVR4AdXMsQ2AIBQG4WvJG4LJGIMpmMBZ6FhMieVLNFfq/eWffPygyqTzVmdS0TXOvcFT4/4busLKZOZYFHxEJjNHkNKk5jypOU9qzpOS86TiPGk5Tx57wVe6AJFXOuWN70I1AAAAAElFTkSuQmCC') no-repeat right center;
+      background: $form-element-bg-color url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAQAAAD3ApbNAAAAXUlEQVR4AdXMsQ2AIBQG4WvJG4LJGIMpmMBZ6FhMieVLNFfq/eWffPygyqTzVmdS0TXOvcFT4/4busLKZOZYFHxEJjNHkNKk5jypOU9qzpOS86TiPGk5Tx57wVe6AJFXOuWN70I1AAAAAElFTkSuQmCC') no-repeat right center;
       background-size: 20px 7px;
     }
 
@@ -70,7 +73,8 @@
 
     [disabled],
     [disabled] option,
-    [disabled] optgroup {
+    [disabled] optgroup,
+    &__label--disabled {
       background-color: #eee!important;
       color: #888!important;
       cursor: not-allowed;

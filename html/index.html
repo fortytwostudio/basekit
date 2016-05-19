@@ -94,15 +94,15 @@
         </div>
 
         <div class="margin-tb">
-          <label data-bk="gtr:b" for="fields[formExistingCustomer]">Already a customer?</label>
+          <label for="fields[formExistingCustomer]">Already a customer?</label>
 
           <div>
-            <input class="form__radio" data-bk="gtr:0  auto" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
-            <label data-bk="gtr:rl  auto" for="irb1">Yes</label>
+            <input class="form__radio" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label for="irb1">Yes</label>
           </div>
           <div>
-            <input class="form__radio" data-bk="gtr:0  auto" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
-            <label data-bk="gtr:l  auto" for="irb2">No</label>
+            <input class="form__radio" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label for="irb2">No</label>
           </div>
         </div>
 
@@ -153,9 +153,9 @@
         </div>
 
         <divclass="margin-tb  set-links">
-          <input class="form__check" data-bk="gtr:0  auto" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms">
+          <input class="form__check" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms">
 
-          <label data-bk="gtr:l  auto" for="terms-option">
+          <label for="terms-option">
             I agree with the Terms &amp; Conditions <span class="form__required">*</span>
           </label>
 
@@ -164,6 +164,42 @@
         <div class="margin-tb">
           <button class="form__btn  btn" type="submit" name="submit">Send</button>
           <button disabled class="form__btn  btn" type="submit" name="submit">Disabled</button>
+        </div>
+
+
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
+
+          <select disabled class="form__select" name="fields[formAppointmentTime]" id="appointment-time">
+            <option disabled selected>Time of day</option>
+            <option>9am – 12pm</option>
+            <option>12pm – 3pm</option>
+            <option>3pm – 6pm</option>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="tel">Telephone <span class="form__required">*</span></label>
+          <input disabled class="form__text" id="tel" name="fields[formTelephone]" type="tel">
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="person-dob">Date of Birth</label>
+          <input disabled class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy">
+        </div>
+
+        <div class="margin-tb">
+          <label for="fields[formExistingCustomer]">Already a customer?</label>
+
+          <div>
+            <input disabled class="form__radio" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label for="irb1">Yes</label>
+          </div>
+          <div>
+            <input disabled class="form__radio" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label for="irb2">No</label>
+          </div>
         </div>
       </form>
     </section>
