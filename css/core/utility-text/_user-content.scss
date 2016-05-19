@@ -2,7 +2,7 @@
 
   .#{$user-content-name} {
 
-    * + * {
+    > * + * {
       margin-top: rem($font-default-bottom-margin + 0px);
     }
 
