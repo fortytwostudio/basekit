@@ -2,6 +2,8 @@
 
   .#{$padding-spacer-name} {
 
+    $padding-spacer: null;
+
     // If percentage spacing is set in the compile options use %, otherwise
     // default to rem sizing
     @if $padding-spacer-is-percentage {
