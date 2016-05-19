@@ -65,8 +65,8 @@
       display: block;
       // Position at the top, we don't want this 'fixed' just yet.
       position: absolute;
-      top: rem(px($margin));
-      right: rem(px($margin));
+      top: rem($margin + 0px);
+      right: rem($margin + 0px);
       z-index: $z-mobile-nav-toggle;
 
       // Define the toggler dimensions.
