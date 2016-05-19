@@ -9,7 +9,7 @@ $tables-cell-text-align: left;
 // Vertical alignment within cells.
 $tables-cell-vertical-align: top;
 // Padding within cells.
-$tables-cell-padding: $margin;
+$tables-cell-padding: $margin + 0px;
 
 @if $tables-css {
 
@@ -23,7 +23,7 @@ $tables-cell-padding: $margin;
   th, td {
     text-align: $tables-cell-text-align;
     vertical-align: $tables-cell-vertical-align;
-    padding: rem(px($tables-cell-padding));
+    padding: rem($tables-cell-padding);
     border-bottom: $tables-width solid $tables-color;
     border-right: $tables-width solid $tables-color;
   }

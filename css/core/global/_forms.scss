@@ -10,8 +10,8 @@
 
   @if $form-legend-style {
     legend {
-      padding: rem(px($font-line-height / 4) px($font-line-height / 2) px($font-line-height / 5));
-      margin-left: rem(px($font-line-height / 2));
+      padding: rem(($font-line-height / 4) ($font-line-height / 2) ($font-line-height / 5));
+      margin-left: rem($font-line-height / 2);
     }
   }
   textarea {

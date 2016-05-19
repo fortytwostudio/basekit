@@ -1,4 +1,4 @@
-$baseline-px: px($font-size);
+$baseline-px: $font-size;
 
 @mixin rem($property, $px-values) {
   // Convert the baseline into rems

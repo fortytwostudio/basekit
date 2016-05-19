@@ -3,11 +3,11 @@
   .#{$user-content-name} {
 
     * + * {
-      margin-top: rem(px($font-default-bottom-margin));
+      margin-top: rem($font-default-bottom-margin + 0px);
     }
 
     // p:not(:last-of-type) {
-    //   margin-bottom: rem(px($font-default-bottom-margin));
+    //   margin-bottom: rem($font-default-bottom-margin + 0px);
     // }
 
     @if $user-content-inline-images {
@@ -20,7 +20,7 @@
 
     ul {
       margin-left: rem(17px);
-      margin-bottom: rem(px($font-default-bottom-margin));
+      margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: disc outside none;
         margin-bottom: 0;
@@ -32,7 +32,7 @@
 
     ol {
       margin-left: rem(30px);
-      margin-bottom: rem(px($font-default-bottom-margin));
+      margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: decimal-leading-zero outside none;
         margin-bottom: 0;

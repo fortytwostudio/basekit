@@ -23,7 +23,7 @@
 
   // If there's a max value (based on site $font-viewport-unit-max-width then set the max font size in px)
   @if $max {
-    $max-breakpoint: px($font-viewport-unit-max-width);
+    $max-breakpoint: $font-viewport-unit-max-width;
 
     @media (min-#{$dimension}: #{$max-breakpoint}) {
       font-size: rem($max);
