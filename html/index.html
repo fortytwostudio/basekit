@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+    <link rel="alternate" href="http://www." hreflang="en-gb">
 
     <link rel="stylesheet" href="/css/basekit.css">
     <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+
+    <!-- Prefetch DNS for external assets -->
+    <link rel="dns-prefetch" href="//fast.fonts.net">
+    <link rel="dns-prefetch" href="//cloud.typography.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
 
     <title>BaseKit</title>
     <meta name="description" content="a frontend starter kit from eq design">
@@ -59,7 +67,14 @@
       <h3>This is an example content heading</h3>
 
       <ul>
-        <li>Nulla facilisi potenti</li>
+        <li>Nulla facilisi potenti
+          <ol>
+            <li>Mattis posuere habitant dapibus</li>
+            <li>Congue natoque blandit mattis rhoncus</li>
+            <li>Vestibulum aptent ultrices</li>
+          </ol>
+        </li>
+        <li>Etiam ac tellus eget ante</li>
         <li class="user-content">
           <p>
             Elit platea aliquam odio faucibus sociosqu vestibulum aptent ultrices, augue tempor placerat neque. Id nulla nec hac auctor curabitur nostra accumsan est donec fermentum curabitur!
@@ -73,7 +88,6 @@
             Mattis posuere habitant dapibus sollicitudin tempus tempor facilisis congue libero!
           </p>
         </li>
-        <li>Etiam ac tellus eget ante</li>
         <li>Tristique volutpat</li>
       </ul>
 
@@ -81,7 +95,13 @@
 
       <ol>
         <li>Nulla facilisi potenti</li>
-        <li>Maecenas nec ornare massa</li>
+        <li class="user-content">Maecenas nec ornare massa
+          <ul>
+            <li>Mattis posuere habitant dapibus</li>
+            <li>Congue natoque blandit mattis rhoncus</li>
+            <li>Vestibulum aptent ultrices</li>
+          </ul>
+        </li>
         <li>Etiam ac tellus eget ante</li>
         <li>Tristique volutpat</li>
       </ol>
