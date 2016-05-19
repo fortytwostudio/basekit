@@ -1,13 +1,13 @@
 .site-logo {
 
+  height: $siteLogo-height / 2;
   position: relative;
   width: $siteLogo-width / 2;
-  height: $siteLogo-height / 2;
 
   @include mq(palm) {
-    width: pct($siteLogo-width, $max-width);
     height: 0;
     padding-top: pct($siteLogo-height, $max-width);
+    width: pct($siteLogo-width, $max-width);
   }
 
   a {
