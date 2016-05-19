@@ -2,9 +2,8 @@
 // Import everything to generate your animate sass module //
 ////////////////////////////////////////////////////////////
 @import "helpers/mixins",
-	"helpers/settings";
-
-	// "helpers/base";
+	"helpers/settings",
+	"helpers/base";
 
 // ATTENTION
 @import	"animations/attention-seekers/bounce",
