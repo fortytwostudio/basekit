@@ -12,7 +12,7 @@
 
   a {
     @include fit-media;
-    background-image: image-url("logos/site-logo.svg");
+    background-image: url("../imgs/logos/site-logo.svg");
     background-size: cover;
   }
 }
