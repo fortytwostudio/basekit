@@ -8,7 +8,7 @@
     &:hover {
       // Unfortunatly the specificity requires white be set again here.
       color: white;
-      background: $secondary
+      background: $secondary;
       transition-duration: $speed-normal;
     }
   }
