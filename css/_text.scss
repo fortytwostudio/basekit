@@ -1,8 +1,16 @@
+@function vp($target, $context: $max-width, $dimension: vw) {
+  $vw-context: ($context*.01) * 1px;
+  @if $dimension == vw {
+    @return ($target/$vw-context) * 1vw;
+  }
+  @else {
+    @return ($target/$vw-context) * 1vh;
+  }
+}
+
 // Text and Font Styles
 // —————————————————————————————————————————————————————————————————————————————
 //
-
-
 .font {
 
   &--bold {
@@ -13,13 +21,13 @@
     font-weight: 400;
   }
 
-  // &--italic {
-  //   font-style: italic;
-  // }
-  //
-  // &--uppercase {
-  //   font-style: italic;
-  // }
+  &--italic {
+    font-style: italic;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
 
   // Instead of adding kerning to xl and xxl let's just utilise a class.
   &--kern {
