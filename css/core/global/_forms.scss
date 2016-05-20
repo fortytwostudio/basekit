@@ -15,18 +15,14 @@
     }
   }
   textarea {
-    width: 100%;
-    min-height: rem($form-textarea-min-height);
     resize: vertical;
   }
   @if $form-optgroup-style {
     optgroup {
       color: black;
-      font: {
-        family: $font-family;
-        style: normal;
-        weight: normal;
-      };
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
       // Kill phantom spacing and dotted
       // border that appears in Firefox.
       &::-moz-focus-inner {
