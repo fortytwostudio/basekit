@@ -1,24 +1,27 @@
-.nav-links{
+.nav-links {
   a {
-    color: black;
-    font-weight: 700;
-    transition: all $speed-slow;
+    color: white;
+    background: $primary;
+    transition: all $speed-slow ease-in-out;
 
     &:focus,
     &:hover {
-      background: #ccc;
-      transition: all $speed-normal;
+      // Unfortunatly the specificity requires white be set again here.
+      color: white;
+      background: $secondary;
+      transition-duration: $speed-normal;
     }
   }
 
-  &__active a {
-    color: white;
-    background: #111;
+  &__active {
+    a {
+      color: white;
+      background: #111;
 
-    &:focus,
-    &:hover {
-      background: #666;
-      transition: all $speed-normal;
+      &:focus,
+      &:hover {
+        background: #666;
+      }
     }
   }
 }

@@ -4,17 +4,17 @@
 $font-family: helvetica, arial, helmet, freesans, "numbus sans l", verdana, sans-serif;
 
 // Define the base font size. This is important, get it right.
-$font-size: 16;
+$font-size: 16px;
 
 // Define the primary line height.
-$font-line-height: 20;
+$font-line-height: 20px;
 
 // Define the base font weight, this probably won't change.
 $font-weight: 400;
 
 // Should the base font size be a little smaller on small screens? If so,
 // define it here.
-$font-size-small-screen: 14;
+$font-size-small-screen: 14px;
 
 // Define the base heading family and weight.
 $font-heading-family: $font-family;
@@ -101,7 +101,7 @@ $font-config: (
 
 // Define when the max font size should kick in, this is a bit like $font-config
 // but should rarely be changed.
-$font-viewport-unit-max-width: $max-width;
+$font-viewport-unit-max-width: $max-width + 0px;
 
 // Output the bullet and numbered utility classes
 $list-css: true;

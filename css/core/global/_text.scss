@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
   // Set headings to match the body size, change them when necessary with
   // a utility class
-  font-size: em($font-size, 16);
+  font-size: em(strip-unit($font-size), 16);
   line-height: $font-line-height / $font-size;
   @if $heading != $text {
     color: $heading;
@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 @if $code-style {
   code {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-    font-size: rem(px($font-size-small-screen));
+    font-size: rem($font-size-small-screen);
     color: $alert-bg;
     padding: 0 3px 2px;
     background-color: lighten($grey-light, 12.5%);

@@ -2,36 +2,36 @@
 
   .margin {
 
-    // margin: rem(px($margin));
+    // margin: rem($margin + 0px);
 
     &-0 {
       margin: 0;
     }
 
     &-t {
-      margin-top: rem(px($margin));
+      margin-top: rem($margin + 0px);
     }
 
     &-r {
-      margin-right: rem(px($margin));
+      margin-right: rem($margin + 0px);
     }
 
     &-b {
-      margin-bottom: rem(px($margin));
+      margin-bottom: rem($margin + 0px);
     }
 
     &-l {
-      margin-left: rem(px($margin));
+      margin-left: rem($margin + 0px);
     }
 
     &-tb {
-      margin-top: rem(px($margin));
-      margin-bottom: rem(px($margin));
+      margin-top: rem($margin + 0px);
+      margin-bottom: rem($margin + 0px);
     }
 
     &-rl {
-      margin-right: rem(px($margin));
-      margin-left: rem(px($margin));
+      margin-right: rem($margin + 0px);
+      margin-left: rem($margin + 0px);
     }
 
     &-auto {

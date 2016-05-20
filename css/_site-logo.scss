@@ -1,18 +1,20 @@
-.site-logo {
+$siteLogo-width: 206px;
+$siteLogo-height: 46px;
 
+.site-logo {
+  height: rem($siteLogo-height) / 2;
   position: relative;
-  width: $siteLogo-width / 2;
-  height: $siteLogo-height / 2;
+  width: rem($siteLogo-width) / 2;
 
   @include mq(palm) {
-    width: pct($siteLogo-width, $max-width);
     height: 0;
     padding-top: pct($siteLogo-height, $max-width);
+    width: pct($siteLogo-width, $max-width);
   }
 
   a {
     @include fit-media;
-    background-image: image-url("logos/site-logo.svg");
+    background-image: url("../imgs/logos/site-logo.svg");
     background-size: cover;
   }
 }

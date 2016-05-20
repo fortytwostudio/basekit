@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+    <link rel="alternate" href="http://www." hreflang="en-gb">
 
     <link rel="stylesheet" href="/css/basekit.css">
     <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+
+    <!-- Prefetch DNS for external assets -->
+    <link rel="dns-prefetch" href="//fast.fonts.net">
+    <link rel="dns-prefetch" href="//cloud.typography.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
 
     <title>BaseKit</title>
     <meta name="description" content="a frontend starter kit from eq design">
@@ -45,6 +53,355 @@
   </head>
 
   <body>
+
+    <section id="form" class="site-container  pad  user-content  set-links">
+      <h3 class="font--l">Example Form</h3>
+
+      <p>Fields marked with <em>*</em> are required.</p>
+
+      <form class="form" id="enquiry-form" method="post">
+
+        <div class="margin-tb">
+          <label class="form__label" for="enquiry-nature">Nature of enquiry <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formNatureOfEnquiry]" id="enquiry-nature">
+            <option>Request an appointment</option>
+            <option>Find out more about our services</option>
+            <option>Vacancy enquiry</option>
+            <option>Make a complaint</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="name">Name <span class="form__required">*</span></label>
+          <input class="form__text" type="text" id="name" name="fields[formName]" aria-required="true" required>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="email">Email Address <span class="form__required">*</span></label>
+          <input class="form__text" id="email" name="fields[formEmail]" type="email" placeholder="Enter a valid email address" aria-required="true" required>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="tel">Telephone <span class="form__required">*</span></label>
+          <input class="form__text" id="tel" name="fields[formTelephone]" type="tel" aria-required="true" required>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="person-dob">Date of Birth</label>
+          <input class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy"  aria-required="false">
+        </div>
+
+        <div class="margin-tb">
+          <label for="fields[formExistingCustomer]">Already a customer?</label>
+
+          <div>
+            <input class="form__radio" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label for="irb1">Yes</label>
+          </div>
+          <div>
+            <input class="form__radio" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label for="irb2">No</label>
+          </div>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="branch-of-interest">Branch of Interest <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formBranchOfInterest]" id="branch-of-interest" aria-required="true" required>
+            <option disabled selected>Please select a branch</option>
+
+            <optgroup label="Aberdeen">
+              <option value="Belmont Street">Belmont Street</option>
+              <option value="Dyce">Dyce</option>
+              <option value="Trinity Centre">Trinity Centre</option>
+            </optgroup>
+            <optgroup label="Angus">
+              <option value="Arbroath">Arbroath</option>
+              <option value="Forfar">Forfar</option>
+              <option value="Kirriemuir">Kirriemuir</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="enquiry">Enquiry <span class="form__required">*</span></label>
+
+          <textarea class="form__text  form__text--area" id="enquiry" name="fields[formEnquiry]" aria-required="true" required></textarea>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="appointment-type">Appointment type</label>
+          <select class="form__select" name="fields[formAppointmentType]" id="appointment-type"  aria-required="false">
+            <option>Eye exam</option>
+            <option>Contact lens fitting</option>
+            <option>Check-up</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formAppointmentTime]" id="appointment-time" aria-required="true" required>
+            <option disabled selected>Time of day</option>
+            <option>9am – 12pm</option>
+            <option>12pm – 3pm</option>
+            <option>3pm – 6pm</option>
+          </select>
+        </div>
+
+        <divclass="margin-tb  set-links">
+          <input class="form__check" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms" aria-required="true" required>
+
+          <label for="terms-option">
+            I agree with the Terms &amp; Conditions <span class="form__required">*</span>
+          </label>
+
+          &nbsp;<span class="font--s  set-links--muted"><a href="/terms-privacy" target="_blank">(view)</a></span></div>
+
+        <div class="margin-tb">
+          <button class="form__btn  btn" type="submit" name="submit">Send</button>
+          <button disabled class="form__btn  btn" type="submit" name="submit">Disabled</button>
+        </div>
+
+
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
+
+          <select disabled class="form__select" name="fields[formAppointmentTime]" id="appointment-time">
+            <option disabled selected>Time of day</option>
+            <option>9am – 12pm</option>
+            <option>12pm – 3pm</option>
+            <option>3pm – 6pm</option>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="tel">Telephone <span class="form__required">*</span></label>
+          <input disabled class="form__text" id="tel" name="fields[formTelephone]" type="tel">
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="person-dob">Date of Birth</label>
+          <input disabled class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy">
+        </div>
+
+        <div class="margin-tb">
+          <label for="fields[formExistingCustomer]">Already a customer?</label>
+
+          <div>
+            <input disabled class="form__radio" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label for="irb1">Yes</label>
+          </div>
+          <div>
+            <input disabled class="form__radio" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label for="irb2">No</label>
+          </div>
+        </div>
+      </form>
+    </section>
+
+
+    <section id="user-content" class="site-container  pad  user-content  set-links">
+      <h3>User Content Styling</h3>
+
+      <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
+
+      <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
+
+      <p>This is content output from the <strong>Body Text field</strong>, compared to the above the text is normal size and again this field is entirely optional.</p>
+
+      <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
+
+      <h3>This is an example content heading</h3>
+
+      <ul>
+        <li>Nulla facilisi potenti
+          <ol>
+            <li>Mattis posuere habitant dapibus</li>
+            <li>Congue natoque blandit mattis rhoncus</li>
+            <li>Vestibulum aptent ultrices</li>
+          </ol>
+        </li>
+        <li>Etiam ac tellus eget ante</li>
+        <li class="user-content">
+          <p>
+            Elit platea aliquam odio faucibus sociosqu vestibulum aptent ultrices, augue tempor placerat neque. Id nulla nec hac auctor curabitur nostra accumsan est donec fermentum curabitur!
+          </p>
+
+          <p>
+            Quis commodo curae; congue natoque blandit mattis rhoncus eleifend fermentum ridiculus per conubia! Pellentesque rutrum magnis varius. Iaculis risus sapien neque fermentum lacinia dui cum elementum molestie litora laoreet.
+          </p>
+
+          <p>
+            Mattis posuere habitant dapibus sollicitudin tempus tempor facilisis congue libero!
+          </p>
+        </li>
+        <li>Tristique volutpat</li>
+      </ul>
+
+      <p>You can also format <em>ordered</em> lists:</p>
+
+      <ol>
+        <li>Nulla facilisi potenti</li>
+        <li class="user-content">Maecenas nec ornare massa
+          <ul>
+            <li>Mattis posuere habitant dapibus</li>
+            <li>Congue natoque blandit mattis rhoncus</li>
+            <li>Vestibulum aptent ultrices</li>
+          </ul>
+        </li>
+        <li>Etiam ac tellus eget ante</li>
+        <li>Tristique volutpat</li>
+      </ol>
+    </section>
+
+
+
+
+
+
+    <section id="logos" class="site-container  pad">
+      <h1 class="site-logo">
+        <a class="hide-text" href="/" title="Home Page">BaseKit</a>
+      </h1>
+
+      <div class="colophon__logo">
+        <a class="hide-text" href="http://eqdesign.co.uk">
+          Design and development by EQ Design
+        </a>
+      </div>
+    </section>
+
+    <section id="tables" class="site-container  pad">
+      <h2 class="font--l">Tables</h2>
+
+      <table>
+        <caption>Jimi Hendrix - albums</caption>
+        <thead>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Are You Experienced</td>
+            <td>1967</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Axis: Bold as Love</td>
+            <td>1967</td>
+            <td>$12.00</td>
+          </tr>
+          <tr>
+            <td>Electric Ladyland</td>
+            <td>1968</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Band of Gypsys</td>
+            <td>1970</td>
+            <td>$12.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="5">Roller Reamer Data</th>
+            <th colspan="4">String or nearbit undressed</th>
+          </tr>
+          <tr>
+            <th colspan="5">&nbsp;</th>
+            <th colspan="2">3 Point</th>
+            <th colspan="2">6 Point</th>
+          </tr>
+          <tr>
+            <th>Redress Kit Size</th>
+            <th>Max Body Diameter</th>
+            <th>Body Bore</th>
+            <th>Fishing Neck Length</th>
+            <th>Fishing Neck Diameter</th>
+            <th>Total Length</th>
+            <th>Body Weight</th>
+            <th>Total Length</th>
+            <th>Body Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
 
     <div class="site-container  pad" id="links">
 
@@ -143,25 +500,25 @@
       <h4 class="font--l  color-secondary  set-links">Heading uses secondary colour <a href="#">with a default link colour</a></h4>
 
       <h3 class="margin-tb">Links set on a horizontal block nav</h3>
-      <ul class="nav  nav--block  set-links  set-links--nav">
+      <ul class="nav  nav--block  nav-links">
         <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
+        <li class="nav-links__active"><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
       </ul>
 
       <h3 class="margin-tb">Links set on a horizontal fit (display table) nav</h3>
-      <ul class="nav  nav--block  nav--fit  set-links  set-links--nav">
+      <ul class="nav  nav--block  nav--fit  nav-links">
         <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
+        <li class="nav-links__active"><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
       </ul>
 
       <h3 class="margin-tb">Links set on a stacked nav</h3>
-      <ul class="nav  nav--block  nav--stacked  set-links  set-links--nav">
+      <ul class="nav  nav--block  nav--stacked  nav-links">
         <li><a href="#">One</a></li>
-        <li><a href="#">Two</a></li>
+        <li class="nav-links__active"><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
       </ul>

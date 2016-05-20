@@ -4,7 +4,8 @@
     > li {
       &,
       > a {
-        @include inline-block(middle);
+        display: inline-block;
+        vertical-align: middle;
       }
     }
 

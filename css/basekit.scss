@@ -4,17 +4,13 @@
   "settings/colors",
   "settings/layout",
   "settings/text",
-  "settings/speed",
-  "settings/nav",
+  "settings/transition-speed",
+  "settings/navigation",
   "settings/media",
   "settings/forms",
-  // "settings/links",
   "settings/icons",
   "settings/user-content",
-  "settings/buttons",
-  "settings/tables",
   "settings/hider",
-  "settings/vendor.animate",
 
   // THIRD PARTY TOOLS
   "core/vendor/unit-conversion",
@@ -23,19 +19,10 @@
   "core/vendor/font-face",
 
   // MIXINS & FUNCTONS
-  "core/tools/colums",
-  "core/tools/colums-span",
-  "core/tools/image-url",
   "core/tools/percentage",
   "core/tools/rem",
-  "core/tools/fit-media",
-  "core/tools/position-over",
-  "core/tools/inline-block",
   "core/tools/aspect-ratio",
   "core/tools/strip-unit",
-  "core/tools/ios-smooth-scroll",
-  "core/tools/viewport-unit-convert",
-  // "core/tools/viewport-font.scss",
   "core/tools/hider.scss",
 
   // GLOBALS
@@ -66,16 +53,10 @@
   "core/utility-text/list-styles",
   "core/utility-text/user-content",
   "core/utility-text/overflow-text",
-  // "core/utility-text/site-links",
-  // "core/utility-text/site-text",
   "core/utility-text/hide-text",
-
-  // THIRD PARTY PACKAGES
-  "core/vendor/animate-sass/animate",
 
   // PROJECT FILES:
   // ————————————————————————————————————————————————————————————————————————————
-  "animate",
   "links",
   "text",
   "colors",

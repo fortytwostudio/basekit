@@ -1,8 +1,16 @@
+@function vp($target, $context: $max-width, $dimension: vw) {
+  $vw-context: ($context*.01) * 1px;
+  @if $dimension == vw {
+    @return ($target/$vw-context) * 1vw;
+  }
+  @else {
+    @return ($target/$vw-context) * 1vh;
+  }
+}
+
 // Text and Font Styles
 // —————————————————————————————————————————————————————————————————————————————
 //
-
-
 .font {
 
   &--bold {
@@ -13,13 +21,13 @@
     font-weight: 400;
   }
 
-  // &--italic {
-  //   font-style: italic;
-  // }
-  //
-  // &--uppercase {
-  //   font-style: italic;
-  // }
+  &--italic {
+    font-style: italic;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
 
   // Instead of adding kerning to xl and xxl let's just utilise a class.
   &--kern {
@@ -47,7 +55,7 @@
       font-size: rem(18px);
     }
     // At the max site width, lock the font to its full size so it doesn't grow:
-    @include mq($max-width) {
+    @include mq($max-width + 0px) {
       font-size: rem(22px);
     }
   }
@@ -60,7 +68,7 @@
       font-size: rem(22px);
     }
 
-    @include mq($max-width) {
+    @include mq($max-width + 0px) {
       font-size: rem(26px);
     }
   }
@@ -73,7 +81,7 @@
       font-size: rem(30px);
     }
 
-    @include mq($max-width) {
+    @include mq($max-width + 0px) {
       font-size: rem(36px);
     }
   }
@@ -87,7 +95,7 @@
       font-size: rem(40px);
     }
 
-    @include mq($max-width) {
+    @include mq($max-width + 0px) {
       font-size: rem(60px);
     }
   }

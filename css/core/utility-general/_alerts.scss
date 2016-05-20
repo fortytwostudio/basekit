@@ -43,7 +43,8 @@
 
     @if $alert-inline-block {
       &--ib {
-        @include inline-block()
+        display: inline-block;
+        vertical-align: top;
       }
     }
   }

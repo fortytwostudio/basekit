@@ -18,24 +18,24 @@ $inner-width: $max-width - $gutter;
 $mq-breakpoints: (palm: 480px, hands: 600px, lap: 768px, desk: 1024px);
 $mq-static-breakpoint: desk;
 
-// Output the Basekit Grid System.
-$bk-grid: true;
-
-// Output CSS for data-bkg="to:*"
-$bk-grid-mq-to: true;
-
-// Define the attribute name.
-$bk-grid-name: data-bk;
-
-// Define small and large column gutters.
-$bk-grid-gutter-small: $margin / 2;
-$bk-grid-gutter-large: $margin * 2;
-
-// Define how many `indent` columns there should be, default is $columns - 1.
-$bk-push-columns: $columns - 1;
-
-$bk-push-right: true;
-$bk-push-left: false;
+// // Output the Basekit Grid System.
+// $bk-grid: true;
+//
+// // Output CSS for data-bkg="to:*"
+// $bk-grid-mq-to: true;
+//
+// // Define the attribute name.
+// $bk-grid-name: data-bk;
+//
+// // Define small and large column gutters.
+// $bk-grid-gutter-small: $margin / 2;
+// $bk-grid-gutter-large: $margin * 2;
+//
+// // Define how many `indent` columns there should be, default is $columns - 1.
+// $bk-push-columns: $columns - 1;
+//
+// $bk-push-right: true;
+// $bk-push-left: false;
 
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;

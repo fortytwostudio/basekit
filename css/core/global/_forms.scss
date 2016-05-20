@@ -10,23 +10,19 @@
 
   @if $form-legend-style {
     legend {
-      padding: rem(px($font-line-height / 4) px($font-line-height / 2) px($font-line-height / 5));
-      margin-left: rem(px($font-line-height / 2));
+      padding: 0.25em;
+      margin-left: rem($font-line-height / 2);
     }
   }
   textarea {
-    width: 100%;
-    min-height: rem($form-textarea-min-height);
     resize: vertical;
   }
   @if $form-optgroup-style {
     optgroup {
       color: black;
-      font: {
-        family: $font-family;
-        style: normal;
-        weight: normal;
-      };
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
       // Kill phantom spacing and dotted
       // border that appears in Firefox.
       &::-moz-focus-inner {

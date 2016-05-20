@@ -6,7 +6,7 @@
 }
 
 body {
-  font: $font-weight #{em($font-size, 16)}/#{$font-line-height / $font-size} $font-family;
+  font: $font-weight #{em(strip-unit($font-size), 16)}/#{$font-line-height / $font-size} $font-family;
   color: $text;
   background: $body unquote($body-media);
   text-rendering: optimizeSpeed;
@@ -15,7 +15,7 @@ body {
 
   @if $font-size > $font-size-small-screen {
     @include mq($until: hands) {
-      font-size: em($font-size-small-screen, 16);
+      font-size: em(strip-unit($font-size-small-screen), 16);
     }
   }
 }

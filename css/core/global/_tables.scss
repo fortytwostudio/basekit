@@ -1,19 +1,16 @@
-@if $tables-css {
+$tables-width: thin;
+$tables-color: currentColor;
 
-  table {
-    margin-bottom: rem(px($margin));
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-top: $tables-width solid $tables-color;
-    border-left: $tables-width solid $tables-color;
-  }
+table {
+  border-collapse: collapse;
+  border-left: $tables-width solid $tables-color;
+  border-spacing: 0;
+  border-top: $tables-width solid $tables-color;
+}
 
-  th, td {
-    text-align: $tables-cell-text-align;
-    vertical-align: $tables-cell-vertical-align;
-    padding: rem(px($tables-cell-padding));
-    border-bottom: $tables-width solid $tables-color;
-    border-right: $tables-width solid $tables-color;
-  }
-
+th, td {
+  border-bottom: $tables-width solid $tables-color;
+  border-right: $tables-width solid $tables-color;
+  padding: rem($margin + 0px);
+  vertical-align: top;
 }

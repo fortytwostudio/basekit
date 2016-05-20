@@ -54,7 +54,8 @@
         // Make sure users can scroll if the nav is taller than the container.
         overflow-y: scroll!important;
         // Make sure it has nice smooth scrolling on iOS.
-        @include smooth-scroll("!important")
+        -webkit-overflow-scrolling: touch!important;
+        overflow-scrolling: touch!important;
       }
     }
 
@@ -65,8 +66,8 @@
       display: block;
       // Position at the top, we don't want this 'fixed' just yet.
       position: absolute;
-      top: rem(px($margin));
-      right: rem(px($margin));
+      top: rem($margin + 0px);
+      right: rem($margin + 0px);
       z-index: $z-mobile-nav-toggle;
 
       // Define the toggler dimensions.
