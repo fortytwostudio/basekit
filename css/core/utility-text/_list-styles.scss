@@ -2,7 +2,7 @@
 
   .list {
     &--bull {
-      margin-left: rem(17px);
+      margin-left: rem(20px);
       & > li {
         list-style: unquote($list-bullet) unquote($list-bullet-position) none;
       }
