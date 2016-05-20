@@ -85,26 +85,25 @@
       font-size: 87.5%;
     }
 
-    // &__check:checked {
-    //   transform: rotate(360deg);
-    //   transition: all $speed-normal ease-in-out;
-    // }
-    //
-    // @keyframes inout {
-    //   30% {
-    //     transform: scale(1.3); }
-    //   70% {
-    //     transform: scale(0.3); }
-    //   90% {
-    //     transform: scale(1); }
-    //   100% {
-    //     transform: none; }
-    // }
-    //
-    //
-    // &__radio:checked {
-    //   animation: inout $speed-slow ease-in-out;
-    // }
+    &--spin:checked {
+      transform: rotate(360deg);
+      transition: all $speed-slow ease-in-out;
+    }
+
+    @keyframes pop {
+      30% {
+        transform: scale(1.3); }
+      70% {
+        transform: scale(0.3); }
+      90% {
+        transform: scale(1); }
+      100% {
+        transform: none; }
+    }
+
+    &--pop:checked {
+      animation: pop $speed-slow ease-in-out;
+    }
 
 
     // Tweaks for Safari + Chrome.
