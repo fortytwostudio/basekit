@@ -1,8 +1,8 @@
 .colophon {
 
   &__logo {
-    width: 56px; // 60px / 64px
-    height: 14px; // 15px / 16px
+    width: rem(56px); // 60px / 64px
+    height: rem(14px); // 15px / 16px
     background: url("../imgs/logos/colophon-logo.svg") no-repeat;
     background-size: cover;
   }

@@ -1,8 +1,10 @@
-.site-logo {
+$siteLogo-width: 206px;
+$siteLogo-height: 46px;
 
-  height: $siteLogo-height / 2;
+.site-logo {
+  height: rem($siteLogo-height) / 2;
   position: relative;
-  width: $siteLogo-width / 2;
+  width: rem($siteLogo-width) / 2;
 
   @include mq(palm) {
     height: 0;
