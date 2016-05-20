@@ -13,7 +13,8 @@
     @if $user-content-inline-images {
       p, li {
         img {
-          @include inline-block(middle);
+          display: inline-block;
+          vertical-align: middle;
         }
       }
     }

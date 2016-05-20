@@ -14,8 +14,8 @@ $btn-transition-speed: $speed-normal;
 @if $btn-css {
 
   .#{$btn-name} {
-
-    @include inline-block(middle);
+    display: inline-block;
+    vertical-align: middle;
     color: $btn-txt!important;
     font-family: inherit;
     font-size: 100%;
