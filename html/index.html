@@ -75,22 +75,22 @@
 
         <div class="margin-tb">
           <label class="form__label" for="name">Name <span class="form__required">*</span></label>
-          <input class="form__text" type="text" id="name" name="fields[formName]">
+          <input class="form__text" type="text" id="name" name="fields[formName]" aria-required="true" required>
         </div>
 
         <div class="margin-tb">
           <label class="form__label" for="email">Email Address <span class="form__required">*</span></label>
-          <input class="form__text" id="email" name="fields[formEmail]" type="email">
+          <input class="form__text" id="email" name="fields[formEmail]" type="email" placeholder="Enter a valid email address" aria-required="true" required>
         </div>
 
         <div class="margin-tb">
           <label class="form__label" for="tel">Telephone <span class="form__required">*</span></label>
-          <input class="form__text" id="tel" name="fields[formTelephone]" type="tel">
+          <input class="form__text" id="tel" name="fields[formTelephone]" type="tel" aria-required="true" required>
         </div>
 
         <div class="margin-tb">
           <label class="form__label" for="person-dob">Date of Birth</label>
-          <input class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy">
+          <input class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy"  aria-required="false">
         </div>
 
         <div class="margin-tb">
@@ -109,7 +109,7 @@
         <div class="margin-tb">
           <label class="form__label" for="branch-of-interest">Branch of Interest <span class="form__required">*</span></label>
 
-          <select class="form__select" name="fields[formBranchOfInterest]" id="branch-of-interest">
+          <select class="form__select" name="fields[formBranchOfInterest]" id="branch-of-interest" aria-required="true" required>
             <option disabled selected>Please select a branch</option>
 
             <optgroup label="Aberdeen">
@@ -128,12 +128,12 @@
         <div class="margin-tb">
           <label class="form__label" for="enquiry">Enquiry <span class="form__required">*</span></label>
 
-          <textarea class="form__text  form__text--area" id="enquiry" name="fields[formEnquiry]" data-msg-required="Please enter a message" data-rule-required="true"></textarea>
+          <textarea class="form__text  form__text--area" id="enquiry" name="fields[formEnquiry]" aria-required="true" required></textarea>
         </div>
 
         <div class="margin-tb">
           <label class="form__label" for="appointment-type">Appointment type</label>
-          <select class="form__select" name="fields[formAppointmentType]" id="appointment-type">
+          <select class="form__select" name="fields[formAppointmentType]" id="appointment-type"  aria-required="false">
             <option>Eye exam</option>
             <option>Contact lens fitting</option>
             <option>Check-up</option>
@@ -144,7 +144,7 @@
         <div class="margin-tb">
           <label class="form__label" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
 
-          <select class="form__select" name="fields[formAppointmentTime]" id="appointment-time">
+          <select class="form__select" name="fields[formAppointmentTime]" id="appointment-time" aria-required="true" required>
             <option disabled selected>Time of day</option>
             <option>9am – 12pm</option>
             <option>12pm – 3pm</option>
@@ -153,7 +153,7 @@
         </div>
 
         <divclass="margin-tb  set-links">
-          <input class="form__check" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms">
+          <input class="form__check" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms" aria-required="true" required>
 
           <label for="terms-option">
             I agree with the Terms &amp; Conditions <span class="form__required">*</span>
