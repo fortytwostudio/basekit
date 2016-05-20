@@ -1,0 +1,47 @@
+// =========================================================================
+//
+//  PRECISE CONTROL OVER RESPONSIVE TYPOGRAPHY FOR SASS
+//  ---------------------------------------------------
+//  Indrek Paas @indrekpaas
+//  http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+//  https://www.smashingmagazine.com/2016/05/fluid-typography/
+//
+//  Inspired by Mike Riethmuller's Precise control over responsive typography
+//  http://madebymike.com.au/writing/precise-control-responsive-typography/
+//
+//  31.03.2016 Remove redundant parenthesis from output
+//  02.10.2015 Add support for multiple properties
+//  24.04.2015 Initial release
+//
+//  Example Usage:
+//
+//  /* Single property */
+//  html {
+//    @include fluid-type(font-size, 320px, 1366px, 14px, 18px);
+//  }
+//
+//  /* Multiple properties with same values */
+//  h1 {
+//    @include fluid-type(padding-bottom padding-top, 20em, 70em, 2em, 4em);
+//  }
+// =========================================================================
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  & {
+    @each $property in $properties {
+      #{$property}: em($min-value);
+    }
+
+    @media screen and (min-width: $min-vw) {
+      @each $property in $properties {
+        #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+      }
+    }
+
+    @media screen and (min-width: $max-vw) {
+      @each $property in $properties {
+        #{$property}: $max-value;
+      }
+    }
+  }
+}
