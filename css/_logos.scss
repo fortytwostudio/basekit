@@ -1,7 +1,14 @@
-$siteLogo-width: 206px;
-$siteLogo-height: 46px;
+.logo {
+  a {
+    @include fit-media;
+    background-size: cover;
+  }
+}
 
 .site-logo {
+  $siteLogo-width: 206px;
+  $siteLogo-height: 46px;
+
   height: rem($siteLogo-height) / 2;
   position: relative;
   width: rem($siteLogo-width) / 2;
@@ -13,8 +20,16 @@ $siteLogo-height: 46px;
   }
 
   a {
-    @include fit-media;
     background-image: url("../imgs/logos/site-logo.svg");
-    background-size: cover;
+  }
+}
+
+.colophon-logo {
+  position: relative;
+  width: rem(56px); // 60px / 64px
+  height: rem(14px); // 15px / 16px
+
+  a {
+    background-image: url("../imgs/logos/colophon-logo.svg") ;
   }
 }
