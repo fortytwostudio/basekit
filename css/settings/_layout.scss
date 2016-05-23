@@ -71,10 +71,10 @@ $html-body-full-height: true;
 // additional top/bottom padding where necessary.
 $padding-spacer-css: true;
 $padding-spacer-name: pad;
-$padding-spacer-size: 60px;
-
-// Convert the padding spacer to % if fixed padding is causing trouble.
-$padding-spacer-is-percentage: true;
+$padding-spacer-breakpoint: hands;
+$padding-spacer-size-small: 30px;
+$padding-spacer-size-default: 60px;
+$padding-spacer-size-large: 120px;
 
 // Fine tune the position over utility class options.
 // Find this in core/utility.position-over.scss

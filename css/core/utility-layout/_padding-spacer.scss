@@ -2,89 +2,113 @@
 
   .#{$padding-spacer-name} {
 
-    $padding-spacer: null;
-
     // If percentage spacing is set in the compile options use %, otherwise
     // default to rem sizing
-    @if $padding-spacer-is-percentage {
-      $padding-spacer: strip-unit($padding-spacer-size) / $max-width * 100%;
-    } @else {
-      $padding-spacer: rem($padding-spacer-size);
-    }
-
     &,
     &-t {
-      padding-top: $padding-spacer!important;
+      padding-top: pct($padding-spacer-size-default, $max-width)!important;
     }
 
     &,
     &-b {
-      padding-bottom: $padding-spacer!important;
+      padding-bottom: pct($padding-spacer-size-default, $max-width)!important;
     }
 
     &-s {
       &,
       &-t {
-        padding-top: $padding-spacer / 2!important;
+        padding-top: pct($padding-spacer-size-small, $max-width)!important;
       }
 
       &,
       &-b {
-        padding-bottom: $padding-spacer / 2!important;
+        padding-bottom: pct($padding-spacer-size-small, $max-width)!important;
       }
     }
 
     &-l {
       &,
       &-t {
-        padding-top: $padding-spacer * 2!important;
+        padding-top: pct($padding-spacer-size-large, $max-width)!important;
       }
 
       &,
       &-b {
-        padding-bottom: $padding-spacer * 2!important;
+        padding-bottom: pct($padding-spacer-size-large, $max-width)!important;
       }
     }
 
     // Set max dimensions to prevent huge spaces at large screen sizes
-    @if $padding-spacer-is-percentage == true {
+    @include mq($until: $padding-spacer-breakpoint) {
+      &,
+      &-t {
+        padding-top: rem($padding-spacer-size-default / 2)!important;
+      }
 
-      @include mq(px($max-width)) {
+      &,
+      &-b {
+        padding-bottom: rem($padding-spacer-size-default / 2)!important;
+      }
 
+      &-s {
         &,
         &-t {
-          padding-top: rem($padding-spacer-size)!important;
+          padding-top: rem($padding-spacer-size-small / 2)!important;
         }
 
         &,
         &-b {
-          padding-bottom: rem($padding-spacer-size)!important;
+          padding-bottom: rem($padding-spacer-size-small / 2)!important;
+        }
+      }
+
+      &-l {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-large / 2)!important;
         }
 
-        &-s {
-          &,
-          &-t {
-            padding-top: rem($padding-spacer-size / 2)!important;
-          }
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-large / 2)!important;
+        }
+      }
+    }
 
-          &,
-          &-b {
-            padding-bottom: rem($padding-spacer-size / 2)!important;
-          }
+    // Set max dimensions to prevent huge spaces at large screen sizes
+    @include mq(px($max-width)) {
+      &,
+      &-t {
+        padding-top: rem($padding-spacer-size-default)!important;
+      }
+
+      &,
+      &-b {
+        padding-bottom: rem($padding-spacer-size-default)!important;
+      }
+
+      &-s {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-small)!important;
         }
 
-        &-l {
-          &,
-          &-t {
-            padding-top: rem($padding-spacer-size * 2)!important;
-          }
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-small)!important;
+        }
+      }
 
-          &,
-          &-b {
-            padding-bottom: rem($padding-spacer-size * 2)!important;
-          }
+      &-l {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-large)!important;
         }
 
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-large)!important;
+        }
       }
     }
   }
