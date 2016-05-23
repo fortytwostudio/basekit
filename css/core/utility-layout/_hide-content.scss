@@ -3,3 +3,17 @@
     @include hide()
   }
 }
+
+@if $js-hide {
+  .js {
+    .js-hide {
+      @include hide();
+    }
+  }
+
+  .no-js {
+    .no-js-hide {
+      @include hide();
+    }
+  }
+}

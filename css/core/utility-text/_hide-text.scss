@@ -3,3 +3,17 @@
     @include hide(text)
   }
 }
+
+@if $js-hide-text {
+  .js {
+    .js-hide-text {
+      @include hide();
+    }
+  }
+
+  .no-js {
+    .no-js-hide-text {
+      @include hide();
+    }
+  }
+}
