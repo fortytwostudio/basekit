@@ -1,3 +1,5 @@
+// https://github.com/sass-mq/sass-mq
+
 @charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
                   // See https://github.com/sass-mq/sass-mq/pull/10
 
@@ -16,7 +18,7 @@ $mq-base-font-size: 16px !default;
 /// @example scss
 ///  // old-ie.scss
 ///  $mq-responsive: false;
-///  @include 'main'; // @media queries in this file will be rasterized up to $mq-static-breakpoint
+///  @import 'main'; // @media queries in this file will be rasterized up to $mq-static-breakpoint
 ///                   // larger breakpoints will be ignored
 ///
 /// @type Boolean
@@ -51,7 +53,7 @@ $mq-breakpoints: (
 ///  // and fix the styles (e.g. layout) at tablet width
 ///  $mq-responsive: false;
 ///  $mq-static-breakpoint: tablet;
-///  @include 'main'; // @media queries in this file will be rasterized up to tablet
+///  @import 'main'; // @media queries in this file will be rasterized up to tablet
 ///                   // larger breakpoints will be ignored
 ///
 /// @type String
@@ -88,7 +90,7 @@ $mq-media-type: all !default;
 @function mq-px2em($px, $base-font-size: $mq-base-font-size) {
     @if unitless($px) {
         @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels.";
-        @return mq-px2em($px + 0px); // That may fail.
+        @return mq-px2em($px * 1px, $base-font-size);
     } @else if unit($px) == em {
         @return $px;
     }
@@ -156,7 +158,7 @@ $mq-media-type: all !default;
 ///      color: hotpink;
 ///    }
 ///    // Advanced use:
-///    $my-breakpoints: ( L: 900px, XL: 1200px );
+///    $my-breakpoints: (L: 900px, XL: 1200px);
 ///    @include mq(L, $breakpoints: $my-breakpoints, $static-breakpoint: L) {
 ///      color: hotpink;
 ///    }
@@ -197,8 +199,15 @@ $mq-media-type: all !default;
     @if $responsive == false {
         $static-breakpoint-width: mq-get-breakpoint-width($static-breakpoint, $breakpoints);
         $target-width: mq-px2em($static-breakpoint-width);
+
         // Output only rules that start at or span our target width
-        @if ($and == false and ($min-width <= $target-width) and (($until == false) or ($max-width >= $target-width))) {
+        @if (
+            $and == false
+            and $min-width <= $target-width
+            and (
+                $until == false or $max-width >= $target-width
+            )
+        ) {
             @content;
         }
     }
