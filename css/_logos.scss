@@ -6,17 +6,17 @@
 }
 
 .site-logo {
-  $siteLogo-width: 206px;
-  $siteLogo-height: 46px;
+  $site-logo-width: 206px;
+  $site-logo-height: 46px;
 
-  height: rem($siteLogo-height) / 2;
+  height: rem($site-logo-height) / 2;
   position: relative;
-  width: rem($siteLogo-width) / 2;
+  width: rem($site-logo-width) / 2;
 
   @include mq(palm) {
     height: 0;
-    padding-top: pct($siteLogo-height, $max-width);
-    width: pct($siteLogo-width, $max-width);
+    padding-top: pct($site-logo-height, $max-width);
+    width: pct($site-logo-width, $max-width);
   }
 
   a {
