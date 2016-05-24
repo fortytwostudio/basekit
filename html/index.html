@@ -54,6 +54,38 @@
 
   <body>
 
+    <section id="padding" class="site-container  pad  user-content  set-links">
+      <h3>Class Naming</h3>
+
+      <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
+
+      <p>Utility classes aim to be reuseable and single purpose, unlike BEM classes they should not have sub elements but they can have modifiers.</p>
+
+      <p>BEM classes are most likely to be used in unique project modules or components and not within the core CSS files. If a component of the sites lends well to the Block Element Modifier convention (such as tabbed content) then you're advised to use this.</p>
+
+      <code>
+        <pre>
+  .tabs {…}
+  .tabs__nav {…}
+  .tabs__nav-item {…}
+  .tabs__content {…}
+  .tabs__content--active {…}
+</pre>
+      </code>
+
+      <p>In brief, when creating classes take the following approach:</p>
+
+      <ol>
+        <li>Describe the <em>thing</em> you're creating or doing: <code>.site-logo</code></li>
+        <li>If the thing has different states do that via a modifier to the class: <code>.site-logo<span class="color-secondary">--inverted</span></code></li>
+        <li>If it has elements then make use of the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM method</a>.</li>
+        <li>Hyphenate words and names within classes. Don't use camelCase or under_scores (unless it's a BEM element of course)</li>
+        <li>Aim for single purposes utility classes first, BEM second, project specific last</li>
+        <li>Do not worry about using lots of classes in your HTML</li>
+        <li>Do not worry about describing your content using classes, this is the purpose of HTML</li>
+      </ol>
+    </section>
+
     <section id="padding" class="site-container  pad  set-links">
       <div class="pad  pad-s  bg-tertiary  margin-b  align-c">
         <p class="bg-white">Small Padding</p>
