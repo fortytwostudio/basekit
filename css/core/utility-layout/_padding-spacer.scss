@@ -6,35 +6,41 @@
     // default to rem sizing
     &,
     &-t {
-      padding-top: pct($padding-spacer-size-default, $max-width)!important;
+      padding-top: rem($padding-spacer-size-default / 1.25);
+      padding-top: vw($padding-spacer-size-default, $max-width);
     }
 
     &,
     &-b {
-      padding-bottom: pct($padding-spacer-size-default, $max-width)!important;
+      padding-bottom: rem($padding-spacer-size-default / 1.25);
+      padding-bottom: vw($padding-spacer-size-default, $max-width);
     }
 
     &-s {
       &,
       &-t {
-        padding-top: pct($padding-spacer-size-small, $max-width)!important;
+        padding-top: rem($padding-spacer-size-small / 1.5);
+        padding-top: vw($padding-spacer-size-small, $max-width);
       }
 
       &,
       &-b {
-        padding-bottom: pct($padding-spacer-size-small, $max-width)!important;
+        padding-bottom: rem($padding-spacer-size-small / 1.5);
+        padding-bottom: vw($padding-spacer-size-small, $max-width);
       }
     }
 
     &-l {
       &,
       &-t {
-        padding-top: pct($padding-spacer-size-large, $max-width)!important;
+        padding-top: rem($padding-spacer-size-large / 1.75);
+        padding-top: vw($padding-spacer-size-large, $max-width);
       }
 
       &,
       &-b {
-        padding-bottom: pct($padding-spacer-size-large, $max-width)!important;
+        padding-bottom: rem($padding-spacer-size-large / 1.75);
+        padding-bottom: vw($padding-spacer-size-large, $max-width);
       }
     }
 
@@ -42,35 +48,35 @@
     @include mq($until: $padding-spacer-breakpoint) {
       &,
       &-t {
-        padding-top: rem($padding-spacer-size-default / 2)!important;
+        padding-top: rem($padding-spacer-size-default / 2);
       }
 
       &,
       &-b {
-        padding-bottom: rem($padding-spacer-size-default / 2)!important;
+        padding-bottom: rem($padding-spacer-size-default / 2);
       }
 
       &-s {
         &,
         &-t {
-          padding-top: rem($padding-spacer-size-small / 2)!important;
+          padding-top: rem($padding-spacer-size-small / 2);
         }
 
         &,
         &-b {
-          padding-bottom: rem($padding-spacer-size-small / 2)!important;
+          padding-bottom: rem($padding-spacer-size-small / 2);
         }
       }
 
       &-l {
         &,
         &-t {
-          padding-top: rem($padding-spacer-size-large / 2)!important;
+          padding-top: rem($padding-spacer-size-large / 2);
         }
 
         &,
         &-b {
-          padding-bottom: rem($padding-spacer-size-large / 2)!important;
+          padding-bottom: rem($padding-spacer-size-large / 2);
         }
       }
     }
@@ -79,35 +85,35 @@
     @include mq(px($max-width)) {
       &,
       &-t {
-        padding-top: rem($padding-spacer-size-default)!important;
+        padding-top: rem($padding-spacer-size-default);
       }
 
       &,
       &-b {
-        padding-bottom: rem($padding-spacer-size-default)!important;
+        padding-bottom: rem($padding-spacer-size-default);
       }
 
       &-s {
         &,
         &-t {
-          padding-top: rem($padding-spacer-size-small)!important;
+          padding-top: rem($padding-spacer-size-small);
         }
 
         &,
         &-b {
-          padding-bottom: rem($padding-spacer-size-small)!important;
+          padding-bottom: rem($padding-spacer-size-small);
         }
       }
 
       &-l {
         &,
         &-t {
-          padding-top: rem($padding-spacer-size-large)!important;
+          padding-top: rem($padding-spacer-size-large);
         }
 
         &,
         &-b {
-          padding-bottom: rem($padding-spacer-size-large)!important;
+          padding-bottom: rem($padding-spacer-size-large);
         }
       }
     }
