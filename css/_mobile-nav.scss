@@ -1,153 +1,64 @@
 @if $nav-mobile {
 
-  // Disabled the toggler button by default, we don't want it on large screens.
-  .#{$nav-mobile-name}-toggle { display: none; }
+  // get rid of the field, we don't need to see it
+  .nav-toggler-input {
+    @include hide()
+  }
 
-  // Typically we only want the nav to be responsive at small screen sizes. In
-  // set.nav.scss you'll want to define when the MQ stops showing.
+  // get rid of the label on larger screens, we don't need to see it there
+  @include mq($nav-mobile-breakpoint) {
+    .nav-toggler-label {
+      @include hide()
+    }
+  }
+
   @include mq($until: $nav-mobile-breakpoint) {
-
-    // In set.nav.scss the class name is defined, make sure it matches the
-    // javascript 'navClass' option otherwise things won't work.
-    .#{$nav-mobile-name} {
-      .js-has-#{$nav-mobile-name} & {
-        @include hide()
-      }
-
-      .js-has-#{$nav-mobile-name}-active & {
-        // Remove clipping.
-        clip: auto;
-        @if $nav-mobile-anim-speed {
-          // Set the animate.css duration speed.
-          animation-duration: $nav-mobile-anim-speed;
-        }
-        // Fix the position to the viewport so it won't scroll.
-        position: fixed!important;
-        // Fit it to the viewport dimensions.
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        // Define the z-index via set.layout.scss
-        z-index: $z-mobile-nav;
-        // Override the hide CSS width and height.
-        width: 100%;
-        min-height: 100%;
-        margin: 0;
-        //  Use the set.nav.scss background color
-        background: $nav-mobile-background;
-      }
-
-      // Nav inner content wrapper, whether it's a UL or other content.
-      &__content {
-        // Setup some basic padding, I tend to give the bottom more padding to
-        // account for UI in mobile browsers.
-        padding: $nav-mobile-padding;
-        // Fit it within the overlay container.
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        // Make sure the height is definitely 100%.
-        height: 100%;
-        // Make sure users can scroll if the nav is taller than the container.
-        overflow-y: scroll!important;
-        // Make sure it has nice smooth scrolling on iOS.
-        -webkit-overflow-scrolling: touch!important;
-        overflow-scrolling: touch!important;
-      }
-    }
-
-
-
-    .#{$nav-mobile-name}-toggle {
-
-      display: block;
-      // Position at the top, we don't want this 'fixed' just yet.
-      position: absolute;
-      top: rem($margin + 0px);
-      right: rem($margin + 0px);
-      z-index: $z-mobile-nav-toggle;
-
-      // Define the toggler dimensions.
-      width: rem($nav-mobile-hit-area);
-      height: rem($nav-mobile-hit-area);
-      @if $nav-mobile-toggle-background {
-        background-color: $nav-mobile-toggle-background;
-      }
-
-      // Prevent wonkiness in iOS.
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
-      -webkit-touch-callout: none;
+    .nav-toggler-label {
+      // visual feedback for the user
+      cursor: pointer;
+      // prevent text selection
       user-select: none;
+      // add the hamburger icon as a background image
+      // I recommend using SVG but it doesn't have to be a data uri…
+      // in fact you're best not to
+      background: rgba(black, 0.05) url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2052%2052%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M2.6%2010h46.8c1.4%200%202.6-1.3%202.6-3s-1.2-3-2.6-3H2.6C1.2%204%200%205.3%200%207s1.2%203%202.6%203zm46.8%2013H2.6C1.2%2023%200%2024.3%200%2026s1.2%203%202.6%203h46.8c1.4%200%202.6-1.3%202.6-3s-1.2-3-2.6-3zm0%2019H2.6C1.2%2042%200%2043.3%200%2045s1.2%203%202.6%203h46.8c1.4%200%202.6-1.3%202.6-3s-1.2-3-2.6-3z%22%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+      background-size: 50%;
+      border-radius: rem(5px);
+      display: inline-block!important;
+      font-size: rem(22px);
+      padding: rem(22px);
+      @include hide(text);
+      transition: background-color $speed-normal ease-in-out;
 
-      .burger-bars {
-        position: absolute;
-        top: rem($nav-mobile-burger-bar-center);
-        width: rem($nav-mobile-hit-area);
-        height: rem($nav-mobile-burger-bar);
-        background-color: $nav-mobile-toggle-bar-bg;
-        transition: background-color $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay;
-        @if $nav-mobile-burger-bar-border-radius {
-          border-radius: $nav-mobile-burger-bar-border-radius;
-        }
-        // Hide text. Same as hide-text utility class.
-        @include hide(text);
+      &:hover,
+      &:focus {
+        background-color: rgba(black, 0.08);
+      }
 
-        &:before,
-        &:after {
-          content: "";
-          display: block;
-          position: absolute;
-          top: $nav-mobile-burger-bar * 2;
-          height: rem($nav-mobile-burger-bar);
-          width: 100%;
-          background-color: $nav-mobile-toggle-bar-bg;
-          transform-origin: 50% 50%;
-          transition:
-            top $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-in,
-            transform $nav-mobile-burger-bar-transition-speed ease-in;
-          @if $nav-mobile-burger-bar-border-radius {
-            border-radius: $nav-mobile-burger-bar-border-radius;
-          }
-        }
-        &:after {
-          top: -$nav-mobile-burger-bar * 2;
-        }
+      &:active {
+        background-color: white;
+      }
+
+      .nav-toggler-input:checked ~ & {
+        // the icon active state
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2052%2052%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M30.525%2026L48.627%207.898c1.25-1.25%201.25-3.276%200-4.525-1.25-1.25-3.275-1.25-4.525%200L26%2021.475%207.898%203.373c-1.25-1.25-3.276-1.25-4.525%200-1.25%201.25-1.25%203.275%200%204.525L21.475%2026%203.373%2044.102c-1.25%201.25-1.25%203.276%200%204.525%201.25%201.25%203.275%201.25%204.525%200L26%2030.525l18.102%2018.102c1.25%201.25%203.276%201.25%204.525%200%201.25-1.25%201.25-3.275%200-4.525L30.525%2026z%22%2F%3E%3C%2Fsvg%3E');
       }
     }
 
-    .js-has-#{$nav-mobile-name}-active {
+    .site-nav {
+      // hide the nav item and fade out by default
+      opacity: 0;
+      max-height: 0;
+      transition: opacity $speed-normal ease-out, max-height $speed-normal ease-out;
 
-      .#{$nav-mobile-name}-toggle {
-        // Fix the toggler 'hamburger' button in position while the nav is open.
-        position: fixed;
-
-        .burger-bars {
-          // We don't want the middle bar to be visible when the x is formed so
-          // make it invisible.
-          background-color: transparent;
-          transition: background-color $nav-mobile-burger-bar-transition-speed 0s;
-
-          &:before,
-          &:after {
-            transform: rotate(45deg);
-            top: 0;
-            transition:
-              top $nav-mobile-burger-bar-transition-speed ease-out,
-              transform $nav-mobile-burger-bar-transition-speed $nav-mobile-burger-bar-transition-delay ease-out;
-          }
-          &:after {
-            transform: rotate(-45deg);
-          }
-        }
-
-      }
-
-      // Prevent site body from scrolling when the nav is open.
-      body {
-        overflow: hidden;
+      .nav-toggler-input:checked ~ & {
+        // when the checkbox is checked, fade the opacity
+        // back to 1 and transition to the content height
+        // (max-height can be any safe range well over what
+        // the nav content could ever be)
+        max-height: 2000px;
+        opacity: 1;
+        transition: opacity $speed-slow ease-in, max-height $speed-slow ease-in;
       }
     }
 
