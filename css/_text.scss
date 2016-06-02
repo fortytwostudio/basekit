@@ -1,0 +1,55 @@
+@function vp($target, $context: $max-width, $dimension: vw) {
+  $vw-context: ($context*.01) * 1px;
+  @if $dimension == vw {
+    @return ($target/$vw-context) * 1vw;
+  }
+  @else {
+    @return ($target/$vw-context) * 1vh;
+  }
+}
+
+// Text and Font Styles
+// —————————————————————————————————————————————————————————————————————————————
+//
+.font {
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  // Instead of adding kerning to xl and xxl let's just utilise a class.
+  &--kern {
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+  }
+
+
+  // Small font size doesn't need to be fancy responsive, just a tweak is enough.
+  &--s {
+    font-size: rem(12px);
+
+    @include mq(lap) {
+      font-size: rem(14px);
+    }
+  }
+
+  &--m { @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px); }
+
+  &--l { @include fluid-type(font-size, 320px, $max-width + 0px, 22px, 26px); }
+
+  &--xl { @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 36px); }
+
+  &--hero { @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 70px); }
+}

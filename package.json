@@ -20,18 +20,17 @@
   },
   "homepage": "https://github.com/eq-design/basekit#readme",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.0.0",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-minify-html": "~1.0.4",
-    "gulp-minify-inline": "^0.1.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
     "gulp-parker": "^0.1.4",
     "gulp-sass": "^2.1.0",
-    "gulp-size": "~2.0.0",
+    "gulp-size": "~2.1.0",
     "gulp-svg-symbols": "^1.0.0",
     "gulp-uglify": "^1.4.2",
-    "imagemin-pngquant": "^4.2.0"
+    "imagemin-pngquant": "^5.0.0"
   }
 }

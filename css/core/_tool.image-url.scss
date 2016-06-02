@@ -1,5 +1,0 @@
-@function image-url($input) {
-
-  @return url(unquote(#{$image-url}#{$input}));
-
-}

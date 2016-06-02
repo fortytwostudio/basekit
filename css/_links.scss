@@ -1,0 +1,50 @@
+// Link Styling Utility
+// —————————————————————————————————————————————————————————————————————————————
+// Links in BaseKit are unstyled by default, this utility class allows you
+// to scope where you want links to be styled via the HTML. This helps to
+// avoid conficts (e.g. nav links vs paragraph links) and specificity problems
+// brought on by the need to unstyle previous styles due to context.
+
+.set-links {
+
+  // Define the primary link style, this is likely to be applied to blocks of
+  // user content (i.e. content from the CMS) rather than website UI.
+  a {
+    color: $primary;
+    // By default a simple transition is applied to link states.
+    transition: all $speed-slow ease-in-out;
+
+    &:focus,
+    &:hover {
+      color: $secondary;
+      transition-duration: $speed-normal;
+    }
+  }
+
+  // Define an alternative link style.
+  &--inverted {
+    a {
+      color: $secondary;
+
+      &:focus,
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  // You can add as many modifiers as required, this contrasted modifier might
+  // be useful on a dark background. You may also add a --nav modifier for
+  // styling navigation links.
+  &--contrasted {
+    a {
+      color: white;
+
+      &:focus,
+      &:hover {
+        color: $grey-dark;
+      }
+    }
+  }
+
+}

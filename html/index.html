@@ -6,49 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+    <link rel="alternate" href="http://www." hreflang="en-gb">
 
     <link rel="stylesheet" href="/css/basekit.css">
     <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
 
-    <title>basekit</title>
-    <meta name="description" content="a frontend starter kit from eq design">
-    <meta name="apple-mobile-web-app-title" content="basekit">
+    <!-- Prefetch DNS for external assets -->
+    <link rel="dns-prefetch" href="//fast.fonts.net">
+    <link rel="dns-prefetch" href="//cloud.typography.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+
+    <title>BaseKit</title>
+    <meta name="description" content="a frontend starter kit from FortyTwo Studio">
+
     <!--
       ICONS:
       - Go to: http://realfavicongenerator.net
       - Generate icons and put the code here (see below example).
-      - Put images in the images/device-icons/ directory.
+      - Put images in the imgs/web-icons/ directory.
     -->
-    <link rel="apple-touch-icon" sizes="57x57" href="imgs/web-icons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="imgs/web-icons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="imgs/web-icons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="imgs/web-icons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="imgs/web-icons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="imgs/web-icons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="imgs/web-icons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="imgs/web-icons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="imgs/web-icons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="imgs/web-icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="imgs/web-icons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="imgs/web-icons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="imgs/web-icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="imgs/web-icons/manifest.json">
-    <link rel="shortcut icon" href="imgs/web-icons/favicon.ico">
-    <meta name="apple-mobile-web-app-title" content="basekit">
-    <meta name="application-name" content="basekit">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="imgs/web-icons/mstile-144x144.png">
-    <meta name="msapplication-config" content="imgs/web-icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
 
     <!--
-
     OPEN GRAPH / TWITTER CARD:
     - Update the following meta tags and replace the image
-
     -->
     <meta property="og:title" content="Basis">
-    <meta property="og:description" content="Basis is a full featured starter kit from EQ Design">
+    <meta property="og:description" content="Basis is a full featured starter kit from FortyTwo Studio">
     <meta property="og:image" content="http://og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -60,454 +45,592 @@
     <meta name="twitter:creator" content="@">
 
     <!--
-
     GOOGLE ANALYTICS:
-    - Uncomment and add your analytics ID below.
+    - Add your analytics ID here.
     - Or remove the below code and add what Google gives you.
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*newDate();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-XXXXXXXX-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-
     -->
 
   </head>
 
   <body>
 
-    <div class="site-container  pad">
-
-      <header>
-        <h1 class="hide">basekit</h1>
-        <svg class="basekit  animated  bounceIn" role="img">
-          <use xlink:href="/imgs/svg/svg-symbols.svg#basekit" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-
-        <nav class="site-nav  animated" id="js-rnav">
-          <div class="site-nav__content  rnav__content">
-            <h1 class="hide">Main Navigation</h1>
-
-            <ul class="nav-links  nav  nav--block  pad--bottom">
-              <li class="nav-links__active"><a href="/">Home</a></li>
-              <li><a href="/">Services</a></li>
-              <li><a href="/">Portfolio</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Technology</a></li>
-              <li><a href="/">Culture</a></li>
-              <li><a href="/">Contact</a></li>
-              <li><a href="/">Client Login</a></li>
-              <li><a href="/">EQ design</a></li>
-            </ul>
-
-            <div class="user-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-
-      <picture class="pad">
-        <!--[if IE 9]><video style="display:none;"><![endif]-->
-        <source media="(min-width: 1024px)" srcset="/imgs/placeholders/hero--deep.png">
-        <source media="(min-width: 600px)" srcset="/imgs/placeholders/hero.png">
-        <source media="(min-width: 320px)" srcset="/imgs/placeholders/hero--narrow.png">
-        <!--[if IE 9]></video><![endif]-->
-        <img srcset="/imgs/placeholders/hero.png" alt="Responsive hero example">
-      </picture>
-
-
-
-
-      <section class="pad--large--bottom" id="fonts">
-        <div data-bk="gtr:large" class="bg-white  user-content  set-links">
-
-          <p>basekit is a collection of front-end files and techniques used to build EQ Design web projects as of mid-late 2015.</p>
-
-          <p>Before continuing, you should have a sound understanding of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">CSS specificity</a>, <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">Sass syntax</a>, and <a href="http://cssguidelin.es/#bem-like-naming">BEM-like class naming</a>.</p>
-
-          <p>You would also benefit from an understanding of <a href="http://davidtheclark.com/on-utility-classes/">Utility Classes</a> and the <a href="https://www.youtube.com/watch?v=1OKZOV-iLj4">ITCSS methodology</a> that I aim to follow.</p>
-
-          <h2 class="font--m  margin--tb">Coding Style</h2>
-
-          <p>Do not break these rules:</p>
-
-          <ul>
-            <li>Use soft-tabs with a two space indent.</li>
-            <li>Put a space after <code>:</code> in Sass/CSS property declarations.</li>
-            <li>Put line breaks between Sass/CSS rulesets.</li>
-            <li>Always nest Sass selectors.</li>
-            <li>Put spaces before <code>{</code> in rule declarations.</li>
-            <li>Place closing braces <code>}</code> of declaration blocks on a new line.</li>
-            <li>Use BEM-like class naming for modules/components.</li>
-            <li>Use HEX or rgba colours.</li>
-            <li>Use <code>//</code> for Sass comment blocks (instead of <code>/* */</code>).</li>
-            <li>Do not use zero value units (<code>margin: 0;</code> not <code>margin: 0px;</code>).</li>
-            <li>Be explicit, avoid unnecessary shorthand declarations (write <code>margin-bottom: 20px;</code> instead of <code>margin: 0 0 20px;</code>).</li>
-          </ul>
-
-          <h2 class="font--m margin--tb">Icons</h2>
-
-          <svg class="eq-design" role="img">
-            <use xlink:href="/imgs/svg/svg-symbols.svg#eq-design" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-
-          <svg class="facebook" role="img">
-            <use xlink:href="/imgs/svg/svg-symbols.svg#Facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-
-          <svg class="twitter" role="img">
-            <use xlink:href="/imgs/svg/svg-symbols.svg#Twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-
-          <svg class="linkedin" role="img">
-            <use xlink:href="/imgs/svg/svg-symbols.svg#Linkedin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-
-          <svg class="google-plus" role="img">
-            <use xlink:href="/imgs/svg/svg-symbols.svg#Google-Plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </div>
-      </section>
-
-
-
-      <section class="pad--large" id="fonts">
-        <h1 class="font--xxl  margin--b  color-primary">Grid system</h1>
-
-        <div data-bk="gtr:0  lap:7" class="user-content  pad--small--bottom">
-          <div data-bk class="bg-white">
-            <p>The <i>basekit</i> grid system or scaffolding uses the <code>data-bk</code> attribute as opposed to more traditional classes. This allows style and layout structure to remain separate from each other.</p>
-
-            <p>All column widths can be defined at each breakpoint defined in the <code>$mq-breakpoints</code> variable, this also includes up <code>to:</code> each breakpoint.</p>
-          </div>
-        </div>
-
-
-        <ul data-bk="middle  gtr:0" class="color-white  bg-white">
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:t" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:t&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:tr" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:tr&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:tb" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:tb&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:tl" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr%3Atl&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:b" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:b&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:bl" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:bl&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:rl" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:rl&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:rb" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:rb&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:r" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:r&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:l" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:l&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:trb" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:trb&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:rbl" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:rbl&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:tbl" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:tbl&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:trl" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:trl&w=600&h=400" alt></li>
-
-          <br>
-
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:large" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:large&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=(default)&w=600&h=400" alt></li>
-          <li data-bk="hands:3"><img class="bg-primary" data-bk="gtr:small" src="https://placeholdit.imgix.net/~text?txtsize=75&txt=gtr:small&w=600&h=400" alt></li>
-        </ul>
-
-        <ul class="color-white  pad">
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-
-          <li data-bk="gtr:large  lap:2" class="bg-black" style="outline: 1px solid whitesmoke">2</li>
-          <li data-bk="gtr:large  lap:2" class="bg-black" style="outline: 1px solid whitesmoke">2</li>
-          <li data-bk="gtr:large  lap:2" class="bg-black" style="outline: 1px solid whitesmoke">2</li>
-          <li data-bk="gtr:large  lap:2" class="bg-black" style="outline: 1px solid whitesmoke">2</li>
-          <li data-bk="gtr:large  lap:2" class="bg-black" style="outline: 1px solid whitesmoke">2</li>
-          <li data-bk="gtr:large  lap:2" class="bg-black" style="outline: 1px solid whitesmoke">2</li>
-
-          <li data-bk="gtr:large  lap:3" class="bg-black" style="outline: 1px solid whitesmoke">3</li>
-          <li data-bk="gtr:large  lap:3" class="bg-black" style="outline: 1px solid whitesmoke">3</li>
-          <li data-bk="gtr:large  lap:3" class="bg-black" style="outline: 1px solid whitesmoke">3</li>
-          <li data-bk="gtr:large  lap:3" class="bg-black" style="outline: 1px solid whitesmoke">3</li>
-
-          <li data-bk="gtr:large  lap:4" class="bg-black" style="outline: 1px solid whitesmoke">4</li>
-          <li data-bk="gtr:large  lap:4" class="bg-black" style="outline: 1px solid whitesmoke">4</li>
-          <li data-bk="gtr:large  lap:4" class="bg-black" style="outline: 1px solid whitesmoke">4</li>
-
-          <li data-bk="gtr:large  lap:6" class="bg-black" style="outline: 1px solid whitesmoke">6</li>
-          <li data-bk="gtr:large  lap:6" class="bg-black" style="outline: 1px solid whitesmoke">6</li>
-
-          <li data-bk="gtr:large  lap:7" class="bg-black" style="outline: 1px solid whitesmoke">7</li>
-          <li data-bk="gtr:large  lap:5" class="bg-black" style="outline: 1px solid whitesmoke">5</li>
-
-          <li data-bk="gtr:large  lap:12" class="bg-black" style="outline: 1px solid whitesmoke">12</li>
-
-          <li data-bk="gtr:large  lap:11" class="bg-black" style="outline: 1px solid whitesmoke">11</li>
-
-          <li data-bk="gtr:large  lap:10" class="bg-black" style="outline: 1px solid whitesmoke">10</li>
-
-          <li data-bk="gtr:large  lap:9" class="bg-black" style="outline: 1px solid whitesmoke">9</li>
-
-          <li data-bk="gtr:large  lap:8" class="bg-black" style="outline: 1px solid whitesmoke">8</li>
-        </ul>
-
-        <h2 class="font--m">Indenting:</h2>
-
-        <ul class="color-white  pad--small--top">
-          <li data-bk="gtr:large  lap:1" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:1  lap:pr:2" class="bg-black" style="outline: 1px solid whitesmoke">1</li>
-          <li data-bk="gtr:large  lap:4  lap:pr:4" class="bg-black" style="outline: 1px solid whitesmoke">4</li>
-        </ul>
-
-        <ul class="color-white  pad--small--top">
-          <li data-bk="gtr:large  lap:4  lap:pr:3" class="bg-black" style="outline: 1px solid whitesmoke">push right</li>
-        </ul>
-      </section>
-
-
-
-
-
-
-      <section class="pad--large" id="fonts">
-        <h1 class="font--xxl  margin--b  color-primary">Font sizing</h1>
-
-        <div data-bk="gtr:0  lap:7" class="user-content  pad--small--bottom">
-          <div data-bk class="bg-white">
-            <p>The font utility defines a standard set of classes to handle various font styles but primarily responsive font sizing. The examples below demonstrate fixed small and default font sizes alongside three font sizes that scale with the browser width until it reaches a specified min-width.</p>
-          </div>
-        </div>
-
-        <h2 class="font--s  margin--b">Font sizing - small<br> line-height and kerning test LYoWAT</h2>
-
-        <h2 class="margin--b">Font sizing - default<br> line-height and kerning test LYoWAT</h2>
-
-        <h2 class="font--l  margin--b">Font sizing - <span class="font--normal">large</span><br> line-height and kerning test LYoWAT</h1>
-
-        <h2 class="font--xl  margin--b">Font sizing - <span class="font--normal">extra-large</span><br> line-height and kerning test LYoWAT</h2>
-
-        <h2 class="font--xxl">Font sizing - <span class="font--normal">extra-extra-large</span><br> line-height and kerning test LYoWAT</h2>
-      </section>
-
-
-
-
-
-      <section class="pad--large" id="link">
-        <h1 class="font--xxl  margin--b  color-primary">Links &amp; buttons</h1>
-
-        <div data-bk="gtr:0  lap:7" class="user-content  pad--small--bottom">
-          <div data-bk class="bg-white">
-            <p>The font utility defines a standard set of classes to handle various font styles but primarily responsive font sizing. The examples below demonstrate fixed small and default font sizes alongside three font sizes that scale with the browser width until it reaches a specified min-width.</p>
-          </div>
-        </div>
-
-        <div class="user-content  set-links">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. <a href="#">Sed dapibus est id enim facilisis</a>, at posuere turpis adipiscing. Quisque sit amet dui dui.</p>
-
-          <p>Duis rhoncus velit nec est condimentum feugiat. Donec aliquam augue nec gravida lobortis. <a class="btn  btn--natural" href="#">Nunc arcu mi</a>, pretium quis dolor id, iaculis euismod ligula. Donec tincidunt gravida lacus eget lacinia.</p>
-        </div>
-
-        <ul class="nav  nav--block  set-links--nav">
+    <section id="responsive-nav" class="site-container  pad">
+      <input id="menu" type="checkbox" class="nav-toggler-input">
+      <label role="button" for="menu" class="nav-toggler-label">Menu</label>
+
+      <div class="site-nav" role="navigation" aria-label="Site main navigation">
+        <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Studio</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Events</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+      </div>
+    </section>
 
-        <div class="user-content  set-links">
-          <p><a href="#" class="btn">Button</a></p>
-          <p><a href="#" class="btn  btn--medium">Button</a></p>
-          <p><a href="#" class="btn  btn--large">Button</a></p>
-          <p><a href="#" class="btn  btn--natural">Button</a></p>
-          <p><a href="#" class="btn  btn--fill">Button</a></p>
+    <section id="padding" class="site-container  pad  user-content  set-links">
+      <h3>Class Naming</h3>
+
+      <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
+
+      <p>Utility classes aim to be reuseable and single purpose, unlike BEM classes they should not have sub elements but they can have modifiers.</p>
+
+      <p>BEM classes are most likely to be used in unique project modules or components and not within the core CSS files. If a component of the sites lends well to the Block Element Modifier convention (such as tabbed content) then you're advised to use this.</p>
+
+      <code>
+        <pre>
+  .tabs {…}
+  .tabs__nav {…}
+  .tabs__nav-item {…}
+  .tabs__content {…}
+  .tabs__content--active {…}
+</pre>
+      </code>
+
+      <p>In brief, when creating classes take the following approach:</p>
+
+      <ol>
+        <li>Describe the <em>thing</em> you're creating or doing: <code>.site-logo</code></li>
+        <li>If the thing has different states do that via a modifier to the class: <code>.site-logo<span class="color-secondary">--inverted</span></code></li>
+        <li>If it has elements then make use of the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM method</a>.</li>
+        <li>Hyphenate words and names within classes. Don't use camelCase or under_scores (unless it's a BEM element of course)</li>
+        <li>Aim for single purposes utility classes first, BEM second, project specific last</li>
+        <li>Do not worry about using lots of classes in your HTML</li>
+        <li>Do not worry about describing your content using classes, this is the purpose of HTML</li>
+      </ol>
+    </section>
+
+    <section id="padding" class="site-container  pad  set-links  clear">
+      <div class="pad  pad-s  bg-tertiary  margin-b  align-c">
+        <p class="bg-white">Small Padding</p>
+      </div>
+      <div class="pad  bg-tertiary  margin-b  align-c">
+        <p class="bg-white">Default Padding</p>
+      </div>
+      <div class="pad  pad-l  bg-tertiary  margin-b  align-c">
+        <p class="bg-white">Large Padding</p>
+      </div>
+
+      <p>Padding classes can be mixed up to create various configuations, for example:</p>
+      <ul>
+        <li class="margin-t"><code>pad-b</code> simply adds bottom padding</li>
+        <li class="margin-t"><code>pad-s-t</code> adds small top padding</li>
+        <li class="margin-t"><code>pad  pad-s-b</code> adds normal padding then changes the bottom padding to the small size</li>
+        <li class="margin-t"><code>pad-s  pad-l-b</code>small top and large bottom padding</li>
+        <li class="margin-t">And so on.</li>
+      </ul>
+
+      <div class="user-content  pad-t  pad-s-b">
+        <h3>Examples within containers</h3>
+      </div>
+
+      <div style="float:left; width: 33.3333333333%">
+        <div class="pad  pad-s  bg-tertiary  margin-b  align-c">
+          <p class="bg-white">Small Padding</p>
         </div>
-      </section>
+      </div>
+      <div style="float:left; width: 33.3333333333%">
+        <div class="pad  bg-tertiary  margin-b  align-c">
+          <p class="bg-white">Default Padding</p>
+        </div>
+      </div>
+      <div style="float:left; width: 33.3333333333%">
+        <div class="pad  pad-l  bg-tertiary  margin-b  align-c">
+          <p class="bg-white">Large Padding</p>
+        </div>
+      </div>
+    </section>
 
 
 
-      <section class="pad--large" id="padding">
-        <h1 class="font--xxl  margin--b  color-primary">Padding spacer</h1>
+    <section id="form" class="site-container  pad  user-content  set-links">
+      <h3 class="font--l  margin-b">Full width container breaking out of site container</h3>
 
-        <div data-bk="gtr:0  lap:7" class="user-content  pad--small--bottom">
-          <div data-bk class="bg-white">
-            <p>The padding (spacer) class is used to space out blocks of content across the x-axis. This class will over-ride the <i>basekit</i> grid padding.</p>
-          </div>
+      <div class="browser-width">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=full&w=1280&h=300" alt="">
+      </div>
+    </section>
+
+
+
+    <section id="form" class="site-container  pad  user-content  set-links">
+      <h3 class="font--l">Example Form</h3>
+
+      <p>Fields marked with <em>*</em> are required.</p>
+
+      <form class="form" id="enquiry-form" method="post">
+
+        <div class="margin-tb">
+          <label class="form__label" for="enquiry-nature">Nature of enquiry <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formNatureOfEnquiry]" id="enquiry-nature">
+            <option>Request an appointment</option>
+            <option>Find out more about our services</option>
+            <option>Vacancy enquiry</option>
+            <option>Make a complaint</option>
+            <option>Other</option>
+          </select>
         </div>
 
-        <div class="align--center">
-
-          <h2 class="font--l  align--left">Default</h2>
-          <div class="pad  bg-secondary  margin--b"><code>Default top/bottom padding</code></div>
-
-
-          <h2 class="afont--l  lign--left">Small</h2>
-          <div class="pad--small  bg-secondary margin--b"><code>small</code></div>
-
-          <div class="pad--small--bottom  bg-secondary  margin--b"><code>small bottom</code></div>
-
-          <div class="pad--small--top  bg-secondary  margin--b"><code>small top</code></div>
-
-          <div class="pad  pad--small--top  bg-secondary  margin--b"><code>small top + normal bottom</code></div>
-
-          <div class="pad  pad--small--bottom  bg-secondary  margin--b"><code>small bottom + normal top</code></div>
-
-          <div class="pad--large--bottom  pad--small--top  bg-secondary  margin--b"><code>small top + large bottom</code></div>
-
-          <div class="pad--large--top  pad--small--bottom  bg-secondary  margin--b"><code>small bottom + large top</code></div>
-
-
-          <h2 class="font--l  align--left">Large</h2>
-          <div class="pad--large  bg-secondary margin--b"><code>large</code></div>
-
-          <div class="pad--large--bottom  bg-secondary  margin--b"><code>large bottom</code></div>
-
-          <div class="pad--large--top  bg-secondary  margin--b"><code>large top</code></div>
-
-          <div class="pad  pad--large--top  bg-secondary  margin--b"><code>large top + normal bottom</code></div>
-
-          <div class="pad  pad--large--bottom  bg-secondary  margin--b"><code>large bottom + normal top</code></div>
-
-          <div class="pad--small--bottom  pad--large--top  bg-secondary  margin--b"><code>large top + small bottom</code></div>
-
-          <div class="pad--small--top  pad--large--bottom  bg-secondary  margin--b"><code>large bottom + small top</code></div>
+        <div class="margin-tb">
+          <label class="form__label" for="name">Name <span class="form__required">*</span></label>
+          <input class="form__text" type="text" id="name" name="fields[formName]" aria-required="true" required>
         </div>
 
-        <div data-bk="gtr:0  lap:7" class="pad--small--top  pad--large--bottom">
-          <div data-bk class="bg-white">
-            <h2 class="font--m  margin--b">Additional options include:</h2>
-
-            <ul class="list--bulleted">
-              <li><code>pad--small--bottom</code></li>
-              <li><code>pad--large--bottom</code></li>
-              <li><code>pad--small--top</code></li>
-              <li><code>pad--large--top</code></li>
-              <li>Classes can be combined, e.g. <code>pad--top  pad--large--bottom</code> will result in a normal top padding space and a larger bottom padding.</li>
-            </ul>
-          </div>
+        <div class="margin-tb">
+          <label class="form__label" for="email">Email Address <span class="form__required">*</span></label>
+          <input class="form__text" id="email" name="fields[formEmail]" type="email" placeholder="Enter a valid email address" aria-required="true" required>
         </div>
-      </section>
 
+        <div class="margin-tb">
+          <label class="form__label" for="tel">Telephone <span class="form__required">*</span></label>
+          <input class="form__text" id="tel" name="fields[formTelephone]" type="tel" aria-required="true" required>
+        </div>
 
-      <section class="pad--large--bottom" id="fonts">
-        <h1 class="font--xxl  margin--b  color-primary">Error</h1>
+        <div class="margin-tb">
+          <label class="form__label" for="person-dob">Date of Birth</label>
+          <input class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy"  aria-required="false">
+        </div>
 
-        <form  id="enquiry-form" method="post" action="">
+        <div class="margin-tb">
+          <label for="fields[formExistingCustomer]">Already a customer?</label>
+
           <div>
-            <label for="name">Name <span class="font--s">required</span></label>
-            <input class="form__input" id="name" name="name" data-msg-required="Please enter your full name" data-rule-required="true" type="text">
+            <input class="form__radio  form--pop" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label for="irb1">Yes</label>
           </div>
-        </form>
-
-        <p class="alert">Please complete this field correctly.</p>
-      </section>
-
-
-
-      <section class="pad--large--bottom" id="fonts">
-        <h1 class="font--xxl  margin--b  color-primary">Image Optimisation</h1>
-
-        <div data-bk="gtr:0  lap:7" class="user-content  pad--small--bottom">
-          <div data-bk class="bg-white  set-links">
-            <p>I use <a href="http://www.effectmatrix.com/mac-appstore/Lossless-Photo-Squeezer.htm">Lossless Photo Squeezer</a> to optimise images, <a href="https://imageoptim.com/">ImageOptim</a> is also an option. Further optimisation for PNG images is performed by <a href="http://pngmini.com/">ImageAlpha</a>.</p>
-
-            <p>Images should <em>always</em> be optimised before uploading to a site.</p>
-
-            <p>As you will see in the examples below, an original image can be reduced by as much as 83% (sometimes more) without discernible loss of visual quality. Performance gains from optimisation like this should be considered critical to all websites.</p>
+          <div>
+            <input class="form__radio  form--pop" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label for="irb2">No</label>
           </div>
         </div>
 
-        <style>
-          .img-optims { max-width: 800px }
-          .img-optims__title { margin-bottom: 10px }
-          .img-optims__item:not(:last-child) { margin-bottom: 50px }
-        </style>
+        <div class="margin-tb">
+          <label class="form__label" for="branch-of-interest">Branch of Interest <span class="form__required">*</span></label>
 
-        <ul class="img-optims  user-content">
-          <li class="img-optims__item">
-            <h2 class="img-optims__title">Original unoptimised image at 1600px wide resized in browser to 800px.</h2>
-            <img src="imgs/placeholders/optim-example-original.jpg" alt="optim example original">
-            <p class="alert  alert--ib  brad"><strong>1MB</strong></p>
-          </li>
-          <li class="img-optims__item">
-            <h2 class="img-optims__title">Original optimised image at 1600px wide resized in browser to 800px.</h2>
-            <img src="imgs/placeholders/optim-example-optimised.jpg" alt="optim example optimised">
-            <p class="alert  alert--ib  brad"><strong>955KB</strong></p>
-          </li>
-          <li class="img-optims__item">
-            <h2 class="img-optims__title">Optimised image resized to 800px wide and saved at 85% jpg quality.</h2>
-            <img src="imgs/placeholders/optim-example-800-web-85.jpg" alt="optim example 800 web 85">
-            <p class="alert  alert--neutral  alert--ib  brad"><strong>193KB</strong></p>
-          </li>
-          <li class="img-optims__item">
-            <h2 class="img-optims__title">Optimised image at 1600px wide resized in browser to 800px and saved at 20% jpg quality.</h2>
-            <img src="imgs/placeholders/optim-example-optimised-web-20.jpg" alt="optim example optimised web 20">
-            <p class="alert  alert--positive  alert--ib  brad"><strong>167KB</strong></p>
-          </li>
-        </ul>
-      </section>
+          <select class="form__select" name="fields[formBranchOfInterest]" id="branch-of-interest" aria-required="true" required>
+            <option disabled selected>Please select a branch</option>
+
+            <optgroup label="Aberdeen">
+              <option value="Belmont Street">Belmont Street</option>
+              <option value="Dyce">Dyce</option>
+              <option value="Trinity Centre">Trinity Centre</option>
+            </optgroup>
+            <optgroup label="Angus">
+              <option value="Arbroath">Arbroath</option>
+              <option value="Forfar">Forfar</option>
+              <option value="Kirriemuir">Kirriemuir</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="enquiry">Enquiry <span class="form__required">*</span></label>
+
+          <textarea class="form__text  form__text--area" id="enquiry" name="fields[formEnquiry]" aria-required="true" required></textarea>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="appointment-type">Appointment type</label>
+          <select class="form__select" name="fields[formAppointmentType]" id="appointment-type"  aria-required="false">
+            <option>Eye exam</option>
+            <option>Contact lens fitting</option>
+            <option>Check-up</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
+
+          <select class="form__select" name="fields[formAppointmentTime]" id="appointment-time" aria-required="true" required>
+            <option disabled selected>Time of day</option>
+            <option>9am – 12pm</option>
+            <option>12pm – 3pm</option>
+            <option>3pm – 6pm</option>
+          </select>
+        </div>
+
+        <divclass="margin-tb  set-links">
+          <input class="form__check  form--spin" type="checkbox" id="terms-option" name="fields[formTerms][]" value="terms" aria-required="true" required>
+
+          <label for="terms-option">
+            I agree with the Terms &amp; Conditions <span class="form__required">*</span>
+          </label>
+
+          &nbsp;<span class="font--s  set-links--muted"><a href="/terms-privacy" target="_blank">(view)</a></span></div>
+
+        <div class="margin-tb">
+          <button class="form__btn  btn" type="submit" name="submit">Send</button>
+          <button disabled class="form__btn  btn" type="submit" name="submit">Disabled</button>
+        </div>
+
+
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="appointment-time">Preferred appointment time <span class="form__required">*</span></label>
+
+          <select disabled class="form__select" name="fields[formAppointmentTime]" id="appointment-time">
+            <option disabled selected>Time of day</option>
+            <option>9am – 12pm</option>
+            <option>12pm – 3pm</option>
+            <option>3pm – 6pm</option>
+          </select>
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="tel">Telephone <span class="form__required">*</span></label>
+          <input disabled class="form__text" id="tel" name="fields[formTelephone]" type="tel">
+        </div>
+
+        <div class="margin-tb">
+          <label class="form__label  form__label--disabled" for="person-dob">Date of Birth</label>
+          <input disabled class="form__text" type="date" name="fields[formDOB]" id="person-dob" placeholder="dd/mm/yyyy">
+        </div>
+
+        <div class="margin-tb">
+          <label for="fields[formExistingCustomer]">Already a customer?</label>
+
+          <div>
+            <input disabled class="form__radio  form--pop" type="radio" id="irb1" name="fields[formExistingCustomer]" value="yes">
+            <label for="irb1">Yes</label>
+          </div>
+          <div>
+            <input disabled class="form__radio  form--pop" type="radio" id="irb2" name="fields[formExistingCustomer]" value="no">
+            <label for="irb2">No</label>
+          </div>
+        </div>
+      </form>
+    </section>
+
+
+    <section id="user-content" class="site-container  pad  user-content  set-links">
+      <h3>User Content Styling</h3>
+
+      <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
+
+      <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
+
+      <p>This is content output from the <strong>Body Text field</strong>, compared to the above the text is normal size and again this field is entirely optional.</p>
+
+      <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
+
+      <h3>This is an example content heading</h3>
+
+      <ul>
+        <li>Nulla facilisi potenti
+          <ol>
+            <li>Mattis posuere habitant dapibus</li>
+            <li>Congue natoque blandit mattis rhoncus</li>
+            <li>Vestibulum aptent ultrices</li>
+          </ol>
+        </li>
+        <li>Etiam ac tellus eget ante</li>
+        <li class="user-content">
+          <p>
+            Elit platea aliquam odio faucibus sociosqu vestibulum aptent ultrices, augue tempor placerat neque. Id nulla nec hac auctor curabitur nostra accumsan est donec fermentum curabitur!
+          </p>
+
+          <p>
+            Quis commodo curae; congue natoque blandit mattis rhoncus eleifend fermentum ridiculus per conubia! Pellentesque rutrum magnis varius. Iaculis risus sapien neque fermentum lacinia dui cum elementum molestie litora laoreet.
+          </p>
+
+          <p>
+            Mattis posuere habitant dapibus sollicitudin tempus tempor facilisis congue libero!
+          </p>
+        </li>
+        <li>Tristique volutpat</li>
+      </ul>
+
+      <p>You can also format <em>ordered</em> lists:</p>
+
+      <ol>
+        <li>Nulla facilisi potenti</li>
+        <li class="user-content">Maecenas nec ornare massa
+          <ul>
+            <li>Mattis posuere habitant dapibus</li>
+            <li>Congue natoque blandit mattis rhoncus</li>
+            <li>Vestibulum aptent ultrices</li>
+          </ul>
+        </li>
+        <li>Etiam ac tellus eget ante</li>
+        <li>Tristique volutpat</li>
+      </ol>
+    </section>
+
+
+
+
+
+
+    <section id="logos" class="site-container  pad">
+      <p class="margin-tb">Main site logo:</p>
+      <h1 class="logo  site-logo">
+        <a class="hide-text" href="/" title="Home Page">BaseKit</a>
+      </h1>
+
+      <p class="margin-tb">Footer Logo:</p>
+
+      <div class="logo  colophon-logo">
+        <a class="hide-text" href="http://www.fortytwo.studio" title="FortyTwo Studio">
+          Design and development by FortyTwo Studio
+        </a>
+      </div>
+    </section>
+
+    <section id="tables" class="site-container  pad">
+      <h2 class="font--l">Tables</h2>
+
+      <table>
+        <caption>Jimi Hendrix - albums</caption>
+        <thead>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <th>Album</th>
+            <th>Year</th>
+            <th>Price</th>
+          </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+            <td>Are You Experienced</td>
+            <td>1967</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Axis: Bold as Love</td>
+            <td>1967</td>
+            <td>$12.00</td>
+          </tr>
+          <tr>
+            <td>Electric Ladyland</td>
+            <td>1968</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Band of Gypsys</td>
+            <td>1970</td>
+            <td>$12.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="5">Roller Reamer Data</th>
+            <th colspan="4">String or nearbit undressed</th>
+          </tr>
+          <tr>
+            <th colspan="5">&nbsp;</th>
+            <th colspan="2">3 Point</th>
+            <th colspan="2">6 Point</th>
+          </tr>
+          <tr>
+            <th>Redress Kit Size</th>
+            <th>Max Body Diameter</th>
+            <th>Body Bore</th>
+            <th>Fishing Neck Length</th>
+            <th>Fishing Neck Diameter</th>
+            <th>Total Length</th>
+            <th>Body Weight</th>
+            <th>Total Length</th>
+            <th>Body Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+          <tr>
+            <td>299</td>
+            <td>5 3/8</td>
+            <td>1 1/2</td>
+            <td>21 1/2</td>
+            <td>4 3/4</td>
+            <td>75</td>
+            <td>150kg</td>
+            <td>94</td>
+            <td>232kg</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <div class="site-container  pad" id="links">
+
+      <h2 class="font--l  pad-s-b">Font Sizing &amp; Styles</h2>
+
+      <div class="user-content  pad-s-b">
+        <p>
+          Responsive, viewport based, fonts should be restricted to use on headings
+          and isolated blocks of text. Avoid using it on copy paragraphs and long
+          blocks of text. I would also advise against using medium or large sizes
+          nearby normal (non-responsive) blocks of text because these viewport
+          based texts can actually end up <em>smaller</em> at certain screen sizes.
+        </p>
+
+        <p>
+          I've never been a fan of styling <code>h1, h2, h3</code>, etc directly or by tying their
+          size and style to their heading number. What if h2 and h4 should visually
+          look the same but not in every instance? Over time and with multiple
+          maintainers the CSS and HTML end up tied in knots.
+        </p>
+
+        <p>
+          The solution is simple; just define font styles to utility classes and apply
+          where required regardless of the markup. If you want to style one list item
+          to look like some hero text, go right ahead! It does not matter, the semantics
+          are in your HTML markup and content.
+        </p>
+      </div>
+
+      <p class="font--s  margin-tb">
+        Slightly responsive small text
+      </p>
+
+      <p class="margin-tb">
+        This is normal non-responsive body text. Vivamus turpis tellus, malesuada ac erat vitae, pulvinar venenatis turpis. Quisque interdum blandit est id volutpat. Etiam in ipsum sagittis, accumsan ipsum vitae.
+      </p>
+
+      <p class="font--m  margin-tb">
+        This is medium responsive body text for short paragraphs (like lede text). Fusce ac consectetur enim. pulvinar venenatis turpis. Quisque interdum blandit est id volutpa tincidunt metus.
+      </p>
+
+      <p class="font--l  margin-tb">
+        This is responsive text
+      </p>
+
+      <p class="font--xl  margin-tb">
+        This is responsive text
+      </p>
+
+      <p class="font--hero  font--kern  margin-tb">
+        This is responsive text
+      </p>
 
     </div>
 
+    <div class="site-container  pad" id="links">
 
-    <div class="site-container  pad--small--bottom  setLinks">
-      <div data-bk="gtr:0  bottom">
-        <div data-bk="6">
-          <ul class="font--m  margin--tb">
-            <li data-bk="gtr:on  gtr:trb  auto">
-              <a href="https://www.linkedin.com/company/eq-design-ltd" target="_blank">
-                <svg class="social-icon  social-icon--linkedin" width="28" height="28">
-                  <use xlink:href="/imgs/symbols.svg#linkedin"></use>
-                </svg>
-                <span class="hide">Linkedin</span>
-              </a>
-            </li>
-            <li data-bk="gtr:on  gtr:trb  auto">
-              <a href="https://twitter.com/eq_design" target="_blank">
-                <svg class="social-icon  social-icon--twitter" width="26" height="28">
-                  <use xlink:href="/imgs/symbols.svg#twitter"></use>
-                </svg>
-                <span class="hide">Twitter</span>
-              </a>
-            </li>
-            <li data-bk="gtr:on  gtr:trb  auto">
-              <a href="https://www.facebook.com/eqdesign" target="_blank">
-                <svg class="social-icon  social-icon--facebook" width="12" height="28">
-                  <use xlink:href="/imgs/symbols.svg#facebook"></use>
-                </svg>
-                <span class="hide">Facebook</span>
-              </a>
-            </li>
-            <li data-bk="gtr:on  gtr:trb  auto">
-              <a href="https://plus.google.com/+EqdesignCoUk" target="_blank">
-                <svg class="social-icon  social-icon--googleplus" width="28" height="28">
-                  <use xlink:href="/imgs/symbols.svg#googleplus"></use>
-                </svg>
-                <span class="hide">Google+</span>
-              </a>
-            </li>
-          </ul>
+      <h2 class="font--l  pad-s-b">Links &amp; Navigation</h2>
 
-          <p class="font--s">Copyright <b>{{ siteName }}</b> {{ now | date('Y') }}</p>
-        </div>
+      <div class="user-content  pad-s-b">
+        <p>
+          For years the traditional mathod of styling links would inevitably over
+          time drive me insane with specificity problems and overrides. So eventually
+          I came to the conclusion that links should simply be scoped, via classes.
+        </p>
 
-        <div class="eq-ident" data-bk="6  right">
-          <svg class="eq-ident__item  display--inline" width="37" height="12">
-            <use xlink:href="/imgs/svg/svg-symbols.svg#eq-design"></use>
-          </svg>
-        </div>
+        <p>
+          This does mean that you have to be sure to catch every link in your templates,
+          otherwise they'll appear unstyled. It also means you'll be using unsemantic
+          blah blah blah classes. However it does produce easier to maintain code with
+          fewer long-term headaches. Just create a link style on a class and stick it
+          where it needs to go in your markup (be sensible!).
+        </p>
       </div>
+
+      <div class="set-links  user-content">
+        <h3 class="margin-tb">Standard links within a paragraph</h3>
+        <p>
+          Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
+        </p>
+
+        <h3 class="margin-tb">Inverted link colours on paragraph</h3>
+        <p class="set-links--inverted">
+          Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
+        </p>
+
+        <h3 class="margin-tb">Contrasted link colours on dark background paragraph</h3>
+        <p class="bg-tertiary--dark  color-black  set-links--contrasted">
+          Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
+        </p>
+      </div>
+
+      <h3 class="margin-tb">Setting links in heading elements with various colours</h3>
+      <h4 class="font--l  set-links">Heading uses default text colour <a href="#">with a default link colour</a></h4>
+      <h4 class="font--l  color-primary  set-links  set-links--inverted">Heading uses primary colour <a href="#">with an inverted link colour</a></h4>
+      <h4 class="font--l  color-secondary  set-links">Heading uses secondary colour <a href="#">with a default link colour</a></h4>
+
+      <h3 class="margin-tb">Links set on a horizontal block nav</h3>
+      <ul class="nav  nav--block  nav-links">
+        <li><a href="#">One</a></li>
+        <li class="nav-links__active"><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+
+      <h3 class="margin-tb">Links set on a horizontal fit (display table) nav</h3>
+      <ul class="nav  nav--block  nav--fit  nav-links">
+        <li><a href="#">One</a></li>
+        <li class="nav-links__active"><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+
+      <h3 class="margin-tb">Links set on a stacked nav</h3>
+      <ul class="nav  nav--block  nav--stacked  nav-links">
+        <li><a href="#">One</a></li>
+        <li class="nav-links__active"><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+
     </div>
 
 
     <script src="/js/min/basekit.js"></script>
-    <script src="/bower_components/picturefill/dist/picturefill.min.js"></script>
   </body>
 </html>

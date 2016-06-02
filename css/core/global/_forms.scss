@@ -1,0 +1,39 @@
+@if $form-default-css {
+
+  fieldset {
+    @if $form-fieldset-border {
+      border: $form-fieldset-size solid $form-fieldset-color;
+    } @else {
+      border: 0;
+    }
+  }
+
+  @if $form-legend-style {
+    legend {
+      padding: 0.25em;
+      margin-left: rem($font-line-height / 2);
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  @if $form-optgroup-style {
+    optgroup {
+      color: black;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      // Kill phantom spacing and dotted
+      // border that appears in Firefox.
+      &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+  @if $form-search-decoration-style {
+    input[type="search"]::-webkit-search-decoration {
+      display: none;
+    }
+  }
+}

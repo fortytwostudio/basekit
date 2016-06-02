@@ -13,9 +13,7 @@ var gulp          = require('gulp'),
     // Generate svg symbols file
     svgSymbols    = require('gulp-svg-symbols'),
     // Minify HTML
-    minifyHTML    = require('gulp-minify-html'),
-    // Minify css and js within html files
-    minifyInline  = require('gulp-minify-inline'),
+    htmlmin    = require('gulp-htmlmin'),
     // Deploy to gh pages
     deploy        = require('gulp-gh-pages'),
     // Report file sizes
@@ -56,8 +54,17 @@ gulp.task('parker', function() {
 gulp.task('scss', function() {
   gulp.src(styleSrc)
     .pipe(sass().on('error', sass.logError))
-    .pipe(nano({autoprefixer: {browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']}}))
+    .pipe(nano({autoprefixer: {
+      add: true,
+      remove: false,
+      browsers: [
+        '> 0.5%',
+        'last 2 versions',
+        'ie >= 9'
+      ]
+    }}))
     .pipe(gulp.dest(styleDest))
+    .pipe(size({ showFiles: true }))
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
@@ -100,8 +107,19 @@ gulp.task('svg', function () {
 // Minify HTML source and rename the index-dev file
 gulp.task('html', function() {
   gulp.src(htmlSrc)
-    .pipe(minifyHTML({cdata: true}))
-    .pipe(minifyInline())
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      removeAttributeQuotes: true,
+      removeRedundantAttributes: true,
+      removeEmptyAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      collapseBooleanAttributes: true,
+      quoteCharacter: '\'',
+      minifyJS: true,
+      minifyCSS: true
+    }))
     .pipe(gulp.dest(htmlDest));
 });
 

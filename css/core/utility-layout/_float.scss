@@ -1,0 +1,25 @@
+@if $float-css {
+
+  .float {
+    &-r {
+      float: right;
+    }
+
+    &-l {
+      float: left;
+    }
+
+    &-n {
+      float: none;
+    }
+  }
+
+  .clear {
+    &:after {
+      content:" ";
+      display:block;
+      clear:both;
+    }
+  }
+
+}

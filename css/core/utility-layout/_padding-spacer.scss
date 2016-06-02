@@ -1,0 +1,122 @@
+@if $padding-spacer-css {
+
+  .#{$padding-spacer-name} {
+
+    // If percentage spacing is set in the compile options use %, otherwise
+    // default to rem sizing
+    &,
+    &-t {
+      padding-top: rem($padding-spacer-size-default / 1.25);
+      padding-top: vw($padding-spacer-size-default, $max-width);
+    }
+
+    &,
+    &-b {
+      padding-bottom: rem($padding-spacer-size-default / 1.25);
+      padding-bottom: vw($padding-spacer-size-default, $max-width);
+    }
+
+    &-s {
+      &,
+      &-t {
+        padding-top: rem($padding-spacer-size-small / 1.5);
+        padding-top: vw($padding-spacer-size-small, $max-width);
+      }
+
+      &,
+      &-b {
+        padding-bottom: rem($padding-spacer-size-small / 1.5);
+        padding-bottom: vw($padding-spacer-size-small, $max-width);
+      }
+    }
+
+    &-l {
+      &,
+      &-t {
+        padding-top: rem($padding-spacer-size-large / 1.75);
+        padding-top: vw($padding-spacer-size-large, $max-width);
+      }
+
+      &,
+      &-b {
+        padding-bottom: rem($padding-spacer-size-large / 1.75);
+        padding-bottom: vw($padding-spacer-size-large, $max-width);
+      }
+    }
+
+    // Set max dimensions to prevent huge spaces at large screen sizes
+    @include mq($until: $padding-spacer-breakpoint) {
+      &,
+      &-t {
+        padding-top: rem($padding-spacer-size-default / 2);
+      }
+
+      &,
+      &-b {
+        padding-bottom: rem($padding-spacer-size-default / 2);
+      }
+
+      &-s {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-small / 2);
+        }
+
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-small / 2);
+        }
+      }
+
+      &-l {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-large / 2);
+        }
+
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-large / 2);
+        }
+      }
+    }
+
+    // Set max dimensions to prevent huge spaces at large screen sizes
+    @include mq(px($max-width)) {
+      &,
+      &-t {
+        padding-top: rem($padding-spacer-size-default);
+      }
+
+      &,
+      &-b {
+        padding-bottom: rem($padding-spacer-size-default);
+      }
+
+      &-s {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-small);
+        }
+
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-small);
+        }
+      }
+
+      &-l {
+        &,
+        &-t {
+          padding-top: rem($padding-spacer-size-large);
+        }
+
+        &,
+        &-b {
+          padding-bottom: rem($padding-spacer-size-large);
+        }
+      }
+    }
+  }
+
+}

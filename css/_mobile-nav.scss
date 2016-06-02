@@ -1,0 +1,66 @@
+@if $nav-mobile {
+
+  // get rid of the field, we don't need to see it
+  .nav-toggler-input {
+    @include hide()
+  }
+
+  // get rid of the label on larger screens, we don't need to see it there
+  @include mq($nav-mobile-breakpoint) {
+    .nav-toggler-label {
+      @include hide()
+    }
+  }
+
+  @include mq($until: $nav-mobile-breakpoint) {
+    .nav-toggler-label {
+      // visual feedback for the user
+      cursor: pointer;
+      // prevent text selection
+      user-select: none;
+      // add the hamburger icon as a background image
+      // I recommend using SVG but it doesn't have to be a data uri…
+      // in fact you're best not to
+      background: rgba(black, 0.05) url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2052%2052%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M2.6%2010h46.8c1.4%200%202.6-1.3%202.6-3s-1.2-3-2.6-3H2.6C1.2%204%200%205.3%200%207s1.2%203%202.6%203zm46.8%2013H2.6C1.2%2023%200%2024.3%200%2026s1.2%203%202.6%203h46.8c1.4%200%202.6-1.3%202.6-3s-1.2-3-2.6-3zm0%2019H2.6C1.2%2042%200%2043.3%200%2045s1.2%203%202.6%203h46.8c1.4%200%202.6-1.3%202.6-3s-1.2-3-2.6-3z%22%2F%3E%3C%2Fsvg%3E') no-repeat center center;
+      background-size: 50%;
+      border-radius: rem(5px);
+      display: inline-block!important;
+      font-size: rem(22px);
+      padding: rem(22px);
+      @include hide(text);
+      transition: background-color $speed-normal ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(black, 0.08);
+      }
+
+      &:active {
+        background-color: white;
+      }
+
+      .nav-toggler-input:checked ~ & {
+        // the icon active state
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2052%2052%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M30.525%2026L48.627%207.898c1.25-1.25%201.25-3.276%200-4.525-1.25-1.25-3.275-1.25-4.525%200L26%2021.475%207.898%203.373c-1.25-1.25-3.276-1.25-4.525%200-1.25%201.25-1.25%203.275%200%204.525L21.475%2026%203.373%2044.102c-1.25%201.25-1.25%203.276%200%204.525%201.25%201.25%203.275%201.25%204.525%200L26%2030.525l18.102%2018.102c1.25%201.25%203.276%201.25%204.525%200%201.25-1.25%201.25-3.275%200-4.525L30.525%2026z%22%2F%3E%3C%2Fsvg%3E');
+      }
+    }
+
+    .site-nav {
+      // hide the nav item and fade out by default
+      opacity: 0;
+      max-height: 0;
+      transition: opacity $speed-normal ease-out, max-height $speed-normal ease-out;
+
+      .nav-toggler-input:checked ~ & {
+        // when the checkbox is checked, fade the opacity
+        // back to 1 and transition to the content height
+        // (max-height can be any safe range well over what
+        // the nav content could ever be)
+        max-height: 2000px;
+        opacity: 1;
+        transition: opacity $speed-slow ease-in, max-height $speed-slow ease-in;
+      }
+    }
+
+  } // MQ closing bracket
+}

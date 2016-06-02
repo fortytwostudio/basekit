@@ -1,0 +1,16 @@
+$tables-width: thin;
+$tables-color: currentColor;
+
+table {
+  border-collapse: collapse;
+  border-left: $tables-width solid $tables-color;
+  border-spacing: 0;
+  border-top: $tables-width solid $tables-color;
+}
+
+th, td {
+  border-bottom: $tables-width solid $tables-color;
+  border-right: $tables-width solid $tables-color;
+  padding: rem($margin + 0px);
+  vertical-align: top;
+}

@@ -1,109 +1,70 @@
-// GLOBAL SETTINGS
-//
-@import
-  "settings/set.colors",
-  "settings/set.layout",
-  "settings/set.text",
-  "settings/set.animation",
-  "settings/set.nav",
-  "settings/set.media",
-  "settings/set.forms",
-  "settings/set.links",
-  "settings/set.icons",
-  "settings/set.user-content",
-  "settings/set.border-radius",
-  "settings/set.buttons",
-  "settings/set.tables",
-  "settings/set.hider",
-  "settings/vendor.set.animate";
-
-// THIRD PARTY TOOLS
-@import
-  "core/vendor.tool.unit-conversion",
-  "core/vendor.tool.media-queries",
-  "core/vendor.tool.reverse-list",
-  "core/vendor.tool.font-face";
-
-// MIXINS & FUNCTONS
-@import
-  "core/tool.colums",
-  "core/tool.colums-span",
-  "core/tool.image-url",
-  "core/tool.percentage",
-  "core/tool.rem",
-  "core/tool.attribute-module",
-  "core/tool.fit-media",
-  "core/tool.position-over",
-  "core/tool.inline-block",
-  "core/tool.z-index",
-  "core/tool.aspect-ratio",
-  "core/tool.strip-unit",
-  "core/tool.ios-smooth-scroll",
-  "core/tool.transforms",
-  "core/tool.viewport-unit-convert",
-  "core/tool.viewport-font.scss",
-  "core/tool.hider.scss";
-
-// LAYOUT GRID
-@import
-  "core/grid.alignment",
-  "core/grid.columns",
-  "core/grid.indent",
-  "core/grid.gutters";
-
-// GLOBALS
 @charset "UTF-8";
-@import
-  "core/global.box-model",
-  "core/global.document",
-  "core/global.text",
-  "core/global.media",
-  "core/global.tables",
-  "core/global.forms";
 
-// UTILITY CLASSES
 @import
-  "core/utility.display",
-  "core/utility.alignment",
-  "core/utility.margins",
-  "core/utility.padding-spacer",
-  "core/utility.position-over",
-  "core/utility.site-width",
-  "core/utility.fit-media",
-  "core/utility.hide",
-  "core/utility.icons",
-  "core/utility.list-styles",
-  "core/utility.border-corners",
-  "core/utility.alerts",
-  "core/utility.nav",
-  "core/utility.user-content",
-  "core/utility.overflow-text",
-  "core/utility.float",
-  "core/utility.site-links",
-  "core/utility.site-text";
+  "settings/colors",
+  "settings/layout",
+  "settings/text",
+  "settings/transition-speed",
+  "settings/navigation",
+  "settings/media",
+  "settings/forms",
+  "settings/icons",
+  "settings/user-content",
+  "settings/hider",
 
-// LAYOUT GRID UTILITY CLASSES
-@import
-  "core/grid.builder";
+  // THIRD PARTY TOOLS
+  "core/vendor/unit-conversion",
+  "core/vendor/media-queries",
+  "core/vendor/font-face",
+  "core/vendor/fluid-type",
+  "core/vendor/family",
 
-// THIRD PARTY PACKAGES
-@import
-  "core/animate-sass/animate",
-  "core/vendor.utility.animate";
+  // MIXINS & FUNCTONS
+  "core/tools/percentage",
+  "core/tools/viewport-units",
+  "core/tools/rem",
+  "core/tools/aspect-ratio",
+  "core/tools/strip-unit",
+  "core/tools/hider.scss",
 
-// ————————————————————————————————————————————————————————————————————————————
-// PROJECT FILES:
-// ————————————————————————————————————————————————————————————————————————————
+  // GLOBALS
+  "core/global/box-model",
+  "core/global/document",
+  "core/global/text",
+  "core/global/media",
+  "core/global/tables",
+  "core/global/forms",
 
-// UTILITY CLASSES
-@import
-  "utility.site-colors",
-  "utility.site-backgrounds";
+  // LAYOUT GRID
+  "core/utility-layout/display",
+  "core/utility-layout/margins",
+  "core/utility-layout/padding-spacer",
+  "core/utility-layout/site-width",
+  "core/utility-layout/float",
+  "core/utility-layout/hide-content",
+  "core/utility-layout/position-over",
+  "core/utility-layout/fit-media",
+  "core/utility-layout/full-width",
 
-// COMPONENTS
-@import
-  "component.site-logo",
-  "component.site-footer",
-  "component.buttons",
-  "component.site-nav",
-  "component.site-mobile-nav";
+  // UTILITY CLASSES
+  "core/utility-general/icons",
+  "core/utility-general/alerts",
+  "core/utility-general/nav",
+
+  "core/utility-text/alignment",
+  "core/utility-text/list-styles",
+  "core/utility-text/user-content",
+  "core/utility-text/overflow-text",
+  "core/utility-text/hide-text",
+
+  // PROJECT FILES:
+  // ————————————————————————————————————————————————————————————————————————————
+  "forms-extended",
+  "links",
+  "text",
+  "colors",
+  "backgrounds",
+  "logos",
+  "buttons",
+  "site-nav",
+  "mobile-nav";

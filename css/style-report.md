@@ -117,3 +117,54 @@ Last generated: 12/14/2015, 12:50:11 by [gulp-parker](https://github.com/PavelDe
 * * *
 
 Last generated: 12/14/2015, 13:00:07 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).
+
+### /Users/ryanroberts/Github/basekit/css/basekit.css
+
+- **Total Stylesheets:** 1
+- **Total Stylesheet Size:** 13594
+- **Total Media Queries:** 7
+- **Media Queries:**
+	=- (max-width:37.49em)
+	=- (min-width:70.5em)
+	=- (-webkit-min-device-pixel-ratio:2) and (max-width:37.5rem)
+	=- (min-width:48em)
+	=- (max-width:47.99em)
+	=- (min-width:30em)
+	=- (max-width:48em)
+- **Total Rules:** 177
+- **Selectors Per Rule:** 1.2994350282485876
+- **Total Selectors:** 230
+- **Identifiers Per Selector:** 1.4391304347826086
+- **Specificity Per Selector:** 11.347826086956522
+- **Top Selector Specificity:** 40
+- **Top Selector Specificity Selector:** .js-has-rnav-active .rnav-toggle .burger-bars:after
+- **Total Id Selectors:** 0
+- **Total Identifiers:** 331
+- **Total Declarations:** 443
+- **Total Unique Colors:** 20
+- **Unique Colors:**
+	=- `#F5F5F5`
+	=- `#FF4500`
+	=- `#F3F3F3`
+	=- `#D3D3D3`
+	=- `#000000`
+	=- `#FFFFFF`
+	=- `#1E90FF`
+	=- `#32CD32`
+	=- `#999999`
+	=- `#FFFFE6`
+	=- `#EEEEEE`
+	=- `#888888`
+	=- `#FFA494`
+	=- `#E02200`
+	=- `#6BB6FF`
+	=- `#005DB7`
+	=- `#F9F9F9`
+	=- `#BABABA`
+	=- `#111111`
+	=- `#666666`
+- **Total Important Keywords:** 24
+
+* * *
+
+Last generated: 05/20/2016, 11:25:30 by [gulp-parker](https://github.com/PavelDemyanenko/gulp-parker).

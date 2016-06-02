@@ -18,12 +18,10 @@ npm-debug.log
 ._*
 .Spotlight-V100
 .Trashes
-Icon?
 ehthumbs.db
 Thumbs.db
 
 
 # Codekit files #
 ######################
-config.codekit
 *.codekit

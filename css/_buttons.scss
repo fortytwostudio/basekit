@@ -1,0 +1,58 @@
+// Output the button CSS.
+$btn-css: true;
+// Set to null for no corner radius.
+$btn-corners: 2px;
+// Configure colours and speed.
+$btn-bg: $primary;
+$btn-bg--hover: $secondary;
+$btn-txt: white;
+$btn-txt--hover: $btn-txt;
+$btn-transition-speed: $speed-normal;
+
+@if $btn-css {
+
+  .btn {
+    display: inline-block;
+    vertical-align: middle;
+    color: $btn-txt!important;
+    font-family: inherit;
+    font-size: 100%;
+    text-decoration: none !important;
+    padding: 0.5em 0.75em;
+    background-color: $btn-bg;
+
+    @if $btn-corners {
+      border-radius: rem($btn-corners);
+    }
+
+    transition: all $btn-transition-speed ease-in-out!important;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $btn-txt--hover;
+      background-color: $btn-bg--hover;
+    }
+
+    &--medium {
+      font-size: 1.25em;
+    }
+
+    &--large {
+      font-size: 1.75em;
+    }
+
+    &--natural {
+      vertical-align: baseline;
+      line-height: 0.8;
+      height: auto;
+      padding-right: 0.25em;
+      padding-left: 0.25em;
+    }
+
+    &--fill {
+      width: 100%;
+    }
+  }
+
+}

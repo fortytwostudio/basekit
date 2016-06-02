@@ -1,0 +1,108 @@
+@mixin position-over($fom-anchor-to: top-left, $fom-setup: null, $fom-adjust-z-index: $z-position-over) {
+
+  @if $fom-setup != basic {
+    top: 0;
+    position: absolute;
+    z-index: $fom-adjust-z-index;
+  }
+  @if $fom-anchor-to == middle {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  @if $fom-anchor-to == middle-left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+  @if $fom-anchor-to == middle-right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(0);
+  }
+  @if $fom-anchor-to == middle-bottom {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+    transform: translateY(0) translateX(50%);
+  }
+  @if $fom-anchor-to == middle-top {
+    top: 0;
+    right: 50%;
+    transform: translateY(0) translateX(50%);
+  }
+  @else if $fom-anchor-to == top-right {
+    right: 0;
+  }
+  @else if $fom-anchor-to == bottom-right {
+    top: auto;
+    right: 0;
+    bottom: 0;
+  }
+  @else if $fom-anchor-to == bottom-left {
+    top: auto;
+    bottom: 0;
+    left: 0;
+  }
+
+}
+
+// utility class
+@if $position-over-css {
+
+  .position-over {
+    position: relative;
+
+    &__item {
+      @include position-over;
+
+      @if $position-over-tr {
+        &--tr {
+          @include position-over(top-right, basic);
+        }
+      }
+      @if $position-over-br {
+        &--br {
+          @include position-over(bottom-right, basic);
+        }
+      }
+      @if $position-over-bl {
+        &--bl {
+          @include position-over(bottom-left, basic);
+        }
+      }
+      @if $position-over-m {
+        &--m {
+          @include position-over(middle, basic);
+        }
+      }
+      @if $position-over-ml {
+        &--ml {
+          @include position-over(middle-left, basic);
+        }
+      }
+      @if $position-over-mr {
+        &--mr {
+          @include position-over(middle-right, basic);
+        }
+      }
+      @if $position-over-mb {
+        &--mb {
+          @include position-over(middle-bottom, basic);
+        }
+      }
+      @if $position-over-mt {
+        &--mt {
+          @include position-over(middle-top, basic);
+        }
+      }
+      @if $position-over-fit-height {
+        &--fit-height {
+          height: 100%;
+        }
+      }
+    }
+
+  }
+
+}

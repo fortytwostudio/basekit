@@ -1,0 +1,41 @@
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  // If headings use the same family as the main document then don't bother
+  // outputting this at all, otherwise output the chosen family
+  @if $font-heading-family != $font-family {
+    font-family: $font-heading-family;
+  }
+
+  @if $font-heading-weight != 700 {
+    font-weight: $font-heading-weight;
+  }
+
+  // Set headings to match the body size, change them when necessary with
+  // a utility class
+  font-size: em(strip-unit($font-size), 16);
+  line-height: $font-line-height / $font-size;
+  @if $heading != $text {
+    color: $heading;
+  }
+}
+
+@if $code-style {
+  code {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: rem($font-size-small-screen);
+    color: $alert-bg;
+    padding: 0 3px 2px;
+    background-color: lighten($grey-light, 12.5%);
+    border: 1px solid $grey-light;
+    border-radius: 3px;
+  }
+}
