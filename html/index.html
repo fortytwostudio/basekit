@@ -5,22 +5,28 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
-    <link rel="alternate" href="http://www." hreflang="en-gb">
-
-    <link rel="stylesheet" href="/css/basekit.css">
-    <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
 
     <!-- Prefetch DNS for external assets -->
-    <link rel="dns-prefetch" href="//fast.fonts.net">
-    <link rel="dns-prefetch" href="//cloud.typography.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//ajax.googleapis.com">
-    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link href="//fast.fonts.net" rel="dns-prefetch">
+    <link href="//cloud.typography.com" rel="dns-prefetch">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="//connect.facebook.net" rel="dns-prefetch">
+
+    <!-- Prerender or Preload
+    - Preemptively load all of the assets of a certain document
+    - Preload a specific asset
+    - More info: https://css-tricks.com/prefetching-preloading-prebrowsing/
+    <link rel="prerender" href="https://example.com/">
+    <link rel="preload" href="image.png">
+    -->
 
     <title>BaseKit</title>
     <meta name="description" content="a frontend starter kit from FortyTwo Studio">
+
+    <link href="/css/basekit.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
 
     <!--
       ICONS:
@@ -30,31 +36,48 @@
     -->
 
     <!--
-    OPEN GRAPH / TWITTER CARD:
+      Facebook / Twitter Cards
     - Update the following meta tags and replace the image
-    -->
     <meta property="og:title" content="Basis">
     <meta property="og:description" content="Basis is a full featured starter kit from FortyTwo Studio">
     <meta property="og:image" content="http://og.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="http://">
-    <meta property="og:type" content="website"> <!-- https://developers.facebook.com/docs/reference/opengraph -->
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image"> <!-- https://dev.twitter.com/cards/types -->
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@">
+    -->
 
     <!--
-    GOOGLE ANALYTICS:
+      Facebook / Instant Articles
+    <meta property="op:markup_version" content="v1.0">
+    <link href="http://example.com/article.html" rel="canonical">
+    <meta property="fb:article_style" content="myarticlestyle">
+    -->
+
+    <!--
+      Google+ / Schema.org
+    <link href="https://plus.google.com/+YourPage" rel="publisher">
+    <meta itemprop="name" content="Content Title">
+    <meta itemprop="description" content="Content description less than 200 characters">
+    <meta itemprop="image" content="https://example.com/image.jpg">
+    -->
+
+    <!--
+      Google Analytics Code:
     - Add your analytics ID here.
     - Or remove the below code and add what Google gives you.
     -->
 
+    <!--
+      Geo Tags
     <meta name="ICBM" content="latitude, longitude">
     <meta name="geo.position" content="latitude;longitude">
     <meta name="geo.region" content="GB">
     <meta name="geo.placename" content="Aberdeen City, United Kingdom">
+    -->
 
   </head>
 
@@ -375,13 +398,13 @@
     <section id="logos" class="site-container  pad">
       <p class="margin-tb">Main site logo:</p>
       <h1 class="logo  site-logo">
-        <a class="hide-text" href="/" title="Home Page">BaseKit</a>
+        <a href="/" class="hide-text" title="Home Page">BaseKit</a>
       </h1>
 
       <p class="margin-tb">Footer Logo:</p>
 
       <div class="logo  colophon-logo">
-        <a class="hide-text" href="http://www.fortytwo.studio" title="FortyTwo Studio">
+        <a href="http://www.fortytwo.studio" class="hide-text" title="FortyTwo Studio">
           Design and development by FortyTwo Studio
         </a>
       </div>
