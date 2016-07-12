@@ -1,10 +1,10 @@
-{
+  {
   "name": "basekit-gulp-workflow",
   "version": "0.2.0",
   "description": "basekit gulp workflow",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eq-design/basekit.git"
+    "url": "git+https://github.com/fortytwostudio/basekit.git"
   },
   "keywords": [
     "gulp",
@@ -13,12 +13,12 @@
     "build",
     "tools"
   ],
-  "author": "eq design",
+  "author": "Ryan Roberts",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/eq-design/basekit/issues"
+    "url": "https://github.com/fortytwostudio/basekit/issues"
   },
-  "homepage": "https://github.com/eq-design/basekit#readme",
+  "homepage": "https://github.com/fortytwostudio/basekit#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
