@@ -13,11 +13,11 @@
   "settings/hider",
 
   // THIRD PARTY TOOLS
-  "core/vendor/unit-conversion",
-  "core/vendor/media-queries",
-  "core/vendor/font-face",
-  "core/vendor/fluid-type",
-  "core/vendor/family",
+  "core/third-party/unit-conversion",
+  "core/third-party/media-queries",
+  "core/third-party/font-face",
+  "core/third-party/fluid-type",
+  "core/third-party/family",
 
   // MIXINS & FUNCTONS
   "core/tools/percentage",
@@ -28,7 +28,7 @@
   "core/tools/hider.scss",
 
   // GLOBALS
-  "core/global/box-model",
+  "core/global/_global",
   "core/global/document",
   "core/global/text",
   "core/global/media",

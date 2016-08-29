@@ -4,14 +4,14 @@
     color: $alert-text;
     line-height: 1;
     position: relative;
-    padding: rem(px($margin));
+    padding: rem($margin * 1px);
     margin: rem(5px) 0 0;
     background-color: $alert-bg;
 
     &:before {
       position: absolute;
       top: rem(-10px);
-      left: rem(px($margin));
+      left: rem($margin * 1px);
       content: "";
       width: 0;
       height: 0;
