@@ -9,8 +9,8 @@
       }
     }
 
-    @if $nav-stacked-css {
-      &--stacked {
+    @if $nav-stack-css {
+      &--stack {
         > li {
           display: list-item;
           > a {
