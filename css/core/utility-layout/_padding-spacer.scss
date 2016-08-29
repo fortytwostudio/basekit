@@ -82,7 +82,7 @@
     }
 
     // Set max dimensions to prevent huge spaces at large screen sizes
-    @include mq(px($max-width)) {
+    @include mq($max-width * 1px) {
       &,
       &-t {
         padding-top: rem($padding-spacer-size-default);
