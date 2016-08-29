@@ -7,19 +7,10 @@ var gulp          = require('gulp'),
     concat        = require('gulp-concat'),
     // Minify js
     uglify        = require('gulp-uglify'),
-      // Optimise images
-      // imagemin      = require('gulp-imagemin'),
-      // pngquant      = require('imagemin-pngquant'),
-    // Generate svg symbols file
-    svgSymbols    = require('gulp-svg-symbols'),
     // Minify HTML
     htmlmin    = require('gulp-htmlmin'),
-    // Deploy to gh pages
-    deploy        = require('gulp-gh-pages'),
     // Report file sizes
-    size          = require('gulp-size'),
-    // CSS optimisation report
-    parker        = require('gulp-parker');
+    size          = require('gulp-size');
 
 // Locations
 var styleSrc      = 'css/basekit.scss',
@@ -33,22 +24,7 @@ var styleSrc      = 'css/basekit.scss',
   	scriptSrc     = 'js/*.js',
   	scriptDest    = 'js/min',
   	scriptWatch   = 'js/*.js',
-    scriptConcat  = 'basekit.js',
-
-  	imageSrc      = 'imgs/*',
-  	imageDest     = 'imgs';
-
-  	svgSrc      = 'imgs/svg/*.svg',
-  	svgDest     = 'imgs/svg';
-
-
-gulp.task('parker', function() {
-  return gulp.src('css/basekit.css')
-    .pipe(parker({
-      file: 'css/style-report.md',
-      title: 'CSS analysis'
-    }));
-});
+    scriptConcat  = 'basekit.js';
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
@@ -67,13 +43,6 @@ gulp.task('scss', function() {
     .pipe(size({ showFiles: true }))
     .pipe(size({ gzip: true, showFiles: true }));
 });
-
-// Easy deploy to the gh-pages branch
-gulp.task('deploy', function () {
-  return gulp.src('**/*')
-    .pipe(deploy());
-});
-
 // Minify and concat the js files for use
 gulp.task('js', function() {
   gulp.src(scriptSrc)
@@ -82,27 +51,6 @@ gulp.task('js', function() {
     .pipe(gulp.dest(scriptDest))
     .pipe(size({ gzip: true, showFiles: true }));
 });
-
-gulp.task('svg', function () {
-  return gulp.src(svgSrc)
-    .pipe(svgSymbols({
-      templates: ['default-svg'],
-      title: '%f'
-    }))
-    .pipe(gulp.dest(svgDest));
-});
-
-// Optimise images
-// gulp.task('img', function () {
-//   return gulp.src(imageSrc)
-//     .pipe(imagemin({
-//       progressive: true,
-//       svgoPlugins: [{removeViewBox: false}],
-//       multipass: true,
-//       use: [pngquant()]
-//     }))
-//     .pipe(gulp.dest(imageDest));
-// });
 
 // Minify HTML source and rename the index-dev file
 gulp.task('html', function() {
