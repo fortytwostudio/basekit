@@ -1,7 +1,7 @@
-// Once lower than the max-width the site will never be larger than this.
+// Once lower than the max-width the site width will never be larger than this.
 $site-width: 95%;
 
-// Define your responsive breakpoints and the IE8 CSS static BP.
+// Define your responsive breakpoints with a key name and px value.
 $mq-breakpoints: (
   palm: 480px,
   hands: 600px,
@@ -10,7 +10,7 @@ $mq-breakpoints: (
 );
 
 // Define the column count for of your design. 12 is recommended even if you
-// have fewer columns in the design, fake it.
+// have fewer columns in the design, fake a low column count.
 $columns: 12;
 
 // Define the columns and spacing.
@@ -18,8 +18,8 @@ $column-width: 70;
 $gutter: 25;
 $margin: $gutter / 2;
 
-// Don't touch these if you don't know what they do.
-$max-width: $column-width * $columns + $gutter * $columns;
+// Don't touch this if you don't know what it does… $max-width gets used often.
+$max-width: ($column-width * $columns) + ($gutter * $columns);
 
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;
