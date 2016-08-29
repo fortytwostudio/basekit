@@ -12,23 +12,9 @@ var gulp          = require('gulp'),
     // Report file sizes
     size          = require('gulp-size');
 
-// Locations
-var styleSrc      = 'css/basekit.scss',
-  	styleDest     = 'css',
-	  styleWatch    = 'css/**/*.scss',
-
-  	htmlSrc       = './html/*.html',
-  	htmlDest      = './',
-  	htmlWatch     = './html/*.html',
-
-  	scriptSrc     = 'js/*.js',
-  	scriptDest    = 'js/min',
-  	scriptWatch   = 'js/*.js',
-    scriptConcat  = 'basekit.js';
-
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
-  gulp.src(styleSrc)
+  gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({autoprefixer: {
       add: true,
@@ -39,22 +25,22 @@ gulp.task('scss', function() {
         'ie >= 9'
       ]
     }}))
-    .pipe(gulp.dest(styleDest))
+    .pipe(gulp.dest('css'))
     .pipe(size({ showFiles: true }))
     .pipe(size({ gzip: true, showFiles: true }));
 });
 // Minify and concat the js files for use
 gulp.task('js', function() {
-  gulp.src(scriptSrc)
-    .pipe(concat(scriptConcat))
+  gulp.src('js/*.js')
+    .pipe(concat('basekit.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(scriptDest))
+    .pipe(gulp.dest('js/min'))
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
 // Minify HTML source and rename the index-dev file
 gulp.task('html', function() {
-  gulp.src(htmlSrc)
+  gulp.src('./html/*.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true,
@@ -68,14 +54,14 @@ gulp.task('html', function() {
       minifyJS: true,
       minifyCSS: true
     }))
-    .pipe(gulp.dest(htmlDest));
+    .pipe(gulp.dest('./'));
 });
 
 // Only watch Sass and JS files
 gulp.task('watch', function() {
-  gulp.watch(styleWatch, ['scss']);
-  gulp.watch(scriptWatch, ['js']);
-  gulp.watch(htmlWatch, ['html']);
+  gulp.watch('css/**/*.scss', ['scss']);
+  gulp.watch('js/*.js', ['js']);
+  gulp.watch('./html/*.html', ['html']);
 });
 
 gulp.task('default', ['watch']);
