@@ -6,7 +6,7 @@
   }
 
   // get rid of the label on larger screens, we don't need to see it there
-  @include mq($nav-mobile-breakpoint) {
+  @include mq($nav-mobile-breakpoint + 1) {
     .nav-toggler-label {
       @include hide()
     }
