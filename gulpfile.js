@@ -1,16 +1,18 @@
-var gulp          = require('gulp'),
+var gulp            = require('gulp'),
     // Process and compile scss/css files
-    sass          = require('gulp-sass'),
+    sass            = require('gulp-sass'),
     // Optimise css
-    nano          = require('gulp-cssnano'),
+    nano            = require('gulp-cssnano'),
     // Join js files into one
-    concat        = require('gulp-concat'),
+    concat          = require('gulp-concat'),
     // Minify js
-    uglify        = require('gulp-uglify'),
+    uglify          = require('gulp-uglify'),
     // Minify HTML
-    htmlmin    = require('gulp-htmlmin'),
+    htmlmin         = require('gulp-htmlmin'),
+    // HTML static templating
+    nunjucksRender  = require('gulp-nunjucks-render'),
     // Report file sizes
-    size          = require('gulp-size');
+    size            = require('gulp-size');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
 gulp.task('scss', function() {
@@ -36,6 +38,18 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(gulp.dest('js/min'))
     .pipe(size({ gzip: true, showFiles: true }));
+});
+
+// Compile Nunjucks static templates
+gulp.task('nunjucks', function() {
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('templates/src/pages/**/*.+(html|njk|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+    path: ['templates/src/partials']
+  }))
+  // output files in app folder
+  .pipe(gulp.dest('templates/dist'))
 });
 
 // Minify HTML source and rename the index-dev file
