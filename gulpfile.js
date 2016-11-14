@@ -73,8 +73,9 @@ gulp.task('nunjucks', function() {
   .pipe(data(function() { return require('./templates/data.json') }))
   // Renders template including partials
   .pipe(nunjucksRender({ path: ['templates/src/partials'] }))
-  // Output dev ready files
+  // Output unminified files for CMS templating
   .pipe(gulp.dest('templates/dist'))
+  // Minify the files for development usage
   .pipe(htmlmin({
     collapseWhitespace: true,
     removeComments: true,
@@ -88,33 +89,15 @@ gulp.task('nunjucks', function() {
     minifyJS: true,
     minifyCSS: true
   }))
+  // Output minified files
   .pipe(gulp.dest('templates/dist/min'));
 });
 
-// Minify Nunjucks HTML files
-// gulp.task('njkdev', function() {
-//   gulp.src('./templates/dist/*.html')
-//     .pipe(htmlmin({
-//       collapseWhitespace: true,
-//       removeComments: true,
-//       removeAttributeQuotes: true,
-//       removeRedundantAttributes: true,
-//       removeEmptyAttributes: true,
-//       removeScriptTypeAttributes: true,
-//       removeStyleLinkTypeAttributes: true,
-//       collapseBooleanAttributes: true,
-//       quoteCharacter: '\'',
-//       minifyJS: true,
-//       minifyCSS: true
-//     }))
-//     .pipe(gulp.dest('templates/dist/min'));
-// });
-
+// Combine various functions into watch
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
-  gulp.watch('./templates/src/partials/**/*.+(html|njk|nunjucks)', ['nunjucks']);
-  // gulp.watch('./templates/dist/*.html', ['njkdev']);
+  gulp.watch('./templates/src/**/*', ['nunjucks']);
 });
 
 gulp.task('default', ['watch']);
