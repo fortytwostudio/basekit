@@ -20,11 +20,14 @@
   "homepage": "https://github.com/eq-design/basekit#readme",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-sass": "^2.1.0",
+    "gulp-sass": "^2.3.2",
     "gulp-size": "~2.1.0",
     "gulp-uglify": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp-nunjucks-render": "^2.0.0"
   }
 }
