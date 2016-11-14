@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>{{siteName}}</title>
 </head>
 <body>
+
+  {% import 'macros/nav-macro.njk' as nav %}
+  {{ nav.active('home') }}
 
   <!-- You write code for this content block in another file -->
   {% block content %} {% endblock %}

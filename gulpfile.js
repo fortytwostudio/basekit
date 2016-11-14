@@ -9,6 +9,8 @@ var gulp            = require('gulp'),
     uglify          = require('gulp-uglify'),
     // Minify HTML
     htmlmin         = require('gulp-htmlmin'),
+    // Data storage for nunjucks
+    data            = require('gulp-data'),
     // HTML static templating
     nunjucksRender  = require('gulp-nunjucks-render'),
     // Report file sizes
@@ -44,6 +46,10 @@ gulp.task('js', function() {
 gulp.task('nunjucks', function() {
   // Gets .html and .nunjucks files in pages
   return gulp.src('templates/src/pages/**/*.+(html|njk|nunjucks)')
+  // Pull in data for Nunjucks
+  .pipe(data(function() {
+    return require('./templates/data.json')
+  }))
   // Renders template with nunjucks
   .pipe(nunjucksRender({
     path: ['templates/src/partials']

@@ -28,6 +28,7 @@
     "gulp-uglify": "^2.0.0"
   },
   "devDependencies": {
+    "gulp-data": "^1.2.1",
     "gulp-nunjucks-render": "^2.0.0"
   }
 }
