@@ -1,7 +1,7 @@
 {% macro active(activePage='home') %}
   <nav>
-    <li><a href="#" class="{%if activePage == 'home' %}active{% endif %}">Home</a></li>
-    <li><a href="#" class="{%if activePage == 'about' %}active{% endif %}">About</a></li>
-    <li><a href="#" class="{%if activePage == 'contact' %}active{% endif %}">Contact</a></li>
+    {% for i in ['home', 'about', 'contact'] %}
+      <a href="/{{ i }}" class="{%if activePage == i %}active{% endif %}">{{ i | title }}</a>
+    {% endfor %}
   </nav>
 {% endmacro %}
