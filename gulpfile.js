@@ -1,19 +1,19 @@
 var gulp            = require('gulp'),
-    // Process and compile scss/css files
+    // Sass for writing and pre-processing the CSS
     sass            = require('gulp-sass'),
-    // Optimise css
+    // Nano for optimising and post-processing the CSS
     nano            = require('gulp-cssnano'),
-    // Join js files into one
+    // Join JS into one file
     concat          = require('gulp-concat'),
-    // Minify js
+    // Minify the one JS file
     uglify          = require('gulp-uglify'),
-    // Minify HTML
+    // Minify and clean up HTML files
     htmlmin         = require('gulp-htmlmin'),
-    // Data storage for nunjucks
+    // Data storage for Nunjucks, and anything else
     data            = require('gulp-data'),
-    // HTML static templating
+    // HTML static templating, it's a bit like Twig
     nunjucksRender  = require('gulp-nunjucks-render'),
-    // Report file sizes
+    // Report file sizes in the CLI
     size            = require('gulp-size');
 
 // Compile Sass with autoprefixer, I've removed sourcemaps
@@ -21,8 +21,8 @@ gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({autoprefixer: {
+      // Add prefixes
       add: true,
-      remove: false,
       browsers: [
         '> 0.5%',
         'last 2 versions',
