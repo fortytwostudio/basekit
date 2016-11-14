@@ -16,13 +16,14 @@ var gulp            = require('gulp'),
     // Report file sizes in the CLI
     size            = require('gulp-size');
 
-// Compile Sass with autoprefixer, I've removed sourcemaps
+// Compile Sass (with Autoprefixer)
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({autoprefixer: {
       // Add prefixes
       add: true,
+      // Browser support level
       browsers: [
         '> 0.5%',
         'last 2 versions',
@@ -30,10 +31,13 @@ gulp.task('scss', function() {
       ]
     }}))
     .pipe(gulp.dest('css'))
+    // Show file size before gzip
     .pipe(size({ showFiles: true }))
+    // Show file size after gzip
     .pipe(size({ gzip: true, showFiles: true }));
 });
-// Minify and concat the js files for use
+
+// Minify and Concat JS files for production
 gulp.task('js', function() {
   gulp.src('js/*.js')
     .pipe(concat('basekit.js'))
@@ -42,7 +46,7 @@ gulp.task('js', function() {
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
-// Minify HTML source and rename the index-dev file
+// Minify and clean HTML
 gulp.task('html', function() {
   gulp.src('./html/*.html')
     .pipe(htmlmin({
@@ -61,42 +65,56 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./'));
 });
 
-// Compile Nunjucks static templates
+// Compile Nunjucks templates to HTML for use by CMS integration
 gulp.task('nunjucks', function() {
-  // Get the .html and .nunjucks files
+  // Get the pages level templates to process
   return gulp.src('templates/src/pages/**/*.+(html|njk|nunjucks)')
-  // Pull in data for Nunjucks
+  // Data for populating Nunjucks files
   .pipe(data(function() { return require('./templates/data.json') }))
-  // Renders template with nunjucks
+  // Renders template including partials
   .pipe(nunjucksRender({ path: ['templates/src/partials'] }))
-  // Output files for CMS devs to work with
+  // Output dev ready files
   .pipe(gulp.dest('templates/dist'))
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+    removeAttributeQuotes: true,
+    removeRedundantAttributes: true,
+    removeEmptyAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    collapseBooleanAttributes: true,
+    quoteCharacter: '\'',
+    minifyJS: true,
+    minifyCSS: true
+  }))
+  .pipe(gulp.dest('templates/dist/min'));
 });
 
 // Minify Nunjucks HTML files
-gulp.task('njkdev', function() {
-  gulp.src('./templates/dist/*.html')
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true,
-      removeAttributeQuotes: true,
-      removeRedundantAttributes: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      collapseBooleanAttributes: true,
-      quoteCharacter: '\'',
-      minifyJS: true,
-      minifyCSS: true
-    }))
-    .pipe(gulp.dest('templates/dist/min'));
-});
+// gulp.task('njkdev', function() {
+//   gulp.src('./templates/dist/*.html')
+//     .pipe(htmlmin({
+//       collapseWhitespace: true,
+//       removeComments: true,
+//       removeAttributeQuotes: true,
+//       removeRedundantAttributes: true,
+//       removeEmptyAttributes: true,
+//       removeScriptTypeAttributes: true,
+//       removeStyleLinkTypeAttributes: true,
+//       collapseBooleanAttributes: true,
+//       quoteCharacter: '\'',
+//       minifyJS: true,
+//       minifyCSS: true
+//     }))
+//     .pipe(gulp.dest('templates/dist/min'));
+// });
 
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch('./templates/src/partials/**/*.+(html|njk|nunjucks)', ['nunjucks']);
-  gulp.watch('./templates/dist/*.html', ['njkdev']);
+  // gulp.watch('./templates/dist/*.html', ['njkdev']);
 });
 
 gulp.task('default', ['watch']);
