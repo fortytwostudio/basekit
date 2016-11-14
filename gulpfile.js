@@ -44,17 +44,13 @@ gulp.task('js', function() {
 
 // Compile Nunjucks static templates
 gulp.task('nunjucks', function() {
-  // Gets .html and .nunjucks files in pages
+  // Get the .html and .nunjucks files
   return gulp.src('templates/src/pages/**/*.+(html|njk|nunjucks)')
   // Pull in data for Nunjucks
-  .pipe(data(function() {
-    return require('./templates/data.json')
-  }))
+  .pipe(data(function() { return require('./templates/data.json') }))
   // Renders template with nunjucks
-  .pipe(nunjucksRender({
-    path: ['templates/src/partials']
-  }))
-  // output files in app folder
+  .pipe(nunjucksRender({ path: ['templates/src/partials'] }))
+  // Output files for CMS devs to work with
   .pipe(gulp.dest('templates/dist'))
 });
 
@@ -77,11 +73,11 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./'));
 });
 
-// Only watch Sass and JS files
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch('./html/*.html', ['html']);
+  gulp.watch('./templates/src/partials/**/*.+(html|njk|nunjucks)', ['nunjucks']);
 });
 
 gulp.task('default', ['watch']);
