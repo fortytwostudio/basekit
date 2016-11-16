@@ -9,12 +9,12 @@
   @if $display-inline-class  {
     .inline {
       display: inline;
+    }
+  }
 
-      @if $display-inline-block-class  {
-        &-block {
-          display: inline-block;
-        }
-      }
+  @if $display-inline-block-class  {
+    .inline-block {
+      display: inline-block;
     }
   }
 
