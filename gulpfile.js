@@ -1,24 +1,29 @@
-var gulp          = require('gulp'),
-    // Process and compile scss/css files
-    sass          = require('gulp-sass'),
-    // Optimise css
-    nano          = require('gulp-cssnano'),
-    // Join js files into one
-    concat        = require('gulp-concat'),
-    // Minify js
-    uglify        = require('gulp-uglify'),
-    // Minify HTML
-    htmlmin    = require('gulp-htmlmin'),
-    // Report file sizes
-    size          = require('gulp-size');
+var gulp            = require('gulp'),
+    // Sass for writing and pre-processing the CSS
+    sass            = require('gulp-sass'),
+    // Nano for optimising and post-processing the CSS
+    nano            = require('gulp-cssnano'),
+    // Join JS into one file
+    concat          = require('gulp-concat'),
+    // Minify the one JS file
+    uglify          = require('gulp-uglify'),
+    // Minify and clean up HTML files
+    htmlmin         = require('gulp-htmlmin'),
+    // Data storage for Nunjucks, and anything else
+    data            = require('gulp-data'),
+    // HTML static templating, it's a bit like Twig
+    nunjucksRender  = require('gulp-nunjucks-render'),
+    // Report file sizes in the CLI
+    size            = require('gulp-size');
 
-// Compile Sass with autoprefixer, I've removed sourcemaps
+// Compile Sass (with Autoprefixer)
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({autoprefixer: {
+      // Add prefixes
       add: true,
-      remove: false,
+      // Browser support level
       browsers: [
         '> 0.5%',
         'last 2 versions',
@@ -26,10 +31,13 @@ gulp.task('scss', function() {
       ]
     }}))
     .pipe(gulp.dest('css'))
+    // Show file size before gzip
     .pipe(size({ showFiles: true }))
+    // Show file size after gzip
     .pipe(size({ gzip: true, showFiles: true }));
 });
-// Minify and concat the js files for use
+
+// Minify and Concat JS files for production
 gulp.task('js', function() {
   gulp.src('js/*.js')
     .pipe(concat('basekit.js'))
@@ -38,7 +46,7 @@ gulp.task('js', function() {
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
-// Minify HTML source and rename the index-dev file
+// Minify and clean HTML
 gulp.task('html', function() {
   gulp.src('./html/*.html')
     .pipe(htmlmin({
@@ -57,11 +65,39 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./'));
 });
 
-// Only watch Sass and JS files
+// Compile Nunjucks templates to HTML for use by CMS integration
+gulp.task('nunjucks', function() {
+  // Get the pages level templates to process
+  return gulp.src('templates/src/pages/**/*.+(html|njk|nunjucks)')
+  // Data for populating Nunjucks files
+  .pipe(data(function() { return require('./templates/data.json') }))
+  // Renders template including partials
+  .pipe(nunjucksRender({ path: ['templates/src/partials'] }))
+  // Output unminified files for CMS templating
+  .pipe(gulp.dest('templates/dist'))
+  // Minify the files for development usage
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+    removeAttributeQuotes: true,
+    removeRedundantAttributes: true,
+    removeEmptyAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    collapseBooleanAttributes: true,
+    quoteCharacter: '\'',
+    minifyJS: true,
+    minifyCSS: true
+  }))
+  // Output minified files
+  .pipe(gulp.dest('templates/dist/min'));
+});
+
+// Combine various functions into watch
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('js/*.js', ['js']);
-  gulp.watch('./html/*.html', ['html']);
+  gulp.watch('./templates/src/**/*', ['nunjucks']);
 });
 
 gulp.task('default', ['watch']);

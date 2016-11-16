@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+{{ nav.active('home') }}
+
+<h1>{{siteName}}</h1>
+
+{% if images|length %}
+  <ul class="gallery">
+    <!-- Loops through "images" array -->
+    {% for image in images %}
+    <li class="gallery__item">
+      <img src="{{image.src}}" alt="{{image.alt}}">
+    </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% endblock %}
