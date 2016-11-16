@@ -34,8 +34,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: rem($font-size-small-screen);
     color: $alert-bg;
     padding: 0 3px 2px;
-    background-color: lighten($grey-light, 12.5%);
-    border: 1px solid $grey-light;
+    background-color: lighten($grey--light, 12.5%);
+    border: 1px solid $grey--light;
     border-radius: 3px;
   }
 }

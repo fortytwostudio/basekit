@@ -14,7 +14,9 @@ var gulp            = require('gulp'),
     // HTML static templating, it's a bit like Twig
     nunjucksRender  = require('gulp-nunjucks-render'),
     // Report file sizes in the CLI
-    size            = require('gulp-size');
+    size            = require('gulp-size'),
+    // Fancy documentation
+    sassdoc       = require('sassdoc');
 
 // Compile Sass (with Autoprefixer)
 gulp.task('scss', function() {
@@ -91,6 +93,15 @@ gulp.task('nunjucks', function() {
   }))
   // Output minified files
   .pipe(gulp.dest('templates/dist/min'));
+});
+
+
+gulp.task('sassdoc', function () {
+  return gulp.src(['css/**/*.scss', '!css/core/third-party/**/*.scss'])
+  .pipe(sassdoc({
+    dest: 'docs',
+    verbose: true
+  }));
 });
 
 // Combine various functions into watch
