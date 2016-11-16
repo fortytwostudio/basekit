@@ -1,40 +1,53 @@
-// The brand's primary colour
+///
+/// @author Ryan Roberts
+///
+
+/// Brand Colours
+///
+/// The three brand specific colours should come from a style guide
+/// or other brand guidelines provided by a designer. I then generate lighter and
+/// darker varients but it's not necessary to use them, however you *should* check
+/// that they look sensible.
+
 $primary: tomato;
 $primary--light: lighten($primary, 15%);
 $primary--dark: darken($primary, 20%);
 
-// The brand's secondary colour
 $secondary: dodgerblue;
 $secondary--light: lighten($secondary, 15%);
 $secondary--dark: darken($secondary, 20%);
 
-// The brand's tertiary colour if one exists, if not then speak with the
-// designer and choose something appropriate
 $tertiary: lightgrey;
 $tertiary--light: lighten($tertiary, 15%);
 $tertiary--dark: darken($tertiary, 10%);
 
-// Grey get's used a lot in projects so set three variations here. I've used
-// CSS keywords by default but these are in no way fixed.
 $grey-light: lightgrey;
 $grey-mid: grey;
 $grey-dark: dimgrey;
 
-// Set the body colour here, if you want to add an image you should configure
-// the $body-media currently in set.media.scss
+/// Document Colours
+///
+/// The following colours are for standard elements commonly found
+/// across any site or document.
+
+/// Set the body colour here, if you want to add an image you should configure
+/// the $body-media currently in set.media.scss
 $body: whitesmoke;
 
-// Set the primary (body) text colour
+/// Set the primary (body) text colour
 $text: $grey-dark;
 
-// This is optional, you're better off using the color utility classes to set
-// the colour on headings unless there is very little variation in heading
-// colours.
+/// This is optional, you're better off using the color utility classes to set
+/// the colour on headings unless there is very little variation in heading
+/// colours.
 $heading: $text;
 
-// Error colours should be something nice and impactful.
+/// Alert Colours
+///
+/// Alert classes can be used anywhere but for now they're tied to
+/// form alerts, set the colours here if you want to change them.
 $alert-text: white;
 $alert-bg: orangered;
-// Set the following to null to prevent any CSS being needlessly compiled.
+/// Set the following to null to prevent any CSS being needlessly compiled.
 $alert-bg--neutral: dodgerblue;
 $alert-bg--positive: limegreen;
