@@ -20,7 +20,7 @@
     }
 
     ul {
-      margin-left: rem(20px);
+      margin-left: em(20px);
       // margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: disc outside none;
@@ -32,7 +32,7 @@
     }
 
     ol {
-      margin-left: rem(30px);
+      margin-left: em(30px);
       // margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: decimal-leading-zero outside none;
