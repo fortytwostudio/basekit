@@ -1,7 +1,7 @@
-// Set your primary font family, obvs :)
-// If you need a serif stack use something like the following:
-// georgia, times, "times new roman", "nimbus roman no9 l", freeserif, serif
-$font-family: helvetica, arial, helmet, freesans, "numbus sans l", verdana, sans-serif;
+// By default BaseKit will use the system native font depending on that platform.
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$font-family--serif: georgia, times, "times new roman", "nimbus roman no9 l", freeserif, serif;
 
 // Define the base font size. This is important, get it right.
 $font-size: 16px;
