@@ -100,13 +100,14 @@ gulp.task('sassdoc', function () {
   return gulp.src(['css/**/*.scss', '!css/core/third-party/**/*.scss'])
   .pipe(sassdoc({
     dest: 'docs',
-    verbose: true
+    verbose: true,
   }));
 });
 
 // Combine various functions into watch
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
+  gulp.watch('html/*.html', ['html']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch('./templates/src/**/*', ['nunjucks']);
 });

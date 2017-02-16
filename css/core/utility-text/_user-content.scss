@@ -42,6 +42,11 @@
         margin-bottom: 0;
       }
     }
+
+    // See: http://allthingssmitty.com/2016/11/28/use-attribute-selectors-with-empty-links/
+    a[href]:empty::before {
+      content: attr(href);
+    }
   }
 
 }
