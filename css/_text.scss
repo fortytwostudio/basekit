@@ -54,10 +54,4 @@
   &-upper {
     text-transform: uppercase;
   }
-
-  // Instead of adding kerning to xl and xxl let's just utilise a class.
-  &-kern {
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
-  }
 }
