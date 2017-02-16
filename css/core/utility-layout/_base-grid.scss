@@ -1,0 +1,331 @@
+////
+/// @author Ryan Roberts
+////
+
+/// Define the default breakpoint name and value. Fewer will generate smaller
+/// CSS files but less control over layout.
+$mq-breakpoints: (
+  palm: 480px,
+  hands: 600px,
+  lap: 768px,
+  desk: 1024px
+) !default;
+
+/// Define the maximum number of grid columns
+///
+/// 12 is the value I would recommend because you can get just about any
+/// column layout combination out of it (except odd column layouts).
+/// 24 columns is also useful but increases file size and CSS.
+$columns: 12 !default;
+
+/// Define the width of each column in pixels, without the `px`.
+$column-width: 70 !default;
+
+/// Define the width of each gutter space between the columns, without the `px`.
+/// Gutters are applied either side of a column, e.g.
+/// [gutter][column][gutter][gutter][column][gutter]
+$gutter: 30 !default;
+
+/// Since gutters are actually applied around a column they need to the split
+/// in half. This variable simplifies that and is the variable commonly used.
+$margin: $gutter / 2 !default;
+
+/// Name your layout data attribute, should start with `data-`.
+///
+/// @example
+///   <div data-bk="…">
+$bk-grid-name: data-bk;
+
+/// Enable or disable max-width breakpoint CSS. In simpler designs you may not
+/// ever utilise max-width breakpoints, set this `false` in that case to save
+/// users downloading unnecessary CSS.
+///
+/// @example
+///   <div data-bk="to:lap:8  to:desk:6">
+$bk-grid-mq-to: true;
+
+/// By default columns get a (half gutter) margin around them, this variable
+/// defines the smaller size margin. Typically it will be half but you can tweak
+/// as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-small: $margin / 2;
+
+/// By default columns get a (half `$gutter`) margin around them, this variable
+/// defines the larger size margin. Typically it will be double but you can
+/// tweak as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-large: $margin * 2;
+
+/// Columns can be pushed (left or right) using padding CSS, you'll never want
+/// to push the a layout the total number of columns so here we subtract one
+/// from the number.
+/// @access private
+$bk-push-columns: $columns - 1;
+
+/// Enable/Disable push (towards the right |-->) CSS.
+$bk-push-right: true;
+
+/// Enable/Disable push (towards the left <--|) CSS.
+/// Use cases for this are quite small since blocks naturally position over to
+/// the left. However, it can be useful if you align blocks with
+/// `text-align: right` and then need to push a block to the left.
+$bk-push-left: true;
+
+// Make use of the fantastic sass-mq from The Guardian's developers
+@import "core/third-party/media-queries";
+
+
+// A simple function to switch the order of the MQ Breakpoints list
+@function reverse($list) {
+  $result: ();
+  @for $i from length($list)*-1 through -1 {
+    $result: append($result, nth($list, abs($i)));
+  }
+  @return $result;
+}
+
+/// A simple mixin to ease use of the attribute selector
+///
+/// @todo EVERYTHING
+/// @access private
+@mixin attr-module($module, $trait: null) {
+  // Target trait such as data-bk="palm:1"
+  @if $trait != null {
+    [#{$module}~="#{$trait}"] {
+      @content;
+    }
+  }
+  // Target the selector itself if no trait, i.e. data-bk=""
+  @else {
+    [#{$module}] {
+      @content;
+    }
+  }
+}
+
+
+/// Grid cell alignments.
+///
+/// @todo EVERYTHING
+/// @access private
+@mixin grid-alignments($ga-value: null) {
+
+  // Apple middle vertical alignment to child grid items (default is: top)
+  @include attr-module($bk-grid-name, #{$ga-value}#{"middle"}) {
+    > {
+      @include attr-module($bk-grid-name) {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  // Apple bottom vertical alignment to child grid items (default is: top)
+  @include attr-module($bk-grid-name, #{$ga-value}#{"bottom"}) {
+    > {
+      @include attr-module($bk-grid-name) {
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  // Align individual item bottom
+  // Using !important to override the above alignments
+  @include attr-module($bk-grid-name, #{$ga-value}#{"self-bottom"}) {
+    vertical-align: bottom!important;
+  }
+
+  // The following three apply horizontal alignments on the container, this will also cascade down to children and text
+  @include attr-module($bk-grid-name, #{$ga-value}#{"center"}) {
+    text-align: center;
+  }
+  @include attr-module($bk-grid-name, #{$ga-value}#{"right"}) {
+    text-align: right;
+  }
+  @include attr-module($bk-grid-name, #{$ga-value}#{"left"}) {
+    text-align: left;
+  }
+
+}
+
+
+/// Generate grid columns.
+///
+/// @todo EVERYTHING
+/// @access private
+@mixin grid-columns($gw-value: null) {
+  // Auto will shrink to the width of the content, default however is 100% width
+  @include attr-module($bk-grid-name, #{$gw-value}auto) {
+    width: auto;
+  }
+
+  // Loop through the number of columns defined in the settings and output the appropriate width in %
+  @for $i from 1 through $columns {
+    @include attr-module($bk-grid-name, #{$gw-value}#{$i}) {
+      width: 100% / ($columns / $i);
+    }
+  }
+}
+
+
+/// Grid column indentation.
+/// Indent content in numbers of columns (up to -1 of the total columns).
+///
+/// @todo EVERYTHING
+/// @access private
+@mixin grid-indent($gw-value: null) {
+  // PUSH COLUMN TO THE RIGHT (from the left side)
+  @if $bk-push-right {
+    @for $i from 1 through $bk-push-columns {
+      @include attr-module($bk-grid-name, #{$gw-value}#{"pr:"}#{$i}) {
+        margin-left: 100% / ($columns / $i);
+      }
+    }
+  }
+  // PUSH COLUMN TO THE LEFT (from the right side)
+  @if $bk-push-left {
+    @for $i from 1 through $bk-push-columns {
+      @include attr-module($bk-grid-name, #{$gw-value}#{"pl:"}#{$i}) {
+        margin-right: 100% / ($columns / $i);
+      }
+    }
+  }
+}
+
+
+/// Grid column padding (margins/gutters).
+///
+/// @access private
+@mixin grid-padding($gg-value: null) {
+
+  // Reduce the gutte size on the module
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:small"}) {
+    padding: ($bk-grid-padding-small / 16) * 1rem;
+  }
+
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:large"}) {
+    padding: ($bk-grid-padding-large / 16) * 1rem;
+  }
+
+  // Disable padding completely on the module
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:0"}) {
+    padding: 0;
+  }
+
+
+
+  // Top-Right-Bottom
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:trb"}) {
+    padding: { left: 0; };
+  }
+  // Top-Bottom-Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tbl"}) {
+    padding: { right: 0; };
+  }
+  // Top-Right-Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:trl"}) {
+    padding: { bottom: 0; };
+  }
+
+  // Top
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:t"}) {
+    padding: { right: 0; bottom: 0; left: 0; };
+  }
+  // Top-Right
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tr"}) {
+    padding: { bottom: 0; left: 0; };
+  }
+  // Right
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:r"}) {
+    padding: { top: 0; bottom: 0; left: 0; };
+  }
+  // Right-Bottom-Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:rbl"}) {
+    padding: { top: 0; };
+  }
+
+  // Bottom
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:b"}) {
+    padding: { top: 0; right: 0; left: 0; };
+  }
+  // Horizontal: Top-Bottom
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tb"}) {
+    padding: { right: 0; left: 0; };
+  }
+  // Right-Bottom
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:rb"}) {
+    padding: { top: 0; left: 0; };
+  }
+
+  // Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:l"}) {
+    padding: { top: 0; right: 0; bottom: 0; };
+  }
+  // Right-Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:rl"}) {
+    padding: { top: 0; bottom: 0; };
+  }
+  // Top-Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tl"}) {
+    padding: { right: 0; bottom: 0; };
+  }
+
+  // Bottom-Left
+  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:bl"}) {
+    padding: { top: 0; right: 0; };
+  }
+
+}
+
+
+// Output the default element at 100% width
+// And reduce the default padding
+@include attr-module($bk-grid-name) {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: (($margin / 2) / 16) * 1rem;
+
+
+  // Increase the padding size
+  @include mq(hands) {
+    padding: ($margin / 16) * 1rem;
+  }
+}
+
+// Output the _base_ set of properties (mobile first, no MQ)
+@include grid-columns;
+@include grid-padding;
+@include grid-indent;
+@include grid-alignments;
+
+// Iterate through the media queries and output properties for each without the base props
+@each $breakpoint, $gw-value in $mq-breakpoints {
+  // @if $gw-value != null {
+    @include mq($breakpoint) {
+      @include grid-columns("#{$breakpoint}:");
+      @include grid-padding("#{$breakpoint}:");
+      @include grid-indent("#{$breakpoint}:");
+      @include grid-alignments("#{$breakpoint}:");
+      // @include grid-display("#{$breakpoint}:");
+    }
+  // }
+}
+
+// Same as above but instead of `from` this one is up `to` without the base props
+@if $bk-grid-mq-to {
+  @each $breakpoint, $gw-value in reverse($mq-breakpoints) {
+    // @if $gw-value != null {
+      @include mq($until: $breakpoint) {
+        @include grid-columns("to:#{$breakpoint}:");
+        @include grid-padding("to:#{$breakpoint}:");
+        @include grid-indent("to:#{$breakpoint}:");
+        @include grid-alignments("to:#{$breakpoint}:");
+        // @include grid-display("to:#{$breakpoint}:");
+      }
+    // }
+  }
+}
