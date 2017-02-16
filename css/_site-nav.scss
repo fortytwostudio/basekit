@@ -1,26 +1,130 @@
 .nav-links {
   a {
     color: white;
-    background: $primary;
-    transition: all $speed-slow ease-in-out;
+    transition: all $speed-normal ease-in-out;
 
     &:focus,
     &:hover {
       // Unfortunatly the specificity requires white be set again here.
-      color: white;
-      background: $secondary;
-      transition-duration: $speed-normal;
+      color: $tertiary;
     }
   }
 
-  &__active {
+  .active {
     a {
-      color: white;
-      background: #111;
+      color: $grey;
 
       &:focus,
       &:hover {
-        background: #666;
+        color: $tertiary;
+      }
+    }
+  }
+
+  &__home {
+    $home-width: 43px;
+    $home-height: 46px;
+
+    position: relative;
+    // Override default mobile nav link stuff
+    display: inline-block!important;
+    width: rem($home-width / 2)!important;
+    height: rem($home-height / 2)!important;
+
+    a {
+      @include fit-media;
+      background-image: url('/imgs/ui/home.svg');
+      background-size: 99%;
+      background-repeat: no-repeat;
+      padding: 0;
+    }
+  }
+}
+
+
+@if $nav-mobile {
+  .nav-active {
+    overflow: hidden;
+  }
+
+  .nav-toggler {
+    $site-logo-height: 44px;
+
+    appearance: none;
+    background-clip: padding-box;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    background: transparent url('/imgs/ui/menu-icon-open.svg') no-repeat center center;
+    background-size: 60%;
+    display: inline-block!important;
+    @include hide(text);
+    transition: background-color $speed-fast ease-in-out;
+
+    height: rem($site-logo-height) / 1.5;
+    width: rem($site-logo-height) / 1.5;
+    @include mq(palm) {
+      height: rem($site-logo-height);
+      width: rem($site-logo-height);
+    }
+    @include mq(lap) {
+      height: rem($site-logo-height) * 1.25;
+      width: rem($site-logo-height) * 1.25;
+    }
+
+    .nav-active & {
+      // the icon active state
+      background-image: url('/imgs/ui/menu-icon-closed.svg');
+      position: relative;
+      z-index: $z-max;
+    }
+  }
+
+  .site-nav {
+    // hide the nav item and fade out by default
+    position: absolute;
+    left: -9999em;
+    top: -9999em;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity $speed-normal ease-out;
+
+    .nav-active & {
+      // when the checkbox is checked, fade the opacity
+      // back to 1 and transition to the content height
+      // (max-height can be any safe range well over what
+      // the nav content could ever be)
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      min-width: 100vw;
+      min-height: 100vh;
+      opacity: 1;
+      overflow: hidden;
+      transition: opacity $speed-fast ease-in;
+      text-align: center;
+      z-index: $z-mobile-nav;
+      background: $primary;
+
+      ul {
+        @include position-over(middle);
+        width: 100%;
+      }
+
+      li {
+        display: block;
+        width: 100%;
+        font-size: 175%;
+      }
+
+      a {
+        display: block;
+        padding: rem(5px);
       }
     }
   }
