@@ -20,31 +20,12 @@
       }
     }
   }
-
-  &__home {
-    $home-width: 43px;
-    $home-height: 46px;
-
-    position: relative;
-    // Override default mobile nav link stuff
-    display: inline-block!important;
-    width: rem($home-width / 2)!important;
-    height: rem($home-height / 2)!important;
-
-    a {
-      @include fit-media;
-      background-image: url('/imgs/ui/home.svg');
-      background-size: 99%;
-      background-repeat: no-repeat;
-      padding: 0;
-    }
-  }
 }
 
 
 @if $nav-mobile {
   .nav-active {
-    overflow: hidden;
+    font-weight: bold;
   }
 
   .nav-toggler {
