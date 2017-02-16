@@ -22,29 +22,15 @@
   }
 
   // Define an alternative link style.
-  &--inverted {
-    a {
-      color: $secondary;
+  // &--inverted {
+  //   a {
+  //     color: $secondary;
 
-      &:focus,
-      &:hover {
-        color: $primary;
-      }
-    }
-  }
-
-  // You can add as many modifiers as required, this contrasted modifier might
-  // be useful on a dark background. You may also add a --nav modifier for
-  // styling navigation links.
-  &--contrasted {
-    a {
-      color: white;
-
-      &:focus,
-      &:hover {
-        color: $grey--dark;
-      }
-    }
-  }
+  //     &:focus,
+  //     &:hover {
+  //       color: $primary;
+  //     }
+  //   }
+  // }
 
 }
