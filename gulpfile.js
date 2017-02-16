@@ -70,8 +70,8 @@ gulp.task('html', function() {
 // Compile Twig templates to HTML
 gulp.task('twig', function() {
   // run the Twig template parser on all .html files in the "src" directory
-  return gulp.src(['templates/dev/**/*.twig', '!templates/dev/layouts/**/*.twig', '!templates/dev/includes/**/*.twig'])
-  // Data for populating Nunjucks files
+  return gulp.src(['templates/**/*.twig', '!templates/layouts/**/*.twig', '!templates/includes/**/*.twig'])
+  // Data for populating Twig files
   .pipe(data(function() { return require('./templates/data.json') }))
   .pipe(twig())
   // output the rendered HTML files to the "dist" directory —— disabled for now as we don't need non-compressed html files
@@ -91,7 +91,7 @@ gulp.task('twig', function() {
     minifyCSS: true
   }))
   // Output minified files —— add /_min to the end if you enable uncompressed html output above
-  .pipe(gulp.dest('templates/html'));
+  .pipe(gulp.dest('templates/_html'));
 });
 
 
