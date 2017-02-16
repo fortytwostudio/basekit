@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "gulp-data": "^1.2.1",
-    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-twig": "^0.7.0",
     "sassdoc": "^2.1.20"
   }
 }

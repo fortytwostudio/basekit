@@ -11,12 +11,12 @@ var gulp            = require('gulp'),
     htmlmin         = require('gulp-htmlmin'),
     // Data storage for Nunjucks, and anything else
     data            = require('gulp-data'),
-    // HTML static templating, it's a bit like Twig
-    nunjucksRender  = require('gulp-nunjucks-render'),
+    // HTML static templating
+    twig            = require('gulp-twig'),
     // Report file sizes in the CLI
     size            = require('gulp-size'),
     // Fancy documentation
-    sassdoc       = require('sassdoc');
+    sassdoc         = require('sassdoc');
 
 // Compile Sass (with Autoprefixer)
 gulp.task('scss', function() {
@@ -67,16 +67,15 @@ gulp.task('html', function() {
     .pipe(gulp.dest('./'));
 });
 
-// Compile Nunjucks templates to HTML for use by CMS integration
-gulp.task('nunjucks', function() {
-  // Get the pages level templates to process
-  return gulp.src('templates/src/pages/**/*.+(html|njk|nunjucks)')
+// Compile Twig templates to HTML
+gulp.task('twig', function() {
+  // run the Twig template parser on all .html files in the "src" directory
+  return gulp.src(['templates/dev/**/*.twig', '!templates/dev/layouts/**/*.twig', '!templates/dev/includes/**/*.twig'])
   // Data for populating Nunjucks files
   .pipe(data(function() { return require('./templates/data.json') }))
-  // Renders template including partials
-  .pipe(nunjucksRender({ path: ['templates/src/partials'] }))
-  // Output unminified files for CMS templating
-  .pipe(gulp.dest('templates/dist'))
+  .pipe(twig())
+  // output the rendered HTML files to the "dist" directory —— disabled for now as we don't need non-compressed html files
+  // .pipe(gulp.dest('templates/dist'))
   // Minify the files for development usage
   .pipe(htmlmin({
     collapseWhitespace: true,
@@ -91,8 +90,8 @@ gulp.task('nunjucks', function() {
     minifyJS: true,
     minifyCSS: true
   }))
-  // Output minified files
-  .pipe(gulp.dest('templates/dist/min'));
+  // Output minified files —— add /_min to the end if you enable uncompressed html output above
+  .pipe(gulp.dest('templates/html'));
 });
 
 
@@ -107,9 +106,9 @@ gulp.task('sassdoc', function () {
 // Combine various functions into watch
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
-  gulp.watch('html/*.html', ['html']);
+  // gulp.watch('html/*.html', ['html']);
   gulp.watch('js/*.js', ['js']);
-  gulp.watch('./templates/src/**/*', ['nunjucks']);
+  // gulp.watch('./templates/src/**/*', ['nunjucks']);
 });
 
 gulp.task('default', ['watch']);
