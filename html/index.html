@@ -81,7 +81,36 @@
 
   </head>
 
-  <body>
+  <body id="js-page">
+
+    <header id="header" class="site-container  pad">
+      <div data-bk="6" class="site-logo--container">
+        <h1 class="site-logo  logo">
+          <a class="hide-text" href="{{ siteUrl }}">
+            {{ siteName }}
+          </a>
+        </h1>
+      </div>
+
+      <div data-bk="pad:0  6  right">
+        <nav class="site-nav  font-upper  nav-links" aria-label="Site main navigation">
+          <ul>
+            <li class="nav-links__home">
+              <a href="/" title="Home Page">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button id="js-nav-toggler" class="nav-toggler">Menu</button>
+      </div>
+
+    </header>
 
     <section id="install" class="site-container  pad  user-content  set-links">
       <h2 class="font-l">Installation</h2>
@@ -843,5 +872,15 @@
 
 
     <script src="/js/min/basekit.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('js-nav-toggler').addEventListener('click', function (e) {
+              if (e.target.nodeName.toLowerCase() === 'a') {
+                  e.preventDefault();
+              }
+              document.getElementById('js-page').classList.toggle('nav-active');
+          });
+      });
+    </script>
   </body>
 </html>
