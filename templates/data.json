@@ -1,10 +1,13 @@
 {
   "siteName": "BaseKit Template",
+
   "images": [{
     "src": "image-one.png",
     "alt": "Image one alt text"
   }, {
     "src": "image-two.png",
     "alt": "Image two alt text"
-  }]
+  }],
+
+  "siteUrl": "http://basekit.dev"
 }
