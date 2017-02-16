@@ -28,26 +28,9 @@ $btn-transition-speed: $speed-normal;
     transition: all $btn-transition-speed ease-in-out!important;
 
     &:hover,
-    &:active,
     &:focus {
       color: $btn-txt--hover;
       background-color: $btn-bg--hover;
-    }
-
-    &--medium {
-      font-size: 1.25em;
-    }
-
-    &--large {
-      font-size: 1.75em;
-    }
-
-    &--natural {
-      vertical-align: baseline;
-      line-height: 0.8;
-      height: auto;
-      padding-right: 0.25em;
-      padding-left: 0.25em;
     }
 
     &--fill {
