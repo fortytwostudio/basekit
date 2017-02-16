@@ -100,7 +100,7 @@ gulp.task('sassdoc', function () {
   return gulp.src(['css/**/*.scss', '!css/core/third-party/**/*.scss'])
   .pipe(sassdoc({
     dest: 'docs',
-    verbose: true
+    verbose: true,
   }));
 });
 
