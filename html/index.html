@@ -437,7 +437,7 @@
 
       <p>Fields marked with <em>*</em> are required.</p>
 
-      <form class="form" id="enquiry-form" method="post">
+      <form data-bk="6" class="form" id="enquiry-form" method="post">
 
         <div class="margin-tb">
           <label class="form__label" for="enquiry-nature">Nature of enquiry <span class="form__required">*</span></label>
@@ -579,6 +579,234 @@
             <label for="irb2">No</label>
           </div>
         </div>
+      </form>
+
+
+       <form data-bk="6" class="scope-form" action="">
+        <fieldset class="field__group">
+          <legend>Input Types</legend>
+
+          <div class="field__item">
+            <label class="field__label" for="text">Input Type</label>
+            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="num">Input Type Number</label>
+            <input class="field__input  field__input--number" type="number" name="num" id="num" min="1" max="100" value="100">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="email">Input Type Email</label>
+            <input class="field__input  field__input--email" type="email" placeholder="info@mysite.com" id="email">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="password">Input Type Password</label>
+            <input class="field__input  field__input--password" type="password" id="password">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="search">Input Type Search</label>
+            <input class="field__input  field__input--search" type="search" id="search">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="tel">Input Type Tel</label>
+            <input class="field__input  field__input--tel" type="tel" placeholder="01224 000 000" id="tel">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="url">Input Type URL</label>
+            <input class="field__input  field__input--url" type="url" placeholder="https://" id="url">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="checkbox">
+              Input Type Checkbox
+              <input class="field__input  field__input--checkbox" type="checkbox" id="checkbox">
+            </label>
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="radio">
+              Input Type Radio
+              <input class="field__input  field__input--radio" type="radio" id="radio">
+            </label>
+          </div>
+
+
+          <div class="field__item">
+            <label class="field__label" for="date">Input Type Date</label>
+            <input class="field__input  field__input--date" type="date" id="date">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="date-local">Input Type Datetime Local</label>
+            <input class="field__input  field__input--date" type="datetime-local" id="date-local">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="month">Input Type Month</label>
+            <input class="field__input  field__input--month" type="month" id="month">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="week">Input Type Week</label>
+            <input class="field__input  field__input--week" type="week" id="week">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="time">Input Type Time</label>
+            <input class="field__input  field__input--time" type="time" id="time">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="file">Input Type File</label>
+            <input class="field__input  field__input--submit" type="file" value="File" id="file">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="range">Input Type Range</label>
+            <input class="field__input  field__input--range" type="range" id="range">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="color">Input Type Color</label>
+            <input class="field__input  field__input--color" type="color" id="color">
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="datalist">Input with Datalist</label>
+            <input class="field__input  field__input--datalist" list="browsers" name="myBrowser" id="datalist">
+            <datalist class="field__datalist" id="browsers">
+              <option value="Chrome">
+              <option value="Firefox">
+              <option value="Internet Explorer">
+              <option value="Opera">
+              <option value="Safari">
+              <option value="Microsoft Edge">
+            </datalist>
+          </div>
+        </fieldset>
+
+
+
+
+        <fieldset class="field__group">
+          <legend>Textarea</legend>
+          <div class="field__item">
+            <label class="field__label" for="textarea">Input Type Textarea</label>
+            <textarea class="field__textarea" placeholder="Write something…" name="textarea" rows="10"></textarea>
+          </div>
+        </fieldset>
+
+
+
+
+
+        <fieldset class="field__group">
+          <legend>Buttons and Input Type Submit</legend>
+
+          <div class="field__item">
+            <label for="button">Button Type Button</label>
+            <button class="field__button" name="button" id="button">Button</button>
+          </div>
+
+          <div class="field__item">
+            <label for="button-submit">Button Type Submit</label>
+            <button class="field__button" type="submit" name="button-submit" id="button-submit">Button</button>
+          </div>
+
+          <div class="field__item">
+            <label for="submit">Input Type Submit</label>
+            <input class="field__input  field__input--submit" type="submit" value="Submit" name="submit" id="submit">
+          </div>
+
+          <div class="field__item">
+            <label for="input-button">Input Type Button</label>
+            <input class="field__input  field__input--submit" type="button" value="Button" name="input-button" id="input-button">
+          </div>
+
+          <div class="field__item">
+            <label for="button-disabled">Button Type Button Disabled</label>
+            <button class="field__button" name="button-disabled" id="button-disabled" disabled>Button</button>
+          </div>
+
+          <div class="field__item">
+            <label for="submit-disabled">Input Type Submit Disabled</label>
+            <input class="field__input  field__input--submit" type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="Input Image" for="image">Input Image</label>
+            <input class="field__input  field__input--image" type="image" name="image" id="image" src="https://i.imgur.com/k9Xg2ED.png">
+          </div>
+        </fieldset>
+
+
+
+
+
+
+        <fieldset class="field__group">
+          <legend>Select and Option Field Types</legend>
+
+          <div class="field__item">
+            <label class="field__label" for="select">Select Default</label>
+            <select class="field__select" name="select" id="select">
+              <option value="value1">Value 1</option>
+              <option value="value2" selected>Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="optgroups">Select with Optgroup</label>
+            <select class="field__select" id="optgroups">
+              <optgroup label="Group 1">
+                <option>Option 1.1</option>
+              </optgroup>
+              <optgroup label="Group 2">
+                <option selected>Option 2.1</option>
+                <option>Option 2.2</option>
+              </optgroup>
+              <optgroup label="Group 3" disabled>
+                <option>Option 3.1</option>
+                <option>Option 3.2</option>
+                <option>Option 3.3</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="select">Select Multiple</label>
+            <select multiple class="field__select" name="select" id="select">
+              <option value="value1">Value 1</option>
+              <option value="value2">Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+        </fieldset>
+
+
+
+
+
+
+        <fieldset class="field__group">
+          <legend>Measurement Field Types</legend>
+
+          <div class="field__item">
+            <label class="field__label" for="meter">Meter</label>
+            <meter class="field__meter" min="200" max="500" id="meter" value="350">350 degrees</meter>
+          </div>
+
+          <div class="field__item">
+            <label class="field__label" for="progress">Progress</label>
+            <progress class="field__progress" value="70" max="100" id="progress">70%</progress>
+          </div>
+        </fieldset>
       </form>
     </section>
 
