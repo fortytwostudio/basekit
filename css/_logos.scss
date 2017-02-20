@@ -1,6 +1,14 @@
+$site-logo-width: 206px;
+$site-logo-height: 46px;
+
+// Other sizes to try: 60px by 15px, or 64px by 16px
+$colophon-logo-width: 56px;
+$colophon-logo-height: 14px;
+
+
+// base utility to setup the logo for background image text replacement
 .logo {
   position: relative;
-
   &__img {
     @include fit-media;
     @include hide(text);
@@ -8,17 +16,24 @@
   }
 }
 
+// styles specific to the main site logo
 .site-logo {
-  $site-logo-width: 206px;
-  $site-logo-height: 46px;
-
   height: rem($site-logo-height) / 2;
   width: rem($site-logo-width) / 2;
 
-  @include mq(palm) {
-    height: 0;
-    padding-top: pct($site-logo-height, $max-width);
-    width: pct($site-logo-width, $max-width);
+  @include mq(hands) {
+    height: rem($site-logo-height / 1.5);
+    width: rem($site-logo-width / 1.5);
+  }
+
+  @include mq(lap) {
+    height: rem($site-logo-height / 1.2);
+    width: rem($site-logo-width / 1.2);
+  }
+
+  @include mq(desk) {
+    height: rem($site-logo-height);
+    width: rem($site-logo-width);
   }
 
   &__img {
@@ -26,9 +41,10 @@
   }
 }
 
+// styles for the footer "FortyTwo" logo
 .colophon-logo {
-  width: rem(56px); // 60px / 64px
-  height: rem(14px); // 15px / 16px
+  width: rem($colophon-logo-width);
+  height: rem($colophon-logo-height);
 
   &__img {
     background-image: url("../imgs/logos/colophon-logo.svg") ;
