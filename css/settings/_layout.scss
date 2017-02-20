@@ -3,10 +3,14 @@ $site-width: 95%;
 
 // Define your responsive breakpoints with a key name and px value.
 $mq-breakpoints: (
-  palm: 480px,
-  hands: 600px,
-  lap: 768px,
-  desk: 1024px
+  // palm: 480px,
+  // hands: 600px,
+  // lap: 768px,
+  // desk: 1024px
+  palm: 600px,
+  hands: 900px,
+  lap: 1200px,
+  desk: 1800px
 );
 
 // Define the column count for of your design. 12 is recommended even if you
