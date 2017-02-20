@@ -28,7 +28,7 @@
 
   // If enabled output a display class for each breakpoint
   @if $display-responsive {
-    @each $breakpoint, $gw-value in $mq-breakpoints {
+    @each $breakpoint, $bp-num in $mq-breakpoints {
       @include mq($breakpoint) {
         @if $display-block-class {
           .block--#{$breakpoint} {
