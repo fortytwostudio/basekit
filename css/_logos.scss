@@ -1,7 +1,7 @@
 .logo {
   position: relative;
 
-  a {
+  &__img {
     @include fit-media;
     @include hide(text);
     background-size: 100%;
@@ -21,7 +21,7 @@
     width: pct($site-logo-width, $max-width);
   }
 
-  a {
+  &__img {
     background-image: url("../imgs/logos/site-logo.svg");
   }
 }
@@ -30,7 +30,7 @@
   width: rem(56px); // 60px / 64px
   height: rem(14px); // 15px / 16px
 
-  a {
+  &__img {
     background-image: url("../imgs/logos/colophon-logo.svg") ;
   }
 }

@@ -200,7 +200,6 @@ $bk-push-left: true;
 ///
 /// @access private
 @mixin grid-padding($gg-value: null) {
-
   // Reduce the gutte size on the module
   @include attr-module($bk-grid-name, #{$gg-value}#{"pad:small"}) {
     padding: ($bk-grid-padding-small / 16) * 1rem;
@@ -277,7 +276,6 @@ $bk-push-left: true;
   @include attr-module($bk-grid-name, #{$gg-value}#{"pad:bl"}) {
     padding: { top: 0; right: 0; };
   }
-
 }
 
 
