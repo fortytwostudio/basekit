@@ -1,7 +1,10 @@
 .logo {
+  position: relative;
+
   a {
     @include fit-media;
-    background-size: cover;
+    @include hide(text);
+    background-size: 100%;
   }
 }
 
@@ -10,7 +13,6 @@
   $site-logo-height: 46px;
 
   height: rem($site-logo-height) / 2;
-  position: relative;
   width: rem($site-logo-width) / 2;
 
   @include mq(palm) {
@@ -25,7 +27,6 @@
 }
 
 .colophon-logo {
-  position: relative;
   width: rem(56px); // 60px / 64px
   height: rem(14px); // 15px / 16px
 

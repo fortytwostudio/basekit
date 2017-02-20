@@ -39,6 +39,7 @@
 
   &-hero { @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 70px); }
 
+
   &-bold {
     font-weight: 700;
   }
