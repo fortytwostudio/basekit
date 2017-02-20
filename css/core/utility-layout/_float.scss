@@ -1,4 +1,4 @@
-@if $float-css {
+@if $floats {
 
   .float {
     &-r {
@@ -19,6 +19,28 @@
       content:" ";
       display:block;
       clear:both;
+    }
+  }
+
+  // If enabled output a float class for each breakpoint
+  // But we won't bother with .clear
+  @if $floats-responsive {
+    @each $breakpoint, $gw-value in $mq-breakpoints {
+      @include mq($breakpoint) {
+        .float {
+          &-r--#{$breakpoint} {
+            float: right;
+          }
+
+          &-l--#{$breakpoint} {
+            float: left;
+          }
+
+          &-n--#{$breakpoint} {
+            float: none;
+          }
+        }
+      }
     }
   }
 

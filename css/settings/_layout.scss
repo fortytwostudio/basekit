@@ -27,7 +27,8 @@ $site-width-name: site-container;
 $site-width-position: auto;
 
 // Output the float utility class… ooh nasty.
-$float-css: true;
+$floats: true;
+$floats-responsive: true;
 
 // Output the display (block, inline-block, inline, etc) utility class.
 $display-css: true;
