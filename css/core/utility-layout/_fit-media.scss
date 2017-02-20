@@ -25,13 +25,11 @@
   object-fit: $fit;
 }
 
-// Utility Class
+// Utility Class to apply easily anywhere
 //
 @if $fit-media-css {
-
   .fit-media {
     transform-style: preserve-3d;
     @include fit-media;
   }
-
 }

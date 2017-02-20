@@ -1,14 +1,10 @@
 @if $display-css {
 
+  // Basic display utility classes
+
   @if $display-block-class {
     .block {
       display: block;
-    }
-  }
-
-  @if $display-inline-class  {
-    .inline {
-      display: inline;
     }
   }
 
@@ -18,10 +14,47 @@
     }
   }
 
+  @if $display-inline-class  {
+    .inline {
+      display: inline;
+    }
+  }
+
   @if $display-table-class  {
     .table {
       display: table;
     }
   }
 
+  // If enabled output a display class for each breakpoint
+  @if $display-responsive {
+    @each $breakpoint, $gw-value in $mq-breakpoints {
+      @include mq($breakpoint) {
+        @if $display-block-class {
+          .block--#{$breakpoint} {
+            display: block;
+          }
+        }
+
+        @if $display-inline-block-class  {
+          .inline-block--#{$breakpoint} {
+            display: inline-block;
+          }
+        }
+
+        @if $display-inline-class  {
+          .inline--#{$breakpoint} {
+            display: inline;
+          }
+        }
+
+        @if $display-table-class  {
+          .table--#{$breakpoint} {
+            display: table;
+          }
+        }
+
+      }
+    }
+  }
 }
