@@ -47,6 +47,15 @@
     a[href]:empty::before {
       content: attr(href);
     }
+
+    @if variable-exists(user-content-debugging) and $user-content-debugging {
+      &--debug {
+        a[href^="http"]:empty::before {
+          content: "EMPTY LINK";
+          border: 10px solid red;
+        }
+      }
+    }
   }
 
 }
