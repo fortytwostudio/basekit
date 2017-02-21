@@ -22,16 +22,21 @@ var gulp            = require('gulp'),
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(nano({autoprefixer: {
-      // Add prefixes
-      add: true,
-      // Browser support level
-      browsers: [
-        '> 0.5%',
-        'last 2 versions',
-        'ie >= 9'
-      ]
-    }}))
+    .pipe(nano({
+      // http://cssnano.co/optimisations/minifySelectors/
+      minifySelectors: false,
+
+      autoprefixer: {
+        // Add prefixes
+        add: true,
+        // Browser support level
+        browsers: [
+          '> 0.5%',
+          'last 2 versions',
+          'ie >= 9'
+        ]
+      }
+    }))
     .pipe(gulp.dest('css'))
     // Show file size before gzip
     .pipe(size({ showFiles: true }))
