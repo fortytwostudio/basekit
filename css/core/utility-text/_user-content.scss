@@ -52,7 +52,18 @@
       &--debug {
         a[href^="http"]:empty::before {
           content: "EMPTY LINK";
-          border: 10px solid red;
+          border: 5px dotted red;
+        }
+        p:empty::before {
+          content: "EMPTY PARAGRAPH";
+          display: block;
+          border: 5px dotted red;
+        }
+
+        br {
+          content: "";
+          display: block;
+          border: 5px dotted red;
         }
       }
     }
