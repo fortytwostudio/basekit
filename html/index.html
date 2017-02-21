@@ -110,6 +110,22 @@
         <button id="js-nav-toggler" class="nav-toggler">Menu</button>
       </div>
 
+      <ul class="align-c  pad  set-links  font-upper  font-bold">
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#install">Installation</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#colors">Colors</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#fonts">Typography</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#breakpoints">Breakpoints &amp; Grid</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#class-naming">Class Naming</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#padding">Padding / Spacing</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#form">Forms</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#user-content">User Content</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#logos">Logos</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#tables">Tables</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#links">Links</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#">Navigation</a></li>
+        <li data-bk="4"><a class="bg-tertiary  block  pad" href="#">Buttons</a></li>
+      </ul>
+
     </header>
 
     <section id="install" class="site-container  pad  user-content  set-links">
@@ -126,128 +142,114 @@
 
     </section>
 
-    <section id="user-content" class="site-container  pad  user-content  set-links">
-      <h2 class="font-l">Example User Content</h2>
+    <section id="colors" class="site-container  pad">
+      <div class="user-content">
+        <h2 class="font-l">Colors</h2>
+        <p>Colours are based on brand guidelines and/or style guides and used for text, links, buttons, backgrounds, etc.</p>
 
-      <p>The following link tag is empty, some CSS detects this and makes the url visible instead: <a href="http://basekit.dev"></a> Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.</p>
-
-    </section>
-
-      <section id="colors" class="site-container  pad">
-        <div class="user-content">
-          <h2 class="font-l">Colors</h2>
-          <p>Colours are based on brand guidelines and/or style guides and used for text, links, buttons, backgrounds, etc.</p>
-
-          <p>Designers will often miss out a tertiary colour from the guidelines, in which case I tend to make use of an appropriatly fitting grey. Tertiary colours are useful for active states on navigation links and buttons.</p>
-        </div>
-
-        <h3 class="margin-t">Primary</h3>
-        <ol class="color-white  font-s">
-          <li class="bg-primary">default</li>
-          <li class="bg-primary--dark">dark</li>
-          <li class="bg-primary--light">light</li>
-        </ol>
-
-        <h3 class="margin-t">Secondary</h3>
-        <ol class="color-white  font-s">
-          <li class="bg-secondary">default</li>
-          <li class="bg-secondary--dark">dark</li>
-          <li class="bg-secondary--light">light</li>
-        </ol>
-
-        <h3 class="margin-t">Tertiary</h3>
-        <ol class="font-s">
-          <li class="bg-tertiary">default</li>
-          <li class="bg-tertiary--dark">dark</li>
-          <li class="bg-tertiary--light">light</li>
-        </ol>
-
-        <h3 class="margin-t">Standard</h3>
-        <ol>
-          <li class="bg-white">white</li>
-          <li class="bg-black  color-white">black</li>
-        </ol>
-      </section>
-
-
-
-
-      <div id="fonts" class="site-container  pad">
-        <div class="user-content  pad-b">
-          <h2 class="font-l">Fonts</h2>
-
-            <p>
-              Responsive, viewport based, fonts should be restricted to use on headings
-              and isolated blocks of text. Avoid using it on copy paragraphs and long
-              blocks of text. I would also advise against using medium or large sizes
-              nearby normal (non-responsive) blocks of text because these viewport
-              based texts can actually end up <em>smaller</em> at certain screen sizes.
-            </p>
-
-            <p>
-              I've never been a fan of styling <code>h1, h2, h3</code>, etc directly or by tying their
-              size and style to their heading number. What if h2 and h4 should visually
-              look the same but not in every instance? Over time and with multiple
-              maintainers the CSS and HTML end up tied in knots.
-            </p>
-
-            <p>
-              The solution is simple; just define font styles to utility classes and apply
-              where required regardless of the markup. If you want to style one list item
-              to look like some hero text, go right ahead! It does not matter, the semantics
-              are in your HTML markup and content.
-            </p>
-          </div>
-
-        <p class="font-xs">
-          Death to humans
-        </p>
-
-        <p class="font-s">
-          Death to humans
-        </p>
-
-        <p>
-          Death to humans
-        </p>
-
-        <p class="font-m">
-          Death to humans
-        </p>
-
-        <p class="font-l">
-          Death to humans
-        </p>
-
-        <p class="font-xl">
-          Death to humans
-        </p>
-
-        <p class="font-xxl">
-          Death to humans
-        </p>
-
-        <p class="font-hero">
-          Death to humans
-        </p>
-
-        <p class="font-l  font-bold">
-          Death to bold
-        </p>
-
-        <p class="font-l  font-italic">
-          Death to italic
-        </p>
-
-        <p class="font-l  font-upper">
-          Death to uppercase
-        </p>
-
+        <p>Designers will often miss out a tertiary colour from the guidelines, in which case I tend to make use of an appropriatly fitting grey. Tertiary colours are useful for active states on navigation links and buttons.</p>
       </div>
 
+      <h3 class="margin-t">Primary</h3>
+      <ol class="color-white  font-s">
+        <li class="bg-primary">default</li>
+        <li class="bg-primary--dark">dark</li>
+        <li class="bg-primary--light">light</li>
+      </ol>
 
+      <h3 class="margin-t">Secondary</h3>
+      <ol class="color-white  font-s">
+        <li class="bg-secondary">default</li>
+        <li class="bg-secondary--dark">dark</li>
+        <li class="bg-secondary--light">light</li>
+      </ol>
 
+      <h3 class="margin-t">Tertiary</h3>
+      <ol class="font-s">
+        <li class="bg-tertiary">default</li>
+        <li class="bg-tertiary--dark">dark</li>
+        <li class="bg-tertiary--light">light</li>
+      </ol>
 
+      <h3 class="margin-t">Standard</h3>
+      <ol>
+        <li class="bg-white">white</li>
+        <li class="bg-black  color-white">black</li>
+      </ol>
+    </section>
+
+    <div id="fonts" class="site-container  pad">
+      <div class="user-content  pad-b">
+        <h2 class="font-l">Fonts</h2>
+
+          <p>
+            Responsive, viewport based, fonts should be restricted to use on headings
+            and isolated blocks of text. Avoid using it on copy paragraphs and long
+            blocks of text. I would also advise against using medium or large sizes
+            nearby normal (non-responsive) blocks of text because these viewport
+            based texts can actually end up <em>smaller</em> at certain screen sizes.
+          </p>
+
+          <p>
+            I've never been a fan of styling <code>h1, h2, h3</code>, etc directly or by tying their
+            size and style to their heading number. What if h2 and h4 should visually
+            look the same but not in every instance? Over time and with multiple
+            maintainers the CSS and HTML end up tied in knots.
+          </p>
+
+          <p>
+            The solution is simple; just define font styles to utility classes and apply
+            where required regardless of the markup. If you want to style one list item
+            to look like some hero text, go right ahead! It does not matter, the semantics
+            are in your HTML markup and content.
+          </p>
+        </div>
+
+      <p class="font-xs">
+        Death to humans
+      </p>
+
+      <p class="font-s">
+        Death to humans
+      </p>
+
+      <p>
+        Death to humans
+      </p>
+
+      <p class="font-m">
+        Death to humans
+      </p>
+
+      <p class="font-l">
+        Death to humans
+      </p>
+
+      <p class="font-xl">
+        Death to humans
+      </p>
+
+      <p class="font-xxl">
+        Death to humans
+      </p>
+
+      <p class="font-hero">
+        Death to humans
+      </p>
+
+      <p class="font-l  font-bold">
+        Death to bold
+      </p>
+
+      <p class="font-l  font-italic">
+        Death to italic
+      </p>
+
+      <p class="font-l  font-upper">
+        Death to uppercase
+      </p>
+
+    </div>
 
     <section id="breakpoints" class="site-container  pad  user-content  set-links">
       <h2 class="font-l">Breakpoints &amp; Grid</h2>
@@ -347,7 +349,7 @@
       </table>
     </section>
 
-    <section id="padding" class="site-container  pad  user-content  set-links">
+    <section id="class-naming" class="site-container  pad  user-content  set-links">
       <h3>Class Naming</h3>
 
       <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
@@ -1058,7 +1060,7 @@
       <h3 class="margin-tb">Links set on a horizontal block nav</h3>
       <ul class="nav  nav--block  nav-links">
         <li><a href="#">One</a></li>
-        <li class="nav-links__active"><a href="#">Two</a></li>
+        <li class="active"><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
       </ul>
@@ -1066,7 +1068,7 @@
       <h3 class="margin-tb">Links set on a horizontal fit (display table) nav</h3>
       <ul class="nav  nav--block  nav--fit  nav-links">
         <li><a href="#">One</a></li>
-        <li class="nav-links__active"><a href="#">Two</a></li>
+        <li class="active"><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
       </ul>
@@ -1074,7 +1076,7 @@
       <h3 class="margin-tb">Links set on a stacked nav</h3>
       <ul class="nav  nav--block  nav--stacked  nav-links">
         <li><a href="#">One</a></li>
-        <li class="nav-links__active"><a href="#">Two</a></li>
+        <li class="active"><a href="#">Two</a></li>
         <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
       </ul>
