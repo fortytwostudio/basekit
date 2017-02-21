@@ -1,23 +1,17 @@
 .nav-links {
   a {
-    color: white;
+    color: $secondary;
     transition: all $speed-normal ease-in-out;
 
     &:focus,
     &:hover {
-      // Unfortunatly the specificity requires white be set again here.
-      color: $tertiary;
+      color: $primary;
     }
   }
 
   .active {
     a {
       color: $grey;
-
-      &:focus,
-      &:hover {
-        color: $tertiary;
-      }
     }
   }
 }
