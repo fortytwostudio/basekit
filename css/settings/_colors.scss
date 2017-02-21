@@ -4,7 +4,7 @@
 
 /// Primary Brand Colour
 /// Set your primary brand colour.
-$primary: tomato;
+$primary: #333;
 /// **Light Variation:**
 /// Tweak the `lighten` value to get the colour you want, or pull it out completely
 /// if the designer has included a light colour value.
@@ -14,7 +14,7 @@ $primary--light: lighten($primary, 15%);
 /// if the designer has included a dark colour value.
 $primary--dark: darken($primary, 20%);
 
-$secondary: dodgerblue;
+$secondary: #00f;
 $secondary--light: lighten($secondary, 15%);
 $secondary--dark: darken($secondary, 20%);
 
