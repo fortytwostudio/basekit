@@ -111,9 +111,15 @@ gulp.task('sassdoc', function () {
 // Combine various functions into watch
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
-  gulp.watch('html/*.html', ['html']);
   gulp.watch('js/*.js', ['js']);
-  // gulp.watch('./templates/src/**/*', ['nunjucks']);
+  gulp.watch('html/*.html', ['html']);
+});
+
+// Combine various functions into watch + twig
+gulp.task('watch-twig', function() {
+  gulp.watch('css/**/*.scss', ['scss']);
+  gulp.watch('js/*.js', ['js']);
+  gulp.watch('./templates/**/*', ['twig']);
 });
 
 gulp.task('default', ['watch']);
