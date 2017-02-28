@@ -83,7 +83,8 @@
 
   <body id="page">
 
-    <header id="header" class="site-container  pad">
+  <div id="header" class="bg-black  pad-s">
+    <header class="site-container">
       <div data-bk="6" class="site-logo--container">
         <h1 class="site-logo  logo">
           <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
@@ -91,42 +92,26 @@
           </a>
         </h1>
       </div>
-
-      <div data-bk="pad:0  6  right">
-        <nav class="site-nav  font-upper  nav-links" aria-label="Site main navigation">
-          <ul>
-            <li>
-              <a href="/" title="Home Page">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                About Us
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <button id="js-nav-toggler" class="nav-toggler">Menu</button>
-      </div>
-
-      <ul class="align-c  pad  set-links  font-upper  font-bold">
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#colors">Colors</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#fonts">Typography</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#breakpoints">Breakpoints &amp; Grid</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#class-naming">Class Naming</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#padding">Padding / Spacing</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#form">Forms</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#user-content">User Content</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#logos">Logos</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#tables">Tables</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#links">Links</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#">Navigation</a></li>
-        <li data-bk="4"><a class="bg-tertiary  block  pad  scroll" href="#">Buttons</a></li>
-      </ul>
-
     </header>
+  </div>
+
+    <nav id="header" class="site-container  pad">
+      <ul class="align-c  set-links  font-upper  font-bold">
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#colors">Colors</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#fonts">Typography</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#breakpoints">Breakpoints &amp; Grid</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#class-naming">Class Naming</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#padding">Padding / Spacing</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#form">Forms</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#user-content">User Content</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#logos">Logos</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#tables">Tables</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#links">Links</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#">Navigation</a></li>
+        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#">Buttons</a></li>
+      </ul>
+    </nav>
 
     <section id="install" class="site-container  pad  user-content  set-links">
       <h2 class="font-l">Installation <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
@@ -426,7 +411,7 @@
 
 
 
-    <section id="form" class="site-container  pad  user-content  set-links">
+    <section id="full-width" class="site-container  pad  user-content  set-links">
       <h3 class="font-l  margin-b">Full width container breaking out of site container  <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h3>
 
       <div class="browser-width">
