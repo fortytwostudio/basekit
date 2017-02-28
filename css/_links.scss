@@ -16,21 +16,28 @@
 
     &:focus,
     &:hover {
-      color: $secondary;
+      color: $tertiary--dark;
       transition-duration: $speed-normal;
     }
   }
 
-  // Define an alternative link style.
-  // &--inverted {
-  //   a {
-  //     color: $secondary;
+  &--on-dark {
+    a {
+      color: white;
+      border-bottom: 1px solid transparent!important;
 
-  //     &:focus,
-  //     &:hover {
-  //       color: $primary;
-  //     }
-  //   }
-  // }
+      &:focus,
+      &:hover {
+        color: inherit;
+        border-color: currentColor!important;
+      }
+    }
+  }
+
+  &--underlined {
+    a {
+      border-bottom: 1px solid currentColor;
+    }
+  }
 
 }
