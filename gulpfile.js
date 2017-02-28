@@ -74,7 +74,7 @@ gulp.task('html', function() {
 
 // Compile Twig templates to HTML
 gulp.task('twig', function() {
-  // run the Twig template parser on all .html files in the "src" directory
+  // run the Twig template parser on all .twig files in the "src" directory
   return gulp.src(['templates/**/*.twig', '!templates/layouts/**/*.twig', '!templates/includes/**/*.twig'])
   // Data for populating Twig files
   .pipe(data(function() { return require('./templates/data.json') }))
