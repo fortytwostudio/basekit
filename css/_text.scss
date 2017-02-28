@@ -39,13 +39,28 @@
 
   &-hero { @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 70px); }
 
+  &-lh-1 {
+    line-height: 1;
+  }
 
-  &-bold {
-    font-weight: 700;
+  // &-alt {
+  //   font-family: $font-heading-family;
+  // }
+
+  // &-default {
+  //   font-family: $font-family;
+  // }
+
+  &-light {
+    font-weight: 300;
   }
 
   &-normal {
     font-weight: 400;
+  }
+
+  &-bold {
+    font-weight: 700;
   }
 
   &-italic {
