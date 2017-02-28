@@ -1,13 +1,72 @@
 {
   "siteName": "BaseKit Template",
+  "siteUrl": "http://basekit.dev/templates/_html",
+  "siteEmail": "info@fortytwo.studio",
+  "siteTel": "01224 280 005",
 
-  "images": [{
-    "src": "image-one.png",
-    "alt": "Image one alt text"
+  "mainNav": [{
+    "title": "Home",
+    "url": "/"
   }, {
-    "src": "image-two.png",
-    "alt": "Image two alt text"
+    "title": "Services",
+    "url": "/services/"
+  }, {
+    "title": "About",
+    "url": "/about/"
+  }, {
+    "title": "Contact",
+    "url": "/contact/"
   }],
 
-  "siteUrl": "http://basekit.dev"
+  "footerNav": [{
+    "title": "Home",
+    "url": "/"
+  }, {
+    "title": "Services",
+    "url": "/services/"
+  }, {
+    "title": "About",
+    "url": "/about/"
+  }, {
+    "title": "Contact Us",
+    "url": "/contact-us/"
+  }, {
+    "title": "Support",
+    "url": "/support/"
+  }],
+
+  "socialLinks": [{
+    "title": "Facebook",
+    "url": "#"
+  }, {
+    "title": "Twitter",
+    "url": "#"
+  }, {
+    "title": "LinkedIn",
+    "url": "#"
+  }],
+
+  "siteInfoNav": [{
+    "title": "Terms &amp; Conditions",
+    "url": "/terms/"
+  }, {
+    "title": "Privacy Policy",
+    "url": "/privacy/"
+  }],
+
+  "address": {
+    "org": "FortyTwo Studio",
+    "street": "126 Crown Street",
+    "townCity": "Aberdeen",
+    "postalCode": "AB11 6HQ"
+  },
+
+  "images": [{
+    "src": "/imgs/placeholders/hero.png",
+    "alt": "Image one alt text"
+  }, {
+    "src": "/imgs/placeholders/landscape.png",
+    "alt": "Image two alt text"
+  }]
+
 }
