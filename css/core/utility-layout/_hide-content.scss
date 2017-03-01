@@ -2,18 +2,26 @@
   .hide {
     @include hide()
   }
+
+  // If enabled output a float class for each breakpoint
+  // But we won't bother with .clear
+  // @if $hidden-responsive {
+  //   @each $breakpoint, $bp-num in $mq-breakpoints {
+  //     @include mq($breakpoint) {
+  //       .hide--#{$breakpoint} {
+  //         @include hide()
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @if $js-hide {
-  .js {
-    .js-hide {
-      @include hide();
-    }
+  .js .js-hide {
+    @include hide();
   }
 
-  .no-js {
-    .no-js-hide {
-      @include hide();
-    }
+  .no-js .no-js-hide {
+    @include hide();
   }
 }

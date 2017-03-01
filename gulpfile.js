@@ -1,117 +1,66 @@
-var gulp          = require('gulp'),
-    // Process and compile scss/css files
-    sass          = require('gulp-sass'),
-    // Optimise css
-    nano          = require('gulp-cssnano'),
-    // Join js files into one
-    concat        = require('gulp-concat'),
-    // Minify js
-    uglify        = require('gulp-uglify'),
-      // Optimise images
-      // imagemin      = require('gulp-imagemin'),
-      // pngquant      = require('imagemin-pngquant'),
-    // Generate svg symbols file
-    svgSymbols    = require('gulp-svg-symbols'),
-    // Minify HTML
-    htmlmin    = require('gulp-htmlmin'),
-    // Deploy to gh pages
-    deploy        = require('gulp-gh-pages'),
-    // Report file sizes
-    size          = require('gulp-size'),
-    // CSS optimisation report
-    parker        = require('gulp-parker');
+var gulp            = require('gulp'),
+    // Sass for writing and pre-processing the CSS
+    sass            = require('gulp-sass'),
+    // Nano for optimising and post-processing the CSS
+    nano            = require('gulp-cssnano'),
+    // Join JS into one file
+    concat          = require('gulp-concat'),
+    // Minify the one JS file
+    uglify          = require('gulp-uglify'),
+    // Minify and clean up HTML files
+    htmlmin         = require('gulp-htmlmin'),
+    // Data storage for Nunjucks, and anything else
+    data            = require('gulp-data'),
+    // HTML static templating
+    twig            = require('gulp-twig'),
+    // Report file sizes in the CLI
+    size            = require('gulp-size'),
+    // Fancy documentation
+    sassdoc         = require('sassdoc');
 
-// Locations
-var styleSrc      = 'css/basekit.scss',
-  	styleDest     = 'css',
-	  styleWatch    = 'css/**/*.scss',
-
-  	htmlSrc       = './html/*.html',
-  	htmlDest      = './',
-  	htmlWatch     = './html/*.html',
-
-  	scriptSrc     = 'js/*.js',
-  	scriptDest    = 'js/min',
-  	scriptWatch   = 'js/*.js',
-    scriptConcat  = 'basekit.js',
-
-  	imageSrc      = 'imgs/*',
-  	imageDest     = 'imgs';
-
-  	svgSrc      = 'imgs/svg/*.svg',
-  	svgDest     = 'imgs/svg';
-
-
-gulp.task('parker', function() {
-  return gulp.src('css/basekit.css')
-    .pipe(parker({
-      file: 'css/style-report.md',
-      title: 'CSS analysis'
-    }));
-});
-
-// Compile Sass with autoprefixer, I've removed sourcemaps
+// Compile Sass (with Autoprefixer)
 gulp.task('scss', function() {
-  gulp.src(styleSrc)
+  gulp.src('css/basekit.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(nano({autoprefixer: {
-      add: true,
-      remove: false,
-      browsers: [
-        '> 0.5%',
-        'last 2 versions',
-        'ie >= 9'
-      ]
-    }}))
-    .pipe(gulp.dest(styleDest))
-    .pipe(size({ showFiles: true }))
-    .pipe(size({ gzip: true, showFiles: true }));
-});
+    .pipe(nano({
+      // http://cssnano.co/optimisations/minifySelectors/
+      minifySelectors: false,
 
-// Easy deploy to the gh-pages branch
-gulp.task('deploy', function () {
-  return gulp.src('**/*')
-    .pipe(deploy());
-});
-
-// Minify and concat the js files for use
-gulp.task('js', function() {
-  gulp.src(scriptSrc)
-    .pipe(concat(scriptConcat))
-    .pipe(uglify())
-    .pipe(gulp.dest(scriptDest))
-    .pipe(size({ gzip: true, showFiles: true }));
-});
-
-gulp.task('svg', function () {
-  return gulp.src(svgSrc)
-    .pipe(svgSymbols({
-      templates: ['default-svg'],
-      title: '%f'
+      autoprefixer: {
+        // Add prefixes
+        add: true,
+        // Browser support level
+        browsers: [
+          '> 0.5%',
+          'last 2 versions',
+          'ie >= 9'
+        ]
+      }
     }))
-    .pipe(gulp.dest(svgDest));
+    .pipe(gulp.dest('css'))
+    // Show file size before gzip
+    .pipe(size({ showFiles: true }))
+    // Show file size after gzip
+    .pipe(size({ gzip: true, showFiles: true }));
 });
 
-// Optimise images
-// gulp.task('img', function () {
-//   return gulp.src(imageSrc)
-//     .pipe(imagemin({
-//       progressive: true,
-//       svgoPlugins: [{removeViewBox: false}],
-//       multipass: true,
-//       use: [pngquant()]
-//     }))
-//     .pipe(gulp.dest(imageDest));
-// });
+// Minify and Concat JS files for production
+gulp.task('js', function() {
+  gulp.src('js/*.js')
+    .pipe(concat('basekit.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js/min'))
+    .pipe(size({ gzip: true, showFiles: true }));
+});
 
-// Minify HTML source and rename the index-dev file
+// Minify and clean HTML
 gulp.task('html', function() {
-  gulp.src(htmlSrc)
+  gulp.src('./html/*.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true,
       removeAttributeQuotes: true,
-      removeRedundantAttributes: true,
+      // removeRedundantAttributes: true,
       removeEmptyAttributes: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true,
@@ -120,14 +69,58 @@ gulp.task('html', function() {
       minifyJS: true,
       minifyCSS: true
     }))
-    .pipe(gulp.dest(htmlDest));
+    .pipe(gulp.dest('./'));
 });
 
-// Only watch Sass and JS files
+// Compile Twig templates to HTML
+gulp.task('twig', function() {
+  // run the Twig template parser on all .twig files in the "src" directory
+  return gulp.src(['templates/**/*.twig', '!templates/layouts/**/*.twig', '!templates/includes/**/*.twig'])
+  // Data for populating Twig files
+  .pipe(data(function() { return require('./templates/data.json') }))
+  .pipe(twig())
+  // output the rendered HTML files to the "dist" directory —— disabled for now as we don't need non-compressed html files
+  // .pipe(gulp.dest('templates/dist'))
+  // Minify the files for development usage
+  .pipe(htmlmin({
+    collapseWhitespace: true,
+    removeComments: true,
+    removeAttributeQuotes: true,
+    // removeRedundantAttributes: true,
+    removeEmptyAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    collapseBooleanAttributes: true,
+    quoteCharacter: '\'',
+    minifyJS: true,
+    minifyCSS: true
+  }))
+  // Output minified files —— add /_min to the end if you enable uncompressed html output above
+  .pipe(gulp.dest('templates/_html'));
+});
+
+
+gulp.task('sassdoc', function () {
+  return gulp.src(['css/**/*.scss', '!css/core/third-party/**/*.scss'])
+  .pipe(sassdoc({
+    dest: 'docs',
+    verbose: true,
+  }));
+});
+
+// Combine various functions into watch
 gulp.task('watch', function() {
-  gulp.watch(styleWatch, ['scss']);
-  gulp.watch(scriptWatch, ['js']);
-  gulp.watch(htmlWatch, ['html']);
+  gulp.watch('css/**/*.scss', ['scss']);
+  gulp.watch('html/*.html', ['html']);
+  gulp.watch('js/*.js', ['js']);
+});
+
+// Combine various functions into watch + twig
+gulp.task('watch-twig', function() {
+  gulp.watch('css/**/*.scss', ['scss']);
+  gulp.watch('html/*.html', ['html']);
+  gulp.watch('js/*.js', ['js']);
+  gulp.watch('./templates/**/*', ['twig']);
 });
 
 gulp.task('default', ['watch']);

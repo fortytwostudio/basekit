@@ -16,34 +16,27 @@
 
     &:focus,
     &:hover {
-      color: $secondary;
+      color: $tertiary--dark;
       transition-duration: $speed-normal;
     }
   }
 
-  // Define an alternative link style.
-  &--inverted {
+  &--on-dark {
     a {
-      color: $secondary;
+      color: white;
+      border-bottom: 1px solid transparent!important;
 
       &:focus,
       &:hover {
-        color: $primary;
+        color: inherit;
+        border-color: currentColor!important;
       }
     }
   }
 
-  // You can add as many modifiers as required, this contrasted modifier might
-  // be useful on a dark background. You may also add a --nav modifier for
-  // styling navigation links.
-  &--contrasted {
+  &--underlined {
     a {
-      color: white;
-
-      &:focus,
-      &:hover {
-        color: $grey-dark;
-      }
+      border-bottom: 1px solid currentColor;
     }
   }
 

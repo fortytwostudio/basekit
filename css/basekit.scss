@@ -7,17 +7,17 @@
   "settings/transition-speed",
   "settings/navigation",
   "settings/media",
-  "settings/forms",
+  "settings/alerts",
   "settings/icons",
   "settings/user-content",
   "settings/hider",
 
   // THIRD PARTY TOOLS
-  "core/vendor/unit-conversion",
-  "core/vendor/media-queries",
-  "core/vendor/font-face",
-  "core/vendor/fluid-type",
-  "core/vendor/family",
+  "core/third-party/unit-conversion",
+  "core/third-party/media-queries",
+  "core/third-party/font-face",
+  "core/third-party/fluid-type",
+  "core/third-party/family",
 
   // MIXINS & FUNCTONS
   "core/tools/percentage",
@@ -28,14 +28,13 @@
   "core/tools/hider.scss",
 
   // GLOBALS
-  "core/global/box-model",
   "core/global/document",
   "core/global/text",
   "core/global/media",
   "core/global/tables",
-  "core/global/forms",
 
   // LAYOUT GRID
+  "core/utility-layout/base-grid",
   "core/utility-layout/display",
   "core/utility-layout/margins",
   "core/utility-layout/padding-spacer",
@@ -59,7 +58,6 @@
 
   // PROJECT FILES:
   // ————————————————————————————————————————————————————————————————————————————
-  "forms-extended",
   "links",
   "text",
   "colors",
@@ -67,4 +65,5 @@
   "logos",
   "buttons",
   "site-nav",
-  "mobile-nav";
+  "forms-standard",
+  "forms-extended";

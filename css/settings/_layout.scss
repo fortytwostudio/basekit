@@ -1,41 +1,29 @@
-// Once lower than the max-width the site will never be larger than this.
-$site-width: 94%;
+// Once lower than the max-width the site width will never be larger than this.
+$site-width: 95%;
+
+// Define your responsive breakpoints with a key name and px value.
+$mq-breakpoints: (
+  // palm: 480px,
+  // hands: 600px,
+  // lap: 768px,
+  // desk: 1024px
+  palm: 600px,
+  hands: 900px,
+  lap: 1200px,
+  desk: 1800px
+);
 
 // Define the column count for of your design. 12 is recommended even if you
-// have fewer columns in the design, fake it.
+// have fewer columns in the design, fake a low column count.
 $columns: 12;
 
 // Define the columns and spacing.
-$column-width: 66;
-$gutter: 28;
+$column-width: 70;
+$gutter: 25;
 $margin: $gutter / 2;
 
-// Don't touch these if you don't know what they do.
-$max-width: $column-width * $columns + $gutter * $columns;
-$inner-width: $max-width - $gutter;
-
-// Define your responsive breakpoints and the IE8 CSS static BP.
-$mq-breakpoints: (palm: 480px, hands: 600px, lap: 768px, desk: 1024px);
-$mq-static-breakpoint: desk;
-
-// // Output the Basekit Grid System.
-// $bk-grid: true;
-//
-// // Output CSS for data-bkg="to:*"
-// $bk-grid-mq-to: true;
-//
-// // Define the attribute name.
-// $bk-grid-name: data-bk;
-//
-// // Define small and large column gutters.
-// $bk-grid-gutter-small: $margin / 2;
-// $bk-grid-gutter-large: $margin * 2;
-//
-// // Define how many `indent` columns there should be, default is $columns - 1.
-// $bk-push-columns: $columns - 1;
-//
-// $bk-push-right: true;
-// $bk-push-left: false;
+// Don't touch this if you don't know what it does… $max-width gets used often.
+$max-width: ($column-width * $columns) + ($gutter * $columns);
 
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;
@@ -43,10 +31,12 @@ $site-width-name: site-container;
 $site-width-position: auto;
 
 // Output the float utility class… ooh nasty.
-$float-css: true;
+$floats: true;
+$floats-responsive: true;
 
 // Output the display (block, inline-block, inline, etc) utility class.
 $display-css: true;
+$display-responsive: true;
 $display-block-class: true;
 $display-inline-class: false;
 $display-inline-block-class: true;

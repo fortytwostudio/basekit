@@ -1,0 +1,128 @@
+{% extends "layouts/main.twig" %}
+
+{% set pageHeaderColor = "bg-primary--dark" %}
+{% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/landscape.jpg)"' %}
+
+{% block pageHeader %}
+  <div class="site-container  pad-b">
+    <div data-bk="hands:6" class="color-white">
+      {# DEV NOTE: Plain text field no line breaks #}
+      <h2 class="font-xxl  font-lh-1  pad-s-b">Bus de ditio ent lat ues et ut asper</h2>
+
+      {# DEV NOTE: Plain text field no line breaks but allow multi line in CMS for readability #}
+      <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quisetur?</p>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="bg-tertiary--light  pad">
+    <div class="site-container">
+      {# DEV NOTE: This wrapping div exists only to middle align the two containing divs #}
+      <div data-bk="pad:0  middle">
+        {# DEV NOTE: Plain text field, no line breaks #}
+        <div data-bk="palm:6  palm:pad:large" class="font-light  font-l  align-c">
+          <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quis etur?</p>
+        </div>
+
+        {# DEV NOTE: Don't output figure if no image present. Alt text should be image title field. #}
+        <figure data-bk="palm:6" class="font-xl">
+          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-white  pad">
+    <div class="site-container">
+      {# DEV NOTE: Should be editable from the CMS home edit page #}
+      <h3 class="font-xl  font-bold">View our latest vacancies</h3>
+
+      {# DEV NOTE: Output latest jobs but also allow client to override what get's shown with an entries field in the CMS home edit page. I think we should output the latest 4 by default, but then if the client chooses one to "sticky" it get's put first and then the remaining 3 are the latest. If the client chooses 4 then no latest entries appear, the clien thas overriden them. If the client chooses one that would appear by default, then it should be stickied first in line and get removed from the default output… clear? #}
+    </div>
+  </div>
+
+  <div class="bg-tertiary--light  pad">
+    <div class="site-container">
+      {# DEV NOTE: This wrapping div exists only to middle align the two containing divs #}
+      <div data-bk="pad:0  middle">
+        {# DEV NOTE: Don't output figure if no image present. Alt text should be image title field. #}
+        <figure data-bk="palm:pad:rl  palm:6" class="font-xl">
+          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
+        </figure>
+
+        {# DEV NOTE: Plain text field, no line breaks #}
+        <div data-bk="palm:pad:rl  palm:6  palm:pad:large" class="font-light  font-xl  color-secondary  align-c">
+          <p>Am quid ut velenda voluptas sinciet, sed eictatuia etur sus quis etur?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-primary">
+    <h2 class="bg-white  pad  pad-s-b  align-c  font-xl  color-primary">Our Sectors</h2>
+
+    <div class="site-container  pad  color-white  set-links  set-links--on-dark">
+      {% for item in 1..4 %}
+        <article data-bk="6 hands:3">
+          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
+          <h3 class="font-l  pad-s-t  margin-b">Item Title</h3>
+          {# DEV NOTE: Output as plain text, no line breaks #}
+          <p>Erum que volut mnduciis inus es ipsus, o ictunduciis inus es ipsus, o ictuaxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu repta- tiur sum resequam</p>
+
+          <p class="margin-t  font-upper"><a href="#">Read more</a></p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <div class="bg-secondary  bg-img  color-white  font-l  align-c" style="background-image: url(/imgs/placeholders/hero.jpg)">
+
+    <div data-bk="pad:large  lap:10">
+      <div data-bk="pad:large" class="bg-secondary--trans  pad  font-light">
+        <h2 class="font-default  font-light  font-xxl font-thin  pad-s-b">Are you who we’re looking for?</h2>
+
+        <p data-bk="lap:10" class="font-xl  pad-b">
+          {# DEV NOTE: put as plain text field, no line breaks #}
+          At Inspire we are always looking for great team memebers so speculative applications are always welcome. Submit your CV today for the chance to inspire.
+        </p>
+
+        <p><a class="btn" href="#">Submit your CV</a></p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="bg-secondary">
+    <h2 class="bg-white  pad-l-t  pad-s-b  font-xl  color-primary">
+      <span class="block  site-container">
+        <span data-bk="pad:rl">Why Inspire?</span>
+      </span>
+    </h2>
+
+    <div class="site-container  pad  color-white">
+      <div data-bk="lap:6  lap:pl:1" class="user-content  set-links  set-links--underlined">
+
+        {# DEV NOTE: Output from Rich Text field with bold-italic-links #}
+        <p>erum que volut <a href="#">maxim sinusa seceperio</a>. <strong>Ossi sit aligendit</strong> el <em>imenduciis inus</em> es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu reptatiur sum resequam er</p>
+
+        <p><b>um que volut maxim</b> sinusa seceperio. <i>Ossi sit aligendit</i> el imenduciis inus es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu</p>
+
+        <p class="pad-s-t  font-m"><a class="btn" href="#">Find out more</a></p>
+      </div>
+
+      <div data-bk="lap:5">
+        <img src="/imgs/placeholders/square.jpg" alt="{{ img.title }}">
+      </div>
+    </div>
+  </div>
+
+  {# {% include "includes/map.twig" %} #}
+
+{% endblock %}

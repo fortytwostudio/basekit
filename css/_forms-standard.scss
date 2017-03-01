@@ -1,0 +1,308 @@
+// .field__item{padding:0.75rem 0.5rem}
+
+/* Based on FormHack v1.2.0 (formhack.io) */
+
+// Config -----------------------------
+
+// FONTS
+// Set family to same as global
+$fh-font-family: inherit !default;
+// Allow size to inherit the containing or global font size
+$fh-font-size: inherit !default;
+// Set color to global text color
+$fh-font-color: $text !default;
+
+// BORDERS
+// Nice rem border radius so they scale, set to 0 to disable
+$fh-border-radius: em(3px) !default;
+// Thickness, obviously
+$fh-border-width: 1px !default;
+// You'll rarely change this
+$fh-border-style: solid !default;
+// Set borders to a % of the text color
+$fh-border-color: lighten($fh-font-color, 50%) !default;
+
+// FIELD TYPES
+// We want to set a uniform hight, in ems so it scales
+$fh-input-height: 2.5em !default; // 16 * 2.5 = 40px
+// Best to make it 100% then adjust the container width, however some field types like number may need adjustments
+$fh-input-width: 100% !default;
+// Default input background
+$fh-input-bg-color: #fff !default;
+// The clicked/tapped/focused colours
+$fh-focus-bg-color: #eee !default;
+$fh-focus-border-color: darken($fh-border-color, 25%) !default;
+$fh-focus-font-color: $fh-font-color !default;
+
+// VENDOR SELECT STYLING
+// Use the default select dropdown arrows or roll our own?
+$fh-allow-select-vendor-styling: false !default;
+
+// FIELDSET & LEGENDS
+// Set true to remove fieldset styling and hide the legend text
+$fh-fieldset-bare: false !default;
+
+// BUTTONS
+// If you've read the above comments then this stuff should make sense :P
+$fh-button-height: 2.5em !default;
+$fh-button-width: 100% !default;
+$fh-button-max-width: em(140px) !default;
+$fh-button-font-weight: 700 !default;
+$fh-button-font-color: $fh-font-color !default;
+$fh-button-bg-color: $fh-focus-bg-color !default;
+$fh-button-hover-bg-color: $fh-border-color !default;
+$fh-button-hover-font-color: $fh-font-color !default;
+
+// LAYOUT
+// We pretty much always want block layout
+$fh-display: block !default;
+
+.scope-form {
+  /* Global Reset Styles ------------------ */
+
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-width: rem(600px)) {
+    font-size: rem(16px);
+  }
+
+  input,
+  textarea,
+  select,
+  option,
+  optgroup,
+  button,
+  legend,
+  fieldset {
+    box-sizing: border-box;
+    outline: none;
+    font-family: $fh-font-family;
+    font-size: $fh-font-size;
+    color: $fh-font-color;
+    vertical-align: top;
+    display: $fh-display;
+  }
+
+
+  datalist {
+    font-family: $fh-font-family;
+    font-size: $fh-font-size;
+  }
+
+  label {
+    display: $fh-display;
+  }
+
+
+
+  /* Input & Textarea ------------------ */
+
+  /* Fields with standard width */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  input[list],
+  input[type="file"],
+  select,
+  textarea {
+    width: $fh-input-width;
+    padding: $fh-input-height / 5;
+    background-color: $fh-input-bg-color;
+
+    border-radius: $fh-border-radius;
+    border: $fh-border-width $fh-border-style $fh-border-color;
+
+    transition: $speed-fast;
+  }
+
+  /* Fields with standard height */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  input[list] {
+    height: $fh-input-height;
+    -webkit-appearance: none;
+  }
+
+  /* Other */
+
+  textarea {
+    -webkit-appearance: none;
+    overflow: auto;
+    resize: vertical;
+  }
+
+  input[type="range"] {
+    height: $fh-input-height;
+    width: $fh-input-width;
+  }
+
+  input[type="file"] {
+    min-height: $fh-input-height;
+  }
+
+  input[type="search"] {
+    height: $fh-input-height;
+    -webkit-appearance: none;
+  }
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: inline-block;
+    // for some reason this moves the label (in chrome at least)
+    vertical-align: middle;
+    height: 1.1em;
+    position: relative;
+    top: -0.05em;
+  }
+
+
+  /* Select ------------------ */
+
+  select {
+    height: $fh-input-height;
+
+    @if $fh-allow-select-vendor-styling == false {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:not([multiple]) {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAQAAAD3ApbNAAAAXUlEQVR4AdXMsQ2AIBQG4WvJG4LJGIMpmMBZ6FhMieVLNFfq/eWffPygyqTzVmdS0TXOvcFT4/4busLKZOZYFHxEJjNHkNKk5jypOU9qzpOS86TiPGk5Tx57wVe6AJFXOuWN70I1AAAAAElFTkSuQmCC');
+        background-position: right center;
+        background-size: em(20px) em(7px);
+      }
+    }
+  }
+
+  select[multiple] {
+    height: auto;
+    min-height: $fh-input-height;
+    padding: 0;
+
+    option {
+      margin: 0;
+      padding: $fh-input-height / 5;
+    }
+  }
+
+  /* Fieldset ------------------ */
+
+  fieldset {
+    @if $fh-fieldset-bare == true {
+      padding: 0;
+      border: 0;
+    }
+    @else {
+      padding: 1em;
+      border-radius: $fh-border-radius;
+      border: $fh-border-width $fh-border-style $fh-border-color;
+    }
+  }
+
+  legend {
+    @if $fh-fieldset-bare == true {
+      @include hide()
+    } @else {
+      padding: 0 5px;
+      font-weight: 700;
+      border-radius: $fh-border-radius;
+    }
+  }
+
+  /* Buttons, Input Type Submit/Reset ------------------ */
+
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="image"] {
+    height: $fh-button-height;
+    width: $fh-button-width;
+    max-width: $fh-button-max-width;
+    background-color: $fh-button-bg-color;
+    padding: $fh-input-height / 5;
+    cursor: pointer;
+
+    color: $fh-button-font-color;
+    font-weight: $fh-button-font-weight;
+
+    appearance: none;
+
+    border-radius: $fh-border-radius;
+    border: $fh-border-width $fh-border-style $fh-border-color;
+
+    transition: $speed-fast;
+  }
+
+  input[type="image"] {
+    height: auto;
+    text-align: center;
+  }
+
+  /* States ------------------ */
+
+  input[disabled],
+  textarea[disabled],
+  select[disabled],
+  select[disabled] option,
+  select[disabled] optgroup,
+  option[disabled],
+  button[disabled] {
+    background-color: #eee!important;
+    cursor: not-allowed;
+    color: #aaa!important;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus,
+  option:focus,
+  button:focus  {
+    background-color: $fh-focus-bg-color;
+    border-color: $fh-focus-border-color;
+  }
+
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    outline: 0;
+  }
+
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  button:focus,
+  input[type="button"]:focus,
+  input[type="submit"]:focus,
+  input[type="reset"]:focus {
+    background-color: $fh-button-hover-bg-color;
+    color: $fh-button-hover-font-color;
+  }
+}

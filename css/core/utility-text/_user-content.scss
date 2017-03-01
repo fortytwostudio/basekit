@@ -3,7 +3,7 @@
   .#{$user-content-name} {
 
     > * + * {
-      margin-top: rem($font-default-bottom-margin + 0px);
+      margin-top: em($font-default-bottom-margin + 0px);
     }
 
     // p:not(:last-of-type) {
@@ -20,7 +20,7 @@
     }
 
     ul {
-      margin-left: rem(20px);
+      margin-left: em(20px);
       // margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: disc outside none;
@@ -32,7 +32,7 @@
     }
 
     ol {
-      margin-left: rem(30px);
+      margin-left: em(30px);
       // margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: decimal-leading-zero outside none;
@@ -40,6 +40,31 @@
       }
       & ol {
         margin-bottom: 0;
+      }
+    }
+
+    // See: http://allthingssmitty.com/2016/11/28/use-attribute-selectors-with-empty-links/
+    a[href]:empty::before {
+      content: attr(href);
+    }
+
+    @if variable-exists(user-content-debugging) and $user-content-debugging {
+      &--debug {
+        a[href^="http"]:empty::before {
+          content: "EMPTY LINK";
+          border: 5px dotted red;
+        }
+        p:empty::before {
+          content: "EMPTY PARAGRAPH";
+          display: block;
+          border: 5px dotted red;
+        }
+
+        br {
+          content: "";
+          display: block;
+          border: 5px dotted red;
+        }
       }
     }
   }
