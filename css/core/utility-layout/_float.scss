@@ -1,0 +1,47 @@
+@if $floats {
+
+  .float {
+    &-r {
+      float: right;
+    }
+
+    &-l {
+      float: left;
+    }
+
+    &-n {
+      float: none;
+    }
+  }
+
+  .clear {
+    &:after {
+      content:" ";
+      display:block;
+      clear:both;
+    }
+  }
+
+  // If enabled output a float class for each breakpoint
+  // But we won't bother with .clear
+  @if $floats-responsive {
+    @each $breakpoint, $bp-num in $mq-breakpoints {
+      @include mq($breakpoint) {
+        .float {
+          &-r--#{$breakpoint} {
+            float: right;
+          }
+
+          &-l--#{$breakpoint} {
+            float: left;
+          }
+
+          &-n--#{$breakpoint} {
+            float: none;
+          }
+        }
+      }
+    }
+  }
+
+}

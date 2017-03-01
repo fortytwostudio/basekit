@@ -1,0 +1,54 @@
+////
+/// @group Settings
+////
+
+/// Primary Brand Colour
+/// Set your primary brand colour.
+$primary: #333;
+/// **Light Variation:**
+/// Tweak the `lighten` value to get the colour you want, or pull it out completely
+/// if the designer has included a light colour value.
+$primary--light: lighten($primary, 15%);
+/// **Dark Variation:**
+/// Tweak the `darken` value to get the colour you want, or pull it out completely
+/// if the designer has included a dark colour value.
+$primary--dark: darken($primary, 20%);
+
+$secondary: #00f;
+$secondary--light: lighten($secondary, 15%);
+$secondary--dark: darken($secondary, 20%);
+
+$tertiary: lightgrey;
+$tertiary--light: lighten($tertiary, 15%);
+$tertiary--dark: darken($tertiary, 10%);
+
+/// Grey is commonly used across all website designs, to simplify matters I've
+/// included three default values which should cover most situations. Change the
+/// actual values to specific colour values if CSS keyword values don't suit.
+$grey--light: lightgrey;
+$grey: grey;
+$grey--dark: dimgrey;
+
+/// Document Colours
+///
+/// The following colours are for standard elements commonly found
+/// across any site or document.
+
+/// Set the body background colour here, if you want to add an image you should configure
+/// the $body-media currently in settings/media.scss
+$body: whitesmoke;
+
+/// Set the primary (body) text colour
+$text: #393939;
+
+/// This is optional, you're better off using the color utility classes to set
+/// the colour on headings unless there is very little variation in heading
+/// colours.
+$heading: $text;
+
+/// Alert classes can be used anywhere but for now they're tied to
+/// form alerts, set the colours here if you want to change them.
+$alert-text: white;
+$alert-bg: orangered;
+$alert-bg--neutral: dodgerblue;
+$alert-bg--positive: limegreen;

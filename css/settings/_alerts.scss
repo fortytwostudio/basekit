@@ -1,0 +1,7 @@
+// Ouput CSS to nicely style form error messages.
+// Found in core/utility.error.scss
+$form-error-css: true;
+// Define the error class name.
+$form-error-name: alert;
+// Optional inline block modifier class.
+$alert-inline-block: true;

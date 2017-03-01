@@ -1,0 +1,111 @@
+// Once lower than the max-width the site width will never be larger than this.
+$site-width: 95%;
+
+// Define your responsive breakpoints with a key name and px value.
+$mq-breakpoints: (
+  // palm: 480px,
+  // hands: 600px,
+  // lap: 768px,
+  // desk: 1024px
+  palm: 600px,
+  hands: 900px,
+  lap: 1200px,
+  desk: 1800px
+);
+
+// Define the column count for of your design. 12 is recommended even if you
+// have fewer columns in the design, fake a low column count.
+$columns: 12;
+
+// Define the columns and spacing.
+$column-width: 70;
+$gutter: 25;
+$margin: $gutter / 2;
+
+// Don't touch this if you don't know what it does… $max-width gets used often.
+$max-width: ($column-width * $columns) + ($gutter * $columns);
+
+// Ouput the site's max width utility class and define the name.
+$site-width-css: true;
+$site-width-name: site-container;
+$site-width-position: auto;
+
+// Output the float utility class… ooh nasty.
+$floats: true;
+$floats-responsive: true;
+
+// Output the display (block, inline-block, inline, etc) utility class.
+$display-css: true;
+$display-responsive: true;
+$display-block-class: true;
+$display-inline-class: false;
+$display-inline-block-class: true;
+$display-table-class: false;
+
+// Output the alignments utility class.
+$alignment-css: true;
+
+// Output the fit-media utility class.
+$fit-media-css: true;
+
+// Output CSS for the fit-media fallback.
+$fit-media-fallback-css: true;
+
+// Output the margin utility class.
+$margin-css: true;
+
+// Make html/body 100% height?
+$html-body-full-height: true;
+
+// Output and configure the padding spacer utility, this is used to add
+// additional top/bottom padding where necessary.
+$padding-spacer-css: true;
+$padding-spacer-name: pad;
+$padding-spacer-breakpoint: hands;
+$padding-spacer-size-small: 30px;
+$padding-spacer-size-default: 60px;
+$padding-spacer-size-large: 120px;
+
+// Fine tune the position over utility class options.
+// Find this in core/utility.position-over.scss
+$position-over-css: true;
+$position-over-tr: true;
+$position-over-br: true;
+$position-over-bl: true;
+$position-over-m: true;
+$position-over-ml: true;
+$position-over-mr: true;
+$position-over-mb: true;
+$position-over-mt: true;
+$position-over-fit-height: true;
+
+// Fractional widths
+$whole: percentage(1);
+$full: $whole;
+$one: $whole;
+$half: $whole / 2;
+$third: $whole / 3;
+$quarter: $half / 2;
+$fifth: $whole / 5;
+$sixth: $whole / 6;
+$seventh: $whole / 7;
+$eighth: $whole / 8;
+$ninth: $whole / 9;
+$tenth: $whole / 10;
+$eleventh: $whole / 11;
+$twelfth: $whole / 12;
+
+// Base aspect ratio variables
+$_16-9: 56.25%;
+$_1-1: $whole;
+$_2-1: $half;
+$_4-3: $half * 3;
+
+// Set some base z-index layers to work with
+$z-min: 1;
+$z-content: 100;
+$z-fit-media: 200;
+$z-position-over: 300;
+$z-mobile-nav: 400;
+$z-mobile-nav-toggle: 500;
+$z-max: 600;

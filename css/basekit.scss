@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+@import
+  "settings/colors",
+  "settings/layout",
+  "settings/text",
+  "settings/transition-speed",
+  "settings/navigation",
+  "settings/media",
+  "settings/alerts",
+  "settings/icons",
+  "settings/user-content",
+  "settings/hider",
+
+  // THIRD PARTY TOOLS
+  "core/third-party/unit-conversion",
+  "core/third-party/media-queries",
+  "core/third-party/font-face",
+  "core/third-party/fluid-type",
+  "core/third-party/family",
+
+  // MIXINS & FUNCTONS
+  "core/tools/percentage",
+  "core/tools/viewport-units",
+  "core/tools/rem",
+  "core/tools/aspect-ratio",
+  "core/tools/strip-unit",
+  "core/tools/hider.scss",
+
+  // GLOBALS
+  "core/global/document",
+  "core/global/text",
+  "core/global/media",
+  "core/global/tables",
+
+  // LAYOUT GRID
+  "core/utility-layout/base-grid",
+  "core/utility-layout/display",
+  "core/utility-layout/margins",
+  "core/utility-layout/padding-spacer",
+  "core/utility-layout/site-width",
+  "core/utility-layout/float",
+  "core/utility-layout/hide-content",
+  "core/utility-layout/position-over",
+  "core/utility-layout/fit-media",
+  "core/utility-layout/full-width",
+
+  // UTILITY CLASSES
+  "core/utility-general/icons",
+  "core/utility-general/alerts",
+  "core/utility-general/nav",
+
+  "core/utility-text/alignment",
+  "core/utility-text/list-styles",
+  "core/utility-text/user-content",
+  "core/utility-text/overflow-text",
+  "core/utility-text/hide-text",
+
+  // PROJECT FILES:
+  // ————————————————————————————————————————————————————————————————————————————
+  "links",
+  "text",
+  "colors",
+  "backgrounds",
+  "logos",
+  "buttons",
+  "site-nav",
+  "forms-standard",
+  "forms-extended";

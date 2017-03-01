@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+  @if $html-body-full-height { height: 100%; }
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+body {
+  @if $html-body-full-height { height: 100%; }
+  backface-visibility: hidden;
+  background: $body unquote($body-media);
+  color: $text;
+  font: $font-weight #{em(strip-unit($font-size), 16)}/#{$font-line-height / $font-size} $font-family;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+
+  @if $font-size > $font-size-small-screen {
+    @include mq($until: hands) {
+      font-size: em(strip-unit($font-size-small-screen), 16);
+    }
+  }
+}

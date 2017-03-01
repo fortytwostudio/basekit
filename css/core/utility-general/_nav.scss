@@ -1,0 +1,50 @@
+@if $nav-css {
+
+  .nav {
+    > li {
+      &,
+      > a {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    @if $nav-stack-css {
+      &--stack {
+        > li {
+          display: list-item;
+          > a {
+            display: block;
+          }
+        }
+      }
+    }
+
+    @if $nav-block-css {
+      &--block {
+        line-height: 1;
+        > li {
+          letter-spacing: normal;
+          word-spacing: normal;
+          > a {
+            padding: 0.5em;
+          }
+        }
+      }
+    }
+
+    @if $nav-fit-css {
+      &--fit {
+        display: table;
+        width: 100%;
+        > li {
+          display: table-cell;
+          > a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+}
