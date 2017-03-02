@@ -14,3 +14,80 @@ th, td {
   padding: rem($margin + 0px);
   vertical-align: top;
 }
+
+@include mq($until: palm) {
+  .responsive-table {
+    border: $tables-width solid $tables-color;
+    border-bottom: 0;
+    border-collapse: inherit;
+    min-width: 100%;
+
+    // Not the first row as that's for the table headers, not the second row either because that's would make a weird layout just style the others
+    tr+tr+tr {
+      padding-top: 2em;
+      display: block;
+    }
+
+    th {
+      display: none;
+    }
+
+    td {
+      display: block;
+
+      &:before {
+        content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
+        font-weight: bold;
+
+        // optional stuff to make it look nicer
+        width: 10em;
+        display: inline-block;
+        padding-right: 0.5em;
+        // end options
+      }
+    }
+
+    th, td {
+      border-right: 0;
+    }
+  }
+
+  // this must be applied to a wrapping element, not the table itself.
+  .overflow-table {
+    table {
+      min-width: 100%;
+    }
+
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background: $tables-color;
+      box-shadow: -10px 10px 5px 10px blue;
+    }
+
+    &::-webkit-scrollbar,
+    &::scrollbar {
+      -webkit-appearance: none;
+      width: 14px;
+      height: 14px;
+    }
+
+    &::-webkit-scrollbar-thumb,
+    &::scrollbar-thumb {
+      border-radius: 8px;
+      border: 3px solid #fff;
+      background-color: rgba(0, 0, 0, .3);
+    }
+  }
+}

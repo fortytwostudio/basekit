@@ -245,7 +245,7 @@
 
       <p>Below is an example of my most commonly used breakpoint configuration, it provides a nice balance of control and code. For each breakpoint, including the mobile first base level, the code is repeated so more breakpoints equals more code that may not be used.</p>
 
-      <table>
+      <table class="responsive-table">
   			<tbody>
           <tr>
     				<th scope="col">Breakpoint</th>
@@ -255,45 +255,45 @@
     				<th scope="col">BaseGrid Usage</th>
     			</tr>
     			<tr>
-    				<td>n/a</td>
-    				<td>n/a</td>
-    				<td class="ta-center">n/a</td>
-    				<td><code>n/a</code></td>
-    				<td><code>data-bk="6"</code></td>
+    				<td data-th="Breakpoint">n/a</td>
+    				<td data-th="Viewport width">n/a</td>
+    				<td data-th="Device" class="ta-center">n/a</td>
+    				<td data-th="Sass Usage"><code>n/a</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="6"</code></td>
     			</tr>
     			<tr>
-    				<td>palm</td>
-    				<td>600px +</td>
-    				<td class="ta-center">Horizontal small phone or large phone</td>
-    				<td><code>mq(palm){…}</code></td>
-    				<td><code>data-bk="palm:6"</code></td>
+    				<td data-th="Breakpoint">palm</td>
+    				<td data-th="Viewport width">600px +</td>
+    				<td data-th="Device" class="ta-center">Horizontal small phone or large phone</td>
+    				<td data-th="Sass Usage"><code>mq(palm){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="palm:6"</code></td>
     			</tr>
     			<tr>
-    				<td>hands</td>
-    				<td>900px +</td>
-    				<td class="ta-center">Portrait tablet type device</td>
-    				<td><code>mq(hands){…}</code></td>
-    				<td><code>data-bk="hands:6"</code></td>
+    				<td data-th="Breakpoint">hands</td>
+    				<td data-th="Viewport width">900px +</td>
+    				<td data-th="Device" class="ta-center">Portrait tablet type device</td>
+    				<td data-th="Sass Usage"><code>mq(hands){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="hands:6"</code></td>
     			</tr>
     			<tr>
-    				<td>lap</td>
-    				<td>1200px +</td>
-    				<td class="ta-center">Landscape tablets and small laptops</td>
-    				<td><code>mq(lap){…}</code></td>
-    				<td><code>data-bk="lap:6"</code></td>
+    				<td data-th="Breakpoint">lap</td>
+    				<td data-th="Viewport width">1200px +</td>
+    				<td data-th="Device" class="ta-center">Landscape tablets and small laptops</td>
+    				<td data-th="Sass Usage"><code>mq(lap){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="lap:6"</code></td>
     			</tr>
     			<tr>
-    				<td>desk</td>
-    				<td>1800px +</td>
-    				<td class="ta-center">Larger screens</td>
-    				<td><code>mq(desk){…}</code></td>
-    				<td><code>data-bk="desk:6"</code></td>
+    				<td data-th="Breakpoint">desk</td>
+    				<td data-th="Viewport width">1800px +</td>
+    				<td data-th="Device" class="ta-center">Larger screens</td>
+    				<td data-th="Sass Usage"><code>mq(desk){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="desk:6"</code></td>
     			</tr>
     		</tbody>
       </table>
 
       <p>The following is a more paired back example which not only reduces the CSS produced but also offers less control over layout break points. This is useful for lower cost projects because it forces fewer decisions through simplicity, or something like that.</p>
-      <table>
+      <table class="responsive-table">
   			<tbody>
           <tr>
     				<th scope="col">Breakpoint</th>
@@ -303,32 +303,32 @@
     				<th scope="col">BaseGrid Usage</th>
     			</tr>
     			<tr>
-    				<td>n/a</td>
-    				<td>n/a</td>
-    				<td class="ta-center">n/a</td>
-            <td>n/a</td>
-    				<td><code>data-bk="6"</code></td>
+    				<td data-th="Breakpoint">n/a</td>
+    				<td data-th="Viewport width">n/a</td>
+    				<td data-th="Device" class="ta-center">n/a</td>
+            <td data-th="Sass Usage">n/a</td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="6"</code></td>
     			</tr>
     			<tr>
-    				<td>s</td>
-    				<td>600px +</td>
-    				<td class="ta-center">Handheld smaller devices</td>
-            <td><code>mq(s){…}</code></td>
-    				<td><code>data-bk="s:6"</code></td>
+    				<td data-th="Breakpoint">s</td>
+    				<td data-th="Viewport width">600px +</td>
+    				<td data-th="Device" class="ta-center">Handheld smaller devices</td>
+            <td data-th="Sass Usage"><code>mq(s){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="s:6"</code></td>
     			</tr>
     			<tr>
-    				<td>m</td>
-    				<td>900px +</td>
-    				<td class="ta-center">Tablets and mega-phones</td>
-            <td><code>mq(m){…}</code></td>
-    				<td><code>data-bk="m:6"</code></td>
+    				<td data-th="Breakpoint">m</td>
+    				<td data-th="Viewport width">900px +</td>
+    				<td data-th="Device" class="ta-center">Tablets and mega-phones</td>
+            <td data-th="Sass Usage"><code>mq(m){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="m:6"</code></td>
     			</tr>
     			<tr>
-    				<td>l</td>
-    				<td>1200px +</td>
-    				<td class="ta-center">Larger screens</td>
-    				<td><code>mq(l){…}</code></td>
-    				<td><code>data-bk="l:6"</code></td>
+    				<td data-th="Breakpoint">l</td>
+    				<td data-th="Viewport width">1200px +</td>
+    				<td data-th="Device" class="ta-center">Larger screens</td>
+    				<td data-th="Sass Usage"><code>mq(l){…}</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk="l:6"</code></td>
     			</tr>
     		</tbody>
       </table>
@@ -952,7 +952,8 @@
     <section id="tables" class="site-container  pad">
       <h2 class="font-l">Tables <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
 
-      <table>
+      <div class="overflow-table margin-t">
+        <table>
         <caption>Jimi Hendrix - albums</caption>
         <thead>
           <tr>
@@ -990,9 +991,11 @@
             <td>$12.00</td>
           </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
 
-      <table>
+      <div class="overflow-table  margin-t">
+        <table>
         <thead>
           <tr>
             <th colspan="5">Roller Reamer Data</th>
@@ -1072,7 +1075,8 @@
             <td>232kg</td>
           </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
 
     </section>
 
