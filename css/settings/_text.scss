@@ -44,3 +44,10 @@ $overflow-ellipsis-css: true;
 
 // Output style for <code>
 $code-style: true;
+
+// Style up those tables
+$tables-width: 1px;
+$tables-color: #999;
+$tables-responsive: true;
+$tables-overflow: true;
+$tables-responsive-bp: palm;
