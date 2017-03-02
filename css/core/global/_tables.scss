@@ -64,15 +64,15 @@ th, td {
       -webkit-overflow-scrolling: touch;
 
       &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 14px;
-        height: 14px;
+        height:12px;
       }
-
+      &::-webkit-scrollbar-track {
+        box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
+        background:#f0f0f0;
+      }
       &::-webkit-scrollbar-thumb {
-        border-radius: 8px;
-        border: 3px solid #fff;
-        background-color: rgba(0, 0, 0, .3);
+        border-radius:6px;
+        background:#ccc;
       }
     }
 
