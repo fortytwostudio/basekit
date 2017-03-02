@@ -1,7 +1,8 @@
-$tables-width: thin;
-$tables-color: currentColor;
+$tables-width: 1px;
+$tables-color: #999;
 
 table {
+  white-space: nowrap;
   border-collapse: collapse;
   border-left: $tables-width solid $tables-color;
   border-spacing: 0;
@@ -54,40 +55,43 @@ th, td {
 
   // this must be applied to a wrapping element, not the table itself.
   .overflow-table {
-    table {
-      min-width: 100%;
-    }
-
-    display: block;
-    overflow-x: auto;
-    overflow-y: hidden;
     position: relative;
 
-    &:after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
+    &__inner {
       display: block;
-      content: "";
-      width: 1px;
-      height: 100%;
-      background: $tables-color;
-      box-shadow: -10px 10px 5px 10px blue;
+      overflow-x: auto;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
     }
 
-    &::-webkit-scrollbar,
-    &::scrollbar {
+    &:after {
+      display: block;
+      content: "";
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: em(20px);
+      height: 100%;
+      background-image: linear-gradient(90deg, rgba($tables-color,0),  rgba($tables-color,0.75));
+      border-right: $tables-width solid $tables-color;
+    }
+
+    .table-container::-webkit-scrollbar {
       -webkit-appearance: none;
       width: 14px;
       height: 14px;
     }
 
-    &::-webkit-scrollbar-thumb,
-    &::scrollbar-thumb {
+    .table-container::-webkit-scrollbar-thumb {
       border-radius: 8px;
       border: 3px solid #fff;
       background-color: rgba(0, 0, 0, .3);
     }
+
+    table {
+      min-width: 100%;
+    }
+
   }
 }
