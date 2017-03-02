@@ -1,65 +1,96 @@
 $form-element-bg-color: white;
 
-.form {
-
-  // quick label styling
+.bk-form--ext {
   label {
-    background: $form-element-bg-color;
-    color: #999;
-    display: block;
-    font-size: 75%;
-    padding: 0.5em 0.75em 0;
+    color: #666;
+    font-size: 87.5%;
+    text-transform: uppercase;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
-  input[type="search"],
-  input[type="color"],
-  input[type="date"],
-  input[type="datetime-local"],
-  input[type="month"],
-  input[type="number"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"],
-  input[list],
-  input[type="file"],
-  select,
-  textarea  {
-    appearance: none;
-    background-clip: padding-box;
-    background-color: $form-element-bg-color;
-    border: 0;
-    border-radius: 0;
-    color: $text;
-    font-family: $font-family;
-    font-size: 100%;
-    margin: 0;
-    outline: 0;
-    padding: 0.75em 0.58em;
-    border: 0;
-    border-bottom: 3px solid white;
-    // text-align: left;
-    // vertical-align: top;
-    width: 100%;
-    transition: 0.333333s;
+  &__combined {
+    label {
+      background: $form-element-bg-color;
+      color: #999;
+      font-size: 75%;
+      padding: ($fh-input-height / 5) ($fh-input-height / 4) ($fh-input-height / 15);
+      border-radius: $fh-border-radius $fh-border-radius 0 0;
+      box-shadow: 0 -0.25em 0.75em -0.5em rgba(black, 0.1);
+    }
 
-    &:focus {
-      border-color: $alert-bg--neutral;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"],
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    input[list],
+    input[type="file"],
+    select,
+    textarea  {
+      appearance: none;
+      background-clip: padding-box;
+      background-color: $form-element-bg-color!important;
+      border: 0;
+      border-radius: 0 0 $fh-border-radius $fh-border-radius;
+      border-bottom: 3px solid white;
+      transition: $speed-normal;
+      box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.075);
+
+      &:focus {
+        border-color: $alert-bg--neutral;
+        border-radius: 0;
+        box-shadow: 0 0.5em 0.5em -0.25em rgba($secondary, 0.25);
+      }
+    }
+
+    label[disabled],
+    input[disabled],
+    textarea[disabled],
+    select[disabled],
+    select[disabled] option,
+    select[disabled] optgroup,
+    option[disabled] {
+      background-color: #eee!important;
+      border-color: #eee!important;
+      color: #aaa!important;
     }
   }
 
-  // select:not([multiple]) {
-  //   background: $form-element-bg-color url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAQAAAD3ApbNAAAAXUlEQVR4AdXMsQ2AIBQG4WvJG4LJGIMpmMBZ6FhMieVLNFfq/eWffPygyqTzVmdS0TXOvcFT4/4busLKZOZYFHxEJjNHkNKk5jypOU9qzpOS86TiPGk5Tx57wVe6AJFXOuWN70I1AAAAAElFTkSuQmCC') no-repeat right center;
-  //   background-size: 20px 7px;
-  // }
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="image"] {
+    background-color: $primary;
+    color: white;
+    border-radius: $fh-border-radius;
+    border: 0;
+    border-radius: 1000em;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: $speed-slow;
+  }
 
-  &__check,
-  &__radio {
-    font-size: 125%;
-    margin-right: rem(($margin + 0px) / 2);
-    vertical-align: baseline;
+  button:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="image"]:hover,
+  button:focus,
+  input[type="button"]:focus,
+  input[type="submit"]:focus,
+  input[type="reset"]:focus,
+  input[type="image"]:focus {
+    color: white;
+    background-color: $secondary;
+    transition: $speed-normal;
+    box-shadow: 0 0.5em 0.5em -0.25em rgba($secondary, 0.25);
   }
 }
