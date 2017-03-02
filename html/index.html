@@ -424,7 +424,7 @@
     <section id="form" class="site-container  pad  user-content  set-links">
       <h3 class="font-l  pad-s-b">Example Form <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h3>
 
-      <form data-bk="hands:6" class="scope-form" action="">
+      <form data-bk="hands:6" class="bk-form" action="">
         <h4>Standard Form Styling</h4>
         <p><small>Fields marked with <em>*</em> are required.</small></p>
 
@@ -519,7 +519,7 @@
 
           <div class="field__item  margin-b">
             <label class="field__label" for="file">Input Type File</label>
-            <input class="field__input  field__input--submit" type="file" value="File" id="file">
+            <input type="file" value="File" id="file">
           </div>
 
           <div class="field__item  margin-b">
@@ -559,32 +559,32 @@
 
           <div class="field__item  margin-b">
             <label for="button">Button Type Button</label>
-            <button class="field__button" name="button" id="button">Button</button>
+            <button name="button" id="button">Button</button>
           </div>
 
           <div class="field__item  margin-b">
             <label for="button-submit">Button Type Submit</label>
-            <button class="field__button" type="submit" name="button-submit" id="button-submit">Button</button>
+            <button type="submit" name="button-submit" id="button-submit">Button</button>
           </div>
 
           <div class="field__item  margin-b">
             <label for="submit">Input Type Submit</label>
-            <input class="field__input  field__input--submit" type="submit" value="Submit" name="submit" id="submit">
+            <input type="submit" value="Submit" name="submit" id="submit">
           </div>
 
           <div class="field__item  margin-b">
             <label for="input-button">Input Type Button</label>
-            <input class="field__input  field__input--submit" type="button" value="Button" name="input-button" id="input-button">
+            <input type="button" value="Button" name="input-button" id="input-button">
           </div>
 
           <div class="field__item  margin-b">
             <label for="button-disabled">Button Type Button Disabled</label>
-            <button class="field__button" name="button-disabled" id="button-disabled" disabled>Button</button>
+            <button name="button-disabled" id="button-disabled" disabled>Button</button>
           </div>
 
           <div class="field__item  margin-b">
             <label for="submit-disabled">Input Type Submit Disabled</label>
-            <input class="field__input  field__input--submit" type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
+            <input type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
           </div>
 
           <div class="field__item  margin-b">
@@ -648,66 +648,66 @@
         </fieldset>
       </form>
 
-      <form data-bk="hands:6" class="scope-form  form" action="">
+      <form data-bk="hands:6" class="bk-form  bk-form--ext" action="">
         <h4>Standard + Fancy Form Styling</h4>
 
-        <fieldset class="field__group  margin-t  bg-tertiary">
+        <fieldset class="field__group  margin-t">
           <legend>Input Types</legend>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="text">Input Type</label>
             <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" required>
           </div>
 
-          <div class="field__item  margin-b">
-            <label class="field__label" for="text">Input Type</label>
+          <div class="bk-form--ext__combined  margin-b">
+            <label class="field__label" for="text" disabled>Input Type</label>
             <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" disabled>
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="text">Input Type</label>
             <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" required>
             <p class="alert">This is a validation alert</p>
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="num">Input Type Number</label>
             <input class="field__input  field__input--number" type="number" name="num" id="num" min="1" max="100" value="100">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="email">Input Type Email</label>
             <input class="field__input  field__input--email" type="email" placeholder="info@mysite.com" id="email">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="password">Input Type Password</label>
             <input class="field__input  field__input--password" type="password" id="password">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="search">Input Type Search</label>
             <input class="field__input  field__input--search" type="search" id="search">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="tel">Input Type Tel</label>
             <input class="field__input  field__input--tel" type="tel" placeholder="01224 000 000" id="tel">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="url">Input Type URL</label>
             <input class="field__input  field__input--url" type="url" placeholder="https://" id="url">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="margin-b">
             <label class="field__label" for="checkbox">
               Input Type Checkbox
               <input class="field__input  field__input--checkbox" type="checkbox" id="checkbox">
             </label>
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="margin-b">
             <label class="field__label" for="radio">
               Input Type Radio
               <input class="field__input  field__input--radio" type="radio" id="radio">
@@ -715,47 +715,47 @@
           </div>
 
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="date">Input Type Date</label>
             <input class="field__input  field__input--date" type="date" id="date">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="date-local">Input Type Datetime Local</label>
             <input class="field__input  field__input--date" type="datetime-local" id="date-local">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="month">Input Type Month</label>
             <input class="field__input  field__input--month" type="month" id="month">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="week">Input Type Week</label>
             <input class="field__input  field__input--week" type="week" id="week">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="time">Input Type Time</label>
             <input class="field__input  field__input--time" type="time" id="time">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="file">Input Type File</label>
-            <input class="field__input  field__input--submit" type="file" value="File" id="file">
+            <input type="file" value="File" id="file">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="margin-b">
             <label class="field__label" for="range">Input Type Range</label>
             <input class="field__input  field__input--range" type="range" id="range">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="color">Input Type Color</label>
             <input class="field__input  field__input--color" type="color" id="color">
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="datalist">Input with Datalist</label>
             <input class="field__input  field__input--datalist" list="browsers" name="myBrowser" id="datalist">
             <datalist class="field__datalist" id="browsers">
@@ -771,7 +771,7 @@
 
         <fieldset class="field__group  margin-t">
           <legend>Textarea</legend>
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="textarea">Input Type Textarea</label>
             <textarea class="field__textarea" placeholder="Write something…" name="textarea" id="textarea" rows="10"></textarea>
           </div>
@@ -782,44 +782,44 @@
 
           <div class="field__item  margin-b">
             <label for="button">Button Type Button</label>
-            <button class="field__button" name="button" id="button">Button</button>
+            <button name="button" id="button">Button</button>
           </div>
 
           <div class="field__item  margin-b">
             <label for="button-submit">Button Type Submit</label>
-            <button class="field__button" type="submit" name="button-submit" id="button-submit">Button</button>
+            <button type="submit" name="button-submit" id="button-submit">Button</button>
           </div>
 
           <div class="field__item  margin-b">
             <label for="submit">Input Type Submit</label>
-            <input class="field__input  field__input--submit" type="submit" value="Submit" name="submit" id="submit">
+            <input type="submit" value="Submit" name="submit" id="submit">
           </div>
 
           <div class="field__item  margin-b">
             <label for="input-button">Input Type Button</label>
-            <input class="field__input  field__input--submit" type="button" value="Button" name="input-button" id="input-button">
+            <input type="button" value="Button" name="input-button" id="input-button">
           </div>
 
           <div class="field__item  margin-b">
             <label for="button-disabled">Button Type Button Disabled</label>
-            <button class="field__button" name="button-disabled" id="button-disabled" disabled>Button</button>
+            <button name="button-disabled" id="button-disabled" disabled>Button</button>
           </div>
 
           <div class="field__item  margin-b">
             <label for="submit-disabled">Input Type Submit Disabled</label>
-            <input class="field__input  field__input--submit" type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
+            <input type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
           </div>
 
           <div class="field__item  margin-b">
             <label class="field__label" for="Input Image" for="image">Input Image</label>
-            <input class="field__input  field__input--image" type="image" name="image" id="image" src="https://i.imgur.com/k9Xg2ED.png">
+            <input type="image" name="image" id="image" src="https://i.imgur.com/k9Xg2ED.png">
           </div>
         </fieldset>
 
         <fieldset class="field__group  margin-t">
           <legend>Select and Option Field Types</legend>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="select">Select Default</label>
             <select class="field__select" name="select" id="select">
               <option value="value1">Value 1</option>
@@ -828,7 +828,7 @@
             </select>
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="optgroups">Select with Optgroup</label>
             <select class="field__select" id="optgroups">
               <optgroup label="Group 1">
@@ -846,7 +846,7 @@
             </select>
           </div>
 
-          <div class="field__item  margin-b">
+          <div class="bk-form--ext__combined  margin-b">
             <label class="field__label" for="select">Select Multiple</label>
             <select multiple class="field__select" name="select" id="select">
               <option value="value1">Value 1</option>

@@ -57,7 +57,7 @@ $fh-button-hover-font-color: $fh-font-color !default;
 // We pretty much always want block layout
 $fh-display: block !default;
 
-.scope-form {
+.bk-form {
   /* Global Reset Styles ------------------ */
 
   @media (-webkit-min-device-pixel-ratio: 2) and (max-width: rem(600px)) {
@@ -268,6 +268,7 @@ $fh-display: block !default;
 
   /* States ------------------ */
 
+  label[disabled],
   input[disabled],
   textarea[disabled],
   select[disabled],
@@ -278,6 +279,7 @@ $fh-display: block !default;
     background-color: #eee!important;
     cursor: not-allowed;
     color: #aaa!important;
+    box-shadow: none!important;
   }
 
   input:focus,
@@ -298,10 +300,12 @@ $fh-display: block !default;
   input[type="button"]:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
+  input[type="image"]:hover,
   button:focus,
   input[type="button"]:focus,
   input[type="submit"]:focus,
-  input[type="reset"]:focus {
+  input[type="reset"]:focus,
+  input[type="image"]:focus {
     background-color: $fh-button-hover-bg-color;
     color: $fh-button-hover-font-color;
   }
