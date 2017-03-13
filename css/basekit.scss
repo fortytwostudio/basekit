@@ -94,3 +94,9 @@
     z-index: 100000;
   }
 }
+a:focus {
+  // background-color: #ffbf47!important;
+  // color: black!important;
+  outline: 0.25em solid #ffbf47!important;
+  outline-offset: 0!important;
+}
