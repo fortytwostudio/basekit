@@ -8,20 +8,21 @@
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
     <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
 
-    <!-- Prefetch DNS for external assets -->
+    {# Prefetch DNS for external assets #}
     <link href="//fast.fonts.net" rel="dns-prefetch">
     <link href="//cloud.typography.com" rel="dns-prefetch">
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="//connect.facebook.net" rel="dns-prefetch">
 
-    <!-- Prerender or Preload
+    {#
+    Prerender or Preload
     - Preemptively load all of the assets of a certain document
     - Preload a specific asset
     - More info: https://css-tricks.com/prefetching-preloading-prebrowsing/
     <link rel="prerender" href="https://example.com/">
     <link rel="preload" href="image.png">
-    -->
+    #}
 
     <title>{{ siteName }}</title>
     <meta name="description" content="">
@@ -30,41 +31,52 @@
     <link rel="stylesheet" href="//fast.fonts.net/cssapi/4e26e3b9-f65e-4698-bb6e-f8019e19cd38.css">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700">
 
-    <!--
+    {#
       ICONS:
       - Go to: http://realfavicongenerator.net
       - Generate icons and put the code here (see below example).
       - Put images in the imgs/web-icons/ directory.
-    -->
+    #}
 
-    <!--
-      Facebook / Twitter Cards
+    {#
+      Social Cards
     - Update the following meta tags and replace the image
-    <meta property="og:title" content="Basis">
-    <meta property="og:description" content="Basis is a full featured starter kit from FortyTwo Studio">
-    <meta property="og:image" content="http://og.jpg">
+    // Schema.org for Google
+    <link href="https://plus.google.com/+YourPage" rel="publisher">
+    <meta itemprop="name" content="PAGE TITLE">
+    <meta itemprop="description" content="Content description less than 200 characters">
+    <meta itemprop="image" content="http://www.fortytwo.studio/assets/social/siteimg.jpg">
+    // Twitter
+    <meta name="twitter:card" content="summary"> <!-- or summary_large_image -->
+    <meta name="twitter:title" content="PAGE TITLE">
+    <meta name="twitter:description" content="PAGE DESCRIPTION">
+    <meta name="twitter:site" content="@fortytwo_studio">
+    <meta name="twitter:creator" content="@fortytwo_studio">
+    <meta name="twitter:image:src" content="http://www.fortytwo.studio/assets/twitter/pic.jpg">
+    // Open Graph general (Facebook, Pinterest & Google+)
+    <meta name="og:title" content="PAGE TITLE">
+    <meta name="og:description" content="PAGE DESCRIPTION">
+    <meta name="og:image" content="http://www.fortytwo.studio/assets/og/preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="http://">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:creator" content="@">
-    -->
+    <meta name="og:url" content="http://www.fortytwo.studio">
+    <meta name="og:site_name" content="FortyTwo Studio">
+    <meta name="og:locale" content="en_GB">
+    <meta name="og:type" content="article"> <!-- or website -->
+    // Open Graph - Article
+    <meta name="article:section" content="Brand Identity">
+    <meta name="article:published_time" content="PUBLISH TIME">
+    <meta name="article:author" content="https://www.facebook.com/FortyTwoAberdeen/">
+    <meta name="article:tag" content="tags, associated, with, article">
+    <meta name="article:expiration_time" content="EXPIRATION TIME">
+    <meta name="article:modified_time" content="MODIFIED TIME">
+    #}
 
-    <!--
-      Google+ / Schema.org
-    <link href="https://plus.google.com/+YourPage" rel="publisher">
-    <meta itemprop="name" content="Content Title">
-    <meta itemprop="description" content="Content description less than 200 characters">
-    <meta itemprop="image" content="https://example.com/image.jpg">
-    -->
-
-    <!--
+    {#
       Google Analytics Code:
     - Add your analytics ID here.
     - Or remove the below code and add what Google gives you.
-    -->
+    #}
 
   </head>
 
