@@ -81,7 +81,7 @@
 
   </head>
 
-  <body id="page">
+  <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
@@ -94,10 +94,16 @@
             </a>
           </h1>
         </div>
+
+        <button aria-pressed="false" id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-label="Site navigation toggle" aria-controls="main-nav">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </header>
     </div>
 
-    <nav id="main-nav" class="site-container  pad">
+    <nav id="site-nav" class="site-container  pad  site-nav">
       <h2 class="skip-link">Website Navigation</h2>
       <ul class="align-c  set-links  font-upper  font-bold">
         <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
@@ -1167,13 +1173,19 @@
     <script src="/js/min/basekit.js"></script>
     <script src="/js/min/scroll.min.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          document.getElementById('js-nav-toggler').addEventListener('click', function (e) {
-              if (e.target.nodeName.toLowerCase() === 'a') {
-                  e.preventDefault();
-              }
-              document.getElementById('page').classList.toggle('nav-active');
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('nav-toggler').addEventListener('click', function(e) {
+          if (e.target.nodeName.toLowerCase() == 'a') { e.preventDefault(); }
+          /// Do this if you want to custimise the classes, i.e. use other stuff than is-active
+          // document.getElementById('nav-toggler').classList.toggle('is-active');
+          // document.getElementById('site-nav').classList.toggle('is-active');
+
+          /// Use this if is-active is fine and you'll style in the CSS
+          [].forEach.call(document.querySelectorAll('#nav-toggler, #site-nav'), function(el) {
+            el.classList.toggle('is-active');
+            // el.setAttribute("aria-pressed", "true");
           });
+        });
       });
     </script>
   </body>
