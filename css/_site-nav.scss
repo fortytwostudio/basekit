@@ -20,96 +20,151 @@
 }
 
 
-@if $nav-mobile {
-  .nav-active {
+
+@include mq($until: lap) {
+
+  #site-nav {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
     overflow: hidden;
+    transition:
+      visibility 0s ease,
+      max-height 2s ease,
+      opacity    2s ease;
+    transition-delay: 0s;
   }
 
-  .nav-toggler {
+  #site-nav[aria-hidden='false'] {
+    opacity: 1;
+    max-height: 80em;
+    visibility: visible;
+  }
+}
+
+@include mq(lap) {
+  #nav-toggler {
     display: none;
   }
+}
+/// OLD VERSION:
+//
+// @if $nav-mobile {
+//   .nav-active {
+//     overflow: hidden;
+//   }
 
-  @include mq($until: hands) {
-    .nav-toggler {
-      $site-logo-height: 44px;
+//   .nav-toggler {
+//     display: none;
+//   }
 
-      appearance: none;
-      background-clip: padding-box;
-      outline: 0;
-      border: 0;
-      cursor: pointer;
-      user-select: none;
-      background: transparent url('/imgs/ui/menu-icon-open.svg') no-repeat center center;
-      background-size: 60%;
-      display: inline-block!important;
-      @include hide(text);
-      transition: background-color $speed-fast ease-in-out;
+//   @include mq($until: hands) {
+//     .nav-toggler {
+//       $site-logo-height: 44px;
 
-      height: rem($site-logo-height) / 1.5;
-      width: rem($site-logo-height) / 1.5;
-      @include mq(palm) {
-        height: rem($site-logo-height);
-        width: rem($site-logo-height);
-      }
-      @include mq(lap) {
-        height: rem($site-logo-height) * 1.25;
-        width: rem($site-logo-height) * 1.25;
-      }
+//       appearance: none;
+//       background-clip: padding-box;
+//       outline: 0;
+//       border: 0;
+//       cursor: pointer;
+//       user-select: none;
+//       background: transparent url('/imgs/ui/menu-icon-open.svg') no-repeat center center;
+//       background-size: 60%;
+//       display: inline-block!important;
+//       @include hide(text);
+//       transition: background-color $speed-fast ease-in-out;
 
-      .nav-active & {
-        // the icon active state
-        background-image: url('/imgs/ui/menu-icon-closed.svg');
-        position: relative;
-        z-index: $z-max;
-      }
-    }
+//       height: rem($site-logo-height) / 1.5;
+//       width: rem($site-logo-height) / 1.5;
+//       @include mq(palm) {
+//         height: rem($site-logo-height);
+//         width: rem($site-logo-height);
+//       }
+//       @include mq(lap) {
+//         height: rem($site-logo-height) * 1.25;
+//         width: rem($site-logo-height) * 1.25;
+//       }
 
-    .site-nav {
-      // hide the nav item and fade out by default
-      position: absolute;
-      left: -9999em;
-      top: -9999em;
-      opacity: 0;
-      max-height: 0;
-      transition: opacity $speed-normal ease-out;
+//       .nav-active & {
+//         // the icon active state
+//         background-image: url('/imgs/ui/menu-icon-closed.svg');
+//         position: relative;
+//         z-index: $z-max;
+//       }
+//     }
 
-      .nav-active & {
-        // when the checkbox is checked, fade the opacity
-        // back to 1 and transition to the content height
-        // (max-height can be any safe range well over what
-        // the nav content could ever be)
-        position: fixed;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        min-width: 100vw;
-        min-height: 100vh;
-        opacity: 1;
-        overflow: hidden;
-        transition: opacity $speed-fast ease-in;
-        text-align: center;
-        z-index: $z-mobile-nav;
-        background: $primary;
+//     .site-nav {
+//       // hide the nav item and fade out by default
+//       position: absolute;
+//       left: -9999em;
+//       top: -9999em;
+//       opacity: 0;
+//       max-height: 0;
+//       transition: opacity $speed-normal ease-out;
 
-        ul {
-          @include position-over(middle);
-          width: 100%;
-        }
+//       .nav-active & {
+//         // when the checkbox is checked, fade the opacity
+//         // back to 1 and transition to the content height
+//         // (max-height can be any safe range well over what
+//         // the nav content could ever be)
+//         position: fixed;
+//         left: 0;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         min-width: 100%;
+//         min-height: 100%;
+//         min-width: 100vw;
+//         min-height: 100vh;
+//         opacity: 1;
+//         overflow: hidden;
+//         transition: opacity $speed-fast ease-in;
+//         text-align: center;
+//         z-index: $z-mobile-nav;
+//         background: $primary;
 
-        li {
-          display: block;
-          width: 100%;
-          font-size: 175%;
-        }
+//         ul {
+//           @include position-over(middle);
+//           width: 100%;
+//         }
 
-        a {
-          display: block;
-          padding: rem(5px);
-        }
-      }
-    }
+//         li {
+//           display: block;
+//           width: 100%;
+//           font-size: 175%;
+//         }
+
+//         a {
+//           display: block;
+//           padding: rem(5px);
+//         }
+//       }
+//     }
+//   }
+// }
+
+.skip-link {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1px 1px rgba(black, 0.2);
+  clip: rect(1px, 1px, 1px, 1px);
+  color: $primary;
+  display: block;
+  font-weight: 700;
+  height: 1px;
+  left: -9999em;
+  overflow: hidden;
+  padding: 1em 1.25em;
+  position: absolute !important;
+  top: -9999em;
+  width: 1px;
+  word-wrap: normal !important;
+
+  &:focus {
+    clip: auto;
+    height: auto;
+    left: 6px;
+    top: 7px;
+    width: auto;
+    z-index: $z-max;
   }
 }

@@ -81,50 +81,36 @@
 
   </head>
 
-  <body>
+  <body class="start">
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
+    <!-- merely the outer colour and padding container of the header, plus an id hook for scrolling -->
     <div id="header" class="bg-black  pad-s">
+      <!-- this just keeps the content to the site width -->
       <header class="site-container">
-        <div data-bk="6" class="site-logo--container">
-          <h1 class="site-logo  logo">
-            <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
-              {{ siteName }}
-            </a>
-          </h1>
-        </div>
+        <!-- this is purely to middle align the content items: note - create a "self" aligning class -->
+        <div data-bk="pad:0  middle">
+          <div data-bk="6" class="site-logo--container">
+            <h1 class="site-logo  logo">
+              <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
+                {{ siteName }}
+              </a>
+            </h1>
+          </div>
 
-        <button data-a11y-toggle="site-nav" id="nav-toggler" class="hamburger hamburger--squeeze" type="button">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
+          <div data-bk="6" class="align-r">
+            <button data-a11y-toggle="site-nav" id="nav-toggler" class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
       </header>
     </div>
 
-    <style>
-      #site-nav {
-        max-height: 0;
-        opacity: 0;
-        visibility: hidden;
-        overflow: hidden;
-
-        transition:
-          visibility 0s ease,
-          max-height 2s ease,
-          opacity    2s ease;
-        transition-delay: 0s;
-      }
-
-      #site-nav[aria-hidden='false'] {
-        opacity: 1;
-        max-height: 80em;
-        visibility: visible;
-      }
-    </style>
-
-    <nav id="site-nav" class="site-container  pad  site-nav">
+    <nav id="site-nav" class="site-container  pad  site-nav" tabindex="-1">
       <h2 class="skip-link">Website Navigation</h2>
       <ul class="align-c  set-links  font-upper  font-bold">
         <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
@@ -143,9 +129,9 @@
       </ul>
     </nav>
 
-  <div id="content">
-    <section id="install" class="site-container  pad  user-content  set-links">
-      <h2 class="font-l">Installation <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+  <div id="content" tabindex="-1">
+    <section id="install" tabindex="-1" class="site-container  pad  user-content  set-links">
+      <h2 class="font-l">Installation <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
       <ol>
         <li><a href="https://github.com/fortytwostudio/basekit.git">Clone</a> and then copy to or <a href="https://github.com/fortytwostudio/basekit/archive/master.zip">download</a> to your project.</li>
@@ -158,9 +144,9 @@
 
     </section>
 
-    <section id="colors" class="site-container  pad">
+    <section id="colors" tabindex="-1" class="site-container  pad">
       <div class="user-content">
-        <h2 class="font-l">Colors <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+        <h2 class="font-l">Colors <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
         <p>Colours are based on brand guidelines and/or style guides and used for text, links, buttons, backgrounds, etc.</p>
 
         <p>Designers will often miss out a tertiary colour from the guidelines, in which case I tend to make use of an appropriatly fitting grey. Tertiary colours are useful for active states on navigation links and buttons.</p>
@@ -194,9 +180,9 @@
       </ol>
     </section>
 
-    <div id="fonts" class="site-container  pad">
+    <div id="fonts" tabindex="-1" class="site-container  pad">
       <div class="user-content  pad-b">
-        <h2 class="font-l">Fonts <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+        <h2 class="font-l">Fonts <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
           <p>
             Responsive, viewport based, fonts should be restricted to use on headings
@@ -267,8 +253,8 @@
 
     </div>
 
-    <section id="breakpoints" class="site-container  pad  user-content  set-links">
-      <h2 class="font-l">Breakpoints &amp; Grid <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+    <section id="breakpoints" tabindex="-1" class="site-container  pad  user-content  set-links">
+      <h2 class="font-l">Breakpoints &amp; Grid <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
       <p>Easy to use <code>inline-block</code> based grid system, utilising <a href="https://github.com/sass-mq/sass-mq">Sass MQ</a>.</p>
 
@@ -365,8 +351,8 @@
       </table>
     </section>
 
-    <section id="class-naming" class="site-container  pad  user-content  set-links">
-      <h3>Class Naming <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h3>
+    <section id="class-naming" tabindex="-1" class="site-container  pad  user-content  set-links">
+      <h3>Class Naming <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
 
       <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
 
@@ -397,8 +383,8 @@
       </ol>
     </section>
 
-    <section id="padding" class="site-container  pad  set-links  clear">
-     <h2 class="font-l">Padding / Spacer <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+    <section id="padding" tabindex="-1" class="site-container  pad  set-links  clear">
+     <h2 class="font-l">Padding / Spacer <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
       <div class="pad  pad-s  bg-tertiary  margin-b  align-c">
         <p class="bg-white">Small Padding</p>
@@ -443,7 +429,7 @@
 
 
     <section id="full-width" class="site-container  pad  user-content  set-links">
-      <h3 class="font-l  margin-b">Full width container breaking out of site container  <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h3>
+      <h3 class="font-l  margin-b">Full width container breaking out of site container  <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
 
       <div class="browser-width">
         <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=full&w=1280&h=300" alt="">
@@ -452,8 +438,8 @@
 
 
 
-    <section id="form" class="site-container  pad  user-content  set-links">
-      <h3 class="font-l  pad-s-b">Example Form <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h3>
+    <section id="form" tabindex="-1" class="site-container  pad  user-content  set-links">
+      <h3 class="font-l  pad-s-b">Example Form <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
 
       <form data-bk="hands:6" class="bk-form" action="POST">
         <h4>Standard Form Styling</h4>
@@ -914,8 +900,8 @@
     </section>
 
 
-    <section id="user-content" class="site-container  pad  user-content  set-links">
-      <h3>User Content Styling <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h3>
+    <section id="user-content" tabindex="-1" class="site-container  pad  user-content  set-links">
+      <h3>User Content Styling <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
 
       <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
 
@@ -973,8 +959,8 @@
 
 
 
-    <section id="logos" class="site-container  pad">
-      <h2 class="font-l">Logos <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+    <section id="logos" tabindex="-1" class="site-container  pad">
+      <h2 class="font-l">Logos <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
       <p class="margin-tb">Main site logo:</p>
       <h1 class="logo  site-logo">
@@ -990,8 +976,8 @@
       </div>
     </section>
 
-    <section id="tables" class="site-container  pad">
-      <h2 class="font-l">Tables <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+    <section id="tables" tabindex="-1" class="site-container  pad">
+      <h2 class="font-l">Tables <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
       <table class="margin-t">
         <caption>Jimi Hendrix - albums</caption>
@@ -1122,9 +1108,9 @@
     </section>
 
 
-    <div class="site-container  pad" id="links">
+    <div id="links" tabindex="-1" class="site-container  pad">
 
-      <h2 class="font-l  pad-s-b">Links &amp; Navigation <span class="font-xs float-r"><a class="btn  scroll" href="#page">↑</a></span></h2>
+      <h2 class="font-l  pad-s-b">Links &amp; Navigation <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
 
       <div class="user-content  pad-s-b">
         <p>
