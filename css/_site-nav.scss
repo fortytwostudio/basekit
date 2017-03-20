@@ -22,7 +22,6 @@
 
 
 @include mq($until: lap) {
-
   #site-nav {
     max-height: 0;
     opacity: 0;
@@ -33,12 +32,13 @@
       max-height 2s ease,
       opacity    2s ease;
     transition-delay: 0s;
-  }
 
-  #site-nav[aria-hidden='false'] {
-    opacity: 1;
-    max-height: 80em;
-    visibility: visible;
+    // &[aria-hidden='false'] {
+    &.is-active {
+      opacity: 1;
+      max-height: 80em;
+      visibility: visible;
+    }
   }
 }
 

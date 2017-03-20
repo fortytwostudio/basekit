@@ -1179,15 +1179,16 @@
 
     <script src="/js/min/basekit.js"></script>
     <script src="/js/min/scroll.min.js"></script>
-    <script src="/js/a11y-toggle/a11y-toggle.min.js"></script>
+    <!-- <script src="/js/a11y-toggle/a11y-toggle.min.js"></script> -->
 
-<!--     <script>
+    <script>
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('nav-toggler').addEventListener('click', function(e) {
           if (e.target.nodeName.toLowerCase() == 'a') { e.preventDefault(); }
           document.getElementById('nav-toggler').classList.toggle('is-active');
+          document.getElementById('site-nav').classList.toggle('is-active');
         });
       });
-    </script> -->
+    </script>
   </body>
 </html>
