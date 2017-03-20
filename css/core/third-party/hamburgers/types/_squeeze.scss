@@ -18,7 +18,8 @@
       }
     }
 
-    &.is-active {
+    // &.is-active {
+    &[aria-expanded='true'] {
       .hamburger-inner {
         transform: rotate(45deg);
         transition-delay: 0.12s;

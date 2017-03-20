@@ -95,13 +95,34 @@
           </h1>
         </div>
 
-        <button aria-pressed="false" id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-label="Site navigation toggle" aria-controls="main-nav">
+        <button data-a11y-toggle="site-nav" id="nav-toggler" class="hamburger hamburger--squeeze" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
         </button>
       </header>
     </div>
+
+    <style>
+      #site-nav {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+
+        transition:
+          visibility 0s ease,
+          max-height 2s ease,
+          opacity    2s ease;
+        transition-delay: 0s;
+      }
+
+      #site-nav[aria-hidden='false'] {
+        opacity: 1;
+        max-height: 80em;
+        visibility: visible;
+      }
+    </style>
 
     <nav id="site-nav" class="site-container  pad  site-nav">
       <h2 class="skip-link">Website Navigation</h2>
@@ -1172,21 +1193,15 @@
 
     <script src="/js/min/basekit.js"></script>
     <script src="/js/min/scroll.min.js"></script>
-    <script>
+    <script src="/js/a11y-toggle/a11y-toggle.min.js"></script>
+
+<!--     <script>
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('nav-toggler').addEventListener('click', function(e) {
           if (e.target.nodeName.toLowerCase() == 'a') { e.preventDefault(); }
-          /// Do this if you want to custimise the classes, i.e. use other stuff than is-active
-          // document.getElementById('nav-toggler').classList.toggle('is-active');
-          // document.getElementById('site-nav').classList.toggle('is-active');
-
-          /// Use this if is-active is fine and you'll style in the CSS
-          [].forEach.call(document.querySelectorAll('#nav-toggler, #site-nav'), function(el) {
-            el.classList.toggle('is-active');
-            // el.setAttribute("aria-pressed", "true");
-          });
+          document.getElementById('nav-toggler').classList.toggle('is-active');
         });
       });
-    </script>
+    </script> -->
   </body>
 </html>
