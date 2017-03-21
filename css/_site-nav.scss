@@ -28,15 +28,14 @@
     visibility: hidden;
     overflow: hidden;
     transition:
-      visibility 0s ease,
-      max-height 2s ease,
-      opacity    2s ease;
-    transition-delay: 0s;
+      visibility 0.5s ease-in-out,
+      max-height 1.5s ease-in-out,
+      opacity    1.5s ease-in-out;
 
     // &[aria-hidden='false'] {
     &.is-active {
       opacity: 1;
-      max-height: 80em;
+      max-height: 2000px;
       visibility: visible;
     }
   }
