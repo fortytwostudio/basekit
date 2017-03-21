@@ -82,7 +82,7 @@
   </head>
 
   <body class="start">
-    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="skip-link" href="#install">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
     <!-- merely the outer colour and padding container of the header, plus an id hook for scrolling -->
@@ -100,7 +100,7 @@
           </div>
 
           <div data-bk="6" class="align-r">
-            <button data-a11y-toggle="site-nav" id="nav-toggler" class="hamburger hamburger--squeeze" type="button">
+            <button id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-controls="site-nav">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -110,7 +110,7 @@
       </header>
     </div>
 
-    <nav id="site-nav" class="site-container  pad  site-nav" tabindex="-1">
+    <nav id="site-nav" class="site-container  pad  site-nav" tabindex="-1" aria-labelledby="nav-toggler">
       <h2 class="skip-link">Website Navigation</h2>
       <ul class="align-c  set-links  font-upper  font-bold">
         <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
@@ -129,9 +129,8 @@
       </ul>
     </nav>
 
-  <div id="content" tabindex="-1">
     <section id="install" tabindex="-1" class="site-container  pad  user-content  set-links">
-      <h2 class="font-l">Installation <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+      <h2 class="font-l">Installation</h2>
 
       <ol>
         <li><a href="https://github.com/fortytwostudio/basekit.git">Clone</a> and then copy to or <a href="https://github.com/fortytwostudio/basekit/archive/master.zip">download</a> to your project.</li>
@@ -146,7 +145,7 @@
 
     <section id="colors" tabindex="-1" class="site-container  pad">
       <div class="user-content">
-        <h2 class="font-l">Colors <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+        <h2 class="font-l">Colors</h2>
         <p>Colours are based on brand guidelines and/or style guides and used for text, links, buttons, backgrounds, etc.</p>
 
         <p>Designers will often miss out a tertiary colour from the guidelines, in which case I tend to make use of an appropriatly fitting grey. Tertiary colours are useful for active states on navigation links and buttons.</p>
@@ -182,7 +181,7 @@
 
     <div id="fonts" tabindex="-1" class="site-container  pad">
       <div class="user-content  pad-b">
-        <h2 class="font-l">Fonts <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+        <h2 class="font-l">Fonts</h2>
 
           <p>
             Responsive, viewport based, fonts should be restricted to use on headings
@@ -254,7 +253,7 @@
     </div>
 
     <section id="breakpoints" tabindex="-1" class="site-container  pad  user-content  set-links">
-      <h2 class="font-l">Breakpoints &amp; Grid <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+      <h2 class="font-l">Breakpoints &amp; Grid</h2>
 
       <p>Easy to use <code>inline-block</code> based grid system, utilising <a href="https://github.com/sass-mq/sass-mq">Sass MQ</a>.</p>
 
@@ -351,24 +350,14 @@
       </table>
     </section>
 
-    <section id="class-naming" tabindex="-1" class="site-container  pad  user-content  set-links">
-      <h3>Class Naming <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
+    <section class="site-container  pad  user-content  set-links">
+      <h3 id="class-naming" tabindex="-1">Class Naming</h3>
 
       <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
 
       <p>Utility classes aim to be reuseable and single purpose, unlike BEM classes they should not have sub elements but they can have modifiers.</p>
 
       <p>BEM classes are most likely to be used in unique project modules or components and not within the core CSS files. If a component of the sites lends well to the Block Element Modifier convention (such as tabbed content) then you're advised to use this.</p>
-
-      <code>
-        <pre>
-  .tabs {…}
-  .tabs__nav {…}
-  .tabs__nav-item {…}
-  .tabs__content {…}
-  .tabs__content--active {…}
-</pre>
-      </code>
 
       <p>In brief, when creating classes take the following approach:</p>
 
@@ -384,7 +373,7 @@
     </section>
 
     <section id="padding" tabindex="-1" class="site-container  pad  set-links  clear">
-     <h2 class="font-l">Padding / Spacer <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+     <h2 class="font-l">Padding / Spacer</h2>
 
       <div class="pad  pad-s  bg-tertiary  margin-b  align-c">
         <p class="bg-white">Small Padding</p>
@@ -415,7 +404,7 @@
         </div>
       </div>
       <div style="float:left; width: 33.3333333333%">
-        <div class="pad  bg-tertisudo ary  margin-b  align-c">
+        <div class="pad  bg-tertiary  margin-b  align-c">
           <p class="bg-white">Default Padding</p>
         </div>
       </div>
@@ -429,7 +418,7 @@
 
 
     <section id="full-width" class="site-container  pad  user-content  set-links">
-      <h3 class="font-l  margin-b">Full width container breaking out of site container  <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
+      <h3 class="font-l  margin-b">Full width container breaking out of site container </h3>
 
       <div class="browser-width">
         <img src="https://placeholdit.imgix.net/~text?txtsize=75&txt=full&w=1280&h=300" alt="">
@@ -439,7 +428,7 @@
 
 
     <section id="form" tabindex="-1" class="site-container  pad  user-content  set-links">
-      <h3 class="font-l  pad-s-b">Example Form <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
+      <h3 class="font-l  pad-s-b">Example Form</h3>
 
       <form data-bk="hands:6" class="bk-form" action="POST">
         <h4>Standard Form Styling</h4>
@@ -901,7 +890,7 @@
 
 
     <section id="user-content" tabindex="-1" class="site-container  pad  user-content  set-links">
-      <h3>User Content Styling <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h3>
+      <h3>User Content Styling</h3>
 
       <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
 
@@ -956,11 +945,8 @@
 
 
 
-
-
-
     <section id="logos" tabindex="-1" class="site-container  pad">
-      <h2 class="font-l">Logos <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+      <h2 class="font-l">Logos</h2>
 
       <p class="margin-tb">Main site logo:</p>
       <h1 class="logo  site-logo">
@@ -976,8 +962,10 @@
       </div>
     </section>
 
+
+
     <section id="tables" tabindex="-1" class="site-container  pad">
-      <h2 class="font-l">Tables <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+      <h2 class="font-l">Tables</h2>
 
       <table class="margin-t">
         <caption>Jimi Hendrix - albums</caption>
@@ -1108,9 +1096,10 @@
     </section>
 
 
+
     <div id="links" tabindex="-1" class="site-container  pad">
 
-      <h2 class="font-l  pad-s-b">Links &amp; Navigation <span class="font-xs float-r"><a class="btn  scroll" href="#start" aria-label="Back to page start">↑</a></span></h2>
+      <h2 class="font-l  pad-s-b">Links &amp; Navigation</h2>
 
       <div class="user-content  pad-s-b">
         <p>
@@ -1175,7 +1164,6 @@
       </ul>
 
     </div>
-  </div>
 
     <script src="/js/min/basekit.js"></script>
     <script src="/js/min/scroll.min.js"></script>

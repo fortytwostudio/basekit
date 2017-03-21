@@ -22,7 +22,7 @@
 
 
 @include mq($until: lap) {
-  #site-nav {
+  .js #site-nav {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
@@ -47,6 +47,11 @@
     display: none;
   }
 }
+
+.no-js #nav-toggler {
+  display: none;
+}
+
 /// OLD VERSION:
 //
 // @if $nav-mobile {
