@@ -244,10 +244,10 @@ $fh-display: block !default;
   input[type="reset"],
   input[type="image"] {
     height: $fh-button-height;
-    width: $fh-button-width;
-    max-width: $fh-button-max-width;
+    // width: $fh-button-width;
+    min-width: $fh-button-max-width;
     background-color: $fh-button-bg-color;
-    padding: $fh-input-height / 5;
+    padding: ($fh-input-height / 5) $fh-input-height / 2.5;
     cursor: pointer;
 
     color: $fh-button-font-color;

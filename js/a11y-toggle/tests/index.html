@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <style>.test-suite, [aria-hidden="true"] { display: none; }</style>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="mocha"></div>
+
+    <div class="test-suite">
+      <div class="test test-0">
+        <button data-a11y-toggle="t0" type="button">Toggle</button>
+        <div id="t0">Target</div>
+      </div>
+
+      <div class="test test-1">
+        <button data-a11y-toggle="t1" type="button" id="custom-id-1">Toggle</button>
+        <div id="t1">Target</div>
+      </div>
+
+      <div class="test test-2">
+        <button data-a11y-toggle="t2" type="button">Toggle</button>
+        <div id="t2">Target</div>
+      </div>
+
+      <div class="test test-3">
+        <button data-a11y-toggle="t3" type="button">Toggle</button>
+        <div id="t3" data-a11y-toggle-open>Target</div>
+      </div>
+
+      <div class="test test-4">
+        <button data-a11y-toggle="t4" type="button">Toggle</button>
+        <div id="t4">Target</div>
+      </div>
+
+      <div class="test test-5">
+        <button data-a11y-toggle="t5" type="button">Toggle</button>
+        <div id="t5">Target</div>
+      </div>
+
+      <div class="test test-6">
+        <button data-a11y-toggle="t6" type="button" id="toggle-t6">Toggle</button>
+        <div id="t6" data-a11y-toggle-open>Target</div>
+      </div>
+
+      <div class="test test-7">
+        <button data-a11y-toggle="t7" type="button" id="custom-id-2">Toggle</button>
+        <div id="t7">Target</div>
+      </div>
+
+      <div class="test test-8">
+        <button data-a11y-toggle="t8" type="button" id="custom-id-3">Toggle</button>
+        <button data-a11y-toggle="t8" type="button" id="custom-id-4">Toggle</button>
+        <div id="t8">Target</div>
+      </div>
+
+      <div class="test test-9">
+        <button data-a11y-toggle="t9" type="button" id="custom-id-5">Toggle</button>
+        <div id="t9" aria-labelledby="custom-id-5">Target</div>
+      </div>
+
+      <div class="test test-10">
+        <button data-a11y-toggle="t10" type="button">Toggle</button>
+        <div id="t10">Target</div>
+      </div>
+
+      <div class="test test-11">
+        <button data-a11y-toggle="t11" type="button">Toggle</button>
+        <div id="t11">Target</div>
+      </div>
+
+      <div class="test test-12">
+        <button data-a11y-toggle="t12" type="button">Toggle</button>
+        <button data-a11y-toggle="t12" type="button" id="custom-id-6">Toggle</button>
+        <div id="t12">Target</div>
+      </div>
+
+      <div class="test test-13">
+        <button data-a11y-toggle="t13" type="button"><span>Toggle</span></button>
+        <div id="t13">Target</div>
+      </div>
+
+      <div class="test test-14">
+        <span data-a11y-toggle="t14" role="button" tabindex="0">Toggle</span>
+        <div id="t14">Target</div>
+      </div>
+    </div>
+
+    <script src="../a11y-toggle.js"></script>
+    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+    <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="./index.js"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+  </body>
+
+</html>
