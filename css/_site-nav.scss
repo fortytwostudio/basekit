@@ -1,157 +1,206 @@
 .nav-links {
-  a {
-    border-bottom: 1px solid transparent!important;
-    color: white!important;
-    text-transform: uppercase;
-    transition: all $speed-normal ease-in-out;
-
-    &:focus,
-    &:hover {
-      border-color: currentColor!important;
-      color: inherit;
-    }
-  }
-
-  .active {
+  li {
     a {
-      color: $grey;
+      color: white!important;
+      text-transform: uppercase;
+      transition: all $speed-slow ease-in-out;
+
+      // Bump up the default (nav--block padding) for small screens
+      @include mq($until: hands) {
+        padding: 1em!important;
+      }
+
+      // Style all interactive states
+      &:focus,
+      &:hover,
+      &.active,
+      &.open {
+        background-color: $primary;
+        color: inherit;
+        transition-duration: $speed-normal;
+      }
+
+      // Add arrow if links are outbound
+      &[target="_blank"] {
+        &:after {
+          content: "";
+          display: inline-block;
+          height: 0.8em;
+          margin-left: 0.4em;
+          width: 0.8em;
+          background-image: url('/imgs/svg/i-external--alt.svg');
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+
+    // Apply search icon at larger sizes only
+    @include mq(hands) {
+      &.nav-item--search {
+        a {
+          background-color: transparent;
+          background-image: url('/imgs/svg/i-search--white.svg');
+          background-position: center;
+          background-size: auto 75%;
+          direction: ltr;
+          display: block;
+          height: 2em;
+          line-height: 0;
+          text-align: left;
+          text-indent: -9999px;
+          width: 2em;
+          border-radius: 1000px;
+
+          &:hover,
+          &:focus {
+            background-color: $primary;
+            box-shadow: 0 0 0 2px $primary;
+          }
+        }
+      }
     }
   }
 }
 
 
+@include mq($until: hands) {
+  // This wrapper is a bit of a fudge to get rid of the invisible spacing that appears when the item is inline-block
+  // It also makes the nav dropdown thing full width
+  .site-nav-wrapper {
+    display: block!important;
+    // margin-left: calc(-50vw + 50%);
+    // margin-right: calc(-50vw + 50%);
 
-@include mq($until: lap) {
-  .js #site-nav {
+    // .site-nav {
+    //   // Using calc to be sure vw isn't applied without calc support for the above margins
+    //   width: calc(100vw);
+    // }
+  }
+
+  .site-nav {
+    text-align: left;
+    background-color: $primary--dark;
+
+    .js & {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition:
+        visibility 0.5s ease-in-out,
+        max-height 0.5s ease-in-out,
+        opacity    0.5s ease-in-out;
+
+      // &[aria-hidden='false'] {
+      &.is-active {
+        opacity: 1;
+        max-height: 2000px;
+        visibility: visible;
+      }
+    }
+
+    li,
+    a {
+      width: 100%;
+    }
+
+    // Tweaks for the sub nav items
+    li ul a {
+      padding-left: 2em!important;
+      font-size: 75%;
+    }
+  }
+}
+
+// We don't want to see the toggler at large screen sizes
+@include mq(hands) {
+  #nav-toggler,
+  .nav-toggler-wrapper {
+    display: none;
+  }
+}
+// We don't want it if there's no JS either
+.no-js #nav-toggler,
+.no-js .nav-toggler-wrapper {
+  display: none;
+}
+
+
+
+@include mq(hands) {
+  /* mega menu list */
+  .nav-menu {
+    position: relative;
+    z-index: 15;
+  }
+
+  // a top level navigation item in the mega menu
+  .nav-item {
+    // first descendant link within a top level navigation item
+    > a {
+      position: relative;
+      display: inline-block;
+
+      // focus/open states of first descendant link within a top level navigation item */
+      &:focus,
+      &.open {
+        // nothing at the moment
+      }
+      // open state of first descendant link within a top level navigation item
+      &.open {
+        border-bottom: none;
+        z-index: 1;
+      }
+    }
+  }
+
+  // sub-navigation panel
+  .sub-nav {
+    background-color: mix($primary, $primary--dark);
+    box-shadow: 0 5px 20px -5px $primary--dark;
+    // display: none;
+    font-size: 87.25%;
+    margin-top: 2px;
+    min-width: em(180px);
+    text-align: left;
+    top: 100%;
+    position: absolute;
+
     max-height: 0;
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
     transition:
-      visibility 1.5s ease-in-out,
-      max-height 1.5s ease-in-out,
-      opacity    1.5s ease-in-out;
+      visibility 0.25s ease-in-out,
+      max-height 0.25s ease-in-out,
+      opacity    0.25s ease-in-out;
+    transition-delay: 0.75s;
 
-    // &[aria-hidden='false'] {
-    &.is-active {
+    // sub-navigation panel open state
+    &.open {
+      // display: block;
       opacity: 1;
       max-height: 2000px;
+      transition-duration: 0.5s;
+      transition-delay: 0.3s;
       visibility: visible;
     }
   }
 }
 
-@include mq(lap) {
-  #nav-toggler {
-    display: none;
-  }
-}
 
-.no-js #nav-toggler {
-  display: none;
-}
 
-/// OLD VERSION:
-//
-// @if $nav-mobile {
-//   .nav-active {
-//     overflow: hidden;
-//   }
 
-//   .nav-toggler {
-//     display: none;
-//   }
 
-//   @include mq($until: hands) {
-//     .nav-toggler {
-//       $site-logo-height: 44px;
 
-//       appearance: none;
-//       background-clip: padding-box;
-//       outline: 0;
-//       border: 0;
-//       cursor: pointer;
-//       user-select: none;
-//       background: transparent url('/imgs/ui/menu-icon-open.svg') no-repeat center center;
-//       background-size: 60%;
-//       display: inline-block!important;
-//       @include hide(text);
-//       transition: background-color $speed-fast ease-in-out;
 
-//       height: rem($site-logo-height) / 1.5;
-//       width: rem($site-logo-height) / 1.5;
-//       @include mq(palm) {
-//         height: rem($site-logo-height);
-//         width: rem($site-logo-height);
-//       }
-//       @include mq(lap) {
-//         height: rem($site-logo-height) * 1.25;
-//         width: rem($site-logo-height) * 1.25;
-//       }
-
-//       .nav-active & {
-//         // the icon active state
-//         background-image: url('/imgs/ui/menu-icon-closed.svg');
-//         position: relative;
-//         z-index: $z-max;
-//       }
-//     }
-
-//     .site-nav {
-//       // hide the nav item and fade out by default
-//       position: absolute;
-//       left: -9999em;
-//       top: -9999em;
-//       opacity: 0;
-//       max-height: 0;
-//       transition: opacity $speed-normal ease-out;
-
-//       .nav-active & {
-//         // when the checkbox is checked, fade the opacity
-//         // back to 1 and transition to the content height
-//         // (max-height can be any safe range well over what
-//         // the nav content could ever be)
-//         position: fixed;
-//         left: 0;
-//         top: 0;
-//         right: 0;
-//         bottom: 0;
-//         min-width: 100%;
-//         min-height: 100%;
-//         min-width: 100vw;
-//         min-height: 100vh;
-//         opacity: 1;
-//         overflow: hidden;
-//         transition: opacity $speed-fast ease-in;
-//         text-align: center;
-//         z-index: $z-mobile-nav;
-//         background: $primary;
-
-//         ul {
-//           @include position-over(middle);
-//           width: 100%;
-//         }
-
-//         li {
-//           display: block;
-//           width: 100%;
-//           font-size: 175%;
-//         }
-
-//         a {
-//           display: block;
-//           padding: rem(5px);
-//         }
-//       }
-//     }
-//   }
-// }
 
 .skip-link {
   background-color: #f1f1f1;
   box-shadow: 0 0 1px 1px rgba(black, 0.2);
   clip: rect(1px, 1px, 1px, 1px);
-  color: $primary;
+  color: $secondary!important;
   display: block;
   font-weight: 700;
   height: 1px;
