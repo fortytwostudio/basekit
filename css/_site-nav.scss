@@ -175,7 +175,6 @@
       visibility 0.25s ease-in-out,
       max-height 0.25s ease-in-out,
       opacity    0.25s ease-in-out;
-    transition-delay: 0.75s;
 
     // sub-navigation panel open state
     &.open {
@@ -183,7 +182,6 @@
       opacity: 1;
       max-height: 2000px;
       transition-duration: 0.5s;
-      transition-delay: 0.3s;
       visibility: visible;
     }
   }
