@@ -74,19 +74,26 @@ gulp.task('html', function() {
 
 // Compile Twig templates to HTML
 gulp.task('twig', function() {
-  // run the Twig template parser on all .twig files in the "src" directory
-  return gulp.src(['templates/**/*.twig', '!templates/layouts/**/*.twig', '!templates/includes/**/*.twig'])
-  // Data for populating Twig files
-  .pipe(data(function() { return require('./templates/data.json') }))
-  .pipe(twig())
-  // output the rendered HTML files to the "dist" directory —— disabled for now as we don't need non-compressed html files
-  // .pipe(gulp.dest('templates/dist'))
+
+  // De-caching for Data files
+  function requireUncached( $module ) {
+    delete require.cache[require.resolve( $module )];
+    return require( $module );
+  }
+
+  // run the Twig template parser on .twig files that don't start with an _
+  return gulp.src('./templates/**/[^_]*.twig')
+  // Uncached data for populating Twig files
+  .pipe( data(function(file){ return requireUncached('./templates/data.json'); }))
+  .pipe(twig({
+    // Let gulp-twig know where the base template directory is
+    base: 'templates'
+  }))
   // Minify the files for development usage
   .pipe(htmlmin({
     collapseWhitespace: true,
     removeComments: true,
     removeAttributeQuotes: true,
-    // removeRedundantAttributes: true,
     removeEmptyAttributes: true,
     removeScriptTypeAttributes: true,
     removeStyleLinkTypeAttributes: true,
@@ -95,8 +102,8 @@ gulp.task('twig', function() {
     minifyJS: true,
     minifyCSS: true
   }))
-  // Output minified files —— add /_min to the end if you enable uncompressed html output above
-  .pipe(gulp.dest('templates/_html'));
+  // Output minified file
+  .pipe(gulp.dest('demo'));
 });
 
 
@@ -113,14 +120,7 @@ gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
   gulp.watch('html/*.html', ['html']);
   gulp.watch('js/*.js', ['js']);
-});
-
-// Combine various functions into watch + twig
-gulp.task('watch-twig', function() {
-  gulp.watch('css/**/*.scss', ['scss']);
-  gulp.watch('html/*.html', ['html']);
-  gulp.watch('js/*.js', ['js']);
-  gulp.watch('./templates/**/*', ['twig']);
+  gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], ['twig']);
 });
 
 gulp.task('default', ['watch']);
