@@ -1,3 +1,9 @@
+{# DEV NOTE:
+  • Check the color variables in data.json and either paste the values here or configure something in a Craft global field
+  • Then it should be a straight up copy and paste job to Craft. I've made the 404 error page in such a way that it should work as a standalone file. Just point Craft config here.
+#}
+
+{% spaceless %}
 <!doctype html>
 <html>
   <head>
@@ -18,10 +24,10 @@
       h1 {
         font-size: 300%;
         line-height: 1;
-        color: #000;
+        color: {{ brandColorPrimary }};
         display: inline-block;
         margin-bottom: 10%;
-        border-bottom: 0.15em solid #000;
+        border-bottom: 0.15em solid {{ brandColorPrimary }};
       }
       h2 {
         margin-bottom: 0;
@@ -31,7 +37,7 @@
         margin: 0 0 1em;
       }
       a {
-        color: #000;
+        color: {{ brandColorSecondary }};
         text-decoration: none;
       }
       a:hover,
@@ -67,3 +73,4 @@
     <p class="block">Apologies for the inconvenience.</p>
   </body>
 </html>
+{% endspaceless %}

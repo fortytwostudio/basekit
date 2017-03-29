@@ -1,22 +1,48 @@
 {
-  "siteName": "BaseKit Template",
-  "siteUrl": "http://basekit.dev/templates/_html",
+  "siteName": "BaseKit",
+  "siteUrl": "/demo/",
+  "brandColorPrimary": "#333",
+  "brandColorSecondary": "#00f",
+  "brandColorTertiary": "lightgrey",
+
   "siteEmail": "info@fortytwo.studio",
   "siteTel": "01224 280 005",
 
   "mainNav": [{
     "title": "Home",
-    "url": "/"
+    "url": "",
+    "slug": "home"
   }, {
     "title": "Services",
-    "url": "/services/"
+    "url": "services/",
+    "slug": "services",
+    "children": [{
+      "title": "Bananas",
+      "url": "bananas/",
+      "slug": "bananas"
+    }, {
+      "title": "Apples",
+      "url": "apples/",
+      "slug": "apples"
+    }, {
+      "title": "Peaches",
+      "url": "peaches/",
+      "slug": "peaches"
+    }, {
+      "title": "Fudge",
+      "url": "fudge/",
+      "slug": "fudge"
+    }]
   }, {
     "title": "About",
-    "url": "/about/"
+    "url": "about/",
+    "slug": "about"
   }, {
     "title": "Contact",
-    "url": "/contact/"
+    "url": "contact/",
+    "slug": "contact"
   }],
+
 
   "footerNav": [{
     "title": "Home",
@@ -35,16 +61,18 @@
     "url": "/support/"
   }],
 
+
   "socialLinks": [{
     "title": "Facebook",
-    "url": "#"
+    "url": "https://facebook.com"
   }, {
     "title": "Twitter",
-    "url": "#"
+    "url": "https://twitter.com"
   }, {
     "title": "LinkedIn",
-    "url": "#"
+    "url": "https://linkedin.com"
   }],
+
 
   "siteInfoNav": [{
     "title": "Terms &amp; Conditions",

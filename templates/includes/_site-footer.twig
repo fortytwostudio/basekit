@@ -1,0 +1,62 @@
+<footer class="site-container  pad  pad-l-t  set-links">
+  <div data-bk="pad:0  middle">
+    <div data-bk="hands:3">
+      <h1 class="site-logo  logo  inline-block">
+        <span class="site-logo__img  logo__img">
+          {{ siteName }}
+        </span>
+      </h1>
+    </div>
+
+    <div data-bk="pad:0  hands:9">
+      {% if address|length or siteEmail or siteTel %}
+        <div data-bk="palm:4">
+          {% if address.org %}<span class="block">{{ address.org }}</span>{% endif %}
+          {% if address.street %}<span class="block">{{ address.street }}</span>{% endif %}
+          {% if address.townCity %}<span class="block">{{ address.townCity }}</span>{% endif %}
+          {% if address.postalCode %}<span class="block">{{ address.postalCode }}</span>{% endif %}
+
+          {% if siteEmail or siteTel %}
+            <ul{{ address|length ? ' class="pad-s-t"' }}>
+              <li><a href="mailto:{{ siteEmail }}">{{ siteEmail }}</a></li>
+              <li>{{ siteTel }}</li>
+            </ul>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if footerNav|length %}
+        <ul data-bk="6  palm:4">
+          {% for item in footerNav %}
+            <li>
+              <a href="{{ siteUrl }}{{ item.url }}">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if socialLinks|length %}
+        <ul data-bk="6  palm:4">
+          {% for item in socialLinks %}
+            <li>
+              <a href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if siteInfoNav|length %}
+        <ul class="font-xs  pad-s-t">
+          {% if charityNum %}<li data-bk="auto">{{ charityNum }}</li>{% endif %}
+          {% if companyNum %}<li data-bk="auto">{{ companyNum }}</li>{% endif %}
+          {% for item in siteInfoNav %}
+            <li data-bk="auto">
+              <a href="{{ siteUrl }}{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+            </li data-bk="auto">
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+  </div>
+</footer>

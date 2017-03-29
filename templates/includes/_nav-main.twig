@@ -1,0 +1,46 @@
+{% if mainNav|length %}
+  <div data-bk="pad:0  9  right" class="nav-toggler-wrapper">
+    <button id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-controls="site-nav">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+
+  <div data-bk="to:hands:pad:0  hands:pad:tb  hands:7  hands:pr:2  hands:right" class="site-nav-wrapper">
+
+    {# DEV NOTE: You'll probably want to use that awesome navigation plugin for Craft, make sure the below markup doesn't get fucked up though #}
+    <nav id="site-nav" class="site-nav  nav-links  font-upper" tabindex="-1" aria-labelledby="nav-toggler">
+      {# <h2 class="hide">Website Navigation</h2> #}
+      <ul class="nav  nav--block  |  nav-menu  |  flex  flex--space-between">
+        {% for item in mainNav %}
+          <li class="nav-item">
+            <a {{ isActivePage is defined and isActivePage == item.slug ? 'class="active" ' }}href="{{ item.external == null ? siteUrl }}{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+              {{ item.title }}
+            </a>
+            {% if item.children|length %}
+              <div class="sub-nav">
+                <ul class="nav  nav--stack  nav--block  sub-nav-group">
+                  {% for child in item.children %}
+                    <li>
+                      <a href="{{ siteUrl }}{{ item.url }}{{ child.url }}">
+                        {{ child.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+
+        {# DEV NOTE: You could hard code this to the end of the nav list and leave it out of the Navigation plugin. #}
+        <li class="nav-item  nav-item--search">
+          <a href="{{ siteUrl }}/search/" title="Search {{ siteName }}">
+            Search
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+{% endif %}
