@@ -16,27 +16,39 @@ var gulp            = require('gulp'),
     // Report file sizes in the CLI
     size            = require('gulp-size'),
     // Fancy documentation
-    sassdoc         = require('sassdoc');
+    sassdoc         = require('sassdoc'),
+    // Error utilities?
+    gutil           = require('gulp-util'),
+    // Stops stream from ending on error
+    plumber         = require('gulp-plumber'),
+    // Send noficitations to the system
+    notify         = require('gulp-notify');
 
-// Compile Sass (with Autoprefixer)
+var hasError = notify.onError({
+  title: 'Error',
+  message: '<%= error.message %>',
+  sound: "Basso"
+});
+
+/// Compile Sass (with Nano and Autoprefixer)
+///
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
+    .pipe(plumber({errorHandler: hasError}))
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({
       // http://cssnano.co/optimisations/minifySelectors/
+      // This was interfering with the global selector so I've disabled it
       minifySelectors: false,
-
+      // Enable adding prefixes
       autoprefixer: {
-        // Add prefixes
         add: true,
         // Browser support level
-        browsers: [
-          '> 0.5%',
-          'last 2 versions',
-          'ie >= 9'
-        ]
+        // Must be over 0.5% usage, going back 2 versions, but IE is from 9 to 11
+        browsers: [ '> 0.5%', 'last 2 versions', 'ie >= 9' ]
       }
     }))
+    //
     .pipe(gulp.dest('css'))
     // Show file size before gzip
     .pipe(size({ showFiles: true }))
@@ -46,16 +58,22 @@ gulp.task('scss', function() {
 
 // Minify and Concat JS files for production
 gulp.task('js', function() {
-  gulp.src('js/*.js')
-    .pipe(concat('basekit.js'))
+  gulp.src('js/[^_]*.js')
+    .pipe(plumber({errorHandler: hasError}))
+    .pipe(concat('_basekit.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js/min'))
-    .pipe(size({ gzip: true, showFiles: true }));
+    .pipe(size({
+      gzip: true,
+      showFiles: true
+    })
+  );
 });
 
 // Minify and clean HTML
 gulp.task('html', function() {
   gulp.src('./html/*.html')
+    .pipe(plumber({errorHandler: hasError}))
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true,
@@ -69,7 +87,11 @@ gulp.task('html', function() {
       minifyJS: true,
       minifyCSS: true
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(notify({
+      title: 'Created',
+      message: '<%= file.relative %>'
+    }));
 });
 
 // Compile Twig templates to HTML
@@ -84,6 +106,7 @@ gulp.task('twig', function() {
 
   // run the Twig template parser on .twig files that don't start with an _
   return gulp.src('./templates/**/[^_]*.twig')
+  .pipe(plumber({errorHandler: hasError}))
   // Uncached data for populating Twig files
   .pipe( data(function(file){ return requireUncached('./templates/data.json'); }))
   .pipe(twig({
@@ -104,7 +127,8 @@ gulp.task('twig', function() {
     minifyCSS: true
   }))
   // Output minified file
-  .pipe(gulp.dest('demo'));
+  .pipe(plumber.stop())
+  .pipe(gulp.dest('demo'))
 });
 
 
