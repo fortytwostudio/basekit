@@ -1,35 +1,37 @@
 var gulp            = require('gulp'),
-    // Sass for writing and pre-processing the CSS
+    // Sass for writing and pre-processing CSS
     sass            = require('gulp-sass'),
-    // Nano for optimising and post-processing the CSS
+    // Nano for optimising and post-processing CSS
     nano            = require('gulp-cssnano'),
-    // Join JS into one file
+    // Join JS file into a single file
     concat          = require('gulp-concat'),
-    // Minify the one JS file
+    // Minify that single JS file
     uglify          = require('gulp-uglify'),
     // Minify and clean up HTML files
     htmlmin         = require('gulp-htmlmin'),
-    // Data storage for Nunjucks, and anything else
+    // Data storage for Twig templates
     data            = require('gulp-data'),
-    // HTML static templating
+    // Templating
     twig            = require('gulp-twig'),
     // Report file sizes in the CLI
     size            = require('gulp-size'),
-    // Fancy documentation
+    // Nice Sass documentation based on comment srtucture
     sassdoc         = require('sassdoc'),
-    // Error utilities?
-    gutil           = require('gulp-util'),
     // Stops stream from ending on error
     plumber         = require('gulp-plumber'),
-    // Send noficitations to the system
+    // Send noficitations to the system and CLI
     notify         = require('gulp-notify');
 
+///
+/// Setup an error notification for gulp-plumber to handle
+///
 var hasError = notify.onError({
   title: 'Error',
   message: '<%= error.message %>',
   sound: "Basso"
 });
 
+///
 /// Compile Sass (with Nano and Autoprefixer)
 ///
 gulp.task('scss', function() {
@@ -56,13 +58,19 @@ gulp.task('scss', function() {
     .pipe(size({ gzip: true, showFiles: true }));
 });
 
-// Minify and Concat JS files for production
+///
+/// Minify and combine javascript files for production, unless they start with an _
+///
 gulp.task('js', function() {
   gulp.src('js/[^_]*.js')
     .pipe(plumber({errorHandler: hasError}))
+    // Combine all (none _) js files into this file
     .pipe(concat('_basekit.js'))
+    // Minify the file
     .pipe(uglify())
+    // Output it here
     .pipe(gulp.dest('js/min'))
+    // Report the gzipped file size
     .pipe(size({
       gzip: true,
       showFiles: true
@@ -70,7 +78,10 @@ gulp.task('js', function() {
   );
 });
 
-// Minify and clean HTML
+///
+/// Minify, clean and output HTML files
+/// NOTE: I'm likely to deprecate this soon in favour of using Twig
+///
 gulp.task('html', function() {
   gulp.src('./html/*.html')
     .pipe(plumber({errorHandler: hasError}))
@@ -94,10 +105,12 @@ gulp.task('html', function() {
     }));
 });
 
-// Compile Twig templates to HTML
+///
+/// Compile Twig templates to an HTML frontend
+/// NOTE: At the time of writing March 2017 we use Craft CMS. Writing frontend templates in Twig makes sense since Craft uses twig, these files are also output as HTML for demonstration and testing.
+///
 gulp.task('twig', function() {
-
-  // De-caching for Data files
+  // De-caching so that the data.json file can be watched correctly
   // See this https://github.com/colynb/gulp-data/issues/17
   function requireUncached( $module ) {
     delete require.cache[require.resolve( $module )];
@@ -109,11 +122,9 @@ gulp.task('twig', function() {
   .pipe(plumber({errorHandler: hasError}))
   // Uncached data for populating Twig files
   .pipe( data(function(file){ return requireUncached('./templates/data.json'); }))
-  .pipe(twig({
-    // Let gulp-twig know where the base template directory is
-    base: 'templates'
-  }))
-  // Minify the files for development usage
+  // Let gulp-twig know where the base template directory is
+  .pipe(twig({ base: 'templates' }))
+  // Minify the files for development use
   .pipe(htmlmin({
     collapseWhitespace: true,
     removeComments: true,
@@ -126,12 +137,17 @@ gulp.task('twig', function() {
     minifyJS: true,
     minifyCSS: true
   }))
-  // Output minified file
+  // Return default behaviour
   .pipe(plumber.stop())
+  // Output minified file
   .pipe(gulp.dest('demo'))
 });
 
-
+///
+/// Build Sass documentation
+/// See http://sassdoc.com/ and the docs directory in this project
+/// SassDoc is not watched, you'll have to run it manually
+///
 gulp.task('sassdoc', function () {
   return gulp.src(['css/**/*.scss', '!css/core/third-party/**/*.scss'])
   .pipe(sassdoc({
