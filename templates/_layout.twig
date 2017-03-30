@@ -18,7 +18,7 @@
     {% include "includes/_head/_analytics.twig" %}
   </head>
 
-  <body>
+  <body id="start">
     <div class="{{ pageHeaderColor|length ? pageHeaderColor : "bg-primary--dark" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
       <header id="header" class="site-container">
 
@@ -43,36 +43,11 @@
 
     {% include "includes/_site-footer.twig" %}
 
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="/js/min/scroll.min.js"></script>
-    <script src="/js/jquery.accessibleMegaMenu.js"></script>
-    <script>
-      $(function() {
-        // Almost certainly going to switch to https://www.smartmenus.org/ (used on PIM)
-        $("#site-nav").accessibleMegaMenu({
-          openDelay: 400 // open delay when opening menu via mouseover
-        });
-
-        // Stolen from https://css-tricks.com/snippets/jquery/smooth-scrolling/
-        // Use https://github.com/kamem/jquery.smoothPageScroll for more advanced scrolling
-        $('a[href*="#"]:not([href="#"])').click(function() {
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-              $('html, body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-
-        $('#nav-toggler').on('click', function() {
-          $('#nav-toggler, #site-nav').toggleClass('is-active');
-        });
-      });
-    </script>
+    {# Not the latest version, because compatibility #}
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    {# Remove if not needed, remember to check you're not loading plugins unused plugins too #}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    {# This is compiled by Gulp #}
+    <script src="/js/min/_basekit.js"></script>
   </body>
 </html>
