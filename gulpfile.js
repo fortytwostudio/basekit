@@ -76,6 +76,7 @@ gulp.task('html', function() {
 gulp.task('twig', function() {
 
   // De-caching for Data files
+  // See this https://github.com/colynb/gulp-data/issues/17
   function requireUncached( $module ) {
     delete require.cache[require.resolve( $module )];
     return require( $module );
