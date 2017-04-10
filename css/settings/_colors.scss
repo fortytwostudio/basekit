@@ -2,32 +2,32 @@
 /// @group Settings
 ////
 
-/// Primary Brand Colour
-/// Set your primary brand colour.
-$primary: #333;
-/// **Light Variation:**
-/// Tweak the `lighten` value to get the colour you want, or pull it out completely
-/// if the designer has included a light colour value.
-$primary--light: lighten($primary, 15%);
-/// **Dark Variation:**
-/// Tweak the `darken` value to get the colour you want, or pull it out completely
-/// if the designer has included a dark colour value.
-$primary--dark: darken($primary, 20%);
-
-$secondary: #00f;
-$secondary--light: lighten($secondary, 15%);
-$secondary--dark: darken($secondary, 20%);
-
-$tertiary: lightgrey;
-$tertiary--light: lighten($tertiary, 15%);
-$tertiary--dark: darken($tertiary, 10%);
-
 /// Grey is commonly used across all website designs, to simplify matters I've
 /// included three default values which should cover most situations. Change the
 /// actual values to specific colour values if CSS keyword values don't suit.
-$grey--light: lightgrey;
-$grey: grey;
-$grey--dark: dimgrey;
+$grey--light: #eee;
+$grey: #ccc;
+$grey--dark: #333;
+
+/// Primary Brand Colour
+/// Set your primary brand colour.
+$primary: #00739f;
+/// **Light Variation:**
+/// Tweak the `lighten` value to get the colour you want, or pull it out completely
+/// if the designer has included a light colour value.
+$primary--light: #009ec9;
+/// **Dark Variation:**
+/// Tweak the `darken` value to get the colour you want, or pull it out completely
+/// if the designer has included a dark colour value.
+$primary--dark: #004369;
+
+$secondary: #c62b90;
+$secondary--light: #cb6791;
+$secondary--dark: #8f3c5e;
+
+$tertiary: $grey;
+$tertiary--light: $grey--light;
+$tertiary--dark: $grey--dark;
 
 /// Document Colours
 ///
@@ -36,7 +36,7 @@ $grey--dark: dimgrey;
 
 /// Set the body background colour here, if you want to add an image you should configure
 /// the $body-media currently in settings/media.scss
-$body: whitesmoke;
+$body: #1a1a1a;
 
 /// Set the primary (body) text colour
 $text: #393939;
