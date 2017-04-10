@@ -10,55 +10,59 @@
 
   "mainNav": [{
     "title": "Home",
-    "url": "",
+    "url": "/demo/",
     "slug": "home"
   }, {
     "title": "Services",
-    "url": "services/",
+    "url": "/demo/services/",
     "slug": "services",
     "children": [{
       "title": "Bananas",
-      "url": "bananas/",
+      "url": "/demo/bananas/",
       "slug": "bananas"
     }, {
       "title": "Apples",
-      "url": "apples/",
+      "url": "/demo/apples/",
       "slug": "apples"
     }, {
       "title": "Peaches",
-      "url": "peaches/",
+      "url": "/demo/peaches/",
       "slug": "peaches"
     }, {
       "title": "Fudge",
-      "url": "fudge/",
+      "url": "/demo/fudge/",
       "slug": "fudge"
     }]
   }, {
     "title": "About",
-    "url": "about/",
+    "url": "/demo/about/",
     "slug": "about"
   }, {
+    "title": "Why Us",
+    "url": "http://www.google.com",
+    "external": "true"
+  }, {
     "title": "Contact",
-    "url": "contact/",
+    "url": "#footer",
     "slug": "contact"
   }],
 
 
   "footerNav": [{
     "title": "Home",
-    "url": "/"
+    "url": "/demo/"
   }, {
     "title": "Services",
-    "url": "/services/"
+    "url": "/demo/services/"
   }, {
     "title": "About",
-    "url": "/about/"
+    "url": "/demo/about/"
   }, {
     "title": "Contact Us",
-    "url": "/contact-us/"
+    "url": "/demo/contact-us/"
   }, {
     "title": "Support",
-    "url": "/support/"
+    "url": "/demo/support/"
   }],
 
 
@@ -76,10 +80,10 @@
 
   "siteInfoNav": [{
     "title": "Terms &amp; Conditions",
-    "url": "/terms/"
+    "url": "terms/"
   }, {
     "title": "Privacy Policy",
-    "url": "/privacy/"
+    "url": "privacy/"
   }],
 
   "address": {
