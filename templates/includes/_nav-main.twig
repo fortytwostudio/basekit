@@ -1,5 +1,5 @@
 {% if mainNav|length %}
-  <div data-bk="pad:0  9  right" class="nav-toggler-wrapper">
+  <div data-bk-layout="pad:0  9  right" class="nav-toggler-wrapper">
     <button id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-controls="site-nav">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
@@ -7,15 +7,13 @@
     </button>
   </div>
 
-  <div data-bk="to:hands:pad:0  hands:pad:tb  hands:7  hands:pr:2  hands:right" class="site-nav-wrapper">
-
-    {# DEV NOTE: You'll probably want to use that awesome navigation plugin for Craft, make sure the below markup doesn't get fucked up though #}
-    <nav id="site-nav" class="site-nav  nav-links  font-upper" tabindex="-1" aria-labelledby="nav-toggler">
+  <div data-bk-layout="to:hands:pad:0  hands:pad:tb  hands:7  hands:pr:2  hands:right" class="site-nav-wrapper">
+    <nav id="site-nav" data-bk-links="exit down" class="site-nav  nav-links  font-upper" tabindex="-1" aria-labelledby="nav-toggler">
       {# <h2 class="hide">Website Navigation</h2> #}
-      <ul class="nav  nav--block  |  nav-menu  |  flex  flex--space-between">
+      <ul class="nav  nav--block  |  nav-menu">
         {% for item in mainNav %}
           <li class="nav-item">
-            <a {{ isActivePage is defined and isActivePage == item.slug ? 'class="active" ' }}href="{{ item.external == null ? siteUrl }}{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+            <a{{ isActivePage is defined and isActivePage == item.slug ? ' class="active" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
               {{ item.title }}
             </a>
             {% if item.children|length %}
@@ -23,7 +21,7 @@
                 <ul class="nav  nav--stack  nav--block  sub-nav-group">
                   {% for child in item.children %}
                     <li>
-                      <a href="{{ siteUrl }}{{ item.url }}{{ child.url }}">
+                      <a href="{{ item.url }}{{ child.url }}">
                         {{ child.title }}
                       </a>
                     </li>
@@ -33,13 +31,6 @@
             {% endif %}
           </li>
         {% endfor %}
-
-        {# DEV NOTE: You could hard code this to the end of the nav list and leave it out of the Navigation plugin. #}
-        <li class="nav-item  nav-item--search">
-          <a href="{{ siteUrl }}/search/" title="Search {{ siteName }}">
-            Search
-          </a>
-        </li>
       </ul>
     </nav>
   </div>
