@@ -10,7 +10,7 @@
 
 {% block pageHeader %}
   <div class="site-container  pad-b">
-    <div data-bk="hands:6" class="color-white">
+    <div data-bk-layout="hands:6" class="color-white">
       {# DEV NOTE: Plain text field no line breaks #}
       <h2 class="font-xxl  font-lh-1  pad-s-b">Bus de ditio ent lat ues et ut asper</h2>
 
@@ -26,20 +26,21 @@
   <div class="bg-tertiary--light  pad">
     <div class="site-container">
       {# DEV NOTE: This wrapping div exists only to middle align the two containing divs #}
-      <div data-bk="pad:0  middle">
+      <div data-bk-layout="pad:0  middle">
         {# DEV NOTE: Plain text field, no line breaks #}
-        <div data-bk="palm:6  palm:pad:large" class="font-light  font-l  align-c">
+        <div data-bk-layout="palm:6  palm:pad:large" data-bk-links="secondary fade down underline-hover download" class="no-outline  user-content  font-light  font-l  align-c">
           <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quis etur?</p>
 
-          <p><a href="#target">Skip to a closer target</a></p>
+          <p>Some text <a href="#target">Skip to a closer target</a> around this.</p>
           <p><a href="#why-inspire">Skip to Why</a></p>
           <p><a href="#target">Skip to a closer target</a></p>
           <p><a href="#target">Skip to a closer target</a></p>
-          <p><a href="#why-inspire">Skip to Why</a></p>
+          <p data-bk-links="up"><a href="#start">Skip to top</a></p>
+          <p><a href="file.jpg" download>Download this file</a></p>
         </div>
 
         {# DEV NOTE: Don't output figure if no image present. Alt text should be image title field. #}
-        <figure data-bk="palm:6" class="font-xl">
+        <figure data-bk-layout="palm:6" class="font-xl">
           <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
         </figure>
       </div>
@@ -59,14 +60,14 @@
   <div id="target" class="bg-tertiary--light  pad">
     <div class="site-container">
       {# DEV NOTE: This wrapping div exists only to middle align the two containing divs #}
-      <div data-bk="pad:0  middle">
+      <div data-bk-layout="pad:0  middle">
         {# DEV NOTE: Don't output figure if no image present. Alt text should be image title field. #}
-        <figure data-bk="palm:pad:rl  palm:6" class="font-xl">
+        <figure data-bk-layout="palm:pad:rl  palm:6" class="font-xl">
           <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
         </figure>
 
         {# DEV NOTE: Plain text field, no line breaks #}
-        <div data-bk="palm:pad:rl  palm:6  palm:pad:large" class="font-light  font-xl  color-secondary  align-c">
+        <div data-bk-layout="palm:pad:rl  palm:6  palm:pad:large" class="font-light  font-xl  color-secondary  align-c">
           <p>Am quid ut velenda voluptas sinciet, sed eictatuia etur sus quis etur?</p>
         </div>
       </div>
@@ -74,13 +75,14 @@
   </div>
 
 
-  <div class="bg-primary">
-    <h2 class="bg-white  pad  pad-s-b  align-c  font-xl  color-primary">Our Sectors</h2>
+  <div class="bg-primary--dark  pad-l  color-white">
+    <div data-bk-links="white dim fade more" class="site-container">
+      <h2 class="align-c  font-xl">Our Services</h2>
 
-    <div class="site-container  pad  color-white  set-links  set-links--on-dark">
       {% for item in 1..4 %}
-        <article data-bk="6 hands:3">
-          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
+        <article data-bk-layout="6 hands:3" class="pad-t">
+          <img src="/imgs/placeholders/landscape.png" alt="{{ img.title }}">
+
           <h3 class="font-l  pad-s-t  margin-b">Item Title</h3>
           {# DEV NOTE: Output as plain text, no line breaks #}
           <p>Erum que volut mnduciis inus es ipsus, o ictunduciis inus es ipsus, o ictuaxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu repta- tiur sum resequam</p>
@@ -92,33 +94,72 @@
   </div>
 
 
-  <div class="bg-secondary  bg-img  color-white  font-l  align-c" style="background-image: url(/imgs/placeholders/hero.jpg)">
+  <div class="bg-secondary--dark  pad-l  color-white">
+    <div data-bk-links="white dim fade" class="site-container">
+      <h2 class="font-hero  font-thin  align-c">Our Work</h2>
 
-    <div data-bk="pad:large  lap:10">
-      <div data-bk="pad:large" class="bg-secondary--trans  pad  font-light">
-        <h2 class="font-default  font-light  font-xxl font-thin  pad-s-b">Are you who we’re looking for?</h2>
+      <div data-bk-layout="6  pr:3" class="pad-s-t  align-c  font-light  font-m  user-content">
+        <p>This is an example of three virtual columns (spanning 4 actual columns of a 12 column grid). The Read more links will be bottom aligned once I've added a flex box class.</p>
+      </div>
 
-        <p data-bk="lap:10" class="font-xl  pad-b">
+      {% for item in 1..3 %}
+        <article data-bk-layout="6 hands:4" class="pad-t">
+          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
+
+          <h3 class="font-l  pad-s-t  margin-b">Example title</h3>
+          {# DEV NOTE: Output as plain text, no line breaks #}
+          <p>Erum que volut <a href="/">mnduciis inus</a> es ipsus, o ictunduciis inus es ipsus, o ictuaxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu repta- tiur sum resequam</p>
+
+          <p data-bk-links="more" class="pad-s-t  font-upper"><a href="#">Read more</a></p>
+        </article>
+
+        <article data-bk-layout="6 hands:4" class="pad-t">
+          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
+
+          <h3 class="font-l  pad-s-t  margin-b">Headline dummy</h3>
+          {# DEV NOTE: Output as plain text, no line breaks #}
+          <p>Ictuaxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu repta- tiur sum resequam Erum que volut mnduciis inus es ipsus, o ictunduciis inus es ipsus Erum que volut mnduciis inus es ipsus, o ictunduciis inus es ipsus</p>
+
+          <p data-bk-links="more" class="pad-s-t  font-upper"><a href="#">Read more</a></p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+
+
+  <div class="bg-tertiary--dark  bg-img  color-white  font-l  align-c" style="background-image: url(-/imgs/placeholders/hero.jpg)">
+
+    <div data-bk-layout="pad:large  lap:10">
+      <div data-bk-layout="pad:large"data-bk-links="white fade dim underline" class="bg-secondary--trans  pad">
+        <h2 class="font-hero  font-thin  pad-s-b">Are you who we’re looking for?</h2>
+
+        <p data-bk-layout="lap:6" class="font-l  font-light  pad-b">
           {# DEV NOTE: put as plain text field, no line breaks #}
-          At Inspire we are always looking for great team memebers so speculative applications are always welcome. Submit your CV today for the chance to inspire.
+          At <a href="/about">Inspire</a> we are always looking for great team memebers so speculative applications are always welcome. Submit your CV today for the chance to inspire.
         </p>
 
-        <p><a class="btn" href="#">Submit your CV</a></p>
+        <p data-bk-links="more"><a class="btn  btn--secondary" href="#">Submit your CV</a></p>
       </div>
     </div>
 
   </div>
 
 
-  <div id="why-inspire" class="bg-secondary">
-    <h2 class="bg-white  pad-l-t  pad-s-b  font-xl  color-primary">
+
+
+
+  <div id="why-inspire" class="bg-secondary--dark">
+    <h2 class="bg-white  pad-l-t  pad-s-b  font-xl  color-secondary">
       <span class="block  site-container">
-        <span data-bk="pad:rl">Why Inspire?</span>
+        <span data-bk-layout="pad:rl">Why Inspire?</span>
       </span>
     </h2>
 
-    <div class="site-container  pad  color-white">
-      <div data-bk="lap:6  lap:pl:1" class="user-content  set-links  set-links--underlined">
+    <div class="site-container  pad">
+      <div data-bk-layout="lap:6  lap:pl:1" data-bk-links="white fade dim underline-hover up download" class="user-content  color-white">
 
         {# DEV NOTE: Output from Rich Text field with bold-italic-links #}
         <p>erum que volut <a href="#">maxim sinusa seceperio</a>. <strong>Ossi sit aligendit</strong> el <em>imenduciis inus</em> es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu reptatiur sum resequam er</p>
@@ -126,16 +167,17 @@
         <p><b>um que volut maxim</b> sinusa seceperio. <i>Ossi sit aligendit</i> el imenduciis inus es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu</p>
 
         <p><a href="#start">Back to top</a></p>
+        <p><a href="file.jpg" download>Download this file</a></p>
 
-        <p class="pad-s-t  font-m"><a class="btn" href="#">Find out more</a></p>
+        <p class="no-outline  pad-s-t  font-m"><a class="btn  btn--secondary" href="#start">Find out more</a></p>
+
+        <p class="pad-s-t  font-m"><a class="btn  btn--secondary" href="file.zip" download>Download</a></p>
       </div>
 
-      <div data-bk="lap:5">
+      <div data-bk-layout="lap:5">
         <img src="/imgs/placeholders/square.jpg" alt="{{ img.title }}">
       </div>
     </div>
   </div>
-
-  {# {% include "includes/map.twig" %} #}
 
 {% endblock %}
