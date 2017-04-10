@@ -1,43 +1,272 @@
-// Link Styling Utility
-// —————————————————————————————————————————————————————————————————————————————
-// Links in BaseKit are unstyled by default, this utility class allows you
-// to scope where you want links to be styled via the HTML. This helps to
-// avoid conficts (e.g. nav links vs paragraph links) and specificity problems
-// brought on by the need to unstyle previous styles due to context.
+// Link Style Utility
+// NOTE: This is currently an data attribute and may change back to a class in the near future.
+  // —————————————————————————————————————————————————————————————————————————————
+  // Links in BaseKit are unstyled by default in order to avoid conflict between UI links and user content generated links, and this utility scopes user generated content links to avoid such conficts and specificity problems brought on by the need to unstyle previous styles.
+  //
+  // 1.
+  // In addition to above this has been converted from a utility class to a data attribute to provide more precise scoping, context and concise use.
+  //
+  // Previously the utility class may have been used as such:
+  // `class="set-links set-links--on-dark set-links--underline"`
+  //
+  // With the data attribute:
+  // `data-bk-links="light underline"`
+  //
+  // To style links simply, you would have done:
+  // `class="set-links"`
+  //
+  // Now you would only use the data attribute:
+  // `data-bk-links`
+  //
+  // 2.
+  // To change the data attribute name, edit the $bkln value in the link mixin
+  //
+  // 3.
+  // Comment out anything you don't need
+  //
+  // 4.
+  // The original link class has been trained at the end of this file in case you want to switch back
+  //
+  // CONTENTS:
+  // 01. normal
+  // 02. light
+  // 03. fade
+  // 04. dim
+  // 05. exit
+  // 06. more
+  // 07. down
+  // 08. up
+  // 09. download
+  // 10. underline
+  // 11. underline-hover
+  // 12. no-underline
+  // 13. no-outline
 
-.set-links {
-
-  // Define the primary link style, this is likely to be applied to blocks of
-  // user content (i.e. content from the CMS) rather than website UI.
-  a {
+// Use this group to setup your desired link color styles, beyond this group you will find various configation utilities that can be used to apply various states and styles to links
+// We do not want these styles to apply to the .btn link style, so it is excluded.
+a:not(.btn) {
+  // Link style based on the primary brand colour
+  [data-bk-links~="primary"] & {
     color: $primary;
-    // By default a simple transition is applied to link states.
-    transition: all $speed-slow ease-in-out;
+
+    &:focus, &:hover {
+      color: $secondary;
+    }
+  }
+
+  // Link style based on the secondary brand colour
+  [data-bk-links~="secondary"] & {
+    color: $secondary;
+
+    &:focus, &:hover {
+      color: $primary;
+    }
+  }
+
+  // Link style used on white backgrounds, you'll want to combine this with `dim`
+  [data-bk-links~="white"] & {
+    color: white;
+  }
+
+
+  // OK so the following config utilities too but we don't want them applied to buttons either
+  //
+  // Give the links an underline, notice this uses *= so that the styles also apply to the following "-hover" version
+  [data-bk-links*="underline"] & {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+  // Switch things around so that underline is on hover
+  [data-bk-links~="underline-hover"] & {
+    text-decoration-color: transparent;
+
+    &:hover,
+    &:focus {
+      text-decoration-color: currentColor;
+    }
+  }
+  // Force underline text off if required (e.g. the link is inside a container with underline enabled but you want this specific one without an underline)
+  [data-bk-links~="no-underline"] & {
+    text-decoration: none;
+  }
+
+  // Fade transition link hover/focus. Could use all but to avoid bugginess we're targetting three common link style properties
+  [data-bk-links~="fade"] & {
+    transition:
+      color $speed-slow,
+      opacity $speed-slow,
+      text-decoration $speed-slow;
 
     &:focus,
     &:hover {
-      color: $tertiary--dark;
       transition-duration: $speed-normal;
     }
   }
 
-  &--on-dark {
-    a {
-      color: white;
-      border-bottom: 1px solid transparent!important;
+  // Apply a subtle dimming of the link, best used with white text on a dark background where it's had to make use of an alternative hover color
+  [data-bk-links~="dim"] & {
+    opacity: 0.6;
 
-      &:focus,
-      &:hover {
-        color: inherit;
-        border-color: currentColor!important;
-      }
+    &:focus,
+    &:hover {
+      opacity: 1;
     }
   }
-
-  &--underlined {
-    a {
-      border-bottom: 1px solid currentColor;
-    }
-  }
-
 }
+
+
+
+
+
+// Links that open in a new tab get an angled arrow icon. You could apply this to links with an href that starts with https/http but they may not be opening in a new tab
+// When opening in a new tab be mindfull to inform the user through text also, give the link a title attribute
+[data-bk-links~="exit"] {
+  a[target="_blank"]:after,
+  a[href^="mailto"]:after {
+    content: " ↗︎";
+    display: inline-block;
+    transform: translateY(1px); // ← this should be removed depending on the font
+  }
+}
+
+// Adds a clickthrough indicator arrow to encourage… clicks
+[data-bk-links~="more"] {
+  a:after {
+    content: " →";
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform $speed-normal;
+  }
+
+  a:hover:after {
+    transform: translateX(3px);
+  }
+}
+
+// IMPORTANT: The following two items have cascade specificity clash in certain uses
+
+// Internal page links starting with an # but not only an # get a direction arrow
+[data-bk-links~="down"] {
+  a[href^="#"]:not([href="#"]):after {
+    content: " ↓";
+    display: inline-block;
+  }
+}
+
+// Same as above but applies an upward arrow instead
+[data-bk-links~="up"] {
+  a[href^="#"]:not([href="#"]):after {
+    content: " ↑";
+    display: inline-block;
+  }
+}
+
+
+
+// Style download links with a "download arrow" indicator, a tidy little transition too
+[data-bk-links~="download"] {
+  a[download]:after {
+    border-bottom: 2px solid currentColor;
+    content: "↓"!important;
+    display: inline-block;
+    margin-left: 0.4em;
+    transform: translateY(-3px);
+    transition:
+      transform $speed-normal,
+      border-color $speed-normal;
+  }
+
+  a[download]:hover:after,
+  a[download]:focus:after {
+    border-bottom-color: transparent;
+    transform: translateY(0);
+  }
+}
+
+// Oh shiii… a class. Aye.
+// Remove the :focus outline on links
+.no-outline {
+  &,
+  a {
+    outline: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+// .bk-links {
+//   // Define the primary link style, this is likely to be applied to blocks of
+//   // user content (i.e. content from the CMS) rather than website UI.
+//   a {
+//     color: $primary;
+//     // By default a simple transition is applied to link states.
+//     transition: all $speed-slow ease-in-out;
+
+//     &:focus,
+//     &:hover {
+//       color: $tertiary--dark;
+//       transition-duration: $speed-normal;
+//     }
+//   }
+
+//   &--on-dark {
+//     a {
+//       color: white;
+//       border-bottom: 1px solid transparent!important;
+
+//       &:focus,
+//       &:hover {
+//         color: inherit;
+//         border-color: currentColor!important;
+//       }
+//     }
+//   }
+
+//   &--underlined {
+//     a {
+//       border-bottom: 1px solid currentColor;
+//     }
+//   }
+
+//   // Add arrow if links are outbound
+//   &--exit {
+//     a[target="_blank"]:after {
+//       // background-image: url('/imgs/svg/i-exit--alt.svg');
+//       // background-position: center;
+//       // background-size: contain;
+//       // height: 0.8em;
+//       // width: 0.8em;
+//       content: "↪︎";
+//       display: inline-block;
+//       margin-left: 0.4em;
+//       transform: scale(1,-1) translateY(2px);
+//     }
+//   }
+
+//   // Add down arrow if links are in-page # links
+//   &--hash {
+//     // Add arrow if links are outbound
+//     a[href^="#"]:after {
+//       content: "↓";
+//       display: inline-block;
+//       margin-left: 0.2em;
+//     }
+//   }
+
+//   // Add down arrow if links are in-page # links
+//   &--start {
+//     // Add arrow if links are outbound
+//     a[href="#start"]:after {
+//       content: "↑";
+//       display: inline-block;
+//       margin-left: 0.2em;
+//     }
+//   }
+
+// }
