@@ -22,9 +22,9 @@
     <div class="{{ pageHeaderColor|length ? pageHeaderColor : "bg-primary--dark" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
       <header id="header" class="site-container">
 
-        <div data-bk="pad:tb  middle">
+        <div data-bk-layout="pad:tb  middle">
 
-          <div data-bk="3" class="site-logo--container">
+          <div data-bk-layout="3" class="site-logo--container">
             <h1 class="site-logo  logo">
               <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
                 {{ siteName }}
@@ -35,6 +35,7 @@
           {% include "includes/_nav-main.twig" %}
         </div>
       </header>
+    </div>
 
 
     {% block content %}
