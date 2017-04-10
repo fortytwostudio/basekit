@@ -1,74 +1,33 @@
+// Basic global nav link styles
 .nav-links {
-  li {
-    a {
-      color: white!important;
-      text-transform: uppercase;
-      transition: all $speed-slow ease-in-out;
+  a {
+    color: white!important;
+    text-transform: uppercase;
+    transition: all $speed-slow ease-in-out;
 
-      // Bump up the default (nav--block padding) for small screens
-      @include mq($until: hands) {
-        padding: 1em!important;
-      }
-
-      // Style all interactive states
-      &:focus,
-      &:hover,
-      &.active,
-      &.open {
-        background-color: $primary;
-        color: inherit;
-        transition-duration: $speed-normal;
-      }
-
-      // Add arrow if links are outbound
-      &[target="_blank"] {
-        &:after {
-          content: "";
-          display: inline-block;
-          height: 0.8em;
-          margin-left: 0.4em;
-          width: 0.8em;
-          background-image: url('/imgs/svg/i-external--alt.svg');
-          background-position: center;
-          background-size: contain;
-        }
-      }
+    // Bump up the default (nav--block padding) for small screens
+    @include mq($until: hands) {
+      padding: 1em;
     }
 
-    // Apply search icon at larger sizes only
-    @include mq(hands) {
-      &.nav-item--search {
-        a {
-          background-color: transparent;
-          background-image: url('/imgs/svg/i-search--white.svg');
-          background-position: center;
-          background-size: auto 75%;
-          direction: ltr;
-          display: block;
-          height: 2em;
-          line-height: 0;
-          text-align: left;
-          text-indent: -9999px;
-          width: 2em;
-          border-radius: 1000px;
-
-          &:hover,
-          &:focus {
-            background-color: $primary;
-            box-shadow: 0 0 0 2px $primary;
-          }
-        }
-      }
+    // Style all interactive states
+    // Active and open are tied to the Accessible Mega Menu script
+    &:focus,
+    &:hover,
+    &.active,
+    &.is-open {
+      background-color: $primary;
+      color: inherit;
+      transition-duration: $speed-normal;
     }
   }
 }
-
 
 @include mq($until: hands) {
   // This wrapper is a bit of a fudge to get rid of the invisible spacing that appears when the item is inline-block
   // It also makes the nav dropdown thing full width
   .site-nav-wrapper {
-    display: block!important;
+    display: block;
     // margin-left: calc(-50vw + 50%);
     // margin-right: calc(-50vw + 50%);
 
@@ -113,17 +72,18 @@
   }
 }
 
+
 // We don't want to see the toggler at large screen sizes
-@include mq(hands) {
-  #nav-toggler,
-  .nav-toggler-wrapper {
+#nav-toggler,
+.nav-toggler-wrapper {
+  @include mq(hands) {
     display: none;
   }
-}
-// We don't want it if there's no JS either
-.no-js #nav-toggler,
-.no-js .nav-toggler-wrapper {
-  display: none;
+  // We don't want it if there's no JS either
+  .no-js &,
+  .no-js & {
+    display: none;
+  }
 }
 
 
@@ -144,11 +104,11 @@
 
       // focus/open states of first descendant link within a top level navigation item */
       &:focus,
-      &.open {
+      &.is-open {
         // nothing at the moment
       }
       // open state of first descendant link within a top level navigation item
-      &.open {
+      &.is-open {
         border-bottom: none;
         z-index: 1;
       }
@@ -157,32 +117,43 @@
 
   // sub-navigation panel
   .sub-nav {
-    background-color: mix($primary, $primary--dark);
-    box-shadow: 0 5px 20px -5px $primary--dark;
     // display: none;
+    background-color: mix($primary, $primary--dark);
+    box-shadow: 0 5px 20px -5px black;
     font-size: 87.25%;
-    margin-top: 2px;
     min-width: em(180px);
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
     text-align: left;
     top: 100%;
-    position: absolute;
-
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
     transition:
-      visibility 0.25s ease-in-out,
-      max-height 0.25s ease-in-out,
-      opacity    0.25s ease-in-out;
+      opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000),
+      transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000),
+      visibility 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    transform: scaleY(0);
+    transform-origin: top left;
+    visibility: hidden;
 
-    // sub-navigation panel open state
-    &.open {
-      // display: block;
+    // Fade out before the parent scales much
+    .sub-nav-group {
+      opacity: 0;
+      transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+  }
+  // sub-navigation panel open state
+  .is-open {
+    opacity: 1;
+    pointer-events: all;
+    transform: scaleY(1);
+    visibility: visible;
+
+    // Delay the fading in of the child ul
+    .sub-nav-group {
       opacity: 1;
-      max-height: 2000px;
-      transition-duration: 0.5s;
-      visibility: visible;
+      transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+      transition-delay: 0.15s;
     }
   }
 }
