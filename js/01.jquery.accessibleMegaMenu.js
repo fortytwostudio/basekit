@@ -54,8 +54,8 @@ limitations under the License.
             panelClass: "accessible-megamenu-panel", // default css class for a megamenu panel
             panelGroupClass: "accessible-megamenu-panel-group", // default css class for a group of items within a megamenu panel
             hoverClass: "hover", // default css class for the hover state
-            focusClass: "focus", // default css class for the focus state
-            openClass: "open", // default css class for the open state
+            focusClass: "focused", // default css class for the focus state
+            openClass: "is-open", // default css class for the open state
             openDelay: 0 // default open delay when opening menu via mouseover
         },
         Keyboard = {
