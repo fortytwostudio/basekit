@@ -34,7 +34,7 @@ $margin: $gutter / 2 !default;
 ///
 /// @example
 ///   <div data-bk="…">
-$bk-grid-name: data-bk !default;
+$bk-grid-name: data-bk-layout !default;
 
 /// Enable or disable max-width breakpoint CSS. In simpler designs you may not
 /// ever utilise max-width breakpoints, set this `false` in that case to save
