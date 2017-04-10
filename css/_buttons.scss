@@ -14,24 +14,28 @@ $btn-transition-speed: $speed-normal;
   .btn {
     display: inline-block;
     vertical-align: middle;
-    color: $btn-txt!important;
+    color: $btn-txt;
     font-family: inherit;
     font-size: 100%;
-    text-decoration: none !important;
+    text-decoration: none;
     padding: 0.5em 0.75em;
-    border: 0!important;
+    border: 0;
     background-color: $btn-bg;
-
-    @if $btn-corners {
-      border-radius: rem($btn-corners);
-    }
-
-    transition: all $btn-transition-speed ease-in-out!important;
+    transition: background-color $btn-transition-speed ease-in-out;
+    @if $btn-corners { border-radius: rem($btn-corners); }
 
     &:hover,
     &:focus {
-      color: $btn-txt--hover;
       background-color: $btn-bg--hover;
+    }
+
+    &--secondary {
+      background-color: $secondary;
+
+      &:hover,
+      &:focus {
+        background-color: $secondary--light;
+      }
     }
 
     &--fill {
