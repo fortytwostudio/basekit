@@ -42,10 +42,6 @@
   // 12. no-underline
   // 13. no-outline
 
-[tabindex="-1"] {
-  outline: 0;
-}
-
 // Use this group to setup your desired link color styles, beyond this group you will find various configation utilities that can be used to apply various states and styles to links
 // We do not want these styles to apply to the .btn link style, so it is excluded.
 a:not(.btn) {
