@@ -13,25 +13,61 @@
     "url": "/demo/",
     "slug": "home"
   }, {
-    "title": "Services",
-    "url": "/demo/services/",
-    "slug": "services",
-    "children": [{
-      "title": "Bananas",
-      "url": "/demo/bananas/",
-      "slug": "bananas"
+    "title": "Examples",
+    "url": "/demo/examples/",
+    "slug": "examples",
+    "children": [ {
+      "title": "Setup",
+      "url": "/demo/examples/",
+      "slug": "examples"
     }, {
-      "title": "Apples",
-      "url": "/demo/apples/",
-      "slug": "apples"
+      "title": "Colors",
+      "url": "/demo/examples/colors/",
+      "slug": "colors"
     }, {
-      "title": "Peaches",
-      "url": "/demo/peaches/",
-      "slug": "peaches"
+      "title": "Typography",
+      "url": "/demo/examples/typography/",
+      "slug": "typography"
     }, {
-      "title": "Fudge",
-      "url": "/demo/fudge/",
-      "slug": "fudge"
+      "title": "Layout",
+      "url": "/demo/examples/layout/",
+      "slug": "layout"
+    }, {
+      "title": "Spacing",
+      "url": "/demo/examples/spacing/",
+      "slug": "spacing"
+    }, {
+      "title": "Naming Convention",
+      "url": "/demo/examples/naming/",
+      "slug": "naming"
+    }, {
+      "title": "Forms",
+      "url": "/demo/examples/forms/",
+      "slug": "forms"
+    }, {
+      "title": "User Content",
+      "url": "/demo/examples/user-content/",
+      "slug": "user-content"
+    }, {
+      "title": "Logos",
+      "url": "/demo/examples/logos/",
+      "slug": "logos"
+    }, {
+      "title": "Tables",
+      "url": "/demo/examples/tables/",
+      "slug": "tables"
+    }, {
+      "title": "Links",
+      "url": "/demo/examples/links/",
+      "slug": "links"
+    }, {
+      "title": "Navigation",
+      "url": "/demo/examples/nav/",
+      "slug": "nav"
+    }, {
+      "title": "Buttons",
+      "url": "/demo/examples/buttons/",
+      "slug": "buttons"
     }]
   }, {
     "title": "About",
@@ -52,8 +88,8 @@
     "title": "Home",
     "url": "/demo/"
   }, {
-    "title": "Services",
-    "url": "/demo/services/"
+    "title": "Examples",
+    "url": "/demo/examples/"
   }, {
     "title": "About",
     "url": "/demo/about/"
