@@ -29,3 +29,7 @@ body {
     }
   }
 }
+
+[tabindex="-1"] {
+  outline: 0;
+}
