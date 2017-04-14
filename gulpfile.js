@@ -60,12 +60,13 @@ gulp.task('scss', function() {
 
 ///
 /// Minify and combine javascript files for production, unless they start with an _
+/// gulp.src('js/[^_]*.js')
 ///
 gulp.task('js', function() {
-  gulp.src('js/[^_]*.js')
+  gulp.src('js/*.js')
     .pipe(plumber({errorHandler: hasError}))
     // Combine all (none _) js files into this file
-    .pipe(concat('_basekit.js'))
+    .pipe(concat('basekit.js'))
     // Minify the file
     .pipe(uglify())
     // Output it here
