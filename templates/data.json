@@ -1,57 +1,125 @@
 {
-  "siteName": "BaseKit Template",
-  "siteUrl": "http://basekit.dev/templates/_html",
+  "siteName": "BaseKit",
+  "siteUrl": "/demo/",
+  "brandColorPrimary": "#333",
+  "brandColorSecondary": "#00f",
+  "brandColorTertiary": "lightgrey",
+
   "siteEmail": "info@fortytwo.studio",
   "siteTel": "01224 280 005",
 
   "mainNav": [{
     "title": "Home",
-    "url": "/"
+    "url": "/demo/",
+    "slug": "home"
   }, {
-    "title": "Services",
-    "url": "/services/"
+    "title": "Examples",
+    "url": "/demo/examples/",
+    "slug": "examples",
+    "children": [ {
+      "title": "Setup",
+      "url": "/demo/examples/",
+      "slug": "examples"
+    }, {
+      "title": "Colors",
+      "url": "/demo/examples/colors/",
+      "slug": "colors"
+    }, {
+      "title": "Typography",
+      "url": "/demo/examples/typography/",
+      "slug": "typography"
+    }, {
+      "title": "Layout",
+      "url": "/demo/examples/layout/",
+      "slug": "layout"
+    }, {
+      "title": "Spacing",
+      "url": "/demo/examples/spacing/",
+      "slug": "spacing"
+    }, {
+      "title": "Naming Convention",
+      "url": "/demo/examples/naming/",
+      "slug": "naming"
+    }, {
+      "title": "Forms",
+      "url": "/demo/examples/forms/",
+      "slug": "forms"
+    }, {
+      "title": "User Content",
+      "url": "/demo/examples/user-content/",
+      "slug": "user-content"
+    }, {
+      "title": "Logos",
+      "url": "/demo/examples/logos/",
+      "slug": "logos"
+    }, {
+      "title": "Tables",
+      "url": "/demo/examples/tables/",
+      "slug": "tables"
+    }, {
+      "title": "Links",
+      "url": "/demo/examples/links/",
+      "slug": "links"
+    }, {
+      "title": "Navigation",
+      "url": "/demo/examples/nav/",
+      "slug": "nav"
+    }, {
+      "title": "Buttons",
+      "url": "/demo/examples/buttons/",
+      "slug": "buttons"
+    }]
   }, {
     "title": "About",
-    "url": "/about/"
+    "url": "/demo/about/",
+    "slug": "about"
+  }, {
+    "title": "Why Us",
+    "url": "http://www.google.com",
+    "external": "true"
   }, {
     "title": "Contact",
-    "url": "/contact/"
+    "url": "#footer",
+    "slug": "contact"
   }],
+
 
   "footerNav": [{
     "title": "Home",
-    "url": "/"
+    "url": "/demo/"
   }, {
-    "title": "Services",
-    "url": "/services/"
+    "title": "Examples",
+    "url": "/demo/examples/"
   }, {
     "title": "About",
-    "url": "/about/"
+    "url": "/demo/about/"
   }, {
     "title": "Contact Us",
-    "url": "/contact-us/"
+    "url": "/demo/contact-us/"
   }, {
     "title": "Support",
-    "url": "/support/"
+    "url": "/demo/support/"
   }],
+
 
   "socialLinks": [{
     "title": "Facebook",
-    "url": "#"
+    "url": "https://facebook.com"
   }, {
     "title": "Twitter",
-    "url": "#"
+    "url": "https://twitter.com"
   }, {
     "title": "LinkedIn",
-    "url": "#"
+    "url": "https://linkedin.com"
   }],
+
 
   "siteInfoNav": [{
     "title": "Terms &amp; Conditions",
-    "url": "/terms/"
+    "url": "terms/"
   }, {
     "title": "Privacy Policy",
-    "url": "/privacy/"
+    "url": "privacy/"
   }],
 
   "address": {

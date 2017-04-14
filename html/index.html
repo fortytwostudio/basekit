@@ -85,13 +85,14 @@
     <a class="skip-link" href="#install">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
+<div class="bg-tertiary--light">
     <!-- merely the outer colour and padding container of the header, plus an id hook for scrolling -->
     <div id="header" class="bg-black  pad-s">
       <!-- this just keeps the content to the site width -->
       <header class="site-container">
         <!-- this is purely to middle align the content items: note - create a "self" aligning class -->
-        <div data-bk="pad:0  middle">
-          <div data-bk="6" class="site-logo--container">
+        <div data-bk-layout="pad:0  middle">
+          <div data-bk-layout="6" class="site-logo--container">
             <h1 class="site-logo  logo">
               <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
                 {{ siteName }}
@@ -99,7 +100,7 @@
             </h1>
           </div>
 
-          <div data-bk="6" class="align-r">
+          <div data-bk-layout="6" class="align-r">
             <button id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-controls="site-nav">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
@@ -112,24 +113,24 @@
 
     <nav id="site-nav" class="site-container  site-nav" tabindex="-1" aria-labelledby="nav-toggler">
       <h2 class="hide">Website Navigation</h2>
-      <ul class="align-c  set-links  font-upper  font-bold  pad-s">
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#colors">Colors</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#fonts">Typography</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#breakpoints">Breakpoints &amp; Grid</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#class-naming">Class Naming</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#padding">Padding / Spacing</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#form">Forms</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#user-content">User Content</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#logos">Logos</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#tables">Tables</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#links">Links</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#">Navigation</a></li>
-        <li data-bk="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#">Buttons</a></li>
+      <ul data-bk-links="primary fade" class="align-c  font-upper  font-bold  pad-s">
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#install">Installation</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#colors">Colors</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#fonts">Typography</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#breakpoints">Breakpoints &amp; Grid</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#class-naming">Class Naming</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#padding">Padding / Spacing</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#form">Forms</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#user-content">User Content</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#logos">Logos</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#tables">Tables</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#links">Links</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#">Navigation</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#">Buttons</a></li>
       </ul>
     </nav>
 
-    <section id="install" tabindex="-1" class="site-container  pad  user-content  set-links">
+    <section id="install" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  user-content">
       <h2 class="font-l">Installation</h2>
 
       <ol>
@@ -252,7 +253,7 @@
 
     </div>
 
-    <section id="breakpoints" tabindex="-1" class="site-container  pad  user-content  set-links">
+    <section id="breakpoints" tabindex="-1"  data-bk-links="primary fade underline" class="site-container  pad  user-content">
       <h2 class="font-l">Breakpoints &amp; Grid</h2>
 
       <p>Easy to use <code>inline-block</code> based grid system, utilising <a href="https://github.com/sass-mq/sass-mq">Sass MQ</a>.</p>
@@ -275,35 +276,35 @@
     				<td data-th="Viewport width">n/a</td>
     				<td data-th="Device" class="ta-center">n/a</td>
     				<td data-th="Sass Usage"><code>n/a</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">palm</td>
     				<td data-th="Viewport width">600px +</td>
     				<td data-th="Device" class="ta-center">Horizontal small phone or large phone</td>
     				<td data-th="Sass Usage"><code>mq(palm){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="palm:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="palm:6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">hands</td>
     				<td data-th="Viewport width">900px +</td>
     				<td data-th="Device" class="ta-center">Portrait tablet type device</td>
     				<td data-th="Sass Usage"><code>mq(hands){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="hands:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="hands:6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">lap</td>
     				<td data-th="Viewport width">1200px +</td>
     				<td data-th="Device" class="ta-center">Landscape tablets and small laptops</td>
     				<td data-th="Sass Usage"><code>mq(lap){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="lap:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="lap:6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">desk</td>
     				<td data-th="Viewport width">1800px +</td>
     				<td data-th="Device" class="ta-center">Larger screens</td>
     				<td data-th="Sass Usage"><code>mq(desk){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="desk:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="desk:6"</code></td>
     			</tr>
     		</tbody>
       </table>
@@ -323,34 +324,34 @@
     				<td data-th="Viewport width">n/a</td>
     				<td data-th="Device" class="ta-center">n/a</td>
             <td data-th="Sass Usage">n/a</td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">s</td>
     				<td data-th="Viewport width">600px +</td>
     				<td data-th="Device" class="ta-center">Handheld smaller devices</td>
             <td data-th="Sass Usage"><code>mq(s){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="s:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="s:6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">m</td>
     				<td data-th="Viewport width">900px +</td>
     				<td data-th="Device" class="ta-center">Tablets and mega-phones</td>
             <td data-th="Sass Usage"><code>mq(m){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="m:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="m:6"</code></td>
     			</tr>
     			<tr>
     				<td data-th="Breakpoint">l</td>
     				<td data-th="Viewport width">1200px +</td>
     				<td data-th="Device" class="ta-center">Larger screens</td>
     				<td data-th="Sass Usage"><code>mq(l){…}</code></td>
-    				<td data-th="BaseGrid Usage"><code>data-bk="l:6"</code></td>
+    				<td data-th="BaseGrid Usage"><code>data-bk-layout="l:6"</code></td>
     			</tr>
     		</tbody>
       </table>
     </section>
 
-    <section class="site-container  pad  user-content  set-links">
+    <section data-bk-links="primary fade underline" class="site-container  pad  user-content">
       <h3 id="class-naming" tabindex="-1">Class Naming</h3>
 
       <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
@@ -372,7 +373,7 @@
       </ol>
     </section>
 
-    <section id="padding" tabindex="-1" class="site-container  pad  set-links  clear">
+    <section id="padding" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  clear">
      <h2 class="font-l">Padding / Spacer</h2>
 
       <div class="pad  pad-s  bg-tertiary  margin-b  align-c">
@@ -417,7 +418,7 @@
 
 
 
-    <section id="full-width" class="site-container  pad  user-content  set-links">
+    <section id="full-width" data-bk-links="primary fade underline" class="site-container  pad  user-content">
       <h3 class="font-l  margin-b">Full width container breaking out of site container </h3>
 
       <div class="browser-width">
@@ -427,469 +428,7 @@
 
 
 
-    <section id="form" tabindex="-1" class="site-container  pad  user-content  set-links">
-      <h3 class="font-l  pad-s-b">Example Form</h3>
-
-      <form data-bk="hands:6" class="bk-form" action="POST">
-        <h4>Standard Form Styling</h4>
-        <p><small>Fields marked with <em>*</em> are required.</small></p>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Input Types</legend>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="text">Input Type</label>
-            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="text">Input Type</label>
-            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" disabled>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="text">Input Type</label>
-            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" required>
-            <p class="alert">This is a validation alert</p>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="num">Input Type Number</label>
-            <input class="field__input  field__input--number" type="number" name="num" id="num" min="1" max="100" value="100">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="email">Input Type Email</label>
-            <input class="field__input  field__input--email" type="email" placeholder="info@mysite.com" id="email">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="password">Input Type Password</label>
-            <input class="field__input  field__input--password" type="password" id="password">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="search">Input Type Search</label>
-            <input class="field__input  field__input--search" type="search" id="search">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="tel">Input Type Tel</label>
-            <input class="field__input  field__input--tel" type="tel" placeholder="01224 000 000" id="tel">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="url">Input Type URL</label>
-            <input class="field__input  field__input--url" type="url" placeholder="https://" id="url">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="checkbox">
-              <span>Input Type Checkbox</span>
-              <input class="field__input  field__input--checkbox" type="checkbox" id="checkbox">
-            </label>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="radio">
-              <span>Input Type Radio</span>
-              <input class="field__input  field__input--radio" type="radio" id="radio">
-            </label>
-          </div>
-
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="date">Input Type Date</label>
-            <input class="field__input  field__input--date" type="date" id="date">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="date-local">Input Type Datetime Local</label>
-            <input class="field__input  field__input--date" type="datetime-local" id="date-local">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="month">Input Type Month</label>
-            <input class="field__input  field__input--month" type="month" id="month">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="week">Input Type Week</label>
-            <input class="field__input  field__input--week" type="week" id="week">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="time">Input Type Time</label>
-            <input class="field__input  field__input--time" type="time" id="time">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="file">Input Type File</label>
-            <input type="file" value="File" id="file">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="range">Input Type Range</label>
-            <input class="field__input  field__input--range" type="range" id="range">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="color">Input Type Color</label>
-            <input class="field__input  field__input--color" type="color" id="color">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="datalist">Input with Datalist</label>
-            <input class="field__input  field__input--datalist" list="browsers" name="myBrowser" id="datalist">
-            <datalist class="field__datalist" id="browsers">
-              <option value="Chrome">
-              <option value="Firefox">
-              <option value="Internet Explorer">
-              <option value="Opera">
-              <option value="Safari">
-              <option value="Microsoft Edge">
-            </datalist>
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Textarea</legend>
-          <div class="field__item  margin-b">
-            <label class="field__label" for="textarea">Input Type Textarea</label>
-            <textarea class="field__textarea" placeholder="Write something…" name="textarea" id="textarea" rows="10"></textarea>
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Buttons and Input Type Submit</legend>
-
-          <div class="field__item  margin-b">
-            <label for="button">Button Type Button</label>
-            <button name="button" id="button">Button</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="button">Button Type Button Extra Long</label>
-            <button name="button" id="button">Button longer text yo</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="button-submit">Button Type Submit</label>
-            <button type="submit" name="button-submit" id="button-submit">Button</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="submit">Input Type Submit</label>
-            <input type="submit" value="Submit" name="submit" id="submit">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="input-button">Input Type Button</label>
-            <input type="button" value="Button" name="input-button" id="input-button">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="button-disabled">Button Type Button Disabled</label>
-            <button name="button-disabled" id="button-disabled" disabled>Button</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="submit-disabled">Input Type Submit Disabled</label>
-            <input type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="Input Image" for="image">Input Image</label>
-            <input class="field__input  field__input--image" type="image" name="image" id="image" src="https://i.imgur.com/k9Xg2ED.png">
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Select and Option Field Types</legend>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="select">Select Default</label>
-            <select class="field__select" name="select" id="select">
-              <option value="value1">Value 1</option>
-              <option value="value2" selected>Value 2</option>
-              <option value="value3">Value 3</option>
-            </select>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="optgroups">Select with Optgroup</label>
-            <select class="field__select" id="optgroups">
-              <optgroup label="Group 1">
-                <option>Option 1.1</option>
-              </optgroup>
-              <optgroup label="Group 2">
-                <option selected>Option 2.1</option>
-                <option>Option 2.2</option>
-              </optgroup>
-              <optgroup label="Group 3" disabled>
-                <option>Option 3.1</option>
-                <option>Option 3.2</option>
-                <option>Option 3.3</option>
-              </optgroup>
-            </select>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="select">Select Multiple</label>
-            <select multiple class="field__select" name="select" id="select">
-              <option value="value1">Value 1</option>
-              <option value="value2">Value 2</option>
-              <option value="value3">Value 3</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Measurement Field Types</legend>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="meter">Meter</label>
-            <meter class="field__meter" min="200" max="500" id="meter" value="350">350 degrees</meter>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="progress">Progress</label>
-            <progress class="field__progress" value="70" max="100" id="progress">70%</progress>
-          </div>
-        </fieldset>
-      </form>
-
-      <form data-bk="hands:6" class="bk-form  bk-form--ext" action="POST">
-        <h4>Standard + Fancy Form Styling</h4>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Input Types</legend>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="text">Input Type</label>
-            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" required>
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="text" disabled>Input Type</label>
-            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" disabled>
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="text">Input Type</label>
-            <input class="field__input  field__input--text" type="text" placeholder="Type here" id="text" required>
-            <p class="alert">This is a validation alert</p>
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="num">Input Type Number</label>
-            <input class="field__input  field__input--number" type="number" name="num" id="num" min="1" max="100" value="100">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="email">Input Type Email</label>
-            <input class="field__input  field__input--email" type="email" placeholder="info@mysite.com" id="email">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="password">Input Type Password</label>
-            <input class="field__input  field__input--password" type="password" id="password">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="search">Input Type Search</label>
-            <input class="field__input  field__input--search" type="search" id="search">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="tel">Input Type Tel</label>
-            <input class="field__input  field__input--tel" type="tel" placeholder="01224 000 000" id="tel">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="url">Input Type URL</label>
-            <input class="field__input  field__input--url" type="url" placeholder="https://" id="url">
-          </div>
-
-          <div class="margin-b">
-            <label class="field__label" for="checkbox">
-              Input Type Checkbox
-              <input class="field__input  field__input--checkbox" type="checkbox" id="checkbox">
-            </label>
-          </div>
-
-          <div class="margin-b">
-            <label class="field__label" for="radio">
-              Input Type Radio
-              <input class="field__input  field__input--radio" type="radio" id="radio">
-            </label>
-          </div>
-
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="date">Input Type Date</label>
-            <input class="field__input  field__input--date" type="date" id="date">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="date-local">Input Type Datetime Local</label>
-            <input class="field__input  field__input--date" type="datetime-local" id="date-local">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="month">Input Type Month</label>
-            <input class="field__input  field__input--month" type="month" id="month">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="week">Input Type Week</label>
-            <input class="field__input  field__input--week" type="week" id="week">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="time">Input Type Time</label>
-            <input class="field__input  field__input--time" type="time" id="time">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="file">Input Type File</label>
-            <input type="file" value="File" id="file">
-          </div>
-
-          <div class="margin-b">
-            <label class="field__label" for="range">Input Type Range</label>
-            <input class="field__input  field__input--range" type="range" id="range">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="color">Input Type Color</label>
-            <input class="field__input  field__input--color" type="color" id="color">
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="datalist">Input with Datalist</label>
-            <input class="field__input  field__input--datalist" list="browsers" name="myBrowser" id="datalist">
-            <datalist class="field__datalist" id="browsers">
-              <option value="Chrome">
-              <option value="Firefox">
-              <option value="Internet Explorer">
-              <option value="Opera">
-              <option value="Safari">
-              <option value="Microsoft Edge">
-            </datalist>
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Textarea</legend>
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="textarea">Input Type Textarea</label>
-            <textarea class="field__textarea" placeholder="Write something…" name="textarea" id="textarea" rows="10"></textarea>
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Buttons and Input Type Submit</legend>
-
-          <div class="field__item  margin-b">
-            <label for="button">Button Type Button</label>
-            <button name="button" id="button">Button</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="button">Button Type Button Extra Long</label>
-            <button name="button" id="button">Button longer text yo</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="button-submit">Button Type Submit</label>
-            <button type="submit" name="button-submit" id="button-submit">Button</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="submit">Input Type Submit</label>
-            <input type="submit" value="Submit" name="submit" id="submit">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="input-button">Input Type Button</label>
-            <input type="button" value="Button" name="input-button" id="input-button">
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="button-disabled">Button Type Button Disabled</label>
-            <button name="button-disabled" id="button-disabled" disabled>Button</button>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label for="submit-disabled">Input Type Submit Disabled</label>
-            <input type="submit" value="Submit" name="submit-disabled" id="submit-disabled" disabled>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="Input Image" for="image">Input Image</label>
-            <input type="image" name="image" id="image" src="https://i.imgur.com/k9Xg2ED.png">
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Select and Option Field Types</legend>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="select">Select Default</label>
-            <select class="field__select" name="select" id="select">
-              <option value="value1">Value 1</option>
-              <option value="value2" selected>Value 2</option>
-              <option value="value3">Value 3</option>
-            </select>
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="optgroups">Select with Optgroup</label>
-            <select class="field__select" id="optgroups">
-              <optgroup label="Group 1">
-                <option>Option 1.1</option>
-              </optgroup>
-              <optgroup label="Group 2">
-                <option selected>Option 2.1</option>
-                <option>Option 2.2</option>
-              </optgroup>
-              <optgroup label="Group 3" disabled>
-                <option>Option 3.1</option>
-                <option>Option 3.2</option>
-                <option>Option 3.3</option>
-              </optgroup>
-            </select>
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="field__label" for="select">Select Multiple</label>
-            <select multiple class="field__select" name="select" id="select">
-              <option value="value1">Value 1</option>
-              <option value="value2">Value 2</option>
-              <option value="value3">Value 3</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <fieldset class="field__group  margin-t">
-          <legend>Measurement Field Types</legend>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="meter">Meter</label>
-            <meter class="field__meter" min="200" max="500" id="meter" value="350">350 degrees</meter>
-          </div>
-
-          <div class="field__item  margin-b">
-            <label class="field__label" for="progress">Progress</label>
-            <progress class="field__progress" value="70" max="100" id="progress">70%</progress>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-
-
-    <section id="user-content" tabindex="-1" class="site-container  pad  user-content  set-links">
+    <section id="user-content" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  user-content">
       <h3>User Content Styling</h3>
 
       <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
@@ -1117,19 +656,19 @@
         </p>
       </div>
 
-      <div class="set-links  user-content">
+      <div data-bk-links="primary fade underline" class="user-content">
         <h3 class="margin-tb">Standard links within a paragraph</h3>
         <p>
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
         </p>
 
         <h3 class="margin-tb">Inverted link colours on paragraph</h3>
-        <p class="set-links--inverted">
+        <p data-bk-links="secondary fade underline">
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
         </p>
 
         <h3 class="margin-tb">Contrasted link colours on dark background paragraph</h3>
-        <p class="bg-tertiary--dark  color-black  set-links--contrasted">
+        <p data-bk-links="secondary fade underline" class="bg-tertiary--dark  color-black">
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
         </p>
       </div>
@@ -1164,19 +703,10 @@
       </ul>
 
     </div>
+</div>
 
-    <script src="/js/min/basekit.js"></script>
-    <script src="/js/min/scroll.min.js"></script>
-    <!-- <script src="/js/a11y-toggle/a11y-toggle.min.js"></script> -->
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('nav-toggler').addEventListener('click', function(e) {
-          if (e.target.nodeName.toLowerCase() == 'a') { e.preventDefault(); }
-          document.getElementById('nav-toggler').classList.toggle('is-active');
-          document.getElementById('site-nav').classList.toggle('is-active');
-        });
-      });
-    </script>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="/js/min/_basekit.js"></script>
   </body>
 </html>

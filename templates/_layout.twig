@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-gb" class="no-js">
+  <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+    <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="/css/basekit.css">
+    <link rel="stylesheet" href="//fast.fonts.net/cssapi/4e26e3b9-f65e-4698-bb6e-f8019e19cd38.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700">
+
+    {% include "includes/_head/_seo.twig" %}
+    {% include "includes/_head/_icons.twig" ignore missing %}
+    {% include "includes/_head/_social.twig" ignore missing %}
+    {% include "includes/_head/_analytics.twig" %}
+  </head>
+
+  <body id="start">
+    <div class="{{ pageHeaderColor|length ? pageHeaderColor : "bg-primary--dark" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
+      <header id="header" class="site-container">
+
+        <div data-bk-layout="pad:tb  middle">
+
+          <div data-bk-layout="3" class="site-logo--container">
+            <h1 class="site-logo  logo">
+              <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
+                {{ siteName }}
+              </a>
+            </h1>
+          </div>
+
+          {% include "includes/_nav-main.twig" %}
+        </div>
+      </header>
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    {% include "includes/_site-footer.twig" %}
+
+    {# Not the latest version, because compatibility #}
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    {# Remove if not needed, remember to check you're not loading plugins unused plugins too #}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    {# This is compiled by Gulp #}
+    <script src="/js/min/_basekit.js"></script>
+  </body>
+</html>

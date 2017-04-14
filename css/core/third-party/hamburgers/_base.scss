@@ -1,6 +1,7 @@
 // Hamburger
 // ==================================================
 .hamburger {
+  line-height: 0!important;
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;
   cursor: pointer;

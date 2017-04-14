@@ -1,14 +1,15 @@
-{% extends "../layouts/main.twig" %}
+{% extends "_layout.twig" %}
 
 {% set title = "About Us" %}
 {% set slug = "about" %}
+{% set pageHeaderColor = "bg-secondary--dark" %}
 
 {% block content %}
 
 <div class="bg-white pad">
   <div class="site-container">
 
-    <h2 data-bk="pad:rl" class="font-xl">{{ title }}</h2>
+    <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
 
   </div>
 </div>

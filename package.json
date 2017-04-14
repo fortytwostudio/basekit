@@ -29,7 +29,10 @@
   },
   "devDependencies": {
     "gulp-data": "^1.2.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-twig": "^0.7.0",
+    "gulp-util": "^3.0.8",
     "sassdoc": "^2.1.20"
   }
 }

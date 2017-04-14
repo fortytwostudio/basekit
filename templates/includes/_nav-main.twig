@@ -1,0 +1,37 @@
+{% if mainNav|length %}
+  <div data-bk-layout="pad:0  9  right" class="nav-toggler-wrapper">
+    <button id="nav-toggler" class="hamburger hamburger--squeeze" type="button" aria-controls="site-nav">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+
+  <div data-bk-layout="to:hands:pad:0  hands:pad:tb  hands:7  hands:pr:2  hands:right" class="site-nav-wrapper">
+    <nav id="site-nav" data-bk-links="exit down" class="site-nav  nav-links  font-upper" tabindex="-1" aria-labelledby="nav-toggler">
+      {# <h2 class="hide">Website Navigation</h2> #}
+      <ul class="nav  nav--block  |  nav-menu">
+        {% for item in mainNav %}
+          <li class="nav-item">
+            <a{{ isActivePage is defined and isActivePage == item.slug ? ' class="active" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+              {{ item.title }}
+            </a>
+            {% if item.children|length %}
+              <div class="sub-nav">
+                <ul class="nav  nav--stack  nav--block  sub-nav-group">
+                  {% for child in item.children %}
+                    <li>
+                      <a href="{{ child.url }}">
+                        {{ child.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+{% endif %}
