@@ -60,6 +60,7 @@ gulp.task('scss', function() {
 
 ///
 /// Minify and combine javascript files for production, unless they start with an _
+/// gulp.src('js/[^_]*.js')
 ///
 gulp.task('js', function() {
   gulp.src('js/*.js')
