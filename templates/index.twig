@@ -8,40 +8,15 @@
 {% set pageHeaderColor = "bg-primary--dark" %}
 {% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/landscape.jpg)"' %}
 
-{% block pageHeader %}
-  <div class="site-container  pad-b">
-    <div data-bk-layout="hands:6" class="color-white">
-      {# DEV NOTE: Plain text field no line breaks #}
-      <h2 class="font-xxl  font-lh-1  pad-s-b">Bus de ditio ent lat ues et ut asper</h2>
-
-      {# DEV NOTE: Plain text field no line breaks but allow multi line in CMS for readability #}
-      <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quisetur?</p>
-    </div>
-  </div>
-{% endblock %}
-
 
 {% block content %}
 
   <div class="bg-tertiary--light  pad">
     <div class="site-container">
-      {# DEV NOTE: This wrapping div exists only to middle align the two containing divs #}
       <div data-bk-layout="pad:0  middle">
-        {# DEV NOTE: Plain text field, no line breaks #}
-        <div data-bk-layout="palm:6  palm:pad:large" data-bk-links="secondary fade underline-hover" class="no-outline  user-content  font-light  font-l  align-c">
-          <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quis etur?</p>
-
-          <p data-bk-links="more"><a href="/examples">More info link icon</a></p>
-          <p data-bk-links="down"><a href="#footer">Skip to the footer</a></p>
-          <p data-bk-links="up"><a href="#start">Skip to the start</a></p>
-          <p data-bk-links="download"><a href="file.jpg" download>Download link icon</a></p>
-          <p data-bk-links="exit"><a href="http://google.com" target="_blank" rel="noopener">External link icon</a></p>
+        <div data-bk-layout="palm:6" data-bk-links="secondary fade underline-hover" class="user-content  font-light  font-m">
+          <p>Basekit is a custom frontend “framework” built over many years for FortyTwo’s client projects. It's freely available for anyone to use but be aware that we offer no warranty or formal support.</p>
         </div>
-
-        {# DEV NOTE: Don't output figure if no image present. Alt text should be image title field. #}
-        <figure data-bk-layout="palm:6" class="font-xl">
-          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
-        </figure>
       </div>
     </div>
   </div>
@@ -50,9 +25,15 @@
   <div class="bg-white  pad">
     <div class="site-container">
       {# DEV NOTE: Should be editable from the CMS home edit page #}
-      <h3 class="font-xl  font-bold">View our latest vacancies</h3>
+      <h3 data-bk-layout="pad:rl" class="font-xl  font-bold">Getting started</h3>
 
-      {# DEV NOTE: Output latest jobs but also allow client to override what get's shown with an entries field in the CMS home edit page. I think we should output the latest 4 by default, but then if the client chooses one to "sticky" it get's put first and then the remaining 3 are the latest. If the client chooses 4 then no latest entries appear, the clien thas overriden them. If the client chooses one that would appear by default, then it should be stickied first in line and get removed from the default output… clear? #}
+      <div data-bk-layout="pad:trl  lap:8" data-bk-links="primary underline fade exit" class="user-content">
+        <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a> amongst the usual suspects such as NPM and Git. We build static frontend templates in Twig so that can be ported later on to Craft CMS, however the core framework Sass does not require Twig to be used.</p>
+
+        <p>You’ll also want a local server of some kind, we currently prefer <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener">Laravel Valet</a> for small static sites and initial frontend templating, like this.</p>
+
+        <p>Once you've downloaded this repo, cd to the directory and run <code>$ npm install</code> to get the required Gulp packages.</p>
+      </div>
     </div>
   </div>
 

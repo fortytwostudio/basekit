@@ -18,8 +18,8 @@
     "slug": "examples",
     "children": [ {
       "title": "Setup & Config",
-      "url": "/demo/examples/",
-      "slug": "examples"
+      "url": "/demo/",
+      "slug": "home"
     }, {
       "title": "Colors",
       "url": "/demo/examples/colors/",
