@@ -1,0 +1,339 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Example Markup/Styles" %}
+{% set slug = "example" %}
+{% set pageHeaderColor = "bg-primary--dark" %}
+
+{% block content %}
+
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;list-style:none}
+    body{font-family: helvetica,sans-serif}
+    p+p{margin-top:0.75rem}
+
+    .grid-container span {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      background-color: rgba(255,0,0,0.2)
+    }
+    .grid-container img {
+      background-color: rgba(255,0,0,0.2)
+    }
+    .grid-container .no-pad {
+      padding: 0;
+    }
+  </style>
+
+  <div data-bk-layout>
+    <h1 data-bk-layout="pad:tb">BaseGrid</h1>
+    <p>BaseGrid is a standalone responsive faux grid-system built on CSS <code>inline-block</code> and the <code>data</code> attribute.</p>
+    <p>Once white space has been removed, <code>inline-block</code> allows for more flexibility and more robustness than floating grid items. <code>inline-block</code> items can be vertically aligned and flow more consistently.</p>
+    <p>The <code>data</code> attribute allows us to almost fully separate the layout styles from other CSS and classes.</p>
+  </div>
+
+  <div data-bk-layout="pad:trl">
+    <h2 data-bk-layout="pad:tb">The Grid</h2>
+    <p>By default BaseKit is based on the common 12 column layout, this provides great flexibility and ease of use. However you can create layouts from as many or as few columns as you wish.</p>
+
+    <p>Unlike Bootstrap and some other systems, there are no "tiers". If you want a four column grid at small screen size simply fake it by using three columns for each small screen column.</p>
+  </div>
+
+  <ul class="grid-container">
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+    <li data-bk-layout="1">
+      <span>1</span>
+    </li>
+
+    <li data-bk-layout="2">
+      <span>2</span>
+    </li>
+    <li data-bk-layout="2">
+      <span>2</span>
+    </li>
+    <li data-bk-layout="2">
+      <span>2</span>
+    </li>
+    <li data-bk-layout="2">
+      <span>2</span>
+    </li>
+    <li data-bk-layout="2">
+      <span>2</span>
+    </li>
+    <li data-bk-layout="2">
+      <span>2</span>
+    </li>
+
+    <li data-bk-layout="3">
+      <span>3</span>
+    </li>
+    <li data-bk-layout="3">
+      <span>3</span>
+    </li>
+    <li data-bk-layout="3">
+      <span>3</span>
+    </li>
+    <li data-bk-layout="3">
+      <span>3</span>
+    </li>
+
+    <li data-bk-layout="4">
+      <span>4</span>
+    </li>
+    <li data-bk-layout="4">
+      <span>4</span>
+    </li>
+    <li data-bk-layout="4">
+      <span>4</span>
+    </li>
+
+    <li data-bk-layout="6">
+      <span>6</span>
+    </li>
+    <li data-bk-layout="6">
+      <span>6</span>
+    </li>
+
+    <li data-bk-layout="7">
+      <span>7</span>
+    </li>
+    <li data-bk-layout="5">
+      <span>5</span>
+    </li>
+
+    <li data-bk-layout="12">
+      <span>12</span>
+    </li>
+
+    <li data-bk-layout="11">
+      <span>11</span>
+    </li>
+
+    <li data-bk-layout="10">
+      <span>10</span>
+    </li>
+
+    <li data-bk-layout="9">
+      <span>9</span>
+    </li>
+
+    <li data-bk-layout="8">
+      <span>8</span>
+    </li>
+  </ul>
+
+
+  <div data-bk-layout="pad:trl">
+    <h3 data-bk-layout="pad:tb">Indenting (Pushing/Pulling)</h3>
+    <p>Make use of the <code>pr</code> and <code>pl</code> attrubute values to push and pull blocks of content. Unlike padding, push and pull use margins</p>
+  </div>
+  <ul class="grid-container">
+    <li data-bk-layout="2">
+      <span>No Push</span>
+    </li>
+    <li data-bk-layout="2  pr:1">
+      <span>Push Right 1</span>
+    </li>
+    <li data-bk-layout="4  pr:3">
+      <span>Push Right 3</span>
+    </li>
+  </ul>
+
+  <ul class="grid-container">
+    <li data-bk-layout="9  pr:3">
+      <span class="no-pad">
+        <span data-bk-layout="8  pr:4">Push Right 4</span>
+      </span>
+    </li>
+  </ul>
+
+  <div data-bk-layout="pad:trl">
+    <h3 data-bk-layout="pad:tb">Vertical Align Middle</h3>
+  </div>
+
+  <ul data-bk-layout="pad:b  middle" class="grid-container">
+    <li data-bk-layout="2">
+      <span><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br><br><br></span>
+    </li>
+  </ul>
+
+  <div data-bk-layout="pad:trl">
+    <h3 data-bk-layout="pad:tb">Vertical Align Bottom</h3>
+  </div>
+
+  <ul data-bk-layout="pad:b  bottom" class="grid-container">
+    <li data-bk-layout="2">
+      <span><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br><br><br></span>
+    </li>
+  </ul>
+
+
+  <div data-bk-layout="pad:trl">
+    <h3 data-bk-layout="pad:tb">Align Right + Vertical Align Bottom</h3>
+  </div>
+
+  <ul data-bk-layout="pad:b  bottom  right" class="grid-container">
+    <li data-bk-layout="2">
+      <span><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br><br><br></span>
+    </li>
+  </ul>
+
+
+  <div data-bk-layout="pad:trl">
+    <h3 data-bk-layout="pad:tb">Align Center + Vertical Align Middle</h3>
+  </div>
+
+  <ul data-bk-layout="pad:b  middle  center" class="grid-container">
+    <li data-bk-layout="2">
+      <span><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br></span>
+    </li>
+    <li data-bk-layout="2">
+      <span><br><br><br><br><br><br></span>
+    </li>
+  </ul>
+
+
+  <div data-bk-layout="pad:trl">
+    <h3 data-bk-layout="pad:tb">Force Bottom Alignment</h3>
+  </div>
+
+  <ul data-bk-layout="pad:b" class="grid-container">
+    <li data-bk-layout="3">
+      <span>Default<br><br><br><br><br><br></span>
+    </li>
+    <li data-bk-layout="2  self-bottom">
+      <span>Bottom</span>
+    </li>
+  </ul>
+
+
+  <div data-bk-layout="pad:trl">
+    <h2 data-bk-layout="pad:tb">Padding</h2>
+    <p>Red background colour indicated where the padding has been applied.</p>
+  </div>
+
+  <ul data-bk-layout="middle  pad:0" class="grid-container">
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:t" src="http://placehold.it/600x400?text=t" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:tr" src="http://placehold.it/600x400?text=tr" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:tb" src="http://placehold.it/600x400?text=tb" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:tl" src="http://placehold.it/600x400?text=tl" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:b" src="http://placehold.it/600x400?text=b" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:bl" src="http://placehold.it/600x400?text=bl" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:rl" src="http://placehold.it/600x400?text=rl" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:rb" src="http://placehold.it/600x400?text=rb" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:r" src="http://placehold.it/600x400?text=r" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:l" src="http://placehold.it/600x400?text=l   " alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:trb" src="http://placehold.it/600x400?text=trb" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:rbl" src="http://placehold.it/600x400?text=rbl" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:tbl" src="http://placehold.it/600x400?text=tbl" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:trl" src="http://placehold.it/600x400?text=trl" alt>
+    </li>
+  </ul>
+
+  <div data-bk-layout="pad:trl">
+    <h2 data-bk-layout="pad:tb">Padding Sizes</h2>
+    <p>There are three sizes of padding, the default value and small and large values. These can be configured via the BaseGrid variables.</p>
+  </div>
+
+  <ul data-bk-layout="middle  pad:0" class="grid-container">
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:large" src="http://placehold.it/600x400?text=large" alt>
+    </li>
+    <li data-bk-layout="3">
+      <img data-bk-layout="pad:small" src="http://placehold.it/600x400?text=small" alt>
+    </li>
+  </ul>
+
+{% endblock %}

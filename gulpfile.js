@@ -83,28 +83,28 @@ gulp.task('js', function() {
 /// Minify, clean and output HTML files
 /// NOTE: I'm likely to deprecate this soon in favour of using Twig
 ///
-gulp.task('html', function() {
-  gulp.src('./html/*.html')
-    .pipe(plumber({errorHandler: hasError}))
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeComments: true,
-      removeAttributeQuotes: true,
-      // removeRedundantAttributes: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      collapseBooleanAttributes: true,
-      quoteCharacter: '\'',
-      minifyJS: true,
-      minifyCSS: true
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(notify({
-      title: 'Created',
-      message: '<%= file.relative %>'
-    }));
-});
+// gulp.task('html', function() {
+//   gulp.src('./html/*.html')
+//     .pipe(plumber({errorHandler: hasError}))
+//     .pipe(htmlmin({
+//       collapseWhitespace: true,
+//       removeComments: true,
+//       removeAttributeQuotes: true,
+//       // removeRedundantAttributes: true,
+//       removeEmptyAttributes: true,
+//       removeScriptTypeAttributes: true,
+//       removeStyleLinkTypeAttributes: true,
+//       collapseBooleanAttributes: true,
+//       quoteCharacter: '\'',
+//       minifyJS: true,
+//       minifyCSS: true
+//     }))
+//     .pipe(gulp.dest('./'))
+//     .pipe(notify({
+//       title: 'Created',
+//       message: '<%= file.relative %>'
+//     }));
+// });
 
 ///
 /// Compile Twig templates to an HTML frontend
@@ -160,7 +160,6 @@ gulp.task('sassdoc', function () {
 // Combine various functions into watch
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', ['scss']);
-  gulp.watch('html/*.html', ['html']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], ['twig']);
 });
