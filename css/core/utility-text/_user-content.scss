@@ -43,6 +43,18 @@
       }
     }
 
+    dt {
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:after {
+        content: ":"
+      }
+    }
+    dd + dt {
+      margin-top: em($margin * 1px)
+    }
+
     // See: http://allthingssmitty.com/2016/11/28/use-attribute-selectors-with-empty-links/
     a[href]:empty::before {
       content: attr(href);
