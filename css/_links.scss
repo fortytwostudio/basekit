@@ -139,7 +139,7 @@ a:not(.btn) {
 [data-bk-links~="exit"] {
   a[target="_blank"]:after,
   a[href^="mailto"]:after {
-    content: " ↗︎";
+    content: "\2009 ↗︎";
     display: inline-block;
     transform: translateY(2px); // ← this should be removed depending on the font
   }
@@ -148,7 +148,7 @@ a:not(.btn) {
 // Internal page links starting with an # but not only an # get a direction arrow
 [data-bk-links~="down"] {
   a[href^="#"]:not([href="#"]):after {
-    content: " ↓";
+    content: "\2009 ↓";
     display: inline-block;
   }
 }
@@ -156,7 +156,7 @@ a:not(.btn) {
 // Same as above but applies an upward arrow instead
 [data-bk-links~="up"] {
   a[href^="#"]:not([href="#"]):after {
-    content: " ↑";
+    content: "\2009 ↑";
     display: inline-block;
   }
 }
