@@ -142,6 +142,19 @@
         <li>Additional config may be required in the root /css files (such as _colors.scss)</li>
       </ol>
 
+
+<pre><code data-bk-layout>@if $code-style {
+  code {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: rem($font-size-small-screen);
+    color: $primary;
+    padding: 0 3px 2px;
+    background-color: lighten($grey--light, 12.5%);
+    border: 1px solid $grey--light;
+    border-radius: 3px;
+  }
+}</code></pre>
+
     </section>
 
     <section id="colors" tabindex="-1" class="site-container  pad">

@@ -51,3 +51,9 @@ $tables-color: #999;
 $tables-responsive: true;
 $tables-overflow: true;
 $tables-responsive-bp: palm;
+
+$code-bg-color: $primary;
+$code-border: '1px solid ' + $primary--dark;
+$code-text-color: white;
+$code-font-family: '"SFMono-Regular", Monaco, Menlo, Consolas, "Courier New", monospace';
+$code-font-size: 87.5%;
