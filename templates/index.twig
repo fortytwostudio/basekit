@@ -28,11 +28,38 @@
       <h3 data-bk-layout="pad:rl" class="font-xl  font-bold">Getting started</h3>
 
       <div data-bk-layout="pad:trl  lap:8" data-bk-links="primary underline fade exit" class="user-content">
-        <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a> amongst the usual suspects such as NPM and Git. We build static frontend templates in Twig so that can be ported later on to Craft CMS, however the core framework Sass does not require Twig to be used.</p>
+        <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
 
         <p>You’ll also want a local server of some kind, we currently prefer <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener">Laravel Valet</a> for small static sites and initial frontend templating, like this.</p>
 
-        <p>Once you've downloaded this repo, cd to the directory and run <code>$ npm install</code> to get the required Gulp packages.</p>
+        <p>Once you've downloaded BaseKit, cd in to the directory and run <code>$ npm install</code> to get the required Gulp packages.</p>
+
+        <p>Run <code>$ gulp</code> and it should start watching and compiling the relevant files, at the moment this includes: Sass (to .css), Twig (to .html), HTML (to minified and cleaned .html) and finally Javascript to minified and combined .js. <em>HTML compiling will soon be removed in favour of Twig.</em></p>
+
+        <p>Now that you've comfirmed that Gulp is running, you're ready to start configuring Sass files (and Twig if you're using that). BUt first let's take a look at Basekit's structure:</p>
+
+        <dl>
+          <dt>bower_components</dt>
+          <dd>This is only used to keep the html5shiv snippet up to date… which isn't often.</dd>
+          <dt>css</dt>
+          <dd>The main part of Basekit which we'll go into detail soon.</dd>
+          <dt>demo</dt>
+          <dd>Where static templates are compiled as well as this documentation.</dd>
+          <dt>docs</dt>
+          <dd>SassDoc documentation</dd>
+          <dt>html</dt>
+          <dd>Unminified HTML files, currently creates the index.html file</dd>
+          <dt>icon-font</dt>
+          <dd>Legacy icon font file, svg is prefered these days.</dd>
+          <dt>imgs</dt>
+          <dd>Project images, mainly UI related.</dd>
+          <dt>js</dt>
+          <dd>Project javascript files, numbered files will be compiled and minified into js/min/basekit.js in order.</dd>
+          <dt>node_modules</dt>
+          <dd>All your node dependencies, make sure this isn't committed to git.</dd>
+          <dt>templates</dt>
+          <dd>Twig project templates.</dd>
+        </dl>
       </div>
     </div>
   </div>
