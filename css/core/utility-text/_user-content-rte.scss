@@ -1,6 +1,6 @@
-@if $user-content-css {
+@if $rte-css {
 
-  .#{$user-content-name} {
+  .#{$rte-name} {
 
     > * + * {
       margin-top: em($font-default-bottom-margin + 0px);
@@ -10,7 +10,7 @@
     //   margin-bottom: rem($font-default-bottom-margin + 0px);
     // }
 
-    @if $user-content-inline-images {
+    @if $rte-inline-images {
       p, li {
         img {
           display: inline-block;
@@ -60,7 +60,7 @@
       content: attr(href);
     }
 
-    @if variable-exists(user-content-debugging) and $user-content-debugging {
+    @if variable-exists(rte-debugging) and $rte-debugging {
       &--debug {
         a[href^="http"]:empty::before {
           content: "EMPTY LINK";

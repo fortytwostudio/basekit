@@ -757,19 +757,19 @@ td,th
 .list--num > li
 
 
-.user-content > * + *
-.user-content li img,
-.user-content p img
-.user-content ul
-.user-content ul > li
-.user-content ul ul
-.user-content ol
-.user-content ol > li
-.user-content ol ol
-.user-content a[href]:empty::before
-.user-content--debug a[href^="http"]:empty::before
-.user-content--debug p:empty::before
-.user-content--debug br
+.rte > * + *
+.rte li img,
+.rte p img
+.rte ul
+.rte ul > li
+.rte ul ul
+.rte ol
+.rte ol > li
+.rte ol ol
+.rte a[href]:empty::before
+.rte--debug a[href^="http"]:empty::before
+.rte--debug p:empty::before
+.rte--debug br
 
 
 .overflow-ellipsis
