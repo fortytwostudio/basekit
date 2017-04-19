@@ -5,7 +5,7 @@
 /// Grey is commonly used across all website designs, to simplify matters I've
 /// included three default values which should cover most situations. Change the
 /// actual values to specific colour values if CSS keyword values don't suit.
-$grey--light: #eee;
+$grey--light: #fafafa;
 $grey: #ccc;
 $grey--dark: #333;
 
@@ -48,7 +48,22 @@ $heading: $text;
 
 /// Alert classes can be used anywhere but for now they're tied to
 /// form alerts, set the colours here if you want to change them.
-$alert-text: white;
-$alert-bg: orangered;
-$alert-bg--neutral: dodgerblue;
-$alert-bg--positive: limegreen;
+$alert-bg: #fbf4b7 !default;
+$alert-border: darken($alert-bg, 35%) !default;
+$alert-text: black !default;
+
+$alert-bg--error: #fed0d0 !default;
+$alert-border--error: darken($alert-bg--error, 12%) !default;
+$alert-text--error: black !default;
+
+$alert-bg--neutral: #cdddf4 !default;
+$alert-border--neutral: darken($alert-bg--neutral, 15%) !default;
+$alert-text--neutral: black !default;
+
+$alert-bg--positive: #cdf0cb !default;
+$alert-border--positive: darken($alert-bg--positive, 20%) !default;
+$alert-text--positive: black !default;
+
+$alert-bg--muted: #e9e9e9 !default;
+$alert-border--muted: darken($alert-bg--muted, 12%) !default;
+$alert-text--muted: black !default;

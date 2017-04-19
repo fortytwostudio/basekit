@@ -118,16 +118,7 @@ a:not(.btn) {
 
 
 
-// Links that open in a new tab get an angled arrow icon. You could apply this to links with an href that starts with https/http but they may not be opening in a new tab
-// When opening in a new tab be mindfull to inform the user through text also, give the link a title attribute
-[data-bk-links~="exit"] {
-  a[target="_blank"]:after,
-  a[href^="mailto"]:after {
-    content: " ↗︎";
-    display: inline-block;
-    transform: translateY(1px); // ← this should be removed depending on the font
-  }
-}
+// IMPORTANT: The following two items have cascade specificity clash in certain uses
 
 // Adds a clickthrough indicator arrow to encourage… clicks
 [data-bk-links~="more"] {
@@ -143,12 +134,21 @@ a:not(.btn) {
   }
 }
 
-// IMPORTANT: The following two items have cascade specificity clash in certain uses
+// Links that open in a new tab get an angled arrow icon. You could apply this to links with an href that starts with https/http but they may not be opening in a new tab
+// When opening in a new tab be mindfull to inform the user through text also, give the link a title attribute
+[data-bk-links~="exit"] {
+  a[target="_blank"]:after,
+  a[href^="mailto"]:after {
+    content: "\2009 ↗︎";
+    display: inline-block;
+    transform: translateY(2px); // ← this should be removed depending on the font
+  }
+}
 
 // Internal page links starting with an # but not only an # get a direction arrow
 [data-bk-links~="down"] {
   a[href^="#"]:not([href="#"]):after {
-    content: " ↓";
+    content: "\2009 ↓";
     display: inline-block;
   }
 }
@@ -156,7 +156,7 @@ a:not(.btn) {
 // Same as above but applies an upward arrow instead
 [data-bk-links~="up"] {
   a[href^="#"]:not([href="#"]):after {
-    content: " ↑";
+    content: "\2009 ↑";
     display: inline-block;
   }
 }

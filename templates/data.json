@@ -17,9 +17,17 @@
     "url": "/demo/examples/",
     "slug": "examples",
     "children": [ {
-      "title": "Setup",
-      "url": "/demo/examples/",
-      "slug": "examples"
+      "title": "Setup & Config",
+      "url": "/demo/",
+      "slug": "home"
+    }, {
+      "title": "Forms",
+      "url": "/demo/examples/forms/",
+      "slug": "forms"
+    }, {
+      "title": "Alerts",
+      "url": "/demo/examples/alerts/",
+      "slug": "alerts"
     }, {
       "title": "Colors",
       "url": "/demo/examples/colors/",
@@ -40,10 +48,6 @@
       "title": "Naming Convention",
       "url": "/demo/examples/naming/",
       "slug": "naming"
-    }, {
-      "title": "Forms",
-      "url": "/demo/examples/forms/",
-      "slug": "forms"
     }, {
       "title": "User Content",
       "url": "/demo/examples/user-content/",
@@ -70,17 +74,13 @@
       "slug": "buttons"
     }]
   }, {
-    "title": "About",
-    "url": "/demo/about/",
-    "slug": "about"
-  }, {
-    "title": "Why Us",
-    "url": "http://www.google.com",
+    "title": "External",
+    "url": "https://www.google.com",
     "external": "true"
   }, {
-    "title": "Contact",
+    "title": "Footer",
     "url": "#footer",
-    "slug": "contact"
+    "slug": "footer"
   }],
 
 
@@ -90,15 +90,6 @@
   }, {
     "title": "Examples",
     "url": "/demo/examples/"
-  }, {
-    "title": "About",
-    "url": "/demo/about/"
-  }, {
-    "title": "Contact Us",
-    "url": "/demo/contact-us/"
-  }, {
-    "title": "Support",
-    "url": "/demo/support/"
   }],
 
 

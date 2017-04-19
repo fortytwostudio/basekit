@@ -30,12 +30,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @if $code-style {
   code {
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-    font-size: rem($font-size-small-screen);
-    color: $alert-bg;
-    padding: 0 3px 2px;
-    background-color: lighten($grey--light, 12.5%);
-    border: 1px solid $grey--light;
-    border-radius: 3px;
+    background-color: $code-bg-color;
+    border: unquote($code-border);
+    color: $code-text-color;
+    display: inline-block;
+    font-family: unquote($code-font-family);
+    font-size: $code-font-size;
+    padding: em(2px) em(3px);
+    white-space: pre-wrap;
   }
 }

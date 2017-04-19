@@ -1,0 +1,27 @@
+.br-0 {
+  border-radius: $br-0;
+}
+
+.br-1 {
+  border-radius: rem($br-1);
+}
+
+.br-2 {
+  border-radius: rem($br-2);
+}
+
+.br-3 {
+  border-radius: rem($br-3);
+}
+
+.br-4 {
+  border-radius: rem($br-4);
+}
+
+.br-100 {
+  border-radius: 100%;
+}
+
+.br-pill {
+  border-radius: 9999px;
+}

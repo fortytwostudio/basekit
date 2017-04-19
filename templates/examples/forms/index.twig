@@ -1,0 +1,484 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Example Markup/Styles" %}
+{% set slug = "example" %}
+{% set pageHeaderColor = "bg-primary--dark" %}
+
+{% block content %}
+
+<div class="bg-white pad">
+  <div class="site-container">
+
+    <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+{#     <section id="form" tabindex="-1" class="site-container  pad">
+      <h3 data-bk-layout="pad:rl" class="font-l  pad-s-b">Example Form</h3>
+
+    </section> #}
+
+      <form data-bk-layout="hands:6" class="bk-form" action="POST">
+        <h4>Standard Form Styling</h4>
+        <p><small>Fields marked with <em>*</em> are required.</small></p>
+
+        <fieldset class="margin-t">
+          <legend>Input Types</legend>
+            <div class="margin-b">
+              <label class="required" for="text">Input Type</label>
+              <input type="text" placeholder="Type here" name="text" id="text" required>
+            </div>
+
+            <div class="margin-b">
+              <label for="text-disabled">Input Type</label>
+              <input type="text" placeholder="Type here" name="text-disabled" id="text-disabled" disabled>
+            </div>
+
+            <div class="margin-b">
+              <label for="num">Input Type Number</label>
+              <input type="number" name="num" id="num" min="1" max="100" value="100">
+            </div>
+
+            <div class="margin-b">
+              <label for="email">Input Type Email</label>
+              <input type="email" placeholder="info@mysite.com" name="email" id="email">
+            </div>
+
+            <div class="margin-b">
+              <label for="password">Input Type Password</label>
+              <input type="password" name="password" id="password">
+            </div>
+
+            <div class="margin-b">
+              <label for="search">Input Type Search</label>
+              <input type="search" name="search" id="search">
+            </div>
+
+            <div class="margin-b">
+              <label for="tel">Input Type Tel</label>
+              <input type="tel" placeholder="01224 000 000" name="tel" id="tel">
+            </div>
+
+            <div class="margin-b">
+              <label for="url">Input Type URL</label>
+              <input type="url" placeholder="https://" name="url" id="url">
+            </div>
+
+            <div class="margin-b">
+              <label for="checkbox">
+                Input Type Checkbox
+                &nbsp;<input type="checkbox" name="checkbox" id="checkbox">
+              </label>
+            </div>
+
+            <div class="margin-b">
+              <label for="radio">
+                Input Type Radio
+                &nbsp;<input type="radio" name="radio" id="radio">
+              </label>
+            </div>
+
+            <div class="margin-b">
+              <label for="checkbox-02">
+                <input type="checkbox" name="checkbox-02" id="checkbox-02">&nbsp;
+                Input Type Checkbox
+              </label>
+            </div>
+
+            <div class="margin-b">
+              <label for="radio-02">
+                <input type="radio" name="radio-02" id="radio-02">&nbsp;
+                Input Type Radio
+              </label>
+            </div>
+
+
+            <div class="margin-b">
+              <label for="date">Input Type Date</label>
+              <input type="date" name="date" id="date">
+            </div>
+
+            <div class="margin-b">
+              <label for="date-local">Input Type Datetime Local</label>
+              <input type="datetime-local" name="date-local" id="date-local">
+            </div>
+
+            <div class="margin-b">
+              <label for="month">Input Type Month</label>
+              <input type="month" name="month" id="month">
+            </div>
+
+            <div class="margin-b">
+              <label for="week">Input Type Week</label>
+              <input type="week" name="week" id="week">
+            </div>
+
+            <div class="margin-b">
+              <label for="time">Input Type Time</label>
+              <input type="time" name="time" id="time">
+            </div>
+
+            <div class="margin-b">
+              <label for="file">Input Type File</label>
+              <input type="file" value="File" name="file" id="file">
+            </div>
+
+            <div class="margin-b">
+              <label for="range">Input Type Range</label>
+              <input type="range" name="range" id="range">
+            </div>
+
+            <div class="margin-b">
+              <label for="color">Input Type Color</label>
+              <input type="color" name="color" id="color">
+            </div>
+
+            <label for="datalist">Input with Datalist</label>
+            <input list="browsers" name="myBrowser" id="datalist">
+            <datalist id="browsers">
+              <option value="Chrome">
+              <option value="Firefox">
+              <option value="Internet Explorer">
+              <option value="Opera">
+              <option value="Safari">
+              <option value="Microsoft Edge">
+            </datalist>
+        </fieldset>
+
+        <fieldset class="margin-t">
+          <legend>Textarea</legend>
+
+          <label for="textarea">Input Type Textarea</label>
+          <textarea placeholder="Write something…" name="textarea" id="textarea" rows="10"></textarea>
+        </fieldset>
+
+        <fieldset class="margin-t">
+          <legend>Buttons and Input Type Submit</legend>
+
+          <div class="margin-b">
+            <button>Button</button>
+          </div>
+
+          <div class="margin-b">
+            <button>Button with longer text</button>
+          </div>
+
+          <div class="margin-b">
+            <button type="submit">Button Type Submit</button>
+          </div>
+
+          <div class="margin-b">
+            <input type="submit" value="Submit">
+          </div>
+
+          <div class="margin-b">
+            <input type="button" value="Button Input">
+          </div>
+
+          <div class="margin-b">
+            <button disabled>Disabled Button</button>
+          </div>
+
+          <div class="margin-b">
+            <input type="submit" value="Disabled Submit" disabled>
+          </div>
+
+          <input type="image" src="https://placeholdit.imgix.net/~text?txtsize=16&txt=IMAGE%20INPUT&w=180&h=50&bg=004369&txtclr=ffffff">
+        </fieldset>
+
+        <fieldset class="margin-t">
+          <legend>Select and Option Field Types</legend>
+
+          <div class="margin-b">
+            <label for="select">Select Default</label>
+            <select name="select" id="select">
+              <option value="value1">Value 1</option>
+              <option value="value2" selected>Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+
+          <div class="margin-b">
+            <label for="optgroups">Select with Optgroup</label>
+            <select id="optgroups">
+              <optgroup label="Group 1">
+                <option>Option 1.1</option>
+              </optgroup>
+              <optgroup label="Group 2">
+                <option selected>Option 2.1</option>
+                <option>Option 2.2</option>
+              </optgroup>
+              <optgroup label="Group 3" disabled>
+                <option>Option 3.1</option>
+                <option>Option 3.2</option>
+                <option>Option 3.3</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="margin-b">
+            <label for="select-multi">Select Multiple</label>
+            <select multiple name="select-multi" id="select-multi">
+              <option value="value1">Value 1</option>
+              <option value="value2">Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+
+          <label for="select-multi-02">Select Multiple with size attribute</label>
+          <select multiple size="3" name="select-multi-02" id="select-multi-02">
+            <option value="value1">Value 1</option>
+            <option value="value2">Value 2</option>
+            <option value="value3">Value 3</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Measurement Field Types</legend>
+
+          <div class="margin-b">
+            <label for="meter">Meter</label>
+            <meter min="200" max="500" id="meter" value="350">350 degrees</meter>
+          </div>
+
+          <label for="progress">Progress</label>
+          <progress value="70" max="100" id="progress">70%</progress>
+        </fieldset>
+      </form>
+
+      <form data-bk-layout="hands:6" class="bk-form  bk-form--ext" action="POST">
+        <h4>Extended theme form styling</h4>
+        <p><small>This form uses CSS that overrides and/or extends the standard form style.</small></p>
+
+        <fieldset class="margin-t">
+          <legend>Input Types</legend>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label class="required" for="ext-text">Input Type</label>
+            <input type="text" placeholder="Type here" name="ext-text" id="ext-text">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-text-disabled" disabled>Input Type</label>
+            <input type="text" placeholder="Type here" name="ext-text-disabled" id="ext-text-disabled" disabled>
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-num">Input Type Number</label>
+            <input type="number" name="ext-num" id="ext-num" min="1" max="100" value="100">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-email">Input Type Email</label>
+            <input type="email" placeholder="info@mysite.com" name="ext-email" id="ext-email">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-password">Input Type Password</label>
+            <input type="password" name="ext-password" id="ext-password">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-search">Input Type Search</label>
+            <input type="search" name="ext-search" id="ext-search">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-tel">Input Type Tel</label>
+            <input type="tel" placeholder="01224 000 000" name="ext-tel" id="ext-tel">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-url">Input Type URL</label>
+            <input type="url" placeholder="https://" name="ext-url" id="ext-url">
+          </div>
+
+          <div class="margin-b">
+            <label for="ext-checkbox">
+              Input Type Checkbox
+              &nbsp;<input type="checkbox" name="ext-checkbox" id="ext-checkbox">
+            </label>
+          </div>
+
+          <div class="margin-b">
+            <label for="ext-radio">
+              Input Type Radio
+              &nbsp;<input type="radio" name="ext-radio" id="ext-radio">
+            </label>
+          </div>
+
+          <div class="margin-b">
+            <label for="ext-checkbox-02">
+              <input type="checkbox" name="ext-checkbox-02" id="ext-checkbox-02">&nbsp;
+              Input Type Checkbox
+            </label>
+          </div>
+
+          <div class="margin-b">
+            <label for="ext-radio-02">
+              <input type="radio" name="ext-radio-02" id="ext-radio-02">&nbsp;
+              Input Type Radio
+            </label>
+          </div>
+
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-date">Input Type Date</label>
+            <input type="date" name="ext-date" id="ext-date">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-date-local">Input Type Datetime Local</label>
+            <input type="datetime-local" name="ext-date-local" id="ext-date-local">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-month">Input Type Month</label>
+            <input type="month" name="ext-month" id="ext-month">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-week">Input Type Week</label>
+            <input type="week" name="ext-week" id="ext-week">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-time">Input Type Time</label>
+            <input type="time" name="ext-time" id="ext-time">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-file">Input Type File</label>
+            <input type="file" value="File" name="ext-file" id="ext-file">
+          </div>
+
+          <div class="margin-b">
+            <label for="ext-range">Input Type Range</label>
+            <input type="range" name="ext-range" id="ext-range">
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-color">Input Type Color</label>
+            <input type="color" name="ext-color" id="ext-color">
+          </div>
+
+          <div class="bk-form--ext__combined">
+            <label for="ext-datalist">Input with Datalist</label>
+            <input list="browsers" name="ext-myBrowser" id="ext-datalist">
+            <datalist id="ext-browsers">
+              <option value="Chrome">
+              <option value="Firefox">
+              <option value="Internet Explorer">
+              <option value="Opera">
+              <option value="Safari">
+              <option value="Microsoft Edge">
+            </datalist>
+          </div>
+        </fieldset>
+
+        <fieldset class="margin-t">
+          <legend>Textarea</legend>
+          <div class="bk-form--ext__combined">
+            <label for="ext-textarea">Input Type Textarea</label>
+            <textarea placeholder="Write something…" name="ext-textarea" id="ext-textarea" rows="10"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="margin-t">
+          <legend>Buttons and Input Type Submit</legend>
+
+          <div class="margin-b">
+            <button>Button</button>
+          </div>
+
+          <div class="margin-b">
+            <button>Button with longer text</button>
+          </div>
+
+          <div class="margin-b">
+            <button type="submit">Button Type Submit</button>
+          </div>
+
+          <div class="margin-b">
+            <input type="submit" value="Submit">
+          </div>
+
+          <div class="margin-b">
+            <input type="button" value="Button Input">
+          </div>
+
+          <div class="margin-b">
+            <button disabled>Disabled Button</button>
+          </div>
+
+          <div class="margin-b">
+            <input type="submit" value="Disabled Submit" disabled>
+          </div>
+
+          <input type="image" src="https://placeholdit.imgix.net/~text?txtsize=16&txt=IMAGE%20INPUT&w=180&h=50&bg=004369&txtclr=ffffff">
+        </fieldset>
+
+        <fieldset class="margin-t">
+          <legend>Select and Option Field Types</legend>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-select">Select Default</label>
+            <select name="ext-select" id="ext-select">
+              <option value="value1">Value 1</option>
+              <option value="value2" selected>Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-optgroups">Select with Optgroup</label>
+            <select id="ext-optgroups">
+              <optgroup label="Group 1">
+                <option>Option 1.1</option>
+              </optgroup>
+              <optgroup label="Group 2">
+                <option selected>Option 2.1</option>
+                <option>Option 2.2</option>
+              </optgroup>
+              <optgroup label="Group 3" disabled>
+                <option>Option 3.1</option>
+                <option>Option 3.2</option>
+                <option>Option 3.3</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="bk-form--ext__combined  margin-b">
+            <label for="ext-select-multi">Select Multiple</label>
+            <select multiple name="ext-select-multi" id="ext-select-multi">
+              <option value="value1">Value 1</option>
+              <option value="value2">Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+
+          <div class="bk-form--ext__combined">
+            <label for="ext-select-multi-02">Select Multiple with size attribute</label>
+            <select multiple size="3" name="ext-select-multi-02" id="ext-select-multi-02">
+              <option value="value1">Value 1</option>
+              <option value="value2">Value 2</option>
+              <option value="value3">Value 3</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Measurement Field Types</legend>
+
+          <div class="margin-b">
+            <label for="ext-meter">Meter</label>
+            <meter min="200" max="500" id="ext-meter" value="350">350 degrees</meter>
+          </div>
+
+          <label for="ext-progress">Progress</label>
+          <progress value="70" max="100" id="ext-progress">70%</progress>
+        </fieldset>
+      </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

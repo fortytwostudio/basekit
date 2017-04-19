@@ -21,10 +21,10 @@ npm-debug.log
 ehthumbs.db
 Thumbs.db
 
-
 # Codekit files #
 ######################
 *.codekit
 
-
+# IDE nonsense #
+######################
 .idea

@@ -1,91 +1,12 @@
-<!doctype html>
-<html lang="en-gb" class="no-js">
-  <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+{% extends "_layout.twig" %}
 
-    <!-- Prefetch DNS for external assets -->
-    <link href="//fast.fonts.net" rel="dns-prefetch">
-    <link href="//cloud.typography.com" rel="dns-prefetch">
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link href="//ajax.googleapis.com" rel="dns-prefetch">
-    <link href="//connect.facebook.net" rel="dns-prefetch">
+{% set title = "Example Markup/Styles" %}
+{% set slug = "example" %}
+{% set pageHeaderColor = "bg-primary--dark" %}
 
-    <!-- Prerender or Preload
-    - Preemptively load all of the assets of a certain document
-    - Preload a specific asset
-    - More info: https://css-tricks.com/prefetching-preloading-prebrowsing/
-    <link rel="prerender" href="https://example.com/">
-    <link rel="preload" href="image.png">
-    -->
+{% block content %}
 
-    <title>BaseKit</title>
-    <meta name="description" content="a frontend starter kit from FortyTwo Studio">
-
-    <link href="/css/basekit.css" rel="stylesheet">
-    <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
-
-    <!--
-      ICONS:
-      - Go to: http://realfavicongenerator.net
-      - Generate icons and put the code here (see below example).
-      - Put images in the imgs/web-icons/ directory.
-    -->
-
-    <!--
-      Facebook / Twitter Cards
-    - Update the following meta tags and replace the image
-    <meta property="og:title" content="Basis">
-    <meta property="og:description" content="Basis is a full featured starter kit from FortyTwo Studio">
-    <meta property="og:image" content="http://og.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="http://">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@">
-    <meta name="twitter:creator" content="@">
-    -->
-
-    <!--
-      Facebook / Instant Articles
-    <meta property="op:markup_version" content="v1.0">
-    <link href="http://example.com/article.html" rel="canonical">
-    <meta property="fb:article_style" content="myarticlestyle">
-    -->
-
-    <!--
-      Google+ / Schema.org
-    <link href="https://plus.google.com/+YourPage" rel="publisher">
-    <meta itemprop="name" content="Content Title">
-    <meta itemprop="description" content="Content description less than 200 characters">
-    <meta itemprop="image" content="https://example.com/image.jpg">
-    -->
-
-    <!--
-      Google Analytics Code:
-    - Add your analytics ID here.
-    - Or remove the below code and add what Google gives you.
-    -->
-
-    <!--
-      Geo Tags
-    <meta name="ICBM" content="latitude, longitude">
-    <meta name="geo.position" content="latitude;longitude">
-    <meta name="geo.region" content="GB">
-    <meta name="geo.placename" content="Aberdeen City, United Kingdom">
-    -->
-
-  </head>
-
-  <body class="start">
-    <a class="skip-link" href="#install">Skip to content</a>
-    <a class="skip-link" href="#main-nav">Skip to navigation</a>
-
-<div class="bg-tertiary--light">
+  <div class="bg-tertiary--light">
     <!-- merely the outer colour and padding container of the header, plus an id hook for scrolling -->
     <div id="header" class="bg-black  pad-s">
       <!-- this just keeps the content to the site width -->
@@ -121,7 +42,7 @@
         <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#class-naming">Class Naming</a></li>
         <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#padding">Padding / Spacing</a></li>
         <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#form">Forms</a></li>
-        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#user-content">User Content</a></li>
+        <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#rte">User Content</a></li>
         <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#logos">Logos</a></li>
         <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#tables">Tables</a></li>
         <li data-bk-layout="6  hands:4"><a class="bg-tertiary  block  pad  scroll" href="#links">Links</a></li>
@@ -130,7 +51,7 @@
       </ul>
     </nav>
 
-    <section id="install" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  user-content">
+    <section id="install" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  rte">
       <h2 class="font-l">Installation</h2>
 
       <ol>
@@ -142,10 +63,23 @@
         <li>Additional config may be required in the root /css files (such as _colors.scss)</li>
       </ol>
 
+
+<pre><code data-bk-layout>@if $code-style {
+  code {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: rem($font-size-small-screen);
+    color: $primary;
+    padding: 0 3px 2px;
+    background-color: lighten($grey--light, 12.5%);
+    border: 1px solid $grey--light;
+    border-radius: 3px;
+  }
+}</code></pre>
+
     </section>
 
     <section id="colors" tabindex="-1" class="site-container  pad">
-      <div class="user-content">
+      <div class="rte">
         <h2 class="font-l">Colors</h2>
         <p>Colours are based on brand guidelines and/or style guides and used for text, links, buttons, backgrounds, etc.</p>
 
@@ -181,7 +115,7 @@
     </section>
 
     <div id="fonts" tabindex="-1" class="site-container  pad">
-      <div class="user-content  pad-b">
+      <div class="rte  pad-b">
         <h2 class="font-l">Fonts</h2>
 
           <p>
@@ -253,7 +187,7 @@
 
     </div>
 
-    <section id="breakpoints" tabindex="-1"  data-bk-links="primary fade underline" class="site-container  pad  user-content">
+    <section id="breakpoints" tabindex="-1"  data-bk-links="primary fade underline" class="site-container  pad  rte">
       <h2 class="font-l">Breakpoints &amp; Grid</h2>
 
       <p>Easy to use <code>inline-block</code> based grid system, utilising <a href="https://github.com/sass-mq/sass-mq">Sass MQ</a>.</p>
@@ -351,7 +285,7 @@
       </table>
     </section>
 
-    <section data-bk-links="primary fade underline" class="site-container  pad  user-content">
+    <section data-bk-links="primary fade underline" class="site-container  pad  rte">
       <h3 id="class-naming" tabindex="-1">Class Naming</h3>
 
       <p>BaseKit makes use of two primary types of class; the utility class and the BEM class.</p>
@@ -395,7 +329,7 @@
         <li class="margin-t">And so on.</li>
       </ul>
 
-      <div class="user-content  pad-t  pad-s-b">
+      <div class="rte  pad-t  pad-s-b">
         <h3>Examples within containers</h3>
       </div>
 
@@ -418,7 +352,7 @@
 
 
 
-    <section id="full-width" data-bk-links="primary fade underline" class="site-container  pad  user-content">
+    <section id="full-width" data-bk-links="primary fade underline" class="site-container  pad  rte">
       <h3 class="font-l  margin-b">Full width container breaking out of site container </h3>
 
       <div class="browser-width">
@@ -428,7 +362,7 @@
 
 
 
-    <section id="user-content" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  user-content">
+    <section id="rte" tabindex="-1" data-bk-links="primary fade underline" class="site-container  pad  rte">
       <h3>User Content Styling</h3>
 
       <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
@@ -450,7 +384,7 @@
           </ol>
         </li>
         <li>Etiam ac tellus eget ante</li>
-        <li class="user-content">
+        <li class="rte">
           <p>
             Elit platea aliquam odio faucibus sociosqu vestibulum aptent ultrices, augue tempor placerat neque. Id nulla nec hac auctor curabitur nostra accumsan est donec fermentum curabitur!
           </p>
@@ -470,7 +404,7 @@
 
       <ol>
         <li>Nulla facilisi potenti</li>
-        <li class="user-content">Maecenas nec ornare massa
+        <li class="rte">Maecenas nec ornare massa
           <ul>
             <li>Mattis posuere habitant dapibus</li>
             <li>Congue natoque blandit mattis rhoncus</li>
@@ -640,7 +574,7 @@
 
       <h2 class="font-l  pad-s-b">Links &amp; Navigation</h2>
 
-      <div class="user-content  pad-s-b">
+      <div class="rte  pad-s-b">
         <p>
           For years the traditional mathod of styling links would inevitably over
           time drive me insane with specificity problems and overrides. So eventually
@@ -656,7 +590,7 @@
         </p>
       </div>
 
-      <div data-bk-links="primary fade underline" class="user-content">
+      <div data-bk-links="primary fade underline" class="rte">
         <h3 class="margin-tb">Standard links within a paragraph</h3>
         <p>
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
@@ -703,10 +637,6 @@
       </ul>
 
     </div>
-</div>
+  </div>
 
-    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="/js/min/_basekit.js"></script>
-  </body>
-</html>
+{% endblock %}

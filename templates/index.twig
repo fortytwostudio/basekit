@@ -8,41 +8,15 @@
 {% set pageHeaderColor = "bg-primary--dark" %}
 {% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/landscape.jpg)"' %}
 
-{% block pageHeader %}
-  <div class="site-container  pad-b">
-    <div data-bk-layout="hands:6" class="color-white">
-      {# DEV NOTE: Plain text field no line breaks #}
-      <h2 class="font-xxl  font-lh-1  pad-s-b">Bus de ditio ent lat ues et ut asper</h2>
-
-      {# DEV NOTE: Plain text field no line breaks but allow multi line in CMS for readability #}
-      <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quisetur?</p>
-    </div>
-  </div>
-{% endblock %}
-
 
 {% block content %}
 
   <div class="bg-tertiary--light  pad">
     <div class="site-container">
-      {# DEV NOTE: This wrapping div exists only to middle align the two containing divs #}
       <div data-bk-layout="pad:0  middle">
-        {# DEV NOTE: Plain text field, no line breaks #}
-        <div data-bk-layout="palm:6  palm:pad:large" data-bk-links="secondary fade down underline-hover download" class="no-outline  user-content  font-light  font-l  align-c">
-          <p>Am quid ut velenda voluptas sinciet, sed eictatum fuga. Ut exceaquis mos dus simpore ped es et ut asperum non nem aliquasit faccus, sum fugia etur sus quis etur?</p>
-
-          <p>Some text <a href="#target">Skip to a closer target</a> around this.</p>
-          <p><a href="#why-inspire">Skip to Why</a></p>
-          <p><a href="#target">Skip to a closer target</a></p>
-          <p><a href="#target">Skip to a closer target</a></p>
-          <p data-bk-links="up"><a href="#start">Skip to top</a></p>
-          <p><a href="file.jpg" download>Download this file</a></p>
+        <div data-bk-layout="palm:6" data-bk-links="secondary fade underline-hover" class="rte  font-light  font-m">
+          <p>Basekit is a custom frontend “framework” built over many years for FortyTwo’s client projects. It's freely available for anyone to use but be aware that we offer no warranty or formal support.</p>
         </div>
-
-        {# DEV NOTE: Don't output figure if no image present. Alt text should be image title field. #}
-        <figure data-bk-layout="palm:6" class="font-xl">
-          <img src="/imgs/placeholders/landscape.jpg" alt="{{ img.title }}">
-        </figure>
       </div>
     </div>
   </div>
@@ -51,9 +25,42 @@
   <div class="bg-white  pad">
     <div class="site-container">
       {# DEV NOTE: Should be editable from the CMS home edit page #}
-      <h3 class="font-xl  font-bold">View our latest vacancies</h3>
+      <h3 data-bk-layout="pad:rl" class="font-xl  font-bold">Getting started</h3>
 
-      {# DEV NOTE: Output latest jobs but also allow client to override what get's shown with an entries field in the CMS home edit page. I think we should output the latest 4 by default, but then if the client chooses one to "sticky" it get's put first and then the remaining 3 are the latest. If the client chooses 4 then no latest entries appear, the clien thas overriden them. If the client chooses one that would appear by default, then it should be stickied first in line and get removed from the default output… clear? #}
+      <div data-bk-layout="pad:trl  lap:8" data-bk-links="primary underline fade exit" class="rte">
+        <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
+
+        <p>You’ll also want a local server of some kind, we currently prefer <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener">Laravel Valet</a> for small static sites and initial frontend templating, like this.</p>
+
+        <p>Once you've downloaded BaseKit, cd in to the directory and run <code>$ npm install</code> to get the required Gulp packages.</p>
+
+        <p>Run <code>$ gulp</code> and it should start watching and compiling the relevant files, at the moment this includes: Sass (to .css), Twig (to .html), HTML (to minified and cleaned .html) and finally Javascript to minified and combined .js. <em class="bg-secondary color-white">HTML compiling will soon be removed in favour of Twig.</em></p>
+
+        <p>Now that you've comfirmed that Gulp is running, you're ready to start configuring Sass files (and Twig if you're using that).</p>
+
+        <p>But first let's take a look at Basekit's structure.</p>
+
+        <h3 class="font-xl  font-bold">Basekit Structure</h3>
+
+        <dl>
+          <dt>bower_components</dt>
+          <dd>This is only used to keep the html5shiv snippet up to date… which isn't often.</dd>
+          <dt>css</dt>
+          <dd>The main part of Basekit which we'll go into detail soon.</dd>
+          <dt>demo</dt>
+          <dd>Where static templates are compiled as well as this documentation.</dd>
+          <dt>docs</dt>
+          <dd>SassDoc documentation… <em class="bg-secondary color-white">this may get removed since it documents Sass but not the CSS bits of Sass</em>.</dd>
+          <dt>imgs</dt>
+          <dd>Project images, mainly UI related.</dd>
+          <dt>js</dt>
+          <dd>Project javascript files, numbered files will be compiled and minified into js/min/basekit.js in order.</dd>
+          <dt>node_modules</dt>
+          <dd>All your node dependencies, make sure this isn't committed to git.</dd>
+          <dt>templates</dt>
+          <dd>Twig project templates.</dd>
+        </dl>
+      </div>
     </div>
   </div>
 
@@ -98,7 +105,7 @@
     <div data-bk-links="white dim fade" class="site-container">
       <h2 class="font-hero  font-thin  align-c">Our Work</h2>
 
-      <div data-bk-layout="6  pr:3" class="pad-s-t  align-c  font-light  font-m  user-content">
+      <div data-bk-layout="6  pr:3" class="pad-s-t  align-c  font-light  font-m  rte">
         <p>This is an example of three virtual columns (spanning 4 actual columns of a 12 column grid). The Read more links will be bottom aligned once I've added a flex box class.</p>
       </div>
 
@@ -159,7 +166,7 @@
     </h2>
 
     <div class="site-container  pad">
-      <div data-bk-layout="lap:6  lap:pl:1" data-bk-links="white fade dim underline-hover up download" class="user-content  color-white">
+      <div data-bk-layout="lap:6  lap:pl:1" data-bk-links="white fade dim underline-hover up download" class="rte  color-white">
 
         {# DEV NOTE: Output from Rich Text field with bold-italic-links #}
         <p>erum que volut <a href="#">maxim sinusa seceperio</a>. <strong>Ossi sit aligendit</strong> el <em>imenduciis inus</em> es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu reptatiur sum resequam erum que volut maxim sinusa seceperio. Ossi sit aligendit el imenduciis inus es ipsus, o ictu reptatiur sum resequam er</p>

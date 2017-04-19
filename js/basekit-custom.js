@@ -13,7 +13,5 @@ $(function() {
   /// Uncomment the next line if you want pages to smooth scroll on load if # is present in URL
   // $.smoothPageScrollByLoaded();
   /// Basic config with Add Hash disabled
-  $('a[href^="#"]').smoothPageScroll({
-    isAddHash: false
-  });
+  $('a[href^="#"]').smoothPageScroll();
 });
