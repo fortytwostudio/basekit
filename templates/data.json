@@ -21,6 +21,14 @@
       "url": "/demo/",
       "slug": "home"
     }, {
+      "title": "Forms",
+      "url": "/demo/examples/forms/",
+      "slug": "forms"
+    }, {
+      "title": "Alerts",
+      "url": "/demo/examples/alerts/",
+      "slug": "alerts"
+    }, {
       "title": "Colors",
       "url": "/demo/examples/colors/",
       "slug": "colors"
@@ -40,10 +48,6 @@
       "title": "Naming Convention",
       "url": "/demo/examples/naming/",
       "slug": "naming"
-    }, {
-      "title": "Forms",
-      "url": "/demo/examples/forms/",
-      "slug": "forms"
     }, {
       "title": "User Content",
       "url": "/demo/examples/user-content/",

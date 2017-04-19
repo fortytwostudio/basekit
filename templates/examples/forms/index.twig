@@ -19,135 +19,127 @@
         <h4>Standard Form Styling</h4>
         <p><small>Fields marked with <em>*</em> are required.</small></p>
 
-
         <fieldset class="margin-t">
           <legend>Input Types</legend>
+            <div class="margin-b">
+              <label class="required" for="text">Input Type</label>
+              <input type="text" placeholder="Type here" name="text" id="text" required>
+            </div>
 
-          <div class="margin-b">
-            <label class="required" for="text">Input Type</label>
-            <input type="text" placeholder="Type here" name="text" id="text" required>
-          </div>
+            <div class="margin-b">
+              <label for="text-disabled">Input Type</label>
+              <input type="text" placeholder="Type here" name="text-disabled" id="text-disabled" disabled>
+            </div>
 
-          <div class="margin-b">
-            <label for="text-disabled">Input Type</label>
-            <input type="text" placeholder="Type here" name="text-disabled" id="text-disabled" disabled>
-          </div>
+            <div class="margin-b">
+              <label for="num">Input Type Number</label>
+              <input type="number" name="num" id="num" min="1" max="100" value="100">
+            </div>
 
-          <div class="margin-b">
-            <label class="required" for="text-required">Input Type</label>
-            <input type="text" placeholder="Type here" name="text-required" id="text-required" required>
-            <p class="alert">This is a validation alert</p>
-          </div>
+            <div class="margin-b">
+              <label for="email">Input Type Email</label>
+              <input type="email" placeholder="info@mysite.com" name="email" id="email">
+            </div>
 
-          <div class="margin-b">
-            <label for="num">Input Type Number</label>
-            <input type="number" name="num" id="num" min="1" max="100" value="100">
-          </div>
+            <div class="margin-b">
+              <label for="password">Input Type Password</label>
+              <input type="password" name="password" id="password">
+            </div>
 
-          <div class="margin-b">
-            <label for="email">Input Type Email</label>
-            <input type="email" placeholder="info@mysite.com" name="email" id="email">
-          </div>
+            <div class="margin-b">
+              <label for="search">Input Type Search</label>
+              <input type="search" name="search" id="search">
+            </div>
 
-          <div class="margin-b">
-            <label for="password">Input Type Password</label>
-            <input type="password" name="password" id="password">
-          </div>
+            <div class="margin-b">
+              <label for="tel">Input Type Tel</label>
+              <input type="tel" placeholder="01224 000 000" name="tel" id="tel">
+            </div>
 
-          <div class="margin-b">
-            <label for="search">Input Type Search</label>
-            <input type="search" name="search" id="search">
-          </div>
+            <div class="margin-b">
+              <label for="url">Input Type URL</label>
+              <input type="url" placeholder="https://" name="url" id="url">
+            </div>
 
-          <div class="margin-b">
-            <label for="tel">Input Type Tel</label>
-            <input type="tel" placeholder="01224 000 000" name="tel" id="tel">
-          </div>
+            <div class="margin-b">
+              <label for="checkbox">
+                Input Type Checkbox
+                &nbsp;<input type="checkbox" name="checkbox" id="checkbox">
+              </label>
+            </div>
 
-          <div class="margin-b">
-            <label for="url">Input Type URL</label>
-            <input type="url" placeholder="https://" name="url" id="url">
-          </div>
+            <div class="margin-b">
+              <label for="radio">
+                Input Type Radio
+                &nbsp;<input type="radio" name="radio" id="radio">
+              </label>
+            </div>
 
-          <div class="margin-b">
-            <label for="checkbox">
-              Input Type Checkbox
-              &nbsp;<input type="checkbox" name="checkbox" id="checkbox">
-            </label>
-          </div>
+            <div class="margin-b">
+              <label for="checkbox-02">
+                <input type="checkbox" name="checkbox-02" id="checkbox-02">&nbsp;
+                Input Type Checkbox
+              </label>
+            </div>
 
-          <div class="margin-b">
-            <label for="radio">
-              Input Type Radio
-              &nbsp;<input type="radio" name="radio" id="radio">
-            </label>
-          </div>
-
-          <div class="margin-b">
-            <label for="checkbox-02">
-              <input type="checkbox" name="checkbox-02" id="checkbox-02">&nbsp;
-              Input Type Checkbox
-            </label>
-          </div>
-
-          <div class="margin-b">
-            <label for="radio-02">
-              <input type="radio" name="radio-02" id="radio-02">&nbsp;
-              Input Type Radio
-            </label>
-          </div>
+            <div class="margin-b">
+              <label for="radio-02">
+                <input type="radio" name="radio-02" id="radio-02">&nbsp;
+                Input Type Radio
+              </label>
+            </div>
 
 
-          <div class="margin-b">
-            <label for="date">Input Type Date</label>
-            <input type="date" name="date" id="date">
-          </div>
+            <div class="margin-b">
+              <label for="date">Input Type Date</label>
+              <input type="date" name="date" id="date">
+            </div>
 
-          <div class="margin-b">
-            <label for="date-local">Input Type Datetime Local</label>
-            <input type="datetime-local" name="date-local" id="date-local">
-          </div>
+            <div class="margin-b">
+              <label for="date-local">Input Type Datetime Local</label>
+              <input type="datetime-local" name="date-local" id="date-local">
+            </div>
 
-          <div class="margin-b">
-            <label for="month">Input Type Month</label>
-            <input type="month" name="month" id="month">
-          </div>
+            <div class="margin-b">
+              <label for="month">Input Type Month</label>
+              <input type="month" name="month" id="month">
+            </div>
 
-          <div class="margin-b">
-            <label for="week">Input Type Week</label>
-            <input type="week" name="week" id="week">
-          </div>
+            <div class="margin-b">
+              <label for="week">Input Type Week</label>
+              <input type="week" name="week" id="week">
+            </div>
 
-          <div class="margin-b">
-            <label for="time">Input Type Time</label>
-            <input type="time" name="time" id="time">
-          </div>
+            <div class="margin-b">
+              <label for="time">Input Type Time</label>
+              <input type="time" name="time" id="time">
+            </div>
 
-          <div class="margin-b">
-            <label for="file">Input Type File</label>
-            <input type="file" value="File" name="file" id="file">
-          </div>
+            <div class="margin-b">
+              <label for="file">Input Type File</label>
+              <input type="file" value="File" name="file" id="file">
+            </div>
 
-          <div class="margin-b">
-            <label for="range">Input Type Range</label>
-            <input type="range" name="range" id="range">
-          </div>
+            <div class="margin-b">
+              <label for="range">Input Type Range</label>
+              <input type="range" name="range" id="range">
+            </div>
 
-          <div class="margin-b">
-            <label for="color">Input Type Color</label>
-            <input type="color" name="color" id="color">
-          </div>
+            <div class="margin-b">
+              <label for="color">Input Type Color</label>
+              <input type="color" name="color" id="color">
+            </div>
 
-          <label for="datalist">Input with Datalist</label>
-          <input list="browsers" name="myBrowser" id="datalist">
-          <datalist id="browsers">
-            <option value="Chrome">
-            <option value="Firefox">
-            <option value="Internet Explorer">
-            <option value="Opera">
-            <option value="Safari">
-            <option value="Microsoft Edge">
-          </datalist>
+            <label for="datalist">Input with Datalist</label>
+            <input list="browsers" name="myBrowser" id="datalist">
+            <datalist id="browsers">
+              <option value="Chrome">
+              <option value="Firefox">
+              <option value="Internet Explorer">
+              <option value="Opera">
+              <option value="Safari">
+              <option value="Microsoft Edge">
+            </datalist>
         </fieldset>
 
         <fieldset class="margin-t">
@@ -266,12 +258,6 @@
           <div class="bk-form--ext__combined  margin-b">
             <label for="ext-text-disabled" disabled>Input Type</label>
             <input type="text" placeholder="Type here" name="ext-text-disabled" id="ext-text-disabled" disabled>
-          </div>
-
-          <div class="bk-form--ext__combined  margin-b">
-            <label class="required" for="ext-text-required">Input Type</label>
-            <input type="text" placeholder="Type here" name="ext-text-required" id="ext-text-required" required>
-            <p class="alert">This is a validation alert</p>
           </div>
 
           <div class="bk-form--ext__combined  margin-b">
