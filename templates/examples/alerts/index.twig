@@ -13,7 +13,7 @@
       <form class="bk-form" action="POST">
         <div data-bk-layout="hands:6" class="pad-t">
           <input type="text">
-          <p class="alert">Validation/Error</p>
+          <p class="alert">Alert</p>
         </div>
 
         <div data-bk-layout="hands:6" class="pad-t">
@@ -33,22 +33,24 @@
 
         <div data-bk-layout="hands:6" class="pad-t">
           <input type="text">
-          <p class="alert  alert--info  alert--shadow">Muted with shadow</p>
+          <p class="alert  alert--muted">Muted</p>
         </div>
 
         <div data-bk-layout="hands:6" class="pad-t">
           <input type="text">
           <p class="alert  alert--ib">Inline-block</p>
+          <p class="alert  alert--positive  alert--ib">Another inline-block</p>
+          <p class="alert  alert--neutral  alert--ib">Last one</p>
         </div>
 
         <div data-bk-layout="hands:6" class="pad-t">
           <input type="text">
-          <p class="alert  alert--shadow">Drop shadow</p>
+          <p class="alert  shadow">Drop shadow</p>
         </div>
 
         <div data-bk-layout="hands:6" class="pad-t">
           <input type="text">
-          <p class="alert">Lots of text… paesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.</p>
+          <p class="alert  alert--compact">Compact padding</p>
         </div>
 
         <div data-bk-layout="hands:6" class="pad-t">
@@ -70,8 +72,8 @@
 
         <div data-bk-layout="hands:6" class="pad-t">
           <input type="text">
-          <div class="alert  alert--info  alert--center-shadow  rte">
-            <h3 class="font-m">Muted rich-text with center shadow…</h3>
+          <div class="alert  alert--muted  rte">
+            <h3 class="font-m">Muted rich-text</h3>
 
             <ul>
               <li>Paesent commodo cursus magna</li>
@@ -92,7 +94,7 @@
 
           Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
 
-          <span data-bk-layout class="alert  alert--ib alert--shadow">Between text content, use data-bk-layout</span>
+          <span data-bk-layout="auto" class="alert">Between text use data-bk-layout=auto</span>
 
           <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
         </div>
@@ -123,7 +125,7 @@
           <input type="text">
 
           <div class="pad-s-t">
-            <p class="alert  alert--error  alert--shadow  alert--above">Above content</p>
+            <p class="alert  alert--error  shadow  alert--above">Above content with dropshadow</p>
             <input type="text">
           </div>
         </div>
