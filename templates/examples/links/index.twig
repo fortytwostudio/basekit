@@ -1,0 +1,54 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Example Markup/Styles" %}
+{% set slug = "example" %}
+{% set pageHeaderColor = "bg-primary--dark" %}
+
+{% block content %}
+
+  <div class="bg-tertiary">
+    <div id="links" tabindex="-1" class="site-container  pad">
+
+      <h2 class="font-l  pad-s-b">Links &amp; Navigation</h2>
+
+      <div class="rte  pad-s-b">
+        <p>
+          For years the traditional mathod of styling links would inevitably over
+          time drive me insane with specificity problems and overrides. So eventually
+          I came to the conclusion that links should simply be scoped, via classes.
+        </p>
+
+        <p>
+          This does mean that you have to be sure to catch every link in your templates,
+          otherwise they'll appear unstyled. It also means you'll be using unsemantic
+          blah blah blah classes. However it does produce easier to maintain code with
+          fewer long-term headaches. Just create a link style on a class and stick it
+          where it needs to go in your markup (be sensible!).
+        </p>
+      </div>
+
+      <div data-bk-links="primary fade underline" class="rte">
+        <h3 class="margin-tb">Standard links within a paragraph</h3>
+        <p>
+          Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
+        </p>
+
+        <h3 class="margin-tb">Inverted link colours on paragraph</h3>
+        <p data-bk-links="secondary fade underline">
+          Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
+        </p>
+
+        <h3 class="margin-tb">Contrasted link colours on dark background paragraph</h3>
+        <p data-bk-links="secondary fade underline" class="bg-tertiary--dark  color-black">
+          Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
+        </p>
+      </div>
+
+      <h3 class="margin-tb">Setting links in heading elements with various colours</h3>
+      <h4 class="font-l  set-links">Heading uses default text colour <a href="#">with a default link colour</a></h4>
+      <h4 class="font-l  color-primary  set-links  set-links--inverted">Heading uses primary colour <a href="#">with an inverted link colour</a></h4>
+      <h4 class="font-l  color-secondary  set-links">Heading uses secondary colour <a href="#">with a default link colour</a></h4>
+    </div>
+  </div>
+
+{% endblock %}
