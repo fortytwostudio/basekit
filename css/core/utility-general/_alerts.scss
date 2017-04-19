@@ -4,11 +4,11 @@
     background-color: $alert-bg;
     border: 1px solid $alert-border;
     color: $alert-text;
-    // font-weight: bold;
+    margin-bottom: rem(4px);
+    margin-top: rem(4px);
+    padding: 0;
     padding: rem($margin * 1px);
     position: relative;
-    margin-top: rem(4px);
-    margin-bottom: rem(4px);
 
     &:before {
       background: inherit;
