@@ -57,7 +57,7 @@ $form-element-bg-color: white;
       box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.075);
 
       &:focus {
-        border-color: $alert-bg--neutral;
+        border-color: $primary--light;
         border-radius: 0;
         box-shadow: 0 0.5em 0.5em -0.25em rgba($primary, 0.25);
       }
