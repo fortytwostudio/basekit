@@ -1,0 +1,85 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Colors" %}
+{% set slug = "colors" %}
+{% set pageHeaderColor = "bg-secondary--dark" %}
+
+{% block content %}
+
+  <div class="bg-white">
+    <section id="colors" tabindex="-1" class="site-container  pad">
+      <div data-bk-layout="lap:8" class="rte">
+        <h2 class="font-xl">Colors</h2>
+        <p>Colours are based on brand guidelines and/or style guides and used for text, links, buttons, backgrounds, etc.</p>
+
+        <p>Designers will often miss out a tertiary colour from the guidelines, in which case I tend to make use of an appropriatly fitting grey. Tertiary colours are useful for active states on navigation links and buttons.</p>
+      </div>
+
+      <div data-bk-layout="lap:6">
+        <h3 class="margin-t">Primary</h3>
+
+        <ol class="color-white  font-s">
+          <li data-bk-layout="4" class="bg-primary  pad-t">
+            default
+          </li>
+          <li data-bk-layout="4" class="bg-primary--dark  pad-t">
+            dark
+          </li>
+          <li data-bk-layout="4" class="bg-primary--light  pad-t">
+            light
+          </li>
+        </ol>
+      </div>
+
+      <div data-bk-layout="lap:6">
+        <h3 class="margin-t">Secondary</h3>
+
+        <ol class="color-white  font-s">
+          <li data-bk-layout="4" class="bg-secondary  pad-t">
+            default
+          </li>
+          <li data-bk-layout="4" class="bg-secondary--dark  pad-t">
+            dark
+          </li>
+          <li data-bk-layout="4" class="bg-secondary--light  pad-t">
+            light
+          </li>
+        </ol>
+      </div>
+
+      <div data-bk-layout="lap:6">
+        <h3 class="margin-t">Tertiary</h3>
+
+        <ol class="font-s">
+          <li data-bk-layout="4" class="bg-tertiary  pad-t">
+            default
+          </li>
+          <li data-bk-layout="4" class="bg-tertiary--dark  color-white  pad-t">
+            dark
+          </li>
+          <li data-bk-layout="4" class="bg-tertiary--light  pad-t">
+            light
+          </li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+  <div class="bg-tertiary">
+    <section tabindex="-1" class="site-container  pad">
+      <div data-bk-layout="lap:6">
+        <h3 class="margin-t">Standard</h3>
+
+        <ol>
+          <li data-bk-layout="4" class="bg-white  pad-t">
+            white
+          </li>
+          <li data-bk-layout="4" class="bg-black  color-white  pad-t">
+            black
+          </li>
+        </ol>
+      </div>
+    </section>
+  </div>
+
+{% endblock %}
