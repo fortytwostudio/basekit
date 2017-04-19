@@ -6,8 +6,7 @@
     color: $alert-text;
     margin-bottom: rem(4px);
     margin-top: rem(4px);
-    padding: 0;
-    padding: rem($margin * 1px);
+    padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
     position: relative;
 
     &:before {
