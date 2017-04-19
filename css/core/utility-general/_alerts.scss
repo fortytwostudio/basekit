@@ -2,8 +2,7 @@
 
   .#{$form-error-name} {
     background-color: $alert-bg;
-    border-color: $alert-bg;
-    border-width: 0;
+    border: 1px solid darken($alert-bg, 33%);
     color: $alert-text;
     // font-weight: bold;
     padding: rem($margin * 1px);
@@ -11,17 +10,17 @@
     margin-top: rem(4px);
 
     &:before {
-      background: transparent;
-      border-color: transparent;
-      border-bottom-color: inherit;
+      background: inherit;
+      border-color: inherit;
       border-style: solid;
-      border-width: 0 rem(10px) rem(15px) rem(10px);
+      border-width: 1px 0 0 1px;
       content: "";
-      height: 0;
+      height: 15px;
       left: rem(($margin * 1.5) * 1px);
       position: absolute;
-      top: rem(-12px);
-      width: 0;
+      top: rem(-8px);
+      transform: rotate(45deg);
+      width: 15px;
     }
 
     @if $alert-bg--error {
