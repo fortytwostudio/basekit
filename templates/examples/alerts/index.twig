@@ -1,0 +1,137 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Example Markup/Styles" %}
+{% set slug = "example" %}
+{% set pageHeaderColor = "bg-primary--dark" %}
+
+{% block content %}
+
+  <div class="bg-tertiary--light">
+
+    <section tabindex="-1" class="site-container  pad">
+
+      <form class="bk-form" action="POST">
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert">Validation/Error</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--error">Error</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--neutral">Neutral/Info</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--positive">Positive/Confirmation</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--info  alert--shadow">Muted with shadow</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--ib">Inline-block</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--shadow">Drop shadow</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert">Lots of text… paesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod.</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <div class="alert  rte">
+            <h3 class="font-m">With lists/rich-text…</h3>
+
+            <ul>
+              <li>Paesent commodo cursus magna</li>
+              <li>Vel scelerisque nisl consectetur et</li>
+              <li>Cras justo odio</li>
+              <li>Dapibus ac facilisis in</li>
+              <li>Etiam porta sem malesuada magna mollis euismod</li>
+            </ul>
+
+            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+          </div>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <div class="alert  alert--info  alert--center-shadow  rte">
+            <h3 class="font-m">Muted rich-text with center shadow…</h3>
+
+            <ul>
+              <li>Paesent commodo cursus magna</li>
+              <li>Vel scelerisque nisl consectetur et</li>
+              <li>Cras justo odio</li>
+              <li>Dapibus ac facilisis in</li>
+              <li>Etiam porta sem malesuada magna mollis euismod</li>
+            </ul>
+
+            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+          </div>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.
+
+          <span class="alert  alert--inline  alert--simple  br-2">Within text content, no arrow.</span>
+
+          Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+
+          <span data-bk-layout class="alert  alert--ib alert--shadow">Between text content, use data-bk-layout</span>
+
+          <p>Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <input type="text">
+          <p class="alert  alert--neutral  br-1">Rounded corners</p>
+
+          <div class="pad-s-t">
+            <input type="text">
+            <p class="alert  alert--neutral  br-4">Roundeder corners ;)</p>
+          </div>
+        </div>
+
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <p class="alert  alert--above">Above content</p>
+          <input type="text">
+
+          <div class="pad-s-t">
+            <p class="alert  alert--neutral  alert--above">Above content</p>
+            <input type="text">
+          </div>
+        </div>
+
+        <div data-bk-layout="hands:6" class="pad-t">
+          <p class="alert  alert--positive  alert--above">Above content</p>
+          <input type="text">
+
+          <div class="pad-s-t">
+            <p class="alert  alert--error  alert--shadow  alert--above">Above content</p>
+            <input type="text">
+          </div>
+        </div>
+
+      </form>
+
+    </section>
+
+  </div>
+
+{% endblock %}

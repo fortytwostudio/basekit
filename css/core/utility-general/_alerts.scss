@@ -1,50 +1,96 @@
 @if $form-error-css {
 
   .#{$form-error-name} {
-    color: $alert-text;
-    line-height: 1;
-    position: relative;
-    padding: rem($margin * 1px);
-    margin: rem(5px) 0 0;
     background-color: $alert-bg;
+    border-color: $alert-bg;
+    border-width: 0;
+    color: $alert-text;
+    // font-weight: bold;
+    padding: rem($margin * 1px);
+    position: relative;
+    margin-top: rem(4px);
 
     &:before {
-      position: absolute;
-      top: rem(-10px);
-      left: rem($margin * 1px);
-      content: "";
-      width: 0;
-      height: 0;
       background: transparent;
-      border: rem(10px) solid;
-      border-width: 0 rem(12px) rem(18px) rem(12px);
-      border-color: transparent transparent $alert-bg transparent;
+      border-color: transparent;
+      border-bottom-color: inherit;
+      border-style: solid;
+      border-width: 0 rem(10px) rem(15px) rem(10px);
+      content: "";
+      height: 0;
+      left: rem(($margin * 1.5) * 1px);
+      position: absolute;
+      top: rem(-12px);
+      width: 0;
+    }
+
+    @if $alert-bg--error {
+      &--error {
+        background-color: $alert-bg--error;
+        border-color: $alert-bg--error;
+        color: $alert-text--error;
+      }
     }
 
     @if $alert-bg--neutral {
       &--neutral {
         background-color: $alert-bg--neutral;
-
-        &:before {
-          border-bottom-color: $alert-bg--neutral;
-        }
+        border-color: $alert-bg--neutral;
+        color: $alert-text--neutral;
       }
     }
 
     @if $alert-bg--positive {
       &--positive {
         background-color: $alert-bg--positive;
-
-        &:before {
-          border-bottom-color: $alert-bg--positive;
-        }
+        border-color: $alert-bg--positive;
+        color: $alert-text--positive;
       }
     }
 
+    &--info {
+      color: black;
+      background-color: #ddd;
+      border-color: #ddd;
+    }
+
+    &--above {
+      margin-bottom: rem(4px);
+
+      &:before {
+        border-top-color: inherit!important;
+        border-width: rem(15px) rem(10px) 0 rem(10px);
+        top: auto;
+        bottom: rem(-12px);
+      }
+    }
+
+    &--simple {
+      &:before {
+        content: none;
+      }
+    }
+
+    &--shadow {
+      // Keep left
+      // Push down by 25px
+      // Blur/Spread by 25px
+      // Pull inside by 25px
+      box-shadow: 0 15px 20px -10px rgba(black, 0.2);
+    }
+
+    &--center-shadow {
+      box-shadow: 0 0 30px -10px rgba(black, 0.4);
+    }
+
     @if $alert-inline-block {
-      &--ib {
-        display: inline-block;
-        vertical-align: top;
+      // &--ib {
+      //   display: inline-block;
+      // }
+
+      &--inline {
+        padding: rem(($margin / 3) * 1px) rem(($margin / 2.5) * 1px);
+        vertical-align: baseline;
       }
     }
   }
