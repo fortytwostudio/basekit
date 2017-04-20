@@ -14,11 +14,11 @@
   }, {
     "title": "Reference",
     "url": "/demo/reference/",
-    "slug": "examples",
+    "slug": "reference",
     "children": [ {
       "title": "Setup & Config",
-      "url": "/demo/",
-      "slug": "home"
+      "url": "/demo/reference/",
+      "slug": "reference"
     }, {
       "title": "Colors",
       "url": "/demo/reference/colors/",
