@@ -1,0 +1,87 @@
+{% extends "_layout.twig" %}
+
+{# It's rare you'd ever want to output the homepage title of so the value here doesn't matter much #}
+{% set title = "Welcome to Basekit, yo!" %}
+{# Set the slug to empty to simulate an empty segment in Craft #}
+{% set slug = "" %}
+
+{% set pageHeaderColor = "bg-primary--dark" %}
+{% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/landscape.jpg)"' %}
+
+{% set external %}
+ target="_blank" rel="noopener" title="Link opens in new tab"
+{% endset %}
+
+{% block content %}
+
+  <div class="bg-tertiary--light  pad-s">
+    <div class="site-container">
+      <div data-bk-layout="palm:6" class="font-light  font-l">
+        <p>Basekit is a custom frontend framework built over many years for FortyTwo Studio projects.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-white  pad">
+    <div class="site-container" tabindex="-1">
+      {% if mainNav|length %}
+        <ul class="font-m  font-light">
+          {% for item in mainNav if item.children|length %}
+            {% for child in item.children if child.slug != 'reference' %}
+              <li data-bk-layout="palm:6  lap:4  desk:3">
+                <a data-bk-layout="center  pad:large" class="btn  br-1" href="{{ child.url }}">
+                  {{ child.title }}
+                </a>
+              </li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+
+
+  <div class="bg-tertiary--light  pad">
+    <div class="site-container">
+
+      <h3 data-bk-layout="pad:rl" class="font-xl">Getting started</h3>
+
+      <div data-bk-layout="pad:trl  lap:8" data-bk-links="primary underline fade exit" class="rte">
+        <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
+
+        <p>You’ll also want a local server of some kind, we currently prefer <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener">Laravel Valet</a> for small static sites and initial frontend templating, like this.</p>
+
+        <p>Once you've downloaded BaseKit, cd in to the directory and run <code>$ npm install</code> to get the required Gulp packages.</p>
+
+        <p>Run <code>$ gulp</code> and it should start watching and compiling the relevant files, at the moment this includes: Sass (to .css), Twig (to .html), HTML (to minified and cleaned .html) and finally Javascript to minified and combined .js. <em class="alert alert--inline alert--simple br-2">HTML compiling will soon be removed in favour of Twig.</em></p>
+
+        <p>Now that you've comfirmed that Gulp is running, you're ready to start configuring Sass files (and Twig if you're using that).</p>
+
+        <p>But first let's take a look at Basekit's structure.</p>
+
+        <h3 class="font-xl  font-bold">Basekit Structure</h3>
+
+        <dl>
+          <dt>bower_components</dt>
+          <dd>This is only used to keep the html5shiv snippet up to date… which isn't often.</dd>
+          <dt>css</dt>
+          <dd>The main part of Basekit which we'll go into detail soon.</dd>
+          <dt>demo</dt>
+          <dd>Where static templates are compiled as well as this documentation.</dd>
+          <dt>docs</dt>
+          <dd>SassDoc documentation… <em class="alert alert--inline alert--simple br-2">this may get removed since it documents Sass but not the CSS bits of Sass</em>.</dd>
+          <dt>imgs</dt>
+          <dd>Project images, mainly UI related.</dd>
+          <dt>js</dt>
+          <dd>Project javascript files, numbered files will be compiled and minified into js/min/basekit.js in order.</dd>
+          <dt>node_modules</dt>
+          <dd>All your node dependencies, make sure this isn't committed to git.</dd>
+          <dt>templates</dt>
+          <dd>Twig project templates.</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,7 +1,7 @@
 // Output the button CSS.
 $btn-css: true;
 // Set to null for no corner radius.
-$btn-corners: 1em;
+$btn-corners: 0.25em;
 // Configure colours and speed.
 $btn-bg: $primary;
 $btn-bg--hover: $primary--light;
@@ -18,7 +18,7 @@ $btn-transition-speed: $speed-normal;
     font-family: inherit;
     font-size: 100%;
     text-decoration: none;
-    padding: 0.5em 0.75em;
+    padding: 0.5em 1em;
     border: 0;
     background-color: $btn-bg;
     transition: background-color $btn-transition-speed ease-in-out;
