@@ -2,6 +2,9 @@
 
   &-white { background-color: white; }
   &-black { background-color: black; }
+  &-grey { background-color: $grey; }
+  &-grey--light { background-color: $grey--light; }
+  &-grey--dark { background-color: $grey--dark; }
 
   &-primary {
     background-color: $primary;
@@ -24,6 +27,22 @@
   &-img {
     background-position: center center;
     background-size: cover;
+  }
+
+  &-alert {
+    background-color: $alert-bg;
+  }
+
+  &-error {
+    background-color: $alert-bg--error;
+  }
+
+  &-neutral {
+    background-color: $alert-bg--neutral;
+  }
+
+  &-positive {
+    background-color: $alert-bg--positive;
   }
 
 }

@@ -18,16 +18,16 @@ $secondary: #c62b90;
 $secondary--light: #cb6791;
 $secondary--dark: #8f3c5e;
 
-$tertiary: #bbb;
-$tertiary--light: #f3f3f3;
-$tertiary--dark: #333;
+$tertiary: #71e0b1;
+$tertiary--light: #caebdd;
+$tertiary--dark: #378162;
 
 /// Grey is commonly used across all website designs, to simplify matters I've
 /// included three default values which should cover most situations. Change the
 /// actual values to specific colour values if CSS keyword values don't suit.
-$grey: $tertiary;
-$grey--light: $tertiary--light;
-$grey--dark: $tertiary--dark;
+$grey: #bbb;
+$grey--light: #f3f3f3;
+$grey--dark: #333;
 
 /// Document Colours
 ///

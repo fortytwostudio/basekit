@@ -5,10 +5,10 @@
 
 {% block content %}
 
-  <div class="bg-tertiary--light">
+  <div class="bg-grey--light">
     <section class="site-container  pad">
 
-      <h2 data-bk-layout="" class="font-xl">Colours</h2>
+      <h2 data-bk-layout class="font-xl">Colours</h2>
 
       <div data-bk-layout="lap:7" class="rte">
         <p class="font-m">Colour values are almost always based on brand guidelines or style guides provided by a designer or client.</p>
@@ -27,28 +27,55 @@
   <div class="bg-white">
     <section class="site-container  pad">
 
-      <header data-bk-layout="lap:8" class="rte">
-        <h3 class="font-l">Brand Colours</h3>
+      <header data-bk-layout="lap:8  lap:pl:4" class="rte">
+        <h3 class="font-xl">Brand Colours</h3>
       </header>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
-        <div data-bk-layout="lap:6">
-          <h4 class="font-m color-{{ colour }}">{{ colour|capitalize }}</h4>
+        <div data-bk-layout="palm:6 lap:3">
+          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
 
           <ol class="font-s">
-            <li data-bk-layout="4" class="bg-{{ colour }} pad-t">
+            <li data-bk-layout class="bg-{{ colour }} pad">
               <span style="visibility:hidden">default</span>
             </li>
-            <li data-bk-layout="4" class="bg-{{ colour }}--dark color-white pad-t">
+            <li data-bk-layout="6" class="bg-{{ colour }}--dark color-white pad-t">
               --dark
             </li>
-            <li data-bk-layout="4" class="bg-{{ colour }}--light color-black pad-t">
+            <li data-bk-layout="6" class="bg-{{ colour }}--light color-black pad-t">
               --light
             </li>
           </ol>
 
 <pre><code data-bk-layout class="alert alert--simple br-0">// Sass
-.container {
+.thing {
+  background-color: ${{ colour }};
+}
+
+&lt;!-- html --&gt;
+&lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
+&lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+        </div>
+      {% endfor %}
+
+      {% for colour in ['grey'] %}
+        <div data-bk-layout="palm:6 lap:3">
+          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
+
+          <ol class="font-s">
+            <li data-bk-layout class="bg-{{ colour }} pad">
+              <span style="visibility:hidden">default</span>
+            </li>
+            <li data-bk-layout="6" class="bg-{{ colour }}--dark color-white pad-t">
+              --dark
+            </li>
+            <li data-bk-layout="6" class="bg-{{ colour }}--light color-black pad-t">
+              --light
+            </li>
+          </ol>
+
+<pre><code data-bk-layout class="alert alert--simple br-0">// Sass
+.thing {
   background-color: ${{ colour }};
 }
 
@@ -60,25 +87,27 @@
     </section>
   </div>
 
-  <div class="bg-tertiary">
+
+
+  <div class="bg-grey">
     <section class="site-container  pad">
 
-      <header data-bk-layout="lap:8" class="rte">
-        <h3 class="font-l">Standard Colours</h3>
+      <header data-bk-layout="lap:8  lap:pl:4" class="rte">
+        <h3 class="font-xl">Standard Colours</h3>
       </header>
 
       {% for colour in ['white', 'black'] %}
-        <div data-bk-layout="lap:6">
-          <h4 class="font-m color-{{ colour }}">{{ colour|capitalize }}</h4>
+        <div data-bk-layout="palm:4">
+          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
 
           <ol class="font-s">
-            <li data-bk-layout="4" class="bg-{{ colour }} pad-t">
+            <li data-bk-layout class="bg-{{ colour }} pad pad-l-t">
               <span style="visibility:hidden">default</span>
             </li>
           </ol>
 
 <pre><code data-bk-layout class="alert alert--simple br-0">// Sass
-.container {
+.thing {
   background-color: ${{ colour }};
 }
 
@@ -90,4 +119,34 @@
     </section>
   </div>
 
+
+  {# <div class="bg-white">
+    <section class="site-container  pad">
+
+      <header data-bk-layout="lap:8  lap:pl:4" class="rte">
+        <h3 class="font-xl">Alert Colours</h3>
+      </header>
+
+      {% for colour in ['alert', 'error', 'neutral', 'positive'] %}
+        <div data-bk-layout="palm:3">
+          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
+
+          <ol class="font-s">
+            <li data-bk-layout class="bg-{{ colour }} pad">
+              <span style="visibility:hidden">default</span>
+            </li>
+          </ol>
+
+<pre><code data-bk-layout class="alert alert--simple br-0">// Sass
+.thing {
+  background-color: ${{ colour }};
+}
+
+&lt;!-- html --&gt;
+&lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
+&lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+        </div>
+      {% endfor %}
+    </section>
+  </div> #}
 {% endblock %}
