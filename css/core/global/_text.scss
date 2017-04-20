@@ -32,11 +32,12 @@ h1, h2, h3, h4, h5, h6 {
   code {
     background-color: $code-bg-color;
     border: unquote($code-border);
+    border-radius: em($br-1);
     color: $code-text-color;
     display: inline-block;
     font-family: unquote($code-font-family);
     font-size: $code-font-size;
-    padding: em(2px) em(3px);
+    padding: 0 em(5px);
     white-space: pre-wrap;
   }
 }
