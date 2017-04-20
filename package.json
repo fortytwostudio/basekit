@@ -10,7 +10,11 @@
     "gulp",
     "framework",
     "frontend",
-    "fortytwo"
+    "fortytwo studio",
+    "html",
+    "css",
+    "sass",
+    "twig"
   ],
   "author": "Ryan Roberts",
   "license": "MIT",
