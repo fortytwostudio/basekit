@@ -46,9 +46,9 @@
     dt {
       font-weight: 700;
 
-      &:after {
-        content: ":"
-      }
+      // &:after {
+      //   content: ":"
+      // }
     }
     dd + dt {
       margin-top: em($margin * 1px)
