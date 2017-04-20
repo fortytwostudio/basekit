@@ -40,25 +40,23 @@
 
         <p>But first let's take a look at Basekit's structure.</p>
 
-        <h3 class="font-l  pad-s-t">Basekit Structure</h3>
+        <h3 class="font-xl  pad-s-t">Basekit Structure</h3>
 
         <dl>
-          <dt>bower_components</dt>
-          <dd>This is only used to keep the html5shiv snippet up to date… which isn't often.</dd>
-          <dt>css</dt>
-          <dd>The main part of Basekit which we'll go into detail soon.</dd>
-          <dt>demo</dt>
-          <dd>Where static templates are compiled as well as this documentation.</dd>
-          <dt>docs</dt>
-          <dd>SassDoc documentation… <em class="alert alert--inline alert--simple br-2">this may get removed since it documents Sass but not the CSS bits of Sass</em>.</dd>
-          <dt>imgs</dt>
-          <dd>Project images, mainly UI related.</dd>
-          <dt>js</dt>
-          <dd>Project javascript files, numbered files will be compiled and minified into js/min/basekit.js in order.</dd>
-          <dt>node_modules</dt>
-          <dd>All your node dependencies, make sure this isn't committed to git.</dd>
-          <dt>templates</dt>
-          <dd>Twig project templates.</dd>
+          <dt class="font-m">bower_components</dt>
+          <dd>Only used to keep the html5shiv snippet up to date… not often.</dd>
+          <dt class="font-m">css</dt>
+          <dd>The core of Basekit.</dd>
+          <dt class="font-m">demo</dt>
+          <dd>Static templates are compile to this directory, plus documentation.</dd>
+          <dt class="font-m">imgs</dt>
+          <dd>Logos, placeholders, UI images etc.</dd>
+          <dt class="font-m">js</dt>
+          <dd>Project javascript files, numbered files will be compiled and minified into min/basekit.js in their numerical order.</dd>
+          <dt class="font-m">node_modules</dt>
+          <dd>Gulp dependencies, make sure this isn't committed to git.</dd>
+          <dt class="font-m">templates</dt>
+          <dd>Twig project templates, compile to demo.</dd>
         </dl>
       </div>
 
