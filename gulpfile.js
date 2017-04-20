@@ -15,8 +15,6 @@ var gulp            = require('gulp'),
     twig            = require('gulp-twig'),
     // Report file sizes in the CLI
     size            = require('gulp-size'),
-    // Nice Sass documentation based on comment srtucture
-    sassdoc         = require('sassdoc'),
     // Stops stream from ending on error
     plumber         = require('gulp-plumber'),
     // Send noficitations to the system and CLI
@@ -142,19 +140,6 @@ gulp.task('twig', function() {
   .pipe(plumber.stop())
   // Output minified file
   .pipe(gulp.dest('demo'))
-});
-
-///
-/// Build Sass documentation
-/// See http://sassdoc.com/ and the docs directory in this project
-/// SassDoc is not watched, you'll have to run it manually
-///
-gulp.task('sassdoc', function () {
-  return gulp.src(['css/**/*.scss', '!css/core/third-party/**/*.scss'])
-  .pipe(sassdoc({
-    dest: 'docs',
-    verbose: true,
-  }));
 });
 
 // Combine various functions into watch

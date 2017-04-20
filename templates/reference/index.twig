@@ -23,31 +23,11 @@
   </div>
 
 
-  <div class="bg-white  pad">
-    <div class="site-container" tabindex="-1">
-      {% if mainNav|length %}
-        <ul class="font-m  font-light">
-          {% for item in mainNav if item.children|length %}
-            {% for child in item.children if child.slug != 'reference' %}
-              <li data-bk-layout="palm:6  lap:4  desk:3">
-                <a data-bk-layout="center  pad:large" class="btn  br-1" href="{{ child.url }}">
-                  {{ child.title }}
-                </a>
-              </li>
-            {% endfor %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
-  </div>
-
-
-  <div class="bg-tertiary--light  pad">
+  <div class="bg-white pad pad-s-t">
     <div class="site-container">
-
-      <h3 data-bk-layout="pad:rl" class="font-xl">Getting started</h3>
-
       <div data-bk-layout="pad:trl  lap:8" data-bk-links="primary underline fade exit" class="rte">
+        <h3 class="font-xl">Getting started</h3>
+
         <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
 
         <p>You’ll also want a local server of some kind, we currently prefer <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener">Laravel Valet</a> for small static sites and initial frontend templating, like this.</p>
@@ -60,7 +40,7 @@
 
         <p>But first let's take a look at Basekit's structure.</p>
 
-        <h3 class="font-xl  font-bold">Basekit Structure</h3>
+        <h3 class="font-l  pad-s-t">Basekit Structure</h3>
 
         <dl>
           <dt>bower_components</dt>
@@ -81,6 +61,24 @@
           <dd>Twig project templates.</dd>
         </dl>
       </div>
+
+      {% if mainNav|length %}
+        <div data-bk-layout="palm:6  lap:3  lap:pr:1">
+          <h3 class="font-xl">Sections</h3>
+
+          <ul data-bk-layout="pad:t">
+            {% for item in mainNav if item.children|length %}
+              {% for child in item.children if child.slug != 'reference' %}
+                <li data-bk-layout="pad:b  pad:small">
+                  <a data-bk-layout="center  pad:large" class="btn  br-1" href="{{ child.url }}">
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
     </div>
   </div>
 
