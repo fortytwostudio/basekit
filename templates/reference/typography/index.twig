@@ -1,15 +1,15 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Typography &amp; Text Content" %}
+{% set title = "Typography &amp; Rich Text Content" %}
 {% set slug = "typography" %}
-{% set pageHeaderColor = "bg-grey--dark" %}
 
 {% block content %}
 
   <div class="bg-grey--light">
-    <section id="typography" tabindex="-1" data-bk-links="primary  underlined  fade" class="site-container  pad  rte">
-      <div class="rte  pad-b">
-        <h2 class="font-l">Fonts</h2>
+    <section class="site-container  pad">
+      <h2 data-bk-layout class="font-xl">{{ title }}</h2>
+
+      <div data-bk-layout="lap:8" data-bk-links="primary fade underline" class="rte">
 
         <p>
           Responsive, viewport based, fonts should be restricted to use on headings
@@ -32,31 +32,30 @@
           to look like some hero text, go right ahead! It does not matter, the semantics
           are in your HTML markup and content.
         </p>
-      </div>
 
-      <div class="">
-        <p class="font-xs">Death to humans</p>
+        <div>
+          <p class="font-xs">Death to humans</p>
 
-        <p class="font-s">Death to humans</p>
+          <p class="font-s">Death to humans</p>
 
-        <p>Death to humans</p>
+          <p>Death to humans</p>
 
-        <p class="font-m">Death to humans</p>
+          <p class="font-m">Death to humans</p>
 
-        <p class="font-l">Death to humans</p>
+          <p class="font-l">Death to humans</p>
 
-        <p class="font-xl">Death to humans</p>
+          <p class="font-xl">Death to humans</p>
 
-        <p class="font-xxl">Death to humans</p>
+          <p class="font-xxl">Death to humans</p>
 
-        <p class="font-hero">Death to humans</p>
+          <p class="font-hero">Death to humans</p>
 
-        <p class="font-l  font-bold">Death to bold</p>
+          <p class="font-l  font-bold">Death to bold</p>
 
-        <p class="font-l  font-italic">Death to italic</p>
+          <p class="font-l  font-italic">Death to italic</p>
 
-        <p class="font-l  font-upper">Death to uppercase</p>
-      </div>
+          <p class="font-l  font-upper">Death to uppercase</p>
+        </div>
 
 <pre><code data-bk-layout>@if $code-style {
   code {
@@ -70,58 +69,58 @@
   }
 }</code></pre>
 
+        <h3>User Content Styling</h3>
 
-      <h3>User Content Styling</h3>
+        <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
 
-      <p>This is content output from the <strong>Introduction field</strong>, the text is slightly larger in size compared to the rest of other <em>body</em> text and this field is entirely optional.</p>
+        <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
 
-      <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
+        <p>This is content output from the <strong>Body Text field</strong>, compared to the above the text is normal size and again this field is entirely optional.</p>
 
-      <p>This is content output from the <strong>Body Text field</strong>, compared to the above the text is normal size and again this field is entirely optional.</p>
+        <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
 
-      <p>Here we will demonstrate a <a href="/">text link style</a>, some <strong>bold text</strong> and <em>italic text</em> to give you an idea of how things will look.</p>
+        <h3>This is an example content heading</h3>
 
-      <h3>This is an example content heading</h3>
+        <ul>
+          <li>Nulla facilisi potenti
+            <ol>
+              <li>Mattis posuere habitant dapibus</li>
+              <li>Congue natoque blandit mattis rhoncus</li>
+              <li>Vestibulum aptent ultrices</li>
+            </ol>
+          </li>
+          <li>Etiam ac tellus eget ante</li>
+          <li class="rte">
+            <p>
+              Elit platea aliquam odio faucibus sociosqu vestibulum aptent ultrices, augue tempor placerat neque. Id nulla nec hac auctor curabitur nostra accumsan est donec fermentum curabitur!
+            </p>
 
-      <ul>
-        <li>Nulla facilisi potenti
-          <ol>
-            <li>Mattis posuere habitant dapibus</li>
-            <li>Congue natoque blandit mattis rhoncus</li>
-            <li>Vestibulum aptent ultrices</li>
-          </ol>
-        </li>
-        <li>Etiam ac tellus eget ante</li>
-        <li class="rte">
-          <p>
-            Elit platea aliquam odio faucibus sociosqu vestibulum aptent ultrices, augue tempor placerat neque. Id nulla nec hac auctor curabitur nostra accumsan est donec fermentum curabitur!
-          </p>
+            <p>
+              Quis commodo curae; congue natoque blandit mattis rhoncus eleifend fermentum ridiculus per conubia! Pellentesque rutrum magnis varius. Iaculis risus sapien neque fermentum lacinia dui cum elementum molestie litora laoreet.
+            </p>
 
-          <p>
-            Quis commodo curae; congue natoque blandit mattis rhoncus eleifend fermentum ridiculus per conubia! Pellentesque rutrum magnis varius. Iaculis risus sapien neque fermentum lacinia dui cum elementum molestie litora laoreet.
-          </p>
+            <p>
+              Mattis posuere habitant dapibus sollicitudin tempus tempor facilisis congue libero!
+            </p>
+          </li>
+          <li>Tristique volutpat</li>
+        </ul>
 
-          <p>
-            Mattis posuere habitant dapibus sollicitudin tempus tempor facilisis congue libero!
-          </p>
-        </li>
-        <li>Tristique volutpat</li>
-      </ul>
+        <p>You can also format <em>ordered</em> lists:</p>
 
-      <p>You can also format <em>ordered</em> lists:</p>
-
-      <ol>
-        <li>Nulla facilisi potenti</li>
-        <li class="rte">Maecenas nec ornare massa
-          <ul>
-            <li>Mattis posuere habitant dapibus</li>
-            <li>Congue natoque blandit mattis rhoncus</li>
-            <li>Vestibulum aptent ultrices</li>
-          </ul>
-        </li>
-        <li>Etiam ac tellus eget ante</li>
-        <li>Tristique volutpat</li>
-      </ol>
+        <ol>
+          <li>Nulla facilisi potenti</li>
+          <li class="rte">Maecenas nec ornare massa
+            <ul>
+              <li>Mattis posuere habitant dapibus</li>
+              <li>Congue natoque blandit mattis rhoncus</li>
+              <li>Vestibulum aptent ultrices</li>
+            </ul>
+          </li>
+          <li>Etiam ac tellus eget ante</li>
+          <li>Tristique volutpat</li>
+        </ol>
+      </div>
     </section>
   </div>
 

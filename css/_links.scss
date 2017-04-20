@@ -66,6 +66,10 @@ a:not(.btn) {
   // Link style used on white backgrounds, you'll want to combine this with `dim`
   [data-bk-links~="white"] & {
     color: white;
+
+    &:focus, &:hover {
+      color: white;
+    }
   }
 
 

@@ -1,29 +1,31 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Example Markup/Styles" %}
-{% set slug = "example" %}
-{% set pageHeaderColor = "bg-primary--dark" %}
+{% set title = "Logos" %}
+{% set slug = "logos" %}
 
 {% block content %}
 
   <div class="bg-grey">
-    <section id="logos" tabindex="-1" class="site-container  pad">
-      <h2 class="font-xl">Logos</h2>
+    <section class="site-container  pad">
+      <h2 data-bk-layout class="font-xl">{{ title }}</h2>
 
-      <p class="margin-tb">Main site logo:</p>
-      <h1 class="logo  site-logo">
-        <a class="logo__img  site-logo__img" href="/" title="Home Page">BaseKit</a>
-      </h1>
+      <div data-bk-layout="lap:8">
 
-      <p class="margin-tb">Footer Logo:</p>
+        <p class="margin-tb">Main site logo:</p>
+        <h1 class="logo  site-logo">
+          <a class="logo__img  site-logo__img" href="/" title="Home Page">BaseKit</a>
+        </h1>
 
-      <div class="logo  colophon-logo">
-        <a class="logo__img  colophon-logo__img" href="http://www.fortytwo.studio" title="FortyTwo Studio">
-          Design and development by FortyTwo Studio
-        </a>
+        <p class="margin-tb">Footer Logo:</p>
+
+        <div class="logo  colophon-logo">
+          <a class="logo__img  colophon-logo__img" href="http://www.fortytwo.studio" title="FortyTwo Studio">
+            Design and development by FortyTwo Studio
+          </a>
+        </div>
+
+        <h3 class="font-xl  pad-t">Social Media logos</h3>
       </div>
-
-      <h3 class="font-xl  pad-t">Social Media logos</h3>
 
     </section>
   </div>

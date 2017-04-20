@@ -1,17 +1,17 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Example Markup/Styles" %}
-{% set slug = "example" %}
-{% set pageHeaderColor = "bg-primary--dark" %}
+{% set title = "Links" %}
+{% set slug = "links" %}
 
 {% block content %}
 
-  <div class="bg-grey">
-    <div id="links" tabindex="-1" class="site-container  pad">
+<div class="bg-grey--light">
+  <section class="site-container  pad">
+    <h2 data-bk-layout class="font-xl">{{ title }}</h2>
 
-      <h2 class="font-l  pad-s-b">Links &amp; Navigation</h2>
+    <div data-bk-layout="lap:8" data-bk-links="primary fade underline" class="rte">
 
-      <div class="rte  pad-s-b">
+      <div class="pad-s-b">
         <p>
           For years the traditional mathod of styling links would inevitably over
           time drive me insane with specificity problems and overrides. So eventually
@@ -27,7 +27,7 @@
         </p>
       </div>
 
-      <div data-bk-links="primary fade underline" class="rte">
+      <div class="rte">
         <h3 class="margin-tb">Standard links within a paragraph</h3>
         <p>
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
@@ -39,16 +39,18 @@
         </p>
 
         <h3 class="margin-tb">Contrasted link colours on dark background paragraph</h3>
-        <p data-bk-links="secondary fade underline" class="bg-grey--dark  color-black">
+        <p data-bk-links="white dim fade underline" data-bk-layout class="bg-grey--dark  color-white">
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
         </p>
       </div>
 
       <h3 class="margin-tb">Setting links in heading elements with various colours</h3>
-      <h4 class="font-l  set-links">Heading uses default text colour <a href="#">with a default link colour</a></h4>
-      <h4 class="font-l  color-primary  set-links  set-links--inverted">Heading uses primary colour <a href="#">with an inverted link colour</a></h4>
-      <h4 class="font-l  color-secondary  set-links">Heading uses secondary colour <a href="#">with a default link colour</a></h4>
+
+      <h4 data-bk-links="primary fade underline" class="font-l  set-links">Heading uses default text colour <a href="#">with a primary link colour</a></h4>
+      <h4 data-bk-links="primary fade underline" class="font-l  color-primary  set-links  set-links--inverted">Heading uses primary colour <a href="#">with an primary link colour</a></h4>
+      <h4 data-bk-links="secondary fade underline" class="font-l  color-secondary  set-links">Heading uses secondary colour <a href="#">with a secondary link colour</a></h4>
     </div>
-  </div>
+  </section>
+</div>
 
 {% endblock %}

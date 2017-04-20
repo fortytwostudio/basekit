@@ -1,12 +1,11 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Example Markup/Styles" %}
-{% set slug = "example" %}
-{% set pageHeaderColor = "bg-primary--dark" %}
+{% set title = "Layout Grid" %}
+{% set slug = "layout" %}
 
 {% block content %}
 
-  <div class="bg-grey--light">
+  <div class="bg-white">
     <section id="layout" tabindex="-1" class="site-container  pad">
       <style>
         .grid-container span {
@@ -24,7 +23,7 @@
       </style>
 
       <div data-bk-layout class="rte">
-        <h1 data-bk-layout="pad:tb" class="font-xl">BaseGrid</h1>
+        <h1 data-bk-layout="pad:tb" class="font-xl">{{ title }}</h1>
         <p>BaseGrid is a standalone responsive faux grid-system built on CSS <code>inline-block</code> and the <code>data</code> attribute.</p>
         <p>Once white space has been removed, <code>inline-block</code> allows for more flexibility and more robustness than floating grid items. <code>inline-block</code> items can be vertically aligned and flow more consistently.</p>
         <p>The <code>data</code> attribute allows us to almost fully separate the layout styles from other CSS and classes.</p>

@@ -1,41 +1,41 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Navigation Styles" %}
+{% set title = "Navigation" %}
 {% set slug = "navigation" %}
-{% set pageHeaderColor = "bg-primary--dark" %}
 
 {% block content %}
 
-  <div class="bg-grey--dark">
-    <div id="links" tabindex="-1" class="site-container  pad  color-white">
+  <div class="bg-grey">
+    <section class="site-container  pad">
+      <h2 data-bk-layout class="font-xl">{{ title }}</h2>
 
-      <h2 class="font-l  pad-s-b">Links &amp; Navigation</h2>
+      <div data-bk-layout="lap:8" data-bk-links="primary fade underline" class="rte">
 
-      <h3 class="margin-tb">Links set on a horizontal block nav</h3>
-      <ul class="nav  nav--block  nav-links">
-        <li><a href="#">One</a></li>
-        <li class="active"><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
+        <h3 class="margin-tb">Links set on a horizontal block nav</h3>
+        <ul class="nav  nav--block  nav-links">
+          <li><a href="#">One</a></li>
+          <li class="active"><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
 
-      <h3 class="margin-tb">Links set on a horizontal fit (display table) nav</h3>
-      <ul class="nav  nav--block  nav--fit  nav-links">
-        <li><a href="#">One</a></li>
-        <li class="active"><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
+        <h3 class="margin-tb">Links set on a horizontal fit (display table) nav</h3>
+        <ul class="nav  nav--block  nav--fit  nav-links">
+          <li><a href="#">One</a></li>
+          <li class="active"><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
 
-      <h3 class="margin-tb">Links set on a stacked nav</h3>
-      <ul class="nav  nav--block  nav--stacked  nav-links">
-        <li><a href="#">One</a></li>
-        <li class="active"><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-      </ul>
-
-    </div>
+        <h3 class="margin-tb">Links set on a stacked nav</h3>
+        <ul class="nav  nav--block  nav--stacked  nav-links">
+          <li><a href="#">One</a></li>
+          <li class="active"><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </div>
+    </section>
   </div>
 
 {% endblock %}
