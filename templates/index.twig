@@ -1,14 +1,18 @@
 {% extends "_layout.twig" %}
 
-{# It's rare you'd ever want to output the homepage title of so the value here doesn't matter much #}
-{% set title = "Welcome to Basekit, yo!" %}
-{# Set the slug to empty to simulate an empty segment in Craft #}
+{% set title = "Set your page title" %}
 {% set slug = "" %}
 
-{% set pageHeaderColor = "bg-primary--dark" %}
-{% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/landscape.jpg)"' %}
-
-
 {% block content %}
+
+  <div class="bg-tertiary--light  pad  pad-l-b">
+    <div class="site-container">
+      <div data-bk-layout="palm:6" data-bk-links="primary fade underline-hover" class="font-light  rte">
+        <p class="font-m">This is where you'll want to start your static frontend build, for documentation and style guides have a look through the <a href="reference/">reference directory</a>.</p>
+
+        <p>To generate pages all you have to do is create index.twig files under the directories you want, but this won't create a navigation. To generate that you'll want to look at the data.json file and then <code>mainNav</code>.</p>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
