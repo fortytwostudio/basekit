@@ -22,16 +22,14 @@
     "url": "https://github.com/fortytwostudio/basekit/issues"
   },
   "homepage": "http://basekit.fortytwo.studio",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-sass": "^2.3.2",
     "gulp-size": "~2.1.0",
-    "gulp-uglify": "^2.0.0"
-  },
-  "devDependencies": {
+    "gulp-uglify": "^2.0.0",
     "gulp-data": "^1.2.1",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
