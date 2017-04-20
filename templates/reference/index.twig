@@ -1,0 +1,32 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Basekit Reference &amp; Style Guide" %}
+{% set slug = "Reference" %}
+{% set pageHeaderColor = "bg-primary--dark" %}
+
+
+{% block content %}
+
+  {% set external %}
+   target="_blank" rel="noopener" title="Link opens in new tab"
+  {% endset %}
+
+  <div class="bg-tertiary--light  pad">
+    <div class="site-container" tabindex="-1">
+      {% if mainNav|length %}
+        <ul class="font-m  font-light">
+          {% for item in mainNav if item.children|length %}
+            {% for child in item.children %}
+              <li data-bk-layout="palm:6  lap:4  desk:3">
+                <a data-bk-layout="center  pad:large" class="btn  br-1" href="{{ child.url }}">
+                  {{ child.title }}
+                </a>
+              </li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

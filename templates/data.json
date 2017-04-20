@@ -1,10 +1,6 @@
 {
   "siteName": "BaseKit",
   "siteUrl": "/demo/",
-  "brandColorPrimary": "#333",
-  "brandColorSecondary": "#00f",
-  "brandColorTertiary": "lightgrey",
-
   "siteEmail": "info@fortytwo.studio",
   "siteTel": "01224 280 005",
 
@@ -13,70 +9,66 @@
     "url": "/demo/",
     "slug": "home"
   }, {
-    "title": "Examples",
-    "url": "/demo/examples/",
+    "title": "Reference",
+    "url": "/demo/reference/",
     "slug": "examples",
     "children": [ {
       "title": "Setup & Config",
       "url": "/demo/",
       "slug": "home"
     }, {
-      "title": "Forms",
-      "url": "/demo/examples/forms/",
-      "slug": "forms"
-    }, {
-      "title": "Alerts",
-      "url": "/demo/examples/alerts/",
-      "slug": "alerts"
-    }, {
       "title": "Colors",
-      "url": "/demo/examples/colors/",
+      "url": "/demo/reference/colors/",
       "slug": "colors"
     }, {
       "title": "Typography",
-      "url": "/demo/examples/typography/",
+      "url": "/demo/reference/typography/",
       "slug": "typography"
     }, {
       "title": "Layout",
-      "url": "/demo/examples/layout/",
+      "url": "/demo/reference/layout/",
       "slug": "layout"
     }, {
       "title": "Spacing",
-      "url": "/demo/examples/spacing/",
+      "url": "/demo/reference/spacing/",
       "slug": "spacing"
     }, {
-      "title": "Naming Convention",
-      "url": "/demo/examples/naming/",
-      "slug": "naming"
-    }, {
-      "title": "Logos",
-      "url": "/demo/examples/logos/",
-      "slug": "logos"
-    }, {
-      "title": "Tables",
-      "url": "/demo/examples/tables/",
-      "slug": "tables"
-    }, {
       "title": "Links",
-      "url": "/demo/examples/links/",
+      "url": "/demo/reference/links/",
       "slug": "links"
     }, {
       "title": "Navigation",
-      "url": "/demo/examples/navigation/",
+      "url": "/demo/reference/navigation/",
       "slug": "nav"
     }, {
       "title": "Buttons",
-      "url": "/demo/examples/buttons/",
+      "url": "/demo/reference/buttons/",
       "slug": "buttons"
+    }, {
+      "title": "Forms",
+      "url": "/demo/reference/forms/",
+      "slug": "forms"
+    }, {
+      "title": "Alerts",
+      "url": "/demo/reference/alerts/",
+      "slug": "alerts"
+    }, {
+      "title": "Naming Convention",
+      "url": "/demo/reference/naming/",
+      "slug": "naming"
+    }, {
+      "title": "Logos",
+      "url": "/demo/reference/logos/",
+      "slug": "logos"
+    }, {
+      "title": "Tables",
+      "url": "/demo/reference/tables/",
+      "slug": "tables"
     }]
   }, {
-    "title": "External",
-    "url": "https://www.google.com",
+    "title": "Github",
+    "url": "https://github.com/fortytwostudio/basekit",
     "external": "true"
-  }, {
-    "title": "Footer",
-    "url": "#footer",
-    "slug": "footer"
   }],
 
 
@@ -85,7 +77,7 @@
     "url": "/demo/"
   }, {
     "title": "Examples",
-    "url": "/demo/examples/"
+    "url": "/demo/reference/"
   }],
 
 
