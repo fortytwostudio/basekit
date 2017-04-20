@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/fortytwostudio/basekit/issues"
   },
-  "homepage": "https://github.com/eq-design/basekit#readme",
+  "homepage": "http://basekit.fortytwo.studio",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
