@@ -16,7 +16,7 @@
     "url": "/demo/reference/",
     "slug": "reference",
     "children": [ {
-      "title": "Setup & Config",
+      "title": "Setup",
       "url": "/demo/reference/",
       "slug": "reference"
     }, {
@@ -56,10 +56,6 @@
       "url": "/demo/reference/alerts/",
       "slug": "alerts"
     }, {
-      "title": "Naming Convention",
-      "url": "/demo/reference/naming/",
-      "slug": "naming"
-    }, {
       "title": "Logos",
       "url": "/demo/reference/logos/",
       "slug": "logos"
@@ -67,6 +63,10 @@
       "title": "Tables",
       "url": "/demo/reference/tables/",
       "slug": "tables"
+    }, {
+      "title": "Naming",
+      "url": "/demo/reference/naming/",
+      "slug": "naming"
     }]
   }, {
     "title": "Github",
