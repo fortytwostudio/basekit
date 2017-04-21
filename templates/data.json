@@ -15,7 +15,7 @@
     "title": "Reference",
     "url": "/demo/reference/",
     "slug": "reference",
-    "children": [ {
+    "children": [{
       "title": "Setup",
       "url": "/demo/reference/",
       "slug": "reference"
@@ -79,8 +79,9 @@
     "title": "Home",
     "url": "/demo/"
   }, {
-    "title": "Examples",
-    "url": "/demo/reference/"
+    "title": "Reference",
+    "url": "/demo/reference/",
+    "slug": "reference"
   }],
 
 

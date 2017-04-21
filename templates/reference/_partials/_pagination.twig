@@ -1,0 +1,28 @@
+<div class="bg-primary--dark">
+  <div data-bk-links="white fade dim" class="site-container | font-m color-white clear">
+    {% for navItems in mainNav if navItems.children|length %}
+      {% for item in navItems.children %}
+        {% if item.slug == slug %}
+          {% if loop.first %}
+            {% set previous_item = navItems.children[loop.length - 1] %}
+          {% else %}
+            {% set previous_item = navItems.children[loop.index0 - 1] %}
+          {% endif %}
+
+          {% if loop.last %}
+            {% set next_item = navItems.children[0] %}
+          {% else %}
+            {% set next_item = navItems.children[loop.index0 + 1] %}
+          {% endif %}
+
+          <p data-bk-layout="6">
+            <a href="{{ previous_item.url }}">← {{ previous_item.title }}</a>
+          </p>
+          <p data-bk-layout="6 right">
+            <a href="{{ next_item.url }}">{{ next_item.title }} →</a>
+          </p>
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  </div>
+</div>
