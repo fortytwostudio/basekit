@@ -1,0 +1,13 @@
+<div class="bg-primary--light">
+  <ul data-bk-layout="pad:small" data-bk-links="white fade dim" class="nav nav--block align-c font-light">
+    {% for item in mainNav if item.children|length %}
+      {% for child in item.children %}
+        <li>
+          <a{{ child.slug == slug ? ' class="btn" ' }}  href="{{ child.url }}">
+            {{ child.title }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endfor %}
+  </ul>
+</div>

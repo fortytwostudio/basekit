@@ -3,7 +3,7 @@
 {# It's rare you'd ever want to output the homepage title of so the value here doesn't matter much #}
 {% set title = "Welcome to Basekit, yo!" %}
 {# Set the slug to empty to simulate an empty segment in Craft #}
-{% set slug = "" %}
+{% set slug = "reference" %}
 
 {% set pageHeaderColor = "bg-primary--dark" %}
 {% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/landscape.jpg)"' %}
@@ -13,6 +13,7 @@
 {% endset %}
 
 {% block content %}
+{% include 'reference/_partials/_quick-nav.twig' %}
 
   <div class="bg-grey--light  pad-s">
     <div class="site-container">
@@ -26,7 +27,11 @@
   <div class="bg-white pad pad-s-t">
     <div class="site-container">
       <div data-bk-layout="lap:8" data-bk-links="primary underline fade exit" class="rte">
+
+        <p class="alert alert--simple">Work in Progress</p>
+
         <h3 class="font-xl">Getting started</h3>
+
 
         <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
 
@@ -79,5 +84,7 @@
       {% endif %}
     </div>
   </div>
+
+{% include 'reference/_partials/_pagination.twig' %}
 
 {% endblock %}
