@@ -72,6 +72,11 @@ a:not(.btn) {
     }
   }
 
+  // Link style used on white backgrounds, you'll want to combine this with `dim`
+  [data-bk-links~="inherit"] & {
+    color: inherit;
+  }
+
 
   // OK so the following config utilities too but we don't want them applied to buttons either
   //

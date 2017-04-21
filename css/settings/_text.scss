@@ -48,13 +48,11 @@ $code-style: true;
 
 // Style up those tables
 $tables-width: 1px;
-$tables-color: #999;
 $tables-responsive: true;
 $tables-overflow: true;
 $tables-responsive-bp: palm;
 
-$code-bg-color: #eee;
+// Code box styles
 $code-border: '1px solid ' + #aaa; // "0";
-$code-text-color: black;
 $code-font-family: '"SFMono-Regular", Monaco, Menlo, Consolas, "Courier New", monospace';
 $code-font-size: 87.5%;

@@ -19,7 +19,7 @@ $columns: 12;
 
 // Define the columns and spacing.
 $column-width: 70;
-$gutter: 30;
+$gutter: 40;
 $margin: $gutter / 2;
 
 // Don't touch this if you don't know what it does… $max-width gets used often.
@@ -57,8 +57,8 @@ $spacer-css: true;
 $spacer-name: pad;
 $spacer-min: 320px;
 $spacer-max: $max-width * 1px;
-$spacer-size-small: 30px;
-$spacer-size-default: 60px;
+$spacer-size-small: 40px;
+$spacer-size-default: 70px;
 $spacer-size-large: 120px;
 
 // Output the fit-media utility class.

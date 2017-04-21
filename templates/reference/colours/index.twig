@@ -8,7 +8,7 @@
   <div class="bg-grey--light">
     <section class="site-container  pad">
 
-      <h2 data-bk-layout class="font-xl">{{ title }}</h2>
+      <h2 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h2>
 
       <div data-bk-layout="lap:7" class="rte">
         <p class="font-m">Colour values are almost always based on brand guidelines or style guides provided by a designer or client.</p>
@@ -27,9 +27,7 @@
   <div class="bg-white">
     <section class="site-container  pad">
 
-      <header data-bk-layout="lap:8  lap:pl:4" class="rte">
-        <h3 class="font-xl">Brand Colours</h3>
-      </header>
+      <h3 data-bk-layout="pad:rbl  lap:8  lap:pl:4" class="font-xl">Brand Colours</h3>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
         <div data-bk-layout="palm:6 lap:3">
@@ -92,9 +90,7 @@
   <div class="bg-grey">
     <section class="site-container  pad">
 
-      <header data-bk-layout="lap:8  lap:pl:4" class="rte">
-        <h3 class="font-xl">Standard Colours</h3>
-      </header>
+      <h3 data-bk-layout="pad:rbl lap:8  lap:pl:4" class="font-xl">Standard Colours</h3>
 
       {% for colour in ['white', 'black'] %}
         <div data-bk-layout="palm:4">
@@ -123,9 +119,7 @@
   <div class="bg-white">
     <section class="site-container  pad">
 
-      <header data-bk-layout="lap:8  lap:pl:4" class="rte">
-        <h3 class="font-xl">Alert Colours</h3>
-      </header>
+      <h3 data-bk-layout="pad:rbl  lap:8  lap:pl:4" class="font-xl">Alert Colours</h3>
 
       {% for colour in ['alert', 'error', 'neutral', 'positive'] %}
         <div data-bk-layout="palm:3">

@@ -5,12 +5,11 @@
 
 {% block content %}
 
-  <div class="bg-grey--light">
+  <div class="bg-white">
     <section class="site-container  pad">
-      <h2 data-bk-layout class="font-xl">{{ title }}</h2>
+      <h1 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h1>
 
       <div data-bk-layout>
-
         <div class="pad  pad-s  bg-grey  margin-b  align-c">
           <p class="bg-white">Small Padding</p>
         </div>
@@ -22,6 +21,7 @@
         </div>
 
         <p>Padding classes can be mixed up to create various configuations, for example:</p>
+
         <ul>
           <li class="margin-t"><code>pad-b</code> simply adds bottom padding</li>
           <li class="margin-t"><code>pad-s-t</code> adds small top padding</li>
@@ -29,25 +29,24 @@
           <li class="margin-t"><code>pad-s  pad-l-b</code>small top and large bottom padding</li>
           <li class="margin-t">And so on.</li>
         </ul>
+      </div>
 
-        <div class="rte  pad-t  pad-s-b">
-          <h3>Examples within containers</h3>
-        </div>
 
-        <div style="float:left; width: 33.3333333333%">
-          <div class="pad  pad-s  bg-grey  margin-b  align-c">
-            <p class="bg-white">Small Padding</p>
-          </div>
+      <h3 data-bk-layout class="font-l pad-t">Examples within containers</h3>
+
+      <div data-bk-layout="4">
+        <div class="pad  pad-s  bg-grey  margin-b  align-c">
+          <p class="bg-white">Small Padding</p>
         </div>
-        <div style="float:left; width: 33.3333333333%">
-          <div class="pad  bg-grey  margin-b  align-c">
-            <p class="bg-white">Default Padding</p>
-          </div>
+      </div>
+      <div data-bk-layout="4">
+        <div class="pad  bg-grey  margin-b  align-c">
+          <p class="bg-white">Default Padding</p>
         </div>
-        <div style="float:left; width: 33.3333333333%">
-          <div class="pad  pad-l  bg-grey  margin-b  align-c">
-            <p class="bg-white">Large Padding</p>
-          </div>
+      </div>
+      <div data-bk-layout="4">
+        <div class="pad  pad-l  bg-grey  margin-b  align-c">
+          <p class="bg-white">Large Padding</p>
         </div>
       </div>
     </section>
