@@ -47,7 +47,7 @@
             </li>
           </ol>
 
-<pre><code data-bk-layout class="alert alert--simple br-0">// Sass
+<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
 .thing {
   background-color: ${{ colour }};
 }
@@ -74,7 +74,7 @@
             </li>
           </ol>
 
-<pre><code data-bk-layout class="alert alert--simple br-0">// Sass
+<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
 .thing {
   background-color: ${{ colour }};
 }
@@ -106,7 +106,7 @@
             </li>
           </ol>
 
-<pre><code data-bk-layout class="alert alert--simple br-0">// Sass
+<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
 .thing {
   background-color: ${{ colour }};
 }
@@ -120,7 +120,7 @@
   </div>
 
 
-  {# <div class="bg-white">
+  <div class="bg-white">
     <section class="site-container  pad">
 
       <header data-bk-layout="lap:8  lap:pl:4" class="rte">
@@ -137,16 +137,10 @@
             </li>
           </ol>
 
-<pre><code data-bk-layout class="alert alert--simple br-0">// Sass
-.thing {
-  background-color: ${{ colour }};
-}
-
-&lt;!-- html --&gt;
-&lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
-&lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">&lt;!-- html --&gt;
+&lt;p class=&quot;{{ colour != 'alert' ? 'alert--' }}{{ colour }}&quot;&gt;&hellip;&lt;/p&gt;</code></pre>
         </div>
       {% endfor %}
     </section>
-  </div> #}
+  </div>
 {% endblock %}
