@@ -9,7 +9,7 @@
     <section class="site-container  pad">
       <h1 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h1>
 
-      <div data-bk-layout class="pad-b rte">
+      <div data-bk-layout="lap:7" class="pad-b rte">
         <p>BaseGrid is a standalone responsive faux grid-system built on CSS <code>inline-block</code> and the <code>data</code> attribute.</p>
         <p>Once white space has been removed, <code>inline-block</code> allows for more flexibility and more robustness than floating grid items. <code>inline-block</code> items can be vertically aligned and flow more consistently.</p>
         <p>The <code>data</code> attribute allows us to almost fully separate the layout styles from other CSS and classes.</p>
@@ -17,7 +17,7 @@
 
       <h2 data-bk-layout="pad:rbl" class="font-xl">The Grid</h2>
 
-      <div data-bk-layout class="rte">
+      <div data-bk-layout="lap:7" class="rte">
         <p>By default BaseKit is based on the common 12 column layout, this provides great flexibility and ease of use. However you can create layouts from as many or as few columns as you wish.</p>
 
         <p>Unlike Bootstrap and some other systems, there are no "tiers". If you want a four column grid at small screen size simply fake it by using three columns for each small screen column.</p>
@@ -139,8 +139,8 @@
       </ul>
 
 
-      <div data-bk-layout="pad:trl">
-        <h3 data-bk-layout="pad:tb">Indenting (Pushing/Pulling)</h3>
+      <div data-bk-layout="pad:trl lap:7">
+          <h3 data-bk-layout="pad:b" class="font-l pad-t">Indenting (Pushing/Pulling)</h3>
         <p>Make use of the <code>pr</code> and <code>pl</code> attrubute values to push and pull blocks of content. Unlike padding, push and pull use margins</p>
       </div>
 
@@ -258,7 +258,7 @@
 
 
       <div data-bk-layout="pad:trl">
-        <h2 data-bk-layout="pad:tb">Padding</h2>
+        <h3 data-bk-layout="pad:b" class="font-l pad-t">Padding</h3>
         <p>Background colour indicated where the padding has been applied.</p>
       </div>
 
@@ -307,8 +307,8 @@
         </li>
       </ul>
 
-      <div data-bk-layout="pad:trl">
-        <h2 data-bk-layout="pad:tb">Padding Sizes</h2>
+      <div data-bk-layout="pad:trl lap:7">
+        <h3 data-bk-layout="pad:b" class="font-l pad-t">Padding Sizes</h3>
         <p>There are three sizes of padding, the default value and small and large values. These can be configured via the BaseGrid variables.</p>
         <p>Small padding is particularly useful if you want to combine the padding/gutters of a container as well as the child while maintaining the standard padding/gutter size.</p>
       </div>
