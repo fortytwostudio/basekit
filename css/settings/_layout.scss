@@ -45,12 +45,6 @@ $display-table-class: false;
 // Output the alignments utility class.
 $alignment-css: true;
 
-// Output the fit-media utility class.
-$fit-media-css: true;
-
-// Output CSS for the fit-media fallback.
-$fit-media-fallback-css: true;
-
 // Output the margin utility class.
 $margin-css: true;
 
@@ -59,12 +53,19 @@ $html-body-full-height: true;
 
 // Output and configure the padding spacer utility, this is used to add
 // additional top/bottom padding where necessary.
-$padding-spacer-css: true;
-$padding-spacer-name: pad;
-$padding-spacer-breakpoint: hands;
-$padding-spacer-size-small: 30px;
-$padding-spacer-size-default: 60px;
-$padding-spacer-size-large: 120px;
+$spacer-css: true;
+$spacer-name: pad;
+$spacer-min: 320px;
+$spacer-max: $max-width * 1px;
+$spacer-size-small: 30px;
+$spacer-size-default: 60px;
+$spacer-size-large: 120px;
+
+// Output the fit-media utility class.
+$fit-media-css: true;
+
+// Output CSS for the fit-media fallback.
+$fit-media-fallback-css: true;
 
 // Fine tune the position over utility class options.
 // Find this in core/utility.position-over.scss
