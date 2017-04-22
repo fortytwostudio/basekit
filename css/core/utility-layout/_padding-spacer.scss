@@ -33,30 +33,30 @@
 
     // @include mq($spacer-min) {
       &, &-t {
-        padding-top: between($spacer-size-default / 2, $spacer-size-default, $spacer-min, $spacer-max);
+        padding-top: between($spacer-size-default / 4, $spacer-size-default, $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between($spacer-size-default / 2, $spacer-size-default, $spacer-min, $spacer-max);
+        padding-bottom: between($spacer-size-default / 4, $spacer-size-default, $spacer-min, $spacer-max);
       }
 
       &-s {
         &, &-t {
-          padding-top: between($spacer-size-small / 2, $spacer-size-small, $spacer-min, $spacer-max);
+          padding-top: between($spacer-size-small / 4, $spacer-size-small, $spacer-min, $spacer-max);
         }
 
         &, &-b {
-          padding-bottom: between($spacer-size-small / 2, $spacer-size-small, $spacer-min, $spacer-max);
+          padding-bottom: between($spacer-size-small / 4, $spacer-size-small, $spacer-min, $spacer-max);
         }
       }
 
       &-l {
         &, &-t {
-          padding-top: between($spacer-size-large / 2, $spacer-size-large, $spacer-min, $spacer-max);
+          padding-top: between($spacer-size-large / 4, $spacer-size-large, $spacer-min, $spacer-max);
         }
 
         &, &-b {
-          padding-bottom: between($spacer-size-large / 2, $spacer-size-large, $spacer-min, $spacer-max);
+          padding-bottom: between($spacer-size-large / 4, $spacer-size-large, $spacer-min, $spacer-max);
         }
       }
     // }
