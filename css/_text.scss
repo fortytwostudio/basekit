@@ -29,6 +29,8 @@
     }
   }
 
+  &-n { @include fluid-type(font-size, 320px, $max-width + 0px, $font-size, 18px); }
+
   &-m { @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px); }
 
   &-l { @include fluid-type(font-size, 320px, $max-width + 0px, 22px, 26px); }
