@@ -6,8 +6,14 @@
     &-#{$name}--light {
       color: color($name, light);
     }
+    &-#{$name}--lighter {
+      color: color($name, lighter);
+    }
     &-#{$name}--dark {
       color: color($name, dark);
+    }
+    &-#{$name}--darker {
+      color: color($name, darker);
     }
     &-#{$name}--tint {
       color: color($name, tint);

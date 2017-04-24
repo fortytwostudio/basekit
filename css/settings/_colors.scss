@@ -1,23 +1,31 @@
 $colors: (
   primary: (
     base: #00739f,
-    light: #009ec9,
-    dark: #004369
+    lighter: lighten(#00739f, 30%),
+    light: lighten(#00739f, 10%),
+    dark: darken(#00739f, 10%),
+    darker: darken(#00739f, 18%)
   ),
   secondary: (
     base: #c62b90,
-    light: #cb6791,
-    dark: #8f3c5e
+    lighter: lighten(#c62b90, 30%),
+    light: lighten(#c62b90, 10%),
+    dark: darken(#c62b90, 10%),
+    darker: darken(#c62b90, 25%)
   ),
   tertiary: (
     base: #71e0b1,
-    light: #caebdd,
-    dark: #378162
+    lighter: lighten(#71e0b1, 28%),
+    light: lighten(#71e0b1, 10%),
+    dark: darken(#71e0b1, 25%),
+    darker: darken(#71e0b1, 40%)
   ),
   grey: (
-    base: #bbb,
-    light: #f3f3f3,
-    dark: #333
+    base: #ccc,
+    lighter: lighten(#ccc, 15%),
+    light: lighten(#ccc, 10%),
+    dark: darken(#ccc, 30%),
+    darker: darken(#ccc, 50%)
   ),
   white: (
     base: white,
@@ -28,7 +36,7 @@ $colors: (
     tint: rgb(30,30,30)
   ),
   text: (
-    base: #393939
+    base: #333
   )
 );
 

@@ -7,8 +7,14 @@
     &-#{$name}--light {
       background-color: color($name, light);
     }
+    &-#{$name}--lighter {
+      background-color: color($name, lighter);
+    }
     &-#{$name}--dark {
       background-color: color($name, dark);
+    }
+    &-#{$name}--darker {
+      background-color: color($name, darker);
     }
     &-#{$name}--tint {
       background-color: color($name, tint);

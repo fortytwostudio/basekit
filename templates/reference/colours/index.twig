@@ -6,13 +6,12 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--light">
+  <div class="bg-grey--lighter">
     <section class="site-container  pad">
 
       <h2 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h2>
 
       <div data-bk-layout="lap:7" class="rte">
-        <p class="alert alert--simple"><strong>Change:</strong> the way colour values are used in Sass has changed. Updating soon.</p>
 
         <p class="font-m">Colour values are almost always based on brand guidelines or style guides provided by a designer or client.</p>
 
@@ -27,62 +26,80 @@
   </div>
 
 
+
   <div class="bg-white">
     <section class="site-container  pad">
 
       <h3 data-bk-layout="pad:rbl  lap:8  lap:pl:4" class="font-xl">Brand Colours</h3>
 
-      {% for colour in ['primary', 'secondary', 'tertiary'] %}
-        <div data-bk-layout="palm:6 lap:3">
-          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
+      {% for colour in ['primary', 'secondary', 'tertiary', 'grey'] %}
+        <div data-bk-layout="palm:6 lap:4">
+          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
-          <ol class="font-s">
-            <li data-bk-layout class="bg-{{ colour }} pad">
-              <span style="visibility:hidden">default</span>
+          <ol class="font-xs">
+            <li data-bk-layout class="bg-{{ colour }} pad-l-b color-white font-m font-light">
+              {{ colour|capitalize }}
             </li>
-            <li data-bk-layout="6" class="bg-{{ colour }}--dark color-white pad-t">
-              --dark
+            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--lighter color-black pad-s-t">
+              lighter
             </li>
-            <li data-bk-layout="6" class="bg-{{ colour }}--light color-black pad-t">
-              --light
+            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--light color-black pad-s-t">
+              light
+            </li>
+            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--dark color-white pad-s-t">
+              dark
+            </li>
+            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--darker color-white pad-s-t">
+              darker
             </li>
           </ol>
 
-<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
-.thing {
-  background-color: ${{ colour }};
-}
-
-&lt;!-- html --&gt;
-&lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
-&lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+          <ul data-bk-layout="pad:t pad:small" class="color-{{ colour }}">
+            <li class="font-xl">Lorem Ipsum</li>
+            <li class="font-l">Lorem Ipsum</li>
+            <li class="font-m">Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li class="font-s">Lorem Ipsum</li>
+            <li class="font-xs">Lorem Ipsum</li>
+          </ul>
         </div>
       {% endfor %}
 
-      {% for colour in ['grey'] %}
-        <div data-bk-layout="palm:6 lap:3">
-          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
+    </section>
+  </div>
 
-          <ol class="font-s">
-            <li data-bk-layout class="bg-{{ colour }} pad">
-              <span style="visibility:hidden">default</span>
+
+
+  <div class="bg-grey  color-black">
+    <section class="site-container  pad">
+
+      <div data-bk-layout="pad:rbl  lap:8  lap:pl:4" data-bk-links="primary fade underline" class="rte">
+        <h3 class="font-xl">Standard Colours</h3>
+
+        <p>Black and white colour options are fixed utility classes that should never change. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
+      </div>
+
+      {% for colour in ['black', 'white'] %}
+        <div data-bk-layout="palm:4">
+          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
+
+          <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
+            <li data-bk-layout class="bg-{{ colour }} pad-l-b font-m font-light">
+              {{ colour|capitalize }}
             </li>
-            <li data-bk-layout="6" class="bg-{{ colour }}--dark color-white pad-t">
-              --dark
-            </li>
-            <li data-bk-layout="6" class="bg-{{ colour }}--light color-black pad-t">
-              --light
+            <li data-bk-layout class="bg-{{ colour }}--tint pad-s-t">
+              tint
             </li>
           </ol>
 
-<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
-.thing {
-  background-color: ${{ colour }};
-}
-
-&lt;!-- html --&gt;
-&lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
-&lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+          <ul data-bk-layout="pad:t pad:small" class="color-{{ colour }}">
+            <li class="font-xl">Lorem Ipsum</li>
+            <li class="font-l">Lorem Ipsum</li>
+            <li class="font-m">Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li class="font-s">Lorem Ipsum</li>
+            <li class="font-xs">Lorem Ipsum</li>
+          </ul>
         </div>
       {% endfor %}
     </section>
@@ -90,52 +107,36 @@
 
 
 
-  <div class="bg-grey">
+  <div class="bg-white--tint">
     <section class="site-container  pad">
 
-      <h3 data-bk-layout="pad:rbl lap:8  lap:pl:4" class="font-xl">Standard Colours</h3>
+      <div data-bk-layout="pad:rbl  lap:8" data-bk-links="primary fade underline" class="rte">
+        <h3 class="font-xl">Body Text</h3>
 
-      {% for colour in ['white', 'black'] %}
+        <p>For text colours the lightest you can go on a white background is <code>#666</code> for AA compliancy or <code>#555</code> for AAA compliancy. It is advisable to keep the base text colour well above AAA compliancy.</p>
+
+        <p>On a black background, light text can go as dark as <code>999</code> for AAA compliancy and <code>666</code> for AA compliancy. Again it is advised to stick with AAA level compliancy.</p>
+
+        <p>For body text on mid-range and different colours you must check with a contrast testing tool. For more information see the <a href="../accessibility">Accessibility page</a>.</p>
+      </div>
+
         <div data-bk-layout="palm:4">
-          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
+          {# <h4 class="font-l color-text">Text</h4> #}
 
-          <ol class="font-s">
-            <li data-bk-layout class="bg-{{ colour }} pad">
-              <span style="visibility:hidden">default</span>
-            </li>
-            <li data-bk-layout class="bg-{{ colour }}--tint color-{{ cycle(['black', 'white'], loop.index0) }} pad-t">
-              --tint
+          <ol class="font-m font-light color-white">
+            <li data-bk-layout class="bg-text pad-l-b">
+              Text
             </li>
           </ol>
 
-<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
-.thing {
-  background-color: ${{ colour }};
-}
-
-&lt;!-- html --&gt;
-&lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
-&lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
-        </div>
-      {% endfor %}
-
-        <div data-bk-layout="palm:4">
-          <h4 class="font-l color-text">Text</h4>
-
-          <ol class="font-s">
-            <li data-bk-layout class="bg-text pad-l">
-              <span style="visibility:hidden">default</span>
-            </li>
-          </ol>
-
-      <pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
-      .thing {
-      background-color: ${{ colour }};
-      }
-
-      &lt;!-- html --&gt;
-      &lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
-      &lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+          <ul data-bk-layout="pad:t pad:small" class="color-text">
+            <li class="font-xl">Lorem Ipsum</li>
+            <li class="font-l">Lorem Ipsum</li>
+            <li class="font-m">Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li class="font-s">Lorem Ipsum</li>
+            <li class="font-xs">Lorem Ipsum</li>
+          </ul>
         </div>
     </section>
   </div>
@@ -144,20 +145,22 @@
   <div class="bg-white">
     <section class="site-container  pad">
 
-      <h3 data-bk-layout="pad:rbl  lap:8  lap:pl:4" class="font-xl">Alert Colours</h3>
+      <div data-bk-layout="pad:rbl  lap:8  lap:pl:4" data-bk-links="primary fade underline" class="rte">
+        <h3 class="font-xl">Alert Colours</h3>
+
+        <p>For more information see the <a href="../alerts/">alerts documentation</a>.</p>
+      </div>
 
       {% for colour in ['alert', 'error', 'neutral', 'positive'] %}
         <div data-bk-layout="palm:3">
-          <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
+          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
-          <ol class="font-s">
-            <li data-bk-layout class="bg-{{ colour }} pad">
-              <span style="visibility:hidden">default</span>
+          <ol class="font-m font-light">
+            <li data-bk-layout class="bg-{{ colour }} pad-l-b">
+              {{ colour|capitalize }}
             </li>
           </ol>
 
-<pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">&lt;!-- html --&gt;
-&lt;p class=&quot;{{ colour != 'alert' ? 'alert--' }}{{ colour }}&quot;&gt;&hellip;&lt;/p&gt;</code></pre>
         </div>
       {% endfor %}
     </section>
