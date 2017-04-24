@@ -12,6 +12,8 @@
       <h2 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h2>
 
       <div data-bk-layout="lap:7" class="rte">
+        <p class="alert alert--simple"><strong>Change:</strong> the way colour values are used in Sass has changed. Updating soon.</p>
+
         <p class="font-m">Colour values are almost always based on brand guidelines or style guides provided by a designer or client.</p>
 
         <p>Primary and Secondary colour groups are often used for headings, links, button and background colours. Links and buttons may default to the primary colour with the secondary colour used on hover.</p>
@@ -98,8 +100,11 @@
           <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4>
 
           <ol class="font-s">
-            <li data-bk-layout class="bg-{{ colour }} pad pad-l-t">
+            <li data-bk-layout class="bg-{{ colour }} pad">
               <span style="visibility:hidden">default</span>
+            </li>
+            <li data-bk-layout class="bg-{{ colour }}--tint color-{{ cycle(['black', 'white'], loop.index0) }} pad-t">
+              --tint
             </li>
           </ol>
 
@@ -113,6 +118,25 @@
 &lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
         </div>
       {% endfor %}
+
+        <div data-bk-layout="palm:4">
+          <h4 class="font-l color-text">Text</h4>
+
+          <ol class="font-s">
+            <li data-bk-layout class="bg-text pad-l">
+              <span style="visibility:hidden">default</span>
+            </li>
+          </ol>
+
+      <pre class="font-xs"><code data-bk-layout class="alert alert--simple br-0">// Sass
+      .thing {
+      background-color: ${{ colour }};
+      }
+
+      &lt;!-- html --&gt;
+      &lt;div class=&quot;bg-{{ colour }}&quot;&gt;&hellip;&lt;/div&gt;
+      &lt;h3 class=&quot;color-{{ colour }}&quot;&gt;&hellip;&lt;/h3&gt;</code></pre>
+        </div>
     </section>
   </div>
 
