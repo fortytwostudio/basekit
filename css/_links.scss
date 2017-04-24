@@ -47,19 +47,19 @@
 a:not(.btn) {
   // Link style based on the primary brand colour
   [data-bk-links~="primary"] & {
-    color: $primary;
+    color: color(primary);
 
     &:focus, &:hover {
-      color: $secondary;
+      color: color(secondary);
     }
   }
 
   // Link style based on the secondary brand colour
   [data-bk-links~="secondary"] & {
-    color: $secondary;
+    color: color(secondary);
 
     &:focus, &:hover {
-      color: $primary;
+      color: color(primary);
     }
   }
 

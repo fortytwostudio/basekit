@@ -16,7 +16,7 @@
     &:hover,
     &.active,
     &.is-open {
-      background-color: $primary;
+      background-color: color(primary);
       color: inherit;
       transition-duration: $speed-normal;
     }
@@ -39,7 +39,7 @@
 
   .site-nav {
     text-align: left;
-    background-color: $primary--dark;
+    background-color: color(primary, dark);
 
     .js & {
       max-height: 0;
@@ -118,7 +118,7 @@
   // sub-navigation panel
   .sub-nav {
     // display: none;
-    background-color: mix($primary, $primary--dark);
+    background-color: mix(color(primary), color(primary, dark));
     box-shadow: 0 5px 20px -5px black;
     font-size: 87.25%;
     min-width: em(180px);
@@ -169,7 +169,7 @@
   background-color: #f1f1f1;
   box-shadow: 0 0 1px 1px rgba(black, 0.2);
   clip: rect(1px, 1px, 1px, 1px);
-  color: $secondary!important;
+  color: color(secondary) !important;
   display: block;
   font-weight: 700;
   height: 1px;

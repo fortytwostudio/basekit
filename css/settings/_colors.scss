@@ -1,33 +1,71 @@
+$colors: (
+  primary: (
+    base: #00739f,
+    light: #009ec9,
+    dark: #004369
+  ),
+  secondary: (
+    base: #c62b90,
+    light: #cb6791,
+    dark: #8f3c5e
+  ),
+  tertiary: (
+    base: #71e0b1,
+    light: #caebdd,
+    dark: #378162
+  ),
+  grey: (
+    base: #bbb,
+    light: #f3f3f3,
+    dark: #333
+  ),
+  white: (
+    base: white,
+    tint: whitesmoke
+  ),
+  black: (
+    base: black,
+    tint: rgb(30,30,30)
+  ),
+  text: (
+    base: #393939
+  )
+);
+
+@function color($scheme, $tone: base) {
+  @return map-get(map-get($colors, $scheme), $tone);
+}
+
 ////
 /// @group Settings
 ////
 
 /// Primary Brand Colour
 /// Set your primary brand colour.
-$primary: #00739f;
+// $primary: #00739f;
 /// **Light Variation:**
 /// Tweak the `lighten` value to get the colour you want, or pull it out completely
 /// if the designer has included a light colour value.
-$primary--light: #009ec9;
+// $primary--light: #009ec9;
 /// **Dark Variation:**
 /// Tweak the `darken` value to get the colour you want, or pull it out completely
 /// if the designer has included a dark colour value.
-$primary--dark: #004369;
+// $primary--dark: #004369;
 
-$secondary: #c62b90;
-$secondary--light: #cb6791;
-$secondary--dark: #8f3c5e;
+// $secondary: #c62b90;
+// $secondary--light: #cb6791;
+// $secondary--dark: #8f3c5e;
 
-$tertiary: #71e0b1;
-$tertiary--light: #caebdd;
-$tertiary--dark: #378162;
+// $tertiary: #71e0b1;
+// $tertiary--light: #caebdd;
+// $tertiary--dark: #378162;
 
 /// Grey is commonly used across all website designs, to simplify matters I've
 /// included three default values which should cover most situations. Change the
 /// actual values to specific colour values if CSS keyword values don't suit.
-$grey: #bbb;
-$grey--light: #f3f3f3;
-$grey--dark: #333;
+// $grey: #bbb;
+// $grey--light: #f3f3f3;
+// $grey--dark: #333;
 
 /// Document Colours
 ///
@@ -39,7 +77,7 @@ $grey--dark: #333;
 $body: #1a1a1a;
 
 /// Set the primary (body) text colour
-$text: #393939;
+$text: color(text);
 
 /// This is optional, you're better off using the color utility classes to set
 /// the colour on headings unless there is very little variation in heading

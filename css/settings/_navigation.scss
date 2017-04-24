@@ -26,7 +26,7 @@ $nav-mobile-background: white;
 // Set a background colour to the toggle button.
 $nav-mobile-toggle-background: null;
 // Set the toggle hamburger bar colours.
-$nav-mobile-toggle-bar-bg: $grey--dark;
+$nav-mobile-toggle-bar-bg: color(grey, dark);
 // Define the hamburger bar height, there are three bars so by default lets
 // divide the height by 7.
 $nav-mobile-burger-bar: $nav-mobile-hit-area / 7;
