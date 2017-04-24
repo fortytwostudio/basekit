@@ -6,10 +6,20 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-<div class="bg-white">
-  <div class="site-container pad">
-    <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+  <div class="bg-grey--lighter">
+    <section class="site-container  pad">
 
+      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+
+      <div data-bk-layout="lap:7" class="rte">
+        <p class="font-m">Description TBC</p>
+      </div>
+
+    </section>
+  </div>
+
+  <div class="bg-white">
+    <div class="site-container pad">
       <form data-bk-layout="hands:6" class="bk-form" action="POST">
         <h4 class="font-m">Standard Form Styling</h4>
         <p><small>Fields marked with <em>*</em> are required.</small></p>
@@ -472,8 +482,8 @@
         </fieldset> #}
       </form>
 
+    </div>
   </div>
-</div>
 
 {% include 'reference/_partials/_pagination.twig' %}
 
