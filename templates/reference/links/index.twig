@@ -6,24 +6,14 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--light">
+  <div class="bg-grey--lighter">
     <section class="site-container  pad">
-      <h2 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h2>
+      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
 
       <div data-bk-layout="lap:7" class="rte">
-        <p>
-          For years the traditional mathod of styling links would inevitably over
-          time drive me insane with specificity problems and overrides. So eventually
-          I came to the conclusion that links should simply be scoped, via classes.
-        </p>
+        <p class="font-m">For years the traditional mathod of styling links would inevitably over time drive me insane with specificity problems and overrides. So eventually I came to the conclusion that links should simply be scoped, via classes.</p>
 
-        <p>
-          This does mean that you have to be sure to catch every link in your templates,
-          otherwise they'll appear unstyled. It also means you'll be using unsemantic
-          blah blah blah classes. However it does produce easier to maintain code with
-          fewer long-term headaches. Just create a link style on a class and stick it
-          where it needs to go in your markup (be sensible!).
-        </p>
+        <p>This does mean that you have to be sure to catch every link in your templates, otherwise they'll appear unstyled. It also means you'll be using unsemantic blah blah blah classes. However it does produce easier to maintain code with fewer long-term headaches. Just create a link style on a class and stick it where it needs to go in your markup (be sensible!).</p>
       </div>
 
     </section>

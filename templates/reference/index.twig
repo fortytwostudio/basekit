@@ -15,7 +15,7 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--light  pad-s">
+  <div class="bg-grey--lighter  pad-s">
     <div class="site-container">
       <div data-bk-layout="palm:6" class="font-light  font-l">
         <p>Basekit is a custom frontend framework built over many years for FortyTwo Studio projects.</p>
@@ -26,12 +26,14 @@
 
   <div class="bg-white pad pad-s-t">
     <div class="site-container">
+
+      <div data-bk-layout="lap:4" class="float-r">
+        <p class="alert alert--simple"><strong>Status:</strong> Work in Progress</p>
+      </div>
+
       <div data-bk-layout="lap:8" data-bk-links="primary underline fade exit" class="rte">
 
-        <p class="alert alert--simple">Work in Progress</p>
-
         <h3 class="font-xl">Getting started</h3>
-
 
         <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
 
@@ -39,27 +41,45 @@
 
         <p>Once you've downloaded BaseKit, cd in to the directory and run <code>$ npm install</code> to get the required Gulp packages.</p>
 
-        <p>Run <code>$ gulp</code> and it should start watching and compiling the relevant files, at the moment this includes: Sass (to .css), Twig (to .html), HTML (to minified and cleaned .html) and finally Javascript to minified and combined .js. <em class="alert alert--inline alert--simple br-2">HTML compiling will soon be removed in favour of Twig.</em></p>
+        <p>Run <code>$ gulp</code> and it should start watching and compiling the relevant files, at the moment this includes: Sass (to .css), Twig (to .html), HTML (to minified and cleaned .html) and finally Javascript to minified and combined .js.</p>
 
         <p>Now that you've comfirmed that Gulp is running, you're ready to start configuring Sass files (and Twig if you're using that).</p>
+      </div>
+    </div>
+  </div>
 
-        <p>But first let's take a look at Basekit's structure.</p>
 
-        <h3 class="font-xl">Basekit Structure</h3>
+  <div class="bg-white--tint pad pad-s-t">
+    <div class="site-container">
+      <div data-bk-layout="lap:8" data-bk-links="primary underline fade exit">
+        <h3 class="font-xl margin-b">Basekit Structure</h3>
 
-        <dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">bower_components</dt>
           <dd>Only used to keep the html5shiv snippet up to date… not often.</dd>
+        </dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">css</dt>
           <dd>The core of Basekit.</dd>
+        </dl>
+        </dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">demo</dt>
           <dd>Static templates are compile to this directory, plus documentation.</dd>
+        </dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">imgs</dt>
           <dd>Logos, placeholders, UI images etc.</dd>
+        </dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">js</dt>
           <dd>Project javascript files, numbered files will be compiled and minified into min/basekit.js in their numerical order.</dd>
+        </dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">node_modules</dt>
           <dd>Gulp dependencies, make sure this isn't committed to git.</dd>
+        </dl>
+        <dl class="alert alert--muted alert--simple">
           <dt class="font-m">templates</dt>
           <dd>Twig project templates, compile to demo.</dd>
         </dl>

@@ -29,6 +29,8 @@
     }
   }
 
+  &-n { @include fluid-type(font-size, 320px, $max-width + 0px, $font-size, 18px); }
+
   &-m { @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px); }
 
   &-l { @include fluid-type(font-size, 320px, $max-width + 0px, 22px, 26px); }
@@ -38,10 +40,6 @@
   &-xxl { @include fluid-type(font-size, 320px, $max-width + 0px, 36px, 54px); }
 
   &-hero { @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 70px); }
-
-  &-lh-1 {
-    line-height: 1;
-  }
 
   // &-alt {
   //   font-family: $font-heading-family;
@@ -74,4 +72,25 @@
   &-upper {
     text-transform: uppercase;
   }
+}
+
+
+.lh-1 {
+  line-height: 1;
+}
+
+.lh-2 {
+  line-height: 1.1;
+}
+
+.lh-3 {
+  line-height: 1.2;
+}
+
+.lh-4 {
+  line-height: 1.3;
+}
+
+.lh-0 {
+  line-height: 0.8;
 }

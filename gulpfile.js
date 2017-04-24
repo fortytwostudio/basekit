@@ -144,9 +144,9 @@ gulp.task('twig', function() {
 
 // Combine various functions into watch
 gulp.task('watch', function() {
-  gulp.watch('css/**/*.scss', ['scss']);
+  gulp.watch('css/**/*.scss', { interval: 500 }, ['scss']);
   gulp.watch('js/*.js', ['js']);
-  gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], ['twig']);
+  gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
 });
 
 gulp.task('default', ['watch']);

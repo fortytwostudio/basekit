@@ -1,5 +1,37 @@
-<div class="bg-primary--light">
-  <ul data-bk-layout="pad:small" data-bk-links="white fade dim" class="nav nav--block align-c font-light">
+{% for navItems in mainNav if navItems.children|length %}
+  {% for item in navItems.children %}
+    {% if item.slug == slug %}
+      {% if loop.first %}
+        {% set previous_item = navItems.children[loop.length - 1] %}
+      {% else %}
+        {% set previous_item = navItems.children[loop.index0 - 1] %}
+      {% endif %}
+
+      {% if loop.last %}
+        {% set next_item = navItems.children[0] %}
+      {% else %}
+        {% set next_item = navItems.children[loop.index0 + 1] %}
+      {% endif %}
+
+      {% set prev %}
+        <li class="margin-r font-l">
+          <a href="{{ previous_item.url }}">←</a>
+        </li>
+      {% endset %}
+
+      {% set next %}
+        <li class="margin-l font-l">
+          <a href="{{ next_item.url }}">→</a>
+        </li>
+      {% endset %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<div data-bk-links="white fade dim" class="bg-primary--light clear align-c">
+  <ul data-bk-layout="pad:0 auto" class="nav nav--block align-c font-light">
+    {{ prev }}
+
     {% for item in mainNav if item.children|length %}
       {% for child in item.children %}
         <li>
@@ -9,5 +41,7 @@
         </li>
       {% endfor %}
     {% endfor %}
+
+    {{ next }}
   </ul>
 </div>

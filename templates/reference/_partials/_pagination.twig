@@ -1,5 +1,5 @@
-<div class="bg-primary--dark">
-  <div data-bk-links="white fade dim" class="site-container | font-upper">
+<div class="bg-primary--light">
+  <div data-bk-links="white fade dim" class="site-container | font-upper lh-2">
     {% for navItems in mainNav if navItems.children|length %}
       {% for item in navItems.children %}
         {% if item.slug == slug %}
@@ -16,10 +16,16 @@
           {% endif %}
 
           <p data-bk-layout="6">
-            <a href="{{ previous_item.url }}">← {{ previous_item.title|lower }}</a>
+            <span data-bk-layout="pad:0" class="color-white font-xs" style="position:relative;left:-1.1em;">← Previous</span>
+            <a href="{{ previous_item.url }}">
+              {{ previous_item.title|lower }}
+            </a>
           </p>
           <p data-bk-layout="6 right">
-            <a href="{{ next_item.url }}">{{ next_item.title|lower }} →</a>
+            <span data-bk-layout="pad:0" class="color-white font-xs" style="position:relative;right:-1.1em;">Next →</span>
+            <a href="{{ next_item.url }}">
+              {{ next_item.title|lower }}
+            </a>
           </p>
         {% endif %}
       {% endfor %}

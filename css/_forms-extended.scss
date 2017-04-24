@@ -57,9 +57,9 @@ $form-element-bg-color: white;
       box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.075);
 
       &:focus {
-        border-color: $primary--light;
+        border-color: color(primary, light);
         border-radius: 0;
-        box-shadow: 0 0.5em 0.5em -0.25em rgba($primary, 0.25);
+        box-shadow: 0 0.5em 0.5em -0.25em rgba(color(primary), 0.25);
       }
     }
 
@@ -81,7 +81,7 @@ $form-element-bg-color: white;
   input[type="submit"],
   input[type="reset"],
   input[type="image"] {
-    background-color: $primary;
+    background-color: color(primary);
     color: white;
     border-radius: $fh-border-radius;
     border: 0;
@@ -102,8 +102,8 @@ $form-element-bg-color: white;
   input[type="reset"]:focus,
   input[type="image"]:focus {
     color: white;
-    background-color: $secondary;
+    background-color: color(secondary);
     transition: $speed-normal;
-    box-shadow: 0 0.5em 0.5em -0.25em rgba($secondary, 0.25);
+    box-shadow: 0 0.5em 0.5em -0.25em rgba(color(secondary), 0.25);
   }
 }

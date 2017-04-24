@@ -3,8 +3,8 @@ $btn-css: true;
 // Set to null for no corner radius.
 $btn-corners: 0.25em;
 // Configure colours and speed.
-$btn-bg: $primary;
-$btn-bg--hover: $primary--light;
+$btn-bg: color(primary);
+$btn-bg--hover: color(primary, light);
 $btn-txt: white;
 $btn-txt--hover: $btn-txt;
 $btn-transition-speed: $speed-normal;
@@ -30,11 +30,11 @@ $btn-transition-speed: $speed-normal;
     }
 
     &--secondary {
-      background-color: $secondary;
+      background-color: color(secondary);
 
       &:hover,
       &:focus {
-        background-color: $secondary--light;
+        background-color: color(secondary, light);
       }
     }
 

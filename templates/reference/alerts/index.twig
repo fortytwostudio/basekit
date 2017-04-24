@@ -6,71 +6,92 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
+  <div class="bg-grey--lighter">
+    <section class="site-container  pad">
+
+      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+
+      <div data-bk-layout="lap:7" class="rte">
+        <p class="font-m">Description TBC</p>
+      </div>
+
+    </section>
+  </div>
+
   <div class="bg-white">
     <section class="site-container  pad">
-      <h2 data-bk-layout="pad:rbl" class="font-xl">{{ title }}</h2>
-
       <form class="bk-form" action="POST">
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert">Alert/Info</p>
+          <label class="font-m" for="alert">Standard information alert callout</label>
+          <input type="text" id="alert">
+          <p class="alert">alert</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--neutral">Alternative Alert/Info</p>
+          <label class="font-m" for="alert-neutral">Neutral alert callout</label>
+          <input type="text" id="alert-neutral">
+          <p class="alert alert--neutral">alert--neutral</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--error">Negative/Error/Failure</p>
+          <label class="font-m" for="alert-error">Error alert callout</label>
+          <input type="text" id="alert-error">
+          <p class="alert alert--error">alert--error</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--positive">Positive/Success/Confirmation</p>
+          <label class="font-m" for="alert-positive">Success alert callout</label>
+          <input type="text" id="alert-positive">
+          <p class="alert alert--positive">alert--positive</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--muted">Muted</p>
+          <label class="font-m" for="alert-muted">Muted alert callout</label>
+          <input type="text" id="alert-muted">
+          <p class="alert alert--muted">alert--muted</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--ib">Inline-block</p>
-          <p class="alert  alert--positive  alert--ib">Another inline-block</p>
-          <p class="alert  alert--neutral  alert--ib">Last one</p>
+          <label class="font-m" for="alert-ib">Multiple inline-block alerts</label>
+          <input type="text" id="alert-ib">
+          <p class="alert alert--ib">Inline-block</p>
+          <p class="alert alert--positive  alert--ib">Another inline-block</p>
+          <p class="alert alert--neutral  alert--ib">Last one</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  shadow">Drop shadow</p>
+          <label class="font-m" for="alert-shadow">Standard alert with shadow applied</label>
+          <input type="text" id="alert-shadow">
+          <p class="alert  shadow">Alert</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--compact">Compact padding</p>
+          <label class="font-m" for="alert-compact">Compact padding</label>
+          <input type="text" id="compact-alert">
+          <p class="alert  alert--compact">Alert</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert">Multiple alerts for one item</p>
+          <label class="font-m" for="alert-multi">Multiple alerts</label>
+          <input type="text" id="multi">
+          <p class="alert">Alert</p>
           <p class="alert  alert--simple">Alert--simple to remove arrow</p>
           <p class="alert  alert--simple">Alert--simple to remove arrow</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
+          <label class="font-m" for="alert-multi-2">Multiple alerts with longer content</label>
+          <input type="text" id="alert-multi-2">
           <p class="alert">Aenean lacinia bibendum nulla sed consectetur. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
           <p class="alert  alert--positive  alert--simple">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           <p class="alert  alert--muted  alert--simple">Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.</p>
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
+          <label class="font-m" for="alert-rte">Rich text content</label>
+          <input type="text" id="alert-rte">
           <div class="alert  rte">
-            <h3 class="font-m">With lists/rich-text…</h3>
+            <h3 class="font-m">Rich text heading</h3>
 
             <ul>
               <li>Paesent commodo cursus magna</li>
@@ -85,10 +106,11 @@
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
+          <label class="font-m" for="alert-rte-2">Muted with rich text</label>
+          <input type="text" id="alert-rte-2">
 
           <div class="alert  alert--muted  rte">
-            <h3 class="font-m">Muted rich-text</h3>
+            <h3 class="font-m">Rich text heading</h3>
 
             <ul>
               <li>Paesent commodo cursus magna</li>
@@ -103,6 +125,7 @@
         </div>
 
         <div data-bk-layout="hands:6">
+          <h3 class="font-m font-normal">Inlined alerts</h3>
           <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur.
 
           <span class="alert  alert--inline  alert--simple  br-2">Within text content, no arrow.</span>
@@ -115,28 +138,26 @@
         </div>
 
         <div data-bk-layout="hands:6">
-          <input type="text">
-          <p class="alert  alert--neutral  br-1">Rounded corners</p>
+          <label class="font-m" for="alert-round">Rounded corners</label>
+          <input type="text" id="alert-round">
+          <p class="alert  alert--neutral  br-1">Alert</p>
 
-          <input type="text">
-          <p class="alert  alert--neutral  br-4">Roundeder corners ;)</p>
+          <label class="font-m margin-t" for="alert-rounder">Rounder corners</label>
+          <input type="text" id="alert-rounder">
+          <p class="alert  alert--neutral  br-4">Alert</p>
         </div>
 
 
         <div data-bk-layout="hands:6">
+          <label class="font-m" for="alert-above-1">Above content</label>
           <p class="alert  alert--above">Above content</p>
-          <input type="text">
-
-          <p class="alert  alert--neutral  alert--above">Above content</p>
-          <input type="text">
+          <input type="text" id="alert-above-1">
         </div>
 
         <div data-bk-layout="hands:6">
-          <p class="alert  alert--positive  alert--above">Above content</p>
-          <input type="text">
-
+          <label class="font-m" for="alert-above-4">Above content error</label>
           <p class="alert  alert--error  alert--above">Above content</p>
-          <input type="text">
+          <input type="text" id="alert-above-4">
         </div>
 
       </form>

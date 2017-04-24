@@ -1,27 +1,24 @@
+
 .bg {
-
-  &-white { background-color: white; }
-  &-black { background-color: black; }
-  &-grey { background-color: $grey; }
-  &-grey--light { background-color: $grey--light; }
-  &-grey--dark { background-color: $grey--dark; }
-
-  &-primary {
-    background-color: $primary;
-    &--light { background-color: $primary--light; }
-    &--dark { background-color: $primary--dark; }
-  }
-
-  &-secondary {
-    background-color: $secondary;
-    &--light { background-color: $secondary--light; }
-    &--dark { background-color: $secondary--dark; }
-  }
-
-  &-tertiary {
-    background-color: $tertiary;
-    &--light { background-color: $tertiary--light; }
-    &--dark { background-color: $tertiary--dark; }
+  @each $name, $color in $colors {
+    &-#{$name} {
+      background-color: color($name);
+    }
+    &-#{$name}--light {
+      background-color: color($name, light);
+    }
+    &-#{$name}--lighter {
+      background-color: color($name, lighter);
+    }
+    &-#{$name}--dark {
+      background-color: color($name, dark);
+    }
+    &-#{$name}--darker {
+      background-color: color($name, darker);
+    }
+    &-#{$name}--tint {
+      background-color: color($name, tint);
+    }
   }
 
   &-img {
@@ -44,5 +41,31 @@
   &-positive {
     background-color: $alert-bg--positive;
   }
+
+  // OLD METHOD
+  //
+  // &-white { background-color: white; }
+  // &-black { background-color: black; }
+  // &-grey { background-color: $grey; }
+  // &-grey--light { background-color: $grey--light; }
+  // &-grey--dark { background-color: $grey--dark; }
+  //
+  // &-primary {
+  //   background-color: $primary;
+  //   &--light { background-color: $primary--light; }
+  //   &--dark { background-color: $primary--dark; }
+  // }
+  //
+  // &-secondary {
+  //   background-color: $secondary;
+  //   &--light { background-color: $secondary--light; }
+  //   &--dark { background-color: $secondary--dark; }
+  // }
+  //
+  // &-tertiary {
+  //   background-color: $tertiary;
+  //   &--light { background-color: $tertiary--light; }
+  //   &--dark { background-color: $tertiary--dark; }
+  // }
 
 }
