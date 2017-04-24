@@ -67,6 +67,10 @@
       "title": "Naming",
       "url": "/demo/reference/naming/",
       "slug": "naming"
+    }, {
+      "title": "A11Y",
+      "url": "/demo/reference/a11y/",
+      "slug": "accessibility"
     }]
   }, {
     "title": "Github",
