@@ -1,5 +1,5 @@
-$site-logo-width: 206px;
-$site-logo-height: 46px;
+$site-logo-width: 205px;
+$site-logo-height: 47px;
 
 // Other sizes to try: 60px by 15px, or 64px by 16px
 $colophon-logo-width: 56px;
@@ -22,19 +22,19 @@ $colophon-logo-height: 14px;
   width: rem($site-logo-width) / 2;
 
   @include mq(hands) {
-    height: rem($site-logo-height / 1.5);
-    width: rem($site-logo-width / 1.5);
+    height: rem($site-logo-height / 1.66666);
+    width: rem($site-logo-width / 1.66666);
   }
 
   @include mq(lap) {
-    height: rem($site-logo-height / 1.2);
-    width: rem($site-logo-width / 1.2);
+    height: rem($site-logo-height / 1.33333);
+    width: rem($site-logo-width / 1.33333);
   }
 
-  @include mq(desk) {
-    height: rem($site-logo-height);
-    width: rem($site-logo-width);
-  }
+  // @include mq(desk) {
+  //   height: rem($site-logo-height);
+  //   width: rem($site-logo-width);
+  // }
 
   &__img {
     background-image: url("../imgs/logos/site-logo.svg");
