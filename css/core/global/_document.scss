@@ -23,11 +23,11 @@ body {
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
 
-  @if $font-size > $font-size-small-screen {
-    @include mq($until: hands) {
-      font-size: em(strip-unit($font-size-small-screen), 16);
-    }
-  }
+  // @if $font-size > $font-size-small-screen {
+  //   @include mq($until: hands) {
+  //     font-size: em(strip-unit($font-size-small-screen), 16);
+  //   }
+  // }
 }
 
 [tabindex="-1"] {
