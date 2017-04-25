@@ -14,14 +14,6 @@
 .font {
   // Small font size doesn't need to be fancy responsive, just a tweak is enough.
   &-xs {
-    font-size: rem(10px);
-
-    @include mq(lap) {
-      font-size: rem(12px);
-    }
-  }
-
-  &-s {
     font-size: rem(12px);
 
     @include mq(lap) {
@@ -29,11 +21,19 @@
     }
   }
 
-  &-n { @include fluid-type(font-size, 320px, $max-width + 0px, $font-size, 18px); }
+  &-s {
+    font-size: rem(14px);
 
-  &-m { @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px); }
+    @include mq(lap) {
+      font-size: rem(16px);
+    }
+  }
 
-  &-l { @include fluid-type(font-size, 320px, $max-width + 0px, 22px, 26px); }
+  &-n { font-size: $font-size; } // 18px
+
+  &-m { @include fluid-type(font-size, 320px, $max-width + 0px, 20px, 24px); }
+
+  &-l { @include fluid-type(font-size, 320px, $max-width + 0px, 24px, 28px); }
 
   &-xl { @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 36px); }
 
