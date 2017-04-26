@@ -3,6 +3,7 @@
 $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif;
 
 $font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif;
+$font-family--mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
 // Define the base font size. This is important, get it right.
 $font-size: 16px;
@@ -19,7 +20,7 @@ $font-size-small-screen: $font-size; // NOTE: this may get removed
 
 // Define the base heading family and weight.
 $font-heading-family: $font-family;
-$font-heading-weight: 700;
+$font-heading-weight: $font-weight;
 
 // Set a default bottom margin size for consistency across text elements.
 $font-default-bottom-margin: $margin * 1.5;
@@ -54,5 +55,50 @@ $tables-responsive-bp: palm;
 
 // Code box styles
 $code-border: '1px solid ' + #aaa; // "0";
-$code-font-family: '"SFMono-Regular", Monaco, Menlo, Consolas, "Courier New", monospace';
+$code-font-family: $font-family--mono;
 $code-font-size: 87.5%;
+
+
+$font-mq-min: 320px;
+$font-mq-max: ($max-width * 1px);
+$fluid-fonts: (
+  m: (
+    minSize: 18px,
+    maxSize: 24px,
+    lineHeight: (20px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  l: (
+    minSize: 24px,
+    maxSize: 32px,
+    lineHeight: (19px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  xl: (
+    minSize: 32px,
+    maxSize: 44px,
+    lineHeight: (18px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  xxl: (
+    minSize: 44px,
+    maxSize: 62px,
+    lineHeight: (17px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  hero: (
+    minSize: 46px,
+    maxSize: 92px,
+    lineHeight: (16px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  )
+);
+
+@function ffont($name, $value) {
+  @return map-get(map-get($fluid-fonts, nth($name, 1)), $value);
+}
