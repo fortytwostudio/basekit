@@ -44,6 +44,30 @@
     }
   }
 
+  &-alt {
+    font-family: $font-family--serif;
+  }
+
+  &-thin {
+    font-weight: 100;
+  }
+
+  &-normal {
+    font-weight: 400;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+
+  &-upper {
+    text-transform: uppercase;
+  }
+
   // &-m {
   //   @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px);
   //   line-height: (20 / 16);
@@ -68,38 +92,10 @@
   //   @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 70px);
   //   line-height: (16 / 16);
   // }
-
-  // &-alt {
-  //   font-family: $font-heading-family;
-  // }
-
+  //
   // &-default {
   //   font-family: $font-family;
   // }
-
-  &-alt {
-    font-family: $font-family--serif;
-  }
-
-  &-thin {
-    font-weight: 100;
-  }
-
-  &-normal {
-    font-weight: 400;
-  }
-
-  &-bold {
-    font-weight: 700;
-  }
-
-  &-italic {
-    font-style: italic;
-  }
-
-  &-upper {
-    text-transform: uppercase;
-  }
 }
 
 
