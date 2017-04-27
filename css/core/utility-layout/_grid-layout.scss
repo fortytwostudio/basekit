@@ -2,34 +2,6 @@
 /// @author Ryan Roberts
 ////
 
-/// Define the default breakpoint name and value. Fewer will generate smaller
-/// CSS files but less control over layout.
-$mq-breakpoints: (
-  palm: 480px,
-  hands: 600px,
-  lap: 768px,
-  desk: 1024px
-) !default;
-
-/// Define the maximum number of grid columns
-///
-/// 12 is the value I would recommend because you can get just about any
-/// column layout combination out of it (except odd column layouts).
-/// 24 columns is also useful but increases file size and CSS.
-$columns: 12 !default;
-
-/// Define the width of each column in pixels, without the `px`.
-$column-width: 70 !default;
-
-/// Define the width of each gutter space between the columns, without the `px`.
-/// Gutters are applied either side of a column, e.g.
-/// [gutter][column][gutter][gutter][column][gutter]
-$gutter: 30 !default;
-
-/// Since gutters are actually applied around a column they need to the split
-/// in half. This variable simplifies that and is the variable commonly used.
-$margin: $gutter / 2 !default;
-
 /// Name your layout data attribute, should start with `data-`.
 ///
 /// @example
