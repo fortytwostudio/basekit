@@ -6,21 +6,20 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter">
-    <section class="site-container  pad">
-
-      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+  <div class="bg-white--tint pad">
+    <section class="site-container">
 
       <div data-bk-layout="lap:7" class="rte">
+        <h2 class="font-xl">{{ title }}</h2>
         <p class="font-m">Description TBC</p>
       </div>
 
     </section>
   </div>
 
-  <div class="bg-white">
-    <section class="site-container  pad">
-      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }} on light background</h2>
+  <div class="bg-white pad">
+    <section class="site-container">
+      <h2 data-bk-layout="pad:trl" class="font-l">{{ title }} on light background</h2>
 
       <p data-bk-layout>
         <a class="btn" href="#">Primary Button</a>
@@ -95,9 +94,9 @@
     </div>
   </div>
 
-  <div class="bg-grey--dark">
-    <div id="buttons-secondary" tabindex="-1" class="site-container  pad">
-      <h2 data-bk-layout="pad:rbl" class="font-xl  color-white  pad-s-b">{{ title }} on dark background</h2>
+  <div class="bg-grey--darker pad" tabindex="-1" id="buttons-secondary">
+    <div class="site-container">
+      <h2 data-bk-layout="pad:trl" class="font-l color-white">{{ title }} on dark background</h2>
 
       <p data-bk-layout>
         <a class="btn" href="#">Primary Button</a>
@@ -149,7 +148,7 @@
       </div>
 
 
-      <div class="pad-s-t">
+      <div>
         <p data-bk-links="download" data-bk-layout="auto">
           <a class="btn  btn--secondary" href="file.jpg" download>Download button</a>
         </p>

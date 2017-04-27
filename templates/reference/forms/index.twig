@@ -6,22 +6,21 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter">
-    <section class="site-container  pad">
-
-      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+  <div class="bg-white--tint pad">
+    <section class="site-container">
 
       <div data-bk-layout="lap:7" class="rte">
+        <h2 class="font-xl">{{ title }}</h2>
         <p class="font-m">Description TBC</p>
       </div>
 
     </section>
   </div>
 
-  <div class="bg-white">
-    <div class="site-container pad">
+  <div class="bg-white pad">
+    <div class="site-container">
       <form data-bk-layout="hands:6" class="bk-form" action="POST">
-        <h4 class="font-m">Standard Form Styling</h4>
+        <h4 class="font-l">Standard Form</h4>
         <p><small>Fields marked with <em>*</em> are required.</small></p>
 
         <fieldset class="margin-t">
@@ -249,10 +248,10 @@
       </form>
 
       <form data-bk-layout="hands:6" class="bk-form  bk-form--ext" action="POST">
-        <h4 class="font-m">Extended theme form styling</h4>
+        <h4 class="font-l">Themed form</h4>
         <p><small>This form uses CSS that overrides and/or extends the standard form style.</small></p>
 
-        <fieldset class="margin-t">
+        <fieldset class="bg-white--tint margin-t">
           <legend>Input Types</legend>
 
           <div class="bk-form--ext__combined  margin-b">

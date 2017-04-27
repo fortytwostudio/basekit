@@ -3,7 +3,7 @@
   .#{$rte-name} {
 
     > * + * {
-      margin-top: em($font-default-bottom-margin + 0px);
+      margin-top: rem($font-default-bottom-margin + 0px);
     }
 
     // p:not(:last-of-type) {
