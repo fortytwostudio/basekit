@@ -16,9 +16,9 @@
   "core/third-party/unit-conversion",
   "core/third-party/media-queries",
   "core/third-party/font-face",
-  "core/third-party/fluid-type",
-  "core/third-party/between",
   "core/third-party/family",
+  // "core/third-party/fluid-type",
+  "core/third-party/between",
   "core/third-party/hamburgers/hamburgers",
 
   // MIXINS & FUNCTONS
@@ -27,7 +27,8 @@
   "core/tools/rem",
   "core/tools/aspect-ratio",
   "core/tools/strip-unit",
-  "core/tools/hider.scss",
+  "core/tools/hider",
+  "core/tools/poly-fluid-sizing",
 
   // GLOBALS
   "core/global/document",
