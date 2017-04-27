@@ -6,7 +6,7 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter">
+  <div class="bg-grey--lighter" id="intro">
     <section class="site-container  pad">
 
       <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
@@ -24,10 +24,10 @@
   </div>
 
 
-  <div class="bg-white">
+  <div class="bg-white" id="brand-colours">
     <section class="site-container  pad">
 
-      <div data-bk-layout="pad:rbl  lap:8  lap:pl:4" class="rte">
+      <div data-bk-layout="pad:rbl  lap:7  lap:pl:5" class="rte">
         <h3 class="font-xl">Brand Colours</h3>
 
         <p>Primary and Secondary values will be defined in by brand guidelines or style guides provided by the designer or client. The lighter and darker values are not always the same and should be tweaked in the Color settings Sass file. These tings should be set for a balance of aesthetic appeal and utility, a dark that is too light or a light that is too dark won't be of any use when building the website.</p>
@@ -72,10 +72,10 @@
   </div>
 
 
-  <div class="bg-grey  color-black">
+  <div class="bg-grey  color-black" id="standard-values">
     <section class="site-container  pad">
 
-      <div data-bk-layout="pad:rbl  lap:8  lap:pl:4" data-bk-links="primary fade underline" class="rte">
+      <div data-bk-layout="pad:rbl  lap:7  lap:pl:5" data-bk-links="primary fade underline" class="rte">
         <h3 class="font-xl">Standard Values</h3>
 
         <p>Black and white colour options are fixed utility classes that should never change. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
@@ -108,10 +108,10 @@
   </div>
 
 
-  <div class="bg-white">
+  <div class="bg-white" id="grey-tones">
     <section class="site-container  pad">
 
-      <div data-bk-layout="pad:rbl  lap:8  lap:pl:4" class="rte">
+      <div data-bk-layout="pad:rbl  lap:7  lap:pl:5" class="rte">
         <h3 class="font-xl">Grey Tones</h3>
 
         <p>As with black and white, greys are set colour values that typically won't be changed. However, unlike black and white they <i>can</i> be changed if needed to suit the design. The tones below have been selected to best meet most sitatuons.</p>
@@ -154,10 +154,10 @@
   </div>
 
 
-  <div class="bg-white--tint">
+  <div class="bg-white--tint" id="text-colour">
     <section class="site-container  pad">
 
-      <div data-bk-layout="pad:rbl  lap:8" data-bk-links="primary fade underline" class="rte">
+      <div data-bk-layout="pad:rbl  lap:7  lap:pl:1" data-bk-links="primary fade underline" class="rte">
         <h3 class="font-xl">Default Text Colour</h3>
 
         <p>For text colours the lightest you can go on a white background is <code>#666</code> for AA compliancy or <code>#555</code> for AAA compliancy. It is advisable to keep the base text colour well above AAA compliancy.</p>
@@ -167,29 +167,27 @@
         <p>For body text on mid-range and different colours you must check with a contrast testing tool. For more information see the <a href="../accessibility">Accessibility page</a>.</p>
       </div>
 
-        <div data-bk-layout="palm:4">
-          {# <h4 class="font-l color-text">Text</h4> #}
+      <div data-bk-layout="palm:4">
+        <ol class="font-m font-light color-white">
+          <li data-bk-layout class="bg-text pad-l-b">
+            Text
+          </li>
+        </ol>
 
-          <ol class="font-m font-light color-white">
-            <li data-bk-layout class="bg-text pad-l-b">
-              Text
-            </li>
-          </ol>
-
-          <ul data-bk-layout="pad:t pad:small" class="color-text">
-            <li class="font-xl">Lorem Ipsum</li>
-            <li class="font-l">Lorem Ipsum</li>
-            <li class="font-m">Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li class="font-s">Lorem Ipsum</li>
-            <li class="font-xs">Lorem Ipsum</li>
-          </ul>
-        </div>
+        <ul data-bk-layout="pad:t pad:small" class="color-text">
+          <li class="font-xl">Lorem Ipsum</li>
+          <li class="font-l">Lorem Ipsum</li>
+          <li class="font-m">Lorem Ipsum</li>
+          <li>Lorem Ipsum</li>
+          <li class="font-s">Lorem Ipsum</li>
+          <li class="font-xs">Lorem Ipsum</li>
+        </ul>
+      </div>
     </section>
   </div>
 
 
-  <div class="bg-white">
+  <div class="bg-white" id="alert-colours">
     <section class="site-container  pad">
 
       <div data-bk-layout="pad:rbl  lap:8  lap:pl:4" data-bk-links="primary fade underline" class="rte">
