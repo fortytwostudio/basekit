@@ -101,7 +101,7 @@
   $keys: map-keys($map);
 
   // Minimum size
-  #{$property}: map-get($map, nth($keys,1));
+  #{$property}: rem(map-get($map, nth($keys,1)));
 
   // Interpolated size through breakpoints
   @for $i from 1 through ($length - 1) {
@@ -112,6 +112,6 @@
 
   // Maxmimum size
   @media (min-width:nth($keys,$length)) {
-    #{$property}: map-get($map, nth($keys,$length));
+    #{$property}: rem(map-get($map, nth($keys,$length)));
   }
 }
