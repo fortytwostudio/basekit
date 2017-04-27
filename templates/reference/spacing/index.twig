@@ -7,58 +7,99 @@
 {% include 'reference/_partials/_quick-nav.twig' %}
 
   <div class="bg-grey--lighter">
-    <section class="site-container  pad">
+    <section class="site-container  pad-l">
 
       <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
 
       <div data-bk-layout="lap:7" class="rte">
-        <p class="font-m">Description TBC</p>
+        <p class="font-m">The spacing utility class gives you the option to space out content vertically (along the x axis) without having to use the grid system or creating custom CSS.</p>
+
+        <p>Having a group of set sizes (based on the grid system's gutter value) also maintains a consistency throughout a design.</p>
+
+        <dl data-bk-layout="pad:r 6 palm:3">
+          <dt>Small</dt>
+          <dd>Gutter / 2</dd>
+        </dl>
+        <dl data-bk-layout="pad:r 6 palm:3">
+          <dt>Default</dt>
+          <dd>Gutter × 1</dd>
+        </dl>
+        <dl data-bk-layout="pad:r 6 palm:3">
+          <dt>Large</dt>
+          <dd>Gutter × 2</dd>
+        </dl>
+        <dl data-bk-layout="pad:r 6 palm:3">
+          <dt>Larger</dt>
+          <dd>Gutter × 4</dd>
+        </dl>
       </div>
 
     </section>
   </div>
 
-  <div class="bg-white">
-    <section class="site-container  pad">
+  <div class="bg-white  pad">
+    <section class="site-container">
       <div data-bk-layout>
-        <div class="pad  pad-s  bg-grey  margin-b  align-c">
-          <p class="bg-white">Small Padding</p>
-        </div>
-        <div class="pad  bg-grey  margin-b  align-c">
-          <p class="bg-white">Default Padding</p>
-        </div>
-        <div class="pad  pad-l  bg-grey  margin-b  align-c">
-          <p class="bg-white">Large Padding</p>
-        </div>
+        <h3 class="font-l pad-s-b">Spacing Examples</h3>
 
-        <p>Padding classes can be mixed up to create various configuations, for example:</p>
+        <h4 class="font-bold">Small <code class="font-xs font-normal float-r">$gutter / 2</code></h4>
+        <div class="pad-s-t  bg-tertiary--light  margin-b  align-c"></div>
 
-        <ul>
-          <li class="margin-t"><code>pad-b</code> simply adds bottom padding</li>
-          <li class="margin-t"><code>pad-s-t</code> adds small top padding</li>
-          <li class="margin-t"><code>pad  pad-s-b</code> adds normal padding then changes the bottom padding to the small size</li>
-          <li class="margin-t"><code>pad-s  pad-l-b</code>small top and large bottom padding</li>
-          <li class="margin-t">And so on.</li>
-        </ul>
+        <h4 class="font-bold pad-t">Default <code class="font-xs font-normal float-r">$gutter * 1</code></h4>
+        <div class="pad-t  bg-tertiary--light  margin-b  align-c"></div>
+
+        <h4 class="font-bold pad-t">Large <code class="font-xs font-normal float-r">$gutter * 2</code></h4>
+        <div class="pad-l-t  bg-tertiary--light  margin-b  align-c"></div>
+
+        <h4 class="font-bold pad-t">Larger <code class="font-xs font-normal float-r">$gutter * 4</code></h4>
+        <div class="pad-xl-t  bg-tertiary--light  margin-b  align-c"></div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class="bg-white--tint  pad">
+    <section class="site-container">
+      <div data-bk-layout="hands:5 hands:pl:1" class="pad-b rte">
+        <h3 class="font-l">Avilable classes</h3>
+        <dl data-bk-layout="pad:r 6 palm:3 hands:6 lap:3">
+          <dt>Default</dt>
+          <dd><code>pad</code></dd>
+          <dd><code>pad-t</code></dd>
+          <dd><code>pad-b</code></dd>
+        </dl>
+        <dl data-bk-layout="pad:r 6 palm:3 hands:6 lap:3">
+          <dt>Small</dt>
+          <dd><code>pad-s</code></dd>
+          <dd><code>pad-s-t</code></dd>
+          <dd><code>pad-s-b</code></dd>
+        </dl>
+        <dl data-bk-layout="pad:r 6 palm:3 hands:6 lap:3">
+          <dt>Large</dt>
+          <dd><code>pad-l</code></dd>
+          <dd><code>pad-l-t</code></dd>
+          <dd><code>pad-l-b</code></dd>
+        </dl>
+        <dl data-bk-layout="pad:r 6 palm:3 hands:6 lap:3">
+          <dt>Larger</dt>
+          <dd><code>pad-xl</code></dd>
+          <dd><code>pad-xl-t</code></dd>
+          <dd><code>pad-xl-b</code></dd>
+        </dl>
       </div>
 
+      <div data-bk-layout="hands:5 hands:pl:1" class="rte">
+        <h3 class="font-l margin-b">Mixing options</h3>
+        <p>Classes can be combined to create various configuations:</p>
 
-      <h3 data-bk-layout class="font-l pad-t">Examples within containers</h3>
-
-      <div data-bk-layout="4">
-        <div class="pad  pad-s  bg-grey  margin-b  align-c">
-          <p class="bg-white">Small Padding</p>
-        </div>
-      </div>
-      <div data-bk-layout="4">
-        <div class="pad  bg-grey  margin-b  align-c">
-          <p class="bg-white">Default Padding</p>
-        </div>
-      </div>
-      <div data-bk-layout="4">
-        <div class="pad  pad-l  bg-grey  margin-b  align-c">
-          <p class="bg-white">Large Padding</p>
-        </div>
+        <dl>
+          <dt>Apply normal padding with small bottom padding</dt>
+          <dd><code>class="pad pad-s-b"</code></dd>
+          <dt class="margin-t">Apply small bottom padding with large top padding</dt>
+          <dd><code>class="pad-s pad-l-t"</code></dd>
+          <dt class="margin-t">Just bottom padding</dt>
+          <dd><code>class="pad-b"</code></dd>
+        </dl>
       </div>
     </section>
   </div>

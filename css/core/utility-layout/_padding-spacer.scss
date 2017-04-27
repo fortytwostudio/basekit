@@ -59,6 +59,16 @@
           padding-bottom: between($spacer-size-large / 2, $spacer-size-large, $spacer-min, $spacer-max);
         }
       }
+
+      &-xl {
+        &, &-t {
+          padding-top: between($spacer-size-larger / 2, $spacer-size-larger, $spacer-min, $spacer-max);
+        }
+
+        &, &-b {
+          padding-bottom: between($spacer-size-larger / 2, $spacer-size-larger, $spacer-min, $spacer-max);
+        }
+      }
     // }
 
     @include mq($spacer-max) {
@@ -87,6 +97,16 @@
 
         &, &-b {
           padding-bottom: $spacer-size-large;
+        }
+      }
+
+      &-xl {
+        &, &-t {
+          padding-top: $spacer-size-larger;
+        }
+
+        &, &-b {
+          padding-bottom: $spacer-size-larger;
         }
       }
     }
