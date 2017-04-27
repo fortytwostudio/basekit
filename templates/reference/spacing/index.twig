@@ -11,7 +11,7 @@
 
       <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="lap:7" class="rte pad-0-b">
         <p class="font-m">The spacing utility class gives you the option to space out content vertically (along the x axis) without having to use the grid system or creating custom CSS.</p>
 
         <p>Having a group of set sizes (based on the grid system's gutter value) also maintains a consistency throughout a design.</p>
@@ -86,6 +86,15 @@
           <dd><code>pad-xl-t</code></dd>
           <dd><code>pad-xl-b</code></dd>
         </dl>
+
+        <h3 class="font-l">Zeroing</h3>
+        <dl data-bk-layout="pad:r 6">
+          <dt>Remove padding</dt>
+          <dd><code>pad-0</code></dd>
+          <dd><code>pad-0-t</code></dd>
+          <dd><code>pad-0-b</code></dd>
+        </dl>
+        <p class="alert alert--simple alert--compact font-s">Note that this class can also be used to remove padding from a <code>data-bk-layout</code> element (only x-axis of course).</p>
       </div>
 
       <div data-bk-layout="hands:5 hands:pl:1" class="rte">
