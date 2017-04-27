@@ -15,7 +15,7 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter  pad-s">
+  <div class="bg-grey--lighter  pad-l">
     <div class="site-container">
       <div data-bk-layout="palm:8 lap:6 desk:5" class="font-light  font-l">
         <p>Basekit is an opinionated frontend framework built over many years for use in FortyTwo Studio projects.</p>
@@ -24,16 +24,16 @@
   </div>
 
 
-  <div class="bg-white pad pad-s-t">
+  <div class="bg-white pad">
     <div class="site-container">
+
+      <h3 data-bk-layout="pad:trl" class="font-xl">Getting started</h3>
 
       <div data-bk-layout="lap:4" class="float-r">
         <p class="alert alert--simple"><strong>Status:</strong> Work in Progress</p>
       </div>
 
       <div data-bk-layout="lap:8" data-bk-links="primary underline fade exit" class="rte">
-
-        <h3 class="font-xl">Getting started</h3>
 
         <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
 
@@ -49,42 +49,53 @@
   </div>
 
 
-  <div class="bg-white--tint pad pad-s-t">
+  <div class="bg-white--tint pad" data-bk-links="primary underline fade exit">
     <div class="site-container">
-      <div data-bk-layout="lap:8" data-bk-links="primary underline fade exit">
-        <h3 class="font-xl margin-b">Basekit Structure</h3>
+      <h3 data-bk-layout class="font-xl">Basekit Structure</h3>
 
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">bower_components</dt>
           <dd>Only used to keep the html5shiv snippet up to date… not often.</dd>
         </dl>
+      </div>
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">css</dt>
           <dd>The core of Basekit.</dd>
         </dl>
-        </dl>
+      </div>
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">demo</dt>
           <dd>Static templates are compile to this directory, plus documentation.</dd>
         </dl>
+      </div>
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">imgs</dt>
           <dd>Logos, placeholders, UI images etc.</dd>
         </dl>
+      </div>
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">js</dt>
           <dd>Project javascript files, numbered files will be compiled and minified into min/basekit.js in their numerical order.</dd>
         </dl>
+      </div>
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">node_modules</dt>
           <dd>Gulp dependencies, make sure this isn't committed to git.</dd>
         </dl>
+      </div>
+      <div data-bk-layout="pad:rbl hands:6">
         <dl class="alert alert--muted alert--simple">
           <dt class="font-m">templates</dt>
           <dd>Twig project templates, compile to demo.</dd>
         </dl>
       </div>
-
+{#
       {% if mainNav|length %}
         <div data-bk-layout="palm:6  lap:3  lap:pr:1">
           <h3 class="font-xl">Sections</h3>
@@ -101,7 +112,7 @@
             {% endfor %}
           </ul>
         </div>
-      {% endif %}
+      {% endif %} #}
     </div>
   </div>
 

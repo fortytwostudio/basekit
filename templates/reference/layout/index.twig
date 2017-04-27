@@ -6,27 +6,28 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter">
-    <section class="site-container  pad">
+  <div class="bg-white--tint lighter pad" id="layout-intro">
+    <section class="site-container">
 
-      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
+      <h2 data-bk-layout="pad:trl" class="font-xl">{{ title }}</h2>
 
       <div data-bk-layout="lap:7" class="rte">
-        <p class="font-m">Basekit's grid system is a faux-grid built on CSS <code>inline-block</code> and uses the <code>data</code> attribute rather than classes.</p>
+        <p class="font-m">Basekit's grid system is a faux-grid built on CSS <em>inline-block</em> and uses the <em>data</em> attribute rather than classes.</p>
 
-        <p>Once white space has been removed, <code>inline-block</code> allows for more flexibility and more robustness than floating grid items. <code>inline-block</code> items can be vertically aligned and flow more consistently.</p>
+        <p>Once white space has been removed, inline-block provides the flexibility and robustness that floats do not. Inline-block items can be vertically aligned and flow more consistently.</p>
 
-        <p>The <code>data</code> attribute allows us to almost fully separate the layout styles from other CSS and classes.</p>
+        <p>The data attribute allows us to almost fully separate the layout styles from other CSS and classes.</p>
       </div>
 
     </section>
   </div>
 
-  <div class="bg-white">
-    <section class="site-container  pad">
-      <h2 data-bk-layout="pad:rl" class="font-xl">The Grid</h2>
+  <div class="bg-white pad" id="grid">
+    <section class="site-container">
 
       <div data-bk-layout="lap:7" class="rte">
+        <h2 class="font-xl">The Grid</h2>
+
         <p>By default BaseKit is based on the common 12 column layout, this provides great flexibility and ease of use. However you can create layouts from as many or as few columns as you wish.</p>
 
         <p>Unlike Bootstrap and some other systems, there are no "tiers". If you want a four column grid at small screen size simply fake it by using three columns for each small screen column.</p>
@@ -146,10 +147,14 @@
           <span data-bk-layout class="bg-primary align-c">8</span>
         </li>
       </ul>
+    </section>
+  </div>
 
+  <div class="bg-white--tint pad" id="push-pull">
+    <section class="site-container">
+      <div data-bk-layout="lap:7" class="rte">
+        <h3 class="font-l">Indenting (Pushing/Pulling)</h3>
 
-      <div data-bk-layout="pad:trl lap:7">
-          <h3 data-bk-layout="pad:b" class="font-l pad-t">Indenting (Pushing/Pulling)</h3>
         <p>Make use of the <code>pr</code> and <code>pl</code> attrubute values to push and pull blocks of content. Unlike padding, push and pull use margins</p>
       </div>
 
@@ -167,12 +172,16 @@
             <span data-bk-layout="pad:tb" class="bg-primary align-c">Push Right 3</span>
         </li>
       </ul>
+    </section>
+  </div>
 
 
-      <div data-bk-layout="pad:rl">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Vertical Align Middle</h3>
+  <div class="bg-white pad" id="alignment">
+    <section class="site-container">
+      <div data-bk-layout>
+        <h3 class="font-l margin-b">Vertical Align Middle</h3>
 
-        <ul data-bk-layout="pad:0  middle" class="bg-grey--light">
+        <ul data-bk-layout="pad:0  middle" class="bg-grey--lighter">
           <li data-bk-layout="2">
             <span data-bk-layout class="bg-primary align-c"><br><br></span>
           </li>
@@ -188,11 +197,10 @@
         </ul>
       </div>
 
+      <div data-bk-layout>
+        <h3 class="font-l margin-b">Vertical Align Bottom</h3>
 
-      <div data-bk-layout="pad:rl">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Vertical Align Bottom</h3>
-
-        <ul data-bk-layout="pad:0  bottom" class="bg-grey--light">
+        <ul data-bk-layout="pad:0  bottom" class="bg-grey--lighter">
           <li data-bk-layout="2">
             <span data-bk-layout class="bg-primary align-c"><br><br></span>
           </li>
@@ -208,11 +216,10 @@
         </ul>
       </div>
 
+      <div data-bk-layout>
+        <h3 class="font-l margin-b">Align Right + Vertical Align Bottom</h3>
 
-      <div data-bk-layout="pad:rl">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Align Right + Vertical Align Bottom</h3>
-
-        <ul data-bk-layout="pad:0 right bottom" class="bg-grey--light">
+        <ul data-bk-layout="pad:0 right bottom" class="bg-grey--lighter">
           <li data-bk-layout="2">
             <span data-bk-layout class="bg-primary align-c"><br><br></span>
           </li>
@@ -228,11 +235,10 @@
         </ul>
       </div>
 
+      <div data-bk-layout>
+        <h3 class="font-l margin-b">Align Center + Vertical Align Middle</h3>
 
-      <div data-bk-layout="pad:rl">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Align Center + Vertical Align Middle</h3>
-
-        <ul data-bk-layout="pad:0 middle  center" class="bg-grey--light">
+        <ul data-bk-layout="pad:0 middle  center" class="bg-grey--lighter">
           <li data-bk-layout="2">
             <span data-bk-layout class="bg-primary align-c"><br><br></span>
           </li>
@@ -248,11 +254,10 @@
         </ul>
       </div>
 
+      <div data-bk-layout>
+        <h3 class="font-l margin-b">Single Item Alignment</h3>
 
-      <div data-bk-layout="pad:rl">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Single Item Alignment</h3>
-
-        <ul class="bg-grey--light color-white">
+        <ul class="bg-grey--lighter color-white">
           <li data-bk-layout="3">
             <span data-bk-layout class="bg-primary align-c">Default<br><br><br><br><br><br></span>
           </li>
@@ -264,10 +269,14 @@
           </li>
         </ul>
       </div>
+    </section>
+  </div>
 
+  <div class="bg-white--tint pad" id="padding">
+    <section class="site-container">
 
-      <div data-bk-layout="pad:trl">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Padding</h3>
+      <div data-bk-layout class="rte">
+        <h3 class="font-l">Padding</h3>
         <p>Background colour indicated where the padding has been applied.</p>
       </div>
 
@@ -315,9 +324,15 @@
           <img data-bk-layout="pad:trl" class="bg-primary" src="http://placehold.it/600x400?text=trl" alt="Top Right Left">
         </li>
       </ul>
+    </section>
+  </div>
 
-      <div data-bk-layout="pad:trl lap:7">
-        <h3 data-bk-layout="pad:b" class="font-l pad-t">Padding Sizes</h3>
+
+  <div class="bg-white pad" id="padding-size">
+    <section class="site-container">
+      <div data-bk-layout="lap:7" class="rte">
+        <h3 class="font-l">Padding Sizes</h3>
+
         <p>There are three sizes of padding, the default value and small and large values. These can be configured via the BaseGrid variables.</p>
         <p>Small padding is particularly useful if you want to combine the padding/gutters of a container as well as the child while maintaining the standard padding/gutter size.</p>
       </div>

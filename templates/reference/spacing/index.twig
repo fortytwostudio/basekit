@@ -6,59 +6,60 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter">
-    <section class="site-container  pad-l">
+  <div class="bg-white--tint pad">
+    <section class="site-container">
+      <div data-bk-layout="lap:7" class="rte">
+        <h2 class="font-xl">{{ title }}</h2>
 
-      <h2 data-bk-layout="pad:rl" class="font-xl">{{ title }}</h2>
-
-      <div data-bk-layout="lap:7" class="rte pad-0-b">
         <p class="font-m">The spacing utility class gives you the option to space out content vertically (along the x axis) without having to use the grid system or creating custom CSS.</p>
 
         <p>Having a group of set sizes (based on the grid system's gutter value) also maintains a consistency throughout a design.</p>
 
-        <dl data-bk-layout="pad:r 6 palm:3">
-          <dt>Small</dt>
-          <dd>Gutter / 2</dd>
-        </dl>
-        <dl data-bk-layout="pad:r 6 palm:3">
-          <dt>Default</dt>
-          <dd>Gutter × 1</dd>
-        </dl>
-        <dl data-bk-layout="pad:r 6 palm:3">
-          <dt>Large</dt>
-          <dd>Gutter × 2</dd>
-        </dl>
-        <dl data-bk-layout="pad:r 6 palm:3">
-          <dt>Larger</dt>
-          <dd>Gutter × 4</dd>
-        </dl>
+        <div class="alert alert--muted alert--simple">
+          <dl data-bk-layout="pad:r 6 palm:3">
+            <dt>Small</dt>
+            <dd>Gutter / 2</dd>
+          </dl>
+          <dl data-bk-layout="pad:r 6 palm:3">
+            <dt>Default</dt>
+            <dd>Gutter × 1</dd>
+          </dl>
+          <dl data-bk-layout="pad:r 6 palm:3">
+            <dt>Large</dt>
+            <dd>Gutter × 2</dd>
+          </dl>
+          <dl data-bk-layout="pad:r 6 palm:3">
+            <dt>Larger</dt>
+            <dd>Gutter × 4</dd>
+          </dl>
+        </div>
       </div>
 
     </section>
   </div>
 
-  <div class="bg-white  pad">
+  <div class="bg-white pad">
     <section class="site-container">
-      <div data-bk-layout>
-        <h3 class="font-l pad-s-b">Spacing Examples</h3>
+      <div data-bk-layout class="rte">
+        <h3 class="font-l">Spacing Examples</h3>
 
         <h4 class="font-bold">Small <code class="font-xs font-normal float-r">$gutter / 2</code></h4>
-        <div class="pad-s-t  bg-tertiary--light  margin-b  align-c"></div>
+        <div class="pad-s-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad-t">Default <code class="font-xs font-normal float-r">$gutter * 1</code></h4>
-        <div class="pad-t  bg-tertiary--light  margin-b  align-c"></div>
+        <div class="pad-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad-t">Large <code class="font-xs font-normal float-r">$gutter * 2</code></h4>
-        <div class="pad-l-t  bg-tertiary--light  margin-b  align-c"></div>
+        <div class="pad-l-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad-t">Larger <code class="font-xs font-normal float-r">$gutter * 4</code></h4>
-        <div class="pad-xl-t  bg-tertiary--light  margin-b  align-c"></div>
+        <div class="pad-xl-t  bg-tertiary--light"></div>
       </div>
     </section>
   </div>
 
 
-  <div class="bg-white--tint  pad">
+  <div class="bg-white--tint pad">
     <section class="site-container">
       <div data-bk-layout="hands:5 hands:pl:1" class="pad-b rte">
         <h3 class="font-l">Avilable classes</h3>
@@ -87,7 +88,7 @@
           <dd><code>pad-xl-b</code></dd>
         </dl>
 
-        <h3 class="font-l">Zeroing</h3>
+        <h3 class="font-l pad-t">Zeroing</h3>
         <dl data-bk-layout="pad:r 6">
           <dt>Remove padding</dt>
           <dd><code>pad-0</code></dd>
