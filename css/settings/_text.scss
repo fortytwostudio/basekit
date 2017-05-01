@@ -62,13 +62,13 @@ $code-font-size: 87.5%;
 $font-mq-min: 320px;
 $font-mq-max: ($max-width * 1px);
 $fluid-fonts: (
-  m: (
-    minSize: 20px,
-    maxSize: 22px,
-    lineHeight: (21px / $font-size),
-    mqMin: $font-mq-min,
-    mqMax: $font-mq-max,
-  ),
+  // m: (
+  //   minSize: 20px,
+  //   maxSize: 22px,
+  //   lineHeight: (21px / $font-size),
+  //   mqMin: $font-mq-min,
+  //   mqMax: $font-mq-max,
+  // ),
   l: (
     minSize: 24px,
     maxSize: 32px,

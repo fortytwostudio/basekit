@@ -29,19 +29,16 @@
     }
   }
 
-  &-n { font-size: $font-size; }
+  &-n { font-size: rem($font-size); }
+
+  &-m {
+    font-size: rem(22px);
+    line-height: (22px / $font-size);
+  }
 
   @each $font in $fluid-fonts {
     &-#{nth($font, 1)} {
       @include poly-fluid-sizing('font-size', (ffont($font, mqMin): ffont($font, minSize), ffont($font, mqMax): ffont($font, maxSize)));
-
-      // @include fluid-type(
-      //   font-size,
-      //   ffont($font, mqMin),
-      //   ffont($font, mqMax),
-      //   ffont($font, minSize),
-      //   ffont($font, maxSize)
-      // );
       line-height: ffont($font, lineHeight);
     }
   }
