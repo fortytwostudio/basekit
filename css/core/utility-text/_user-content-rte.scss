@@ -3,7 +3,7 @@
   .#{$rte-name} {
 
     > * + * {
-      margin-top: rem($font-default-bottom-margin + 0px);
+      margin-top: rem($font-default-bottom-margin * 1px);
     }
 
     // p:not(:last-of-type) {
@@ -19,27 +19,51 @@
       }
     }
 
+    h1, h2, h3, h4, h5, h6 {
+      font-size: rem(22px);
+      font-weight: 700;
+      line-height: (21px / $font-size);
+
+      &:not(:first-child) {
+        margin-top: rem(($font-default-bottom-margin * 2) * 1px);
+      }
+    }
+
+    hr {
+      background-color: rgba(mix(white, black, 50%), 0.5);
+      border: 0;
+      height: 1px;
+      margin-bottom: rem($margin * 2px);
+      margin-top: rem($margin * 2px);
+    }
+
     ul {
-      margin-left: em(20px);
+      margin-left: em($font-size * 1.25);
       // margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: disc outside none;
         margin-bottom: 0;
       }
-      & ul {
+      ul {
         margin-bottom: 0;
       }
     }
 
     ol {
-      margin-left: em(30px);
+      margin-left: em($font-size * 2);
       // margin-bottom: rem($font-default-bottom-margin + 0px);
       & > li {
         list-style: decimal-leading-zero outside none;
         margin-bottom: 0;
       }
-      & ol {
+      ol {
         margin-bottom: 0;
+      }
+    }
+
+    li {
+      p  {
+        margin-bottom: em(($margin / 2) * 1px);
       }
     }
 
