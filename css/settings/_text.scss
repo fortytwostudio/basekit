@@ -63,14 +63,14 @@ $font-mq-min: 320px;
 $font-mq-max: ($max-width * 1px);
 $fluid-fonts: (
   m: (
-    minSize: 18px,
+    minSize: 20px,
     maxSize: 22px,
     lineHeight: (21px / $font-size),
     mqMin: $font-mq-min,
     mqMax: $font-mq-max,
   ),
   l: (
-    minSize: 22px,
+    minSize: 24px,
     maxSize: 32px,
     lineHeight: (20px / $font-size),
     mqMin: $font-mq-min,
