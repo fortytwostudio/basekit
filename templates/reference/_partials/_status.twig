@@ -1,6 +1,22 @@
+{% set valueIs %}
+  {% if value < 20 %}
+  😟 
+  {% elseif value >= 20 and value < 40 %}
+  🤔 
+  {% elseif value >= 40 and value < 60 %}
+  🙂 
+  {% elseif value >= 60 and value < 90 %}
+  😁 
+  {% elseif value >= 90 and value < 100 %}
+  😎 
+  {% elseif value == 100 %}
+  👍 
+  {% endif %}
+{% endset %}
+
 <div data-bk-layout="6 palm:4 hands:3 hands:pr:1 lap:2 lap:pr:3">
-  <div class="bk-form margin-b br-1">
-    <label class="font-xs color-grey--dark" style="width:{{ value >= 40 ? value : 40 }}%" title="Ryan's happiness level of this page">Status: <span class="float-r color-primary--light">{{ value }}%</span></label>
+  <div class="bk-form margin-b br-1" title="This page is {{ value }}% towards being finished">
+    <label class="font-s"><span class="font-xs color-grey--dark">Status: </span><span class="float-r color-primary--light">{{ valueIs|length ? valueIs : value ~ '%' }}</span></label>
     <progress max="100" value="{{ value }}"></progress>
   </div>
 </div>
