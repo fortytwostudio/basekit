@@ -29,11 +29,11 @@ $colors: (
   ),
   white: (
     base: white,
-    tint: whitesmoke
+    tint: mix(black, white, 3%)
   ),
   black: (
     base: black,
-    tint: rgb(30,30,30)
+    tint: mix(white, black, 10%)
   ),
   text: (
     base: #333
