@@ -6,8 +6,12 @@
     color: $alert-text;
     margin-bottom: rem(4px);
     margin-top: rem(4px);
-    padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
+    padding: rem(($margin / 2) * 1px);
     position: relative;
+
+    @include mq(palm) {
+      padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
+    }
 
     &:before {
       background: inherit;
@@ -66,7 +70,11 @@
     }
 
     &--compact {
-      padding: rem(($margin / 2) * 1px);
+      padding: rem(($margin / 4) * 1px);
+
+      @include mq(palm) {
+        padding: rem(($margin / 2) * 1px);
+      }
     }
 
     &--simple {
