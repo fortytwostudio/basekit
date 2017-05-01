@@ -14,7 +14,7 @@
   {% endif %}
 {% endset %}
 
-<div data-bk-layout="6 palm:4 hands:3 hands:pr:1 lap:2 lap:pr:3">
+<div data-bk-layout="palm:6 hands:3 hands:pr:1 lap:2 lap:pr:3">
   <div class="bk-form margin-b br-1" title="This page is {{ value }}% towards being finished">
     <label class="font-s"><span class="font-xs color-grey--dark">Status: </span><span class="float-r color-primary--light">{{ valueIs|length ? valueIs : value ~ '%' }}</span></label>
     <progress max="100" value="{{ value }}"></progress>
