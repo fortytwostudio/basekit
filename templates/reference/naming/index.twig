@@ -8,13 +8,13 @@
 
   <div class="bg-white--tint pad">
     <section class="site-container">
+      <h2 data-bk-layout="pad:trl" class="font-xl">{{ title }}</h2>
 
-      <div data-bk-layout="lap:7" class="rte">
-        <h2 class="font-xl">{{ title }}</h2>
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p class="font-m">Description TBC</p>
-        <p class="alert alert--simple"><strong>Status:</strong> Work in progress, IGNORE FOR NOW</p>
       </div>
 
+      {% include "reference/_partials/_status.twig" with { value : 5 } %}
     </section>
   </div>
 
