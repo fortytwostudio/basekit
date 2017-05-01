@@ -118,5 +118,5 @@ $alert-text--muted: black !default;
 $tables-color: #999;
 
 // Code box styles
-$code-bg-color: #eee;
-$code-text-color: black;
+$code-bg-color: rgba(mix(white, black, 50%), 0.25);
+$code-text-color: currentColor;
