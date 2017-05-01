@@ -33,7 +33,7 @@
 
   &-m {
     font-size: rem(22px);
-    line-height: (22px / $font-size);
+    line-height: (21px / $font-size);
   }
 
   @each $font in $fluid-fonts {
