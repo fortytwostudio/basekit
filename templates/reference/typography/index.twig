@@ -11,7 +11,7 @@
 
       <h2 data-bk-layout="pad:trl" class="font-xl">{{ title }}</h2>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p class="font-m">Responsive, viewport based, fonts should be restricted to use on headings and isolated blocks of text. Avoid using it on copy paragraphs and long blocks of text.
 
         <p>I would also advise against using medium or large sizes nearby normal (non-responsive) blocks of text because these viewport based texts can actually end up <em>smaller</em> at certain screen sizes.</p>
@@ -21,14 +21,19 @@
         <p>The solution is simple; just define font styles to utility classes and apply where required regardless of the markup. If you want to style one list item to look like some hero text, go right ahead! It does not matter, the semantics are in your HTML markup and content.</p>
       </div>
 
+      {% include "reference/_partials/_status.twig" with { value : 60 } %}
 
-      <div data-bk-layout="lap:4 lap:pr:1">
-        <h4 class="font-m">Default sans-serif</h4>
-        <p data-bk-layout="pad:tb pad:small"><code data-bk-layout="pad:small">-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif</code></p>
-        <h4 class="font-m margin-t">Default serif</h4>
-        <p data-bk-layout="pad:tb pad:small"><code data-bk-layout="pad:small">georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif</code></p>
-        <h4 class="font-m margin-t">Default monospace</h4>
-        <p data-bk-layout="pad:t pad:small"><code data-bk-layout="pad:small">'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace</code></p>
+      <div data-bk-layout="lap:4">
+        <h4 class="font-m">Default <strong>sans-serif</strong></h4>
+        <p data-bk-layout="pad:tb pad:small" class="font-s"><code data-bk-layout="pad:small">-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif</code></p>
+      </div>
+      <div data-bk-layout="lap:4">
+        <h4 class="font-m">Default <strong>serif</strong></h4>
+        <p data-bk-layout="pad:tb pad:small" class="font-s"><code data-bk-layout="pad:small">georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif</code></p>
+      </div>
+      <div data-bk-layout="lap:4">
+        <h4 class="font-m">Default <strong>monospace</strong></h4>
+        <p data-bk-layout="pad:t pad:small" class="font-s"><code data-bk-layout="pad:small">'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace</code></p>
       </div>
 
     </section>

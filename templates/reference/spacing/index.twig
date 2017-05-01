@@ -8,9 +8,8 @@
 
   <div class="bg-white--tint pad">
     <section class="site-container">
-      <div data-bk-layout="lap:7" class="rte">
-        <h2 class="font-xl">{{ title }}</h2>
-
+      <h2 data-bk-layout="pad:trl" class="font-xl">{{ title }}</h2>
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p class="font-m">The spacing utility class gives you the option to space out content vertically (along the x axis) without having to use the grid system or creating custom CSS.</p>
 
         <p>Having a group of set sizes (based on the grid system's gutter value) also maintains a consistency throughout a design.</p>
@@ -34,6 +33,8 @@
           </dl>
         </div>
       </div>
+
+      {% include "reference/_partials/_status.twig" with { value : 75 } %}
 
     </section>
   </div>
