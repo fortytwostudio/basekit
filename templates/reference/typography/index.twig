@@ -456,17 +456,3 @@
 {% include 'reference/_partials/_pagination.twig' %}
 
 {% endblock %}
-
-{% block bodyJS %}
-  <script>
-    $(document).ready(function(){
-      $('.nav-menu').append('<li class="nav-item bk-form font-xs"><div data-bk-layout="pad:l pad:large"><input class="fontoggler" type="text" placeholder="Try a different font…" title="Try a font name like avenir, verdana, cursive, comic sans ms, etc" id="fontoggler" style="border:0!important;"></div></li>' );
-
-      $('body').on('keypress',"#fontoggler", function(event){
-        if (event.which == 13){
-          $('body').css('font-family', $(this).val());
-        }
-      });
-    });
-  </script>
-{% endblock %}
