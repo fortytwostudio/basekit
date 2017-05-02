@@ -10,7 +10,7 @@
   <div data-bk-layout="to:hands:pad:0  hands:pad:tb  hands:7  hands:pr:2  hands:right" class="site-nav-wrapper">
     <nav id="site-nav" data-bk-links="exit down" class="site-nav  nav-links  font-upper" tabindex="-1" aria-labelledby="nav-toggler">
       {# <h2 class="hide">Website Navigation</h2> #}
-      <ul class="nav  nav--block  |  nav-menu">
+      <ul class="nav nav--block | nav-menu">
         {% for item in mainNav %}
           <li class="nav-item">
             <a{{ isActivePage is defined and isActivePage == item.slug ? ' class="active" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
