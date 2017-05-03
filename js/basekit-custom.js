@@ -10,22 +10,35 @@ $(function() {
   });
 
   /// See https://github.com/kamem/jquery.smoothPageScroll
-  /// Uncomment the next line if you want pages to smooth scroll on load if # is present in URL
-  // $.smoothPageScrollByLoaded();
-  /// Basic config with Add Hash disabled
-  $('a[href^="#"]').smoothPageScroll();
+  // Smooth scroll any links with a #
+  $('a[href*="#"]').smoothPageScroll();
+  // Use this option with the ^ if targetting all links with a # breaks stuff
+  // $('a[href^="#"]').smoothPageScroll();
+  // Pages will smooth scroll on load if # is present in URL
+  $.smoothPageScrollByLoaded();
 
-  // Funcy font tester tool
+  // FONTOGGLER
+  var fontogNotice = '<div class="fontoggler__notice inline-block font-s" style="position:fixed;top:0.25rem;right:0.25rem;z-index:900;"><a data-bk-layout="pad:small" class="btn" href="/demo/reference/typography/#fontoggler">Custom font active</a></div>';
+  // When the enter key is pressed…
   $('body').on('keypress',"#fontoggler", function(event){
     if (event.which == 13){
-      $('body').css('font-family', $(this).val());
+      // Set the body style font-family to whatever the value is and prepend the font notice
+      $('body').css('font-family', $(this).val()).prepend(fontogNotice);
+      // Empty the cookie
       $.cookie("fontoggler", '', { path: '/', expires: 1 });
+      // Set the cookie to the entered value
       $.cookie("fontoggler", $(this).val(), { path: '/', expires: 1 });
+      // If the cookie empty remove the notice
+      if ($.cookie("fontoggler") == '') {
+        $(".fontoggler__notice").remove();
+      }
     };
   });
 
-  if ($.cookie("fontoggler") != undefined) {
-    $('body').css('font-family', $.cookie("fontoggler"));
+  if ($.cookie("fontoggler") != undefined && $.cookie("fontoggler") != "") {
+    // Based on the cookie set the body font style and prepend the font notice
+    $('body').css('font-family', $.cookie("fontoggler")).prepend(fontogNotice);
+    // Add the value into the text field
     $('#fontoggler').attr('value', $.cookie("fontoggler"));
   };
 });
