@@ -28,12 +28,20 @@
   <div class="bg-white  pad" id="brand-colours">
     <section class="site-container">
 
-      <div data-bk-layout="lap:7  lap:pl:5" class="rte">
-        <h3 class="font-l">Brand Colours</h3>
+      <h3 data-bk-layout="pad:trl" class="font-l">Brand Colours</h3>
 
+      <div data-bk-layout="lap:7" class="rte">
         <p>Primary and Secondary values will be defined in by brand guidelines or style guides provided by the designer or client. The lighter and darker values are not always the same and should be tweaked in the Color settings Sass file. These tings should be set for a balance of aesthetic appeal and utility, a dark that is too light or a light that is too dark won't be of any use when building the website.</p>
 
         <p>The tertiary value is not always provided as part of the brand guidelines or style guide, in such a case talk to the designer responsible or find an appropriatly fitting grey.</p>
+      </div>
+
+      <div data-bk-layout="lap:4 lap:pr:1" class="pad-b">
+        <div class="alert alert--simple font-s">
+          <h4 class="font-n margin-b"><strong>Note for designers</strong></h4>
+
+          <p>You're not expected to provide the additional four light/dark values, only the three main Primary, Secondary and Tertiary. The four additional values are tweaked to best fit actual use throughout the site, often the best value is only found once the functional UI starts coming together.</p>
+        </div>
       </div>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
