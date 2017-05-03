@@ -1,24 +1,28 @@
+$color-primary: #00739f !default;
+$color-secondary: #c62b90 !default;
+$color-tertiary: #71e0b1 !default;
+
 $colors: (
   primary: (
-    base: #00739f,
-    lighter: lighten(#00739f, 30%),
-    light: lighten(#00739f, 10%),
-    dark: darken(#00739f, 10%),
-    darker: darken(#00739f, 18%)
+    base: $color-primary,
+    lighter: lighten($color-primary, 30%),
+    light: lighten($color-primary, 10%),
+    dark: darken($color-primary, 10%),
+    darker: darken($color-primary, 18%)
   ),
   secondary: (
-    base: #c62b90,
-    lighter: lighten(#c62b90, 30%),
-    light: lighten(#c62b90, 10%),
-    dark: darken(#c62b90, 10%),
-    darker: darken(#c62b90, 25%)
+    base: $color-secondary,
+    lighter: lighten($color-secondary, 30%),
+    light: lighten($color-secondary, 10%),
+    dark: darken($color-secondary, 10%),
+    darker: darken($color-secondary, 25%)
   ),
   tertiary: (
-    base: #71e0b1,
-    lighter: lighten(#71e0b1, 28%),
-    light: lighten(#71e0b1, 10%),
-    dark: darken(#71e0b1, 25%),
-    darker: darken(#71e0b1, 40%)
+    base: $color-tertiary,
+    lighter: lighten($color-tertiary, 28%),
+    light: lighten($color-tertiary, 10%),
+    dark: darken($color-tertiary, 25%),
+    darker: darken($color-tertiary, 40%)
   ),
   grey: (
     base: #ccc,
