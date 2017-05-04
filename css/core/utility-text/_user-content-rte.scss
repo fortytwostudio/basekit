@@ -19,7 +19,7 @@
       }
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    > h1, > h2, > h3, > h4, > h5, > h6 {
       font-size: rem(22px);
       font-weight: 700;
       line-height: (21px / $font-size);
@@ -98,7 +98,11 @@
         br {
           content: "";
           display: block;
-          border: 5px dotted red;
+          &:before {
+            content: "BR TAG MISUSED";
+            display: block;
+            border: 5px dotted red;
+          }
         }
       }
     }
