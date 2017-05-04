@@ -1,6 +1,6 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Spacing / Padding" %}
+{% set title = "Spacing" %}
 {% set slug = "spacing" %}
 
 {% block content %}
@@ -42,9 +42,9 @@
 
   <div class="bg-white pad">
     <section class="site-container">
-      <div data-bk-layout class="rte">
-        <h3 class="font-l">Spacing Examples</h3>
+      <h3 data-bk-layout="pad:trl" class="font-l">Spacing Examples</h3>
 
+      <div data-bk-layout class="rte">
         <h4 class="font-bold">Small <code class="font-xs font-normal float-r">$gutter / 2</code></h4>
         <div class="pad-s-t  bg-tertiary--light"></div>
 
@@ -63,8 +63,9 @@
 
   <div class="bg-white--tint pad">
     <section class="site-container">
-      <div data-bk-layout="hands:5 hands:pl:1" class="pad-b rte">
-        <h3 class="font-l">Avilable classes</h3>
+      <div data-bk-layout="hands:5 hands:pl:1" class="pad-b">
+        <h3 class="font-l margin-b">Avilable classes</h3>
+
         <dl data-bk-layout="pad:r 6 palm:3 hands:6 lap:3">
           <dt>Default</dt>
           <dd><code>pad</code></dd>
@@ -90,21 +91,24 @@
           <dd><code>pad-xl-b</code></dd>
         </dl>
 
-        <h3 class="font-l pad-t">Zeroing</h3>
-        <dl data-bk-layout="pad:r 6">
+        <h3 class="font-l pad-t margin-b">Zeroing</h3>
+
+        <dl data-bk-layout="pad:r 6" class="margin-b">
           <dt>Remove padding</dt>
           <dd><code>pad-0</code></dd>
           <dd><code>pad-0-t</code></dd>
           <dd><code>pad-0-b</code></dd>
         </dl>
-        <p class="alert alert--simple alert--compact font-s">Note that this class can also be used to remove padding from a <code>data-bk-layout</code> element (only x-axis of course).</p>
+
+        <p class="alert alert--simple alert--compact font-s">Note that this class can also be used to remove grid <em>padding</em> from a <code>data-bk-layout</code> element (only x-axis of course).</p>
       </div>
 
-      <div data-bk-layout="hands:5 hands:pl:1" class="rte">
+      <div data-bk-layout="hands:5 hands:pl:1">
         <h3 class="font-l margin-b">Mixing options</h3>
+
         <p>Classes can be combined to create various configuations:</p>
 
-        <dl>
+        <dl class="margin-t">
           <dt>Apply normal padding with small bottom padding</dt>
           <dd><code>class="pad pad-s-b"</code></dd>
           <dt class="margin-t">Apply small bottom padding with large top padding</dt>
