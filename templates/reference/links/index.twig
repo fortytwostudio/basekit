@@ -11,7 +11,9 @@
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
       <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
-        <p class="font-m">…</p>
+        <p class="font-m">Similar to the Basekit layout attribute, links in Basekit are also applied using a data attribute: <code>data-bk-links</code>.</p>
+
+        <p>This scoping to a data attribute allows simpler configuration and less stuff in the class attribute.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 10 } %}
@@ -21,13 +23,18 @@
 
   <div class="bg-white pad">
     <section class="site-container">
+      <h3 data-bk-layout="pad:trl" class="font-l">Links styles</h3>
+
       <div data-bk-layout="lap:7" class="rte">
+        <p>By default links are available in two main styles, primary and secondary. There are then various modifiers that can be applied to fine tune links to their surrounding context.</p>
+
         <h3 class="font-l">Primary links</h3>
+
         <p data-bk-links="primary fade underline">
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
         </p>
 
-        <h3 class="font-l">Secondary link</h3>
+        <h3 class="font-l">Secondary links</h3>
         <p data-bk-links="secondary fade underline">
           Vivamus massa odio, <a href="#">dignissim ac ante at</a>, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue. <a href="#">Fusce semper odio et gravida interdum</a>.
         </p>

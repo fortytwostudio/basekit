@@ -47,8 +47,12 @@
     font-family: $font-family--serif;
   }
 
-  &-thin {
+  &-light {
     font-weight: 200;
+  }
+
+  &-thin {
+    font-weight: 300;
   }
 
   &-normal {

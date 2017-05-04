@@ -3,37 +3,103 @@ html {
 
   // Inline Styles
   *[style] {
-    border: 5px dotted red;
+    outline: 5px dotted red;
+
+    &::before {
+      background-color: red;
+      color: white;
+      content: "Inline styles";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
   // Faulty or Missing Link Targets
   a:not([href]),
   a[href="#"],
   a[href=""],
   a[href*="javascript:void(0)"] {
-    border: 5px dotted #00f;
+    outline: 5px dotted #00f;
+
+    &::before {
+      background-color: #00f;
+      color: white;
+      content: "Faulty or Missing Link Targets";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Unaccessible Images
   img:not([alt]),
   img[alt=""] {
-    border: 5px dotted #ffa500;
+    outline: 5px dotted #ffa500;
+
+    &::before {
+      background-color: #ffa500;
+      color: white;
+      content: "Inaccessible Images";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Missing Document Language
   &:not([lang]),
   &[lang=""] {
-    border: 5px dotted #ff7f50;
+    outline: 5px dotted #ff7f50;
+
+    &::before {
+      background-color: #ff7f50;
+      color: white;
+      content: "Missing Document Language";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Incorrect Character Set
   meta[charset]:not([charset="UTF-8"]) {
     display: block;
-    border: 5px dotted #dc143c;
+    outline: 5px dotted #dc143c;
+
+    &::before {
+      background-color: #dc143c;
+      color: white;
+      content: "Incorrect Character Set";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   meta[charset="UTF-8"]:not(:first-child) {
     display: block;
-    border: 5px dotted #dc143c;
+    outline: 5px dotted #dc143c;
+
+    &::before {
+      background-color: #dc143c;
+      color: white;
+      content: "Incorrect Character Set";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Unaccessible Viewport Attributes
@@ -41,37 +107,103 @@ html {
   meta[name="viewport"][content*="maximum-scale"],
   meta[name="viewport"][content*="minimum-scale"] {
     display: block;
-    border: 5px dotted #f0f;
+    outline: 5px dotted #f0f;
+
+    &::before {
+      background-color: #f0f;
+      color: white;
+      content: "Inaccessible Viewport Attributes";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Unlabelled Form Elements
   input:not([id]),
   select:not([id]),
   textarea:not([id]) {
-    border: 5px dotted #da70d6;
+    outline: 5px dotted #da70d6;
+
+    &::before {
+      background-color: #da70d6;
+      color: white;
+      content: "Unlabelled Form Elements";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   label:not([for]) {
-    border: 5px dotted #da70d6;
+    outline: 5px dotted #da70d6;
+
+    &::before {
+      background-color: #da70d6;
+      color: white;
+      content: "Unlabelled Form Elements";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   input:not([name]),
   select:not([name]),
   textarea:not([name]),
   form:not([name]):not([id]) {
-    border: 5px dotted #800080;
+    outline: 5px dotted #800080;
+
+    &::before {
+      background-color: #800080;
+      color: white;
+      content: "Unlabelled Form Elements";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Empty Interactive Elements
   button:empty,
   a:empty {
-    border: 5px dotted #6495ed;
+    outline: 5px dotted #6495ed;
+
+    &::before {
+      background-color: #6495ed;
+      color: white;
+      content: "Empty Interactive Elements";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 
   // Unnecessary or Deprecated Attributes
   script[type="text/javascript"],
   link[rel="stylesheet"][type="text/css"] {
     display: block;
-    border: 5px dotted #008080;
+    outline: 5px dotted #008080;
+
+    &::before {
+      background-color: #008080;
+      color: white;
+      content: "Unnecessary or Deprecated Attributes";
+      display: inline-block;
+      font-size: 12px;
+      padding-left: 4px;
+      padding-right: 4px;
+      text-transform: uppercase;
+    }
   }
 }

@@ -15,7 +15,7 @@ $(function() {
   // Use this option with the ^ if targetting all links with a # breaks stuff
   // $('a[href^="#"]').smoothPageScroll();
   // Pages will smooth scroll on load if # is present in URL
-  $.smoothPageScrollByLoaded();
+  // $.smoothPageScrollByLoaded();
 
   // FONTOGGLER
   var fontogNotice = '<div class="fontoggler__notice inline-block font-s" style="position:fixed;top:0.25rem;right:0.25rem;z-index:900;"><a data-bk-layout="pad:small" class="btn" href="/demo/reference/typography/#fontoggler">Custom font active</a></div>';
