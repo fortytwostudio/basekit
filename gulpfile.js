@@ -40,7 +40,6 @@ gulp.task('sync', function() {
     proxy: 'basekit.dev',
     reloadDelay: 0,
     notify: false,
-    ui: false,
     scrollRestoreTechnique: "cookie",
     logLevel: "silent",
   });
