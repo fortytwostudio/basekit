@@ -16,7 +16,7 @@
   &-xs {
     font-size: rem(10px);
 
-    @include mq(lap) {
+    @include mq(hands) {
       font-size: rem(12px);
     }
   }
@@ -24,7 +24,7 @@
   &-s {
     font-size: rem(12px);
 
-    @include mq(lap) {
+    @include mq(hands) {
       font-size: rem(14px);
     }
   }
