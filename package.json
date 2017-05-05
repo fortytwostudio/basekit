@@ -1,10 +1,10 @@
 {
-  "name"        : "basekit-gulp-workflow",
-  "version"     : "0.2.0",
-  "description" : "Basekit Gulp Workflow",
-  "repository"  : {
-    "type"      : "git",
-    "url"       : "git+https://github.com/fortytwostudio/basekit.git"
+  "name": "basekit-gulp-workflow",
+  "version": "0.2.0",
+  "description": "Basekit Gulp Workflow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortytwostudio/basekit.git"
   },
   "keywords": [
     "gulp",
@@ -16,24 +16,25 @@
     "sass",
     "twig"
   ],
-  "author"  : "Ryan Roberts",
-  "license" : "MIT",
-  "bugs"    : {
-    "url"   : "https://github.com/fortytwostudio/basekit/issues"
+  "author": "Ryan Roberts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fortytwostudio/basekit/issues"
   },
   "homepage": "http://basekit.fortytwo.studio",
   "devDependencies": {
-    "gulp"         : "^3.9.1",
-    "gulp-concat"  : "^2.6.1",
-    "gulp-cssnano" : "^2.1.2",
-    "gulp-data"    : "^1.2.1",
-    "gulp-htmlmin" : "^3.0.0",
-    "gulp-notify"  : "^3.0.0",
-    "gulp-plumber" : "^1.1.0",
-    "gulp-sass"    : "^3.1.0",
-    "gulp-size"    : "^2.1.0",
-    "gulp-twig"    : "^0.7.0",
-    "gulp-uglify"  : "^2.1.2",
-    "gulp-util"    : "^3.0.8"
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-data": "^1.2.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-twig": "^0.7.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8"
   }
 }

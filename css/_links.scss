@@ -26,25 +26,21 @@
   //
   // 4.
   // The original link class has been trained at the end of this file in case you want to switch back
-  //
-  // CONTENTS:
-  // 01. normal
-  // 02. light
-  // 03. fade
-  // 04. dim
-  // 05. exit
-  // 06. more
-  // 07. down
-  // 08. up
-  // 09. download
-  // 10. underline
-  // 11. underline-hover
-  // 12. no-underline
-  // 13. no-outline
 
 // Use this group to setup your desired link color styles, beyond this group you will find various configation utilities that can be used to apply various states and styles to links
+
 // We do not want these styles to apply to the .btn link style, so it is excluded.
 a:not(.btn) {
+
+  // Link style used on white backgrounds, you'll want to combine this with `dim`
+  [data-bk-links~="white"] & {
+    color: white;
+
+    &:focus, &:hover {
+      color: white;
+    }
+  }
+
   // Link style based on the primary brand colour
   [data-bk-links~="primary"] & {
     color: color(primary);
@@ -60,15 +56,6 @@ a:not(.btn) {
 
     &:focus, &:hover {
       color: color(primary);
-    }
-  }
-
-  // Link style used on white backgrounds, you'll want to combine this with `dim`
-  [data-bk-links~="white"] & {
-    color: white;
-
-    &:focus, &:hover {
-      color: white;
     }
   }
 
@@ -92,6 +79,15 @@ a:not(.btn) {
     &:hover,
     &:focus {
       text-decoration-color: currentColor;
+    }
+  }
+  // Underline only on the intitial state
+  [data-bk-links~="underline-initial"] & {
+    text-decoration-color: currentColor;
+
+    &:hover,
+    &:focus {
+      text-decoration-color: transparent;
     }
   }
   // Force underline text off if required (e.g. the link is inside a container with underline enabled but you want this specific one without an underline)
@@ -139,7 +135,7 @@ a:not(.btn) {
   }
 
   a:hover:after {
-    transform: translateX(3px);
+    transform: translateX(2px);
   }
 }
 
@@ -150,7 +146,15 @@ a:not(.btn) {
   a[href^="mailto"]:after {
     content: "\2009 ↗︎";
     display: inline-block;
-    transform: translateY(2px); // ← this should be removed depending on the font
+    transform: translate(0 2px); // ← this should be removed depending on the font
+    transition: transform $speed-normal;
+  }
+
+  a[target="_blank"]:hover:after,
+  a[target="_blank"]:focus:after,
+  a[href^="mailto"]:hover:after,
+  a[href^="mailto"]:focus:after {
+    transform: translate(1px 0);
   }
 }
 
@@ -159,6 +163,13 @@ a:not(.btn) {
   a[href^="#"]:not([href="#"]):after {
     content: "\2009 ↓";
     display: inline-block;
+    transform: translateY(0);
+    transition: transform $speed-normal;
+  }
+
+  a[href^="#"]:not([href="#"]):hover:after,
+  a[href^="#"]:not([href="#"]):focus:after {
+    transform: translateY(2px);
   }
 }
 
@@ -167,6 +178,13 @@ a:not(.btn) {
   a[href^="#"]:not([href="#"]):after {
     content: "\2009 ↑";
     display: inline-block;
+    transform: translateY(0);
+    transition: transform $speed-normal;
+  }
+
+  a[href^="#"]:not([href="#"]):hover:after,
+  a[href^="#"]:not([href="#"]):focus:after {
+    transform: translateY(-2px);
   }
 }
 
