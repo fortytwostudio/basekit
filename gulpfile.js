@@ -35,13 +35,13 @@ var hasError = notify.onError({
 gulp.task('sync', function() {
   browserSync({
     startPath: '/demo/',
-    open: 'external',
+    open: false, // or 'external'
     host: 'basekit.dev',
     proxy: 'basekit.dev',
-    reloadDelay: 0,
-    notify: false,
+    // notify: false,
     scrollRestoreTechnique: "cookie",
     logLevel: "silent",
+    reloadDelay: 2500
   });
 });
 
