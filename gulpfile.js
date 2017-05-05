@@ -18,7 +18,10 @@ var gulp            = require('gulp'),
     // Stops stream from ending on error
     plumber         = require('gulp-plumber'),
     // Send noficitations to the system and CLI
-    notify         = require('gulp-notify');
+    notify          = require('gulp-notify'),
+    // Sync changes to the Browser
+    browserSync     = require('browser-sync')
+    reload          = browserSync.reload;
 
 ///
 /// Setup an error notification for gulp-plumber to handle
@@ -27,6 +30,20 @@ var hasError = notify.onError({
   title: 'Error',
   message: '<%= error.message %>',
   sound: "Basso"
+});
+
+gulp.task('sync', function() {
+  browserSync({
+    startPath: '/demo/',
+    open: 'external',
+    host: 'basekit.dev',
+    proxy: 'basekit.dev',
+    reloadDelay: 0,
+    notify: false,
+    ui: false,
+    scrollRestoreTechnique: "cookie",
+    logLevel: "silent",
+  });
 });
 
 ///
@@ -50,6 +67,8 @@ gulp.task('scss', function() {
     }))
     //
     .pipe(gulp.dest('css'))
+    // Reload and inject
+    .pipe(reload({ stream: true }))
     // Show file size before gzip
     .pipe(size({ showFiles: true }))
     // Show file size after gzip
@@ -147,6 +166,7 @@ gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', { interval: 500 }, ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
+  gulp.watch('demo/**/*.html').on('change', reload);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'sync']);
