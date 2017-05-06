@@ -14,19 +14,11 @@
 .font {
   // Small font size doesn't need to be fancy responsive, just a tweak is enough.
   &-xs {
-    font-size: rem(10px);
-
-    @include mq(hands) {
-      font-size: rem(12px);
-    }
+    font-size: rem($font-size - 4);
   }
 
   &-s {
-    font-size: rem(12px);
-
-    @include mq(hands) {
-      font-size: rem(14px);
-    }
+    font-size: rem($font-size - 2);
   }
 
   &-n { font-size: rem($font-size); }
