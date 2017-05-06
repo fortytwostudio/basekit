@@ -130,6 +130,7 @@ a:not(.btn) {
   a:after {
     content: " →";
     display: inline-block;
+    font-weight: bold;
     transform: translateX(0);
     transition: transform $speed-normal;
   }
@@ -146,7 +147,8 @@ a:not(.btn) {
   a[href^="mailto"]:after {
     content: "\2009 ↗︎";
     display: inline-block;
-    transform: translate(0 2px); // ← this should be removed depending on the font
+    font-weight: bold;
+    transform: translate(0 1px); // ← this should be removed depending on the font
     transition: transform $speed-normal;
   }
 
@@ -163,6 +165,7 @@ a:not(.btn) {
   a[href^="#"]:not([href="#"]):after {
     content: "\2009 ↓";
     display: inline-block;
+    font-weight: bold;
     transform: translateY(0);
     transition: transform $speed-normal;
   }
@@ -178,6 +181,7 @@ a:not(.btn) {
   a[href^="#"]:not([href="#"]):after {
     content: "\2009 ↑";
     display: inline-block;
+    font-weight: bold;
     transform: translateY(0);
     transition: transform $speed-normal;
   }
@@ -196,6 +200,7 @@ a:not(.btn) {
     border-bottom: 2px solid currentColor;
     content: "↓"!important;
     display: inline-block;
+    font-weight: bold;
     margin-left: 0.4em;
     transform: translateY(-3px);
     transition:
