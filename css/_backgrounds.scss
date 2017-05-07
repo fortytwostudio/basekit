@@ -1,4 +1,3 @@
-
 .bg {
   @each $name, $color in $colors {
     &-#{$name} {
@@ -41,31 +40,26 @@
   &-positive {
     background-color: $alert-bg--positive;
   }
-
-  // OLD METHOD
-  //
-  // &-white { background-color: white; }
-  // &-black { background-color: black; }
-  // &-grey { background-color: $grey; }
-  // &-grey--light { background-color: $grey--light; }
-  // &-grey--dark { background-color: $grey--dark; }
-  //
-  // &-primary {
-  //   background-color: $primary;
-  //   &--light { background-color: $primary--light; }
-  //   &--dark { background-color: $primary--dark; }
-  // }
-  //
-  // &-secondary {
-  //   background-color: $secondary;
-  //   &--light { background-color: $secondary--light; }
-  //   &--dark { background-color: $secondary--dark; }
-  // }
-  //
-  // &-tertiary {
-  //   background-color: $tertiary;
-  //   &--light { background-color: $tertiary--light; }
-  //   &--dark { background-color: $tertiary--dark; }
-  // }
-
 }
+
+// $blend-modes: (
+//   // normal,
+//   multiply,
+//   screen,
+//   overlay,
+//   darken,
+//   lighten,
+//   // color-dodge,
+//   // color-burn,
+//   soft-light
+// );
+//
+// @each $mode in $blend-modes {
+//   .bg-bm-#{$mode} {
+//     background-blend-mode: $mode;
+//   }
+//
+//   .mix-bm-#{$mode} {
+//     mix-blend-mode: $mode;
+//   }
+// }
