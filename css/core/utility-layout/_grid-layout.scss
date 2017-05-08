@@ -2,6 +2,13 @@
 /// @author Ryan Roberts
 ////
 
+$grid-columns: 12 !default;
+$grid-column-width: 70 !default;
+$grid-gutter: 40 !default;
+
+$margin: $grid-gutter / 2 !default;
+
+
 /// Name your layout data attribute, should start with `data-`.
 ///
 /// @example
@@ -36,7 +43,7 @@ $bk-grid-padding-large: $margin * 2 !default;
 /// to push the a layout the total number of columns so here we subtract one
 /// from the number.
 /// @access private
-$bk-push-columns: $columns - 1 !default;
+$bk-push-columns: $grid-columns - 1 !default;
 
 /// Enable/Disable push (towards the right |-->) CSS.
 $bk-push-right: true !default;
@@ -135,9 +142,9 @@ $bk-push-left: true !default;
   }
 
   // Loop through the number of columns defined in the settings and output the appropriate width in %
-  @for $i from 1 through $columns {
+  @for $i from 1 through $grid-columns {
     @include attr-module($bk-grid-name, #{$gw-value}#{$i}) {
-      width: 100% / ($columns / $i);
+      width: 100% / ($grid-columns / $i);
     }
   }
 }
@@ -153,7 +160,7 @@ $bk-push-left: true !default;
   @if $bk-push-right {
     @for $i from 1 through $bk-push-columns {
       @include attr-module($bk-grid-name, #{$gw-value}#{"pr:"}#{$i}) {
-        margin-left: 100% / ($columns / $i);
+        margin-left: 100% / ($grid-columns / $i);
       }
     }
   }
@@ -161,7 +168,7 @@ $bk-push-left: true !default;
   @if $bk-push-left {
     @for $i from 1 through $bk-push-columns {
       @include attr-module($bk-grid-name, #{$gw-value}#{"pl:"}#{$i}) {
-        margin-right: 100% / ($columns / $i);
+        margin-right: 100% / ($grid-columns / $i);
       }
     }
   }

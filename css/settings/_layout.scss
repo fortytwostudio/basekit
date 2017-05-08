@@ -13,17 +13,15 @@ $mq-breakpoints: (
   desk: 1440px
 );
 
-// Define the column count for of your design. 12 is recommended even if you
-// have fewer columns in the design, fake a low column count.
-$columns: 12;
+// Define the column count for of your design.
+$grid-columns: 12;
+$grid-column-width: 70;
+$grid-gutter: 40;
 
-// Define the columns and spacing.
-$column-width: 70;
-$gutter: 40;
-$margin: $gutter / 2;
+$margin: $grid-gutter / 2;
 
 // Don't touch this if you don't know what it does… $max-width gets used often.
-$max-width: ($column-width * $columns) + ($gutter * $columns);
+$max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns);
 
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;

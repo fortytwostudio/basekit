@@ -8,40 +8,40 @@
 
     // @include mq($spacer-min) {}
     &, &-t {
-      padding-top: between(($gutter * 1px) / 2, ($gutter * 1px), $spacer-min, $spacer-max);
+      padding-top: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
     }
 
     &, &-b {
-      padding-bottom: between(($gutter * 1px) / 2, ($gutter * 1px), $spacer-min, $spacer-max);
+      padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
     }
 
     &-s {
       &, &-t {
-        padding-top: between((($gutter / 2) * 1px) / 2, (($gutter / 2) * 1px), $spacer-min, $spacer-max);
+        padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between((($gutter / 2) * 1px) / 2, (($gutter / 2) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-l {
       &, &-t {
-        padding-top: between((($gutter * 2) * 1px) / 2, (($gutter * 2) * 1px), $spacer-min, $spacer-max);
+        padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between((($gutter * 2) * 1px) / 2, (($gutter * 2) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-xl {
       &, &-t {
-        padding-top: between((($gutter * 4) * 1px) / 2, (($gutter * 4) * 1px), $spacer-min, $spacer-max);
+        padding-top: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between((($gutter * 4) * 1px) / 2, (($gutter * 4) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
       }
     }
 
@@ -57,40 +57,40 @@
 
     @include mq($spacer-max) {
       &, &-t {
-        padding-top: ($gutter * 1px);
+        padding-top: ($grid-gutter * 1px);
       }
 
       &, &-b {
-        padding-bottom: ($gutter * 1px);
+        padding-bottom: ($grid-gutter * 1px);
       }
 
       &-s {
         &, &-t {
-          padding-top: (($gutter / 2) * 1px);
+          padding-top: (($grid-gutter / 2) * 1px);
         }
 
         &, &-b {
-          padding-bottom: (($gutter / 2) * 1px);
+          padding-bottom: (($grid-gutter / 2) * 1px);
         }
       }
 
       &-l {
         &, &-t {
-          padding-top: (($gutter * 2) * 1px);
+          padding-top: (($grid-gutter * 2) * 1px);
         }
 
         &, &-b {
-          padding-bottom: (($gutter * 2) * 1px);
+          padding-bottom: (($grid-gutter * 2) * 1px);
         }
       }
 
       &-xl {
         &, &-t {
-          padding-top: (($gutter * 4) * 1px);
+          padding-top: (($grid-gutter * 4) * 1px);
         }
 
         &, &-b {
-          padding-bottom: (($gutter * 4) * 1px);
+          padding-bottom: (($grid-gutter * 4) * 1px);
         }
       }
     }
