@@ -54,13 +54,9 @@ $html-body-full-height: true;
 // Output and configure the padding spacer utility, this is used to add
 // additional top/bottom padding where necessary.
 $spacer-css: true;
-$spacer-name: pad;
-$spacer-min: 320px;
-$spacer-max: $max-width * 1px;
-$spacer-size-small: ($gutter / 2) * 1px;
-$spacer-size-default: $gutter * 1px;
-$spacer-size-large: ($gutter * 2) * 1px;
-$spacer-size-larger: ($gutter * 4) * 1px;
+// $spacer-name: pad;
+// $spacer-min: 320px;
+// $spacer-max: $max-width * 1px;
 
 // Output the fit-media utility class.
 $fit-media-css: true;
