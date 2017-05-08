@@ -11,28 +11,11 @@
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
       <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
-        <p class="font-m">The spacing utility class gives you the option to space out content vertically (along the x axis) without having to use the grid system or creating custom CSS.</p>
+        <p class="font-m">The space padding class offers a consistent group of options to apply white space above, below, or above and below content separate from the grid system or custom CSS.</p>
 
-        <p>Having a group of set sizes (based on the grid system's gutter value) also maintains a consistency throughout a design.</p>
+        <p>Using this group of consistent sizes (based on the grid system gutter value) maintains consistency throughout a design while offering considerable flexibility.</p>
 
-        <div class="alert alert--muted alert--simple">
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Small</dt>
-            <dd>Gutter / 2</dd>
-          </dl>
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Default</dt>
-            <dd>Gutter × 1</dd>
-          </dl>
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Large</dt>
-            <dd>Gutter × 2</dd>
-          </dl>
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Larger</dt>
-            <dd>Gutter × 4</dd>
-          </dl>
-        </div>
+        <p>While this class is does not offer responsive breakpoint options, it is fluid from small screens up to the website max width, at which point it will lock to the defined value.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 75 } %}
