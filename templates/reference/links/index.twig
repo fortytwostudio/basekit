@@ -16,7 +16,7 @@
         <p>This scoping to a data attribute allows simpler configuration and less stuff in the class attribute.</p>
       </div>
 
-      {% include "reference/_partials/_status.twig" with { value : 60 } %}
+      {% include "reference/_partials/_status.twig" with { value : 80 } %}
 
     </section>
   </div>
@@ -28,101 +28,161 @@
       <div data-bk-layout="hands:8 lap:7">
         <p>By default links are available in two main styles; primary and secondary. There are then various “modifiers” that can be applied to fine-tune link styles to suit their context.</p>
 
-        <h3 class="font-bold pad-t">Undefined</h3>
 
-        <div data-bk-links="">
-          <p><a href="./">This link has no styles set</a> which makes it fairly useless but you can see there is no “default”, you have to make a choice.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links=<strong>""</strong></code></p>
-        </div>
+        <h3 class="font-m pad-t">Undefined</h3>
 
-        <h3 class="font-bold pad-l-t">Primary</h3>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links>
+            <a href="./">This link has no styles set</a> which makes it fairly useless but you can see there is no “default”, you have to make a choice.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links=<strong>""</strong></code>
+          </dd>
+        </dl>
 
-        <div data-bk-links="primary">
-          <p><a href="./">This link has the primary style</a> and on hover you’ll see the secondary colour. No transitions or underlines.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="<strong>primary</strong>"</code></p>
-        </div>
 
-        <h3 class="font-bold pad-l-t">Secondary</h3>
+        <h3 class="font-m pad-l-t">Primary</h3>
 
-        <div data-bk-links="secondary">
-          <p><a href="./">This link has the secondary style</a> and on hover you’ll see the primary colour. No transitions or underlines.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="<strong>secondary</strong>"</code></p>
-        </div>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary">
+            <a href="./">This link has the primary style</a> and on hover you’ll see the secondary colour. No transitions or underlines.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="<strong>primary</strong>"</code>
+          </dd>
+        </dl>
 
-        <h3 class="font-bold pad-l-t">Fade</h3>
 
-        <div data-bk-links="primary fade">
-          <p><a href="./">This link has the fade transition</a> between the primary and secondary state. It works for all states.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="primary <strong>fade</strong>"</code></p>
-        </div>
+        <h3 class="font-m pad-l-t">Secondary</h3>
 
-        <h3 class="font-bold pad-l-t">Underline</h3>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="secondary">
+            <a href="./">This link has the secondary style</a> and on hover you’ll see the primary colour. No transitions or underlines.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="<strong>secondary</strong>"</code>
+          </dd>
+        </dl>
 
-        <div data-bk-links="primary fade underline">
-          <p><a href="./">This link has an underline</a> and the fade transition.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>underline</strong>"</code></p>
-        </div>
 
-        <h3 class="font-bold pad-l-t">Underline Hover</h3>
+        <h3 class="font-m pad-l-t">Fade</h3>
 
-        <div data-bk-links="primary fade underline-hover">
-          <p><a href="./">This link has an underline on hover</a> and the fade transition.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>underline-hover</strong>"</code></p>
-        </div>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary fade">
+            <a href="./">This link has the fade transition</a> between the primary and secondary state. It works for all states.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="primary <strong>fade</strong>"</code>
+          </dd>
+        </dl>
 
-        <h3 class="font-bold pad-l-t">Underline Initial</h3>
 
-        <div data-bk-links="primary fade underline-initial">
-          <p><a href="./">This link initially has an underline</a> and it disappears on hover.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>underline-initial</strong>"</code></p>
-        </div>
+        <h3 class="font-m pad-l-t">Underline</h3>
 
-        <h3 class="font-bold pad-l-t">Dim</h3>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary fade underline">
+            <a href="./">This link has an underline</a> and the fade transition.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="primary fade <strong>underline</strong>"</code>
+          </dd>
+        </dl>
 
-        <div data-bk-links="primary fade dim">
-          <p><a href="./">This link is dimmed</a> until you hover.</p>
-          <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>dim</strong>"</code></p>
-        </div>
 
-        <h3 class="font-bold pad-l-t">Dark Background</h3>
+        <h3 class="font-m pad-l-t">Underline Hover</h3>
 
-        <div data-bk-links="white underline-hover fade" class="color-grey font-thin">
-          <div data-bk-layout class="bg-secondary--darker">
-            <p><a href="./">This is a white link on dark background</a>. Applying reliable color hover-states on dark background can be quite tricky unless the colour pallette has been designed specifically for this. For example, our <span data-bk-links="primary"><a href="./">primary</a></span> and <span data-bk-links="secondary"><a href="./">secondary</a></span> styles don't look so good, particularly for WCAG compliant contrast ratios.</p>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-hover">
+            <a href="./">This link has an underline on hover</a> and the fade transition.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="primary fade <strong>underline-hover</strong>"</code>
+          </dd>
+        </dl>
 
-            <p class="font-s margin-t">Usage <code>data-bk-links="<strong>white</strong> underline-hover fade"</code></p>
-          </div>
-        </div>
 
-        <h3 class="font-bold pad-l-t">Dark Background Improved</h3>
+        <h3 class="font-m pad-l-t">Underline Initial</h3>
 
-        <div data-bk-links="white dim fade underline-hover" class="color-white font-thin">
-          <div data-bk-layout class="bg-secondary--darker">
-            <p><a href="./">This is a white link on dark background</a> dimmed and with the fade transtion. I find this is the best compromise of style and clarity.</p>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-initial">
+            <a href="./">This link initially has an underline</a> and it disappears on hover.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="primary fade <strong>underline-initial</strong>"</code>
+          </dd>
+        </dl>
 
-            <p class="font-s margin-t">Usage <code>data-bk-links="<strong>white dim</strong> fade underline-hover"</code></p>
-          </div>
-        </div>
+        <h3 class="font-m pad-l-t">Dim</h3>
 
-        <h3 class="font-bold pad-l-t">Inherit</h3>
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary fade dim">
+            <a href="./">This link is dimmed</a> until you hover.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="primary fade <strong>dim</strong>"</code>
+          </dd>
+        </dl>
 
-        <div data-bk-links="inherit dim fade underline" class="color-secondary--dark">
-          <div data-bk-layout class="bg-white--tint">
-            <p><a href="./">This link has inherited its parent text colour</a>. When using inherit I find similar rules that apply to links on dark backgrounds also apply here.</p>
 
-            <p class="font-s font-light margin-t">Usage <code>data-bk-links="<strong>inherit</strong> dim fade underline"</code></p>
-          </div>
-        </div>
 
-        <h3 class="font-bold pad-l-t">Big Text</h3>
+        <h3 class="font-m pad-l-t">Dark Background</h3>
 
-        <div data-bk-links="primary fade underline-initial">
-          <p>Underlines look quote nice on words with descenders…</p>
+        <dl class="br-1 shadow bg-white margin-t font-light" style="overflow:hidden;">
+          <dt data-bk-layout="pad:large" data-bk-links="white underline-hover fade" class="color-grey bg-black--tint">
+            <a href="./">This is a white link on dark background</a>. Applying reliable color hover-states on dark background can be quite tricky unless the colour pallette has been designed specifically for this. For example, our <span data-bk-links="primary"><a href="./">primary</a></span> and <span data-bk-links="secondary"><a href="./">secondary</a></span> styles don't look so good, particularly for WCAG compliant contrast ratios.
+          </dt>
+          <dd data-bk-layout="pad:small" class="color-white bg-grey--darker">
+            Usage
+            <code class="float-r">data-bk-links="<strong>white</strong> underline-hover fade"</code>
+          </dd>
+        </dl>
 
-          <p class="font-l font-thin margin-t"><a href="./">Photography, for example.</a></p>
 
-          <p class="font-s margin-t">Usage <code>data-bk-links="primary fade underline-initial"</code></p>
-        </div>
+
+        <h3 class="font-m pad-l-t">Dark Background Alternative</h3>
+
+        <dl class="br-1 shadow bg-white margin-t font-light" style="overflow:hidden;">
+          <dt data-bk-layout="pad:large" data-bk-links="white dim fade underline-hover" class="color-white bg-black--tint">
+            <a href="./">This is a white link on dark background</a> dimmed and with the fade transtion. I find this is the best compromise of style and clarity.
+          </dt>
+          <dd data-bk-layout="pad:small" class="color-white bg-grey--darker">
+            Usage
+            <code class="float-r">data-bk-links="<strong>white dim</strong> fade underline-hover"</code>
+          </dd>
+        </dl>
+
+
+
+        <h3 class="font-m pad-l-t">Inherit</h3>
+
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="inherit dim fade underline" class="color-secondary--dark">
+            <a href="./">This link has inherited its parent text colour</a>. When using inherit I find similar rules that apply to links on dark backgrounds also apply here.
+          </dt>
+          <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+            Usage
+            <code class="float-r">data-bk-links="<strong>inherit</strong> dim fade underline"</code>
+          </dd>
+        </dl>
+
+
+
+        <h3 class="font-m pad-l-t">Big Text</h3>
+
+        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+          <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-initial" class="rte">
+            <p>Underlines look quote nice on lareg words with descenders…</p>
+            <p class="font-xl font-thin margin-t"><a href="./">Photograph</a></p>
+          </dt>
+        </dl>
 
       </div>
 
@@ -145,45 +205,112 @@
     <div data-bk-layout="hands:8 lap:7">
       <p>Using the following modifiers we can add neat little features to certain links to encourage interaction.</p>
 
-      <h3 class="font-bold pad-t">More</h3>
+      <h3 class="font-m pad-t">More</h3>
+      <p>Displays a visual “call to action” after the link.</p>
 
-      <div data-bk-links="primary fade more">
-        <p><a href="./">Read More</p>
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout data-bk-links="primary fade more" class="font-s">
+          <ul>
+            <li data-bk-layout="6">
+              <p>Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="margin-t"><a href="./">Read More</a></p>
+            </li>
+            <li data-bk-layout="6">
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem neum sociis natoque.</p>
+              <p class="margin-t"><a href="./">Read More</a></p>
+            </li>
+          </ul>
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <code class="float-r">data-bk-links="primary fade <strong>more</strong>"</code>
+        </dd>
+      </dl>
 
-        <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>more</strong>"</code> (this will apply to <em>all</em> child links)</p>
-      </div>
 
-      <h3 class="font-bold pad-l-t">External Link</h3>
+      <h3 class="font-m pad-l-t">External Link</h3>
+      <p>Indicate to the user that the link exits the website.</p>
 
-      <div data-bk-links="primary fade exit">
-        <p><a href="http://google.com" target="_blank" rel="noopener">Visit Google</p>
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade exit underline">
+          Visit <a href="http://facebook.com" target="_blank" rel="noopener">our Facebook</a> page to like us and stay up-to-date on coming events.
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <span class="float-r">
+            <code>data-bk-links="primary fade <strong>exit</strong>"</code> and <code> target="_blank"</code>
+          </span>
+        </dd>
+      </dl>
 
-        <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>exit</strong>"</code> and <code> target="_blank"</code></p>
-      </div>
 
-      <h3 class="font-bold pad-l-t">Scroll Down</h3>
 
-      <div data-bk-links="primary fade down">
-        <p><a href="#footer">Go to footer</p>
+      <h3 class="font-m pad-l-t">Scroll Down</h3>
+      <p>Indicate to the user that the link moves down the page.</p>
 
-        <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>down</strong>"</code> and <code>href="#footer"</code> on the link (doesn't have to be “footer” though)</p>
-      </div>
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade down">
+          <a href="#footer">Scroll to end</a>
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <span class="float-r">
+            <code>data-bk-links="primary fade <strong>down</strong>"</code> and <code>href="<strong>#</strong>target"</code>
+          </span>
+        </dd>
+      </dl>
 
-      <h3 class="font-bold pad-l-t">Scroll Up</h3>
 
-      <div data-bk-links="primary fade up">
-        <p><a href="#start">Go to start</p>
+      <h3 class="font-m pad-l-t">Scroll Up</h3>
+      <p>Indicate to the user that the link moves up the page.</p>
 
-        <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>up</strong>"</code> and <code>href="#start"</code> on the link (doesn't have to be “start” though)</p>
-      </div>
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade up">
+          <a href="#start">Go to start</a>
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <span class="float-r">
+            <code>data-bk-links="primary fade <strong>up</strong>"</code> and <code>href="<strong>#</strong>target"</code>
+          </span>
+        </dd>
+      </dl>
 
-      <h3 class="font-bold pad-l-t">Download</h3>
 
-      <div data-bk-links="primary fade download">
-        <p><a href="./" download>Download this file</p>
 
-        <p class="font-s margin-t">Usage <code>data-bk-links="primary fade <strong>download</strong>"</code> and <code>download</code> attribute on the link</p>
-      </div>
+      <h3 class="font-m pad-l-t">Download</h3>
+      <p>Indicate to the user that the link download a file.</p>
+
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade download">
+          <a href="./" download>Download this file</a>
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <span class="float-r">
+            <code>data-bk-links="primary fade <strong>download</strong>"</code> and <code>download</code> attr on the link
+          </span>
+        </dd>
+      </dl>
+
+
+
+      <h3 class="font-m pad-l-t">Bold Feature</h3>
+      <p>Arrows are normal weight by default but sometimes you might <em>only</em> want the arrow to be bolder.</p>
+
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout data-bk-links="primary fade exit">
+          <ul>
+            <li data-bk-layout="6"><a href="http://google.com" target="_blank" rel="noopener">Normal</li>
+            <li data-bk-layout="6"><a data-bk-links="bold" href="http://google.com" target="_blank" rel="noopener">Bold</li>
+          </ul>
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <code class="float-r">data-bk-links="primary fade exit <strong>bold</strong>"</code>
+        </dd>
+      </dl>
+
     </div>
 
     <div data-bk-layout="hands:4 lap:4 lap:pr:1" class="pad-b">
@@ -191,6 +318,12 @@
         <h4 class="font-n margin-b"><strong>Note for developers</strong></h4>
 
         <p>These link styles <strong>can</strong> be applied to <a href="../buttons/">button style links</a>, because that makes sense 😊</p>
+      </div>
+
+      <div class="alert alert--simple font-s">
+        <h4 class="font-n margin-b"><strong>Note for everyone</strong></h4>
+
+        <p>At the moment these link features use the current primary font's arrow glyphs, in the future we may switch this out to use SVG instead.</p>
       </div>
     </div>
   </div>

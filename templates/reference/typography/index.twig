@@ -11,7 +11,11 @@
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
       <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
-        <p class="font-m">Well shit, I should write an intro…</p>
+        <p class="font-m">Basekit offers various font classes for very targetted styling.</p>
+
+        <p>Fonts can be fluid or fixes. Fluid fonts will adjust in size between a specified min and max size limits depending on the screen size. Fixed fonts will remain the same size regardless of the screen size. Fluid fonts are ideal for headings short blocks of text while fixed fonts are best suited to long blocks of text.</p>
+
+        <p data-bk-links="primary fade underline-initial down">In addition to the font style classes, a <a href="#rte">rich text content wrapper</a> class is also available that scopes and styles content output from rich text editor fields.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 75 } %}
@@ -20,7 +24,7 @@
 
   <div class="bg-tertiary--lighter pad">
     <section class="site-container">
-      <h3 data-bk-layout class="font-xxl font-thin">Font Stacks</h3>
+      <h3 data-bk-layout class="font-l font-thin">Font Stacks</h3>
 
       <div data-bk-layout="lap:4">
         <h4 class="font-m">Default <strong>sans-serif</strong></h4>
@@ -49,64 +53,64 @@
 
       <h4 data-bk-layout="pad:trl" class="font-m"><b>Fluid</b> Sizes</h4>
 
-      <ol data-bk-layout="pad:0 bottom" class="color-grey--dark">
-        <li data-bk-layout="6 palm:4 desk:3">
+      <ol data-bk-layout="pad:0 bottom">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-hero color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Hero <code class="float-r">.font--hero</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Hero <code class="float-r">class="<strong>font-hero</strong>"</code></dd>
           </dl>
         </li>
 
-        <li data-bk-layout="6 palm:4 desk:3">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-xxl color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Largest <code class="float-r">.font--xxl</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Largest <code class="float-r">class="<strong>font-xxl</strong>"</code></dd>
           </dl>
         </li>
 
-        <li data-bk-layout="6 palm:4 desk:3">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-xl color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Larger <code class="float-r">.font--xl</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Larger <code class="float-r">class="<strong>font-xl</strong>"</code></dd>
           </dl>
         </li>
 
-        <li data-bk-layout="6 palm:4 desk:3">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-l color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Large <code class="float-r">.font--l</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Large <code class="float-r">class="<strong>font-l</strong>"</code></dd>
           </dl>
         </li>
       </ol>
 
       <h4 data-bk-layout="pad:trl" class="font-m"><b>Fixed</b> Sizes</h4>
 
-      <ol data-bk-layout="pad:0 bottom" class="color-grey--dark">
-        <li data-bk-layout="6 palm:4 desk:3">
+      <ol data-bk-layout="pad:0 bottom">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-m color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Medium <code class="float-r">.font--m</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Medium <code class="float-r">class="<strong>font-m</strong>"</code></dd>
           </dl>
         </li>
 
-        <li data-bk-layout="6 palm:4 desk:3">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white--tint" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-n color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Normal <code class="float-r">.font--n</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Normal <code class="float-r">class="<strong>font-n</strong>"</code></dd>
           </dl>
         </li>
 
-        <li data-bk-layout="6 palm:4 desk:3">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-s color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Small <code class="float-r">.font--s</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Small <code class="float-r">class="<strong>font-s</strong>"</code></dd>
           </dl>
         </li>
 
-        <li data-bk-layout="6 palm:4 desk:3">
+        <li data-bk-layout="palm:6 hands:4 lap:3">
           <dl data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
             <dt data-bk-layout="center" class="font-xs color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Smaller <code class="float-r">.font--xs</code></dd>
+            <dd data-bk-layout="pad:small" class="font-s" style="border-top: 1px solid #ccc">Smaller <code class="float-r">class="<strong>font-xs</strong>"</code></dd>
           </dl>
         </li>
       </ol>
@@ -182,20 +186,10 @@
               <p class="font-bold font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Bold <code class="float-r">class="font-bold"</code></p>
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Bold <code class="float-r">class="<strong>font-bold</strong>"</code></p>
           </div>
         </li>
 
-        <li data-bk-layout="lap:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
-            <div data-bk-layout>
-              <p class="font-thin font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-thin font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-            </div>
-
-            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Thin <code class="float-r">class="font-thin"</code></p>
-          </div>
-        </li>
 
         <li data-bk-layout="lap:6" class="pad-b">
           <div data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
@@ -204,9 +198,34 @@
               <p class="font-italic font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Italic <code class="float-r">class="font-italic"</code></p>
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Italic <code class="float-r">class="<strong>font-italic</strong>"</code></p>
           </div>
         </li>
+
+
+        <li data-bk-layout="lap:6" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
+            <div data-bk-layout>
+              <p class="font-thin font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-thin font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Thin <code class="float-r">class="<strong>font-thin</strong>"</code></p>
+          </div>
+        </li>
+
+
+        <li data-bk-layout="lap:6" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
+            <div data-bk-layout>
+              <p class="font-light font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-light font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Light <code class="float-r">class="<strong>font-light</strong>"</code></p>
+          </div>
+        </li>
+
 
         <li data-bk-layout="lap:6" class="pad-b">
           <div data-bk-layout="pad:0" class="br-1 shadow bg-white" style="border: 1px solid #ccc;">
@@ -215,7 +234,7 @@
               <p class="font-normal font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Normal <code class="float-r">class="font-normal"</code></p>
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Normal <code class="float-r">class="<strong>font-normal</strong>"</code></p>
           </div>
         </li>
 
@@ -226,7 +245,7 @@
               <p class="font-upper font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Upper <code class="float-r">class="font-upper"</code></p>
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Upper <code class="float-r">class="<strong>font-upper</strong>"</code></p>
           </div>
         </li>
 
@@ -237,7 +256,7 @@
               <p class="font-alt font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Alt Font <code class="float-r">class="font-alt"</code></p>
+            <p data-bk-layout="pad:small" class="font-s color-text" style="border-top: 1px solid #ccc">Alt Font <code class="float-r">class="<strong>font-alt</strong>"</code></p>
           </div>
         </li>
       </ol>
@@ -321,13 +340,13 @@
       </div>
 
 
-      <div data-bk-layout="lap:6">
+      <div data-bk-layout="lap:6" id="rich-text-content">
         <div data-bk-layout data-bk-links="primary fade underline" class="rte bg-white | br-1 shadow" style="border: 1px solid #ccc;">
           {% include "reference/typography/_rte-content.twig" %}
         </div>
       </div>
 
-      <div data-bk-layout="lap:6">
+      <div data-bk-layout="lap:6" id="rich-text-content-dark">
         <div data-bk-layout data-bk-links="white dim fade underlin" class="rte bg-primary--darker color-white--tint | br-1 shadow">
           {% include "reference/typography/_rte-content.twig" %}
         </div>

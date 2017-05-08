@@ -11,28 +11,11 @@
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
       <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
-        <p class="font-m">The spacing utility class gives you the option to space out content vertically (along the x axis) without having to use the grid system or creating custom CSS.</p>
+        <p class="font-m">The space padding class offers a consistent group of options to apply white space above, below, or above and below content separate from the grid system or custom CSS.</p>
 
-        <p>Having a group of set sizes (based on the grid system's gutter value) also maintains a consistency throughout a design.</p>
+        <p>Using this group of consistent sizes (based on the grid system $grid-gutter value) maintains consistency throughout a design while offering considerable flexibility.</p>
 
-        <div class="alert alert--muted alert--simple">
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Small</dt>
-            <dd>Gutter / 2</dd>
-          </dl>
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Default</dt>
-            <dd>Gutter × 1</dd>
-          </dl>
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Large</dt>
-            <dd>Gutter × 2</dd>
-          </dl>
-          <dl data-bk-layout="pad:r 6 palm:3">
-            <dt>Larger</dt>
-            <dd>Gutter × 4</dd>
-          </dl>
-        </div>
+        <p>While this class is does not offer responsive breakpoint options, it is fluid from small screens up to the website max width, at which point it will lock to the defined value.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 75 } %}
@@ -45,16 +28,16 @@
       <h3 data-bk-layout="pad:trl" class="font-l">Spacing Examples</h3>
 
       <div data-bk-layout>
-        <h4 class="font-bold">Small <code class="font-xs font-normal float-r">$gutter / 2</code></h4>
+        <h4 class="font-bold">Small <code class="font-xs font-normal float-r">$grid-gutter / 2</code></h4>
         <div class="pad-s-t  bg-tertiary--light"></div>
 
-        <h4 class="font-bold pad-t">Default <code class="font-xs font-normal float-r">$gutter * 1</code></h4>
+        <h4 class="font-bold pad-t">Default <code class="font-xs font-normal float-r">$grid-gutter * 1</code></h4>
         <div class="pad-t  bg-tertiary--light"></div>
 
-        <h4 class="font-bold pad-t">Large <code class="font-xs font-normal float-r">$gutter * 2</code></h4>
+        <h4 class="font-bold pad-t">Large <code class="font-xs font-normal float-r">$grid-gutter * 2</code></h4>
         <div class="pad-l-t  bg-tertiary--light"></div>
 
-        <h4 class="font-bold pad-t">Larger <code class="font-xs font-normal float-r">$gutter * 4</code></h4>
+        <h4 class="font-bold pad-t">Larger <code class="font-xs font-normal float-r">$grid-gutter * 4</code></h4>
         <div class="pad-xl-t  bg-tertiary--light"></div>
       </div>
     </section>
@@ -104,17 +87,17 @@
       </div>
 
       <div data-bk-layout="hands:5 hands:pl:1">
-        <h3 class="font-l margin-b">Mixing options</h3>
+        <h3 class="font-l margin-b">Usage</h3>
 
         <p>Classes can be combined to create various configuations:</p>
 
         <dl class="margin-t">
           <dt>Apply normal padding with small bottom padding</dt>
-          <dd><code>class="pad pad-s-b"</code></dd>
+          <dd><code>class="<strong>pad pad-s-b</strong>"</code></dd>
           <dt class="margin-t">Apply small bottom padding with large top padding</dt>
-          <dd><code>class="pad-s pad-l-t"</code></dd>
+          <dd><code>class="<strong>pad-s pad-l-t</strong>"</code></dd>
           <dt class="margin-t">Just bottom padding</dt>
-          <dd><code>class="pad-b"</code></dd>
+          <dd><code>class="<strong>pad-b</strong>"</code></dd>
         </dl>
       </div>
     </section>

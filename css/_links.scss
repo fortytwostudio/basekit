@@ -130,7 +130,7 @@ a:not(.btn) {
   a:after {
     content: " →";
     display: inline-block;
-    font-weight: bold;
+    margin-left: 0.1em;
     transform: translateX(0);
     transition: transform $speed-normal;
   }
@@ -145,9 +145,9 @@ a:not(.btn) {
 [data-bk-links~="exit"] {
   a[target="_blank"]:after,
   a[href^="mailto"]:after {
-    content: "\2009 ↗︎";
+    content: "↗︎";
     display: inline-block;
-    font-weight: bold;
+    margin-left: 0.1em;
     transform: translate(0 1px); // ← this should be removed depending on the font
     transition: transform $speed-normal;
   }
@@ -163,9 +163,9 @@ a:not(.btn) {
 // Internal page links starting with an # but not only an # get a direction arrow
 [data-bk-links~="down"] {
   a[href^="#"]:not([href="#"]):after {
-    content: "\2009 ↓";
+    content: "↓";
     display: inline-block;
-    font-weight: bold;
+    margin-left: 0.1em;
     transform: translateY(0);
     transition: transform $speed-normal;
   }
@@ -179,9 +179,9 @@ a:not(.btn) {
 // Same as above but applies an upward arrow instead
 [data-bk-links~="up"] {
   a[href^="#"]:not([href="#"]):after {
-    content: "\2009 ↑";
+    content: "↑";
     display: inline-block;
-    font-weight: bold;
+    margin-left: 0.1em;
     transform: translateY(0);
     transition: transform $speed-normal;
   }
@@ -200,8 +200,7 @@ a:not(.btn) {
     border-bottom: 2px solid currentColor;
     content: "↓"!important;
     display: inline-block;
-    font-weight: bold;
-    margin-left: 0.4em;
+    margin-left: 0.3em;
     transform: translateY(-3px);
     transition:
       transform $speed-normal,
@@ -215,6 +214,13 @@ a:not(.btn) {
   }
 }
 
+[data-bk-links~="bold"] {
+  &:after,
+  a:after {
+    font-weight: bold;
+  }
+}
+
 // Oh shiii… a class. Aye.
 // Remove the :focus outline on links
 .no-outline {
@@ -223,82 +229,3 @@ a:not(.btn) {
     outline: 0;
   }
 }
-
-
-
-
-
-
-
-
-
-// .bk-links {
-//   // Define the primary link style, this is likely to be applied to blocks of
-//   // user content (i.e. content from the CMS) rather than website UI.
-//   a {
-//     color: $primary;
-//     // By default a simple transition is applied to link states.
-//     transition: all $speed-slow ease-in-out;
-
-//     &:focus,
-//     &:hover {
-//       color: $tertiary--dark;
-//       transition-duration: $speed-normal;
-//     }
-//   }
-
-//   &--on-dark {
-//     a {
-//       color: white;
-//       border-bottom: 1px solid transparent!important;
-
-//       &:focus,
-//       &:hover {
-//         color: inherit;
-//         border-color: currentColor!important;
-//       }
-//     }
-//   }
-
-//   &--underlined {
-//     a {
-//       border-bottom: 1px solid currentColor;
-//     }
-//   }
-
-//   // Add arrow if links are outbound
-//   &--exit {
-//     a[target="_blank"]:after {
-//       // background-image: url('/imgs/svg/i-exit--alt.svg');
-//       // background-position: center;
-//       // background-size: contain;
-//       // height: 0.8em;
-//       // width: 0.8em;
-//       content: "↪︎";
-//       display: inline-block;
-//       margin-left: 0.4em;
-//       transform: scale(1,-1) translateY(2px);
-//     }
-//   }
-
-//   // Add down arrow if links are in-page # links
-//   &--hash {
-//     // Add arrow if links are outbound
-//     a[href^="#"]:after {
-//       content: "↓";
-//       display: inline-block;
-//       margin-left: 0.2em;
-//     }
-//   }
-
-//   // Add down arrow if links are in-page # links
-//   &--start {
-//     // Add arrow if links are outbound
-//     a[href="#start"]:after {
-//       content: "↑";
-//       display: inline-block;
-//       margin-left: 0.2em;
-//     }
-//   }
-
-// }

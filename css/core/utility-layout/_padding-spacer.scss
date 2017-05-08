@@ -1,72 +1,47 @@
 @if $spacer-css {
 
-  // The minimum and default spacing values, the spacer dimension will not get any smaller than this.
-  // NOTE: I've disabled the small spacer for now as it's not really necessary
+  $spacer-name: pad !default;
+  $spacer-min: 320px !default;
+  $spacer-max: ($max-width * 1px) !default;
+
   .#{$spacer-name} {
-    // &, &-t {
-    //   padding-top: $spacer-size-default / 2;
-    // }
-    //
-    // &, &-b {
-    //   padding-bottom: $spacer-size-default / 2;
-    // }
-    //
-    // &-s {
-    //   &, &-t {
-    //     padding-top: $spacer-size-small / 2;
-    //   }
-    //
-    //   &, &-b {
-    //     padding-bottom: $spacer-size-small / 2;
-    //   }
-    // }
-    //
-    // &-l {
-    //   &, &-t {
-    //     padding-top: $spacer-size-large / 2;
-    //   }
-    //
-    //   &, &-b {
-    //     padding-bottom: $spacer-size-large / 2;
-    //   }
-    // }
 
     // @include mq($spacer-min) {}
     &, &-t {
-      padding-top: between($spacer-size-default / 2, $spacer-size-default, $spacer-min, $spacer-max);
+      padding-top: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
     }
 
     &, &-b {
-      padding-bottom: between($spacer-size-default / 2, $spacer-size-default, $spacer-min, $spacer-max);
+      padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
     }
 
     &-s {
       &, &-t {
-        padding-top: between($spacer-size-small / 2, $spacer-size-small, $spacer-min, $spacer-max);
+        padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between($spacer-size-small / 2, $spacer-size-small, $spacer-min, $spacer-max);
+        padding-bottom: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-l {
       &, &-t {
-        padding-top: between($spacer-size-large / 2, $spacer-size-large, $spacer-min, $spacer-max);
+        padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between($spacer-size-large / 2, $spacer-size-large, $spacer-min, $spacer-max);
+        padding-bottom: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-xl {
       &, &-t {
-        padding-top: between($spacer-size-larger / 2, $spacer-size-larger, $spacer-min, $spacer-max);
+        padding-top: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: between($spacer-size-larger / 2, $spacer-size-larger, $spacer-min, $spacer-max);
+        padding-bottom: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
       }
     }
 
@@ -82,171 +57,43 @@
 
     @include mq($spacer-max) {
       &, &-t {
-        padding-top: $spacer-size-default;
+        padding-top: ($grid-gutter * 1px);
       }
 
       &, &-b {
-        padding-bottom: $spacer-size-default;
+        padding-bottom: ($grid-gutter * 1px);
       }
 
       &-s {
         &, &-t {
-          padding-top: $spacer-size-small;
+          padding-top: (($grid-gutter / 2) * 1px);
         }
 
         &, &-b {
-          padding-bottom: $spacer-size-small;
+          padding-bottom: (($grid-gutter / 2) * 1px);
         }
       }
 
       &-l {
         &, &-t {
-          padding-top: $spacer-size-large;
+          padding-top: (($grid-gutter * 2) * 1px);
         }
 
         &, &-b {
-          padding-bottom: $spacer-size-large;
+          padding-bottom: (($grid-gutter * 2) * 1px);
         }
       }
 
       &-xl {
         &, &-t {
-          padding-top: $spacer-size-larger;
+          padding-top: (($grid-gutter * 4) * 1px);
         }
 
         &, &-b {
-          padding-bottom: $spacer-size-larger;
+          padding-bottom: (($grid-gutter * 4) * 1px);
         }
       }
     }
   }
 
 }
-
-
-// —————————————————————————————————————————————————————————————————————————————
-// ORIGINAL SASS
-// —————————————————————————————————————————————————————————————————————————————
-//
-// @if $spacer-css {
-//
-//   .#{$spacer-name} {
-//
-//     // If percentage spacing is set in the compile options use %, otherwise
-//     // default to rem sizing
-//     &,
-//     &-t {
-//       padding-top: rem($spacer-size-default / 1.25);
-//       padding-top: vw($spacer-size-default, $max-width);
-//     }
-//
-//     &,
-//     &-b {
-//       padding-bottom: rem($spacer-size-default / 1.25);
-//       padding-bottom: vw($spacer-size-default, $max-width);
-//     }
-//
-//     &-s {
-//       &,
-//       &-t {
-//         padding-top: rem($spacer-size-small / 1.5);
-//         padding-top: vw($spacer-size-small, $max-width);
-//       }
-//
-//       &,
-//       &-b {
-//         padding-bottom: rem($spacer-size-small / 1.5);
-//         padding-bottom: vw($spacer-size-small, $max-width);
-//       }
-//     }
-//
-//     &-l {
-//       &,
-//       &-t {
-//         padding-top: rem($spacer-size-large / 1.75);
-//         padding-top: vw($spacer-size-large, $max-width);
-//       }
-//
-//       &,
-//       &-b {
-//         padding-bottom: rem($spacer-size-large / 1.75);
-//         padding-bottom: vw($spacer-size-large, $max-width);
-//       }
-//     }
-//
-//     // Set max dimensions to prevent huge spaces at large screen sizes
-//     // @include mq($until: $spacer-breakpoint) {
-//     //   &,
-//     //   &-t {
-//     //     padding-top: rem($spacer-size-default / 2);
-//     //   }
-//     //
-//     //   &,
-//     //   &-b {
-//     //     padding-bottom: rem($spacer-size-default / 2);
-//     //   }
-//     //
-//     //   &-s {
-//     //     &,
-//     //     &-t {
-//     //       padding-top: rem($spacer-size-small / 2);
-//     //     }
-//     //
-//     //     &,
-//     //     &-b {
-//     //       padding-bottom: rem($spacer-size-small / 2);
-//     //     }
-//     //   }
-//     //
-//     //   &-l {
-//     //     &,
-//     //     &-t {
-//     //       padding-top: rem($spacer-size-large / 2);
-//     //     }
-//     //
-//     //     &,
-//     //     &-b {
-//     //       padding-bottom: rem($spacer-size-large / 2);
-//     //     }
-//     //   }
-//     // }
-//
-//     // Set max dimensions to prevent huge spaces at large screen sizes
-//     @include mq($max-width * 1px) {
-//       &,
-//       &-t {
-//         padding-top: rem($spacer-size-default);
-//       }
-//
-//       &,
-//       &-b {
-//         padding-bottom: rem($spacer-size-default);
-//       }
-//
-//       &-s {
-//         &,
-//         &-t {
-//           padding-top: rem($spacer-size-small);
-//         }
-//
-//         &,
-//         &-b {
-//           padding-bottom: rem($spacer-size-small);
-//         }
-//       }
-//
-//       &-l {
-//         &,
-//         &-t {
-//           padding-top: rem($spacer-size-large);
-//         }
-//
-//         &,
-//         &-b {
-//           padding-bottom: rem($spacer-size-large);
-//         }
-//       }
-//     }
-//   }
-//
-// }

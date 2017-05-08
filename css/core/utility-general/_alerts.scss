@@ -1,9 +1,9 @@
 @if $form-error-css {
 
   .#{$form-error-name} {
-    background-color: $alert-bg;
-    border: 1px solid $alert-border;
-    color: $alert-text;
+    background-color: color(alert);
+    border: 1px solid color(alert, dark);
+    color: black;
     margin-bottom: rem(4px);
     margin-top: rem(4px);
     padding: rem(($margin / 2) * 1px);
@@ -28,36 +28,24 @@
       width: 15px;
     }
 
-    @if $alert-bg--error {
+    @if $alert--error {
       &--error {
-        background-color: $alert-bg--error;
-        border-color: $alert-border--error;
-        color: $alert-text--error;
+        background-color: color(error);
+        border-color: color(error, dark);
       }
     }
 
-    @if $alert-bg--neutral {
+    @if $alert--neutral {
       &--neutral {
-        background-color: $alert-bg--neutral;
-        border-color: $alert-border--neutral;
-        color: $alert-text--neutral;
+        background-color: color(neutral);
+        border-color: color(neutral, dark);
       }
     }
 
-    @if $alert-bg--positive {
+    @if $alert--positive {
       &--positive {
-        background-color: $alert-bg--positive;
-        border-color: $alert-border--positive;
-        color: $alert-text--positive;
-      }
-    }
-
-
-    @if $alert-bg--muted {
-      &--muted {
-        background-color: $alert-bg--muted;
-        border-color: $alert-border--muted;
-        color: $alert-text--muted;
+        background-color: color(positive);
+        border-color: color(positive, dark);
       }
     }
 

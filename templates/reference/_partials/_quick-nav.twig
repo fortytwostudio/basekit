@@ -35,7 +35,7 @@
     {% for item in mainNav if item.children|length %}
       {% for child in item.children %}
         <li>
-          <a{{ child.slug == slug ? ' class="btn" ' }}  href="{{ child.url }}">
+          <a{{ child.slug == slug ? ' class="btn btn--primary" ' }}  href="{{ child.url }}">
             {{ child.title }}
           </a>
         </li>

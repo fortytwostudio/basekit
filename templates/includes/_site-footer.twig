@@ -1,4 +1,4 @@
-<footer data-bk-links="white fade dim underline-hover exit" class="site-container pad color-white" tabindex="-1" id="footer">
+<footer data-bk-links="white fade dim underline-hover" class="site-container pad color-white font-light" tabindex="-1" id="footer">
   <div data-bk-layout="pad:0  middle">
     <div data-bk-layout="hands:3">
       <h1 class="site-logo  logo  inline-block">
@@ -36,10 +36,10 @@
       {% endif %}
 
       {% if socialLinks|length %}
-        <ul data-bk-layout="6  palm:4">
+        <ul data-bk-layout="6  palm:4" data-bk-links="exit">
           {% for item in socialLinks %}
             <li>
-              <a href="{{ item.url }}">{{ item.title }}</a>
+              <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -49,7 +49,7 @@
         <ul class="font-xs  pad-s-t">
           {% for item in siteInfoNav %}
             <li data-bk-layout="auto">
-              <a href="{{ siteUrl }}{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+              <a href="{{ siteUrl }}{{ item.url }}">{{ item.title }}</a>
             </li data-bk-layout="auto">
           {% endfor %}
             <li data-bk-links="up" data-bk-layout="auto" class="float-r"><a href="#start">Back to start</a></li>

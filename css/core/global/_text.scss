@@ -23,8 +23,8 @@ h1, h2, h3, h4, h5, h6 {
   // a utility class
   font-size: em(strip-unit($font-size), 16);
   line-height: $font-line-height / $font-size;
-  @if $heading != $text {
-    color: $heading;
+  @if $color-heading != $color-text {
+    color: $color-heading;
   }
 }
 
