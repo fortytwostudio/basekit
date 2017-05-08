@@ -130,6 +130,7 @@ a:not(.btn) {
   a:after {
     content: " →";
     display: inline-block;
+    margin-left: 0.1em;
     transform: translateX(0);
     transition: transform $speed-normal;
   }
@@ -144,8 +145,9 @@ a:not(.btn) {
 [data-bk-links~="exit"] {
   a[target="_blank"]:after,
   a[href^="mailto"]:after {
-    content: "\2009 ↗︎";
+    content: "↗︎";
     display: inline-block;
+    margin-left: 0.1em;
     transform: translate(0 1px); // ← this should be removed depending on the font
     transition: transform $speed-normal;
   }
@@ -161,8 +163,9 @@ a:not(.btn) {
 // Internal page links starting with an # but not only an # get a direction arrow
 [data-bk-links~="down"] {
   a[href^="#"]:not([href="#"]):after {
-    content: "\2009 ↓";
+    content: "↓";
     display: inline-block;
+    margin-left: 0.1em;
     transform: translateY(0);
     transition: transform $speed-normal;
   }
@@ -176,8 +179,9 @@ a:not(.btn) {
 // Same as above but applies an upward arrow instead
 [data-bk-links~="up"] {
   a[href^="#"]:not([href="#"]):after {
-    content: "\2009 ↑";
+    content: "↑";
     display: inline-block;
+    margin-left: 0.1em;
     transform: translateY(0);
     transition: transform $speed-normal;
   }
@@ -196,7 +200,7 @@ a:not(.btn) {
     border-bottom: 2px solid currentColor;
     content: "↓"!important;
     display: inline-block;
-    margin-left: 0.4em;
+    margin-left: 0.3em;
     transform: translateY(-3px);
     transition:
       transform $speed-normal,
