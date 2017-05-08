@@ -18,7 +18,7 @@ $(function() {
   // $.smoothPageScrollByLoaded();
 
   // FONTOGGLER
-  var fontogNotice = '<div class="fontoggler__notice inline-block font-s" style="position:fixed;top:0.25rem;right:0.25rem;z-index:900;"><a data-bk-layout="pad:small" class="btn" href="/demo/reference/typography/#fontoggler">Custom font active</a></div>';
+  var fontogNotice = '<div class="fontoggler__notice inline-block font-s" style="position:fixed;top:0.25rem;right:0.25rem;z-index:900;"><a data-bk-layout="pad:small" class="btn btn--primary" href="/demo/reference/typography/#fontoggler">Custom font active</a></div>';
   // When the enter key is pressed…
   $('body').on('keypress',"#fontoggler", function(event){
     if (event.which == 13){
