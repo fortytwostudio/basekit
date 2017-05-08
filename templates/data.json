@@ -40,10 +40,6 @@
       "url": "/demo/reference/links/",
       "slug": "links"
     }, {
-      "title": "Navigation",
-      "url": "/demo/reference/navigation/",
-      "slug": "nav"
-    }, {
       "title": "Buttons",
       "url": "/demo/reference/buttons/",
       "slug": "buttons"
@@ -56,21 +52,30 @@
       "url": "/demo/reference/alerts/",
       "slug": "alerts"
     }, {
-      "title": "Logos",
-      "url": "/demo/reference/logos/",
-      "slug": "logos"
+      "title": "Navigation",
+      "url": "/demo/reference/navigation/",
+      "slug": "nav",
+      "tbc": true
+    }, {
+      "title": "Images",
+      "url": "/demo/reference/images/",
+      "slug": "images",
+      "tbc": true
     }, {
       "title": "Tables",
       "url": "/demo/reference/tables/",
-      "slug": "tables"
+      "slug": "tables",
+      "tbc": true
     }, {
       "title": "Naming",
       "url": "/demo/reference/naming/",
-      "slug": "naming"
+      "slug": "naming",
+      "tbc": true
     }, {
       "title": "A11Y",
       "url": "/demo/reference/a11y/",
-      "slug": "accessibility"
+      "slug": "accessibility",
+      "tbc": true
     }]
   }, {
     "title": "Github",
