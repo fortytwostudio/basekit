@@ -24,22 +24,6 @@
     background-position: center center;
     background-size: cover;
   }
-
-  &-alert {
-    background-color: $alert-bg;
-  }
-
-  &-error {
-    background-color: $alert-bg--error;
-  }
-
-  &-neutral {
-    background-color: $alert-bg--neutral;
-  }
-
-  &-positive {
-    background-color: $alert-bg--positive;
-  }
 }
 
 // $blend-modes: (

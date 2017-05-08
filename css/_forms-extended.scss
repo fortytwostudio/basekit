@@ -18,7 +18,7 @@ $form-element-bg-color: white;
 
       &.required {
         &:after {
-          color: $alert-bg--neutral;
+          color: color(neutral);
           content: "required";
           font-size: 87.5%;
           text-transform: lowercase;

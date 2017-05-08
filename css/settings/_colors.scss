@@ -2,6 +2,28 @@ $color-primary: #00739f !default;
 $color-secondary: #c62b90 !default;
 $color-tertiary: #71e0b1 !default;
 
+$color-grey: #ccc;
+
+/// Set the body background colour here, if you want to add an image you should configure
+/// the $color-body-media currently in settings/media.scss
+$color-body: #1a1a1a;
+
+/// Set the primary (body) text colour
+$color-text: #333;
+
+/// This is optional, you're better off using the color utility classes to set
+/// the colour on headings unless there is very little variation in heading
+/// colours.
+$color-heading: $color-text;
+
+/// Alert classes can be used anywhere but for now they're tied to
+/// form alerts, set the colours here if you want to change them.
+$alert: #fbf4b7 !default;
+$alert--error: #fed0d0 !default;
+$alert--neutral: #cdddf4 !default;
+$alert--positive: #cdf0cb !default;
+$alert--muted: #e9e9e9 !default;
+
 $colors: (
   primary: (
     base: $color-primary,
@@ -25,11 +47,11 @@ $colors: (
     darker: darken($color-tertiary, 40%)
   ),
   grey: (
-    base: #ccc,
-    lighter: lighten(#ccc, 15%),
-    light: lighten(#ccc, 10%),
-    dark: darken(#ccc, 30%),
-    darker: darken(#ccc, 50%)
+    base: $color-grey,
+    lighter: lighten($color-grey, 15%),
+    light: lighten($color-grey, 10%),
+    dark: darken($color-grey, 30%),
+    darker: darken($color-grey, 50%)
   ),
   white: (
     base: white,
@@ -40,86 +62,35 @@ $colors: (
     tint: mix(white, black, 10%)
   ),
   text: (
-    base: #333
+    base: $color-text
+  ),
+  body: (
+    base: $color-body
+  ),
+  alert: (
+    base: $alert,
+    dark: darken($alert, 35%)
+  ),
+  error: (
+    base: $alert--error,
+    dark: darken($alert--error, 12%)
+  ),
+  neutral: (
+    base: $alert--neutral,
+    dark: darken($alert--neutral, 15%)
+  ),
+  positive: (
+    base: $alert--positive,
+    dark: darken($alert--muted, 12%)
   )
 );
-
 @function color($scheme, $tone: base) {
   @return map-get(map-get($colors, $scheme), $tone);
 }
 
-////
-/// @group Settings
-////
-
-/// Primary Brand Colour
-/// Set your primary brand colour.
-// $primary: #00739f;
-/// **Light Variation:**
-/// Tweak the `lighten` value to get the colour you want, or pull it out completely
-/// if the designer has included a light colour value.
-// $primary--light: #009ec9;
-/// **Dark Variation:**
-/// Tweak the `darken` value to get the colour you want, or pull it out completely
-/// if the designer has included a dark colour value.
-// $primary--dark: #004369;
-
-// $secondary: #c62b90;
-// $secondary--light: #cb6791;
-// $secondary--dark: #8f3c5e;
-
-// $tertiary: #71e0b1;
-// $tertiary--light: #caebdd;
-// $tertiary--dark: #378162;
-
-/// Grey is commonly used across all website designs, to simplify matters I've
-/// included three default values which should cover most situations. Change the
-/// actual values to specific colour values if CSS keyword values don't suit.
-// $grey: #bbb;
-// $grey--light: #f3f3f3;
-// $grey--dark: #333;
-
-/// Document Colours
-///
-/// The following colours are for standard elements commonly found
-/// across any site or document.
-
-/// Set the body background colour here, if you want to add an image you should configure
-/// the $body-media currently in settings/media.scss
-$body: #1a1a1a;
-
-/// Set the primary (body) text colour
-$text: color(text);
-
-/// This is optional, you're better off using the color utility classes to set
-/// the colour on headings unless there is very little variation in heading
-/// colours.
-$heading: $text;
-
-/// Alert classes can be used anywhere but for now they're tied to
-/// form alerts, set the colours here if you want to change them.
-$alert-bg: #fbf4b7 !default;
-$alert-border: darken($alert-bg, 35%) !default;
-$alert-text: black !default;
-
-$alert-bg--error: #fed0d0 !default;
-$alert-border--error: darken($alert-bg--error, 12%) !default;
-$alert-text--error: black !default;
-
-$alert-bg--neutral: #cdddf4 !default;
-$alert-border--neutral: darken($alert-bg--neutral, 15%) !default;
-$alert-text--neutral: black !default;
-
-$alert-bg--positive: #cdf0cb !default;
-$alert-border--positive: darken($alert-bg--positive, 20%) !default;
-$alert-text--positive: black !default;
-
-$alert-bg--muted: #e9e9e9 !default;
-$alert-border--muted: darken($alert-bg--muted, 12%) !default;
-$alert-text--muted: black !default;
 
 // Style up those table colours
-$tables-color: #999;
+$tables-color: color(grey, light);
 
 // Code box styles
 $code-bg-color: rgba(mix(white, black, 50%), 0.25);
