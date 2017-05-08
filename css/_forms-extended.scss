@@ -18,9 +18,8 @@ $form-element-bg-color: white;
 
       &.required {
         &:after {
-          color: color(neutral);
           content: "required";
-          font-size: 87.5%;
+          float: right;
           text-transform: lowercase;
         }
       }

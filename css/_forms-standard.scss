@@ -91,9 +91,8 @@ $fh-display: block !default;
 
     &.required {
       &:after {
-        color: color(alert);
+        color: color(error, dark);
         content: "*";
-        float: right;
         font-size: 112.5%;
         line-height: 1;
         width: auto;
