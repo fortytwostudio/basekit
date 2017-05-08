@@ -125,38 +125,42 @@ a:not(.btn) {
 
 // IMPORTANT: The following two items have cascade specificity clash in certain uses
 
+@include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-regular", 400, normal, svg ttf woff);
+@include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-bold", 700, normal, svg ttf woff);
+@include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-thin", 200, normal, svg ttf woff);
+
+[data-bk-links] {
+  a:after {
+    font-family: "Basekit Arrows", $font-family !important;
+    margin-left: 0.2em;
+    display: inline-block;
+    transition: transform $speed-normal;
+  }
+}
+
 // Adds a clickthrough indicator arrow to encourage… clicks
 [data-bk-links~="more"] {
   a:after {
-    content: " →";
-    display: inline-block;
-    margin-left: 0.1em;
+    content: "→";
     transform: translateX(0);
-    transition: transform $speed-normal;
   }
 
   a:hover:after {
-    transform: translateX(2px);
+    transform: translateX(em(2px));
   }
 }
 
 // Links that open in a new tab get an angled arrow icon. You could apply this to links with an href that starts with https/http but they may not be opening in a new tab
 // When opening in a new tab be mindfull to inform the user through text also, give the link a title attribute
 [data-bk-links~="exit"] {
-  a[target="_blank"]:after,
-  a[href^="mailto"]:after {
+  a[target="_blank"]:after {
     content: "↗︎";
-    display: inline-block;
-    margin-left: 0.1em;
-    transform: translate(0 1px); // ← this should be removed depending on the font
-    transition: transform $speed-normal;
+    transform: translate(0 em(1px)); // ← this should be removed depending on the font
   }
 
   a[target="_blank"]:hover:after,
-  a[target="_blank"]:focus:after,
-  a[href^="mailto"]:hover:after,
-  a[href^="mailto"]:focus:after {
-    transform: translate(1px 0);
+  a[target="_blank"]:focus:after {
+    transform: translate(em(1px) 0);
   }
 }
 
@@ -164,15 +168,12 @@ a:not(.btn) {
 [data-bk-links~="down"] {
   a[href^="#"]:not([href="#"]):after {
     content: "↓";
-    display: inline-block;
-    margin-left: 0.1em;
     transform: translateY(0);
-    transition: transform $speed-normal;
   }
 
   a[href^="#"]:not([href="#"]):hover:after,
   a[href^="#"]:not([href="#"]):focus:after {
-    transform: translateY(2px);
+    transform: translateY(em(2px));
   }
 }
 
@@ -180,15 +181,12 @@ a:not(.btn) {
 [data-bk-links~="up"] {
   a[href^="#"]:not([href="#"]):after {
     content: "↑";
-    display: inline-block;
-    margin-left: 0.1em;
     transform: translateY(0);
-    transition: transform $speed-normal;
   }
 
   a[href^="#"]:not([href="#"]):hover:after,
   a[href^="#"]:not([href="#"]):focus:after {
-    transform: translateY(-2px);
+    transform: translateY(em(-2px));
   }
 }
 
@@ -197,11 +195,10 @@ a:not(.btn) {
 // Style download links with a "download arrow" indicator, a tidy little transition too
 [data-bk-links~="download"] {
   a[download]:after {
-    border-bottom: 2px solid currentColor;
+    border-bottom: em(2px) solid currentColor;
     content: "↓"!important;
-    display: inline-block;
     margin-left: 0.3em;
-    transform: translateY(-3px);
+    transform: translateY(em(-3px));
     transition:
       transform $speed-normal,
       border-color $speed-normal;
@@ -214,12 +211,19 @@ a:not(.btn) {
   }
 }
 
-[data-bk-links~="bold"] {
-  &:after,
-  a:after {
-    font-weight: bold;
-  }
-}
+// [data-bk-links~="bold"] {
+//   &:after,
+//   *:after {
+//     font-weight: bold;
+//   }
+// }
+//
+// [data-bk-links~="thin"] {
+//   &:after,
+//   *:after {
+//     font-weight: 200;
+//   }
+// }
 
 // Oh shiii… a class. Aye.
 // Remove the :focus outline on links

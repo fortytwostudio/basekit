@@ -1,5 +1,19 @@
 // Via: https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6/
 //
+// e.g.
+//
+// @include font-face(Samplino, fonts/Samplino);
+//
+// Renders:
+//
+// @font-face {
+// 	font-family: "Samplino";
+// 	src: url("fonts/Samplino.eot?") format("eot"),
+// 		 url("fonts/Samplino.woff2") format("woff2"),
+// 		 url("fonts/Samplino.woff") format("woff"),
+// 		 url("fonts/Samplino.ttf") format("truetype"),
+// 		 url("fonts/Samplino.svg#Samplino") format("svg");
+// }
 
 // =============================================================================
 // String Replace

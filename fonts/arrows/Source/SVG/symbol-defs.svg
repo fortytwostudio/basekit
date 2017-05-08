@@ -1,0 +1,64 @@
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="icon-arrow-down-thin" viewBox="0 0 52 64">
+<title>arrow-down-thin</title>
+<path d="M46.429 37.797l-1.39-1.454-17.999 17.892v-48.235h-1.954v48.235l-17.999-17.892-1.39 1.454 20.367 20.204z"></path>
+</symbol>
+<symbol id="icon-arrow-up-thin" viewBox="0 0 52 64">
+<title>arrow-up-thin</title>
+<path d="M46.429 26.203l-1.39 1.454-17.999-17.892v48.235h-1.954v-48.235l-17.999 17.892-1.39-1.454 20.367-20.204z"></path>
+</symbol>
+<symbol id="icon-arrow-right-thin" viewBox="0 0 64 64">
+<title>arrow-right-thin</title>
+<path d="M26.004 10.934l1.504 1.438-18.507 18.618h49.893v2.021h-49.893l18.507 18.618-1.504 1.438-20.898-21.067z"></path>
+</symbol>
+<symbol id="icon-arrow-right-thin2" viewBox="0 0 64 64">
+<title>arrow-right-thin2</title>
+<path d="M37.996 10.934l-1.504 1.438 18.507 18.618h-49.893v2.021h49.893l-18.507 18.618 1.504 1.438 20.898-21.067z"></path>
+</symbol>
+<symbol id="icon-arrow-ne-thin" viewBox="0 0 52 64">
+<title>arrow-ne-thin</title>
+<path d="M15.338 10l-0.047 2.141 27.018 0.080-36.309 36.309 1.471 1.471 36.309-36.309 0.080 27.018 2.141-0.047-0.123-30.539z"></path>
+</symbol>
+<symbol id="icon-arrow-down-regular" viewBox="0 0 52 64">
+<title>arrow-down-regular</title>
+<path d="M46.213 37.811l-3.458-3.464-14.239 14.304v-42.651h-4.908v42.651l-14.239-14.304-3.458 3.464 20.15 20.189z"></path>
+</symbol>
+<symbol id="icon-arrow-up-regular" viewBox="0 0 52 64">
+<title>arrow-up-regular</title>
+<path d="M5.912 26.189l3.458 3.464 14.239-14.304v42.65h4.907v-42.65l14.239 14.304 3.458-3.464-20.15-20.189z"></path>
+</symbol>
+<symbol id="icon-arrow-left-regular" viewBox="0 0 64 64">
+<title>arrow-left-regular</title>
+<path d="M26.002 52.801l3.576-3.569-14.765-14.699h44.027v-5.066h-44.027l14.765-14.699-3.576-3.569-20.841 20.8z"></path>
+</symbol>
+<symbol id="icon-arrow-right-regular" viewBox="0 0 64 64">
+<title>arrow-right-regular</title>
+<path d="M37.998 11.2l-3.576 3.569 14.765 14.698h-44.026v5.066h44.026l-14.765 14.698 3.576 3.569 20.84-20.8z"></path>
+</symbol>
+<symbol id="icon-arrow-ne-regular" viewBox="0 0 52 64">
+<title>arrow-ne-regular</title>
+<path d="M16.368 10.029l-0.005 5.084 20.967-0.048-31.33 31.33 3.605 3.605 31.33-31.33-0.048 20.967 5.084-0.005 0.029-29.633z"></path>
+</symbol>
+<symbol id="icon-arrow-down-bold" viewBox="0 0 56 64">
+<title>arrow-down-bold</title>
+<path d="M51.49 36.493l-6.65-6.661-12.032 12.315v-38.147h-9.341v38.147l-12.032-12.315-6.612 6.661 23.333 23.507z"></path>
+</symbol>
+<symbol id="icon-arrow-up-bold" viewBox="0 0 56 64">
+<title>arrow-up-bold</title>
+<path d="M51.49 27.507l-6.65 6.661-12.032-12.315v38.147h-9.341v-38.147l-12.032 12.315-6.612-6.661 23.333-23.507z"></path>
+</symbol>
+<symbol id="icon-arrow-left-bold" viewBox="0 0 64 64">
+<title>arrow-left-bold</title>
+<path d="M27.251 56.667l7.042-7.030-13.019-12.72h40.327v-9.875h-40.327l13.019-12.72-7.042-6.989-24.851 24.667z"></path>
+</symbol>
+<symbol id="icon-arrow-right-bold" viewBox="0 0 64 64">
+<title>arrow-right-bold</title>
+<path d="M36.749 7.333l-7.042 7.030 13.019 12.72h-40.327v9.875h40.327l-13.019 12.72 7.042 6.989 24.851-24.667z"></path>
+</symbol>
+<symbol id="icon-arrow-ne-bold" viewBox="0 0 52 64">
+<title>arrow-ne-bold</title>
+<path d="M13.136 6.499l-0.009 10.369 18.965-0.221-29.714 29.714 7.276 7.276 29.714-29.714-0.221 18.965 10.339-0.039 0.136-36.486z"></path>
+</symbol>
+</defs>
+</svg>
