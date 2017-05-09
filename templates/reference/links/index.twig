@@ -200,30 +200,53 @@
 
 <div class="bg-white--tint pad">
   <section class="site-container">
-    <h3 data-bk-layout="pad:trl" class="font-l">Link Features</h3>
+    <h3 data-bk-layout="pad:trl" class="font-l">Arrows</h3>
 
     <div data-bk-layout="hands:8 lap:7">
-      <p>Using the following modifiers we can add neat little features to certain links to encourage interaction.</p>
+      <p>Using the following classes we can add indicator arrows to links and other elements to encourage interaction.</p>
 
-      <h3 class="font-m pad-t">More</h3>
+      <h3 class="font-m pad-t">Right</h3>
       <p>Displays a visual “call to action” after the link.</p>
 
       <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
-        <dt data-bk-layout data-bk-links="primary fade more" class="font-s">
+        <dt data-bk-layout data-bk-links="primary fade underline-hover">
           <ul>
             <li data-bk-layout="6">
               <p>Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
-              <p class="margin-t"><a href="./">Read More</a></p>
+              <p class="margin-t font-upper"><a class="arrow-r" href="./">Read More</a></p>
             </li>
             <li data-bk-layout="6">
               <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem neum sociis natoque.</p>
-              <p class="margin-t"><a href="./">Read More</a></p>
+              <p class="margin-t"><a class="arrow-r" href="./">Read More</a></p>
             </li>
           </ul>
         </dt>
         <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
           Usage
-          <code class="float-r">data-bk-links="primary fade <strong>more</strong>"</code>
+          <code class="float-r">class="<strong>arrow-r</strong>"</code>
+        </dd>
+      </dl>
+
+
+      <h3 class="font-m pad-t">Left</h3>
+      <p>Displays a visual “call to action” before the link.</p>
+
+      <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dt data-bk-layout data-bk-links="primary fade underline-hover">
+          <ul>
+            <li data-bk-layout="6">
+              <p>Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p class="margin-t font-upper"><a class="arrow-l" href="./">Return</a></p>
+            </li>
+            <li data-bk-layout="6">
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem neum sociis natoque.</p>
+              <p class="margin-t"><a class="arrow-l" href="./">Return</a></p>
+            </li>
+          </ul>
+        </dt>
+        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
+          Usage
+          <code class="float-r">class="<strong>arrow-l</strong>"</code>
         </dd>
       </dl>
 
@@ -232,14 +255,12 @@
       <p>Indicate to the user that the link exits the website.</p>
 
       <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
-        <dt data-bk-layout="pad:large" data-bk-links="primary fade exit underline">
-          Visit <a href="http://facebook.com" target="_blank" rel="noopener">our Facebook</a> page to like us and stay up-to-date on coming events.
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-hover">
+          Visit <a class="arrow-exit" href="http://facebook.com" target="_blank" rel="noopener">our Facebook</a> page to like us and stay up-to-date on coming events.
         </dt>
         <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
           Usage
-          <span class="float-r">
-            <code>data-bk-links="primary fade <strong>exit</strong>"</code> and <code> target="_blank"</code>
-          </span>
+          <code class="float-r">class="<strong>arrow-exit</strong>"
         </dd>
       </dl>
 
@@ -249,14 +270,12 @@
       <p>Indicate to the user that the link moves down the page.</p>
 
       <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
-        <dt data-bk-layout="pad:large" data-bk-links="primary fade down">
-          <a href="#footer">Scroll to end</a>
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-hover">
+          <a class="arrow-down" href="#footer">Scroll to end</a>
         </dt>
         <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
           Usage
-          <span class="float-r">
-            <code>data-bk-links="primary fade <strong>down</strong>"</code> and <code>href="<strong>#</strong>target"</code>
-          </span>
+          <code class="float-r">class="<strong>arrow-down</strong>"</code>
         </dd>
       </dl>
 
@@ -265,14 +284,12 @@
       <p>Indicate to the user that the link moves up the page.</p>
 
       <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
-        <dt data-bk-layout="pad:large" data-bk-links="primary fade up">
-          <a href="#start">Go to start</a>
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-hover">
+          <a class="arrow-up" href="#start">Go to start</a>
         </dt>
         <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
           Usage
-          <span class="float-r">
-            <code>data-bk-links="primary fade <strong>up</strong>"</code> and <code>href="<strong>#</strong>target"</code>
-          </span>
+          <code class="float-r">class="<strong>arrow-up</strong>"</code>
         </dd>
       </dl>
 
@@ -282,14 +299,12 @@
       <p>Indicate to the user that the link download a file.</p>
 
       <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
-        <dt data-bk-layout="pad:large" data-bk-links="primary fade download">
-          <a href="./" download>Download this file</a>
+        <dt data-bk-layout="pad:large" data-bk-links="primary fade underline-hover">
+          <a class="arrow-dl" href="./" download>Download this file</a>
         </dt>
         <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
           Usage
-          <span class="float-r">
-            <code>data-bk-links="primary fade <strong>download</strong>"</code> and <code>download</code> attr on the link
-          </span>
+          <code class="float-r">class="<strong>arrow-dl</strong>"</code>
         </dd>
       </dl>
 
@@ -299,22 +314,19 @@
       <p>Arrows are normal weight by default but sometimes you might <em>only</em> want the arrow to be bolder.</p>
 
       <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
-        <dt data-bk-layout data-bk-links="primary fade exit">
-          <ul>
-            <li data-bk-layout="6"><a href="http://google.com" target="_blank" rel="noopener">Normal</li>
-            <li data-bk-layout="6"><a data-bk-links="bold" href="http://google.com" target="_blank" rel="noopener">Bold</li>
+        <dt data-bk-layout data-bk-links="primary fade underline-hover">
+          <ul class="font-l">
+            <li data-bk-layout="4"><a class="arrow-exit" href="http://google.com" target="_blank" rel="noopener">Normal</li>
+            <li data-bk-layout="4" class="font-bold"><a class="arrow-exit" href="http://google.com" target="_blank" rel="noopener">Bold</li>
+            <li data-bk-layout="4" class="font-light"><a class="arrow-exit" href="http://google.com" target="_blank" rel="noopener">Thin</li>
           </ul>
         </dt>
-        <dd data-bk-layout="pad:small" style="border-top: 1px solid #ccc">
-          Usage
-          <code class="float-r">data-bk-links="primary fade exit <strong>bold</strong>"</code>
-        </dd>
       </dl>
 
     </div>
 
     <div data-bk-layout="hands:4 lap:4 lap:pr:1" class="pad-b">
-      <div class="alert alert--simple font-s" data-bk-links="primary fade underline-initial">
+      <div class="alert alert--simple font-s" data-bk-links="primary fade underline-hover">
         <h4 class="font-n margin-b"><strong>Note for developers</strong></h4>
 
         <p>These link styles <strong>can</strong> be applied to <a href="../buttons/">button style links</a>, because that makes sense 😊</p>

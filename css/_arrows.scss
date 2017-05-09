@@ -1,0 +1,60 @@
+@include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-regular", 400, normal, svg ttf woff);
+@include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-bold", 700, normal, svg ttf woff);
+@include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-thin", 200, normal, svg ttf woff);
+
+[class*="arrow-"] {
+  &:before,
+  &:after,
+  a:before,
+  a:after {
+    font-family: "Basekit Arrows", $font-family !important;
+    display: inline-block;
+  }
+  // a:before {
+  //   margin-right: 0.2em;
+  // }
+  // a:after {
+  //   margin-left: 0.2em;
+  // }
+}
+
+.arrow {
+  &-r:after {
+    content: "\2009 →";
+  }
+
+  &-l:before {
+    content: "←\2009";
+  }
+
+  &-exit:after {
+    content: "\2009 ↗︎";
+  }
+
+  &-down:after {
+    content: "\2009 ↓";
+  }
+
+  // Same as above but applies an upward arrow instead
+  &-up:after {
+    content: "\2009 ↑";
+  }
+
+  &-dl {
+    &:after {
+      border-bottom: em(2px) solid currentColor;
+      content: "↓"!important;
+      margin-left: 0.3em;
+      transform: translateY(em(-3px));
+      transition:
+        transform $speed-normal,
+        border-color $speed-normal;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      border-bottom-color: transparent;
+      transform: translateY(0);
+    }
+  }
+}

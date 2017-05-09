@@ -14,22 +14,26 @@
       {% endif %}
 
       {% set prev %}
-        <li class="margin-r font-m">
-          <a href="{{ previous_item.url }}">←</a>
+        <li>
+          <a class="arrow-l" href="{{ previous_item.url }}">
+            <span class="hide">Previous</span>
+          </a>
         </li>
       {% endset %}
 
       {% set next %}
-        <li class="margin-l font-m">
-          <a href="{{ next_item.url }}">→</a>
+        <li>
+          <a class="arrow-r" href="{{ next_item.url }}">
+            <span class="hide">Next</span>
+          </a>
         </li>
       {% endset %}
     {% endif %}
   {% endfor %}
 {% endfor %}
 
-<div data-bk-links="white fade dim" class="bg-primary--light clear align-c">
-  <ul data-bk-layout="pad:0 auto" class="nav nav--block align-c font-s font-light">
+<div data-bk-links="white fade dim" class="bg-primary--light align-c">
+  <ul data-bk-layout="pad:small auto" class="nav nav--block font-s">
     {{ prev }}
 
     {% for item in mainNav if item.children|length %}
