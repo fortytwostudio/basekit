@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  @if $html-body-full-height { height: 100%; }
+  height: 100%;
 }
 
 * {
@@ -15,11 +15,11 @@ html {
 }
 
 body {
-  @if $html-body-full-height { height: 100%; }
   backface-visibility: hidden;
   background: color(body) unquote($body-media);
   color: color(text);
   font: $font-weight #{em(strip-unit($font-size), 16)}/#{$font-line-height / $font-size} $font-family;
+  // height: 100%;
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
 
