@@ -92,3 +92,30 @@ progress[value] {
     border-radius: 0 0.15em 0.15em 0;
   }
 }
+
+// @include mq(hands) {
+  [class*="stick-"] {
+    position: sticky;
+    z-index: $z-position-over;
+  }
+
+  .stick-t {
+    top: 0;
+  }
+
+  .stick-b {
+    bottom: 0;
+  }
+// }
+
+.oh {
+  overflow-x: hidden !important;
+}
+
+.quicknav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
