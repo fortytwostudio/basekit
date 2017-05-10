@@ -1,0 +1,60 @@
+// Silly gradient bg class
+.bg {
+  &-lols {
+    background-image: linear-gradient(90deg,
+      color(primary),
+      color(secondary, lighter),
+      color(tertiary, light),
+      color(secondary),
+      color(tertiary, lighter),
+      color(primary, light),
+      color(tertiary),
+      color(primary, lighter),
+      color(secondary, light)
+    );
+  }
+}
+
+// Make item stick to browser edge
+[class*="stick-"] {
+  position: relative;
+  position: sticky;
+  z-index: $z-position-over;
+}
+// Stick to top
+.stick-t { top: 0; }
+// Stick to bottom
+.stick-b { bottom: 0; }
+
+// Hide overflow on x axis
+.oh-x {
+  overflow-x: hidden !important;
+}
+
+
+
+// Styles used by the reference guide only:
+progress[value] {
+  appearance: none;
+  border-radius: 0.15em;
+  height: 0.75em;
+  overflow: hidden;
+  vertical-align: 0;
+  width: 100%;
+
+  &::-webkit-progress-bar {
+    background-color: color(grey);
+    box-shadow: 0 1px 2px rgba(black, 0.4) inset;
+  }
+  &::-webkit-progress-value {
+    background-image: linear-gradient(to right, color(primary), color(primary, light));
+    border-radius: 0 0.15em 0.15em 0;
+  }
+}
+
+// Custom lineheight classes
+.lh-1 { line-height: 1; }
+.lh-2 { line-height: 1.1; }
+.lh-3 { line-height: 1.2; }
+.lh-4 { line-height: 1.3; }
+.lh-0 { line-height: 0.8; }

@@ -74,41 +74,6 @@
   "forms-standard",
   "forms-extended";
 
-// Styles used by the reference guide only:
-progress[value] {
-  appearance: none;
-  border-radius: 0.15em;
-  height: 0.75em;
-  overflow: hidden;
-  vertical-align: 0;
-  width: 100%;
-
-  &::-webkit-progress-bar {
-    background-color: color(grey);
-    box-shadow: 0 1px 2px rgba(black, 0.4) inset;
-  }
-  &::-webkit-progress-value {
-    background-image: linear-gradient(to right, color(primary), color(primary, light));
-    border-radius: 0 0.15em 0.15em 0;
-  }
-}
-
-// @include mq(hands) {
-  [class*="stick-"] {
-    position: relative;
-    position: sticky;
-    z-index: $z-position-over;
-  }
-
-  .stick-t {
-    top: 0;
-  }
-
-  .stick-b {
-    bottom: 0;
-  }
-// }
-
-.oh-x {
-  overflow-x: hidden !important;
-}
+// DEMO REFERENCE STYLES:
+// ————————————————————————————————————————————————————————————————————————————
+@import "_reference";
