@@ -1,4 +1,4 @@
-{% for navItems in mainNav if navItems.children|length %}
+{# {% for navItems in mainNav if navItems.children|length %}
   {% for item in navItems.children %}
     {% if item.slug == slug %}
       {% if loop.first %}
@@ -30,22 +30,24 @@
       {% endset %}
     {% endif %}
   {% endfor %}
-{% endfor %}
+{% endfor %} #}
 
 <div data-bk-links="white fade dim" class="oh bg-primary--light stick-t align-c shadow">
-  <ul data-bk-layout="pad:small auto" class="quicknav nav nav--block font-s">
-    {{ prev }}
+  <div class="site-container">
+    <ul data-bk-layout="pad:0 auto" class="quicknav nav nav--block font-s">
+      {# {{ prev }} #}
 
-    {% for item in mainNav if item.children|length %}
-      {% for child in item.children %}
-        <li>
-          <a{{ child.slug == slug ? ' class="btn btn--primary" ' }}  href="{{ child.url }}">
-            {{ child.title }}
-          </a>
-        </li>
+      {% for item in mainNav if item.children|length %}
+        {% for child in item.children %}
+          <li>
+            <a{{ child.slug == slug ? ' class="btn btn--primary br-0" ' }}  href="{{ child.url }}">
+              {{ child.title }}
+            </a>
+          </li>
+        {% endfor %}
       {% endfor %}
-    {% endfor %}
 
-    {{ next }}
-  </ul>
+      {# {{ next }} #}
+    </ul>
+  </div>
 </div>
