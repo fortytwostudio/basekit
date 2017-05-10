@@ -15,7 +15,7 @@ $btn-corners: 0.25em;
     padding: 0.5em 1em;
     border: 0;
     background-color: transparent;
-    transition: background-color $speed-normal ease-in-out;
+    transition: all $speed-normal ease-in-out;
     @if $btn-corners {
       border-radius: rem($btn-corners);
     }
@@ -27,7 +27,7 @@ $btn-corners: 0.25em;
       &:hover,
       &:focus {
         color: white;
-        background-color: color(primary, light);
+        background-color: color(primary, darker);
       }
     }
 
@@ -38,7 +38,7 @@ $btn-corners: 0.25em;
       &:hover,
       &:focus {
         color: white;
-        background-color: color(secondary, light);
+        background-color: color(secondary, dark);
       }
     }
 
