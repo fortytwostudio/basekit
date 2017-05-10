@@ -15,6 +15,16 @@
       padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
     }
 
+    &-xs {
+      &, &-t {
+        padding-top: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+      }
+
+      &, &-b {
+        padding-bottom: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+      }
+    }
+
     &-s {
       &, &-t {
         padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);

@@ -34,13 +34,13 @@
 
 <div data-bk-links="white fade dim" class="oh bg-primary--light stick-t align-c shadow">
   <div class="site-container">
-    <ul data-bk-layout="pad:0 auto" class="quicknav nav nav--block font-s">
+    <ul data-bk-layout="pad:0 auto" class="pad-xs quicknav nav nav--block font-s">
       {# {{ prev }} #}
 
       {% for item in mainNav if item.children|length %}
         {% for child in item.children %}
           <li>
-            <a{{ child.slug == slug ? ' class="btn btn--primary br-0" ' }}  href="{{ child.url }}">
+            <a{{ child.slug == slug ? ' class="btn btn--primary" ' }}  href="{{ child.url }}">
               {{ child.title }}
             </a>
           </li>
