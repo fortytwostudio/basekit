@@ -74,6 +74,16 @@
         padding-bottom: ($grid-gutter * 1px);
       }
 
+      &-xs {
+        &, &-t {
+          padding-top: (($grid-gutter / 4) * 1px);
+        }
+
+        &, &-b {
+          padding-bottom: (($grid-gutter / 4) * 1px);
+        }
+      }
+
       &-s {
         &, &-t {
           padding-top: (($grid-gutter / 2) * 1px);
