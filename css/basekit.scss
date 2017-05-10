@@ -113,10 +113,16 @@ progress[value] {
 }
 
 .scroll-x {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   -webkit-overflow-scrolling: touch;
   align-items: center;
   display: flex;
   justify-content: space-between;
+  overflow-y: hidden;
   overflow-x: auto;
   white-space: nowrap;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
