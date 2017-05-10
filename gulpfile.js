@@ -20,8 +20,7 @@ var gulp            = require('gulp'),
     // Send noficitations to the system and CLI
     notify          = require('gulp-notify'),
     // Sync changes to the Browser
-    browserSync     = require('browser-sync')
-    reload          = browserSync.reload;
+    browserSync     = require('browser-sync');
 
 ///
 /// Setup an error notification for gulp-plumber to handle
@@ -40,8 +39,11 @@ gulp.task('sync', function() {
     proxy: 'basekit.dev',
     // notify: false,
     scrollRestoreTechnique: "cookie",
-    logLevel: "silent",
-    reloadDelay: 2500
+    // logLevel: "silent",
+    logLevel: "info",
+    // Slight delays to prevent things going nuts, not sure why they go nuts :/
+    reloadDelay: 100,
+    reloadDebounce: 500
   });
 });
 
@@ -87,6 +89,8 @@ gulp.task('js', function() {
     .pipe(uglify())
     // Output it here
     .pipe(gulp.dest('js/min'))
+    // Reload and inject
+    .pipe(reload({ stream: true }))
     // Report the gzipped file size
     .pipe(size({
       gzip: true,
@@ -165,7 +169,7 @@ gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', { interval: 500 }, ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
-  gulp.watch('demo/**/*.html').on('change', reload);
+  gulp.watch('demo/**/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'sync']);

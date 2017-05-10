@@ -1,7 +1,7 @@
 {% extends "_layout.twig" %}
 
 {# It's rare you'd ever want to output the homepage title of so the value here doesn't matter much #}
-{% set title = "Welcome to Basekit, yo!" %}
+{% set title = "Reference" %}
 {# Set the slug to empty to simulate an empty segment in Craft #}
 {% set slug = "reference" %}
 
@@ -15,13 +15,21 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter  pad">
-    <div class="site-container">
-      <div data-bk-layout="palm:9 hands:8 lap:7" data-bk-links="primary fade" class="font-thin  font-xl">
-        <p>Basekit is an opinionated frontend framework built for use in <a href="https://fortytwo.studio" target="_blank" rel="noopener">FortyTwo Studio</a> projects.</p>
-      </div>
+<div class="bg-grey--lighter  pad" id="intro">
+  <section class="site-container">
+
+    <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
+
+    <div data-bk-layout="palm:9 hands:8 lap:7" data-bk-links="primary fade" class="rte">
+      <p class="font-m">Basekit is a frontend framework designed to speed up the development of <a href="https://fortytwo.studio" target="_blank" rel="noopener">FortyTwo Studio</a> web projects while balancing flexibility, optimisation, and consistency with the source graphic design.</p>
+
+      <p>You’ll need <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a> to optimise and build project files. Experience using of <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a> is expected and you’ll need to configure the host and proxy values in the browserSync Gulp task if you want things to be awesome.</p>
     </div>
-  </div>
+
+    {% include "reference/_partials/_status.twig" with { value : 80 } %}
+
+  </section>
+</div>
 
 
   <div class="bg-white pad">
@@ -31,7 +39,7 @@
 
       <div data-bk-layout="lap:8" data-bk-links="primary underline fade exit" class="rte">
 
-        <p>This Basekit project makes key use of <a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>, <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a> and <a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener">Twig</a>, we assume you already have NPM and Git setup. We build static frontend templates in Twig so they can be ported later on to Craft CMS, however the core CSS framework does not require Twig for use.</p>
+        <p>While the frontend templates are built with, Twig to streamline the integration with Craft CMS templates, the core framework does not require Craft CMS to be used.</p>
 
         <p>You’ll also want a local server of some kind, we currently prefer <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener">Laravel Valet</a> for small static sites and initial frontend templating, like this.</p>
 
