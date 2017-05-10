@@ -1,3 +1,28 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--start {
+    align-self: flex-start !important;
+  }
+
+  &--end {
+    align-self: flex-end !important;
+  }
+
+  &--stretch {
+    align-self: stretch !important;
+  }
+
+  &--content-end {
+    align-content: flex-end;
+  }
+}
+
+.font-mono {
+  font-family: $font-family--mono;
+}
+
 // Silly gradient bg class
 .bg {
   &-lols {
