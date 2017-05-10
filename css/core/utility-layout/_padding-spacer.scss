@@ -1,67 +1,117 @@
 @if $spacer-css {
 
   $spacer-name: pad !default;
-  $spacer-min: 320px !default;
+  $spacer-min: 500px !default;
   $spacer-max: ($max-width * 1px) !default;
+
 
   .#{$spacer-name} {
 
-    // @include mq($spacer-min) {}
     &, &-t {
-      padding-top: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
+      padding-top: rem($grid-gutter * 1px) / 2;
     }
 
     &, &-b {
-      padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
+      padding-bottom: rem($grid-gutter * 1px) / 2;
     }
 
     &-xs {
       &, &-t {
-        padding-top: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+        padding-top: rem(($grid-gutter / 4) * 1px) / 2;
       }
 
       &, &-b {
-        padding-bottom: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: rem(($grid-gutter / 4) * 1px) / 2;
       }
     }
 
     &-s {
       &, &-t {
-        padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
+        padding-top: rem(($grid-gutter / 2) * 1px) / 2;
       }
 
       &, &-b {
-        padding-bottom: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: rem(($grid-gutter / 2) * 1px) / 2;
       }
     }
 
     &-l {
       &, &-t {
-        padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
+        padding-top: rem(($grid-gutter * 2) * 1px) / 2;
       }
 
       &, &-b {
-        padding-bottom: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: rem(($grid-gutter * 2) * 1px) / 2;
       }
     }
 
     &-xl {
       &, &-t {
-        padding-top: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
+        padding-top: rem(($grid-gutter * 4) * 1px) / 2;
       }
 
       &, &-b {
-        padding-bottom: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
+        padding-bottom: rem(($grid-gutter * 4) * 1px) / 2;
       }
     }
 
-    &-0 {
+    @include mq($spacer-min) {
       &, &-t {
-        padding-top: 0!important;
+        padding-top: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: 0!important;
+        padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
+      }
+
+      &-xs {
+        &, &-t {
+          padding-top: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+        }
+
+        &, &-b {
+          padding-bottom: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+        }
+      }
+
+      &-s {
+        &, &-t {
+          padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
+        }
+
+        &, &-b {
+          padding-bottom: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
+        }
+      }
+
+      &-l {
+        &, &-t {
+          padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
+        }
+
+        &, &-b {
+          padding-bottom: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
+        }
+      }
+
+      &-xl {
+        &, &-t {
+          padding-top: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
+        }
+
+        &, &-b {
+          padding-bottom: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
+        }
+      }
+
+      &-0 {
+        &, &-t {
+          padding-top: 0!important;
+        }
+
+        &, &-b {
+          padding-bottom: 0!important;
+        }
       }
     }
 
@@ -114,6 +164,6 @@
         }
       }
     }
-  }
 
+  }
 }
