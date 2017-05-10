@@ -32,22 +32,20 @@
   {% endfor %}
 {% endfor %} #}
 
-<div data-bk-links="white fade dim" class="bg-primary--light stick-t align-c shadow" style="position:relative;">
-  {# <div class="site-container"> #}
-    <ul data-bk-layout="pad:rl" class="pad-xs scroll-x nav--block font-s">
-      {# {{ prev }} #}
+<div data-bk-links="white fade dim" class="scroll-x stick-t shadow">
+  <ul data-bk-layout="pad:rl" class="pad-xs scroll-x__content nav nav--block font-s">
+    {# {{ prev }} #}
 
-      {% for item in mainNav if item.children|length %}
-        {% for child in item.children %}
-          <li>
-            <a{{ child.slug == slug ? ' class="btn btn--primary" ' }}  href="{{ child.url }}">
-              {{ child.title }}
-            </a>
-          </li>
-        {% endfor %}
+    {% for item in mainNav if item.children|length %}
+      {% for child in item.children %}
+        <li>
+          <a{{ child.slug == slug ? ' class="btn btn--primary" ' }}  href="{{ child.url }}">
+            {{ child.title }}
+          </a>
+        </li>
       {% endfor %}
+    {% endfor %}
 
-      {# {{ next }} #}
-    </ul>
-  {# </div> #}
+    {# {{ next }} #}
+  </ul>
 </div>
