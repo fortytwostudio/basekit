@@ -29,6 +29,48 @@
 }
 
 
+.scroll-x {
+  background-color: color(primary, light);
+  text-align: center;
+  z-index: $z-position-over;
+
+  &:after {
+  	background-image: linear-gradient(90deg, rgba(color(primary, light),0), color(primary, light));
+  	height: 100%;
+  	right: 0;
+  	width: rem($margin * 1px);
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: $z-position-over;
+  }
+
+  &__content  {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(($max-width * 2) + 0px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include mq(palm) {
+      max-width: rem($max-width + 0px);
+    }
+  }
+}
+
+
 
 // Styles used by the reference guide only:
 progress[value] {

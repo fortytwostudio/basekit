@@ -92,7 +92,7 @@
   /* mega menu list */
   .nav-menu {
     position: relative;
-    z-index: 15;
+    z-index: $z-mobile-nav;
   }
 
   // a top level navigation item in the mega menu
@@ -154,48 +154,6 @@
       opacity: 1;
       transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
       transition-delay: 0.15s;
-    }
-  }
-}
-
-
-
-
-.scroll-x {
-  background-color: color(primary, light);
-  text-align: center;
-
-  &:after {
-  	background-image: linear-gradient(90deg, rgba(color(primary, light),0), color(primary, light));
-  	height: 100%;
-  	right: 0;
-  	width: rem($margin * 1px);
-    content: "";
-    display: block;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-  }
-
-  &__content  {
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -webkit-overflow-scrolling: touch;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: rem(($max-width * 2) + 0px);
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: 100%;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    @include mq(palm) {
-      max-width: rem($max-width + 0px);
     }
   }
 }

@@ -69,7 +69,7 @@ gulp.task('scss', function() {
     //
     .pipe(gulp.dest('css'))
     // Reload and inject
-    .pipe(reload({ stream: true }))
+    .pipe(browserSync.reload({ stream: true }))
     // Show file size before gzip
     .pipe(size({ showFiles: true }))
     // Show file size after gzip
@@ -90,7 +90,7 @@ gulp.task('js', function() {
     // Output it here
     .pipe(gulp.dest('js/min'))
     // Reload and inject
-    .pipe(reload({ stream: true }))
+    .pipe(browserSync.reload({ stream: true }))
     // Report the gzipped file size
     .pipe(size({
       gzip: true,
