@@ -108,14 +108,15 @@ progress[value] {
   }
 // }
 
-.oh {
+.oh-x {
   overflow-x: hidden !important;
 }
 
-.quicknav {
+.scroll-x {
+  -webkit-overflow-scrolling: touch;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
 }
