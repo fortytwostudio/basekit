@@ -41,4 +41,15 @@ $(function() {
     // Add the value into the text field
     $('#fontoggler').attr('value', $.cookie("fontoggler"));
   };
+
+  // Keyboard navigation between pages
+  $('body').keydown(function(e){
+    if (e.keyCode == 37) {
+      $('#previous')[0].click();
+    }
+    else if (e.keyCode == 39) {
+     $('#next')[0].click();
+    }
+  });
+
 });

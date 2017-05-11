@@ -17,13 +17,13 @@
 
           <p data-bk-layout="6">
             <span data-bk-layout="pad:0" class="color-white font-xs arrow-l" style="position:relative;left:-1.1em;">Previous</span>
-            <a class="font-bold" href="{{ previous_item.url }}">
+            <a id="previous" class="font-bold" href="{{ previous_item.url }}">
               {{ previous_item.title|lower }}
             </a>
           </p>
           <p data-bk-layout="6 right">
             <span data-bk-layout="pad:0" class="color-white font-xs arrow-r" style="position:relative;right:-1.1em;">Next</span>
-            <a class="font-bold" href="{{ next_item.url }}">
+            <a id="next" class="font-bold" href="{{ next_item.url }}">
               {{ next_item.title|lower }}
             </a>
           </p>
