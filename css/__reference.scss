@@ -97,7 +97,7 @@
       display: none;
     }
 
-    @include mq(palm) {
+    @include mq(s) {
       max-width: rem($max-width + 0px);
     }
   }

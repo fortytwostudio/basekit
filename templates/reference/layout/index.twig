@@ -10,7 +10,7 @@
     <section class="site-container">
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Basekit layout system is based on a ”faux grid” idea and built with CSS <em>inline-block</em>. Rather than classes it is applied through the <em>data</em> attribute.</p>
 
         <p>Once HTML white-space has been removed, inline-block provides the flexibility and robustness that floats cans truggle with. Inline-block items can be vertically aligned and flow more consistently. The data attribute allows greater separation of layout styles from other CSS and classes, it also avoids cramming lots of stuff into the class attribute.</p>
@@ -26,7 +26,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">The Grid</h3>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p>By default BaseKit is based on the common twelve column layout, this provides a great flexibility when dividing the grid into columns. However Basekit is not resticted to any number of columns.</p>
 
         <p>The ”faux grid” idea mentioned above relates to there being one grid across all screen size (there are no ”tiers” as seen in other frameworks). If you want a four column grid at small screen size simply <i>fake</i> it by using three columns for each small screen column.</p>
@@ -174,7 +174,7 @@
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Push Right &amp; Left</h3>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p>The <code>pr:</code> and <code>pl:</code> values allow you to push blocks towards the right or left.</p>
       </div>
 
@@ -199,7 +199,7 @@
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Vertical Align Middle</h3>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p>In <code>data-bk-layout</code> simply specify <code>middle</code> to aling items along the middle.</p>
       </div>
 
@@ -222,7 +222,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Vertical Align Bottom</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="l:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>bottom</code> to aling items to the bottom.</p>
       </div>
 
@@ -245,7 +245,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Align Right + Vertical Align Bottom</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="l:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>right bottom</code> to aling items to the right and bottom.</p>
       </div>
 
@@ -268,7 +268,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Align Center + Vertical Align Middle</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="l:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>middle center</code> to aling items this way.</p>
       </div>
 
@@ -297,7 +297,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Single Item Alignment</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="l:7" class="rte">
         <p>To position one particular item to the bottom specify <code>self-bottom</code>in <code>data-bk-layout</code>. <strong>Currently this only works for bottom alignment</strong>.</p>
       </div>
 
@@ -315,7 +315,7 @@
         </ul>
       </div>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="l:7" class="rte">
         <p>Single item alignment will override any other alignment settings. Below the container specifies a <code>middle center</code> alignment but the second item is forced to the bottom.</p>
       </div>
 
@@ -346,53 +346,53 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Padding</h3>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p>In the following examples the coloured edges indicate where padding has been specified. Unlike the spacer or margin classes the available values for grid padding should provide a full range of options.</p>
 
         <p>Padding is actually what creates the grid “gutters” between columns.</p>
       </div>
 
       <ul data-bk-layout="middle  pad:0">
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:t" class="bg-primary" src="http://placehold.it/600x400?text=pad:t" alt="Top">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:tr" class="bg-primary" src="http://placehold.it/600x400?text=pad:tr" alt="Top Right">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:tb" class="bg-primary" src="http://placehold.it/600x400?text=pad:tb" alt="Top Bottom">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:tl" class="bg-primary" src="http://placehold.it/600x400?text=pad:tl" alt="Top Left">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:b" class="bg-primary" src="http://placehold.it/600x400?text=pad:b" alt="Bottom">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:bl" class="bg-primary" src="http://placehold.it/600x400?text=pad:bl" alt="Bottom Left">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:rl" class="bg-primary" src="http://placehold.it/600x400?text=pad:rl" alt="Right Left">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:rb" class="bg-primary" src="http://placehold.it/600x400?text=pad:rb" alt="Right Bottom">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:r" class="bg-primary" src="http://placehold.it/600x400?text=pad:r" alt="Right">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:l" class="bg-primary" src="http://placehold.it/600x400?text=pad:l" alt="Left">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:trb" class="bg-primary" src="http://placehold.it/600x400?text=pad:trb" alt="Top Right Bottom">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:rbl" class="bg-primary" src="http://placehold.it/600x400?text=pad:rbl" alt="Right Bottom Left">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:tbl" class="bg-primary" src="http://placehold.it/600x400?text=pad:tbl" alt="Top Bottom Left">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:trl" class="bg-primary" src="http://placehold.it/600x400?text=pad:trl" alt="Top Right Left">
         </li>
       </ul>
@@ -403,17 +403,17 @@
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Padding Sizes</h3>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p>There are three configurable sizes of padding, the default value and small and large values. These are half and double the default padding value.</p>
 
         <p>Unlike the spacer class there is no “larger” option.</p>
       </div>
 
       <ul data-bk-layout="middle  pad:0">
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:small" class="bg-primary" src="http://placehold.it/600x400?text=pad:small" alt="Small Padding">
         </li>
-        <li data-bk-layout="palm:4 lap:3">
+        <li data-bk-layout="s:4 l:3">
           <img data-bk-layout="pad:large" class="bg-primary" src="http://placehold.it/600x400?text=pad:large" alt="Large Padding">
         </li>
       </ul>
@@ -425,7 +425,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Simple Widths</h3>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p>This simple width class offers pre-defined width values for use without concern for the grid. Sticking with <code>data-bk-layout</code> is preferred to maintain consistency but sometimes simply setting 100% or 20% width is required. In fact, a 12 column grid (the default) can’t be broken into certain values (20% is 2.4 which would make a useless column width). Really the most useful classes here would be 20% and 100%.</p>
 
         <p>This class is also fully responsive with options across all defined breakpoints.</p>
@@ -448,38 +448,38 @@
       </div>
 
       <ul class="color-white font-xs">
-        <li data-bk-layout class="w-palm-50 w-hands-33 w-lap-20">
+        <li data-bk-layout class="w-s-50 w-m-33 w-l-20">
           <ul data-bk-layout class="bg-tertiary--dark">
-            <li>w-lap-20</li>
-            <li>w-hands-33</li>
-            <li>w-palm-50</li>
+            <li>w-l-20</li>
+            <li>w-m-33</li>
+            <li>w-s-50</li>
           </ul>
         </li>
-        <li data-bk-layout class="w-palm-50 w-hands-33 w-lap-20">
+        <li data-bk-layout class="w-s-50 w-m-33 w-l-20">
           <ul data-bk-layout class="bg-tertiary--dark">
-            <li>w-lap-20</li>
-            <li>w-hands-33</li>
-            <li>w-palm-50</li>
+            <li>w-l-20</li>
+            <li>w-m-33</li>
+            <li>w-s-50</li>
           </ul>
         </li>
-        <li data-bk-layout class="w-palm-50 w-hands-33 w-lap-20">
+        <li data-bk-layout class="w-s-50 w-m-33 w-l-20">
           <ul data-bk-layout class="bg-tertiary--dark">
-            <li>w-lap-20</li>
-            <li>w-hands-33</li>
-            <li>w-palm-50</li>
+            <li>w-l-20</li>
+            <li>w-m-33</li>
+            <li>w-s-50</li>
           </ul>
         </li>
-        <li data-bk-layout class="w-100 w-palm-50 w-lap-20">
+        <li data-bk-layout class="w-100 w-s-50 w-l-20">
           <ul data-bk-layout class="bg-tertiary--dark">
-            <li>w-lap-20</li>
-            <li>w-palm-50</li>
+            <li>w-l-20</li>
+            <li>s-s-50</li>
             <li>w-100</li>
           </ul>
         </li>
-        <li data-bk-layout class="w-100 w-hands-50 w-lap-20">
+        <li data-bk-layout class="w-100 w-m-50 w-l-20">
           <ul data-bk-layout class="bg-tertiary--dark">
-            <li>w-lap-20</li>
-            <li>w-hands-50</li>
+            <li>w-l-20</li>
+            <li>m-m-50</li>
             <li>w-100</li>
           </ul>
         </li>

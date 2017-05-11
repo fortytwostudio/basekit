@@ -6,7 +6,7 @@
     transition: all $speed-slow ease-in-out;
 
     // Bump up the default (nav--block padding) for small screens
-    @include mq($until: hands) {
+    @include mq($until: m) {
       padding: 1em;
     }
 
@@ -23,7 +23,7 @@
   }
 }
 
-@include mq($until: hands) {
+@include mq($until: m) {
   // This wrapper is a bit of a fudge to get rid of the invisible spacing that appears when the item is inline-block
   // It also makes the nav dropdown thing full width
   .site-nav-wrapper {
@@ -76,7 +76,7 @@
 // We don't want to see the toggler at large screen sizes
 #nav-toggler,
 .nav-toggler-wrapper {
-  @include mq(hands) {
+  @include mq(m) {
     display: none;
   }
   // We don't want it if there's no JS either
@@ -88,7 +88,7 @@
 
 
 
-@include mq(hands) {
+@include mq(m) {
   /* mega menu list */
   .nav-menu {
     position: relative;

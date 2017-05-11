@@ -1,6 +1,6 @@
 <footer data-bk-links="white fade dim underline-hover" class="site-container pad color-white font-light" tabindex="-1" id="footer">
   <div data-bk-layout="pad:0  middle">
-    <div data-bk-layout="hands:3">
+    <div data-bk-layout="m:3">
       <h1 class="site-logo  logo  inline-block">
         <span class="site-logo__img  logo__img">
           {{ siteName }}
@@ -8,9 +8,9 @@
       </h1>
     </div>
 
-    <div data-bk-layout="pad:0  hands:9">
+    <div data-bk-layout="pad:0  m:9">
       {% if address|length or siteEmail or siteTel %}
-        <div data-bk-layout="palm:4">
+        <div data-bk-layout="s:4">
           {% if address.org %}<span class="block">{{ address.org }}</span>{% endif %}
           {% if address.street %}<span class="block">{{ address.street }}</span>{% endif %}
           {% if address.townCity %}<span class="block">{{ address.townCity }}</span>{% endif %}
@@ -26,7 +26,7 @@
       {% endif %}
 
       {% if footerNav|length %}
-        <ul data-bk-layout="6  palm:4">
+        <ul data-bk-layout="6  s:4">
           {% for item in footerNav %}
             <li>
               <a href="{{ item.url }}">{{ item.title }}</a>
@@ -36,7 +36,7 @@
       {% endif %}
 
       {% if socialLinks|length %}
-        <ul data-bk-layout="6  palm:4" data-bk-links="exit">
+        <ul data-bk-layout="6  s:4" data-bk-links="exit">
           {% for item in socialLinks %}
             <li>
               <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>

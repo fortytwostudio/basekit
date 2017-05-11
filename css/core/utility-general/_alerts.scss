@@ -9,7 +9,7 @@
     padding: rem(($margin / 2) * 1px);
     position: relative;
 
-    @include mq(palm) {
+    @include mq(s) {
       padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
     }
 
@@ -62,7 +62,7 @@
     &--compact {
       padding: rem(($margin / 4) * 1px);
 
-      @include mq(palm) {
+      @include mq(s) {
         padding: rem(($margin / 2) * 1px);
       }
     }

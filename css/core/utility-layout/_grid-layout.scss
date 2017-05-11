@@ -20,7 +20,7 @@ $bk-grid-name: data-bk-layout !default;
 /// users downloading unnecessary CSS.
 ///
 /// @example
-///   <div data-bk="to:lap:8  to:desk:6">
+///   <div data-bk="to:m:8  to:l:6">
 $bk-grid-mq-to: true !default;
 
 /// By default columns get a (half gutter) margin around them, this variable
@@ -258,7 +258,7 @@ $bk-push-left: true !default;
 
 
   // Increase the padding size
-  @include mq(hands) {
+  @include mq(m) {
     padding: ($margin / 16) * 1rem;
   }
 }

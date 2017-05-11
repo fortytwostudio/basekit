@@ -24,7 +24,7 @@ body {
   text-size-adjust: 100%;
 
   @if $font-size > $font-size-small-screen {
-    @include mq($until: hands) {
+    @include mq($until: m) {
       font-size: em(strip-unit($font-size-small-screen), 16);
     }
   }
