@@ -5,7 +5,7 @@ $btn-corners: 0.25em;
 
 @if $btn-css {
 
-  .btn {
+  [class*="btn-"] {
     display: inline-block;
     vertical-align: middle;
     color: inherit;
@@ -19,8 +19,10 @@ $btn-corners: 0.25em;
     @if $btn-corners {
       border-radius: rem($btn-corners);
     }
+  }
 
-    &--primary {
+  .btn {
+    &-primary {
       color: white;
       background-color: color(primary);
 
@@ -31,7 +33,7 @@ $btn-corners: 0.25em;
       }
     }
 
-    &--secondary {
+    &-secondary {
       color: white;
       background-color: color(secondary);
 
@@ -42,16 +44,12 @@ $btn-corners: 0.25em;
       }
     }
 
-    &--outline {
-      box-shadow: 0 0 0 3px color(primary, dark)
-    }
-
-    &--empty {
+    &-empty {
       color: inherit;
       background-color: transparent;
     }
 
-    &--fill {
+    &-fill {
       width: 100%;
     }
   }

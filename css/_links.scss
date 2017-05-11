@@ -30,7 +30,7 @@
 // Use this group to setup your desired link color styles, beyond this group you will find various configation utilities that can be used to apply various states and styles to links
 
 // We do not want these styles to apply to the .btn link style, so it is excluded.
-a:not(.btn) {
+a:not([class*="btn-"]) {
 
   // Link style used on white backgrounds, you'll want to combine this with `dim`
   [data-bk-links~="white"] & {
