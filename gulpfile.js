@@ -39,8 +39,8 @@ gulp.task('sync', function() {
     proxy: 'basekit.dev',
     // notify: false,
     scrollRestoreTechnique: "cookie",
-    // logLevel: "silent",
-    logLevel: "info",
+    logLevel: "silent",
+    // logLevel: "info",
     // Slight delays to prevent things going nuts, not sure why they go nuts :/
     reloadDelay: 100,
     reloadDebounce: 500
@@ -144,7 +144,10 @@ gulp.task('twig', function() {
   // Uncached data for populating Twig files
   .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
   // Let gulp-twig know where the base template directory is
-  .pipe(twig({ base: 'templates' }))
+  .pipe(twig({
+    base: 'templates',
+    cache: false
+  }))
   // Minify the files for development use
   .pipe(htmlmin({
     collapseWhitespace: true,
@@ -171,7 +174,7 @@ gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', { interval: 500 }, ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
-  gulp.watch('demo/**/*.html').on('change', browserSync.reload);
+  // gulp.watch('templates/**/*.twig').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'sync']);

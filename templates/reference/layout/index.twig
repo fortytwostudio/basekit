@@ -420,13 +420,15 @@
     </section>
   </div>
 
-  <div class="bg-white--tint pad" id="widths">
+  <div class="bg-tertiary--lighter pad" id="widths">
     <section class="site-container">
 
       <h3 data-bk-layout="pad:trl" class="font-l">Simple Widths</h3>
 
       <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
-        <p>This simple width class offers the ability to set content to pre-defined values without concern for the grid.</p>
+        <p>This simple width class offers pre-defined width values for use without concern for the grid. Sticking with <code>data-bk-layout</code> is preferred to maintain consistency but sometimes simply setting 100% or 20% width is required. In fact, a 12 column grid (the default) can’t be broken into certain values (20% is 2.4 which would make a useless column width). Really the most useful classes here would be 20% and 100%.</p>
+
+        <p>This class is also fully responsive with options across all defined breakpoints.</p>
       </div>
 
       <ul data-bk-layout class="color-white">
@@ -437,6 +439,50 @@
             </span>
           </li>
         {% endfor %}
+      </ul>
+
+      <div data-bk-layout="pad:trl" class="pad-t">
+        <h3 class="font-l margin-b">Responsive Example</h3>
+
+        <p>Width classes are available from each breakpoint, but to save on file size there is no “up to” option.</p>
+      </div>
+
+      <ul class="color-white font-xs">
+        <li data-bk-layout class="w-palm-50 w-hands-33 w-lap-20">
+          <ul data-bk-layout class="bg-tertiary--dark">
+            <li>w-lap-20</li>
+            <li>w-hands-33</li>
+            <li>w-palm-50</li>
+          </ul>
+        </li>
+        <li data-bk-layout class="w-palm-50 w-hands-33 w-lap-20">
+          <ul data-bk-layout class="bg-tertiary--dark">
+            <li>w-lap-20</li>
+            <li>w-hands-33</li>
+            <li>w-palm-50</li>
+          </ul>
+        </li>
+        <li data-bk-layout class="w-palm-50 w-hands-33 w-lap-20">
+          <ul data-bk-layout class="bg-tertiary--dark">
+            <li>w-lap-20</li>
+            <li>w-hands-33</li>
+            <li>w-palm-50</li>
+          </ul>
+        </li>
+        <li data-bk-layout class="w-100 w-palm-50 w-lap-20">
+          <ul data-bk-layout class="bg-tertiary--dark">
+            <li>w-lap-20</li>
+            <li>w-palm-50</li>
+            <li>w-100</li>
+          </ul>
+        </li>
+        <li data-bk-layout class="w-100 w-hands-50 w-lap-20">
+          <ul data-bk-layout class="bg-tertiary--dark">
+            <li>w-lap-20</li>
+            <li>w-hands-50</li>
+            <li>w-100</li>
+          </ul>
+        </li>
       </ul>
 
     </section>
