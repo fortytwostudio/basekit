@@ -14,21 +14,27 @@
   vertical-align: middle;
 }
 
+.btn-empty {
+  color: color(primary);
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: color(grey, light);
+  }
+}
+
+
 .btn-primary {
   color: white;
   background-color: color(primary);
 
   &:hover,
   &:focus {
-    color: white;
-    background-color: color(primary, darker);
+    background-color: color(primary, dark);
   }
 }
 
-.btn-empty {
-  color: inherit;
-  background-color: transparent;
-}
 
 .btn-secondary {
   color: white;
@@ -36,7 +42,6 @@
 
   &:hover,
   &:focus {
-    color: white;
-    background-color: color(secondary, dark);
+    background-color: color(secondary, light);
   }
 }
