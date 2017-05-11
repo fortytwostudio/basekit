@@ -1,3 +1,21 @@
+.bg-gradient {
+  background-image: scrim-linear-gradient(90deg, $color-primary, $color-secondary);
+}
+
+// Silly gradient bg class
+.bg {
+  &-lols {
+    background-image: linear-gradient(90deg,
+      color(primary),
+      color(tertiary, light),
+      color(secondary),
+      color(primary, light),
+      color(tertiary),
+      color(secondary, light)
+    );
+  }
+}
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -25,20 +43,6 @@
 
 .font-mono {
   font-family: $font-family--mono;
-}
-
-// Silly gradient bg class
-.bg {
-  &-lols {
-    background-image: linear-gradient(90deg,
-      color(primary),
-      color(tertiary, light),
-      color(secondary),
-      color(primary, light),
-      color(tertiary),
-      color(secondary, light)
-    );
-  }
 }
 
 // Make item stick to browser edge
