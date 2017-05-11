@@ -2,7 +2,7 @@
 
 {% set title = "Colours" %}
 {% set slug = "colours" %}
-{% set pageHeaderColor = "bg-lols" %}
+{% set pageHeaderColor = "bg-gradient" %}
 
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
@@ -12,7 +12,7 @@
 
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Primary and Secondary colour groups are often used for headings, links, button and background colours. Links and buttons may default to the primary colour with the secondary colour used on hover.</p>
 
         <p>Often a tertiary colour option won't be provided. Tertiary colours are useful for active link states, buttons, and background colours.</p>
@@ -29,13 +29,13 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Brand Colours</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="l:7" class="rte">
         <p>Primary and Secondary values will be defined in by brand guidelines or style guides provided by the designer or client. The lighter and darker values are not always the same and should be tweaked in the Color settings Sass file. These tings should be set for a balance of aesthetic appeal and utility, a dark that is too light or a light that is too dark won't be of any use when building the website.</p>
 
         <p>The tertiary value is not always provided as part of the brand guidelines or style guide, in such a case talk to the designer responsible or find an appropriatly fitting grey.</p>
       </div>
 
-      <div data-bk-layout="lap:4 lap:pr:1" class="pad-b">
+      <div data-bk-layout="l:4 l:pr:1" class="pad-b">
         <div class="alert alert--simple font-s">
           <h4 class="font-n margin-b"><strong>Note for designers</strong></h4>
 
@@ -44,23 +44,23 @@
       </div>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
-        <div data-bk-layout="palm:6 lap:4">
+        <div data-bk-layout="s:6 l:4">
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-xs">
             <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m font-thin">
               {{ colour|capitalize }}
             </li>
-            <li data-bk-layout="3 lap:pad:small" class="bg-{{ colour }}--lighter color-black pad-l-t">
+            <li data-bk-layout="3 l:pad:small" class="bg-{{ colour }}--lighter color-black pad-l-t">
               lighter
             </li>
-            <li data-bk-layout="3 lap:pad:small" class="bg-{{ colour }}--light color-black pad-l-t">
+            <li data-bk-layout="3 l:pad:small" class="bg-{{ colour }}--light color-black pad-l-t">
               light
             </li>
-            <li data-bk-layout="3 lap:pad:small" class="bg-{{ colour }}--dark color-white pad-l-t">
+            <li data-bk-layout="3 l:pad:small" class="bg-{{ colour }}--dark color-white pad-l-t">
               dark
             </li>
-            <li data-bk-layout="3 lap:pad:small" class="bg-{{ colour }}--darker color-white pad-l-t">
+            <li data-bk-layout="3 l:pad:small" class="bg-{{ colour }}--darker color-white pad-l-t">
               darker
             </li>
           </ol>
@@ -85,12 +85,12 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Standard Values</h3>
 
-      <div data-bk-layout="lap:7  lap:pl:5" data-bk-links="primary fade underline" class="rte">
+      <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary fade underline" class="rte">
         <p>Black and white colour options are fixed utility classes that should never change. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
       </div>
 
       {% for colour in ['black', 'white'] %}
-        <div data-bk-layout="palm:4">
+        <div data-bk-layout="s:4">
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
@@ -121,28 +121,28 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Grey Tones</h3>
 
-      <div data-bk-layout="lap:7  lap:pl:5" class="rte">
+      <div data-bk-layout="l:7  l:pl:5" class="rte">
         <p>As with black and white, greys are set colour values that typically won't be changed. However, unlike black and white they <i>can</i> be changed if needed to suit the design. The tones below have been selected to best meet most sitatuons.</p>
       </div>
 
       {% for colour in ['grey'] %}
-        <div data-bk-layout="palm:6 lap:4">
+        <div data-bk-layout="s:6 l:4">
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-xs">
             <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m font-thin">
               {{ colour|capitalize }}
             </li>
-            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--lighter color-black pad-l-t">
+            <li data-bk-layout="6 l:3 l:pad:small" class="bg-{{ colour }}--lighter color-black pad-l-t">
               lighter
             </li>
-            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--light color-black pad-l-t">
+            <li data-bk-layout="6 l:3 l:pad:small" class="bg-{{ colour }}--light color-black pad-l-t">
               light
             </li>
-            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--dark color-white pad-l-t">
+            <li data-bk-layout="6 l:3 l:pad:small" class="bg-{{ colour }}--dark color-white pad-l-t">
               dark
             </li>
-            <li data-bk-layout="6 lap:3 lap:pad:small" class="bg-{{ colour }}--darker color-white pad-l-t">
+            <li data-bk-layout="6 l:3 l:pad:small" class="bg-{{ colour }}--darker color-white pad-l-t">
               darker
             </li>
           </ol>
@@ -167,7 +167,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Default Text Colour</h3>
 
-      <div data-bk-layout="lap:7  lap:pl:1" data-bk-links="primary fade underline" class="rte">
+      <div data-bk-layout="l:7  l:pl:1" data-bk-links="primary fade underline" class="rte">
         <p>For text colours the lightest you can go on a white background is <code>#666</code> for AA compliancy or <code>#555</code> for AAA compliancy. It is advisable to keep the base text colour well above AAA compliancy.</p>
 
         <p>On a black background, light text can go as dark as <code>999</code> for AAA compliancy and <code>666</code> for AA compliancy. Again it is advised to stick with AAA level compliancy.</p>
@@ -175,7 +175,7 @@
         <p>For body text on mid-range and different colours you must check with a contrast testing tool. For more information see the <a href="../accessibility">Accessibility page</a>.</p>
       </div>
 
-      <div data-bk-layout="palm:4">
+      <div data-bk-layout="s:4">
         <ol class="font-m font-thin color-white">
           <li data-bk-layout class="bg-text pad-xl-b">
             Text
@@ -200,16 +200,16 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">Alert Colours</h3>
 
-      <div data-bk-layout="lap:8  lap:pl:4" data-bk-links="primary fade underline" class="rte">
+      <div data-bk-layout="l:8  l:pl:4" data-bk-links="primary fade underline" class="rte">
         <p>For more information see the <a href="../alerts/">alerts section</a>.</p>
       </div>
 
-      {% for colour in ['alert', 'error', 'neutral', 'positive'] %}
-        <div data-bk-layout="palm:3">
+      {% for colour in ['alert', 'alert--error', 'alert--neutral', 'alert--positive'] %}
+        <div data-bk-layout="s:3">
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-m font-thin">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b">
+            <li data-bk-layout class="{{ colour }} alert--simple pad-xl-b">
               {{ colour|capitalize }}
             </li>
           </ol>

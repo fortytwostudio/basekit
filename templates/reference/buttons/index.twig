@@ -10,8 +10,12 @@
     <section class="site-container">
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
-      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
-        <p class="font-m">Description TBC</p>
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+        <p class="font-m">Buttons can be tricky little buggers to get right. With the exception of the simple Primary and Secondary styles, buttons will almost always be styled depending on the project.</p>
+
+        <p>Some projects demand complex button combinations while others may not demand more than the standard set. The trickiness comes when dealing with a button’s background colour, its hover state colour, the button text colour <i>and</i> the colour of whatever the background is behind the button.</p>
+
+        <p>The best course of action (and this is really for the designers) is to start with and try to keep things simple. Don’t combine too many combinations and be wary of where buttons are used.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 50 } %}
@@ -24,36 +28,45 @@
       <h2 data-bk-layout="pad:trl" class="font-l">Standard buttons</h2>
 
       <p data-bk-layout>
-        <a class="btn" href="#">No Fill Button</a>
-      </p>
-
-
-      <p data-bk-layout>
-        <a class="btn btn--primary" href="#">Primary Button</a>
+        <a class="btn-primary" href="#">Primary Button</a>
       </p>
 
       <p data-bk-layout>
-        <a class="btn btn--secondary" href="#">Secondary Button</a>
+        <a class="btn-secondary" href="#">Secondary Button</a>
       </p>
 
       <p data-bk-layout>
-        <a class="btn btn--outline" href="#">Outlined Button</a>
+        <a class="btn-empty" href="#">Empty Button</a>
+      </p>
+
+
+      <h3 data-bk-layout="pad:trl" class="font-l">Form field buttons</h3>
+      <p data-bk-layout>
+        <button class="btn-primary" type="button" name="button">Button</button>
+      </p>
+
+      <p data-bk-layout>
+        <input class="btn-primary" type="submit" name="input" value="Submit Input">
+      </p>
+
+      <p data-bk-layout>
+        <input class="btn-primary" type="button" name="input" value="Button Input">
       </p>
 
 
 
       <h3 data-bk-layout="pad:trl" class="font-l">Full width</h3>
-      <div data-bk-layout="palm:8 hands:6 desk:4" class="pad-s-t rte">
+      <div data-bk-layout="s:8 m:6 l:4" class="pad-s-t rte">
         <p>
-          <a class="btn btn--primary btn--fill" href="#">Fit Container</a>
+          <a class="btn-primary w-100" href="#">Fit Container</a>
         </p>
 
         <p>
-          <a class="btn btn--primary btn--fill align-c" href="#">Fit &amp; Centre Text</a>
+          <a class="btn-primary w-100 align-c" href="#">Fit &amp; Centre Text</a>
         </p>
 
         <p>
-          <a class="btn btn--primary btn--fill align-r" href="#">Fit &amp; Right Text</a>
+          <a class="btn-primary w-100 align-r" href="#">Fit &amp; Right Text</a>
         </p>
       </div>
 
@@ -64,27 +77,27 @@
         <p data-bk-layout>Button sizes can be increased or decreased using the <a href="../typography/#font-sizes">font sizing class</a> and the padding will scale accordingly.</p>
 
         <p data-bk-layout="auto" class="font-xs">
-          <a class="btn btn--primary" href="#">Extra Small</a>
+          <a class="btn-primary" href="#">Extra Small</a>
         </p>
 
         <p data-bk-layout="auto" class="font-s">
-          <a class="btn btn--primary" href="#">Small</a>
+          <a class="btn-primary" href="#">Small</a>
         </p>
 
         <p data-bk-layout="auto">
-          <a class="btn btn--primary" href="#">Default</a>
+          <a class="btn-primary" href="#">Default</a>
         </p>
 
         <p data-bk-layout="auto" class="font-m">
-          <a class="btn btn--primary" href="#">Medium</a>
+          <a class="btn-primary" href="#">Medium</a>
         </p>
 
         <p data-bk-layout="auto" class="font-l">
-          <a class="btn btn--primary" href="#">Large</a>
+          <a class="btn-primary" href="#">Large</a>
         </p>
 
         <p data-bk-layout="auto" class="font-xl">
-          <a class="btn btn--primary" href="#">Extra Large</a>
+          <a class="btn-primary" href="#">Extra Large</a>
         </p>
       </div>
     </div>
@@ -95,35 +108,35 @@
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Button Icons</h3>
 
-      <div data-bk-layout="hands:8 lap:7" data-bk-links="primary fade underline-initial">
+      <div data-bk-layout="m:8 l:7" data-bk-links="primary fade underline-initial">
         <p>Buttons can seamlessly inherit features from the <a href="../links/">links attribute</a> without the need for additional development. This maintains consistency across links and buttons.</p>
 
         <h3 class="font-bold pad-t">Right</h3>
 
-        <p><a class="arrow-r btn btn--secondary" href="./">Read More</p>
+        <p><a class="arrow-r btn-secondary" href="./">Read More</p>
 
         <h3 class="font-bold pad-l-t">Left</h3>
 
-        <p><a class="arrow-l btn btn--secondary" href="./">Return</p>
+        <p><a class="arrow-l btn-secondary" href="./">Return</p>
 
         <h3 class="font-bold pad-l-t">External Link</h3>
 
-        <p><a class="arrow-exit btn btn--secondary" href="http://google.com" target="_blank" rel="noopener">Visit Google</p>
+        <p><a class="arrow-exit btn-secondary" href="http://google.com" target="_blank" rel="noopener">Visit Google</p>
 
         <h3 class="font-bold pad-l-t">Scroll Down</h3>
 
-        <p><a class="arrow-down btn btn--secondary" href="#footer">Go to footer</p>
+        <p><a class="arrow-down btn-secondary" href="#footer">Go to footer</p>
 
         <h3 class="font-bold pad-l-t">Scroll Up</h3>
 
-        <p><a class="arrow-up btn btn--secondary" href="#start">Go to start</p>
+        <p><a class="arrow-up btn-secondary" href="#start">Go to start</p>
 
         <h3 class="font-bold pad-l-t">Download</h3>
 
-        <p><a class="arrow-dl btn btn--secondary" href="./" download>Download this file</p>
+        <p><a class="arrow-dl btn-secondary" href="./" download>Download this file</p>
       </div>
 
-      {# <div data-bk-layout="hands:4 lap:4 lap:pr:1" class="pad-b">
+      {# <div data-bk-layout="m:4 l:4 l:pr:1" class="pad-b">
         <div class="alert alert--simple font-s">
           <h4 class="font-n margin-b"><strong>Note for developers</strong></h4>
 

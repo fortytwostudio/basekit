@@ -66,22 +66,6 @@ $colors: (
   ),
   body: (
     base: $color-body
-  ),
-  alert: (
-    base: $alert,
-    dark: darken($alert, 35%)
-  ),
-  error: (
-    base: $alert--error,
-    dark: darken($alert--error, 12%)
-  ),
-  neutral: (
-    base: $alert--neutral,
-    dark: darken($alert--neutral, 15%)
-  ),
-  positive: (
-    base: $alert--positive,
-    dark: darken($alert--muted, 12%)
   )
 );
 @function color($scheme, $tone: base) {

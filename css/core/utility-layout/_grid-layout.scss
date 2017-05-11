@@ -3,7 +3,7 @@
 ////
 
 $grid-columns: 12 !default;
-$grid-column-width: 70 !default;
+$grid-column-width: 80 !default;
 $grid-gutter: 40 !default;
 
 $margin: $grid-gutter / 2 !default;
@@ -20,7 +20,7 @@ $bk-grid-name: data-bk-layout !default;
 /// users downloading unnecessary CSS.
 ///
 /// @example
-///   <div data-bk="to:lap:8  to:desk:6">
+///   <div data-bk="to:m:8  to:l:6">
 $bk-grid-mq-to: true !default;
 
 /// By default columns get a (half gutter) margin around them, this variable
@@ -56,16 +56,6 @@ $bk-push-left: true !default;
 
 // Make use of the fantastic sass-mq from The Guardian's developers
 @import "core/third-party/media-queries";
-
-
-// A simple function to switch the order of the MQ Breakpoints list
-@function reverse($list) {
-  $result: ();
-  @for $i from length($list)*-1 through -1 {
-    $result: append($result, nth($list, abs($i)));
-  }
-  @return $result;
-}
 
 /// A simple mixin to ease use of the attribute selector
 ///
@@ -268,7 +258,7 @@ $bk-push-left: true !default;
 
 
   // Increase the padding size
-  @include mq(hands) {
+  @include mq(m) {
     padding: ($margin / 16) * 1rem;
   }
 }

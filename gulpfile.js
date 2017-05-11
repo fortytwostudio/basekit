@@ -20,8 +20,7 @@ var gulp            = require('gulp'),
     // Send noficitations to the system and CLI
     notify          = require('gulp-notify'),
     // Sync changes to the Browser
-    browserSync     = require('browser-sync')
-    reload          = browserSync.reload;
+    browserSync     = require('browser-sync');
 
 ///
 /// Setup an error notification for gulp-plumber to handle
@@ -41,7 +40,10 @@ gulp.task('sync', function() {
     // notify: false,
     scrollRestoreTechnique: "cookie",
     logLevel: "silent",
-    reloadDelay: 2500
+    // logLevel: "info",
+    // Slight delays to prevent things going nuts, not sure why they go nuts :/
+    reloadDelay: 100,
+    reloadDebounce: 500
   });
 });
 
@@ -67,7 +69,7 @@ gulp.task('scss', function() {
     //
     .pipe(gulp.dest('css'))
     // Reload and inject
-    .pipe(reload({ stream: true }))
+    .pipe(browserSync.reload({ stream: true }))
     // Show file size before gzip
     .pipe(size({ showFiles: true }))
     // Show file size after gzip
@@ -87,6 +89,8 @@ gulp.task('js', function() {
     .pipe(uglify())
     // Output it here
     .pipe(gulp.dest('js/min'))
+    // Reload and inject
+    .pipe(browserSync.reload({ stream: true }))
     // Report the gzipped file size
     .pipe(size({
       gzip: true,
@@ -138,9 +142,12 @@ gulp.task('twig', function() {
   return gulp.src('./templates/**/[^_]*.twig')
   .pipe(plumber({errorHandler: hasError}))
   // Uncached data for populating Twig files
-  .pipe( data(function(file){ return requireUncached('./templates/data.json'); }))
+  .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
   // Let gulp-twig know where the base template directory is
-  .pipe(twig({ base: 'templates' }))
+  .pipe(twig({
+    base: 'templates',
+    cache: false
+  }))
   // Minify the files for development use
   .pipe(htmlmin({
     collapseWhitespace: true,
@@ -158,6 +165,8 @@ gulp.task('twig', function() {
   .pipe(plumber.stop())
   // Output minified file
   .pipe(gulp.dest('demo'))
+  // Reload the site
+  .pipe(browserSync.reload({ stream: true }))
 });
 
 // Combine various functions into watch
@@ -165,7 +174,7 @@ gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', { interval: 500 }, ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
-  gulp.watch('demo/**/*.html').on('change', reload);
+  // gulp.watch('templates/**/*.twig').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'sync']);

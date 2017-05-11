@@ -21,20 +21,15 @@ $colophon-logo-height: 14px;
   height: rem($site-logo-height) / 2;
   width: rem($site-logo-width) / 2;
 
-  @include mq(hands) {
+  @include mq(m) {
     height: rem($site-logo-height / 1.66666);
     width: rem($site-logo-width / 1.66666);
   }
 
-  @include mq(lap) {
+  @include mq(l) {
     height: rem($site-logo-height / 1.33333);
     width: rem($site-logo-width / 1.33333);
   }
-
-  // @include mq(desk) {
-  //   height: rem($site-logo-height);
-  //   width: rem($site-logo-width);
-  // }
 
   &__img {
     background-image: url("../imgs/logos/site-logo.svg");

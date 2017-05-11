@@ -1,0 +1,17 @@
+$widths: (20, 25, 33.333333, 50, 66.666666, 75, 80, 100) !default;
+
+@each $width in $widths {
+  .w-#{floor($width)} {
+    width: $width + 0%;
+  }
+}
+
+@each $breakpoint, $value in $mq-breakpoints {
+  @include mq($breakpoint) {
+    @each $width in $widths {
+      .w-#{$breakpoint}-#{floor($width)} {
+        width: $width + 0%;
+      }
+    }
+  }
+}
