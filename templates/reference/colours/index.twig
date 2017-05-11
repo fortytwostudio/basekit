@@ -204,12 +204,12 @@
         <p>For more information see the <a href="../alerts/">alerts section</a>.</p>
       </div>
 
-      {% for colour in ['alert', 'error', 'neutral', 'positive'] %}
+      {% for colour in ['alert', 'alert--error', 'alert--neutral', 'alert--positive'] %}
         <div data-bk-layout="s:3">
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-m font-thin">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b">
+            <li data-bk-layout class="{{ colour }} alert--simple pad-xl-b">
               {{ colour|capitalize }}
             </li>
           </ol>
