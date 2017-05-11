@@ -57,16 +57,6 @@ $bk-push-left: true !default;
 // Make use of the fantastic sass-mq from The Guardian's developers
 @import "core/third-party/media-queries";
 
-
-// A simple function to switch the order of the MQ Breakpoints list
-@function reverse($list) {
-  $result: ();
-  @for $i from length($list)*-1 through -1 {
-    $result: append($result, nth($list, abs($i)));
-  }
-  @return $result;
-}
-
 /// A simple mixin to ease use of the attribute selector
 ///
 /// @todo EVERYTHING
