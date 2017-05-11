@@ -142,7 +142,7 @@ gulp.task('twig', function() {
   return gulp.src('./templates/**/[^_]*.twig')
   .pipe(plumber({errorHandler: hasError}))
   // Uncached data for populating Twig files
-  .pipe( data(function(file){ return requireUncached('./templates/data.json'); }))
+  .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
   // Let gulp-twig know where the base template directory is
   .pipe(twig({ base: 'templates' }))
   // Minify the files for development use
@@ -162,6 +162,8 @@ gulp.task('twig', function() {
   .pipe(plumber.stop())
   // Output minified file
   .pipe(gulp.dest('demo'))
+  // Reload the site
+  .pipe(browserSync.reload({ stream: true }))
 });
 
 // Combine various functions into watch

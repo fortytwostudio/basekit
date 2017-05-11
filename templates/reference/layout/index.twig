@@ -26,7 +26,7 @@
 
       <h3 data-bk-layout="pad:trl" class="font-l">The Grid</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p>By default BaseKit is based on the common twelve column layout, this provides a great flexibility when dividing the grid into columns. However Basekit is not resticted to any number of columns.</p>
 
         <p>The ”faux grid” idea mentioned above relates to there being one grid across all screen size (there are no ”tiers” as seen in other frameworks). If you want a four column grid at small screen size simply <i>fake</i> it by using three columns for each small screen column.</p>
@@ -174,7 +174,7 @@
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Push Right &amp; Left</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p>The <code>pr:</code> and <code>pl:</code> values allow you to push blocks towards the right or left.</p>
       </div>
 
@@ -195,12 +195,11 @@
     </section>
   </div>
 
-
   <div class="bg-white pad" id="alignment">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Vertical Align Middle</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p>In <code>data-bk-layout</code> simply specify <code>middle</code> to aling items along the middle.</p>
       </div>
 
@@ -342,13 +341,12 @@
     </section>
   </div>
 
-
   <div class="bg-white--tint pad" id="padding">
     <section class="site-container">
 
       <h3 data-bk-layout="pad:trl" class="font-l">Padding</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p>In the following examples the coloured edges indicate where padding has been specified. Unlike the spacer or margin classes the available values for grid padding should provide a full range of options.</p>
 
         <p>Padding is actually what creates the grid “gutters” between columns.</p>
@@ -401,12 +399,11 @@
     </section>
   </div>
 
-
   <div class="bg-white pad" id="padding-size">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Padding Sizes</h3>
 
-      <div data-bk-layout="lap:7" class="rte">
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
         <p>There are three configurable sizes of padding, the default value and small and large values. These are half and double the default padding value.</p>
 
         <p>Unlike the spacer class there is no “larger” option.</p>
@@ -420,6 +417,28 @@
           <img data-bk-layout="pad:large" class="bg-primary" src="http://placehold.it/600x400?text=pad:large" alt="Large Padding">
         </li>
       </ul>
+    </section>
+  </div>
+
+  <div class="bg-white--tint pad" id="widths">
+    <section class="site-container">
+
+      <h3 data-bk-layout="pad:trl" class="font-l">Simple Widths</h3>
+
+      <div data-bk-layout="palm:9 hands:8 lap:7" class="rte">
+        <p>This simple width class offers the ability to set content to pre-defined values without concern for the grid.</p>
+      </div>
+
+      <ul data-bk-layout class="color-white">
+        {% for width in [20, 25, 33, 50, 66, 75, 80, 100] %}
+          <li data-bk-layout="pad:tb">
+            <span data-bk-layout class="bg-tertiary--dark w-{{ width }}">
+              {{ width }}% width
+            </span>
+          </li>
+        {% endfor %}
+      </ul>
+
     </section>
   </div>
 
