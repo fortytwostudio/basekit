@@ -14,6 +14,10 @@
     align-self: stretch !important;
   }
 
+  &--content-start {
+    align-content: flex-start;
+  }
+
   &--content-end {
     align-content: flex-end;
   }
