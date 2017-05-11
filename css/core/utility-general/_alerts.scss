@@ -1,6 +1,6 @@
 @if $form-error-css {
 
-  .#{$form-error-name} {
+  [class*="#{$form-error-name}"] {
     background-color: color(alert);
     border: 1px solid color(alert, dark);
     color: black;
@@ -27,7 +27,9 @@
       transform-origin: 0 100%;
       width: 15px;
     }
+  }
 
+  .#{$form-error-name} {
     @if $alert--error {
       &--error {
         background-color: color(error);
