@@ -14,31 +14,29 @@
   vertical-align: middle;
 }
 
-.btn {
-  &-primary {
+.btn-primary {
+  color: white;
+  background-color: color(primary);
+
+  &:hover,
+  &:focus {
     color: white;
-    background-color: color(primary);
-
-    &:hover,
-    &:focus {
-      color: white;
-      background-color: color(primary, darker);
-    }
+    background-color: color(primary, darker);
   }
+}
 
-  &-empty {
-    color: inherit;
-    background-color: transparent;
-  }
+.btn-empty {
+  color: inherit;
+  background-color: transparent;
+}
 
-  &-secondary {
+.btn-secondary {
+  color: white;
+  background-color: color(secondary);
+
+  &:hover,
+  &:focus {
     color: white;
-    background-color: color(secondary);
-
-    &:hover,
-    &:focus {
-      color: white;
-      background-color: color(secondary, dark);
-    }
+    background-color: color(secondary, dark);
   }
 }
