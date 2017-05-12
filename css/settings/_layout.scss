@@ -4,13 +4,13 @@ $site-width: 96%;
 // Define your responsive breakpoints with a key name and px value.
 $mq-breakpoints: (
   s: 568px,
-  m: 900px,
+  m: 850px,
   l: 1200px
 );
 
 // Define the column count for of your design.
 $grid-columns: 12;
-$grid-column-width: 88;
+$grid-column-width: 74;
 $grid-gutter: 40;
 
 $margin: $grid-gutter / 2;
