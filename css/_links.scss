@@ -101,11 +101,11 @@ a:not([class*="btn-"]) {
       color $speed-slow,
       opacity $speed-slow,
       text-decoration $speed-slow;
-
-    &:focus,
-    &:hover {
-      transition-duration: $speed-normal;
-    }
+    // 
+    // &:focus,
+    // &:hover {
+    //   transition-duration: $speed-normal;
+    // }
   }
 
   // Apply a subtle dimming of the link, best used with white text on a dark background where it's had to make use of an alternative hover color

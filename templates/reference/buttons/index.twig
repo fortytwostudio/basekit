@@ -11,9 +11,9 @@
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="font-m">Buttons can be tricky little buggers to get right. With the exception of the simple Primary and Secondary styles, buttons will almost always be styled depending on the project.</p>
+        <p class="font-m">Buttons can be tricky little buggers to get right. With the exception of the simple Primary and Secondary styles, buttons will almost always be styled depending on the project and can quickly become unwieldy.</p>
 
-        <p>Some projects demand complex button combinations while others may not demand more than the standard set. The trickiness comes when dealing with a button’s background colour, its hover state colour, the button text colour <i>and</i> the colour of whatever the background is behind the button.</p>
+        <p>Some projects demand complex button combinations while others may not demand more than the standard set. The trickiness comes when dealing with a button’s background colour, hover state colour, text colour (hover and normal states) <i>and</i> the colour of whatever the background is behind the button.</p>
 
         <p>The best course of action (and this is really for the designers) is to start with and try to keep things simple. Don’t combine too many combinations and be wary of where buttons are used.</p>
       </div>
@@ -25,47 +25,52 @@
 
   <div class="bg-white pad">
     <section class="site-container">
-      <h2 data-bk-layout="pad:trl" class="font-l">Standard buttons</h2>
 
-      <p data-bk-layout>
-        <a class="btn-primary" href="#">Primary Button</a>
-      </p>
+      <div data-bk-layout="pad:trl m:4"class="pad-b">
+        <h2 class="font-l">Standard buttons</h2>
 
-      <p data-bk-layout>
-        <a class="btn-secondary" href="#">Secondary Button</a>
-      </p>
+        <p data-bk-layout="pad:t">
+          <a class="btn-primary" href="#">Primary Button</a>
+        </p>
 
-      <p data-bk-layout>
-        <a class="btn-empty" href="#">Empty Button</a>
-      </p>
+        <p data-bk-layout="pad:t">
+          <a class="btn-secondary" href="#">Secondary Button</a>
+        </p>
 
-
-      <h3 data-bk-layout="pad:trl" class="font-l">Form field buttons</h3>
-      <p data-bk-layout>
-        <button class="btn-primary" type="button" name="button">Button</button>
-      </p>
-
-      <p data-bk-layout>
-        <input class="btn-primary" type="submit" name="input" value="Submit Input">
-      </p>
-
-      <p data-bk-layout>
-        <input class="btn-primary" type="button" name="input" value="Button Input">
-      </p>
+        <p data-bk-layout="pad:t">
+          <a class="btn-empty" href="#">Empty Button</a>
+        </p>
+      </div>
 
 
+      <div data-bk-layout="pad:trl m:4"class="pad-b">
+        <h2 class="font-l">Form field buttons</h2>
+        <p data-bk-layout="pad:t">
+          <button class="btn-primary" type="button" name="button">Button</button>
+        </p>
 
-      <h3 data-bk-layout="pad:trl" class="font-l">Full width</h3>
-      <div data-bk-layout="s:8 m:6 l:4" class="pad-s-t rte">
-        <p>
+        <p data-bk-layout="pad:t">
+          <input class="btn-primary" type="submit" name="input" value="Submit Input">
+        </p>
+
+        <p data-bk-layout="pad:t">
+          <input class="btn-primary" type="button" name="input" value="Button Input">
+        </p>
+      </div>
+
+
+
+      <div data-bk-layout="pad:trl m:4"class="pad-b">
+        <h2 class="font-l">Full width</h2>
+        <p class="margin-t">
           <a class="btn-primary w-100" href="#">Fit Container</a>
         </p>
 
-        <p>
+        <p class="margin-t">
           <a class="btn-primary w-100 align-c" href="#">Fit &amp; Centre Text</a>
         </p>
 
-        <p>
+        <p class="margin-t">
           <a class="btn-primary w-100 align-r" href="#">Fit &amp; Right Text</a>
         </p>
       </div>
@@ -74,7 +79,7 @@
       <div data-bk-links="primary fade underline-initial">
         <h2 data-bk-layout="pad:trl" class="font-l">Button sizes</h2>
 
-        <p data-bk-layout>Button sizes can be increased or decreased using the <a href="../typography/#font-sizes">font sizing class</a> and the padding will scale accordingly.</p>
+        <p data-bk-layout="s:9 s:pl:3 m:8 m:pl:4 l:7 l:pl:5">Button sizes can be increased or decreased using the <a href="../typography/#font-sizes">font sizing class</a> and the padding will scale accordingly.</p>
 
         <p data-bk-layout="auto" class="font-xs">
           <a class="btn-primary" href="#">Extra Small</a>
@@ -108,30 +113,42 @@
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Button Icons</h3>
 
-      <div data-bk-layout="m:8 l:7" data-bk-links="primary fade underline-initial">
+      <div data-bk-layout="m:8 m:pl:4 l:7 l:pl:5" data-bk-links="primary fade underline-initial">
         <p>Buttons can seamlessly inherit features from the <a href="../links/">links attribute</a> without the need for additional development. This maintains consistency across links and buttons.</p>
+      </div>
 
-        <h3 class="font-bold pad-t">Right</h3>
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Right</h3>
 
         <p><a class="arrow-r btn-secondary" href="./">Read More</p>
+      </div>
 
-        <h3 class="font-bold pad-l-t">Left</h3>
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Left</h3>
 
         <p><a class="arrow-l btn-secondary" href="./">Return</p>
+      </div>
 
-        <h3 class="font-bold pad-l-t">External Link</h3>
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">External Link</h3>
 
         <p><a class="arrow-exit btn-secondary" href="http://google.com" target="_blank" rel="noopener">Visit Google</p>
+      </div>
 
-        <h3 class="font-bold pad-l-t">Scroll Down</h3>
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Scroll Down</h3>
 
         <p><a class="arrow-down btn-secondary" href="#footer">Go to footer</p>
+      </div>
 
-        <h3 class="font-bold pad-l-t">Scroll Up</h3>
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Scroll Up</h3>
 
         <p><a class="arrow-up btn-secondary" href="#start">Go to start</p>
+      </div>
 
-        <h3 class="font-bold pad-l-t">Download</h3>
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Download</h3>
 
         <p><a class="arrow-dl btn-secondary" href="./" download>Download this file</p>
       </div>
