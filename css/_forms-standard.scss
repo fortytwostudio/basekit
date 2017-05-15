@@ -38,7 +38,7 @@ $fh-allow-select-vendor-styling: false !default;
 
 // FIELDSET & LEGENDS
 // Set true to remove fieldset styling and hide the legend text
-$fh-fieldset-bare: false !default;
+$fh-fieldset-bare: true !default;
 
 // BUTTONS
 // If you've read the above comments then this stuff should make sense :P
@@ -224,7 +224,6 @@ $fh-display: block !default;
 
   fieldset {
     @if $fh-fieldset-bare == true {
-      padding: 0;
       border: 0;
     }
     @else {
