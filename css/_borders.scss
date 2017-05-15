@@ -1,44 +1,26 @@
+// The structure of this is straight up pinched from http://tachyons.io/docs/themes/borders/
+
 .b {
-  &-primary {
-    border-style: solid;
-    border-color: color(primary);
-  }
-  &-secondary {
-    border-style: solid;
-    border-color: color(secondary);
-  }
-  &-tertiary {
-    border-style: solid;
-    border-color: color(tertiary);
-  }
-  &-grey {
-    border-style: solid;
-    border-color: color(grey);
-  }
-  &-grey--light {
-    border-style: solid;
-    border-color: color(grey, light);
-  }
-  &-grey--dark {
-    border-style: solid;
-    border-color: color(grey, dark);
-  }
-  &-text {
-    border-style: solid;
-    border-color: currentColor;
-  }
+  &-primary { border-color: color(primary); }
+  &-secondary { border-color: color(secondary); }
+  &-tertiary { border-color: color(tertiary); }
+  &-grey { border-color: color(grey); }
+  &-grey--light { border-color: color(grey, light); }
+  &-grey--dark { border-color: color(grey, dark); }
+  &-text { border-color: currentColor; }
 }
 
-.bw-0 { border-width: 0; }
-.bw-1 { border-width: rem(1px); }
-.bw-2 { border-width: rem(2px); }
-.bw-4 { border-width: rem(4px); }
+.ba { border-style: solid; border-width: rem(1px); }
+.bt { border-top-style: solid; border-top-width: rem(1px); }
+.br { border-right-style: solid; border-right-width: rem(1px); }
+.bb { border-bottom-style: solid; border-bottom-width: rem(1px); }
+.bl { border-left-style: solid; border-left-width: rem(1px); }
+.bn { border-width: 0; }
 
-/* Resets */
+.bw-1 { border-width: 2px; }
+.bw-2 { border-width: 4px; }
+
 .bt-0 { border-top-width: 0; }
 .br-0 { border-right-width: 0; }
 .bb-0 { border-bottom-width: 0; }
 .bl-0 { border-left-width: 0; }
-
-.bx-0 { border-top-width: 0; border-bottom-width: 0; }
-.by-0 { border-right-width: 0; border-left-width: 0; }
