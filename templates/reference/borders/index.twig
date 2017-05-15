@@ -1,0 +1,152 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Borders" %}
+{% set slug = "borders" %}
+
+{% block content %}
+{% include 'reference/_partials/_quick-nav.twig' %}
+
+  <div class="bg-white--tint pad">
+    <section class="site-container">
+      <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
+
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+        <p class="font-m">This simple utility classes provides a wide range of border configurations including setting border radius.</p>
+      </div>
+
+      {% include "reference/_partials/_status.twig" with { value : 25 } %}
+    </section>
+  </div>
+
+  <div class="bg-white pad">
+    <section class="site-container">
+      <div data-bk-layout="pad:rl s:9 s:pl:3 m:8 m:pl:4 l:7 l:pl:5" class="pad-t">
+        <h3 class="font-l">Standard Widths</h3>
+        <p>Three widths are available by default but these can be increased or reduced.</p>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs font-mono color-grey--dark">
+        <div class="ba b-grey--dark">
+          <p data-bk-layout="pad:sm">1px (default)</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs font-mono color-grey--dark">
+        <div class="ba b-grey--dark bw-1">
+          <p data-bk-layout="pad:sm">2px</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs font-mono color-grey--dark">
+        <div class="ba b-grey--dark bw-2">
+          <p data-bk-layout="pad:sm">4px</p>
+        </div>
+      </div>
+
+
+
+      <div data-bk-layout="pad:rl s:9 s:pl:3 m:8 m:pl:4 l:7 l:pl:5" class="pad-t">
+        <h3 class="font-l">Border Colours</h3>
+      </div>
+
+      {% for color in ['primary', 'secondary', 'tertiary', 'grey', 'grey--dark', 'grey--light'] %}
+        <div data-bk-layout="6 m:3 l:2">
+          <div class="b-{{ color }} ba bw-1 font-xs font-mono color-grey--dark">
+            <p data-bk-layout="pad:sm">{{ color|replace({'--' : ' '})|capitalize }}</p>
+          </div>
+        </div>
+      {% endfor %}
+
+
+
+
+
+      <div data-bk-layout="pad:rl s:9 s:pl:3 m:8 m:pl:4 l:7 l:pl:5" class="pad-t">
+        <h3 class="font-l">Inherit Text Colour</h3>
+        <p>Border colours can <em>inherit</em> the element's text colour.</p>
+      </div>
+
+      {% for textColor in ['primary', 'secondary', 'tertiary'] %}
+        <div data-bk-layout="6 m:3 l:2" class="color-{{ textColor }} font-xs">
+          <div class="b-text ba bw-1">
+            <p data-bk-layout="pad:sm">{{ textColor|capitalize }}</p>
+          </div>
+        </div>
+      {% endfor %}
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs font-mono">
+        <div class="b-text ba bw-1">
+          <p data-bk-layout="pad:sm">Body Text</p>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Set Borders</h3>
+      </div>
+
+      {% for borderWidth in ['ba', 'bt', 'br', 'bb', 'bl', 'br bl', 'bt bb', 'br bb', 'bt bl', 'bt br', 'bb bl', 'bn'] %}
+        <div data-bk-layout="6 m:3 l:2" class="font-xs">
+          <div class="b-grey--dark {{ borderWidth }} bw-1 bg-white--tint font-xs font-mono color-grey--dark">
+            <p data-bk-layout="pad:sm">
+              class="{{ borderWidth }}"
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+
+
+
+
+
+      <div data-bk-layout="pad:rl s:9 s:pl:3 m:8 m:pl:4 l:7 l:pl:5" class="pad-t">
+        <h3 class="font-l">Disable Borders</h3>
+        <p>Borders can be disabled as required. All of the following have all borders set first <code>.ba</code> and then specific borders reset to zero.</p>
+      </div>
+
+      {% for zero in ['bt-0', 'br-0', 'bb-0', 'bl-0', 'br-0 bl-0', 'bt-0 bb-0', 'br-0 bb-0', 'bt-0 bl-0', 'bt-0 br-0', 'bb-0 bl-0'] %}
+        <div data-bk-layout="6 m:3 l:2" class="font-xs">
+          <div class="b-grey--dark ba bw-1 {{ zero }} bg-white--tint font-xs font-mono color-grey--dark">
+              <p data-bk-layout="pad:sm">
+                class="{{ zero }}"
+              </p>
+            </div>
+        </div>
+      {% endfor %}
+
+
+
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Border Radius</h3>
+        <p>A standard set of border radius sizes saves time and improves consistency.</p>
+      </div>
+
+      {% for corner in ['br-1', 'br-2', 'br-3', 'br-4', 'br-pill'] %}
+        <div data-bk-layout="6 m:3 l:2" class="font-xs">
+          <div class="b-grey--dark ba bw-1 {{ corner }} bg-white--tint font-xs font-mono color-grey--dark">
+            <p data-bk-layout="pad:sm">
+              class="{{ corner }}"
+            </p>
+          </div>
+        </div>
+
+      {% endfor %}
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs font-mono color-grey--dark">
+        <div style="width: 3.5em; height: 3.5em;" class="b-grey--dark ba bw-1 br-100 inline-block">
+          <p data-bk-layout="pad:sm"></p>
+        </div>
+        <span class="b-grey--dark inline-block"> class="br-100"</span>
+      </div>
+    </section>
+  </div>
+
+{% include 'reference/_partials/_pagination.twig' %}
+
+{% endblock %}

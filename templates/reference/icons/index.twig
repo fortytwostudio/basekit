@@ -13,7 +13,7 @@
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Icon classes are a simple way to add icon graphics to strings of text.</p>
 
-        <p>WIP</p>
+        <p class="alert--simple">Currently only arrow icons exist. Additional SVG icons for search, open, close, social media logos, etc will be added.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 50 } %}
@@ -31,7 +31,7 @@
         <h3 class="font-m pad-t">Right</h3>
         <p>Displays a visual “call to action” after the link.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout data-bk-links="primary fade underline-hover">
             <ul>
               <li data-bk-layout="6">
@@ -44,7 +44,7 @@
               </li>
             </ul>
           </dt>
-          <dd data-bk-layout="pad:sm" style="border-top: 1px solid #ccc">
+          <dd data-bk-layout="pad:sm" class="bt b-grey">
             Usage
             <code class="float-r">class="<strong>arrow-r</strong>"</code>
           </dd>
@@ -54,7 +54,7 @@
         <h3 class="font-m pad-t">Left</h3>
         <p>Displays a visual “call to action” before the link.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout data-bk-links="primary fade underline-hover">
             <ul>
               <li data-bk-layout="6">
@@ -67,7 +67,7 @@
               </li>
             </ul>
           </dt>
-          <dd data-bk-layout="pad:sm" style="border-top: 1px solid #ccc">
+          <dd data-bk-layout="pad:sm" class="bt b-grey">
             Usage
             <code class="float-r">class="<strong>arrow-l</strong>"</code>
           </dd>
@@ -77,11 +77,11 @@
         <h3 class="font-m pad-l-t">External Link</h3>
         <p>Indicate to the user that the link exits the website.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="pad:lg" data-bk-links="primary fade underline-hover">
             Visit <a class="arrow-exit" href="http://facebook.com" target="_blank" rel="noopener">our Facebook</a> page to like us and stay up-to-date on coming events.
           </dt>
-          <dd data-bk-layout="pad:sm" style="border-top: 1px solid #ccc">
+          <dd data-bk-layout="pad:sm" class="bt b-grey">
             Usage
             <code class="float-r">class="<strong>arrow-exit</strong>"
           </dd>
@@ -92,11 +92,11 @@
         <h3 class="font-m pad-l-t">Scroll Down</h3>
         <p>Indicate to the user that the link moves down the page.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="pad:lg" data-bk-links="primary fade underline-hover">
             <a class="arrow-down" href="#footer">Scroll to end</a>
           </dt>
-          <dd data-bk-layout="pad:sm" style="border-top: 1px solid #ccc">
+          <dd data-bk-layout="pad:sm" class="bt b-grey">
             Usage
             <code class="float-r">class="<strong>arrow-down</strong>"</code>
           </dd>
@@ -106,11 +106,11 @@
         <h3 class="font-m pad-l-t">Scroll Up</h3>
         <p>Indicate to the user that the link moves up the page.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="pad:lg" data-bk-links="primary fade underline-hover">
             <a class="arrow-up" href="#start">Go to start</a>
           </dt>
-          <dd data-bk-layout="pad:sm" style="border-top: 1px solid #ccc">
+          <dd data-bk-layout="pad:sm" class="bt b-grey">
             Usage
             <code class="float-r">class="<strong>arrow-up</strong>"</code>
           </dd>
@@ -121,11 +121,11 @@
         <h3 class="font-m pad-l-t">Download</h3>
         <p>Indicate to the user that the link download a file.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="pad:lg" data-bk-links="primary fade underline-hover">
             <a class="arrow-dl" href="./" download>Download this file</a>
           </dt>
-          <dd data-bk-layout="pad:sm" style="border-top: 1px solid #ccc">
+          <dd data-bk-layout="pad:sm" class="bt b-grey">
             Usage
             <code class="float-r">class="<strong>arrow-dl</strong>"</code>
           </dd>
@@ -136,7 +136,7 @@
         <h3 class="font-m pad-l-t">Bold Feature</h3>
         <p>Arrows are normal weight by default but sometimes you might <em>only</em> want the arrow to be bolder.</p>
 
-        <dl class="br-1 shadow bg-white margin-t" style="border: 1px solid #ccc;">
+        <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout data-bk-links="primary fade underline-hover">
             <ul class="font-l">
               <li data-bk-layout="4"><a class="arrow-exit" href="http://google.com" target="_blank" rel="noopener">Normal</li>
@@ -145,25 +145,67 @@
             </ul>
           </dt>
         </dl>
-
-      </div>
-
-      <div data-bk-layout="m:4 l:4 l:pr:1" class="pad-b">
-        <div class="alert alert--simple font-s" data-bk-links="primary fade underline-hover">
-          <h4 class="font-n margin-b"><strong>Note for developers</strong></h4>
-
-          <p>These link styles <strong>can</strong> be applied to <a href="../buttons/">button style links</a>, because that makes sense 😊</p>
-        </div>
-
-        <div class="alert alert--simple font-s">
-          <h4 class="font-n margin-b"><strong>Note for everyone</strong></h4>
-
-          <p>At the moment these link features use the current primary font's arrow glyphs, in the future we may switch this out to use SVG instead.</p>
-        </div>
       </div>
     </div>
     </section>
   </div>
+
+
+  <div class="bg-white--tint pad">
+    <section class="site-container">
+      <h3 data-bk-layout="pad:trl" class="font-l">Button Icons</h3>
+
+      <div data-bk-layout="m:8 m:pl:4 l:7 l:pl:5" data-bk-links="primary fade underline-initial">
+        <p>Buttons seamlessly work with arrow icons without conflict or additional development.</p>
+      </div>
+
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Right</h3>
+
+        <p><a class="arrow-r btn-secondary" href="./">Read More</p>
+      </div>
+
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Left</h3>
+
+        <p><a class="arrow-l btn-secondary" href="./">Return</p>
+      </div>
+
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Scroll Down</h3>
+
+        <p><a class="arrow-down btn-secondary" href="#footer">Go to footer</p>
+      </div>
+
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Scroll Up</h3>
+
+        <p><a class="arrow-up btn-secondary" href="#start">Go to start</p>
+      </div>
+
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">External Link</h3>
+
+        <p><a class="arrow-exit btn-secondary" href="http://google.com" target="_blank" rel="noopener">Visit Google</p>
+      </div>
+
+      <div data-bk-layout="s:6 m:4 l:3">
+        <h3 class="font-bold">Download</h3>
+
+        <p><a class="arrow-dl btn-secondary" href="./" download>Download this file</p>
+      </div>
+
+      {# <div data-bk-layout="m:4 l:4 l:pr:1" class="pad-b">
+        <div class="alert alert--simple font-s">
+          <h4 class="font-n margin-b"><strong>Note for developers</strong></h4>
+
+          <p>These link styles <strong>can</strong> be applied to button style links, because that makes sense 😊</p>
+        </div>
+      </div>
+    </div> #}
+    </section>
+  </div>
+
 {% include 'reference/_partials/_pagination.twig' %}
 
 {% endblock %}

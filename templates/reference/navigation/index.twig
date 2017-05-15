@@ -6,50 +6,17 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
-    <section class="site-container">
-      <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
+<div class="bg-white--tint pad">
+  <section class="site-container">
+    <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="font-m">Description TBC</p>
-      </div>
+    <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <p class="alert--simple">Coming Soon</p>
+    </div>
 
-      {% include "reference/_partials/_status.twig" with { value : 5 } %}
-
-    </section>
-  </div>
-
-  <div class="bg-grey">
-    <section class="site-container  pad">
-      <div data-bk-layout="l:7" data-bk-links="primary fade underline" class="rte">
-        <p class="alert alert--simple">WIP: IGNORE FOR NOW</p>
-
-        <h3 class="font-l">Links set on a horizontal block nav</h3>
-        <ul class="nav  nav--block  nav-links">
-          <li><a href="#">One</a></li>
-          <li class="active"><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          <li><a href="#">Four</a></li>
-        </ul>
-
-        <h3 class="font-l">Links set on a horizontal fit (display table) nav</h3>
-        <ul class="nav  nav--block  nav--fit  nav-links">
-          <li><a href="#">One</a></li>
-          <li class="active"><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          <li><a href="#">Four</a></li>
-        </ul>
-
-        <h3 class="font-l">Links set on a stacked nav</h3>
-        <ul class="nav  nav--block  nav--stacked  nav-links">
-          <li><a href="#">One</a></li>
-          <li class="active"><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-          <li><a href="#">Four</a></li>
-        </ul>
-      </div>
-    </section>
-  </div>
+    {% include "reference/_partials/_status.twig" with { value : 0 } %}
+  </section>
+</div>
 
 {% include 'reference/_partials/_pagination.twig' %}
 
