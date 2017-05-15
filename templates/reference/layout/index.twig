@@ -14,6 +14,27 @@
         <p class="font-m">Basekit layout system is based on a ”faux grid” idea and built with CSS <em>inline-block</em>. Rather than classes it is applied through the <em>data</em> attribute.</p>
 
         <p>Once HTML white-space has been removed, inline-block provides the flexibility and robustness that floats cans truggle with. Inline-block items can be vertically aligned and flow more consistently. The data attribute allows greater separation of layout styles from other CSS and classes, it also avoids cramming lots of stuff into the class attribute.</p>
+
+        <div data-bk-layout="to:m:pad:0 m:6 m:pad:r">
+          <div class="alert--simple alert--positive bn font-s">
+            <h3 class="font-bold font-upper font-n margin-b">Layout Guide</h3>
+
+            <p class="margin-b">Until this section is developed further, I've pulled togther a PDF document explaining how the default layout for Basekit works.</p>
+
+            <p ><a href="/downloads/basekit-layout.pdf" class="btn-primary arrow-dl">Basekit Layout Guide</a></p>
+          </div>
+        </div>
+
+        <div data-bk-layout="to:m:pad:0 m:6 m:pad:l">
+          <div class="alert--simple alert--positive bn font-s">
+
+            <h3 class="font-bold font-upper font-n margin-b">Breakpoints Visualised</h3>
+
+            <p class="margin-b">To help designers better understand which devices sit at which breakpoints here is another download that visualises common devices in each breakpoint. However it's important to keep in mind that these devices are not definitive and it changes regularly. The breakpoints used in Basekit are initial defaults chosen to sit between common screen sizes. It is possible to add additional breakpoints, sometimes named <i>tweakpoints</i> to fine tune layouts.</p>
+
+            <p><a href="/downloads/breakpoints-visualised.pdf" class="btn-primary arrow-dl">Breakpoints Visualised</a></p>
+          </div>
+        </div>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 75 } %}
