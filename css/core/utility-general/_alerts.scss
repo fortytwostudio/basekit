@@ -1,91 +1,81 @@
-@if $form-error-css {
+[class*="#{$alert-name}"] {
+  background-color: $alert;
+  border: 1px solid darken($alert, 35%);
+  color: black;
+  margin-bottom: rem(4px);
+  margin-top: rem(4px);
+  padding: rem(($margin / 2) * 1px);
+  position: relative;
 
-  [class*="#{$form-error-name}"] {
-    background-color: $alert;
-    border: 1px solid darken($alert, 35%);
-    color: black;
-    margin-bottom: rem(4px);
-    margin-top: rem(4px);
-    padding: rem(($margin / 2) * 1px);
-    position: relative;
+  @include mq(s) {
+    padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
+  }
+
+  &:before {
+    background: inherit;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    content: "";
+    height: 15px;
+    left: rem(($margin * 1.5) * 1px);
+    position: absolute;
+    top: rem(-16px);
+    transform: rotate(45deg) skew(12deg, 12deg);
+    transform-origin: 0 100%;
+    width: 15px;
+  }
+}
+
+.#{$alert-name} {
+  &--warn {
+    background-color: $alert--warn;
+    border-color: darken($alert--warn, 12%);
+  }
+
+  &--neutral {
+    background-color: $alert--neutral;
+    border-color: darken($alert--neutral, 15%);
+  }
+
+  &--positive {
+    background-color: $alert--positive;
+    border-color: darken($alert--muted, 12%);
+  }
+
+  &--above {
+    &:before {
+      border-width: 0 1px 1px 0;
+      top: auto;
+      bottom: rem(-1px);
+    }
+  }
+
+  &--compact {
+    padding: rem(($margin / 4) * 1px);
 
     @include mq(s) {
-      padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
+      padding: rem(($margin / 2) * 1px);
     }
+  }
 
+  &--simple {
     &:before {
-      background: inherit;
-      border-color: inherit;
-      border-style: solid;
-      border-width: 1px 0 0 1px;
-      content: "";
-      height: 15px;
-      left: rem(($margin * 1.5) * 1px);
-      position: absolute;
-      top: rem(-16px);
-      transform: rotate(45deg) skew(12deg, 12deg);
-      transform-origin: 0 100%;
-      width: 15px;
+      content: none;
     }
   }
 
-  .#{$form-error-name} {
-    @if $alert--error {
-      &--error {
-        background-color: $alert--error;
-        border-color: darken($alert--error, 12%);
-      }
+  @if $alert-inline-block {
+    &--ib {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: em(10px);
     }
 
-    @if $alert--neutral {
-      &--neutral {
-        background-color: $alert--neutral;
-        border-color: darken($alert--neutral, 15%);
-      }
-    }
-
-    @if $alert--positive {
-      &--positive {
-        background-color: $alert--positive;
-        border-color: darken($alert--muted, 12%);
-      }
-    }
-
-    &--above {
-      &:before {
-        border-width: 0 1px 1px 0;
-        top: auto;
-        bottom: rem(-1px);
-      }
-    }
-
-    &--compact {
-      padding: rem(($margin / 4) * 1px);
-
-      @include mq(s) {
-        padding: rem(($margin / 2) * 1px);
-      }
-    }
-
-    &--simple {
-      &:before {
-        content: none;
-      }
-    }
-
-    @if $alert-inline-block {
-      &--ib {
-        display: inline-block;
-        vertical-align: top;
-        margin-right: em(10px);
-      }
-
-      &--inline {
-        padding: 0 em(4px);
-        vertical-align: baseline;
-        white-space: pre-wrap;
-      }
+    &--inline {
+      padding: 0 em(4px);
+      vertical-align: baseline;
+      white-space: pre-wrap;
     }
   }
-
 }

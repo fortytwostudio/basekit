@@ -91,7 +91,7 @@ $fh-display: block !default;
 
     &.required {
       &:after {
-        color: darken($alert--error, 35%);
+        color: darken($alert--warn, 35%);
         content: "*";
         font-size: 112.5%;
         line-height: 1;
