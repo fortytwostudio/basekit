@@ -1,0 +1,258 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Borders" %}
+{% set slug = "borders" %}
+
+{% block content %}
+{% include 'reference/_partials/_quick-nav.twig' %}
+
+  <div class="bg-white--tint pad">
+    <section class="site-container">
+      <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
+
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+        <p class="font-m">This simple utility classes provides a wide range of border configurations including setting border radius.</p>
+      </div>
+
+      {% include "reference/_partials/_status.twig" with { value : 25 } %}
+    </section>
+  </div>
+
+  <div class="bg-white pad">
+    <section class="site-container">
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Standard Widths</h3>
+        <p>Three widths are available by default but these can be increased or reduced.</p>
+      </div>
+
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-1">
+          <p data-bk-layout="pad:sm">1px</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2">
+          <p data-bk-layout="pad:sm">2px</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-4">
+          <p data-bk-layout="pad:sm">4px</p>
+        </div>
+      </div>
+
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Border Colour</h3>
+        <p>Borders use the main colours by standard.</p>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2">
+        <div class="b-primary bw-2 font-xs">
+          <p data-bk-layout="pad:sm">Primary</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2">
+        <div class="b-secondary bw-2 font-xs">
+          <p data-bk-layout="pad:sm">Secondary</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2">
+        <div class="b-tertiary bw-2 font-xs">
+          <p data-bk-layout="pad:sm">Tertiary</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2">
+        <div class="b-grey bw-2 font-xs">
+          <p data-bk-layout="pad:sm">Grey</p>
+        </div>
+      </div>
+
+
+      <div data-bk-layout="6 m:3 l:2">
+        <div class="b-grey--dark bw-2 font-xs">
+          <p data-bk-layout="pad:sm">Grey Dark</p>
+        </div>
+      </div>
+
+
+      <div data-bk-layout="6 m:3 l:2">
+        <div class="b-grey--light bw-2 font-xs">
+          <p data-bk-layout="pad:sm">Grey Light</p>
+        </div>
+      </div>
+
+
+
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Inherit Text Colour</h3>
+        <p>Border colours can <em>inherit</em> the element's text colour.</p>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="color-primary font-xs">
+        <div class="b-text bw-2">
+          <p data-bk-layout="pad:sm">Primary</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="color-secondary font-xs">
+        <div class="b-text bw-2">
+          <p data-bk-layout="pad:sm">Secondary</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="color-tertiary font-xs">
+        <div class="b-text bw-2">
+          <p data-bk-layout="pad:sm">Tertiary</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-text bw-2">
+          <p data-bk-layout="pad:sm">Body Text</p>
+        </div>
+      </div>
+
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Disable Borders</h3>
+        <p>By default borders apply to all sides, disable the ones you don't want.</p>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bt-0">
+          <p data-bk-layout="pad:sm">top</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 br-0">
+          <p data-bk-layout="pad:sm">right</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bb-0">
+          <p data-bk-layout="pad:sm">bottom</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bl-0">
+          <p data-bk-layout="pad:sm">left</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bx-0">
+          <p data-bk-layout="pad:sm">X</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 by-0">
+          <p data-bk-layout="pad:sm">Y</p>
+        </div>
+      </div>
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Set Borders</h3>
+        <p>By disabling borders many configurations can be applied, the following is not exhaustive.</p>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 by-0 bb-0 bg-white--tint">
+          <p data-bk-layout="pad:sm">top</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 by-0 bt-0 bg-white--tint">
+          <p data-bk-layout="pad:sm">bottom</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bx-0 br-0 bg-white--tint">
+          <p data-bk-layout="pad:sm">left</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bx-0 bl-0 bg-white--tint">
+          <p data-bk-layout="pad:sm">right</p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bb-0 bl-0 bg-white--tint">
+          <p data-bk-layout="pad:sm">top + right</p>
+        </div>
+      </div>
+
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey bw-2 bt-0 br-0 bg-white--tint">
+          <p data-bk-layout="pad:sm">left + bottom</p>
+        </div>
+      </div>
+
+
+
+      <div data-bk-layout="pad:rl" class="pad-t">
+        <h3 class="font-l">Border Radius</h3>
+        <p>A standard set of border radius sizes saves time and improves consistency.</p>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey--dark bw-2 br-1">
+          <p data-bk-layout="pad:sm"><br></p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey--dark bw-2 br-2">
+          <p data-bk-layout="pad:sm"><br></p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey--dark bw-2 br-3">
+          <p data-bk-layout="pad:sm"><br></p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey--dark bw-2 br-4">
+          <p data-bk-layout="pad:sm"><br></p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div class="b-grey--dark bw-2 br-pill">
+          <p data-bk-layout="pad:sm"><br></p>
+        </div>
+      </div>
+
+      <div data-bk-layout="6 m:3 l:2" class="font-xs">
+        <div style="width: 3.5em; height: 3.5em;" class="b-grey--dark bw-2 br-100 inline-block">
+          <p data-bk-layout="pad:sm"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+{% include 'reference/_partials/_pagination.twig' %}
+
+{% endblock %}
