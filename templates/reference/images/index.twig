@@ -12,37 +12,13 @@
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="font-m">Description TBC</p>
+        <p class="alert--simple">Coming Soon</p>
       </div>
 
-      {% include "reference/_partials/_status.twig" with { value : 10 } %}
+      {% include "reference/_partials/_status.twig" with { value : 0 } %}
     </section>
   </div>
-
-  <div class="bg-grey pad">
-    <section class="site-container ">
-      <div data-bk-layout="l:8">
-        <p class="alert alert--simple">WIP: IGNORE FOR NOW</p>
-
-        <p class="margin-tb">Main site logo:</p>
-        <h1 class="logo  site-logo">
-          <a class="logo__img  site-logo__img" href="/" title="Home Page">BaseKit</a>
-        </h1>
-
-        <p class="margin-tb">Footer Logo:</p>
-
-        <div class="logo  colophon-logo">
-          <a class="logo__img  colophon-logo__img" href="http://www.fortytwo.studio" title="FortyTwo Studio">
-            Design and development by FortyTwo Studio
-          </a>
-        </div>
-
-        <h3 class="font-xl  pad-t">Social Media logos</h3>
-      </div>
-
-    </section>
-  </div>
-
+  
 {% include 'reference/_partials/_pagination.twig' %}
 
 {% endblock %}
