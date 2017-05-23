@@ -2,6 +2,12 @@ $color-primary: #00739f !default;
 $color-secondary: #c62b90 !default;
 $color-tertiary: #71e0b1 !default;
 
+// $color-secondary: #bf3459 !default;
+
+// $color-primary: #713eff !default;
+// $color-secondary: #fd3e62 !default;
+// $color-tertiary: #fe7829 !default;
+
 $color-grey: #ccc;
 
 /// Set the body background colour here, if you want to add an image you should configure
@@ -27,31 +33,31 @@ $alert--muted: #e9e9e9 !default;
 $colors: (
   primary: (
     base: $color-primary,
-    lighter: lighten($color-primary, 30%),
-    light: lighten($color-primary, 10%),
-    dark: darken($color-primary, 10%),
-    darker: darken($color-primary, 18%)
+    lighter: mix($color-primary, white, 20%),
+    light: mix($color-primary, white, 60%),
+    dark: mix($color-primary, black, 75%),
+    darker: mix($color-primary, black, 50%)
   ),
   secondary: (
     base: $color-secondary,
-    lighter: lighten($color-secondary, 30%),
-    light: lighten($color-secondary, 10%),
-    dark: darken($color-secondary, 10%),
-    darker: darken($color-secondary, 25%)
+    lighter: mix($color-secondary, white, 20%),
+    light: mix($color-secondary, white, 60%),
+    dark: mix($color-secondary, black, 75%),
+    darker: mix($color-secondary, black, 50%)
   ),
   tertiary: (
     base: $color-tertiary,
-    lighter: lighten($color-tertiary, 28%),
-    light: lighten($color-tertiary, 10%),
-    dark: darken($color-tertiary, 25%),
-    darker: darken($color-tertiary, 40%)
+    lighter: mix($color-tertiary, white, 20%),
+    light: mix($color-tertiary, white, 60%),
+    dark: mix($color-tertiary, black, 75%),
+    darker: mix($color-tertiary, black, 50%)
   ),
   grey: (
     base: $color-grey,
-    lighter: lighten($color-grey, 15%),
-    light: lighten($color-grey, 10%),
-    dark: darken($color-grey, 30%),
-    darker: darken($color-grey, 50%)
+    lighter: mix($color-grey, white, 20%),
+    light: mix($color-grey, white, 60%),
+    dark: mix($color-grey, black, 60%),
+    darker: mix($color-grey, black, 40%)
   ),
   white: (
     base: white,
