@@ -1,27 +1,28 @@
-// Basekit
-$color-primary: #00739f !default;
-$color-secondary: #c62b90 !default;
-$color-tertiary: #71e0b1 !default;
 
-// Corporate Madness
+// Perfect tones
+$color-primary: #3b668b !default;
+$color-secondary: #f67280 !default;
+$color-tertiary: #c9c27d !default;
+
+// Cyber Punk
+// $color-primary: #0270ad !default;
+// $color-secondary: #bf358f !default;
+// $color-tertiary: #71e0b1 !default;
+
+// Saturated
+// $color-primary: #4767db !default;
+// $color-secondary: #f144ac !default;
+// $color-tertiary: #45cd88 !default;
+
+// Corporate Shill
 // $color-primary: #3f51b5 !default;
 // $color-secondary: #9575cd !default;
 // $color-tertiary: #e6e7d4 !default;
 
-// Beach Holiday
+// Beach Days
 // $color-primary: #ff6f69 !default;
 // $color-secondary: #ffcc5c !default;
-// $color-tertiary: #88d8b0 !default;
-
-// Sorbet
-// $color-primary: #a7226e !default;
-// $color-secondary: #2f9599 !default;
-// $color-tertiary: #F7DB4F !default;
-
-// Corporate Tone
-// $color-primary: #355c7d !default;
-// $color-secondary: #f67280 !default;
-// $color-tertiary: #dde9cb !default;
+// $color-tertiary: #88d8b0 !default#3b668b;
 
 
 $color-grey: #ccc;
@@ -49,21 +50,23 @@ $alert--muted: #e9e9e9 !default;
 $colors: (
   primary: (
     base: $color-primary,
-    lighter: mix($color-primary, white, 20%),
+    // By mixing the colour with white we ensure that whatever the colour, it never becomes white. This can be a problem when using the lighten() function if the source colour is already quite light.
+    lighter: mix($color-primary, white, 30%),
     light: mix($color-primary, white, 60%),
+    // As with mixing a colour with white, the same goes for mixing with black.
     dark: mix($color-primary, black, 75%),
     darker: mix($color-primary, black, 50%)
   ),
   secondary: (
     base: $color-secondary,
-    lighter: mix($color-secondary, white, 20%),
+    lighter: mix($color-secondary, white, 30%),
     light: mix($color-secondary, white, 60%),
     dark: mix($color-secondary, black, 75%),
     darker: mix($color-secondary, black, 50%)
   ),
   tertiary: (
     base: $color-tertiary,
-    lighter: mix($color-tertiary, white, 20%),
+    lighter: mix($color-tertiary, white, 30%),
     light: mix($color-tertiary, white, 60%),
     dark: mix($color-tertiary, black, 75%),
     darker: mix($color-tertiary, black, 50%)
