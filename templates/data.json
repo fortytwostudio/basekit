@@ -11,6 +11,10 @@
   },
 
   "mainNav": [{
+    "title": "Home",
+    "url": "/demo/reference/",
+    "slug": "reference"
+  }, {
     "title": "Services",
     "url": "#",
     "slug": "services"

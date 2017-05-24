@@ -13,7 +13,8 @@
       <ul class="nav nav--block | nav-menu">
         {% for item in mainNav %}
           <li class="nav-item">
-            <a{{ isActivePage is defined and isActivePage == item.slug ? ' class="active" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+            <a{{ slug is defined and slug == item.slug ? ' class="active" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+
               {{ item.title }}
             </a>
             {% if item.children|length %}

@@ -5,18 +5,13 @@
     text-transform: uppercase;
     transition: all $speed-slow ease-in-out;
 
-    // Bump up the default (nav--block padding) for small screens
-    @include mq($until: m) {
-      padding: 1em;
-    }
-
     // Style all interactive states
     // Active and open are tied to the Accessible Mega Menu script
     &:focus,
     &:hover,
     &.active,
     &.is-open {
-      background-color: color(primary);
+      background-color: color(primary, dark);
       color: inherit;
       transition-duration: $speed-normal;
     }
@@ -39,7 +34,6 @@
 
   .site-nav {
     text-align: left;
-    background-color: color(primary, dark);
 
     .js & {
       max-height: 0;
@@ -61,14 +55,26 @@
 
     li,
     a {
+      display: block;
+      padding: 0.5em;
+      text-align: center;
       width: 100%;
     }
 
-    // Tweaks for the sub nav items
-    li ul a {
-      padding-left: 2em!important;
-      font-size: 75%;
+    li:last-child {
+      padding-bottom: 1.5em;
     }
+
+    a {
+      padding: 1em!important;
+      width: 75%;
+    }
+
+    // Tweaks for the sub nav items
+    // li ul a {
+    //   padding-left: 2em!important;
+    //   font-size: 75%;
+    // }
   }
 }
 
@@ -93,6 +99,10 @@
   .nav-menu {
     position: relative;
     z-index: $z-mobile-nav;
+
+    > li {
+      margin-left: 1.5em;
+    }
   }
 
   // a top level navigation item in the mega menu
