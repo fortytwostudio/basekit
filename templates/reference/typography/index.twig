@@ -95,17 +95,17 @@
       {% for fontWeight in ['bold', 'normal', 'light'] %}
         <div data-bk-layout="pad:rl s:6 m:4" class="pad">
           <ol class="br-1 ba b-grey shadow bg-white">
-            <li data-bk-layout="pad:0">
-              <div data-bk-layout="pad:sm" class="font-s">{{ fontWeight|capitalize }} <code class="float-r">class="<strong>font-{{ fontWeight }}</strong>"</code></div>
-            </li>
-
             {% for size in ['hero', 'xxl', 'xl', 'l', 'm', 'n', 's', 'xs'] %}
               <li>
-                <div data-bk-layout="pad:0" class="bt b-grey">
+                <div data-bk-layout="pad:0" class="bb b-grey">
                   <p data-bk-layout="center" class="font-{{ fontWeight }} font-{{ size }}">Lorem</p>
                 </div>
               </li>
             {% endfor %}
+
+            <li data-bk-layout="pad:0">
+              <div data-bk-layout="pad:sm" class="font-s">{{ fontWeight|capitalize }} <code class="float-r">class="<strong>font-{{ fontWeight }}</strong>"</code></div>
+            </li>
           </ol>
         </div>
       {% endfor %}
