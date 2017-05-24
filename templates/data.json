@@ -20,7 +20,7 @@
     "slug": "services"
   }, {
     "title": "About Us",
-    "url": "#",
+    "url": "/demo/",
     "slug": "about",
     "children": [{
       "title": "Our History",
