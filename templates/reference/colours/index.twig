@@ -10,7 +10,7 @@
   <div class="bg-grey--lighter  pad" id="intro">
     <section class="site-container">
 
-      <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Primary and Secondary colour groups are often used for headings, links, button and background colours. Links and buttons may default to the primary colour with the secondary colour used on hover.</p>
@@ -48,7 +48,7 @@
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-xs">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m font-thin">
+            <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m">
               {{ colour|capitalize }}
             </li>
             <li data-bk-layout="3 l:pad:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
@@ -123,7 +123,7 @@
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m font-thin">
+            <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
               {{ colour|capitalize }}
             </li>
             <li data-bk-layout class="bg-{{ colour }}--tint pad-l-t">
@@ -159,7 +159,7 @@
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
           <ol class="font-xs">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m font-thin">
+            <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m">
               {{ colour|capitalize }}
             </li>
             <li data-bk-layout="6 l:3 l:pad:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
@@ -205,7 +205,7 @@
       </div>
 
       <div data-bk-layout="s:4">
-        <ol class="font-m font-thin color-white">
+        <ol class="font-m color-white">
           <li data-bk-layout class="bg-text pad-xl-b">
             Text
           </li>
@@ -237,7 +237,7 @@
         <div data-bk-layout="s:3">
           {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
 
-          <ol class="font-m font-thin">
+          <ol class="font-m">
             <li data-bk-layout class="{{ colour }} alert--simple pad-xl-b">
               {{ colour|capitalize }}
             </li>
