@@ -6,7 +6,7 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="bg-white--tint pad" id="intro">
     <section class="site-container">
       <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
 
@@ -22,7 +22,7 @@
     </section>
   </div>
 
-  <div class="bg-tertiary--lighter pad">
+  <div class="bg-tertiary--lighter pad" id="font-stacks">
     <section class="site-container flex">
       <h3 data-bk-layout class="font-l font-thin">Font Stacks</h3>
 
@@ -171,7 +171,54 @@
     </section>
   </div>
 
-  <div class="bg-white pad-t" id="font-styles">
+  <div class="bg-white pad-t" id="alignment">
+    <section class="site-container">
+      <h3 data-bk-layout="pad:trl" class="font-l">Alignment</h3>
+
+      <div data-bk-layout="l:7" class="rte">
+        <p>Aligning text is quite straightfoward, however at the moment this class is not responsive so alignment is set across all screen sizes. There is no justify alignment because justify looks like garbage.</p>
+      </div>
+
+      <ol data-bk-layout="pad:0 bottom" class="margin-b">
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="pad:lg" class="align-l">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Left <code class="float-r">class="<strong>align-l</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="pad:lg" class="align-c">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Center <code class="float-r">class="<strong>align-c</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="pad:lg" class="align-r">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Right <code class="float-r">class="<strong>align-r</strong>"</code></p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </div>
+
+  <div class="bg-white--tint pad-t" id="font-styles">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Font Styles</h3>
 
@@ -272,7 +319,7 @@
     </section>
   </div>
 
-  <div class="bg-white--tint  pad-t" id="fluid-fonts">
+  <div class="bg-white  pad-t" id="fluid-fonts">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Fluid font size + paragraphs</h3>
 
@@ -328,7 +375,7 @@
     </section>
   </div>
 
-  <div class="bg-white  pad" id="rte">
+  <div class="bg-white--tint  pad" id="rte">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Rich-text editor / User content</h3>
 
