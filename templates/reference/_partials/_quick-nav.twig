@@ -1,51 +1,84 @@
-{# {% for navItems in mainNav if navItems.children|length %}
-  {% for item in navItems.children %}
-    {% if item.slug == slug %}
-      {% if loop.first %}
-        {% set previous_item = navItems.children[loop.length - 1] %}
-      {% else %}
-        {% set previous_item = navItems.children[loop.index0 - 1] %}
-      {% endif %}
+{% set quickNav = [{
+  "title": "Setup",
+  "url": "/demo/reference/",
+  "slug": "reference"
+  }, {
+    "title": "Colours",
+    "url": "/demo/reference/colours/",
+    "slug": "colours"
+  }, {
+    "title": "Typography",
+    "url": "/demo/reference/typography/",
+    "slug": "typography"
+  }, {
+    "title": "Layout",
+    "url": "/demo/reference/layout/",
+    "slug": "layout"
+  }, {
+    "title": "Spacing",
+    "url": "/demo/reference/spacing/",
+    "slug": "spacing"
+  }, {
+    "title": "Links",
+    "url": "/demo/reference/links/",
+    "slug": "links"
+  }, {
+    "title": "Buttons",
+    "url": "/demo/reference/buttons/",
+    "slug": "buttons"
+  }, {
+    "title": "Borders",
+    "url": "/demo/reference/borders/",
+    "slug": "borders"
+  }, {
+    "title": "Icons",
+    "url": "/demo/reference/icons/",
+    "slug": "icons"
+  }, {
+    "title": "Forms",
+    "url": "/demo/reference/forms/",
+    "slug": "forms"
+  }, {
+    "title": "Alerts",
+    "url": "/demo/reference/alerts/",
+    "slug": "alerts"
+  }, {
+    "title": "Navigation",
+    "url": "/demo/reference/navigation/",
+    "slug": "nav",
+    "tbc": true
+  }, {
+    "title": "Images",
+    "url": "/demo/reference/images/",
+    "slug": "images",
+    "tbc": true
+  }, {
+    "title": "Tables",
+    "url": "/demo/reference/tables/",
+    "slug": "tables",
+    "tbc": true
+  }, {
+    "title": "Naming",
+    "url": "/demo/reference/naming/",
+    "slug": "naming",
+    "tbc": true
+  }, {
+    "title": "A11Y",
+    "url": "/demo/reference/a11y/",
+    "slug": "accessibility",
+    "tbc": true
+}] %}
 
-      {% if loop.last %}
-        {% set next_item = navItems.children[0] %}
-      {% else %}
-        {% set next_item = navItems.children[loop.index0 + 1] %}
-      {% endif %}
-
-      {% set prev %}
+{% if quickNav %}
+  <div data-bk-links="white fade dim" class="scroll-x stick-t shadow">
+    <ul data-bk-layout="pad:rl" class="pad-xs scroll-x__content nav nav--block font-s">
+      {% for item in quickNav %}
         <li>
-          <a class="arrow-l" href="{{ previous_item.url }}">
-            <span class="hide">Previous</span>
-          </a>
-        </li>
-      {% endset %}
-
-      {% set next %}
-        <li>
-          <a class="arrow-r" href="{{ next_item.url }}">
-            <span class="hide">Next</span>
-          </a>
-        </li>
-      {% endset %}
-    {% endif %}
-  {% endfor %}
-{% endfor %} #}
-
-<div data-bk-links="white fade dim" class="scroll-x stick-t shadow">
-  <ul data-bk-layout="pad:rl" class="pad-xs scroll-x__content nav nav--block font-s">
-    {# {{ prev }} #}
-
-    {% for item in mainNav if item.children|length %}
-      {% for child in item.children %}
-        <li>
-          <a{{ child.slug == slug ? ' class="btn-primary shadow" ' }}  href="{{ child.url }}">
-            {{ child.title }}
+          <a{{ item.slug == slug ? ' class="btn-primary shadow" ' }}  href="{{ item.url }}">
+            {{ item.title }}
           </a>
         </li>
       {% endfor %}
-    {% endfor %}
-
-    {# {{ next }} #}
-  </ul>
-</div>
+    </ul>
+  </div>
+{% endif %}

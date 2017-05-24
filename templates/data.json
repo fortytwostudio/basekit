@@ -3,91 +3,43 @@
   "siteUrl": "/demo/",
   "siteEmail": "info@fortytwo.studio",
   "siteTel": "01224 280 005",
+  "address": {
+    "org": "FortyTwo Studio",
+    "street": "126 Crown Street",
+    "townCity": "Aberdeen",
+    "postalCode": "AB11 6HQ"
+  },
 
   "mainNav": [{
-    "title": "Home",
-    "url": "/demo/",
-    "slug": "home"
+    "title": "Services",
+    "url": "#",
+    "slug": "services"
   }, {
-    "title": "Reference",
-    "url": "/demo/reference/",
-    "slug": "reference",
+    "title": "About Us",
+    "url": "#",
+    "slug": "about",
     "children": [{
-      "title": "Setup",
-      "url": "/demo/reference/",
-      "slug": "reference"
+      "title": "Our History",
+      "url": "#",
+      "slug": "history"
     }, {
-      "title": "Colours",
-      "url": "/demo/reference/colours/",
-      "slug": "colours"
+      "title": "The Board",
+      "url": "#",
+      "slug": "board"
     }, {
-      "title": "Typography",
-      "url": "/demo/reference/typography/",
-      "slug": "typography"
-    }, {
-      "title": "Layout",
-      "url": "/demo/reference/layout/",
-      "slug": "layout"
-    }, {
-      "title": "Spacing",
-      "url": "/demo/reference/spacing/",
-      "slug": "spacing"
-    }, {
-      "title": "Links",
-      "url": "/demo/reference/links/",
-      "slug": "links"
-    }, {
-      "title": "Buttons",
-      "url": "/demo/reference/buttons/",
-      "slug": "buttons"
-    }, {
-      "title": "Borders",
-      "url": "/demo/reference/borders/",
-      "slug": "borders"
-    }, {
-      "title": "Icons",
-      "url": "/demo/reference/icons/",
-      "slug": "icons"
-    }, {
-      "title": "Forms",
-      "url": "/demo/reference/forms/",
-      "slug": "forms"
-    }, {
-      "title": "Alerts",
-      "url": "/demo/reference/alerts/",
-      "slug": "alerts"
-    }, {
-      "title": "Navigation",
-      "url": "/demo/reference/navigation/",
-      "slug": "nav",
-      "tbc": true
-    }, {
-      "title": "Images",
-      "url": "/demo/reference/images/",
-      "slug": "images",
-      "tbc": true
-    }, {
-      "title": "Tables",
-      "url": "/demo/reference/tables/",
-      "slug": "tables",
-      "tbc": true
-    }, {
-      "title": "Naming",
-      "url": "/demo/reference/naming/",
-      "slug": "naming",
-      "tbc": true
-    }, {
-      "title": "A11Y",
-      "url": "/demo/reference/a11y/",
-      "slug": "accessibility",
-      "tbc": true
+      "title": "Our Staff",
+      "url": "#",
+      "slug": "board"
     }]
+  }, {
+    "title": "Contact",
+    "url": "#contact",
+    "scrollTo": "true"
   }, {
     "title": "Github",
     "url": "https://github.com/fortytwostudio/basekit",
     "external": "true"
   }],
-
 
   "footerNav": [{
     "title": "Home",
@@ -97,7 +49,6 @@
     "url": "/demo/reference/",
     "slug": "reference"
   }],
-
 
   "socialLinks": [{
     "title": "Facebook",
@@ -110,28 +61,12 @@
     "url": "https://linkedin.com"
   }],
 
-
   "siteInfoNav": [{
     "title": "Terms &amp; Conditions",
     "url": "terms/"
   }, {
     "title": "Privacy Policy",
     "url": "privacy/"
-  }],
-
-  "address": {
-    "org": "FortyTwo Studio",
-    "street": "126 Crown Street",
-    "townCity": "Aberdeen",
-    "postalCode": "AB11 6HQ"
-  },
-
-  "images": [{
-    "src": "/imgs/placeholders/hero.png",
-    "alt": "Image one alt text"
-  }, {
-    "src": "/imgs/placeholders/landscape.png",
-    "alt": "Image two alt text"
   }]
 
 }
