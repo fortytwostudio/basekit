@@ -34,11 +34,12 @@ $nav-switch-point: m;
     left: 0;
     right: 0;
     z-index: $z-mobile-nav;
-    display: block;
+    // display: block;
     background-color: color(primary);
+    box-shadow: 0 5px 20px -5px black;
 
     .site-nav {
-      width: 100%;
+      width: 100vw;
     }
   }
 
