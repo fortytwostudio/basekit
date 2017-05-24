@@ -1,46 +1,51 @@
-// Basic global nav link styles
-.nav-links {
+$nav-switch-point: m;
+
+// Global styles that applies across all displays
+.nav-menu {
+  li,
   a {
-    color: white!important;
-    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  a {
+    padding: em(($margin / 2) * 1px);
     transition: all $speed-slow ease-in-out;
 
-    // Bump up the default (nav--block padding) for small screens
-    @include mq($until: m) {
-      padding: 1em;
-    }
-
-    // Style all interactive states
-    // Active and open are tied to the Accessible Mega Menu script
+    // Style interactive states
+    // Active and is-open are part of the Accessible Mega Menu javascscript
     &:focus,
     &:hover,
     &.active,
     &.is-open {
-      background-color: color(primary);
-      color: inherit;
+      background-color: color(primary, dark);
       transition-duration: $speed-normal;
     }
   }
 }
 
-@include mq($until: m) {
+@include mq($until: $nav-switch-point) {
   // This wrapper is a bit of a fudge to get rid of the invisible spacing that appears when the item is inline-block
   // It also makes the nav dropdown thing full width
   .site-nav-wrapper {
-    display: block;
-    // margin-left: calc(-50vw + 50%);
-    // margin-right: calc(-50vw + 50%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: $z-mobile-nav;
+    // display: block;
+    background-color: color(primary);
+    box-shadow: 0 5px 20px -5px black;
 
-    // .site-nav {
-    //   // Using calc to be sure vw isn't applied without calc support for the above margins
-    //   width: calc(100vw);
-    // }
+    .site-nav {
+      width: 100vw;
+    }
   }
 
   .site-nav {
-    text-align: left;
-    background-color: color(primary, dark);
 
+    // If javascript is enabled hide the nav
     .js & {
       max-height: 0;
       opacity: 0;
@@ -51,7 +56,7 @@
         max-height 0.5s ease-in-out,
         opacity    0.5s ease-in-out;
 
-      // &[aria-hidden='false'] {
+      // Now make it visible :D
       &.is-active {
         opacity: 1;
         max-height: 2000px;
@@ -59,75 +64,73 @@
       }
     }
 
-    li,
+    li {
+      // List items need some spacing
+      // padding: 0 em($margin * 1px);
+    }
+
     a {
-      width: 100%;
-    }
-
-    // Tweaks for the sub nav items
-    li ul a {
-      padding-left: 2em!important;
-      font-size: 75%;
+      // padding: em($margin * 1px)!important;
     }
   }
 }
 
 
-// We don't want to see the toggler at large screen sizes
-#nav-toggler,
-.nav-toggler-wrapper {
-  @include mq(m) {
+// Desktop Nav, essentially
+@include mq($nav-switch-point) {
+  .nav-toggler-wrapper {
     display: none;
   }
-  // We don't want it if there's no JS either
-  .no-js &,
-  .no-js & {
-    display: none;
-  }
-}
 
-
-
-@include mq(m) {
-  /* mega menu list */
+  // Mega menu list (ul)
   .nav-menu {
+    // Tighten up the line height
+    line-height: 0.8;
+    // We need to ensure that this (grandparent of the dropdowns) will appear above anything else.
     position: relative;
     z-index: $z-mobile-nav;
   }
 
-  // a top level navigation item in the mega menu
+  // A top level mega menu nav item (li)
   .nav-item {
-    // first descendant link within a top level navigation item
-    > a {
-      position: relative;
-      display: inline-block;
+    // Space out the top level nav items a bit
+    margin-left: em($margin * 1px);
+    // Make sure they're going to shrink
+    width: auto!important;
+    // Relative so any child lists can be attached
+    position: relative;
 
-      // focus/open states of first descendant link within a top level navigation item */
-      &:focus,
-      &.is-open {
-        // nothing at the moment
-      }
-      // open state of first descendant link within a top level navigation item
-      &.is-open {
-        border-bottom: none;
-        z-index: 1;
-      }
-    }
+    // // First descendant link within a top level navigation item
+    // > a {
+    //   // open state of first descendant link within a top level navigation item
+    //   &:focus,
+    //   &.is-open {
+    //     z-index: $z-mobile-nav + 1;
+    //   }
+    // }
   }
 
+
   // sub-navigation panel
+  .no-js .nav-item .sub-nav,
+  .no-js .nav-item .sub-nav,
   .sub-nav {
-    // display: none;
     background-color: mix(color(primary), color(primary, dark));
+    // Make sure it's a little offset from content underneath
     box-shadow: 0 5px 20px -5px black;
-    font-size: 87.25%;
-    min-width: em(180px);
+    // We don't want the sub nav to shink too small so set a min here
+    min-width: em(200px);
+    // Ensure the sub nav is initially hidden
     opacity: 0;
     overflow: hidden;
     pointer-events: none;
+    // Position absolutely to the list parent item
     position: absolute;
+    // Force left alignment since the top level nav is often right aligned
     text-align: left;
+    // 100% down from the top of the parent list item
     top: 100%;
+    // Set the initial transition states for opening it later
     transition:
       opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000),
       transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000),
@@ -136,20 +139,23 @@
     transform-origin: top left;
     visibility: hidden;
 
-    // Fade out before the parent scales much
+    // Fade out the sub nav content before the the sub nav scales down fully
     .sub-nav-group {
       opacity: 0;
       transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
     }
   }
-  // sub-navigation panel open state
+
+  // Set the sub nav open state
+  .no-js .nav-item:hover .sub-nav,
+  .no-js .nav-item:focus .sub-nav,
   .is-open {
     opacity: 1;
     pointer-events: all;
     transform: scaleY(1);
     visibility: visible;
 
-    // Delay the fading in of the child ul
+    // Delay the fade-in of the content so things look smoother
     .sub-nav-group {
       opacity: 1;
       transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);

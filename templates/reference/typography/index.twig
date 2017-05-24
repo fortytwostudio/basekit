@@ -6,9 +6,9 @@
 {% block content %}
 {% include 'reference/_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="bg-white--tint pad" id="intro">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl font-thin">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Basekit offers various font classes for very targetted styling.</p>
@@ -22,9 +22,9 @@
     </section>
   </div>
 
-  <div class="bg-tertiary--lighter pad">
+  <div class="bg-tertiary--lighter pad" id="font-stacks">
     <section class="site-container flex">
-      <h3 data-bk-layout class="font-l font-thin">Font Stacks</h3>
+      <h3 data-bk-layout class="font-l">Font Stacks</h3>
 
       <div data-bk-layout="l:4" class="pad-b flex">
         <div>
@@ -50,7 +50,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad" id="font-sizes">
+  <div class="bg-white--tint pad" id="font-sizes">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Font Sizes</h3>
 
@@ -63,66 +63,53 @@
       <h4 data-bk-layout="pad:trl" class="font-m"><b>Fluid</b> Sizes</h4>
 
       <ol data-bk-layout="pad:0 bottom" class="flex">
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-hero color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Hero <code class="float-r">class="<strong>font-hero</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-xxl color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Largest <code class="float-r">class="<strong>font-xxl</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-xl color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Larger <code class="float-r">class="<strong>font-xl</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-l color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Large <code class="float-r">class="<strong>font-l</strong>"</code></dd>
-          </dl>
-        </li>
+        {% for size, val in {'Hero' : 'hero', 'Largest' : 'xxl', 'Larger' : 'xl', 'Large' : 'l'} %}
+          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+            <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+              <dt data-bk-layout="center" class="font-{{ val }}">Abz</dt>
+              <dd data-bk-layout="pad:sm" class="font-s bt b-grey">{{ size }} <code class="float-r">class="<strong>font-{{ val }}</strong>"</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
       </ol>
 
       <h4 data-bk-layout="pad:trl" class="font-m"><b>Fixed</b> Sizes</h4>
 
       <ol data-bk-layout="pad:0 bottom" class="flex">
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-m color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Medium <code class="float-r">class="<strong>font-m</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-n color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Normal <code class="float-r">class="<strong>font-n</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-s color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Small <code class="float-r">class="<strong>font-s</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-xs color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Smaller <code class="float-r">class="<strong>font-xs</strong>"</code></dd>
-          </dl>
-        </li>
+        {% for size, val in {'Medium': 'm', 'Normal': 'n', 'Small': 's', 'Smaller': 'xs'} %}
+          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+            <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+              <dt data-bk-layout="center" class="font-{{ val }}">Abz</dt>
+              <dd data-bk-layout="pad:sm" class="font-s bt b-grey">{{ size }} <code class="float-r">class="<strong>font-{{ val }}</strong>"</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
       </ol>
+    </section>
+  </div>
+
+  <div class="bg-white pad" id="font-weights">
+    <section class="site-container">
+      <h3 data-bk-layout="pad:trl" class="font-l">Font Weights</h3>
+
+      {% for fontWeight in ['bold', 'normal', 'light'] %}
+        <div data-bk-layout="pad:rl s:6 m:4" class="pad">
+          <ol class="br-1 ba b-grey shadow bg-white">
+            {% for size in ['hero', 'xxl', 'xl', 'l', 'm', 'n', 's', 'xs'] %}
+              <li>
+                <div data-bk-layout="pad:0" class="bb b-grey">
+                  <p data-bk-layout="center" class="font-{{ fontWeight }} font-{{ size }}">Lorem</p>
+                </div>
+              </li>
+            {% endfor %}
+
+            <li data-bk-layout="pad:0">
+              <div data-bk-layout="pad:sm" class="font-s">{{ fontWeight|capitalize }} <code class="float-r">class="<strong>font-{{ fontWeight }}</strong>"</code></div>
+            </li>
+          </ol>
+        </div>
+      {% endfor %}
+
     </section>
   </div>
 
@@ -135,7 +122,7 @@
         <p>As fonts get increase or decrease in size from the default value their line-height also adjusts relative to the font size. At smaller font sizes this does not tend to be a problem, but at larger sizes the line height can increase too far.</p>
       </div>
 
-      <ol data-bk-layout="pad:0 bottom" class="color-primary">
+      <ol data-bk-layout="pad:0 bottom">
         <li data-bk-layout class="font-hero | margin-b">
           Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
         </li>
@@ -171,7 +158,54 @@
     </section>
   </div>
 
-  <div class="bg-white pad-t" id="font-styles">
+  <div class="bg-white pad-t" id="alignment">
+    <section class="site-container">
+      <h3 data-bk-layout="pad:trl" class="font-l">Alignment</h3>
+
+      <div data-bk-layout="l:7" class="rte">
+        <p>Aligning text is quite straightfoward, however at the moment this class is not responsive so alignment is set across all screen sizes. There is no justify alignment because justify looks like garbage.</p>
+      </div>
+
+      <ol data-bk-layout="pad:0 bottom" class="margin-b">
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="pad:lg" class="align-l">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Left <code class="float-r">class="<strong>align-l</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="pad:lg" class="align-c">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Center <code class="float-r">class="<strong>align-c</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="pad:lg" class="align-r">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Right <code class="float-r">class="<strong>align-r</strong>"</code></p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </div>
+
+  <div class="bg-white--tint pad" id="font-styles">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Font Styles</h3>
 
@@ -179,7 +213,7 @@
         <p>The following examples show how the specified classes can alter the style of a font. Additional classes can be created if required, or classes can be removed if they're not necessary.</p>
       </div>
 
-      <div data-bk-layout="l:4 l:pr:1" class="pad-b">
+      <div data-bk-layout="l:4 l:pr:1">
         <div class="alert alert--simple font-s">
           <h3 class="font-n margin-b"><strong>Note for developers</strong></h3>
 
@@ -187,92 +221,45 @@
         </div>
       </div>
 
-      <ol data-bk-layout="pad:0 bottom" class="color-tertiary--dark | margin-b">
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+      <ol class="flex">
+        <li data-bk-layout="m:4" class="pad flex">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
             <div data-bk-layout>
-              <p class="font-bold font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-bold font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-upper font-l | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-upper | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Bold <code class="float-r">class="<strong>font-bold</strong>"</code></p>
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s">Upper <code class="float-r">class="<strong>font-upper</strong>"</code></p>
           </div>
         </li>
 
 
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+        <li data-bk-layout="m:4" class="pad flex">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
             <div data-bk-layout>
-              <p class="font-italic font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-italic font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-italic font-l | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-italic | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Italic <code class="float-r">class="<strong>font-italic</strong>"</code></p>
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s">Italic <code class="float-r">class="<strong>font-italic</strong>"</code></p>
           </div>
         </li>
 
-
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
+        <li data-bk-layout="m:4" class="pad flex">
+          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
             <div data-bk-layout>
-              <p class="font-thin font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-thin font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-alt font-l | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-alt | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
             </div>
 
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Thin <code class="float-r">class="<strong>font-thin</strong>"</code></p>
-          </div>
-        </li>
-
-
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
-            <div data-bk-layout>
-              <p class="font-light font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-light font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-            </div>
-
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Light <code class="float-r">class="<strong>font-light</strong>"</code></p>
-          </div>
-        </li>
-
-
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
-            <div data-bk-layout>
-              <p class="font-normal font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-normal font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-            </div>
-
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Normal <code class="float-r">class="<strong>font-normal</strong>"</code></p>
-          </div>
-        </li>
-
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
-            <div data-bk-layout>
-              <p class="font-upper font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-upper font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-            </div>
-
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Upper <code class="float-r">class="<strong>font-upper</strong>"</code></p>
-          </div>
-        </li>
-
-        <li data-bk-layout="m:6" class="pad-b">
-          <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
-            <div data-bk-layout>
-              <p class="font-alt font-xl | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-              <p class="font-alt font-m | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
-            </div>
-
-            <p data-bk-layout="pad:sm" class="bt b-grey font-s color-text">Alt Font <code class="float-r">class="<strong>font-alt</strong>"</code></p>
+            <p data-bk-layout="pad:sm" class="bt b-grey font-s">Alt Font <code class="float-r">class="<strong>font-alt</strong>"</code></p>
           </div>
         </li>
       </ol>
     </section>
   </div>
 
-  <div class="bg-white--tint  pad-t" id="fluid-fonts">
+  <div class="bg-white  pad-t" id="fluid-fonts">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Fluid font size + paragraphs</h3>
 
@@ -328,7 +315,7 @@
     </section>
   </div>
 
-  <div class="bg-white  pad" id="rte">
+  <div class="bg-white--tint  pad" id="rte">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Rich-text editor / User content</h3>
 
@@ -356,7 +343,7 @@
       </div>
 
       <div data-bk-layout="m:6" id="rich-text-content-dark">
-        <div data-bk-layout data-bk-links="white dim fade underlin" class="rte bg-primary--darker color-white--tint | br-1 shadow">
+        <div data-bk-layout data-bk-links="white dim fade underlin" class="rte bg-black--tint color-white--tint | br-1 shadow">
           {% include "reference/typography/_rte-content.twig" %}
         </div>
       </div>
@@ -366,7 +353,7 @@
   <div class="no-js-hide | bg-tertiary--light align-c pad-l">
     <section class="site-container">
       <div data-bk-layout="l:6" data-bk-links="white dim fade underline">
-        <h3 class="font-hero font-thin color-primary--darker pad-b">
+        <h3 class="font-hero color-primary--darker pad-b">
           fontoggler
         </h3>
 

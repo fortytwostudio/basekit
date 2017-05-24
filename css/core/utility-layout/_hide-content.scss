@@ -17,11 +17,23 @@
 }
 
 @if $js-hide {
-  .js .js-hide {
-    @include hide();
+  .js {
+    .js-hide {
+      @include hide();
+    }
+
+    .js-dn {
+      display: none;
+    }
   }
 
-  .no-js .no-js-hide {
-    @include hide();
+  .no-js {
+    .no-js-hide {
+      @include hide();
+    }
+
+    .no-js-dn {
+      display: none;
+    }
   }
 }

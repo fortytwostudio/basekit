@@ -23,10 +23,9 @@
 
     <div class="{{ pageHeaderColor|length ? pageHeaderColor : "bg-primary" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
       <header id="header" class="site-container">
+        <div data-bk-layout="to:m:pad:0 m:pad:r m:pad:sm middle" class="position-over">
 
-        <div data-bk-layout="pad:tb  middle">
-
-          <div data-bk-layout="3" class="site-logo--container">
+          <div data-bk-layout="4 m:3" class="site-logo--container">
             <h1 class="site-logo  logo">
               <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
                 {{ siteName }}

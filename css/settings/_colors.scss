@@ -1,6 +1,29 @@
-$color-primary: #00739f !default;
-$color-secondary: #c62b90 !default;
-$color-tertiary: #71e0b1 !default;
+
+// Perfect tones
+$color-primary: #3b668b !default;
+$color-secondary: #f67280 !default;
+$color-tertiary: #c9c27d !default;
+
+// Cyber Punk
+// $color-primary: #0270ad !default;
+// $color-secondary: #bf358f !default;
+// $color-tertiary: #71e0b1 !default;
+
+// Saturated
+// $color-primary: #4767db !default;
+// $color-secondary: #f144ac !default;
+// $color-tertiary: #45cd88 !default;
+
+// Corporate Shill
+// $color-primary: #3f51b5 !default;
+// $color-secondary: #9575cd !default;
+// $color-tertiary: #e6e7d4 !default;
+
+// Beach Days
+// $color-primary: #ff6f69 !default;
+// $color-secondary: #ffcc5c !default;
+// $color-tertiary: #88d8b0 !default#3b668b;
+
 
 $color-grey: #ccc;
 
@@ -27,31 +50,33 @@ $alert--muted: #e9e9e9 !default;
 $colors: (
   primary: (
     base: $color-primary,
-    lighter: lighten($color-primary, 30%),
-    light: lighten($color-primary, 10%),
-    dark: darken($color-primary, 10%),
-    darker: darken($color-primary, 18%)
+    // By mixing the colour with white we ensure that whatever the colour, it never becomes white. This can be a problem when using the lighten() function if the source colour is already quite light.
+    lighter: mix($color-primary, white, 11%),
+    light: mix($color-primary, white, 55%),
+    // As with mixing a colour with white, the same goes for mixing with black.
+    dark: mix($color-primary, black, 75%),
+    darker: mix($color-primary, black, 50%)
   ),
   secondary: (
     base: $color-secondary,
-    lighter: lighten($color-secondary, 30%),
-    light: lighten($color-secondary, 10%),
-    dark: darken($color-secondary, 10%),
-    darker: darken($color-secondary, 25%)
+    lighter: mix($color-secondary, white, 15%),
+    light: mix($color-secondary, white, 55%),
+    dark: mix($color-secondary, black, 75%),
+    darker: mix($color-secondary, black, 50%)
   ),
   tertiary: (
     base: $color-tertiary,
-    lighter: lighten($color-tertiary, 28%),
-    light: lighten($color-tertiary, 10%),
-    dark: darken($color-tertiary, 25%),
-    darker: darken($color-tertiary, 40%)
+    lighter: mix($color-tertiary, white, 20%),
+    light: mix($color-tertiary, white, 55%),
+    dark: mix($color-tertiary, black, 75%),
+    darker: mix($color-tertiary, black, 50%)
   ),
   grey: (
     base: $color-grey,
-    lighter: lighten($color-grey, 15%),
-    light: lighten($color-grey, 10%),
-    dark: darken($color-grey, 30%),
-    darker: darken($color-grey, 50%)
+    lighter: mix($color-grey, white, 20%),
+    light: mix($color-grey, white, 60%),
+    dark: mix($color-grey, black, 60%),
+    darker: mix($color-grey, black, 40%)
   ),
   white: (
     base: white,

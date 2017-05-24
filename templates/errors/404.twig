@@ -12,66 +12,47 @@
 
     <style>
       body {
-        font: 400 112.5%/1.6 "ffmark",arial,sans-serif;
-        color: #000;
+        font: 300 125%/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif;;
+        color: #ddd;
         text-align: center;
         width: 85%;
         padding: 5% 0;
         max-width: 33.75em;
         margin: 0 auto;
-        background: #fff;
+        background: #060606;
       }
       h1 {
         font-size: 300%;
         line-height: 1;
-        color: {{ brandColorPrimary }};
+        color: white;
         display: inline-block;
         margin-bottom: 10%;
-        border-bottom: 0.15em solid {{ brandColorPrimary }};
-      }
-      h2 {
-        margin-bottom: 0;
+        border-bottom: 0.15em solid currentColor
       }
       p {
         padding: 0 2%;
         margin: 0 0 1em;
+        letter-spacing: 0.05em;
       }
       a {
-        color: {{ brandColorPrimary }};
+        color: white;
         text-decoration: none;
       }
-      a:hover,
-      a:focus {
-        color: {{ brandColorSecondary }};
+      a:hover b,
+      a:focus b {
         text-decoration: underline;
-      }
-      ol {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .block {
-        margin: 8% 0;
+        text-decoration-skip: ink;
       }
       .main-content {
         margin-bottom: 12%;
       }
-      .view-all {
-        text-transform: uppercase;
-        font-size: 75%;
-        font-weight: 700;
-      }
-    </style><link href="imgs/web-icons/favicon-32x32.png" rel="shortcut icon"></head>
+    </style><link href="/imgs/web-icons/favicon-32x32.png" rel="shortcut icon"></head>
   <body>
     <div class="main-content">
-      <h1>404 Error</h1>
-      <p>This means the page you’re looking for can’t be found, it may no longer exist or you might have typed the address wrong.</p>
-      <p>But not to worry! Try again from the
-        <a href="/">
-          <b>homepage</b>
-        </a>.</p>
+      <h1>Not Found</h1>
+      <p>The page you’re looking for can’t be found, it may no longer exist or the address/URL be incorrect. Apologies for the inconvenience.</p>
+      <p>Please try again from the <a href="/"><b>homepage</b> →</a></p>
     </div>
-    <p class="block">Apologies for the inconvenience.</p>
   </body>
 </html>
 {% endspaceless %}
