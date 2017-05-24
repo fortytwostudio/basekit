@@ -3,9 +3,6 @@
   "siteUrl": "/demo/",
   "siteEmail": "info@fortytwo.studio",
   "siteTel": "01224 280 005",
-  "brandColorPrimary": "#00739f",
-  "brandColorSecondary": "#c62b90",
-  "brandColorTertiary": "#fafafa",
 
   "mainNav": [{
     "title": "Home",
