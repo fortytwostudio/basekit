@@ -21,7 +21,6 @@ $max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns
 // Ouput the site's max width utility class and define the name.
 $site-width-css: true;
 $site-width-name: site-container;
-$site-width-position: auto;
 
 // Output the float utility class… ooh nasty.
 $floats: true;
