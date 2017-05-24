@@ -1,7 +1,6 @@
 [class*="btn-"] {
   appearance: none;
   background-color: transparent;
-  border-radius: 0.25em;
   border: inherit;
   color: inherit;
   cursor: pointer;
@@ -31,7 +30,7 @@
 
   &:hover,
   &:focus {
-    background-color: color(primary, dark);
+    background-color: color(primary, darker);
   }
 }
 
@@ -42,6 +41,6 @@
 
   &:hover,
   &:focus {
-    background-color: color(secondary, light);
+    background-color: color(secondary, darker);
   }
 }
