@@ -259,7 +259,7 @@ $bk-push-left: true !default;
 
 
   // Increase the padding size
-  @include mq(m) {
+  @include mq(s) {
     padding: ($margin / 16) * 1rem;
   }
 }
