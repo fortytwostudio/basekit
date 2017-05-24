@@ -50,7 +50,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad" id="font-sizes">
+  <div class="bg-white--tint pad" id="font-sizes">
     <section class="site-container">
       <h3 data-bk-layout="pad:trl" class="font-l">Font Sizes</h3>
 
@@ -63,66 +63,53 @@
       <h4 data-bk-layout="pad:trl" class="font-m"><b>Fluid</b> Sizes</h4>
 
       <ol data-bk-layout="pad:0 bottom" class="flex">
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-hero color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Hero <code class="float-r">class="<strong>font-hero</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-xxl color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Largest <code class="float-r">class="<strong>font-xxl</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-xl color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Larger <code class="float-r">class="<strong>font-xl</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-l color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Large <code class="float-r">class="<strong>font-l</strong>"</code></dd>
-          </dl>
-        </li>
+        {% for size, val in {'Hero' : 'hero', 'Largest' : 'xxl', 'Larger' : 'xl', 'Large' : 'l'} %}
+          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+            <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+              <dt data-bk-layout="center" class="font-{{ val }}">Aa</dt>
+              <dd data-bk-layout="pad:sm" class="font-s bt b-grey">{{ size }} <code class="float-r">class="<strong>font-{{ val }}</strong>"</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
       </ol>
 
       <h4 data-bk-layout="pad:trl" class="font-m"><b>Fixed</b> Sizes</h4>
 
       <ol data-bk-layout="pad:0 bottom" class="flex">
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-m color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Medium <code class="float-r">class="<strong>font-m</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-n color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Normal <code class="float-r">class="<strong>font-n</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-s color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Small <code class="float-r">class="<strong>font-s</strong>"</code></dd>
-          </dl>
-        </li>
-
-        <li data-bk-layout="s:6 m:4 l:3" class="flex">
-          <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
-            <dt data-bk-layout="center" class="font-xs color-secondary">Aa</dt>
-            <dd data-bk-layout="pad:sm" class="font-s bt b-grey">Smaller <code class="float-r">class="<strong>font-xs</strong>"</code></dd>
-          </dl>
-        </li>
+        {% for size, val in {'Medium': 'm', 'Normal': 'n', 'Small': 's', 'Smaller': 'xs'} %}
+          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+            <dl data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+              <dt data-bk-layout="center" class="font-{{ val }}">Aa</dt>
+              <dd data-bk-layout="pad:sm" class="font-s bt b-grey">{{ size }} <code class="float-r">class="<strong>font-{{ val }}</strong>"</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
       </ol>
+    </section>
+  </div>
+
+  <div class="bg-white pad" id="font-weights">
+    <section class="site-container">
+      <h3 data-bk-layout="pad:trl" class="font-l">Font Weights</h3>
+
+      {% for fontWeight in ['bold', 'normal', 'light'] %}
+        <div data-bk-layout="pad:rl s:6 m:4" class="pad">
+          <ol class="br-1 ba b-grey shadow bg-white">
+            <li data-bk-layout="pad:0">
+              <div data-bk-layout="pad:sm" class="font-s">{{ fontWeight|capitalize }} <code class="float-r">class="<strong>font-{{ fontWeight }}</strong>"</code></div>
+            </li>
+
+            {% for size in ['hero', 'xxl', 'xl', 'l', 'm', 'n', 's', 'xs'] %}
+              <li>
+                <div data-bk-layout="pad:0" class="bt b-grey">
+                  <p data-bk-layout="center" class="font-{{ fontWeight }} font-{{ size }}">Lorem</p>
+                </div>
+              </li>
+            {% endfor %}
+          </ol>
+        </div>
+      {% endfor %}
+
     </section>
   </div>
 
@@ -135,7 +122,7 @@
         <p>As fonts get increase or decrease in size from the default value their line-height also adjusts relative to the font size. At smaller font sizes this does not tend to be a problem, but at larger sizes the line height can increase too far.</p>
       </div>
 
-      <ol data-bk-layout="pad:0 bottom" class="color-primary">
+      <ol data-bk-layout="pad:0 bottom">
         <li data-bk-layout class="font-hero | margin-b">
           Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
         </li>
@@ -234,7 +221,7 @@
         </div>
       </div>
 
-      <ol data-bk-layout="pad:0 bottom" class="color-tertiary--dark | margin-b">
+      <ol data-bk-layout="pad:0 bottom" class="margin-b">
         <li data-bk-layout="m:6" class="pad-b">
           <div data-bk-layout="pad:0" class="br-1 ba b-grey shadow bg-white">
             <div data-bk-layout>
@@ -403,7 +390,7 @@
       </div>
 
       <div data-bk-layout="m:6" id="rich-text-content-dark">
-        <div data-bk-layout data-bk-links="white dim fade underlin" class="rte bg-primary--darker color-white--tint | br-1 shadow">
+        <div data-bk-layout data-bk-links="white dim fade underlin" class="rte bg-black--tint color-white--tint | br-1 shadow">
           {% include "reference/typography/_rte-content.twig" %}
         </div>
       </div>
