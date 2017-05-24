@@ -67,12 +67,12 @@
 
 
 .scroll-x {
-  background-color: color(primary, light);
+  background-color: color(primary, dark);
   text-align: center;
   z-index: $z-position-over;
 
   &:after {
-  	background-image: linear-gradient(90deg, rgba(color(primary, light),0), color(primary, light));
+  	background-image: linear-gradient(90deg, rgba(color(primary, dark),0), color(primary, dark));
   	height: 100%;
   	right: 0;
   	width: rem($margin * 1px);
