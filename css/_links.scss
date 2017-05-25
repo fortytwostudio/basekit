@@ -97,11 +97,12 @@ a:not([class*="btn-"]) {
 
   // Fade transition link hover/focus. Could use all but to avoid bugginess we're targetting three common link style properties
   [data-bk-links~="fade"] & {
-    transition:
-      color $speed-slow,
-      opacity $speed-slow,
-      text-decoration $speed-slow;
-    // 
+    transition: all $speed-slow;
+    // transition:
+    //   color $speed-slow,
+    //   opacity $speed-slow,
+    //   text-decoration $speed-slow;
+    //
     // &:focus,
     // &:hover {
     //   transition-duration: $speed-normal;

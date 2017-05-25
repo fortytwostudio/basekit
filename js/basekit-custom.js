@@ -1,11 +1,11 @@
 $(function () {
     /// Very simple class toggle for the hamburger icon
     $('#nav-toggler').on('click', function () {
-        $('#nav-toggler, #site-nav').toggleClass('is-active');
+        $('#nav-toggler, #nav-primary').toggleClass('is-active');
     });
 
     // Smart Menus script yo
-    $("#site-nav-list").smartmenus();
+    $("#nav-primary-list").smartmenus();
 
     /// See https://github.com/kamem/jquery.smoothPageScroll
     // Smooth scroll any links with a #

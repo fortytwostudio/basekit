@@ -1,8 +1,13 @@
 $nav-switch-point: m;
 
-// site-nav-wrapper wraps the nav for styling and positioning purposes
-// site-navis the nav tag
-// site-nav-list is the navigation UL
+$sm-bk__desktop-vp: $nav-switch-point;
+$sm-bk__font-family: $font-family;
+$sm-bk__base-color: color(primary);
+$sm-bk__gray-dark: color(primary, dark);
+$sm-bk__gray-darker: color(primary, darker);
+
+// nav-primary-layout wraps the nav for styling and positioning purposes
+// nav-primary the nav tag
 
 // Apply only until the specified point so we don't have to reset anything later on
 @include mq($until: $nav-switch-point) {
@@ -10,7 +15,7 @@ $nav-switch-point: m;
     display: none;
   }
 
-  .site-nav-wrapper {
+  .nav-primary-layout {
     left: 0;
     position: absolute;
     right: 0;
@@ -18,7 +23,7 @@ $nav-switch-point: m;
     z-index: $z-mobile-nav;
   }
 
-  .site-nav {
+  .nav-primary {
     width: 100vw;
 
     li,
@@ -52,7 +57,7 @@ $nav-switch-point: m;
   }
 
   // Mega menu list (ul)
-  .site-nav {
+  .nav-primary {
     > ul {
       // position: relative;
       // z-index: $z-mobile-nav;
