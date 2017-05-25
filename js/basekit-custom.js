@@ -4,10 +4,8 @@ $(function () {
         $('#nav-toggler, #site-nav').toggleClass('is-active');
     });
 
-    /// Almost certainly going to switch to https://www.smartmenus.org/ (used on PIM)
-    $("#site-nav").accessibleMegaMenu({
-        openDelay: 400 // open delay when opening menu via mouseover
-    });
+    // Smart Menus script yo
+    $("#site-nav-list").smartmenus();
 
     /// See https://github.com/kamem/jquery.smoothPageScroll
     // Smooth scroll any links with a #

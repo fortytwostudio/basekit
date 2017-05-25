@@ -1,78 +1,47 @@
 $nav-switch-point: m;
 
-// Global styles that applies across all displays
-.nav-menu {
-  li,
-  a {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-  }
+// site-nav-wrapper wraps the nav for styling and positioning purposes
+// site-navis the nav tag
+// site-nav-list is the navigation UL
 
-  a {
-    padding: em(($margin / 2) * 1px);
-    transition: all $speed-slow ease-in-out;
-
-    // Style interactive states
-    // Active and is-open are part of the Accessible Mega Menu javascscript
-    &:focus,
-    &:hover,
-    &.active,
-    &.is-open {
-      background-color: color(primary, dark);
-      transition-duration: $speed-normal;
-    }
-  }
-}
-
+// Apply only until the specified point so we don't have to reset anything later on
 @include mq($until: $nav-switch-point) {
-  // This wrapper is a bit of a fudge to get rid of the invisible spacing that appears when the item is inline-block
-  // It also makes the nav dropdown thing full width
-  .site-nav-wrapper {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: $z-mobile-nav;
-    // display: block;
-    background-color: color(primary);
-    box-shadow: 0 15px 20px -10px rgba(black, 0.5);
+  .no-js .nav-toggler-wrapper {
+    display: none;
+  }
 
-    .site-nav {
-      width: 100vw;
-    }
+  .site-nav-wrapper {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: $z-mobile-nav;
   }
 
   .site-nav {
+    width: 100vw;
 
-    // If javascript is enabled hide the nav
+    li,
+    a {
+      display: block;
+    }
+
+    // If javascript is enabled hide the entire nav
     .js & {
       max-height: 0;
       opacity: 0;
-      visibility: hidden;
       overflow: hidden;
-      transition:
-        visibility 0.5s ease-in-out,
-        max-height 0.5s ease-in-out,
-        opacity    0.5s ease-in-out;
+      transition: visibility 0.5s ease-in-out, max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      visibility: hidden;
 
-      // Now make it visible :D
       &.is-active {
         opacity: 1;
         max-height: 2000px;
         visibility: visible;
       }
     }
-
-    > ul {
-      // List items need some spacing
-      padding: em($margin * 1px);
-    }
-
-    a {
-      // padding: em($margin * 1px)!important;
-    }
   }
+
 }
 
 
@@ -83,86 +52,23 @@ $nav-switch-point: m;
   }
 
   // Mega menu list (ul)
-  .nav-menu {
-    // Tighten up the line height
-    line-height: 0.8;
-    // We need to ensure that this (grandparent of the dropdowns) will appear above anything else.
-    position: relative;
-    z-index: $z-mobile-nav;
-  }
+  .site-nav {
+    > ul {
+      // position: relative;
+      // z-index: $z-mobile-nav;
 
-  // A top level mega menu nav item (li)
-  .nav-item {
-    // Space out the top level nav items a bit
-    margin-left: em($margin * 1px);
-    // Make sure they're going to shrink
-    width: auto!important;
-    // Relative so any child lists can be attached
-    position: relative;
-
-    // // First descendant link within a top level navigation item
-    // > a {
-    //   // open state of first descendant link within a top level navigation item
-    //   &:focus,
-    //   &.is-open {
-    //     z-index: $z-mobile-nav + 1;
-    //   }
-    // }
-  }
-
-
-  // sub-navigation panel
-  .no-js .nav-item .sub-nav,
-  .no-js .nav-item .sub-nav,
-  .sub-nav {
-    background-color: mix(color(primary), color(primary, dark));
-    // Make sure it's a little offset from content underneath
-    box-shadow: 0 5px 20px -5px black;
-    // We don't want the sub nav to shink too small so set a min here
-    min-width: em(200px);
-    // Ensure the sub nav is initially hidden
-    opacity: 0;
-    overflow: hidden;
-    pointer-events: none;
-    // Position absolutely to the list parent item
-    position: absolute;
-    // Force left alignment since the top level nav is often right aligned
-    text-align: left;
-    // 100% down from the top of the parent list item
-    top: 100%;
-    // Set the initial transition states for opening it later
-    transition:
-      opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000),
-      transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000),
-      visibility 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    transform: scaleY(0);
-    transform-origin: top left;
-    visibility: hidden;
-
-    // Fade out the sub nav content before the the sub nav scales down fully
-    .sub-nav-group {
-      opacity: 0;
-      transition: opacity 0.1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
-  }
-
-  // Set the sub nav open state
-  .no-js .nav-item:hover .sub-nav,
-  .no-js .nav-item:focus .sub-nav,
-  .is-open {
-    opacity: 1;
-    pointer-events: all;
-    transform: scaleY(1);
-    visibility: visible;
-
-    // Delay the fade-in of the content so things look smoother
-    .sub-nav-group {
-      opacity: 1;
-      transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-      transition-delay: 0.15s;
+      > li,
+      > a {
+        display: inline-block;
+        vertical-align: middle;
+        width: auto;
+      }
     }
   }
 }
+
+
+
 
 
 
