@@ -1,13 +1,11 @@
 $(function () {
     /// Very simple class toggle for the hamburger icon
     $('#nav-toggler').on('click', function () {
-        $('#nav-toggler, #site-nav').toggleClass('is-active');
+        $('#nav-toggler, #nav-primary').toggleClass('is-active');
     });
 
-    /// Almost certainly going to switch to https://www.smartmenus.org/ (used on PIM)
-    $("#site-nav").accessibleMegaMenu({
-        openDelay: 400 // open delay when opening menu via mouseover
-    });
+    // Smart Menus script yo
+    $("#nav-primary-list").smartmenus();
 
     /// See https://github.com/kamem/jquery.smoothPageScroll
     // Smooth scroll any links with a #

@@ -1,34 +1,32 @@
 {% if mainNav|length %}
   <div data-bk-layout="pad:0 8 m:10 right" class="nav-toggler-wrapper | no-js-dn">
-    <button id="nav-toggler" class="hamburger hamburger--squeeze | no-js-dn" type="button" aria-controls="site-nav">
+    <button id="nav-toggler" class="hamburger hamburger--squeeze | no-js-dn" type="button" aria-controls="nav-primary">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
   </div>
 
-  <div data-bk-layout="auto to:m:pad:0 m:pad:trb m:pad:sm m:9 m:right" data-bk-links="white" class="site-nav-wrapper">
-    <nav id="site-nav" class="site-nav  nav-links  font-upper" tabindex="-1" aria-labelledby="nav-toggler">
+  <div data-bk-layout="auto to:m:pad:0 m:pad:trb m:pad:sm m:9 m:right" data-bk-links="white fade" class="nav-primary-layout">
+    <nav id="nav-primary" class="nav-primary nav-links font-upper" tabindex="-1" aria-labelledby="nav-toggler">
       {# <h2 class="hide">Website Navigation</h2> #}
-      <ul class="nav-menu">
+      <ul id="nav-primary-list" class="sm sm-bk">
         {% for item in mainNav %}
-          <li class="nav-item">
-            <a{{ slug is defined and slug == item.slug ? ' class="active" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+          <li tabindex="-1">
+            <a{{ slug is defined and slug == item.slug ? ' class="active current" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
 
               {{ item.title }}
             </a>
             {% if item.children|length %}
-              <div class="sub-nav">
-                <ul class="sub-nav-group">
-                  {% for child in item.children %}
-                    <li>
-                      <a href="{{ child.url }}">
-                        {{ child.title }}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </div>
+              <ul>
+                {% for child in item.children %}
+                  <li>
+                    <a href="{{ child.url }}">
+                      {{ child.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
             {% endif %}
           </li>
         {% endfor %}
