@@ -6,36 +6,47 @@ $sm-bk__base-color: color(primary);
 $sm-bk__gray-dark: color(primary, dark);
 $sm-bk__gray-darker: color(primary, darker);
 
+.nav-toggler-wrapper {
+  // Hide the hamburger toggler if JS isn't enabled
+  .no-js & { display: none; }
+
+  // At large screen sizes we just don't want the hamburger
+  @include mq($nav-switch-point) {
+    display: none;
+  }
+}
 // nav-primary-layout wraps the nav for styling and positioning purposes
 // nav-primary the nav tag
 
 // Apply only until the specified point so we don't have to reset anything later on
 @include mq($until: $nav-switch-point) {
-  .no-js .nav-toggler-wrapper {
-    display: none;
-  }
 
+  // Absolute position the nav over content and make it full width
   .nav-primary-layout {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: $z-mobile-nav;
+    width: 100%;
   }
 
-  .nav-primary {
-    width: 100vw;
+  .js {
+    .nav-primary-layout {
+      left: 0;
+      position: absolute;
+      right: 0;
+      // Push it down to the bottom of the header/container
+      top: 100%;
+      z-index: $z-mobile-nav;
 
-    li,
-    a {
-      display: block;
+      // Also make the content full width
+      .nav-primary {
+        width: 100vw;
+      }
     }
 
-    // If javascript is enabled hide the entire nav
-    .js & {
+    .nav-primary {
+    // If javascript is enabled hide the nav initially, however if JS is disabled users will see the nav
       max-height: 0;
       opacity: 0;
       overflow: hidden;
+      // Prepare the transition for the active class
       transition: visibility 0.5s ease-in-out, max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
       visibility: hidden;
 
@@ -49,21 +60,16 @@ $sm-bk__gray-darker: color(primary, darker);
 
 }
 
-
 // Desktop Nav, essentially
 @include mq($nav-switch-point) {
-  .nav-toggler-wrapper {
-    display: none;
-  }
-
-  // Mega menu list (ul)
   .nav-primary {
+    // The top level nav list
     > ul {
-      // position: relative;
-      // z-index: $z-mobile-nav;
+      display: flex;
+      justify-content: space-between;
 
-      > li,
-      > a {
+      // Its first items
+      > li {
         display: inline-block;
         vertical-align: middle;
         width: auto;

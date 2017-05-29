@@ -25,7 +25,7 @@
       <header id="header" class="site-container">
         <div data-bk-layout="to:m:pad:0 m:pad:r m:pad:sm middle">
 
-          <div data-bk-layout="4 m:3" class="site-logo--container">
+          <div data-bk-layout="4 l:5" class="site-logo--container">
             <h1 class="site-logo  logo">
               <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
                 {{ siteName }}
@@ -49,6 +49,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     {# This is compiled by Gulp #}
     <script src="/js/min/basekit.js"></script>
+
+    {% block jsBody %}
+    {% endblock %}
   </body>
 </html>
 {% endspaceless %}
