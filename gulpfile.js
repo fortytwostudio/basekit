@@ -22,6 +22,13 @@ var gulp            = require('gulp'),
     // Sync changes to the Browser
     browserSync     = require('browser-sync');
 
+// De-caching so that the data.json file can be watched correctly
+// See this https://github.com/colynb/gulp-data/issues/17
+function requireUncached( $module ) {
+  delete require.cache[require.resolve( $module )];
+  return require( $module );
+}
+
 ///
 /// Setup an error notification for gulp-plumber to handle
 ///
@@ -54,6 +61,8 @@ gulp.task('sync', function() {
 gulp.task('scss', function() {
   gulp.src('css/basekit.scss')
     .pipe(plumber({errorHandler: hasError}))
+    // Uncached data for populating Twig files
+    .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({
       // http://cssnano.co/optimisations/minifySelectors/
@@ -132,13 +141,6 @@ gulp.task('js', function() {
 /// NOTE: At the time of writing March 2017 we use Craft CMS. Writing frontend templates in Twig makes sense since Craft uses twig, these files are also output as HTML for demonstration and testing.
 ///
 gulp.task('twig', function() {
-  // De-caching so that the data.json file can be watched correctly
-  // See this https://github.com/colynb/gulp-data/issues/17
-  function requireUncached( $module ) {
-    delete require.cache[require.resolve( $module )];
-    return require( $module );
-  }
-
   // run the Twig template parser on .twig files that don't start with an _
   return gulp.src('./templates/**/[^_]*.twig')
   .pipe(plumber({errorHandler: hasError}))
