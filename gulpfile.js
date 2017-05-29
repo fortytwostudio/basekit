@@ -37,7 +37,8 @@ gulp.task('sync', function() {
     open: false, // or 'external'
     host: 'basekit.dev',
     proxy: 'basekit.dev',
-    // notify: false,
+    // enable/disable the annoying popup (within the site)
+    notify: false,
     scrollRestoreTechnique: "cookie",
     logLevel: "silent",
     // logLevel: "info",
