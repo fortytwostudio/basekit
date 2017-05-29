@@ -251,9 +251,9 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
     -----------------------------------------------*/
     /* start... (it's not recommended editing these rules) */
     ul{position:absolute;width:12em;}
-    ul li,.sm-bk.sm-vertical li{float:none;}
     a{white-space:nowrap;}
     ul a,.sm-bk.sm-vertical a{white-space:normal;}
+    li{text-align:left;}
     .sm-nowrap > li > a,.sm-bk .sm-nowrap > li > :not(ul) a{white-space:nowrap;}
     /* ...end */
 
