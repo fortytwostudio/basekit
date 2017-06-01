@@ -72,8 +72,8 @@ gulp.task('scss', function() {
       autoprefixer: {
         add: true,
         // Browser support level
-        // Must be over 0.5% usage, going back 2 versions, but IE is from 9 to 11
-        browsers: [ '> 0.5%', 'last 2 versions', 'ie >= 9' ]
+        // Must be 0.5% or greater usage in UK, going back 3 versions, but make sure IE is not dropped off
+        browsers: [ '>= 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
       }
     }))
     //
