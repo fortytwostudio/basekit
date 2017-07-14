@@ -3,12 +3,16 @@ html {
   height: 100%;
 }
 
+// Target everything, yes, everything.
 * {
   &,
   &:before,
   &:after {
+    // It's rare that bg repeat is needed in most designs so for convinience let's just disable it.
     background-repeat: no-repeat;
+    // Inherit the html box sizing.
     box-sizing: inherit;
+    // Default padding and margins suck, we'll disable them.
     margin: 0;
     padding: 0;
   }
