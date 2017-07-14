@@ -18,8 +18,10 @@ body {
   backface-visibility: hidden;
   background-color: color(body);
   color: color(text);
-  font: $font-weight #{em(strip-unit($font-size), 16)}/#{$font-line-height / $font-size} $font-family;
-  // height: 100%;
+  font-family: $font-family;
+  font-size: em(strip-unit($font-size), 16);
+  font-weight: $font-weight;
+  line-height: ($font-line-height / $font-size);
   text-rendering: optimizeSpeed;
   text-size-adjust: 100%;
 
