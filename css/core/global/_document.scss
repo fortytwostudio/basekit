@@ -16,7 +16,7 @@ html {
 
 body {
   backface-visibility: hidden;
-  background: color(body) unquote($body-media);
+  background-color: color(body);
   color: color(text);
   font: $font-weight #{em(strip-unit($font-size), 16)}/#{$font-line-height / $font-size} $font-family;
   // height: 100%;
