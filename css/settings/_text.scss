@@ -14,10 +14,6 @@ $font-line-height: 24px;
 // Define the base font weight, this probably won't change.
 $font-weight: 400;
 
-// Should the base font size be a little smaller on small screens? If so,
-// define it here.
-$font-size-small-screen: $font-size; // NOTE: this may get removed
-
 // Define the base heading family and weight.
 $font-heading-family: $font-family;
 $font-heading-weight: $font-weight;
