@@ -71,7 +71,7 @@
 
 {% if quickNav %}
   <div data-bk-links="white fade dim" class="scroll-x stick-t shadow">
-    <ul data-bk-layout="pad:rl" class="pad-xs scroll-x__content nav nav--block font-s">
+    <ul data-bk-layout="p:rl" class="pad-xs scroll-x__content nav nav--block font-s">
       {% for item in quickNav %}
         <li>
           <a{{ item.slug == slug ? ' class="btn-primary shadow" ' }}  href="{{ item.url }}">

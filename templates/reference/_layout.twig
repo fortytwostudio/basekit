@@ -21,7 +21,7 @@
 
     <div class="position-over {{ pageHeaderColor|length ? pageHeaderColor : "bg-primary" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
       <header id="header" class="site-container">
-        <div data-bk-layout="to:m:pad:0 m:pad:r m:pad:sm middle">
+        <div data-bk-layout="to:m:p:0 m:p:r m:p:sm middle">
 
           <div data-bk-layout="4 l:5" class="site-logo--container">
             <h1 class="site-logo  logo">
@@ -67,7 +67,7 @@
         // $.smoothPageScrollByLoaded();
 
         // FONTOGGLER
-        var fontogNotice = '<div class="fontoggler__notice inline-block font-s" style="position:fixed;top:0.25rem;right:0.25rem;z-index:900;"><a data-bk-layout="pad:small" class="btn btn--primary" href="/demo/reference/typography/#fontoggler">Custom font active</a></div>';
+        var fontogNotice = '<div class="fontoggler__notice inline-block font-s" style="position:fixed;top:0.25rem;right:0.25rem;z-index:900;"><a data-bk-layout="p:small" class="btn btn--primary" href="/demo/reference/typography/#fontoggler">Custom font active</a></div>';
         // When the enter key is pressed…
         $('body').on('keypress', "#fontoggler", function (event) {
             if (event.which == 13) {
