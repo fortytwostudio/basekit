@@ -1,4 +1,8 @@
-{% extends "_layout.twig" %}
+{% extends "reference/_layout.twig" %}
+
+{% block headCSS %}
+  <link rel="stylesheet" href="/css/basekit-ref.css">
+{% endblock %}
 
 {# It's rare you'd ever want to output the homepage title of so the value here doesn't matter much #}
 {% set title = "Reference" %}
