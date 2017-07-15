@@ -92,7 +92,7 @@ gulp.task('scss', function() {
 /// gulp.src('js/[^_]*.js')
 ///
 gulp.task('js', function() {
-  gulp.src('js/*.js')
+  gulp.src('js/[^_]*.js')
     .pipe(plumber({errorHandler: hasError}))
     // Combine all (none _) js files into this file
     .pipe(concat('basekit.js'))
