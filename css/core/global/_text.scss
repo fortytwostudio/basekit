@@ -14,16 +14,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: ($font-line-height / $font-size);
 }
 
-@if $code-style {
-  code {
-    background-color: $code-bg-color;
-    border: unquote($code-border);
-    border-radius: em($br-1);
-    color: $code-text-color;
-    display: inline-block;
-    font-family: $font-family--mono;
-    font-size: $code-font-size;
-    padding: 0 em(5px);
-    white-space: pre-wrap;
-  }
+code {
+  background-color: $code-bg-color;
+  border: unquote($code-border);
+  border-radius: em($br-1);
+  color: $code-text-color;
+  display: inline-block;
+  font-family: $font-family--mono;
+  font-size: $code-font-size;
+  padding: 0 em(5px);
+  white-space: pre-wrap;
 }

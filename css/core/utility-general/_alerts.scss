@@ -1,4 +1,4 @@
-[class*="#{$alert-name}"] {
+[class*="alert"] {
   background-color: $alert;
   border: 1px solid darken($alert, 35%);
   color: black;
@@ -27,7 +27,7 @@
   }
 }
 
-.#{$alert-name} {
+.alert {
   &--warn {
     background-color: $alert--warn;
     border-color: darken($alert--warn, 12%);
@@ -65,17 +65,15 @@
     }
   }
 
-  @if $alert-inline-block {
-    &--ib {
-      display: inline-block;
-      vertical-align: top;
-      margin-right: em(10px);
-    }
+  &--ib {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: em(10px);
+  }
 
-    &--inline {
-      padding: 0 em(4px);
-      vertical-align: baseline;
-      white-space: pre-wrap;
-    }
+  &--inline {
+    padding: 0 em(4px);
+    vertical-align: baseline;
+    white-space: pre-wrap;
   }
 }

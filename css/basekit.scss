@@ -1,35 +1,27 @@
 @charset "UTF-8";
 
 @import
-  "settings/colors",
-  "settings/layout",
-  "settings/text",
-  "settings/transition-speed",
-  "settings/navigation",
-  "settings/alerts",
-  "settings/user-content-rte",
-  "settings/hider",
-  "settings/border-radius",
+  "core/_settings-default",
+  "_settings-project",
 
   // THIRD PARTY TOOLS
-  "core/third-party/unit-conversion",
-  "core/third-party/media-queries",
-  "core/third-party/font-face",
-  "core/third-party/family",
-  // "core/third-party/fluid-type",
   "core/third-party/between",
+  "core/third-party/family",
+  "core/third-party/font-face",
   "core/third-party/hamburgers/hamburgers",
+  "core/third-party/media-queries",
   "core/third-party/scrim-linear-grad",
+  "core/third-party/unit-conversion",
 
   // MIXINS & FUNCTONS
-  "core/tools/percentage",
-  "core/tools/viewport-units",
-  "core/tools/rem",
   "core/tools/aspect-ratio",
-  "core/tools/strip-unit",
   "core/tools/hider",
+  "core/tools/percentage",
   "core/tools/poly-fluid-sizing",
+  "core/tools/rem",
   "core/tools/reverse-list",
+  "core/tools/strip-unit",
+  "core/tools/viewport-units",
 
   // GLOBALS
   "core/global/document",

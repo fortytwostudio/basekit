@@ -1,0 +1,304 @@
+// —————————————————————————————————————————————————————————————————————————————
+// COLOURS
+// —————————————————————————————————————————————————————————————————————————————
+$color-primary: #3b668b !default;
+$color-secondary: #f67280 !default;
+$color-tertiary: #c9c27d !default;
+
+
+$color-grey: #ccc !default;
+
+/// Set the body background colour here, if you want to add an image you should configure
+/// the $color-body-media currently in settings/media.scss
+$color-body: #1a1a1a !default;
+
+/// Set the primary (body) text colour
+$color-text: #333 !default;
+
+/// Alert classes can be used anywhere but for now they're tied to
+/// form alerts, set the colours here if you want to change them.
+$alert: #fbf4b7 !default;
+$alert--warn: #fed0d0 !default;
+$alert--neutral: #cdddf4 !default;
+$alert--positive: #cdf0cb !default;
+$alert--muted: #e9e9e9 !default;
+
+$colors: (
+  primary: (
+    base: $color-primary,
+    // By mixing the colour with white we ensure that whatever the colour, it never becomes white. This can be a problem when using the lighten() function if the source colour is already quite light.
+    lighter: mix($color-primary, white, 11%),
+    light: mix($color-primary, white, 55%),
+    // As with mixing a colour with white, the same goes for mixing with black.
+    dark: mix($color-primary, black, 75%),
+    darker: mix($color-primary, black, 50%)
+  ),
+  secondary: (
+    base: $color-secondary,
+    lighter: mix($color-secondary, white, 15%),
+    light: mix($color-secondary, white, 55%),
+    dark: mix($color-secondary, black, 75%),
+    darker: mix($color-secondary, black, 50%)
+  ),
+  tertiary: (
+    base: $color-tertiary,
+    lighter: mix($color-tertiary, white, 20%),
+    light: mix($color-tertiary, white, 55%),
+    dark: mix($color-tertiary, black, 75%),
+    darker: mix($color-tertiary, black, 50%)
+  ),
+  grey: (
+    base: $color-grey,
+    lighter: mix($color-grey, white, 20%),
+    light: mix($color-grey, white, 60%),
+    dark: mix($color-grey, black, 60%),
+    darker: mix($color-grey, black, 40%)
+  ),
+  white: (
+    base: white,
+    tint: mix(black, white, 3%)
+  ),
+  black: (
+    base: black,
+    tint: mix(white, black, 10%)
+  ),
+  text: (
+    base: $color-text
+  ),
+  body: (
+    base: $color-body
+  )
+) !default;
+
+@function color($scheme, $tone: base) {
+  @return map-get(map-get($colors, $scheme), $tone);
+}
+
+
+// Style up those table colours
+$tables-color: color(grey, light) !default;
+
+// Code box styles
+$code-bg-color: rgba(mix(white, black, 50%), 0.25) !default;
+$code-text-color: currentColor !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// LAYOUT
+// —————————————————————————————————————————————————————————————————————————————
+
+// Define your responsive breakpoints with a key name and px value.
+$mq-breakpoints: (s: 568px, m: 850px, l: 1200px) !default;
+
+// Once lower than the max-width the site width will never be larger than this.
+$site-width: 96% !default;
+
+// Define the column count for of your design.
+$grid-columns: 12 !default;
+$grid-column-width: 74 !default;
+$grid-gutter: 40 !default;
+
+$margin: $grid-gutter / 2 !default;
+
+// Don't touch this if you don't know what it does… $max-width gets used often.
+$max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns) !default;
+
+
+/// Name your layout data attribute, should start with `data-`.
+///
+/// @example
+///   <div data-bk="…">
+$bk-grid-name: data-bk-layout !default;
+
+/// Enable or disable max-width breakpoint CSS. In simpler designs you may not
+/// ever utilise max-width breakpoints, set this `false` in that case to save
+/// users downloading unnecessary CSS.
+///
+/// @example
+///   <div data-bk="to:m:8  to:l:6">
+$bk-grid-mq-to: true !default;
+
+/// By default columns get a (half gutter) margin around them, this variable
+/// defines the smaller size margin. Typically it will be half but you can tweak
+/// as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-small: $margin / 2 !default;
+
+/// By default columns get a (half `$gutter`) margin around them, this variable
+/// defines the larger size margin. Typically it will be double but you can
+/// tweak as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-large: $margin * 2 !default;
+
+/// Columns can be pushed (left or right) using padding CSS, you'll never want
+/// to push the a layout the total number of columns so here we subtract one
+/// from the number.
+/// @access private
+$bk-push-columns: $grid-columns - 1 !default;
+
+/// Enable/Disable push (towards the right |-->) CSS.
+$bk-push-right: true !default;
+
+/// Enable/Disable push (towards the left <--|) CSS.
+/// Use cases for this are quite small since blocks naturally position over to
+/// the left. However, it can be useful if you align blocks with
+/// `text-align: right` and then need to push a block to the left.
+$bk-push-left: true !default;
+
+
+
+
+// Ouput the site's max width utility class and define the name.
+$site-width-css: true !default;
+$site-width-name: site-container !default;
+
+// Output the float utility class… ooh nasty.
+$floats: true !default;
+$floats-responsive: true !default;
+
+// Output the display (block, inline-block, inline, etc) utility class.
+$display-css: true !default;
+$display-responsive: true !default;
+$display-block-class: true !default;
+$display-inline-class: true !default;
+$display-inline-block-class: true !default;
+$display-table-class: true !default;
+
+// Output the alignments utility class.
+$alignment-css: true !default;
+
+// Output the margin utility class.
+$margin-css: true !default;
+
+// Output and configure the padding spacer utility, this is used to add
+// additional top/bottom padding where necessary.
+$spacer-css: true !default;
+// $spacer-name: pad;
+// $spacer-min: 320px;
+// $spacer-max: $max-width * 1px;
+
+// Output the fit-media utility class.
+$fit-media-css: true !default;
+
+// Output CSS for the fit-media fallback.
+$fit-media-fallback-css: true !default;
+
+// Fine tune the position over utility class options.
+// Find this in core/utility.position-over.scss
+$position-over-css: true !default;
+$position-over-tr: true !default;
+$position-over-br: true !default;
+$position-over-bl: true !default;
+$position-over-m: true !default;
+$position-over-ml: true !default;
+$position-over-mr: true !default;
+$position-over-mb: true !default;
+$position-over-mt: true !default;
+$position-over-fit-height: true !default;
+
+// Fractional widths
+$whole: percentage(1) !default;
+$full: $whole !default;
+$one: $whole !default;
+$half: $whole / 2 !default;
+$third: $whole / 3 !default;
+$quarter: $half / 2 !default;
+$fifth: $whole / 5 !default;
+$sixth: $whole / 6 !default;
+$seventh: $whole / 7 !default;
+$eighth: $whole / 8 !default;
+$ninth: $whole / 9 !default;
+$tenth: $whole / 10 !default;
+$eleventh: $whole / 11 !default;
+$twelfth: $whole / 12 !default;
+
+// Base aspect ratio variables
+$_16-9: 56.25% !default;
+$_1-1: $whole !default;
+$_2-1: $half !default;
+$_4-3: $half * 3 !default;
+
+// Set some base z-index layers to work with
+$z-min: 1 !default;
+$z-content: 100 !default;
+$z-fit-media: 200 !default;
+$z-position-over: 300 !default;
+$z-mobile-nav: 400 !default;
+$z-mobile-nav-toggle: 500 !default;
+$z-max: 600 !default;
+
+// —————————————————————————————————————————————————————————————————————————————
+// TEXT AND TYPOGRAPHY
+// —————————————————————————————————————————————————————————————————————————————
+
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif !default;
+
+$font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif !default;
+$font-family--mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
+
+// // Define the base font size. This is important, get it right.
+$font-size: 16px !default;
+//
+// // Define the primary line height.
+$font-line-height: 24px !default;
+//
+// // Define the base font weight, this probably won't change.
+$font-weight: 400 !default;
+
+// Set a default bottom margin size for consistency across text elements.
+$font-default-bottom-margin: $margin !default;
+
+// Output the font utility class.
+$font-css: true !default;
+
+// Define when the max font size should kick in, this is a bit like $font-config
+// but should rarely be changed.
+$font-viewport-unit-max-width: $max-width + 0px !default;
+
+// Output the bullet and numbered utility classes
+$list-css: true !default;
+
+// Configure the list utility class
+$list-bullet: "disc" !default;
+$list-bullet-position: "outside" !default;
+$list-number: "decimal-leading-zero" !default;
+$list-number-position: "outside" !default;
+
+// Output a small utility class that allows text to be limited with an ellipsis.
+$overflow-ellipsis-css: true !default;
+
+// Style up those tables
+$tables-width: 1px !default;
+$tables-responsive: true !default;
+$tables-overflow: true !default;
+$tables-responsive-bp: s !default;
+
+// Code box styles
+$code-border: '1px solid ' + rgba(mix(white, black, 50%), 0.75) !default; // or just  "0";
+$code-font-size: 87.5% !default;
+
+// Output debugging class for rich text editor content.
+$rte-debugging: false !default;
+
+// —————————————————————————————————————————————————————————————————————————————
+// BORDERS AND CORNER RADIUS
+// —————————————————————————————————————————————————————————————————————————————
+
+$br-0: 0 !default;
+$br-1: 3px !default;
+$br-2: 5px !default;
+$br-3: 8px !default;
+$br-4: 16px !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// TRANSITION AND ANIMATION SPEEDS
+// —————————————————————————————————————————————————————————————————————————————
+// Set a standard range of animation speeds
+$speed-normal: 0.25s !default;
+$speed-fast: 0.1s !default;
+$speed-slow: 0.5s !default;

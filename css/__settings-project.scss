@@ -1,0 +1,79 @@
+// —————————————————————————————————————————————————————————————————————————————
+// COLOURS
+// —————————————————————————————————————————————————————————————————————————————
+
+// Beach Days
+// $color-primary: #ff6f69;
+// $color-secondary: #ffcc5c;
+// $color-tertiary: #88d8b0;
+
+// Cyber Punk
+// $color-primary: #0270ad;
+// $color-secondary: #bf358f;
+// $color-tertiary: #71e0b1;
+
+// Saturated
+// $color-primary: #4767db;
+// $color-secondary: #f144ac;
+// $color-tertiary: #45cd88;
+
+// Corporate Shill
+// $color-primary: #3f51b5;
+// $color-secondary: #9575cd;
+// $color-tertiary: #e6e7d4;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// TEXT AND TYPOGRAPHY
+// —————————————————————————————————————————————————————————————————————————————
+
+// We want the font scaling to stop when it hits this minimum width.
+$font-mq-min: 320px;
+// We also want the font scaling to stop when the site hits its max width.
+$font-mq-max: ($max-width * 1px);
+
+$fluid-fonts: (
+  m: (
+    minSize: 20px,
+    maxSize: 22px,
+    lineHeight: (21px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  l: (
+    minSize: 26px,
+    maxSize: 32px,
+    lineHeight: (18px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  xl: (
+    minSize: 32px,
+    maxSize: 44px,
+    lineHeight: (17px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  xxl: (
+    minSize: 44px,
+    maxSize: 62px,
+    lineHeight: (16px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  ),
+  hero: (
+    minSize: 52px,
+    maxSize: 92px,
+    lineHeight: (16px / $font-size),
+    mqMin: $font-mq-min,
+    mqMax: $font-mq-max,
+  )
+);
+
+// Function to take the above and spit it out as CSS.
+@function ffont($name, $value) {
+  @return map-get(map-get($fluid-fonts, nth($name, 1)), $value);
+}
+
+// Output debugging class
+$rte-debugging: true;
