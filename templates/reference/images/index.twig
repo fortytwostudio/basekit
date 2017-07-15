@@ -11,14 +11,35 @@
     <section class="site-container">
       <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="alert--simple">Coming Soon</p>
+      <div data-bk-layout="s:9 m:8 l:7">
+        <h3 class="font-m | margin-b">Image in a link with no width or height attributes</h3>
+        <a href="#"><img src="/imgs/placeholders/square.jpg" alt="Test Image"></a>
+
+        <h3 class="font-m | margin-tb">Image with width attribute set to 600 pixels</h3>
+        <img width="600" src="/imgs/placeholders/hero.jpg" alt="Test Image">
+
+        <h3 class="font-m | margin-tb">Image with width attribute 600 pixels and height 800 pixels</h3>
+        <img width="600" height="800" src="/imgs/placeholders/hero.jpg" alt="Test Image">
+
+        <h3 class="font-m | margin-tb">Image style attribute overriding the above</h3>
+        <img style="width: 600px; height: 800px;" width="600" height="800" src="/imgs/placeholders/hero.jpg" alt="Test Image">
+
+        <h3 class="font-m | margin-tb">iframe with 100% width and 600 pixels height attributes</h3>
+        <iframe src="/demo/reference/" width="100%" height="600"></iframe>
+
+        <h3 class="font-m | margin-tb">iframe with primary border class</h3>
+        <iframe class="ba bw-1 b-primary" src="/demo/reference/" width="100%" height="600"></iframe>
+
+        <h3 class="font-m | margin-tb">iframe with border radius and overflow hidden on parent</h3>
+        <div class="ba bw-1 b-primary br-4 | ofh">
+          <iframe src="/demo/reference/" width="100%" height="600"></iframe>
+        </div>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 0 } %}
     </section>
   </div>
-  
+
 {% include 'reference/_partials/_pagination.twig' %}
 
 {% endblock %}

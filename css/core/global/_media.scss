@@ -1,9 +1,20 @@
 img,
-iframe,
-svg,
-picture {
+picture,
+svg {
+  // Prevent browser default inline space below image.
   display: block;
+  // Fix for a Windows Phone bug.
+  // NOTE: This will override the height attribute value on images.
+  // height: auto;
+  // Prevent images growing larger than their width size while allowing them to shrink.
   max-width: 100%;
-  height: auto;
+}
+
+iframe {
+  // Prevent nasty browser default border.
   border: 0;
+  // Prevent browser default inline space below image.
+  display: block;
+  // Prevent images growing larger than their width size while allowing them to shrink.
+  max-width: 100%;
 }
