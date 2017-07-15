@@ -23,7 +23,9 @@ body {
   background-color: color(body);
   color: color(text);
   font-family: $font-family;
-  font-size: (strip-unit($font-size) / 16) * 1em ;
+  // Convert the font-size variable from pixels to em.
+  font-size: (strip-unit($font-size) / 16) * 1em;
+  //Enforce a global font weight, almost always 400 but depends on the font family.
   font-weight: $font-weight;
   line-height: ($font-line-height / $font-size);
   // Exactly as it says, optimise the browser text rendering for speed rather than fanciness.
