@@ -59,7 +59,8 @@ gulp.task('sync', function() {
 /// Compile Sass (with Nano and Autoprefixer)
 ///
 gulp.task('scss', function() {
-  gulp.src('css/basekit.scss')
+  // was  gulp.src('css/basekit.scss')
+  gulp.src('css/*.scss')
     .pipe(plumber({errorHandler: hasError}))
     // Uncached data for populating Twig files
     .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
