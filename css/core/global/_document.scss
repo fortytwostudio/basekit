@@ -19,17 +19,21 @@ html {
 }
 
 body {
-  backface-visibility: hidden;
+  // backface-visibility: hidden;
   background-color: color(body);
   color: color(text);
   font-family: $font-family;
-  font-size: em(strip-unit($font-size), 16);
+  font-size: (strip-unit($font-size) / 16) * 1em ;
   font-weight: $font-weight;
   line-height: ($font-line-height / $font-size);
+  // Exactly as it says, optimise the browser text rendering for speed rather than fanciness.
   text-rendering: optimizeSpeed;
+  //Prevents iOS (in particular) from screwing with the intended text sizing.
   text-size-adjust: 100%;
 }
 
-[tabindex="-1"] {
-  outline: 0;
-}
+// Disable the outline on tabable content areas, disable for the time being as this is not common usage
+// [tabindex="-1"],
+// [tabindex="1"] {
+//   outline: 0;
+// }
