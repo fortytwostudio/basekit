@@ -115,79 +115,79 @@
 /// @access private
 @mixin grid-padding($gg-value: null) {
   // Reduce the gutte size on the module
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:sm"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:sm"}) {
     padding: ($bk-grid-padding-small / 16) * 1rem;
   }
 
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:lg"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:lg"}) {
     padding: ($bk-grid-padding-large / 16) * 1rem;
   }
 
   // Disable padding completely on the module
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:0"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:0"}) {
     padding: 0;
   }
 
 
 
   // Top-Right-Bottom
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:trb"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:trb"}) {
     padding: { left: 0; };
   }
   // Top-Bottom-Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tbl"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:tbl"}) {
     padding: { right: 0; };
   }
   // Top-Right-Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:trl"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:trl"}) {
     padding: { bottom: 0; };
   }
 
   // Top
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:t"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:t"}) {
     padding: { right: 0; bottom: 0; left: 0; };
   }
   // Top-Right
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tr"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:tr"}) {
     padding: { bottom: 0; left: 0; };
   }
   // Right
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:r"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:r"}) {
     padding: { top: 0; bottom: 0; left: 0; };
   }
   // Right-Bottom-Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:rbl"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:rbl"}) {
     padding: { top: 0; };
   }
 
   // Bottom
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:b"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:b"}) {
     padding: { top: 0; right: 0; left: 0; };
   }
   // Horizontal: Top-Bottom
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tb"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:tb"}) {
     padding: { right: 0; left: 0; };
   }
   // Right-Bottom
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:rb"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:rb"}) {
     padding: { top: 0; left: 0; };
   }
 
   // Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:l"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:l"}) {
     padding: { top: 0; right: 0; bottom: 0; };
   }
   // Right-Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:rl"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:rl"}) {
     padding: { top: 0; bottom: 0; };
   }
   // Top-Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:tl"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:tl"}) {
     padding: { right: 0; bottom: 0; };
   }
 
   // Bottom-Left
-  @include attr-module($bk-grid-name, #{$gg-value}#{"pad:bl"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"p:bl"}) {
     padding: { top: 0; right: 0; };
   }
 }
