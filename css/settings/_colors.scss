@@ -34,11 +34,6 @@ $color-body: #1a1a1a;
 /// Set the primary (body) text colour
 $color-text: #333;
 
-/// This is optional, you're better off using the color utility classes to set
-/// the colour on headings unless there is very little variation in heading
-/// colours.
-$color-heading: $color-text;
-
 /// Alert classes can be used anywhere but for now they're tied to
 /// form alerts, set the colours here if you want to change them.
 $alert: #fbf4b7 !default;
