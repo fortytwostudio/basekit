@@ -10,6 +10,7 @@
     <!--[if lt IE 9]><script src="/js/_html5shiv.min.js"></script><![endif]-->
 
     <link rel="stylesheet" href="/css/basekit.css">
+    {% block headCSS %}{% endblock %}
 
     {% include "includes/_head/_seo.twig" %}
     {% include "includes/_head/_icons.twig" ignore missing %}
