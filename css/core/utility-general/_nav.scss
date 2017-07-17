@@ -1,13 +1,20 @@
-.nav {
+$nav-rl-pad: 1em;
+$nav-tb-pad: 0.5em;
+$nav-crumb-pad: 0.5em;
+
+[class*="nav"] {
   > li {
     &,
     > a {
       display: inline-block;
       vertical-align: middle;
+      line-height: 1;
     }
   }
+}
 
-  &--stack {
+.nav {
+  &-stack {
     > li {
       display: list-item;
       > a {
@@ -16,24 +23,37 @@
     }
   }
 
-  &--block {
-    line-height: 1;
+  &-block {
     > li {
       letter-spacing: normal;
       word-spacing: normal;
       > a {
-        padding: 0.5rem;
+        padding: $nav-tb-pad $nav-rl-pad;
       }
     }
   }
 
-  &--fit {
-    display: table;
-    width: 100%;
+  &-fit {
+    display: flex;
+    justify-content: space-between;
     > li {
-      display: table-cell;
       > a {
         display: block;
+      }
+    }
+  }
+
+  &-gromit {
+    > li + li {
+      padding-left: $nav-crumb-pad;
+      a {
+        &:before {
+          display: inline-block;
+          font-family: "Basekit Arrows", $font-family !important;
+          content: "→";
+          padding-right: $nav-crumb-pad;
+          vertical-align: bottom;
+        }
       }
     }
   }
