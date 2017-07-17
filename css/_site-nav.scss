@@ -26,6 +26,14 @@ $sm-bk__gray-darker: color(primary, darker);
     width: 100%;
   }
 
+  .no-js {
+    .nav-primary-layout li {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+    }
+  }
+
   .js {
     .nav-primary-layout {
       left: 0;
