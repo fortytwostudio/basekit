@@ -3,9 +3,9 @@
 // —————————————————————————————————————————————————————————————————————————————
 
 // Example:
-// $color-primary: #ff6f69;
-// $color-secondary: #ffcc5c;
-// $color-tertiary: #88d8b0;
+$color-primary: #ff6f69;
+$color-secondary: #ffcc5c;
+$color-tertiary: #88d8b0;
 
 
 // —————————————————————————————————————————————————————————————————————————————
@@ -13,38 +13,38 @@
 // —————————————————————————————————————————————————————————————————————————————
 
 // We want the font scaling to stop when it hits this minimum width.
-$font-mq-min: 320px;
+$fluid-font-mq-min: 320px;
 // We also want the font scaling to stop when the site hits its max width.
-$font-mq-max: ($max-width * 1px);
+$fluid-font-mq-max: ($max-width * 1px);
 
 $fluid-fonts: (
   l: (
     minSize: 26px,
     maxSize: 32px,
     lineHeight: (18px / $font-size),
-    mqMin: $font-mq-min,
-    mqMax: $font-mq-max,
+    mqMin: $fluid-font-mq-min,
+    mqMax: $fluid-font-mq-max,
   ),
   xl: (
     minSize: 32px,
     maxSize: 44px,
     lineHeight: (17px / $font-size),
-    mqMin: $font-mq-min,
-    mqMax: $font-mq-max,
+    mqMin: $fluid-font-mq-min,
+    mqMax: $fluid-font-mq-max,
   ),
   xxl: (
     minSize: 44px,
     maxSize: 62px,
     lineHeight: (16px / $font-size),
-    mqMin: $font-mq-min,
-    mqMax: $font-mq-max,
+    mqMin: $fluid-font-mq-min,
+    mqMax: $fluid-font-mq-max,
   ),
   hero: (
     minSize: 52px,
     maxSize: 92px,
     lineHeight: (16px / $font-size),
-    mqMin: $font-mq-min,
-    mqMax: $font-mq-max,
+    mqMin: $fluid-font-mq-min,
+    mqMax: $fluid-font-mq-max,
   )
 );
 

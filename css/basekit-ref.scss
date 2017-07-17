@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
 @import
-  "core/_settings-default",
-  "core/tools/rem",
-
-  // THIRD PARTY TOOLS
-  "core/third-party/media-queries",
+  "basekit.scss",
   "core/third-party/scrim-linear-grad";
 
 .desat {
