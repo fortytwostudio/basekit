@@ -21,6 +21,12 @@ $nav-crumb-pad: 0.5em;
         display: block;
       }
     }
+
+    ul {
+      li {
+        padding-left: 1em;
+      }
+    }
   }
 
   &-block {
