@@ -51,16 +51,16 @@
         <li><a href="#" class="bg-grey--light">Item 4</a></li>
       </ul>
 
-      <p>A very basic starting point for breadcrumb links using the <code>.nav-gromit</code> and <code>.nav-block</code> classes.</p>
-      <ul class="nav-gromit nav-block | pad pad-s-t" data-bk-links="primary fade">
+      <p>A very basic starting point for breadcrumb links using the <code>.nav-crumb</code> and <code>.nav-block</code> classes. How you style the current page item is up to you.</p>
+      <ul class="nav-crumb nav-block | pad pad-s-t" data-bk-links="primary fade">
         <li><a href="#" class="bg-grey--light">Item 1</a></li>
         <li><a href="#" class="bg-grey--light">Item 2</a></li>
-        <li>Item three</li>
+        <li><a href="#" class="bg-grey--light">Item three</a></li>
         <li><a href="#" class="bg-grey--light">Item 4</a></li>
       </ul>
     </div>
 
-    {% include "reference/_partials/_status.twig" with { value : 0 } %}
+    {% include "reference/_partials/_status.twig" with { value : 25 } %}
   </section>
 </div>
 

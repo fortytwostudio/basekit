@@ -49,17 +49,15 @@ $nav-crumb-pad: 0.5em;
     }
   }
 
-  &-gromit {
+  &-crumb {
     > li + li {
       padding-left: $nav-crumb-pad;
-      a {
-        &:before {
-          display: inline-block;
-          font-family: "Basekit Arrows", $font-family !important;
-          content: "→";
-          padding-right: $nav-crumb-pad;
-          vertical-align: bottom;
-        }
+      &:before {
+        display: inline-block;
+        font-family: "Basekit Arrows", $font-family !important;
+        content: "→";
+        padding-right: $nav-crumb-pad;
+        vertical-align: middle;
       }
     }
   }
