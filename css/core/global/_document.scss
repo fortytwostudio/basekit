@@ -20,11 +20,11 @@ html {
 
 body {
   // backface-visibility: hidden;
-  background-color: color(body);
-  color: color(text);
+  background-color: $color-body;
+  color: $color-text;
   font-family: $font-family;
   // Convert the font-size variable from pixels to em.
-  font-size: (strip-unit($font-size) / 16) * 1em;
+  font-size: (($font-size / ($font-size * 0 + 1)) / 16) * 1em;
   //Enforce a global font weight, almost always 400 but depends on the font family.
   font-weight: $font-weight;
   line-height: ($font-line-height / $font-size);

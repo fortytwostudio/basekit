@@ -2,6 +2,54 @@
 /// @author Ryan Roberts
 ////
 
+/// Name your layout data attribute, should start with `data-`.
+///
+/// @example
+///   <div data-bk="…">
+$bk-grid-name: data-bk-layout !default;
+
+/// Enable or disable max-width breakpoint CSS. In simpler designs you may not
+/// ever utilise max-width breakpoints, set this `false` in that case to save
+/// users downloading unnecessary CSS.
+///
+/// @example
+///   <div data-bk="to:m:8  to:l:6">
+$bk-grid-mq-to: true !default;
+
+/// By default columns get a (half gutter) margin around them, this variable
+/// defines the smaller size margin. Typically it will be half but you can tweak
+/// as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-small: $margin / 2 !default;
+
+/// By default columns get a (half `$gutter`) margin around them, this variable
+/// defines the larger size margin. Typically it will be double but you can
+/// tweak as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-large: $margin * 2 !default;
+
+/// Columns can be pushed (left or right) using padding CSS, you'll never want
+/// to push the a layout the total number of columns so here we subtract one
+/// from the number.
+/// @access private
+$bk-push-columns: $grid-columns - 1 !default;
+
+/// Enable/Disable push (towards the right |-->) CSS.
+$bk-push-right: true !default;
+
+/// Enable/Disable push (towards the left <--|) CSS.
+/// Use cases for this are quite small since blocks naturally position over to
+/// the left. However, it can be useful if you align blocks with
+/// `text-align: right` and then need to push a block to the left.
+$bk-push-left: true !default;
+
+
+
+
 /// A simple mixin to ease use of the attribute selector
 ///
 /// @todo EVERYTHING

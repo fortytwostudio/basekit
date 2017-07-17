@@ -1,3 +1,42 @@
+// We also want the font scaling to stop when the site hits its max width.
+$fluid-font-mq-max: ($max-width * 1px);
+
+$fluid-fonts: (
+  l: (
+    minSize: 26px,
+    maxSize: 32px,
+    lineHeight: (18px / $font-size),
+    mqMin: 320px,
+    mqMax: $fluid-font-mq-max,
+  ),
+  xl: (
+    minSize: 32px,
+    maxSize: 44px,
+    lineHeight: (17px / $font-size),
+    mqMin: 320px,
+    mqMax: $fluid-font-mq-max,
+  ),
+  xxl: (
+    minSize: 44px,
+    maxSize: 62px,
+    lineHeight: (16px / $font-size),
+    mqMin: 320px,
+    mqMax: $fluid-font-mq-max,
+  ),
+  hero: (
+    minSize: 52px,
+    maxSize: 92px,
+    lineHeight: (16px / $font-size),
+    mqMin: 320px,
+    mqMax: $fluid-font-mq-max,
+  )
+);
+
+// Function to take the above and spit it out as CSS.
+@function ffont($name, $value) {
+  @return map-get(map-get($fluid-fonts, nth($name, 1)), $value);
+}
+
 @function vp($target, $context: $max-width, $dimension: vw) {
   $vw-context: ($context*.01) * 1px;
   @if $dimension == vw {

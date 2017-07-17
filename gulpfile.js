@@ -73,11 +73,10 @@ gulp.task('scss', function() {
       autoprefixer: {
         add: true,
         // Browser support level
-        // Must be 0.5% or greater usage in UK, going back 3 versions, but make sure IE is not dropped off
+        // Must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
         browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
       }
     }))
-    //
     .pipe(gulp.dest('css'))
     // Reload and inject
     .pipe(browserSync.reload({ stream: true }))

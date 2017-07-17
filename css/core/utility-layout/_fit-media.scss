@@ -1,3 +1,6 @@
+// Output CSS for the fit-media fallback.
+$fit-media-fallback-css: true !default;
+
 @mixin fit-media($fit-pct: 100%, $fit-flip-position: left, $fit-adjust-z-index: $z-fit-media) {
   position: absolute;
   z-index: $fit-adjust-z-index;
@@ -27,9 +30,7 @@
 
 // Utility Class to apply easily anywhere
 //
-@if $fit-media-css {
-  .fit-media {
-    transform-style: preserve-3d;
-    @include fit-media;
-  }
+.fit-media {
+  transform-style: preserve-3d;
+  @include fit-media;
 }

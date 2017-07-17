@@ -1,0 +1,24 @@
+// —————————————————————————————————————————————————————————————————————————————
+// COLOURS
+// —————————————————————————————————————————————————————————————————————————————
+$color-primary: #3b668b !default;
+$color-secondary: #f67280 !default;
+$color-tertiary: #c9c27d !default;
+
+
+$color-grey: #ccc !default;
+
+/// Set the body background colour here, if you want to add an image you should configure
+/// the $color-body-media currently in settings/media.scss
+$color-body: #1a1a1a !default;
+
+/// Set the primary (body) text colour
+$color-text: #333 !default;
+
+/// Alert classes can be used anywhere but for now they're tied to
+/// form alerts, set the colours here if you want to change them.
+$alert: #fbf4b7 !default;
+$alert--warn: #fed0d0 !default;
+$alert--neutral: #cdddf4 !default;
+$alert--positive: #cdf0cb !default;
+$alert--muted: #e9e9e9 !default;

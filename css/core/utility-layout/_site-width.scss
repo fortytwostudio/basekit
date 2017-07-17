@@ -1,17 +1,16 @@
-@if $site-width-css {
+// Ouput the site's max width utility class and define the name.
+$site-width-name: site-container !default;
 
-  .#{$site-width-name},
-  .#{$site-width-name}--100 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: rem($max-width + 0px);
-    width: $site-width;
+.#{$site-width-name},
+.#{$site-width-name}--100 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: rem($max-width + 0px);
+  width: $site-width;
 
-  }
+}
 
-  // While maintaining the website's max-width, allow it to fit 100% of the screen width when it is less than the website max width
-  .#{$site-width-name}--100 {
-    width: 100% !important;
-  }
-
+// While maintaining the website's max-width, allow it to fit 100% of the screen width when it is less than the website max width
+.#{$site-width-name}--100 {
+  width: 100% !important;
 }

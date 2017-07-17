@@ -1,47 +1,46 @@
-@if $floats {
+// Output the float utility class… ooh nasty.
+$floats-responsive: true !default;
 
-  .float {
-    &-r {
-      float: right;
-    }
-
-    &-l {
-      float: left;
-    }
-
-    &-n {
-      float: none;
-    }
+.float {
+  &-r {
+    float: right;
   }
 
-  .clear {
-    &:after {
-      content:" ";
-      display:block;
-      clear:both;
-    }
+  &-l {
+    float: left;
   }
 
-  // If enabled output a float class for each breakpoint
-  // But we won't bother with .clear
-  @if $floats-responsive {
-    @each $breakpoint, $bp-num in $mq-breakpoints {
-      @include mq($breakpoint) {
-        .float {
-          &-r--#{$breakpoint} {
-            float: right;
-          }
+  &-n {
+    float: none;
+  }
+}
 
-          &-l--#{$breakpoint} {
-            float: left;
-          }
+.clear {
+  &:after {
+    content:" ";
+    display:block;
+    clear:both;
+  }
+}
 
-          &-n--#{$breakpoint} {
-            float: none;
-          }
+// If enabled output a float class for each breakpoint
+// But we won't bother with .clear
+@if $floats-responsive {
+  @each $breakpoint, $bp-num in $mq-breakpoints {
+    @include mq($breakpoint) {
+      .float {
+        &-r--#{$breakpoint} {
+          float: right;
+        }
+
+        &-l--#{$breakpoint} {
+          float: left;
+        }
+
+        &-n--#{$breakpoint} {
+          float: none;
         }
       }
     }
   }
-
 }
