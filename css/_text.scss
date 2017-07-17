@@ -59,6 +59,10 @@
     text-transform: uppercase;
   }
 
+  &-kern {
+    font-kerning: normal!important;
+  }
+
   // &-m {
   //   @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px);
   //   line-height: (20 / 16);
