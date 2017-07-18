@@ -1,5 +1,9 @@
 // The structure of this is straight up pinched from http://tachyons.io/docs/themes/borders/
 
+$border-width-default: 1px !default;
+$border-width-1: 2px !default;
+$border-width-2: 4px !default;
+
 .b {
   &-primary { border-color: color(primary); }
   &-secondary { border-color: color(secondary); }
@@ -10,15 +14,15 @@
   &-text { border-color: currentColor; }
 }
 
-.ba { border-style: solid; border-width: rem(1px); }
-.bt { border-top-style: solid; border-top-width: rem(1px); }
-.br { border-right-style: solid; border-right-width: rem(1px); }
-.bb { border-bottom-style: solid; border-bottom-width: rem(1px); }
-.bl { border-left-style: solid; border-left-width: rem(1px); }
+.ba { border-style: solid; border-width: rem($border-width-default); }
+.bt { border-top-style: solid; border-top-width: rem($border-width-default); }
+.br { border-right-style: solid; border-right-width: rem($border-width-default); }
+.bb { border-bottom-style: solid; border-bottom-width: rem($border-width-default); }
+.bl { border-left-style: solid; border-left-width: rem($border-width-default); }
 .bn { border-width: 0; }
 
-.bw-1 { border-width: 2px; }
-.bw-2 { border-width: 4px; }
+.bw-1 { border-width: $border-width-1; }
+.bw-2 { border-width: $border-width-2; }
 
 .bt-0 { border-top-width: 0; }
 .br-0 { border-right-width: 0; }
