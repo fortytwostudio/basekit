@@ -1,99 +1,46 @@
-$colors: (
-  primary: (
-    base: $color-primary,
-    // By mixing the colour with white we ensure that whatever the colour, it never becomes white. This can be a problem when using the lighten() function if the source colour is already quite light.
-    lighter: mix($color-primary, white, 11%),
-    light: mix($color-primary, white, 55%),
-    // As with mixing a colour with white, the same goes for mixing with black.
-    dark: mix($color-primary, black, 75%),
-    darker: mix($color-primary, black, 50%)
-  ),
-  secondary: (
-    base: $color-secondary,
-    lighter: mix($color-secondary, white, 15%),
-    light: mix($color-secondary, white, 55%),
-    dark: mix($color-secondary, black, 75%),
-    darker: mix($color-secondary, black, 50%)
-  ),
-  tertiary: (
-    base: $color-tertiary,
-    lighter: mix($color-tertiary, white, 20%),
-    light: mix($color-tertiary, white, 55%),
-    dark: mix($color-tertiary, black, 75%),
-    darker: mix($color-tertiary, black, 50%)
-  ),
-  grey: (
-    base: $color-grey,
-    lighter: mix($color-grey, white, 20%),
-    light: mix($color-grey, white, 60%),
-    dark: mix($color-grey, black, 60%),
-    darker: mix($color-grey, black, 40%)
-  ),
-  white: (
-    base: white,
-    tint: mix(black, white, 3%)
-  ),
-  black: (
-    base: black,
-    tint: mix(white, black, 10%)
-  ),
-  text: (
-    base: $color-text
-  ),
-  body: (
-    base: $color-body
-  )
-);
-
-// THIS IS STUCK HERE UNTIL I FIGURE OUT HOW TO CONVERT IT TO A MORE ROBUST FUNCTION AND MOVE ELSEWHERE
-@function color($scheme, $tone: base) {
-  @return map-get(map-get($colors, $scheme), $tone);
-}
-
-
 .color {
-  @each $name, $color in $colors {
-    &-#{$name} {
-      color: color($name);
+  @each $scheme-key, $color-value in $color-scheme {
+    &-#{$scheme-key} {
+      color: color($scheme-key);
     }
-    &-#{$name}--light {
-      color: color($name, light);
+    &-#{$scheme-key}--light {
+      color: color($scheme-key, light);
     }
-    &-#{$name}--lighter {
-      color: color($name, lighter);
+    &-#{$scheme-key}--lighter {
+      color: color($scheme-key, lighter);
     }
-    &-#{$name}--dark {
-      color: color($name, dark);
+    &-#{$scheme-key}--dark {
+      color: color($scheme-key, dark);
     }
-    &-#{$name}--darker {
-      color: color($name, darker);
+    &-#{$scheme-key}--darker {
+      color: color($scheme-key, darker);
     }
-    &-#{$name}--tint {
-      color: color($name, tint);
+    &-#{$scheme-key}--tint {
+      color: color($scheme-key, tint);
     }
   }
 }
 
 
 .bg {
-  @each $name, $color in $colors {
-    &-#{$name} {
-      background-color: color($name);
+  @each $scheme-key, $color-value in $color-scheme {
+    &-#{$scheme-key} {
+      background-color: color($scheme-key);
     }
-    &-#{$name}--light {
-      background-color: color($name, light);
+    &-#{$scheme-key}--light {
+      background-color: color($scheme-key, light);
     }
-    &-#{$name}--lighter {
-      background-color: color($name, lighter);
+    &-#{$scheme-key}--lighter {
+      background-color: color($scheme-key, lighter);
     }
-    &-#{$name}--dark {
-      background-color: color($name, dark);
+    &-#{$scheme-key}--dark {
+      background-color: color($scheme-key, dark);
     }
-    &-#{$name}--darker {
-      background-color: color($name, darker);
+    &-#{$scheme-key}--darker {
+      background-color: color($scheme-key, darker);
     }
-    &-#{$name}--tint {
-      background-color: color($name, tint);
+    &-#{$scheme-key}--tint {
+      background-color: color($scheme-key, tint);
     }
   }
 
