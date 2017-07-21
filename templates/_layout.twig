@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {# The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags #}
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
-    <!--[if lt IE 9]><script src="/bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="/js/_html5shiv.min.js"></script><![endif]-->
 
     <link rel="stylesheet" href="/css/basekit.css">
+    {% block headCSS %}{% endblock %}
 
     {% include "includes/_head/_seo.twig" %}
     {% include "includes/_head/_icons.twig" ignore missing %}
@@ -21,9 +22,9 @@
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
-    <div class="position-over {{ pageHeaderColor|length ? pageHeaderColor : "bg-primary" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
+    <div class="position-over {{ pageHeaderColor|length ? pageHeaderColor : "bg-primary" }}">
       <header id="header" class="site-container">
-        <div data-bk-layout="to:m:pad:0 m:pad:r m:pad:sm middle">
+        <div data-bk-layout="to:m:p:0 m:p:r m:p:sm middle">
 
           <div data-bk-layout="4 l:5" class="site-logo--container">
             <h1 class="site-logo  logo">

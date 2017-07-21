@@ -1,0 +1,11 @@
+{% filter escape %}
+/* Bad example */
+.t { ... }
+.red { ... }
+.header { ... }
+
+/* Good example */
+.tweet { ... }
+.important { ... }
+.tweet-header { ... }
+{% endfilter %}

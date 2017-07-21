@@ -1,169 +1,166 @@
-@if $spacer-css {
-
-  $spacer-name: pad !default;
-  $spacer-min: 500px !default;
-  $spacer-max: ($max-width * 1px) !default;
+$spacer-name: pad !default;
+$spacer-min: 500px !default;
+$spacer-max: ($max-width * 1px) !default;
 
 
-  .#{$spacer-name} {
+.#{$spacer-name} {
 
+  &, &-t {
+    padding-top: rem($grid-gutter * 1px) / 2;
+  }
+
+  &, &-b {
+    padding-bottom: rem($grid-gutter * 1px) / 2;
+  }
+
+  &-xs {
     &, &-t {
-      padding-top: rem($grid-gutter * 1px) / 2;
+      padding-top: rem(($grid-gutter / 4) * 1px) / 2;
     }
 
     &, &-b {
-      padding-bottom: rem($grid-gutter * 1px) / 2;
+      padding-bottom: rem(($grid-gutter / 4) * 1px) / 2;
+    }
+  }
+
+  &-s {
+    &, &-t {
+      padding-top: rem(($grid-gutter / 2) * 1px) / 2;
+    }
+
+    &, &-b {
+      padding-bottom: rem(($grid-gutter / 2) * 1px) / 2;
+    }
+  }
+
+  &-l {
+    &, &-t {
+      padding-top: rem(($grid-gutter * 2) * 1px) / 2;
+    }
+
+    &, &-b {
+      padding-bottom: rem(($grid-gutter * 2) * 1px) / 2;
+    }
+  }
+
+  &-xl {
+    &, &-t {
+      padding-top: rem(($grid-gutter * 4) * 1px) / 2;
+    }
+
+    &, &-b {
+      padding-bottom: rem(($grid-gutter * 4) * 1px) / 2;
+    }
+  }
+
+  @include mq($spacer-min) {
+    &, &-t {
+      padding-top: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
+    }
+
+    &, &-b {
+      padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
     }
 
     &-xs {
       &, &-t {
-        padding-top: rem(($grid-gutter / 4) * 1px) / 2;
+        padding-top: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: rem(($grid-gutter / 4) * 1px) / 2;
+        padding-bottom: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-s {
       &, &-t {
-        padding-top: rem(($grid-gutter / 2) * 1px) / 2;
+        padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: rem(($grid-gutter / 2) * 1px) / 2;
+        padding-bottom: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-l {
       &, &-t {
-        padding-top: rem(($grid-gutter * 2) * 1px) / 2;
+        padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: rem(($grid-gutter * 2) * 1px) / 2;
+        padding-bottom: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
     }
 
     &-xl {
       &, &-t {
-        padding-top: rem(($grid-gutter * 4) * 1px) / 2;
+        padding-top: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
       }
 
       &, &-b {
-        padding-bottom: rem(($grid-gutter * 4) * 1px) / 2;
+        padding-bottom: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
       }
     }
 
-    @include mq($spacer-min) {
+    &-0 {
       &, &-t {
-        padding-top: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
+        padding-top: 0!important;
       }
 
       &, &-b {
-        padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
-      }
-
-      &-xs {
-        &, &-t {
-          padding-top: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
-        }
-
-        &, &-b {
-          padding-bottom: between((($grid-gutter / 4) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
-        }
-      }
-
-      &-s {
-        &, &-t {
-          padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
-        }
-
-        &, &-b {
-          padding-bottom: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
-        }
-      }
-
-      &-l {
-        &, &-t {
-          padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
-        }
-
-        &, &-b {
-          padding-bottom: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
-        }
-      }
-
-      &-xl {
-        &, &-t {
-          padding-top: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
-        }
-
-        &, &-b {
-          padding-bottom: between((($grid-gutter * 4) * 1px) / 2, (($grid-gutter * 4) * 1px), $spacer-min, $spacer-max);
-        }
-      }
-
-      &-0 {
-        &, &-t {
-          padding-top: 0!important;
-        }
-
-        &, &-b {
-          padding-bottom: 0!important;
-        }
+        padding-bottom: 0!important;
       }
     }
-
-    @include mq($spacer-max) {
-      &, &-t {
-        padding-top: ($grid-gutter * 1px);
-      }
-
-      &, &-b {
-        padding-bottom: ($grid-gutter * 1px);
-      }
-
-      &-xs {
-        &, &-t {
-          padding-top: (($grid-gutter / 4) * 1px);
-        }
-
-        &, &-b {
-          padding-bottom: (($grid-gutter / 4) * 1px);
-        }
-      }
-
-      &-s {
-        &, &-t {
-          padding-top: (($grid-gutter / 2) * 1px);
-        }
-
-        &, &-b {
-          padding-bottom: (($grid-gutter / 2) * 1px);
-        }
-      }
-
-      &-l {
-        &, &-t {
-          padding-top: (($grid-gutter * 2) * 1px);
-        }
-
-        &, &-b {
-          padding-bottom: (($grid-gutter * 2) * 1px);
-        }
-      }
-
-      &-xl {
-        &, &-t {
-          padding-top: (($grid-gutter * 4) * 1px);
-        }
-
-        &, &-b {
-          padding-bottom: (($grid-gutter * 4) * 1px);
-        }
-      }
-    }
-
   }
+
+  @include mq($spacer-max) {
+    &, &-t {
+      padding-top: ($grid-gutter * 1px);
+    }
+
+    &, &-b {
+      padding-bottom: ($grid-gutter * 1px);
+    }
+
+    &-xs {
+      &, &-t {
+        padding-top: (($grid-gutter / 4) * 1px);
+      }
+
+      &, &-b {
+        padding-bottom: (($grid-gutter / 4) * 1px);
+      }
+    }
+
+    &-s {
+      &, &-t {
+        padding-top: (($grid-gutter / 2) * 1px);
+      }
+
+      &, &-b {
+        padding-bottom: (($grid-gutter / 2) * 1px);
+      }
+    }
+
+    &-l {
+      &, &-t {
+        padding-top: (($grid-gutter * 2) * 1px);
+      }
+
+      &, &-b {
+        padding-bottom: (($grid-gutter * 2) * 1px);
+      }
+    }
+
+    &-xl {
+      &, &-t {
+        padding-top: (($grid-gutter * 4) * 1px);
+      }
+
+      &, &-b {
+        padding-bottom: (($grid-gutter * 4) * 1px);
+      }
+    }
+  }
+
 }

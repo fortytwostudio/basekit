@@ -1,0 +1,11 @@
+{% filter escape %}
+// Without nesting
+.table > thead > tr > th { … }
+.table > thead > tr > td { … }
+
+// With nesting
+.table > thead > tr {
+  > th { … }
+  > td { … }
+}
+{% endfilter %}

@@ -59,7 +59,8 @@ gulp.task('sync', function() {
 /// Compile Sass (with Nano and Autoprefixer)
 ///
 gulp.task('scss', function() {
-  gulp.src('css/basekit.scss')
+  // was  gulp.src('css/basekit.scss')
+  gulp.src('css/*.scss')
     .pipe(plumber({errorHandler: hasError}))
     // Uncached data for populating Twig files
     .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
@@ -72,11 +73,10 @@ gulp.task('scss', function() {
       autoprefixer: {
         add: true,
         // Browser support level
-        // Must be 0.5% or greater usage in UK, going back 3 versions, but make sure IE is not dropped off
-        browsers: [ '>= 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
+        // Must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
+        browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
       }
     }))
-    //
     .pipe(gulp.dest('css'))
     // Reload and inject
     .pipe(browserSync.reload({ stream: true }))
@@ -91,7 +91,7 @@ gulp.task('scss', function() {
 /// gulp.src('js/[^_]*.js')
 ///
 gulp.task('js', function() {
-  gulp.src('js/*.js')
+  gulp.src('js/[^_]*.js')
     .pipe(plumber({errorHandler: hasError}))
     // Combine all (none _) js files into this file
     .pipe(concat('basekit.js'))

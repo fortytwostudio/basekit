@@ -1,14 +1,14 @@
-<footer data-bk-links="white fade dim underline-hover" class="site-container pad color-white font-light" tabindex="-1" id="footer">
-  <div data-bk-layout="pad:0  middle">
+<footer data-bk-links="white fade dim underline-hover" class="site-container pad | color-white" tabindex="-1" id="footer">
+  <div data-bk-layout="p:0 middle">
     <div data-bk-layout="m:3">
-      <h1 class="site-logo  logo  inline-block">
-        <span class="site-logo__img  logo__img">
+      <h1 class="site-logo logo inline-block">
+        <span class="site-logo__img logo__img">
           {{ siteName }}
         </span>
       </h1>
     </div>
 
-    <div data-bk-layout="pad:0  m:9">
+    <div data-bk-layout="p:0 m:9">
       {% if address|length or siteEmail or siteTel %}
         <div data-bk-layout="s:4">
           {% if address.org %}<span class="block">{{ address.org }}</span>{% endif %}
@@ -26,7 +26,7 @@
       {% endif %}
 
       {% if footerNav|length %}
-        <ul data-bk-layout="6  s:4">
+        <ul data-bk-layout="6 s:4">
           {% for item in footerNav %}
             <li>
               <a href="{{ item.url }}">{{ item.title }}</a>
@@ -36,23 +36,27 @@
       {% endif %}
 
       {% if socialLinks|length %}
-        <ul data-bk-layout="6  s:4" data-bk-links="exit">
+        <ul data-bk-layout="6 s:4">
           {% for item in socialLinks %}
             <li>
-              <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
+              <a class="arrow-exit" href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a>
             </li>
           {% endfor %}
         </ul>
       {% endif %}
 
       {% if siteInfoNav|length %}
-        <ul class="font-xs  pad-s-t">
+        <ul class="font-xs pad-s-t">
           {% for item in siteInfoNav %}
             <li data-bk-layout="auto">
               <a href="{{ siteUrl }}{{ item.url }}">{{ item.title }}</a>
-            </li data-bk-layout="auto">
+            </li>
           {% endfor %}
-            <li data-bk-links="up" data-bk-layout="auto" class="float-r"><a href="#start">Back to start</a></li>
+            <li data-bk-layout="auto" class="float-r">
+              <a class="arrow-up" href="#start">
+                <span class="hide">Back to start</span>
+              </a>
+            </li>
         </ul>
       {% endif %}
     </div>

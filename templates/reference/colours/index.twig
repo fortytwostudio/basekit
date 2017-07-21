@@ -1,4 +1,4 @@
-{% extends "_layout.twig" %}
+{% extends "reference/_layout.twig" %}
 
 {% set title = "Colours" %}
 {% set slug = "colours" %}
@@ -27,7 +27,7 @@
   <div class="bg-white  pad" id="brand-colours">
     <section class="site-container">
 
-      <h3 data-bk-layout="pad:trl" class="font-l">Brand Colours</h3>
+      <h3 data-bk-layout="p:trl" class="font-l">Brand Colours</h3>
 
       <div data-bk-layout="l:7" class="rte">
         <p>Primary and Secondary values will be defined in by brand guidelines or style guides provided by the designer or client. The lighter and darker values are not always the same and should be tweaked in the Color settings Sass file. These tings should be set for a balance of aesthetic appeal and utility, a dark that is too light or a light that is too dark won't be of any use when building the website.</p>
@@ -51,21 +51,21 @@
             <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m">
               {{ colour|capitalize }}
             </li>
-            <li data-bk-layout="3 l:pad:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
+            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
               lighter
             </li>
-            <li data-bk-layout="3 l:pad:sm" class="bg-{{ colour }}--light color-black pad-l-t">
+            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--light color-black pad-l-t">
               light
             </li>
-            <li data-bk-layout="3 l:pad:sm" class="bg-{{ colour }}--dark color-white pad-l-t">
+            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--dark color-white pad-l-t">
               dark
             </li>
-            <li data-bk-layout="3 l:pad:sm" class="bg-{{ colour }}--darker color-white pad-l-t">
+            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--darker color-white pad-l-t">
               darker
             </li>
           </ol>
 
-          <ul data-bk-layout="pad:t pad:sm" class="color-{{ colour }}">
+          <ul data-bk-layout="p:t p:sm" class="color-{{ colour }}">
             <li class="font-xl">Lorem Ipsum</li>
             <li class="font-l">Lorem Ipsum</li>
             <li class="font-m">Lorem Ipsum</li>
@@ -112,7 +112,7 @@
   <div class="bg-grey color-black  pad" id="standard-values">
     <section class="site-container">
 
-      <h3 data-bk-layout="pad:trl" class="font-l">Standard Values</h3>
+      <h3 data-bk-layout="p:trl" class="font-l">Standard Values</h3>
 
       <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary fade underline" class="rte">
         <p>Black and white colour options are fixed utility classes that should never change. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
@@ -131,7 +131,7 @@
             </li>
           </ol>
 
-          <ul data-bk-layout="pad:t pad:sm" class="color-{{ colour }}">
+          <ul data-bk-layout="p:t p:sm" class="color-{{ colour }}">
             <li class="font-xl">Lorem Ipsum</li>
             <li class="font-l">Lorem Ipsum</li>
             <li class="font-m">Lorem Ipsum</li>
@@ -148,7 +148,7 @@
   <div class="bg-white  pad" id="grey-tones">
     <section class="site-container">
 
-      <h3 data-bk-layout="pad:trl" class="font-l">Grey Tones</h3>
+      <h3 data-bk-layout="p:trl" class="font-l">Grey Tones</h3>
 
       <div data-bk-layout="l:7  l:pl:5" class="rte">
         <p>As with black and white, greys are set colour values that typically won't be changed. However, unlike black and white they <i>can</i> be changed if needed to suit the design. The tones below have been selected to best meet most sitatuons.</p>
@@ -162,21 +162,21 @@
             <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m">
               {{ colour|capitalize }}
             </li>
-            <li data-bk-layout="6 l:3 l:pad:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
+            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
               lighter
             </li>
-            <li data-bk-layout="6 l:3 l:pad:sm" class="bg-{{ colour }}--light color-black pad-l-t">
+            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--light color-black pad-l-t">
               light
             </li>
-            <li data-bk-layout="6 l:3 l:pad:sm" class="bg-{{ colour }}--dark color-white pad-l-t">
+            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--dark color-white pad-l-t">
               dark
             </li>
-            <li data-bk-layout="6 l:3 l:pad:sm" class="bg-{{ colour }}--darker color-white pad-l-t">
+            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--darker color-white pad-l-t">
               darker
             </li>
           </ol>
 
-          <ul data-bk-layout="pad:t pad:sm" class="color-{{ colour }}">
+          <ul data-bk-layout="p:t p:sm" class="color-{{ colour }}">
             <li class="font-xl">Lorem Ipsum</li>
             <li class="font-l">Lorem Ipsum</li>
             <li class="font-m">Lorem Ipsum</li>
@@ -194,7 +194,7 @@
   <div class="bg-white--tint  pad" id="text-colour">
     <section class="site-container">
 
-      <h3 data-bk-layout="pad:trl" class="font-l">Default Text Colour</h3>
+      <h3 data-bk-layout="p:trl" class="font-l">Default Text Colour</h3>
 
       <div data-bk-layout="l:7  l:pl:1" data-bk-links="primary fade underline" class="rte">
         <p>For text colours the lightest you can go on a white background is <code>#666</code> for AA compliancy or <code>#555</code> for AAA compliancy. It is advisable to keep the base text colour well above AAA compliancy.</p>
@@ -211,7 +211,7 @@
           </li>
         </ol>
 
-        <ul data-bk-layout="pad:t pad:sm" class="color-text">
+        <ul data-bk-layout="p:t p:sm" class="color-text">
           <li class="font-xl">Lorem Ipsum</li>
           <li class="font-l">Lorem Ipsum</li>
           <li class="font-m">Lorem Ipsum</li>
@@ -227,7 +227,7 @@
   <div class="bg-white  pad" id="alert-colours">
     <section class="site-container">
 
-      <h3 data-bk-layout="pad:trl" class="font-l">Alert Colours</h3>
+      <h3 data-bk-layout="p:trl" class="font-l">Alert Colours</h3>
 
       <div data-bk-layout="l:8  l:pl:4" data-bk-links="primary fade underline" class="rte">
         <p>For more information see the <a href="../alerts/">alerts section</a>.</p>

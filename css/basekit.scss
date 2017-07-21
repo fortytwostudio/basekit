@@ -1,84 +1,26 @@
-@charset "UTF-8";
+// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif !default;
+// $font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif !default;
 
-@import
-  "settings/colors",
-  "settings/layout",
-  "settings/text",
-  "settings/transition-speed",
-  "settings/navigation",
-  "settings/media",
-  "settings/alerts",
-  "settings/user-content-rte",
-  "settings/hider",
-  "settings/border-radius",
+// $color-primary: red;
+// $color-secondary: blue;
+// $color-tertiary: lime;
+// $color-body: #1a1a1a;
+// $color-text: #333;
 
-  // THIRD PARTY TOOLS
-  "core/third-party/unit-conversion",
-  "core/third-party/media-queries",
-  "core/third-party/font-face",
-  "core/third-party/family",
-  // "core/third-party/fluid-type",
-  "core/third-party/between",
-  "core/third-party/hamburgers/hamburgers",
-  "core/third-party/scrim-linear-grad",
+// $mq-breakpoints: (s: 568px, m: 850px, l: 1200px);
+// $grid-columns: 16;
+// $grid-column-width: 74;
+// $grid-gutter: 40;
 
-  // MIXINS & FUNCTONS
-  "core/tools/percentage",
-  "core/tools/viewport-units",
-  "core/tools/rem",
-  "core/tools/aspect-ratio",
-  "core/tools/strip-unit",
-  "core/tools/hider",
-  "core/tools/poly-fluid-sizing",
-  "core/tools/reverse-list",
+@import "core/import";
 
-  // GLOBALS
-  "core/global/document",
-  "core/global/text",
-  "core/global/media",
-  "core/global/tables",
-
-  // LAYOUT GRID
-  "core/utility-layout/grid-layout",
-  "core/utility-layout/display",
-  "core/utility-layout/margins",
-  "core/utility-layout/padding-spacer",
-  "core/utility-layout/site-width",
-  "core/utility-layout/float",
-  "core/utility-layout/hide-content",
-  "core/utility-layout/position-over",
-  "core/utility-layout/fit-media",
-  "core/utility-layout/full-width",
-  "core/utility-layout/widths",
-
-  // UTILITY CLASSES
-  "core/utility-general/alerts",
-  "core/utility-general/nav",
-  "core/utility-general/border-radius",
-  "core/utility-general/box-shadow",
-  // "core/utility-general/linter",
-
-  "core/utility-text/alignment",
-  "core/utility-text/list-styles",
-  "core/utility-text/user-content-rte",
-  "core/utility-text/overflow-text",
-  "core/utility-text/hide-text",
-
-  // PROJECT FILES:
-  // ————————————————————————————————————————————————————————————————————————————
-  "links",
-  "arrows",
-  "text",
-  "colors",
-  "backgrounds",
-  "borders",
-  "logos",
-  "buttons",
-  "site-nav",
-  "site-nav-sm",
-  "forms-standard",
-  "forms-extended";
-
-// DEMO REFERENCE STYLES:
-// ————————————————————————————————————————————————————————————————————————————
-@import "_reference";
+@import "project/links",
+        "project/arrows",
+        "project/text",
+        "project/color-and-bg",
+        "project/logos",
+        "project/buttons",
+        "project/site-nav",
+        "project/site-nav-sm",
+        "project/forms-standard",
+        "project/forms-extended";

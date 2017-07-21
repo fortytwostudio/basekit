@@ -1,0 +1,73 @@
+.color {
+  @each $scheme-key, $color-value in $color-scheme {
+    &-#{$scheme-key} {
+      color: color($scheme-key);
+    }
+    &-#{$scheme-key}--light {
+      color: color($scheme-key, light);
+    }
+    &-#{$scheme-key}--lighter {
+      color: color($scheme-key, lighter);
+    }
+    &-#{$scheme-key}--dark {
+      color: color($scheme-key, dark);
+    }
+    &-#{$scheme-key}--darker {
+      color: color($scheme-key, darker);
+    }
+    &-#{$scheme-key}--tint {
+      color: color($scheme-key, tint);
+    }
+  }
+}
+
+
+.bg {
+  @each $scheme-key, $color-value in $color-scheme {
+    &-#{$scheme-key} {
+      background-color: color($scheme-key);
+    }
+    &-#{$scheme-key}--light {
+      background-color: color($scheme-key, light);
+    }
+    &-#{$scheme-key}--lighter {
+      background-color: color($scheme-key, lighter);
+    }
+    &-#{$scheme-key}--dark {
+      background-color: color($scheme-key, dark);
+    }
+    &-#{$scheme-key}--darker {
+      background-color: color($scheme-key, darker);
+    }
+    &-#{$scheme-key}--tint {
+      background-color: color($scheme-key, tint);
+    }
+  }
+
+  &-img {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+// $blend-modes: (
+//   // normal,
+//   multiply,
+//   screen,
+//   overlay,
+//   darken,
+//   lighten,
+//   // color-dodge,
+//   // color-burn,
+//   soft-light
+// );
+//
+// @each $mode in $blend-modes {
+//   .bg-bm-#{$mode} {
+//     background-blend-mode: $mode;
+//   }
+//
+//   .mix-bm-#{$mode} {
+//     mix-blend-mode: $mode;
+//   }
+// }

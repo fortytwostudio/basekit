@@ -1,19 +1,21 @@
-@if $list-css {
+// Configure the list utility class
+$list-bullet: "disc" !default;
+$list-bullet-position: "outside" !default;
+$list-number: "decimal-leading-zero" !default;
+$list-number-position: "outside" !default;
 
-  .list {
-    &--bull {
-      margin-left: rem(20px);
-      & > li {
-        list-style: unquote($list-bullet) unquote($list-bullet-position) none;
-      }
-    }
-
-    &--num {
-      margin-left: rem(30px);
-      & > li {
-        list-style: unquote($list-number) unquote($list-number-position) none;
-      }
+.list {
+  &--bull {
+    margin-left: rem(20px);
+    & > li {
+      list-style: unquote($list-bullet) unquote($list-bullet-position) none;
     }
   }
 
+  &--num {
+    margin-left: rem(30px);
+    & > li {
+      list-style: unquote($list-number) unquote($list-number-position) none;
+    }
+  }
 }

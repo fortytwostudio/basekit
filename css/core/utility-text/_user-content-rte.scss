@@ -1,111 +1,101 @@
-@if $rte-css {
+// Set a default bottom margin size for consistency across text elements.
+$font-default-bottom-margin: $margin !default;
 
-  .#{$rte-name} {
+.rte {
 
-    > * + * {
-      margin-top: rem($font-default-bottom-margin * 1px);
+  > * + * {
+    margin-top: rem($font-default-bottom-margin * 1px);
+  }
+
+  // p:not(:last-of-type) {
+  //   margin-bottom: rem($font-default-bottom-margin + 0px);
+  // }
+
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    font-size: rem(22px);
+    font-weight: 700;
+    line-height: (21px / $font-size);
+
+    &:not(:first-child) {
+      margin-top: rem(($font-default-bottom-margin * 2) * 1px);
     }
+  }
 
-    // p:not(:last-of-type) {
-    //   margin-bottom: rem($font-default-bottom-margin + 0px);
-    // }
+  hr {
+    background-color: rgba(mix(white, black, 50%), 0.5);
+    border: 0;
+    height: 1px;
+    margin-bottom: rem($margin * 2px);
+    margin-top: rem($margin * 2px);
+  }
 
-    @if $rte-inline-images {
-      p, li {
-        img {
-          display: inline-block;
-          vertical-align: middle;
-        }
-      }
+  ul {
+    margin-left: em($font-size * 1.25);
+    // margin-bottom: rem($font-default-bottom-margin + 0px);
+    & > li {
+      list-style: disc outside none;
+      margin-bottom: 0;
     }
-
-    > h1, > h2, > h3, > h4, > h5, > h6 {
-      font-size: rem(22px);
-      font-weight: 700;
-      line-height: (21px / $font-size);
-
-      &:not(:first-child) {
-        margin-top: rem(($font-default-bottom-margin * 2) * 1px);
-      }
-    }
-
-    hr {
-      background-color: rgba(mix(white, black, 50%), 0.5);
-      border: 0;
-      height: 1px;
-      margin-bottom: rem($margin * 2px);
-      margin-top: rem($margin * 2px);
-    }
-
     ul {
-      margin-left: em($font-size * 1.25);
-      // margin-bottom: rem($font-default-bottom-margin + 0px);
-      & > li {
-        list-style: disc outside none;
-        margin-bottom: 0;
-      }
-      ul {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
+  }
 
+  ol {
+    margin-left: em($font-size * 2);
+    // margin-bottom: rem($font-default-bottom-margin + 0px);
+    & > li {
+      list-style: decimal-leading-zero outside none;
+      margin-bottom: 0;
+    }
     ol {
-      margin-left: em($font-size * 2);
-      // margin-bottom: rem($font-default-bottom-margin + 0px);
-      & > li {
-        list-style: decimal-leading-zero outside none;
-        margin-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    p  {
+      margin-bottom: em(($margin / 2) * 1px);
+    }
+  }
+
+  dt {
+    font-weight: 700;
+
+    // &:after {
+    //   content: ":"
+    // }
+  }
+  dd + dt {
+    margin-top: em($margin * 1px)
+  }
+
+  // See: http://allthingssmitty.com/2016/11/28/use-attribute-selectors-with-empty-links/
+  a[href]:empty::before {
+    content: attr(href);
+  }
+
+  @if variable-exists(rte-debugging) and $rte-debugging == true {
+    &--debug {
+      a[href^="http"]:empty::before {
+        content: "EMPTY LINK";
+        border: 5px dotted red;
       }
-      ol {
-        margin-bottom: 0;
+      p:empty::before {
+        content: "EMPTY PARAGRAPH";
+        display: block;
+        border: 5px dotted red;
       }
-    }
 
-    li {
-      p  {
-        margin-bottom: em(($margin / 2) * 1px);
-      }
-    }
-
-    dt {
-      font-weight: 700;
-
-      // &:after {
-      //   content: ":"
-      // }
-    }
-    dd + dt {
-      margin-top: em($margin * 1px)
-    }
-
-    // See: http://allthingssmitty.com/2016/11/28/use-attribute-selectors-with-empty-links/
-    a[href]:empty::before {
-      content: attr(href);
-    }
-
-    @if variable-exists(rte-debugging) and $rte-debugging {
-      &--debug {
-        a[href^="http"]:empty::before {
-          content: "EMPTY LINK";
-          border: 5px dotted red;
-        }
-        p:empty::before {
-          content: "EMPTY PARAGRAPH";
+      br {
+        content: "";
+        display: block;
+        &:before {
+          content: "BR TAG MISUSED";
           display: block;
           border: 5px dotted red;
-        }
-
-        br {
-          content: "";
-          display: block;
-          &:before {
-            content: "BR TAG MISUSED";
-            display: block;
-            border: 5px dotted red;
-          }
         }
       }
     }
   }
-
 }
