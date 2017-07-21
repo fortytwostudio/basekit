@@ -48,7 +48,7 @@ $color-scheme: (
   ),
   grey: (
     base: $color-grey,
-    lighter: mix($color-grey, white, 20%),
+    lighter: mix($color-grey, white, 25%),
     light: mix($color-grey, white, 60%),
     dark: mix($color-grey, black, 60%),
     darker: mix($color-grey, black, 40%)
