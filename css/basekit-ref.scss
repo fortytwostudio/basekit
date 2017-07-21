@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$color-secondary: #d44950;
+
 @import
   "basekit.scss",
   "core/third-party/scrim-linear-grad";
@@ -135,11 +137,12 @@ progress[value] {
 }
 
 // Custom lineheight classes
+.lh-0 { line-height: 0.8; }
 .lh-1 { line-height: 1; }
 .lh-2 { line-height: 1.1; }
 .lh-3 { line-height: 1.2; }
 .lh-4 { line-height: 1.3; }
-.lh-0 { line-height: 0.8; }
+.lh-5 { line-height: 1.8; }
 
 //
 // @keyframes pop {
