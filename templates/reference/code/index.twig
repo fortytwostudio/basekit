@@ -11,7 +11,7 @@
       /* Additional CSS added by me… Ryan*/
       background: none!important;
       border: 0;
-      font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+      font-family: 'Fira Code', SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
       font-size: 100%;
       padding: 0;
     }
@@ -111,10 +111,10 @@
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>Syntax</h3>
             <ul>
-              <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
+              <li>Use <strong>soft tabs with two spaces</strong> — they're the only way to guarantee code renders the same in any environment.</li>
               <li>Nested elements should be indented once (two spaces).</li>
               <li>Always use double quotes, never single quotes, on attributes.</li>
-              <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
+              <li>Don't include a trailing slash in self-closing elements — the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
               <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
             </ul>
           </div>
@@ -127,6 +127,7 @@
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>HTML5 doctype</h3>
             <p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+            <p>Doctype can be upper or lowercase, it doesn't matter.</p>
           </div>
           <div data-bk-layout="p:lg" class="col | bl b-grey--light bg-white--tint pad-l">
             <pre><code class="language-html">{% include 'reference/_partials/html/doctype.html' %}</code></pre>
@@ -138,7 +139,7 @@
             <h3>Language attribute</h3>
             <p>From the HTML5 spec:</p>
             <blockquote>
-              <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+              <p>Developers are encouraged to specify a <code>lang</code> attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so on.</p>
             </blockquote>
             <p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
             <p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
@@ -151,7 +152,7 @@
         <div class="section | bb b-grey--light" id="html-ie-compatibility-mode">
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>IE compatibility mode</h3>
-            <p>Internet Explorer supports the use of a document compatibility <code>&lt;meta&gt;</code> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
+            <p>Internet Explorer supports the use of a document compatibility <code>&lt;meta&gt;</code> tag to specify which version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
             <p>For more information, <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">read this awesome Stack Overflow article</a>.</p>
           </div>
           <div data-bk-layout="p:lg" class="col | bl b-grey--light bg-white--tint pad-l">
@@ -188,7 +189,7 @@
         <div class="section | bb b-grey--light" id="html-practicality">
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>Practicality over purity</h3>
-            <p>Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+            <p>Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible. But don't avoid adding an extra div or two if it helps accomplish the outcome in a timely manner.</p>
           </div>
         </div>
 
@@ -196,15 +197,15 @@
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>Attribute order</h3>
             <p>HTML attributes should come in this particular order for easier reading of code.</p>
-            <ul>
-              <li><code>class</code></li>
-              <li><code>id</code>, <code>name</code></li>
+            <ol class="lh-5">
               <li><code>data-*</code></li>
+              <li><code>class</code></li>
               <li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code></li>
               <li><code>title</code>, <code>alt</code></li>
               <li><code>role</code>, <code>aria-*</code></li>
-            </ul>
-            <p>Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
+              <li><code>id</code>, <code>name</code></li>
+            </ol>
+            <p>Data attributes are used for specific utilities and should come first. Classes make for great reusable components, so they come second. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come last.</p>
           </div>
           <div data-bk-layout="p:lg" class="col | bl b-grey--light bg-white--tint pad-l">
             <pre><code class="language-html">{% include 'reference/_partials/html/attribute-order.html' %}</code></pre>
@@ -216,11 +217,11 @@
             <h3>Boolean attributes</h3>
             <p>A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.</p>
             <p>For further reading, consult the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
-            <blockquote>
+            <blockquote data-bk-layout class="bg-primary--lighter br-2 | font-italic">
               <p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
             </blockquote>
             <p>If you <em>must</em> include the attribute's value, and <strong>you don't need to</strong>, follow this WhatWG guideline:</p>
-            <blockquote>
+            <blockquote data-bk-layout class="bg-primary--lighter br-2 | font-italic">
               <p>If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.</p>
             </blockquote>
             <p><strong>In short, don't add a value.</strong></p>
@@ -233,7 +234,7 @@
         <div class="section | bb b-grey--light" id="html-reducing-markup">
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>Reducing markup</h3>
-            <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+            <p><em>Whenever possible</em>, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
           </div>
           <div data-bk-layout="p:lg" class="col | bl b-grey--light bg-white--tint pad-l">
             <pre><code class="language-html">{% include 'reference/_partials/html/reducing-markup.html' %}</code></pre>
