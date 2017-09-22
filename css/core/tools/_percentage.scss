@@ -1,3 +1,3 @@
 @function pct($target, $parent: $max-width) {
-  @return (($target + 0px) / ($parent + 0px)) * 100%;
+  @return (($target * 1px) / ($parent * 1px)) * 100%;
 }

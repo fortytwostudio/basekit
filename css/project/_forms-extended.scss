@@ -10,11 +10,11 @@ $form-element-bg-color: white;
   &__combined {
     label {
       background: $form-element-bg-color;
+      border-radius: $fh-border-radius $fh-border-radius 0 0;
+      box-shadow: 0 -0.25em 0.75em -0.5em rgba(black, 0.1);
       color: #999;
       font-size: 75%;
       padding: ($fh-input-height / 5) ($fh-input-height / 4) ($fh-input-height / 15);
-      border-radius: $fh-border-radius $fh-border-radius 0 0;
-      box-shadow: 0 -0.25em 0.75em -0.5em rgba(black, 0.1);
 
       &.required {
         &:after {
@@ -44,12 +44,12 @@ $form-element-bg-color: white;
     textarea  {
       appearance: none;
       background-clip: padding-box;
-      background-color: $form-element-bg-color!important;
+      background-color: $form-element-bg-color !important;
       border: 0;
-      border-radius: 0 0 $fh-border-radius $fh-border-radius;
       border-bottom: 3px solid white;
-      transition: $speed-normal;
+      border-radius: 0 0 $fh-border-radius $fh-border-radius;
       box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.075);
+      transition: $speed-normal;
 
       &:focus {
         border-color: color(tertiary, dark);
@@ -65,9 +65,9 @@ $form-element-bg-color: white;
     select[disabled] option,
     select[disabled] optgroup,
     option[disabled] {
-      background-color: rgba(color(grey, light), 0.66)!important;
-      border-color: rgba(color(grey, light), 0.66)!important;
-      color: color(grey, dark)!important;
+      background-color: rgba(color(grey, light), 0.66) !important;
+      border-color: rgba(color(grey, light), 0.66) !important;
+      color: color(grey, dark) !important;
     }
   }
 
@@ -77,10 +77,9 @@ $form-element-bg-color: white;
   input[type="reset"],
   input[type="image"] {
     background-color: color(tertiary, darker);
-    color: white;
-    border-radius: $fh-border-radius;
     border: 0;
-    border-radius: 1000em;
+    border-radius: $fh-border-radius;
+    color: white;
     font-weight: 200;
     text-transform: uppercase;
     transition: $speed-slow;
@@ -96,9 +95,9 @@ $form-element-bg-color: white;
   input[type="submit"]:focus,
   input[type="reset"]:focus,
   input[type="image"]:focus {
-    color: white;
     background-color: color(primary);
-    transition: $speed-normal;
     box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.2);
+    color: white;
+    transition: $speed-normal;
   }
 }

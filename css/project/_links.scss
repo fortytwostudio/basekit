@@ -1,31 +1,31 @@
 // Link Style Utility
 // NOTE: This is currently an data attribute and may change back to a class in the near future.
-  // —————————————————————————————————————————————————————————————————————————————
-  // Links in BaseKit are unstyled by default in order to avoid conflict between UI links and user content generated links, and this utility scopes user generated content links to avoid such conficts and specificity problems brought on by the need to unstyle previous styles.
-  //
-  // 1.
-  // In addition to above this has been converted from a utility class to a data attribute to provide more precise scoping, context and concise use.
-  //
-  // Previously the utility class may have been used as such:
-  // `class="set-links set-links--on-dark set-links--underline"`
-  //
-  // With the data attribute:
-  // `data-bk-links="light underline"`
-  //
-  // To style links simply, you would have done:
-  // `class="set-links"`
-  //
-  // Now you would only use the data attribute:
-  // `data-bk-links`
-  //
-  // 2.
-  // To change the data attribute name, edit the $bkln value in the link mixin
-  //
-  // 3.
-  // Comment out anything you don't need
-  //
-  // 4.
-  // The original link class has been trained at the end of this file in case you want to switch back
+// —————————————————————————————————————————————————————————————————————————————
+// Links in BaseKit are unstyled by default in order to avoid conflict between UI links and user content generated links, and this utility scopes user generated content links to avoid such conficts and specificity problems brought on by the need to unstyle previous styles.
+//
+// 1.
+// In addition to above this has been converted from a utility class to a data attribute to provide more precise scoping, context and concise use.
+//
+// Previously the utility class may have been used as such:
+// `class="set-links set-links--on-dark set-links--underline"`
+//
+// With the data attribute:
+// `data-bk-links="light underline"`
+//
+// To style links simply, you would have done:
+// `class="set-links"`
+//
+// Now you would only use the data attribute:
+// `data-bk-links`
+//
+// 2.
+// To change the data attribute name, edit the $bkln value in the link mixin
+//
+// 3.
+// Comment out anything you don't need
+//
+// 4.
+// The original link class has been trained at the end of this file in case you want to switch back
 
 // Use this group to setup your desired link color styles, beyond this group you will find various configation utilities that can be used to apply various states and styles to links
 
@@ -36,7 +36,8 @@ a:not([class*="btn-"]) {
   [data-bk-links~="white"] & {
     color: white;
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: white;
     }
   }
@@ -45,7 +46,8 @@ a:not([class*="btn-"]) {
   [data-bk-links~="primary"] & {
     color: color(primary);
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: color(secondary);
     }
   }
@@ -54,7 +56,8 @@ a:not([class*="btn-"]) {
   [data-bk-links~="secondary"] & {
     color: color(secondary);
 
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       color: color(primary);
     }
   }
@@ -72,6 +75,7 @@ a:not([class*="btn-"]) {
     text-decoration: underline;
     text-decoration-skip: ink;
   }
+
   // Switch things around so that underline is on hover
   [data-bk-links~="underline-hover"] & {
     text-decoration-color: transparent;
@@ -81,6 +85,7 @@ a:not([class*="btn-"]) {
       text-decoration-color: currentColor;
     }
   }
+
   // Underline only on the intitial state
   [data-bk-links~="underline-initial"] & {
     text-decoration-color: currentColor;
@@ -90,6 +95,7 @@ a:not([class*="btn-"]) {
       text-decoration-color: transparent;
     }
   }
+
   // Force underline text off if required (e.g. the link is inside a container with underline enabled but you want this specific one without an underline)
   [data-bk-links~="no-underline"] & {
     text-decoration: none;

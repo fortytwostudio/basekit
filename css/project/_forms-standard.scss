@@ -1,4 +1,4 @@
-/* Based on FormHack v1.2.0 (formhack.io) */
+// Based on FormHack v1.2.0 (formhack.io)
 
 // Config -----------------------------
 
@@ -56,8 +56,7 @@ $fh-button-hover-font-color: $fh-font-color !default;
 $fh-display: block !default;
 
 .bk-form {
-  /* Global Reset Styles ------------------ */
-
+  // Global Reset Styles
   @media (-webkit-min-device-pixel-ratio: 2) and (max-width: rem(600px)) {
     font-size: rem(16px);
   }
@@ -71,12 +70,12 @@ $fh-display: block !default;
   legend,
   fieldset {
     box-sizing: border-box;
-    outline: none;
+    color: $fh-font-color;
+    display: $fh-display;
     font-family: $fh-font-family;
     font-size: $fh-font-size;
-    color: $fh-font-color;
+    outline: none;
     vertical-align: top;
-    display: $fh-display;
   }
 
 
@@ -86,8 +85,8 @@ $fh-display: block !default;
   }
 
   label {
-    display: $fh-display;
     cursor: pointer;
+    display: $fh-display;
 
     &.required {
       &:after {
@@ -101,9 +100,9 @@ $fh-display: block !default;
   }
 
 
-  /* Input & Textarea ------------------ */
+  // Input & Textarea
 
-  /* Fields with standard width */
+  // Fields with standard width
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -121,17 +120,15 @@ $fh-display: block !default;
   input[type="file"],
   select,
   textarea {
-    width: $fh-input-width;
-    padding: $fh-input-height / 5;
     background-color: $fh-input-bg-color;
-
-    border-radius: $fh-border-radius;
     border: $fh-border-width $fh-border-style $fh-border-color;
-
+    border-radius: $fh-border-radius;
+    padding: $fh-input-height / 5;
     transition: $speed-fast;
+    width: $fh-input-width;
   }
 
-  /* Fields with standard height */
+  // Fields with standard height
   input[type="text"],
   input[type="email"],
   input[type="password"],
@@ -146,12 +143,11 @@ $fh-display: block !default;
   input[type="url"],
   input[type="week"],
   input[list] {
-    height: $fh-input-height;
     -webkit-appearance: none;
+    height: $fh-input-height;
   }
 
-  /* Other */
-
+  // Other
   textarea {
     -webkit-appearance: none;
     overflow: auto;
@@ -168,9 +164,10 @@ $fh-display: block !default;
   }
 
   input[type="search"] {
-    height: $fh-input-height;
     -webkit-appearance: none;
+    height: $fh-input-height;
   }
+
   input[type="search"]::-webkit-search-cancel-button,
   input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
@@ -180,29 +177,26 @@ $fh-display: block !default;
   input[type="radio"] {
     display: inline-block;
     // for some reason this moves the label (in chrome at least)
-    vertical-align: middle;
     height: 1.1em;
     position: relative;
     top: -0.05em;
+    vertical-align: middle;
   }
 
 
-  /* Select ------------------ */
-
+  // Select ------------------
   select {
     height: $fh-input-height;
 
     @if $fh-allow-select-vendor-styling == false {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      -o-appearance: none;
+      appearance: none;
+
       &::-ms-expand {
         display: none;
       }
 
       &:not([multiple]) {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAQAAAD3ApbNAAAAXUlEQVR4AdXMsQ2AIBQG4WvJG4LJGIMpmMBZ6FhMieVLNFfq/eWffPygyqTzVmdS0TXOvcFT4/4busLKZOZYFHxEJjNHkNKk5jypOU9qzpOS86TiPGk5Tx57wVe6AJFXOuWN70I1AAAAAElFTkSuQmCC');
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAOCAQAAAD3ApbNAAAAXUlEQVR4AdXMsQ2AIBQG4WvJG4LJGIMpmMBZ6FhMieVLNFfq/eWffPygyqTzVmdS0TXOvcFT4/4busLKZOZYFHxEJjNHkNKk5jypOU9qzpOS86TiPGk5Tx57wVe6AJFXOuWN70I1AAAAAElFTkSuQmCC");
         background-position: right center;
         background-size: em(20px) em(7px);
       }
@@ -220,16 +214,15 @@ $fh-display: block !default;
     }
   }
 
-  /* Fieldset ------------------ */
+  // Fieldset ------------------
 
   fieldset {
     @if $fh-fieldset-bare == true {
       border: 0;
-    }
-    @else {
-      padding: 1em;
-      border-radius: $fh-border-radius;
+    } @else {
       border: $fh-border-width $fh-border-style $fh-border-color;
+      border-radius: $fh-border-radius;
+      padding: 1em;
     }
   }
 
@@ -237,46 +230,42 @@ $fh-display: block !default;
     @if $fh-fieldset-bare == true {
       @include hide()
     } @else {
-      padding: 0 5px;
-      font-weight: 700;
       border-radius: $fh-border-radius;
+      font-weight: 700;
+      padding: 0 5px;
     }
   }
 
-  /* Buttons, Input Type Submit/Reset ------------------ */
+  // Buttons, Input Type Submit/Reset ------------------
 
   button,
   input[type="button"],
   input[type="submit"],
   input[type="reset"],
   input[type="image"] {
-    height: $fh-button-height;
     // width: $fh-button-width;
-    min-width: $fh-button-max-width;
-    background-color: $fh-button-bg-color;
-    padding: ($fh-input-height / 5) $fh-input-height / 2.5;
-    cursor: pointer;
-
-    color: $fh-button-font-color;
-    font-weight: $fh-button-font-weight;
-
     appearance: none;
-
-    border-radius: $fh-border-radius;
+    background-color: $fh-button-bg-color;
     border: $fh-border-width $fh-border-style $fh-border-color;
-
+    border-radius: $fh-border-radius;
+    color: $fh-button-font-color;
+    cursor: pointer;
+    font-weight: $fh-button-font-weight;
+    height: $fh-button-height;
+    min-width: $fh-button-max-width;
+    padding: ($fh-input-height / 5) $fh-input-height / 2.5;
     transition: $speed-fast;
   }
 
   input[type="image"] {
-    background-color: transparent!important;
+    background-color: transparent !important;
     border: 0;
     height: auto;
     padding: 0;
     text-align: center;
   }
 
-  /* States ------------------ */
+  // States ------------------
 
   label[disabled],
   input[disabled],
@@ -286,10 +275,10 @@ $fh-display: block !default;
   select[disabled] optgroup,
   option[disabled],
   button[disabled] {
-    background-color: #eee!important;
+    background-color: #eee !important;
+    box-shadow: none !important;
+    color: #aaa !important;
     cursor: not-allowed;
-    color: #aaa!important;
-    box-shadow: none!important;
   }
 
   input:focus,
