@@ -31,6 +31,7 @@
 
 // We do not want these styles to apply to the .btn link style, so it is excluded.
 a:not([class*="btn-"]) {
+  transition: all $speed-slow;
 
   // Link style used on white backgrounds, you'll want to combine this with `dim`
   [data-bk-links~="white"] & {
@@ -102,17 +103,8 @@ a:not([class*="btn-"]) {
   }
 
   // Fade transition link hover/focus. Could use all but to avoid bugginess we're targetting three common link style properties
-  [data-bk-links~="fade"] & {
-    transition: all $speed-slow;
-    // transition:
-    //   color $speed-slow,
-    //   opacity $speed-slow,
-    //   text-decoration $speed-slow;
-    //
-    // &:focus,
-    // &:hover {
-    //   transition-duration: $speed-normal;
-    // }
+  [data-bk-links~="no-fade"] & {
+    transition: none;
   }
 
   // Apply a subtle dimming of the link, best used with white text on a dark background where it's had to make use of an alternative hover color

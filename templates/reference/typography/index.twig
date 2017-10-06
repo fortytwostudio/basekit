@@ -15,7 +15,7 @@
 
         <p>Fonts can be fluid or fixes. Fluid fonts will adjust in size between a specified min and max size limits depending on the screen size. Fixed fonts will remain the same size regardless of the screen size. Fluid fonts are ideal for headings short blocks of text while fixed fonts are best suited to long blocks of text.</p>
 
-        <p data-bk-links="primary fade underline-initial down">In addition to the font style classes, a <a href="#rte">rich text content wrapper</a> class is also available that scopes and styles content output from rich text editor fields.</p>
+        <p data-bk-links="primary underline-initial down">In addition to the font style classes, a <a href="#rte">rich text content wrapper</a> class is also available that scopes and styles content output from rich text editor fields.</p>
       </div>
 
       {% include "reference/_partials/_status.twig" with { value : 75 } %}
@@ -328,7 +328,7 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Rich-text editor / User content</h3>
 
-      <div data-bk-layout="l:7" data-bk-links="primary fade underline" class="rte">
+      <div data-bk-layout="l:7" data-bk-links="primary underline" class="rte">
         <p>Rich-text content is, typically, content output by the <strong>Content Management System</strong> and written by the user in a <strong>Rich-Text Editor</strong> field. Here we tightly scope the content from the rest of the website content to reduce conflicts or the need to reset styles.</p>
 
         <p>Link styles are handled by a separate <a href="../links/">link scope selector</a> rather than the <code>.rte</code> class, this allows greater freedom when styling links.</p>
@@ -346,13 +346,13 @@
 
 
       <div data-bk-layout="m:6" id="rich-text-content">
-        <div data-bk-layout data-bk-links="primary fade underline" class="rte bg-white | br-1 ba b-grey shadow">
+        <div data-bk-layout data-bk-links="primary underline" class="rte bg-white | br-1 ba b-grey shadow">
           {% include "reference/typography/_rte-content.twig" %}
         </div>
       </div>
 
       <div data-bk-layout="m:6" id="rich-text-content-dark">
-        <div data-bk-layout data-bk-links="white dim fade underlin" class="rte bg-black--tint color-white--tint | br-1 shadow">
+        <div data-bk-layout data-bk-links="white dim underlin" class="rte bg-black--tint color-white--tint | br-1 shadow">
           {% include "reference/typography/_rte-content.twig" %}
         </div>
       </div>
@@ -399,7 +399,7 @@
 
   <div class="no-js-hide | bg-tertiary--light align-c pad-l">
     <section class="site-container">
-      <div data-bk-layout="l:6" data-bk-links="white dim fade underline">
+      <div data-bk-layout="l:6" data-bk-links="white dim underline">
         <h3 class="font-hero color-primary--darker pad-b">
           fontoggler
         </h3>
