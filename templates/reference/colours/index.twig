@@ -249,6 +249,29 @@
   </div>
 
 
+
+
+  {% for colour in ['primary', 'secondary', 'tertiary'] %}
+    <div class="bg-{{ colour }}--lighter align-c | pad-l">
+      <section class="site-container pad">
+        <div data-bk-layout="m:8 l:7">
+          <h3 class="font-xxl font-light color-{{ colour }}--dark | margin-b">Section Wrapper Example</h3>
+
+          <div data-bk-layout="p:t m:10" class="color-{{ colour }}--darker font-s">
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</p>
+
+            <p class="pad-t">
+              <a href="#" class="btn-{{ colour }}">CTA Button</a>
+            </p>
+          </div>
+        </section>
+      </section>
+    </div>
+  {% endfor %}
+
+
+
+
 {% include 'reference/_partials/_pagination.twig' %}
 
 {% endblock %}
