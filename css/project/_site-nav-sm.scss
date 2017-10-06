@@ -168,7 +168,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
 // Main menu box
 .sm-bk {
-  @include mq($until: m) {
+  @include mq($until: $sm-bk__desktop-vp) {
     // border: $sm-bk__border-width solid $sm-bk__collapsible-border-color;
     background: $sm-bk__collapsible-bg;
 
