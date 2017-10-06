@@ -5,28 +5,28 @@ $fluid-fonts: (
   l: (
     minSize: 26px,
     maxSize: 32px,
-    lineHeight: (18px / $font-size),
+    lineHeight: 1.15,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   xl: (
     minSize: 32px,
     maxSize: 44px,
-    lineHeight: (17px / $font-size),
+    lineHeight: 1.1,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   xxl: (
     minSize: 44px,
     maxSize: 62px,
-    lineHeight: (16px / $font-size),
+    lineHeight: 1,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   hero: (
     minSize: 52px,
     maxSize: 92px,
-    lineHeight: (16px / $font-size),
+    lineHeight: 1,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   )
@@ -63,7 +63,7 @@ $fluid-fonts: (
 
   &-m {
     font-size: rem(22px);
-    line-height: (21px / $font-size);
+    line-height: 1.3;
   }
 
   @each $font in $fluid-fonts {
