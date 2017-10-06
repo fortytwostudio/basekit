@@ -5,7 +5,9 @@ $(function () {
     });
 
     // Smart Menus script yo
-    $("#nav-primary-list").smartmenus();
+    $("#nav-primary-list").smartmenus({
+      subIndicators: false
+    });
 
     /// See https://github.com/kamem/jquery.smoothPageScroll
     // Smooth scroll any links with a #

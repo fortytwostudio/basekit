@@ -7,21 +7,21 @@
     </button>
   </div>
 
-  <div data-bk-layout="auto to:m:p:0 m:p:trb m:p:sm 8 l:7 m:right" class="nav-primary-layout">
-    <nav id="nav-primary" class="nav-primary nav-links font-upper" tabindex="-1" aria-labelledby="nav-toggler">
-      <h2 class="hide">Site Navigation</h2>
+  <div data-bk-layout="auto to:m:p:0 m:p:tb m:p:sm 8 l:7 m:right" data-bk-links="white" class="nav-primary-layout">
+    <nav id="nav-primary" class="nav-primary nav-links font-s font-upper font-light" tabindex="-1" aria-labelledby="nav-toggler">
+      {# <h2 class="hide">Website Navigation</h2> #}
       <ul id="nav-primary-list" class="sm sm-bk">
         {% for item in mainNav %}
           <li tabindex="-1">
-            <a{{ slug is defined and slug == item.slug ? ' class="active current" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
-
+            <a class="{{ slug is defined and slug == item.slug ? 'active current ' }}{{ item.children|length ? 'has-submenu'}}" href="{{ siteUrl ~ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+              {% if item.children|length %}<span class="sub-arrow">+</span>{% endif %}
               {{ item.title }}
             </a>
             {% if item.children|length %}
               <ul>
                 {% for child in item.children %}
                   <li>
-                    <a href="{{ child.url }}">
+                    <a href="{{ siteUrl ~ item.url ~ child.url }}">
                       {{ child.title }}
                     </a>
                   </li>
