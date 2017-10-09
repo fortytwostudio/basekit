@@ -10,10 +10,7 @@ craft/.htaccess
 node_modules
 npm-debug.log
 .publish
-package-lock0.json
-package-lock.json
 yarn-error.log
-yarn.lock
 
 # Sass #
 #####################
