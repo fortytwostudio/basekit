@@ -27,7 +27,7 @@ body {
   font-size: (($font-size / ($font-size * 0 + 1)) / 16) * 1em;
   //Enforce a global font weight, almost always 400 but depends on the font family.
   font-weight: $font-weight;
-  line-height: ($font-line-height / $font-size);
+  line-height: $font-line-height;
   // Exactly as it says, optimise the browser text rendering for speed rather than fanciness.
   text-rendering: optimizeSpeed;
   //Prevents iOS (in particular) from screwing with the intended text sizing.
