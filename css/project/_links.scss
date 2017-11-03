@@ -31,7 +31,7 @@
 
 // We do not want these styles to apply to the .btn link style, so it is excluded.
 a:not([class*="btn-"]) {
-  transition: all $speed-slow;
+  transition: color $speed-slow, text-decoration $speed-slow, opacity $speed-slow;
 
   // Link style used on white backgrounds, you'll want to combine this with `dim`
   [data-bk-links~="white"] & {
@@ -116,13 +116,29 @@ a:not([class*="btn-"]) {
       opacity: 1;
     }
   }
-}
 
-// Oh shiii… a class. Aye.
-// Remove the :focus outline on links
-.no-outline {
-  &,
-  a {
+  // Apply a customised focus outline
+  [data-bk-links~="focus"] & {
+    &:focus {
+      outline: 1px dotted currentColor;
+      outline-offset: 0.15em;
+    }
+    &:active {
+      outline: 0;
+    }
+  }
+
+  // Apply a customised focus outline
+  [data-bk-links~="no-focus"] & {
     outline: 0;
+  }
+
+  // Apply a customised active style without a focus outline
+  [data-bk-links~="active"] & {
+    &:active {
+      outline: 0;
+      position: relative;
+      top: 1px;
+    }
   }
 }
