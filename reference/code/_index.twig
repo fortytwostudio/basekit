@@ -4,7 +4,7 @@
 {% set slug = "code" %}
 
 {% block headCSS %}
-  <link rel="stylesheet" href="/templates/_partials/prism.css">
+  <link rel="stylesheet" href="/reference/_partials/prism.css">
   <style media="screen">
     code[class*="language-"],
     pre[class*="language-"] {
@@ -122,7 +122,7 @@
             <pre><code class="language-html">{% include '_partials/html/syntax.html' %}</code></pre>
           </div>
         </div>
-
+{#
         <div class="section | bb b-grey--light" id="html-doctype">
           <div data-bk-layout="p:lg" class="col | pad-l | rte">
             <h3>HTML5 doctype</h3>
@@ -467,7 +467,7 @@
             </ul>
             <p>Consider documenting and applying these preferences to your project's <code>.editorconfig</code> file. For an example, see <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">the one in Bootstrap</a>. Learn more <a href="http://editorconfig.org">about EditorConfig</a>.</p>
           </div>
-        </div>
+        </div> #}
 
 
 
@@ -493,5 +493,5 @@
 
 
 {% block jsBody %}
-  <script src="/templates/_partials/prism.js"></script>
+  <script src="/reference/_partials/prism.js"></script>
 {% endblock %}
