@@ -1,0 +1,114 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Spacing" %}
+{% set slug = "spacing" %}
+
+{% block content %}
+{% include '_partials/_quick-nav.twig' %}
+
+  <div class="bg-white--tint pad">
+    <section class="site-container">
+      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+        <p class="font-m">The space padding class offers a consistent group of options to apply white space above, below, or above and below content separate from the grid system or custom CSS.</p>
+
+        <p>Using this group of consistent sizes (based on the grid system $grid-gutter value) maintains consistency throughout a design while offering considerable flexibility.</p>
+
+        <p>While this class is does not offer responsive breakpoint options, it is fluid from small screens up to the website max width, at which point it will lock to the defined value.</p>
+      </div>
+
+      {% include "_partials/_status.twig" with { value : 75 } %}
+
+    </section>
+  </div>
+
+  <div class="bg-white pad">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Spacing Examples</h3>
+
+      <div data-bk-layout>
+        <h4 class="font-bold pad-xs-b">Smaller <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter ∕ 4</span></h4>
+        <div class="pad-xs-t  bg-tertiary--light"></div>
+
+        <h4 class="font-bold pad pad-xs-b">Small <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter ∕ 2</span></h4>
+        <div class="pad-s-t  bg-tertiary--light"></div>
+
+        <h4 class="font-bold pad pad-xs-b">Default <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter × 1</span></h4>
+        <div class="pad-t  bg-tertiary--light"></div>
+
+        <h4 class="font-bold pad pad-xs-b">Large <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter × 2</span></h4>
+        <div class="pad-l-t  bg-tertiary--light"></div>
+
+        <h4 class="font-bold pad pad-xs-b">Larger <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter × 4</span></h4>
+        <div class="pad-xl-t  bg-tertiary--light"></div>
+      </div>
+    </section>
+  </div>
+
+
+  <div class="bg-white--tint pad">
+    <section class="site-container">
+      <div data-bk-layout="m:5 m:pl:1" class="pad-b">
+        <h3 class="font-l margin-b">Avilable classes</h3>
+
+        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+          <dt>Default</dt>
+          <dd><code>pad</code></dd>
+          <dd><code>pad-t</code></dd>
+          <dd><code>pad-b</code></dd>
+        </dl>
+        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+          <dt>Smaller</dt>
+          <dd><code>pad-xs</code></dd>
+          <dd><code>pad-xs-t</code></dd>
+          <dd><code>pad-xs-b</code></dd>
+        </dl>
+        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+          <dt>Small</dt>
+          <dd><code>pad-s</code></dd>
+          <dd><code>pad-s-t</code></dd>
+          <dd><code>pad-s-b</code></dd>
+        </dl>
+        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+          <dt>Large</dt>
+          <dd><code>pad-l</code></dd>
+          <dd><code>pad-l-t</code></dd>
+          <dd><code>pad-l-b</code></dd>
+        </dl>
+        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+          <dt>Larger</dt>
+          <dd><code>pad-xl</code></dd>
+          <dd><code>pad-xl-t</code></dd>
+          <dd><code>pad-xl-b</code></dd>
+        </dl>
+        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+          <dt>Zero</dt>
+          <dd><code>pad-0-t</code></dd>
+          <dd><code>pad-0-t</code></dd>
+          <dd><code>pad-0-b</code></dd>
+        </dl>
+
+        <p class="alert alert--simple alert--compact font-s">The zero class can also be used to remove grid <em>padding</em> from a <code>data-bk-layout</code> element (only x-axis of course).</p>
+      </div>
+
+      <div data-bk-layout="m:5 m:pl:1">
+        <h3 class="font-l margin-b">Usage</h3>
+
+        <p>Classes can be combined to create various configuations:</p>
+
+        <dl class="margin-t">
+          <dt>Apply normal padding with small bottom padding</dt>
+          <dd><code>class="<strong>pad pad-s-b</strong>"</code></dd>
+          <dt class="margin-t">Apply small bottom padding with large top padding</dt>
+          <dd><code>class="<strong>pad-s pad-l-t</strong>"</code></dd>
+          <dt class="margin-t">Just bottom padding</dt>
+          <dd><code>class="<strong>pad-b</strong>"</code></dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+{% include '_partials/_pagination.twig' %}
+
+{% endblock %}

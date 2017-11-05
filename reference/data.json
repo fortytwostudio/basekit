@@ -1,0 +1,89 @@
+{
+  "siteName": "Basekit",
+  "siteUrl": "/demo/",
+  "siteEmail": "info@yourdomain.com",
+  "siteTel": "01224 000 000",
+  "address": {
+    "org": "FortyTwo Studio",
+    "street": "126 Crown Street",
+    "townCity": "Aberdeen",
+    "postalCode": "AB11 6HQ"
+  },
+
+  "mainNav": [{
+    "title": "Home",
+    "url": "/demo/reference/",
+    "slug": "reference"
+  }, {
+    "title": "Services",
+    "url": "#",
+    "slug": "services"
+  }, {
+    "title": "About Us",
+    "url": "/demo/",
+    "slug": "about",
+    "children": [{
+      "title": "Our History",
+      "url": "#",
+      "slug": "history"
+    }, {
+      "title": "The Board",
+      "url": "#",
+      "slug": "board"
+    }, {
+      "title": "Our Staff",
+      "url": "#",
+      "slug": "board"
+    }]
+  }, {
+    "title": "Contact",
+    "url": "#contact",
+    "scrollTo": "true"
+  }, {
+    "title": "Github",
+    "url": "https://github.com/fortytwostudio/basekit",
+    "external": "true"
+  }],
+
+  "footerNav": [{
+    "title": "Home",
+    "url": "/demo/reference/",
+    "slug": "reference"
+  }, {
+    "title": "Services",
+    "url": "#",
+    "slug": "services"
+  }, {
+    "title": "About Us",
+    "url": "/demo/",
+    "slug": "about"
+  }, {
+    "title": "Contact",
+    "url": "#contact",
+    "scrollTo": "true"
+  }, {
+    "title": "Github",
+    "url": "https://github.com/fortytwostudio/basekit",
+    "external": "true"
+  }],
+
+  "siteInfoNav": [{
+    "title": "Terms &amp; Conditions",
+    "url": "terms/"
+  }, {
+    "title": "Privacy Policy",
+    "url": "privacy/"
+  }],
+
+  "socialLinks": [{
+    "title": "Facebook",
+    "url": "https://facebook.com"
+  }, {
+    "title": "Twitter",
+    "url": "https://twitter.com"
+  }, {
+    "title": "LinkedIn",
+    "url": "https://linkedin.com"
+  }]
+
+}

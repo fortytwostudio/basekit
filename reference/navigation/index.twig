@@ -1,0 +1,149 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Navigation" %}
+{% set slug = "nav" %}
+
+{% block content %}
+{% include '_partials/_quick-nav.twig' %}
+
+<div class="bg-white--tint pad">
+  <section class="site-container">
+    <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+
+    <div data-bk-layout="s:9 m:8 l:7">
+      <p>The basic <code>.nav</code> class. This simply inlines the list items and links by setting them to display block.</p>
+      <ul class="nav | pad pad-s-t">
+        <li><a href="#" class="bg-grey--light">Item 1</a></li>
+        <li><a href="#" class="bg-grey--light">Item 2</a></li>
+        <li><a href="#" class="bg-grey--light">Item three</a></li>
+        <li><a href="#" class="bg-grey--light">Item 4</a></li>
+      </ul>
+
+      <p>An inline nav list with block links with <code>.nav-block</code> classes.</p>
+      <ul class="nav-block | pad pad-s-t">
+        <li><a href="#" class="bg-grey--light">Item 1</a></li>
+        <li><a href="#" class="bg-grey--light">Item 2</a></li>
+        <li><a href="#" class="bg-grey--light">Item three</a></li>
+        <li><a href="#" class="bg-grey--light">Item 4</a></li>
+      </ul>
+
+      <p>Equally distributed nav items using flex box using <code>.nav-fit</code> and <code>.nav-block</code> classes.</p>
+      <ul class="nav-fit nav-block | pad pad-s-t">
+        <li><a href="#" class="bg-grey--light">Item 1</a></li>
+        <li><a href="#" class="bg-grey--light">Item 2</a></li>
+        <li><a href="#" class="bg-grey--light">Item three</a></li>
+        <li><a href="#" class="bg-grey--light">Item 4</a></li>
+      </ul>
+
+      <p>A stacked nav list with block links <code>.nav-stack</code> and <code>.nav-block</code> classes, nested child list at the third item.</p>
+      <ul class="nav-stack nav-block | pad pad-s-t">
+        <li><a href="#" class="bg-grey--light">Item 1</a></li>
+        <li><a href="#" class="bg-grey--light">Item 2</a></li>
+        <li>
+          <a href="#" class="bg-grey--light">Item three</a>
+          <ul class="nav-stack nav-block">
+            <li><a href="#" class="bg-grey--light">Item 1</a></li>
+            <li><a href="#" class="bg-grey--light">Item 2</a></li>
+            <li><a href="#" class="bg-grey--light">Item three</a></li>
+            <li><a href="#" class="bg-grey--light">Item 4</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="bg-grey--light">Item 4</a></li>
+      </ul>
+
+      <p>A very basic starting point for breadcrumb links using the <code>.nav-crumb</code> and <code>.nav-block</code> classes. How you style the current page item is up to you.</p>
+      <ul class="nav-crumb nav-block | pad pad-s-t" data-bk-links="primary">
+        <li><a href="#" class="bg-grey--light">Item 1</a></li>
+        <li><a href="#" class="bg-grey--light">Item 2</a></li>
+        <li><a href="#" class="bg-grey--light">Item three</a></li>
+        <li><a href="#" class="bg-grey--light">Item 4</a></li>
+      </ul>
+    </div>
+
+    {% include "_partials/_status.twig" with { value : 25 } %}
+  </section>
+</div>
+
+<div class="bg-white pad">
+  <div class="site-container">
+    <div data-bk-layout>
+      <h2 class="font-xl">Standard Navigation</h2>
+      <div class="nav bg-primary margin-t">
+        {% if mainNav|length %}
+          <div data-bk-layout data-bk-links="white" class="nav-primary-layout">
+            <nav id="nav-example-01" class="nav-primary nav-links font-upper" tabindex="-1" aria-labelledby="nav-toggler">
+              {# <h2 class="hide">Website Navigation</h2> #}
+              <ul id="nav-example-01-list" class="sm sm-bk">
+                {% for item in mainNav %}
+                  <li tabindex="-1">
+                    <a{{ slug is defined and slug == item.slug ? ' class="active current" ' }} href="{{ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+
+                      {{ item.title }}
+                    </a>
+                    {% if item.children|length %}
+                      <ul>
+                        {% for child in item.children %}
+                          <li>
+                            <a href="{{ child.url }}">
+                              {{ child.title }}
+                            </a>
+                            <ul>
+                              <li><a href="#">Test nav</a></li>
+                              <li><a href="#">Test nav</a></li>
+                              <li>
+                                <a href="#">Test nav</a>
+                                <ul>
+                                  <li><a href="#">Another test</a></li>
+                                  <li>
+                                    <a href="#">Test nav</a>
+                                    <ul>
+                                      <li><a href="#">Another test</a></li>
+                                      <li>
+                                        <a href="#">Test nav</a>
+                                        <ul>
+                                          <li><a href="#">Another test</a></li>
+                                          <li>
+                                            <a href="#">Test nav</a>
+                                            <ul>
+                                              <li><a href="#">Another test</a></li>
+                                              <li><a href="#">Another test</a></li>
+                                              <li><a href="#">Another test</a></li>
+                                            </ul>
+                                          </li>
+                                          <li><a href="#">Another test</a></li>
+                                        </ul>
+                                      </li>
+                                      <li><a href="#">Another test</a></li>
+                                    </ul>
+                                  </li>
+                                  <li><a href="#">Another test</a></li>
+                                </ul>
+                              </li>
+                              <li><a href="#">Test nav</a></li>
+                            </ul>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include '_partials/_pagination.twig' %}
+
+{% endblock %}
+
+{% block jsBody %}
+  <script>
+    $(function(){
+      $("#nav-example-01-list").smartmenus();
+    });
+  </script>
+{% endblock %}
