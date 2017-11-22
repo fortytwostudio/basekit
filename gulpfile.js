@@ -1,3 +1,7 @@
+// Set the path to compile assets to or leave blank to compile to same folder
+// var publicPath = '../public/';
+var publicPath = '';
+
 var gulp            = require('gulp'),
     // Sass for writing and pre-processing CSS
     sass            = require('gulp-sass'),
@@ -71,7 +75,7 @@ gulp.task('scss', function() {
         browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
       }
     }))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest(publicPath + 'css'))
     .pipe(browserSync.reload({ stream: true })) // Reload and inject
     .pipe(size({ showFiles: true })) // Show file size before gzip
     .pipe(size({ gzip: true, showFiles: true })); // Show file size after gzip
@@ -84,7 +88,7 @@ gulp.task('js', function() {
     .pipe(plumber({errorHandler: hasError}))
     .pipe(concat('basekit.js')) // Combine all (none _) js files into this file
     .pipe(uglify()) // Minify the file
-    .pipe(gulp.dest('js/min')) // Output it here
+    .pipe(gulp.dest(publicPath + 'js/min')) // Output it here
     .pipe(browserSync.reload({ stream: true })) // Reload and inject
     .pipe(size({ gzip: true, showFiles: true }) // Show file size after gzip
   );
@@ -120,7 +124,7 @@ gulp.task('twig', function() {
   // Return default behaviour
   .pipe(plumber.stop())
   // Output minified file
-  .pipe(gulp.dest('demo'))
+  .pipe(gulp.dest(publicPath + 'demo'))
   // Reload the site
   .pipe(browserSync.reload({ stream: true }))
 });
@@ -136,7 +140,7 @@ gulp.task('reference', function() {
     cache: false
   }))
   .pipe(plumber.stop())
-  .pipe(gulp.dest('demo/reference'))
+  .pipe(gulp.dest(publicPath + 'demo/reference'))
   .pipe(browserSync.reload({ stream: true }))
 });
 
