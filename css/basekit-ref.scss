@@ -2,12 +2,11 @@
 
 $color-secondary: #d44950;
 
-@import
-  "basekit.scss",
-  "core/third-party/scrim-linear-grad";
+@import "basekit.scss";
+@import "core/third-party/scrim-linear-grad";
 
 .desat {
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 
 .bg-gradient {
@@ -80,15 +79,15 @@ $color-secondary: #d44950;
   z-index: $z-position-over;
 
   &:after {
-  	background-image: linear-gradient(90deg, rgba(color(primary, dark),0), color(primary, dark));
-  	height: 100%;
-  	right: 0;
-  	width: rem($margin * 1px);
+    background-image: linear-gradient(90deg, rgba(color(primary, dark), 0), color(primary, dark));
     content: "";
     display: block;
+    height: 100%;
     pointer-events: none;
     position: absolute;
+    right: 0;
     top: 0;
+    width: rem($margin * 1px);
     z-index: $z-position-over;
   }
 
@@ -100,7 +99,7 @@ $color-secondary: #d44950;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
-    max-width: rem(($max-width * 2) + 0px);
+    max-width: rem(($max-width * 2) * 1px);
     overflow-x: auto;
     overflow-y: hidden;
     width: 100%;
@@ -110,7 +109,7 @@ $color-secondary: #d44950;
     }
 
     @include mq(s) {
-      max-width: rem($max-width + 0px);
+      max-width: rem($max-width * 1px);
     }
   }
 }
@@ -130,6 +129,7 @@ progress[value] {
     background-color: color(grey);
     box-shadow: 0 1px 2px rgba(black, 0.4) inset;
   }
+
   &::-webkit-progress-value {
     background-image: linear-gradient(to right, color(primary), color(primary, light));
     border-radius: 0 0.15em 0.15em 0;

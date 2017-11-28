@@ -1,10 +1,10 @@
 $nav-switch-point: m;
 
-$sm-bk__desktop-vp: $nav-switch-point;
-$sm-bk__font-family: $font-family;
-$sm-bk__base-color: color(primary);
-$sm-bk__gray-dark: color(primary, dark);
-$sm-bk__gray-darker: color(primary, darker);
+$sm-bk-desktop-vp: $nav-switch-point;
+$sm-bk-font-family: $font-family;
+$sm-bk-base-color: color(primary);
+$sm-bk-gray-dark: color(primary, dark);
+$sm-bk-gray-darker: color(primary, darker);
 
 .nav-toggler-wrapper {
   // Hide the hamburger toggler if JS isn't enabled
@@ -50,7 +50,7 @@ $sm-bk__gray-darker: color(primary, darker);
     }
 
     .nav-primary {
-    // If javascript is enabled hide the nav initially, however if JS is disabled users will see the nav
+      // If javascript is enabled hide the nav initially, however if JS is disabled users will see the nav
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -59,8 +59,8 @@ $sm-bk__gray-darker: color(primary, darker);
       visibility: hidden;
 
       &.is-active {
-        opacity: 1;
         max-height: 2000px;
+        opacity: 1;
         visibility: visible;
       }
     }

@@ -1,5 +1,5 @@
-$bk_button-padding: 0.66em 1.25em;
-$bk_button-padding-compact: 0.25em 0.66em;
+$bk-button-padding: 0.66em 1.25em;
+$bk-button-padding-compact: 0.25em 0.66em;
 
 [class*="btn-"] {
   appearance: none;
@@ -11,20 +11,20 @@ $bk_button-padding-compact: 0.25em 0.66em;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  padding: $bk_button-padding;
+  padding: $bk-button-padding;
   transition: all $speed-normal ease-in-out;
   vertical-align: middle;
 }
 
-@if $bk_button-padding-compact {
+@if $bk-button-padding-compact {
   .btn-compact {
-    padding: $bk_button-padding-compact;
+    padding: $bk-button-padding-compact;
   }
 }
 
 .btn-empty {
-  color: color(primary);
   background-color: transparent;
+  color: color(primary);
 
   &:hover,
   &:focus {
@@ -34,8 +34,8 @@ $bk_button-padding-compact: 0.25em 0.66em;
 
 
 .btn-primary {
-  color: white;
   background-color: color(primary);
+  color: white;
 
   &:hover,
   &:focus {
@@ -45,8 +45,8 @@ $bk_button-padding-compact: 0.25em 0.66em;
 
 
 .btn-secondary {
-  color: white;
   background-color: color(secondary);
+  color: white;
 
   &:hover,
   &:focus {

@@ -12,12 +12,13 @@ table {
   min-width: 100%;
 }
 
-th, td {
+th,
+td {
   border-bottom: $tables-width solid $tables-color;
   border-right: $tables-width solid $tables-color;
-  padding: rem($margin + 0px);
-  vertical-align: top;
   min-width: 4em;
+  padding: rem($margin * 1px);
+  vertical-align: top;
 }
 
 @if $tables-responsive or $tables-overflow {
@@ -29,9 +30,9 @@ th, td {
       min-width: 100%;
 
       // Not the first row as that's for the table headers, not the second row either because that's would make a weird layout just style the others
-      tr+tr+tr {
-        padding-top: 2em;
+      tr + tr + tr {
         display: block;
+        padding-top: 2em;
       }
 
       th {
@@ -43,17 +44,15 @@ th, td {
 
         &:before {
           content: attr(data-th)": "; // who knew you could do this? The internet, that's who.
-          font-weight: bold;
-
-          // optional stuff to make it look nicer
-          width: 10em;
           display: inline-block;
+          font-weight: bold;
           padding-right: 0.5em;
-          // end options
+          width: 10em;
         }
       }
 
-      th, td {
+      th,
+      td {
         border-right: 0;
       }
     }
@@ -63,35 +62,36 @@ th, td {
       position: relative;
 
       &__inner {
+        -webkit-overflow-scrolling: touch;
         display: block;
         overflow-x: auto;
         width: 100%;
-        -webkit-overflow-scrolling: touch;
 
         &::-webkit-scrollbar {
-          height:12px;
+          height: 12px;
         }
+
         &::-webkit-scrollbar-track {
-          box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
-          background:#f0f0f0;
+          background: #f0f0f0;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.15) inset;
         }
+
         &::-webkit-scrollbar-thumb {
-          border-radius:6px;
-          background:#ccc;
+          background: #ccc;
+          border-radius: 6px;
         }
       }
 
       &:after {
-        display: block;
-        content: "";
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: em(20px);
-        height: 100%;
-        background-image: linear-gradient(90deg, rgba($tables-color,0),  rgba($tables-color,0.75));
+        background-image: linear-gradient(90deg, rgba($tables-color, 0),  rgba($tables-color, 0.75));
         border-right: $tables-width solid $tables-color;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: em(20px);
       }
 
       table {

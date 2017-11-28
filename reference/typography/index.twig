@@ -1,0 +1,420 @@
+{% extends "_layout.twig" %}
+
+{% set title = "Typography" %}
+{% set slug = "typography" %}
+
+{% block content %}
+{% include '_partials/_quick-nav.twig' %}
+
+  <div class="bg-white--tint pad" id="intro">
+    <section class="site-container">
+      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+
+      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+        <p class="font-m">Basekit offers various font classes for very targetted styling.</p>
+
+        <p>Fonts can be fluid or fixes. Fluid fonts will adjust in size between a specified min and max size limits depending on the screen size. Fixed fonts will remain the same size regardless of the screen size. Fluid fonts are ideal for headings short blocks of text while fixed fonts are best suited to long blocks of text.</p>
+
+        <p data-bk-links="primary underline-initial down">In addition to the font style classes, a <a href="#rte">rich text content wrapper</a> class is also available that scopes and styles content output from rich text editor fields.</p>
+      </div>
+
+      {% include "_partials/_status.twig" with { value : 75 } %}
+    </section>
+  </div>
+
+  <div class="bg-tertiary--lighter pad" id="font-stacks">
+    <section class="site-container flex">
+      <h3 data-bk-layout class="font-l">Font Stacks</h3>
+
+      <div data-bk-layout="l:4" class="pad-b flex">
+        <div>
+          <h4 class="font-m pad-xs-b flex--start">Default <strong>sans-serif</strong></h4>
+
+          <p>-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif</p>
+        </div>
+      </div>
+      <div data-bk-layout="l:4" class="pad-b flex">
+        <div class="font-alt">
+          <h4 class="font-m pad-xs-b flex--start">Default <strong>serif</strong></h4>
+
+          <p>georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif</p>
+        </div>
+      </div>
+      <div data-bk-layout="l:4" class="pad-b flex">
+        <div class="font-mono">
+          <h4 class="font-m pad-xs-b flex--start">Default <strong>monospace</strong></h4>
+
+          <p>'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="bg-white--tint pad" id="font-sizes">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Font Sizes</h3>
+
+      <div data-bk-layout="l:7" class="rte">
+        <p>In Basekit all headings are set to the same size by default, since it is not necessarily true that you would want a large h1 and a small h4. Sometimes you might want them to be the same size, othertimes it may be have visual weight that does not consist with semantic weight.</p>
+
+        <p>Due to this, Basekit abstracts out font weights and styles to specific utility classes which must be applied to get the desired style. Otherwise all headings and text sizes will, for the most part, remain the same. This also has the added advantage of being able to apply consistent styles to <em>any</em> text elements, regardless of the markup.</p>
+      </div>
+
+      <h4 data-bk-layout="p:trl" class="font-m"><b>Fluid</b> Sizes</h4>
+
+      <ol data-bk-layout="p:0 bottom" class="flex">
+        {% for size, val in {'Hero' : 'hero', 'Largest' : 'xxl', 'Larger' : 'xl', 'Large' : 'l'} %}
+          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+            <dl data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+              <dt data-bk-layout="center" class="font-{{ val }}">Abz</dt>
+              <dd data-bk-layout="p:sm" class="font-s bt b-grey">{{ size }} <code class="float-r">class="<strong>font-{{ val }}</strong>"</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
+      </ol>
+
+      <h4 data-bk-layout="p:trl" class="font-m"><b>Fixed</b> Sizes</h4>
+
+      <ol data-bk-layout="p:0 bottom" class="flex">
+        {% for size, val in {'Medium': 'm', 'Normal': 'n', 'Small': 's', 'Smaller': 'xs'} %}
+          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+            <dl data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+              <dt data-bk-layout="center" class="font-{{ val }}">Abz</dt>
+              <dd data-bk-layout="p:sm" class="font-s bt b-grey">{{ size }} <code class="float-r">class="<strong>font-{{ val }}</strong>"</code></dd>
+            </dl>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </div>
+
+  <div class="bg-white pad" id="font-weights">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Font Weights</h3>
+
+      {% for fontWeight in ['bold', 'normal', 'light'] %}
+        <div data-bk-layout="p:rl s:6 m:4" class="pad">
+          <ol class="br-1 ba b-grey shadow bg-white">
+            {% for size in ['hero', 'xxl', 'xl', 'l', 'm', 'n', 's', 'xs'] %}
+              <li>
+                <div data-bk-layout="p:0" class="bb b-grey">
+                  <p data-bk-layout="center" class="font-{{ fontWeight }} font-{{ size }}">Lorem</p>
+                </div>
+              </li>
+            {% endfor %}
+
+            <li data-bk-layout="p:0">
+              <div data-bk-layout="p:sm" class="font-s">{{ fontWeight|capitalize }} <code class="float-r">class="<strong>font-{{ fontWeight }}</strong>"</code></div>
+            </li>
+          </ol>
+        </div>
+      {% endfor %}
+
+    </section>
+  </div>
+
+  <div class="bg-tertiary--lighter pad" id="font-kerning">
+    <section class="site-container flex">
+      <h3 data-bk-layout class="font-l">Font Kerning</h3>
+
+      <p data-bk-layout="l:4" class="pad-b | font-hero font-kern">AV fj</p>
+    </section>
+  </div>
+
+
+  <div class="bg-white--tint pad" id="multi-line">
+    <section class="site-container">
+
+      <h3 data-bk-layout="p:trl" class="font-l">Multi-line Examples</h3>
+
+      <div data-bk-layout="l:8" class="rte">
+        <p>As fonts get increase or decrease in size from the default value their line-height also adjusts relative to the font size. At smaller font sizes this does not tend to be a problem, but at larger sizes the line height can increase too far.</p>
+      </div>
+
+      <ol data-bk-layout="p:0 bottom">
+        <li data-bk-layout class="font-hero | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-xxl | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-xl | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-l | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-m | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-n | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-s | margin-b">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+
+        <li data-bk-layout class="font-xs">
+          Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.
+        </li>
+      </ol>
+    </section>
+  </div>
+
+  <div class="bg-white pad-t" id="alignment">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Alignment</h3>
+
+      <div data-bk-layout="l:7" class="rte">
+        <p>Aligning text is quite straightfoward, however at the moment this class is not responsive so alignment is set across all screen sizes. There is no justify alignment because justify looks like garbage.</p>
+      </div>
+
+      <ol data-bk-layout="p:0 bottom" class="margin-b">
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="p:lg" class="align-l">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="p:sm" class="bt b-grey font-s color-text">Left <code class="float-r">class="<strong>align-l</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="p:lg" class="align-c">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="p:sm" class="bt b-grey font-s color-text">Center <code class="float-r">class="<strong>align-c</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad-b">
+          <div data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white">
+            <div data-bk-layout="p:lg" class="align-r">
+              <h3 class="font-m">Lorem Ipsum</h3>
+              <p>Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="p:sm" class="bt b-grey font-s color-text">Right <code class="float-r">class="<strong>align-r</strong>"</code></p>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+  </div>
+
+  <div class="bg-white--tint pad" id="font-styles">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Font Styles</h3>
+
+      <div data-bk-layout="l:7" class="rte">
+        <p>The following examples show how the specified classes can alter the style of a font. Additional classes can be created if required, or classes can be removed if they're not necessary.</p>
+      </div>
+
+      <div data-bk-layout="l:4 l:pr:1">
+        <div class="alert alert--simple font-s">
+          <h3 class="font-n margin-b"><strong>Note for developers</strong></h3>
+
+          <p>You might wonder why classes are used instead of emphasis tags. Basically, if the content needs semantic emphasis then use a tag but if it's just for stylistic purpose (making a heading bold for example) then use one of the classes.</p>
+        </div>
+      </div>
+
+      <ol class="flex">
+        <li data-bk-layout="m:4" class="pad flex">
+          <div data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+            <div data-bk-layout>
+              <p class="font-upper font-l | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-upper | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="p:sm" class="bt b-grey font-s">Upper <code class="float-r">class="<strong>font-upper</strong>"</code></p>
+          </div>
+        </li>
+
+
+        <li data-bk-layout="m:4" class="pad flex">
+          <div data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+            <div data-bk-layout>
+              <p class="font-italic font-l | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-italic | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="p:sm" class="bt b-grey font-s">Italic <code class="float-r">class="<strong>font-italic</strong>"</code></p>
+          </div>
+        </li>
+
+        <li data-bk-layout="m:4" class="pad flex">
+          <div data-bk-layout="p:0" class="br-1 ba b-grey shadow bg-white flex flex--content-end">
+            <div data-bk-layout>
+              <p class="font-alt font-l | block margin-b">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+              <p class="font-alt | block">Donec id elit non mi porta gravida at eget metus consectetur suada.</p>
+            </div>
+
+            <p data-bk-layout="p:sm" class="bt b-grey font-s">Alt Font <code class="float-r">class="<strong>font-alt</strong>"</code></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </div>
+
+  <div class="bg-white  pad-t" id="fluid-fonts">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Fluid font size + paragraphs</h3>
+
+      <div data-bk-layout="l:7" class="rte">
+        <p>The following sample texts allow you to compare the heading sizes against paragraph text at large and small screen sizes. Most heading sizes (except medium) will adjust in size depending on the screen width, this can sometimes look poor at the smallest size range. However, it only requires tweaking of the smallest value.</p>
+
+        <p>The medium font size is best suited to lead and standfirst copy rather than headings due to its closeness to the body copy size.</p>
+      </div>
+
+      <div data-bk-layout="m:6" class="pad-l-b rte">
+        <h3><span class="font-xxl font-normal">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+
+        <h3><span class="font-xl font-normal">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+
+        <h3><span class="font-l font-normal">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+
+        <h3><span class="font-m font-normal">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+      </div>
+
+      <div data-bk-layout="m:6" class="pad-l-b rte">
+        <h3><span class="font-xxl font-bold">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+
+        <h3><span class="font-xl font-bold">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+
+        <h3><span class="font-l font-bold">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+
+        <h3><span class="font-m font-bold">Into the wind</span></h3>
+        <p>Cras mattis consectetur purus sit amet fermentum. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod.</p>
+
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="bg-white--tint  pad" id="rte">
+    <section class="site-container">
+      <h3 data-bk-layout="p:trl" class="font-l">Rich-text editor / User content</h3>
+
+      <div data-bk-layout="l:7" data-bk-links="primary underline" class="rte">
+        <p>Rich-text content is, typically, content output by the <strong>Content Management System</strong> and written by the user in a <strong>Rich-Text Editor</strong> field. Here we tightly scope the content from the rest of the website content to reduce conflicts or the need to reset styles.</p>
+
+        <p>Link styles are handled by a separate <a href="../links/">link scope selector</a> rather than the <code>.rte</code> class, this allows greater freedom when styling links.</p>
+
+        <p>The goal of the <code>.rte</code> scope class is to cover as many common situations as is sensible without creating too much unused CSS. Users should not have free reign with rich-text editors otherwise they can quickly cause mayhem.</p>
+      </div>
+
+      <div data-bk-layout="l:4 l:pr:1" class="pad-b">
+        <div class="alert alert--simple font-s">
+          <h3 class="font-bold margin-b"><strong>Note for developers</strong></h3>
+
+          <p>The <code>.rte</code> class sets heading styles that <em><strong>will</strong></em> override some <code>.font-*</code> classes. Keep this in mind and try to use the class only where necessary and try to wrap only the required content.</p>
+        </div>
+      </div>
+
+
+      <div data-bk-layout="m:6" id="rich-text-content">
+        <div data-bk-layout data-bk-links="primary underline" class="rte bg-white | br-1 ba b-grey shadow">
+          {% include "typography/_rte-content.twig" %}
+        </div>
+      </div>
+
+      <div data-bk-layout="m:6" id="rich-text-content-dark">
+        <div data-bk-layout data-bk-links="white dim underlin" class="rte bg-black--tint color-white--tint | br-1 shadow">
+          {% include "typography/_rte-content.twig" %}
+        </div>
+      </div>
+    </section>
+  </div>
+
+    <div class="bg-white pad" id="intro">
+      <section class="site-container">
+        <h2 data-bk-layout class="font-xxl">Code</h2>
+
+        <div data-bk-layout="s:9 m:8 l:7" class="rte">
+          <p>Since we very rarely use the code block on client websites I've left it fairly clean, I would suggest removing the SCSS from being compiled into the project CSS if code blocks aren't required.</p>
+
+          <p>Example inline code <code>var i = 0;</code> block.</p>
+
+          <p>Example code block without <code>pre</code> tag:</p>
+          <code>
+            {
+              "name": "basekit-gulp-workflow",
+              "version": "0.2.0",
+              "description": "Basekit Gulp Workflow",
+              "repository": {
+                "type": "git",
+                "url": "git+https://github.com/fortytwostudio/basekit.git"
+              }
+            }
+          </code>
+
+          <p>Example code block <i>with</i> the <code>pre</code> tag, <code>data-bk-layout="p:sm"</code> to add padding and <code>font-n</code> to correct the browser font size:</p>
+<code data-bk-layout="p:sm" class="font-n"><pre>
+{
+  "name": "basekit-gulp-workflow",
+  "version": "0.2.0",
+  "description": "Basekit Gulp Workflow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fortytwostudio/basekit.git"
+  }
+}
+</pre></code>
+        </div>
+      </section>
+    </div>
+
+  <div class="no-js-hide | bg-tertiary--light align-c pad-l">
+    <section class="site-container">
+      <div data-bk-layout="l:6" data-bk-links="white dim underline">
+        <h3 class="font-hero color-primary--darker pad-b">
+          fontoggler
+        </h3>
+
+        <p class="font-m color-primary--darker">See how different fonts impact Basekit default settings.</p>
+
+        <p class="color-black--tint margin-t">Type the name of any font you have on your machine in the field below and press enter. For example: <i>avenir</i>, <i>verdana</i>, or <i>"comic sans ms"</i>. Basekit will then take on that font for a day or you can hit enter in an empty field to return to normal.</p>
+
+        <div data-bk-layout="s:6 l:7" class="bk-form font-m pad-l-t">
+          <input class="fontoggler align-c shadow" type="text" placeholder="Change the font…" id="fontoggler" style="border-width:0!important;">
+        </div>
+      </div>
+    </section>
+  </div>
+
+{% include '_partials/_pagination.twig' %}
+
+{% endblock %}

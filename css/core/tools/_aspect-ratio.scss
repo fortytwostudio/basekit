@@ -1,8 +1,8 @@
 @mixin aspect-ratio($ratio-name, $padding-only: padded) {
 
   @if $padding-only != nopadding {
-    position: relative;
     height: 0;
+    position: relative;
   }
 
   padding-top: $ratio-name;

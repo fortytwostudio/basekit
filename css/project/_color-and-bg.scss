@@ -3,18 +3,23 @@
     &-#{$scheme-key} {
       color: color($scheme-key);
     }
+
     &-#{$scheme-key}--light {
       color: color($scheme-key, light);
     }
+
     &-#{$scheme-key}--lighter {
       color: color($scheme-key, lighter);
     }
+
     &-#{$scheme-key}--dark {
       color: color($scheme-key, dark);
     }
+
     &-#{$scheme-key}--darker {
       color: color($scheme-key, darker);
     }
+
     &-#{$scheme-key}--tint {
       color: color($scheme-key, tint);
     }
@@ -27,18 +32,23 @@
     &-#{$scheme-key} {
       background-color: color($scheme-key);
     }
+
     &-#{$scheme-key}--light {
       background-color: color($scheme-key, light);
     }
+
     &-#{$scheme-key}--lighter {
       background-color: color($scheme-key, lighter);
     }
+
     &-#{$scheme-key}--dark {
       background-color: color($scheme-key, dark);
     }
+
     &-#{$scheme-key}--darker {
       background-color: color($scheme-key, darker);
     }
+
     &-#{$scheme-key}--tint {
       background-color: color($scheme-key, tint);
     }

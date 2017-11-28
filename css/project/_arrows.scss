@@ -7,8 +7,8 @@
   &:after,
   a:before,
   a:after {
-    font-family: "Basekit Arrows", $font-family !important;
     display: inline-block;
+    font-family: "Basekit Arrows", $font-family !important;
   }
   // a:before {
   //   margin-right: 0.2em;
@@ -43,12 +43,10 @@
   &-dl {
     &:after {
       border-bottom: em(2px) solid currentColor;
-      content: "↓"!important;
+      content: "↓" !important;
       margin-left: 0.3em;
       transform: translateY(em(-3px));
-      transition:
-        transform $speed-normal,
-        border-color $speed-normal;
+      transition: transform $speed-normal, border-color $speed-normal;
     }
 
     &:hover:after,

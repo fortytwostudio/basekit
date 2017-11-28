@@ -5,28 +5,28 @@ $fluid-fonts: (
   l: (
     minSize: 26px,
     maxSize: 32px,
-    lineHeight: (18px / $font-size),
+    lineHeight: 1.2,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   xl: (
     minSize: 32px,
     maxSize: 44px,
-    lineHeight: (17px / $font-size),
+    lineHeight: 1.175,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   xxl: (
     minSize: 44px,
     maxSize: 62px,
-    lineHeight: (16px / $font-size),
+    lineHeight: 1.15,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   hero: (
     minSize: 52px,
     maxSize: 92px,
-    lineHeight: (16px / $font-size),
+    lineHeight: 1.05,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   )
@@ -38,12 +38,11 @@ $fluid-fonts: (
 }
 
 @function vp($target, $context: $max-width, $dimension: vw) {
-  $vw-context: ($context*.01) * 1px;
+  $vw-context: ($context * 0.01) * 1px;
   @if $dimension == vw {
-    @return ($target/$vw-context) * 1vw;
-  }
-  @else {
-    @return ($target/$vw-context) * 1vh;
+    @return ($target / $vw-context) * 1vw;
+  } @else {
+    @return ($target / $vw-context) * 1vh;
   }
 }
 
@@ -54,22 +53,26 @@ $fluid-fonts: (
   // Small font size doesn't need to be fancy responsive, just a tweak is enough.
   &-xs {
     font-size: rem($font-size - 4);
+    line-height: 1.6;
   }
 
   &-s {
     font-size: rem($font-size - 2);
+    line-height: 1.6;
   }
 
-  &-n { font-size: rem($font-size); }
+  &-n {
+    font-size: rem($font-size);
+  }
 
   &-m {
     font-size: rem(22px);
-    line-height: (21px / $font-size);
+    line-height: 1.4;
   }
 
   @each $font in $fluid-fonts {
     &-#{nth($font, 1)} {
-      @include poly-fluid-sizing('font-size', (ffont($font, mqMin): ffont($font, minSize), ffont($font, mqMax): ffont($font, maxSize)));
+      @include poly-fluid-sizing("font-size", (ffont($font, mqMin): ffont($font, minSize), ffont($font, mqMax): ffont($font, maxSize)));
       line-height: ffont($font, lineHeight);
     }
   }
@@ -99,7 +102,7 @@ $fluid-fonts: (
   }
 
   &-kern {
-    font-kerning: normal!important;
+    font-kerning: normal !important;
   }
 
   // &-m {

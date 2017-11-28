@@ -1,3 +1,7 @@
+// Set the path to compile assets to or leave blank to compile to same folder
+// var publicPath = '../public/';
+var publicPath = '';
+
 var gulp            = require('gulp'),
     // Sass for writing and pre-processing CSS
     sass            = require('gulp-sass'),
@@ -9,7 +13,7 @@ var gulp            = require('gulp'),
     uglify          = require('gulp-uglify'),
     // Minify and clean up HTML files
     htmlmin         = require('gulp-htmlmin'),
-    // Data storage for Twig templates
+    // Data storage for Twig templates and Sass
     data            = require('gulp-data'),
     // Templating
     twig            = require('gulp-twig'),
@@ -22,130 +26,83 @@ var gulp            = require('gulp'),
     // Sync changes to the Browser
     browserSync     = require('browser-sync');
 
+
 // De-caching so that the data.json file can be watched correctly
 // See this https://github.com/colynb/gulp-data/issues/17
-function requireUncached( $module ) {
-  delete require.cache[require.resolve( $module )];
-  return require( $module );
+function requireUncached($module) {
+  delete require.cache[require.resolve($module)];
+  return require($module);
 }
 
-///
-/// Setup an error notification for gulp-plumber to handle
-///
+
+// Configure macOS native error notification for gulp-plumber to handle
 var hasError = notify.onError({
   title: 'Error',
   message: '<%= error.message %>',
   sound: "Basso"
 });
 
+
+// browserSync config so we don't have to cmd+r
+// Update host and proxy to your local dev domain and append port :3000
 gulp.task('sync', function() {
   browserSync({
-    startPath: '/demo/',
-    open: false, // or 'external'
     host: 'basekit.dev',
     proxy: 'basekit.dev',
-    // enable/disable the annoying popup (within the site)
-    notify: false,
+    startPath: '/demo/',
+    open: false, // or 'external'
+    notify: false, // enable/disable the annoying popup (within the site)
     scrollRestoreTechnique: "cookie",
     logLevel: "silent",
     // logLevel: "info",
-    // Slight delays to prevent things going nuts, not sure why they go nuts :/
-    reloadDelay: 100,
+    reloadDelay: 100, // Slight delays to prevent things going nuts, not sure why they go nuts :/
     reloadDebounce: 500
   });
 });
 
-///
-/// Compile Sass (with Nano and Autoprefixer)
-///
+
+// Compile Sass (with Nano and Autoprefixer)
 gulp.task('scss', function() {
-  // was  gulp.src('css/basekit.scss')
   gulp.src('css/*.scss')
     .pipe(plumber({errorHandler: hasError}))
-    // Uncached data for populating Twig files
     .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({
-      // http://cssnano.co/optimisations/minifySelectors/
-      // This was interfering with the global selector so I've disabled it
-      minifySelectors: false,
-      // Enable adding prefixes
+      minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
       autoprefixer: {
-        add: true,
-        // Browser support level
-        // Must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
+        add: true, // Enable adding browser prefixes
+        // Browser support: must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
         browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
       }
     }))
-    .pipe(gulp.dest('css'))
-    // Reload and inject
-    .pipe(browserSync.reload({ stream: true }))
-    // Show file size before gzip
-    .pipe(size({ showFiles: true }))
-    // Show file size after gzip
-    .pipe(size({ gzip: true, showFiles: true }));
+    .pipe(gulp.dest(publicPath + 'css'))
+    .pipe(browserSync.reload({ stream: true })) // Reload and inject
+    .pipe(size({ showFiles: true })) // Show file size before gzip
+    .pipe(size({ gzip: true, showFiles: true })); // Show file size after gzip
 });
 
-///
-/// Minify and combine javascript files for production, unless they start with an _
-/// gulp.src('js/[^_]*.js')
-///
+
+// Minify and combine javascript files for production, unless they start with an _
 gulp.task('js', function() {
   gulp.src('js/[^_]*.js')
     .pipe(plumber({errorHandler: hasError}))
-    // Combine all (none _) js files into this file
-    .pipe(concat('basekit.js'))
-    // Minify the file
-    .pipe(uglify())
-    // Output it here
-    .pipe(gulp.dest('js/min'))
-    // Reload and inject
-    .pipe(browserSync.reload({ stream: true }))
-    // Report the gzipped file size
-    .pipe(size({
-      gzip: true,
-      showFiles: true
-    })
+    .pipe(concat('basekit.js')) // Combine all (none _) js files into this file
+    .pipe(uglify()) // Minify the file
+    .pipe(gulp.dest(publicPath + 'js/min')) // Output it here
+    .pipe(browserSync.reload({ stream: true })) // Reload and inject
+    .pipe(size({ gzip: true, showFiles: true }) // Show file size after gzip
   );
 });
 
-///
-/// Minify, clean and output HTML files
-/// NOTE: I'm likely to deprecate this soon in favour of using Twig
-///
-// gulp.task('html', function() {
-//   gulp.src('./html/*.html')
-//     .pipe(plumber({errorHandler: hasError}))
-//     .pipe(htmlmin({
-//       collapseWhitespace: true,
-//       removeComments: true,
-//       removeAttributeQuotes: true,
-//       // removeRedundantAttributes: true,
-//       removeEmptyAttributes: true,
-//       removeScriptTypeAttributes: true,
-//       removeStyleLinkTypeAttributes: true,
-//       collapseBooleanAttributes: true,
-//       quoteCharacter: '\'',
-//       minifyJS: true,
-//       minifyCSS: true
-//     }))
-//     .pipe(gulp.dest('./'))
-//     .pipe(notify({
-//       title: 'Created',
-//       message: '<%= file.relative %>'
-//     }));
-// });
 
-///
-/// Compile Twig templates to an HTML frontend
-/// NOTE: At the time of writing March 2017 we use Craft CMS. Writing frontend templates in Twig makes sense since Craft uses twig, these files are also output as HTML for demonstration and testing.
-///
+// Compile Twig templates to an static frontend for demonstration.
+// This is quite long-winded and not ideal, but does the job for now
 gulp.task('twig', function() {
   // run the Twig template parser on .twig files that don't start with an _
   return gulp.src('./templates/**/[^_]*.twig')
   .pipe(plumber({errorHandler: hasError}))
   // Uncached data for populating Twig files
-  .pipe(data(function(file){ return requireUncached('./templates/data.json'); }))
+  .pipe(data(function(file){ return requireUncached('./data.json'); }))
   // Let gulp-twig know where the base template directory is
   .pipe(twig({
     base: 'templates',
@@ -167,17 +124,36 @@ gulp.task('twig', function() {
   // Return default behaviour
   .pipe(plumber.stop())
   // Output minified file
-  .pipe(gulp.dest('demo'))
+  .pipe(gulp.dest(publicPath + 'demo'))
   // Reload the site
   .pipe(browserSync.reload({ stream: true }))
 });
 
-// Combine various functions into watch
+
+
+gulp.task('reference', function() {
+  return gulp.src('./reference/**/[^_]*.twig')
+  .pipe(plumber({errorHandler: hasError}))
+  .pipe(data(function(file){ return requireUncached('./reference/data.json'); }))
+  .pipe(twig({
+    base: 'reference',
+    cache: false
+  }))
+  .pipe(plumber.stop())
+  .pipe(gulp.dest(publicPath + 'demo/reference'))
+  .pipe(browserSync.reload({ stream: true }))
+});
+
+
+
+gulp.task('refbuild', function() {
+  gulp.watch(['reference/**/*.twig', 'reference/**/*.json'], { interval: 500 }, ['reference']);
+});
+
 gulp.task('watch', function() {
   gulp.watch('css/**/*.scss', { interval: 500 }, ['scss']);
   gulp.watch('js/*.js', ['js']);
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
-  // gulp.watch('templates/**/*.twig').on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch', 'sync']);

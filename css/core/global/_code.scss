@@ -1,7 +1,11 @@
 $code-bg-color: rgba(mix(white, black, 50%), 0.25) !default;
 $code-text-color: currentColor !default;
-$code-border: '1px solid ' + rgba(mix(white, black, 50%), 0.75) !default; // or just  "0";
+$code-border: "1px solid " + rgba(mix(white, black, 50%), 0.75) !default; // or just  "0";
 $code-font-size: 87.5% !default;
+
+pre {
+  white-space: pre-wrap;
+}
 
 code {
   // background-color: $code-bg-color;
@@ -9,21 +13,14 @@ code {
   // border-radius: em(2px);
   // color: $code-text-color;
   // display: inline-block;
-  font-family: $font-family--mono;
   // font-size: $code-font-size;
   // padding: 0 em(5px);
-  white-space: pre-wrap;
-}
-
-pre {
-  white-space: pre-wrap;
-}
-
-code {
   background-color: mix($color-grey, white, 35%);
   border: 1px solid mix($color-grey, white, 50%);
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   color: color(secondary);
+  font-family: $font-family--mono;
   font-size: 85%;
   padding: 2px 4px;
+  white-space: pre-wrap;
 }

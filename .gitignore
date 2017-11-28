@@ -10,6 +10,7 @@ craft/.htaccess
 node_modules
 npm-debug.log
 .publish
+yarn-error.log
 
 # Sass #
 #####################
