@@ -57,24 +57,14 @@
     "url": "/demo/reference/tables/",
     "slug": "tables",
     "tbc": true
-  }, {
-    "title": "Code Guide",
-    "url": "/demo/reference/code/",
-    "slug": "code",
-    "tbc": true
-  }, {
-    "title": "A11Y",
-    "url": "/demo/reference/a11y/",
-    "slug": "accessibility",
-    "tbc": true
 }] %}
 
 {% if quickNav %}
-  <div data-bk-links="white dim" class="scroll-x stick-t shadow">
-    <ul data-bk-layout="p:rl" class="pad-xs scroll-x__content nav nav-block font-s">
+  <div data-bk-links="primary dim">
+    <ul data-bk-layout="p:rl p:sm" class="pad-xs nav nav-block font-s">
       {% for item in quickNav %}
-        <li>
-          <a{{ item.slug == slug ? ' class="btn-primary shadow" ' }}  href="{{ item.url }}">
+        <li{{ item.slug == slug ? '  data-bk-links="secondary"' }}>
+          <a href="{{ item.url }}">
             {{ item.title }}
           </a>
         </li>
