@@ -92,6 +92,21 @@
                 {% endfor %}
               </div>
           </div>
+
+          <div data-bk-layout>
+            <div data-bk-layout="p:sm" class="bg-white">
+              <h3 data-bk-layout="p:sm p:trl" class="font-m margin-b">Notifications</h3>
+              {% for colour in ['', 'warn', 'neutral', 'positive'] %}
+                <div data-bk-layout="p:sm p:rbl s:3">
+                  <ol class="font-m">
+                    <li data-bk-layout class="alert--{{ colour }} alert--simple pad-xl-b bn">
+                      {{ colour ? colour|capitalize : 'Notice' }}
+                    </li>
+                  </ol>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
         </section>
       </div>
     </div>
