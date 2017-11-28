@@ -1,277 +1,100 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Colours" %}
+{% set title = "Colour" %}
 {% set slug = "colours" %}
 {% set pageHeaderColor = "bg-gradient" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-grey--lighter  pad" id="intro">
-    <section class="site-container">
+  <div class="flex bg-grey--light">
+    <div class="flex w-15">
+      <h1>Basekit</h1>
+      <p>Blurb about Basekit</p>
+    </div>
 
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+    <div class="flex w-85 bg-white">
+      <div class="pad pad-l-b w-100" id="intro">
+        <section class="site-container">
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="font-m">Primary and Secondary colour groups are often used for headings, links, button and background colours. Links and buttons may default to the primary colour with the secondary colour used on hover.</p>
+          {% include '_partials/_quick-nav.twig' %}
 
-        <p>Often a tertiary colour option won't be provided. Tertiary colours are useful for active link states, buttons, and background colours.</p>
-      </div>
+          <h2 data-bk-layout class="font-xxl font-light">Brand</h2>
 
-      {% include "_partials/_status.twig" with { value : 80 } %}
+          <div data-bk-layout="s:9 m:8 l:7 l:pl:5" class="rte">
+            <p class="font-m">Primary and Secondary colour groups are often used for headings, links, button and background colours. Links and buttons may default to the primary colour with the secondary colour used on hover.</p>
+          </div>
 
-    </section>
-  </div>
-
-
-  <div class="bg-white  pad" id="brand-colours">
-    <section class="site-container">
-
-      <h3 data-bk-layout="p:trl" class="font-l">Brand Colours</h3>
-
-      <div data-bk-layout="l:7" class="rte">
-        <p>Primary and Secondary values will be defined in by brand guidelines or style guides provided by the designer or client. The lighter and darker values are not always the same and should be tweaked in the Color settings Sass file. These tings should be set for a balance of aesthetic appeal and utility, a dark that is too light or a light that is too dark won't be of any use when building the website.</p>
-
-        <p>The tertiary value is not always provided as part of the brand guidelines or style guide, in such a case talk to the designer responsible or find an appropriatly fitting grey.</p>
-      </div>
-
-      <div data-bk-layout="l:4 l:pr:1" class="pad-b">
-        <div class="alert alert--simple font-s">
-          <h4 class="font-n margin-b"><strong>Note for designers</strong></h4>
-
-          <p>You're not expected to provide the additional four light/dark values, only the three main Primary, Secondary and Tertiary. The four additional values are tweaked to best fit actual use throughout the site, often the best value is only found once the functional UI starts coming together.</p>
-        </div>
-      </div>
-
-      {% for colour in ['primary', 'secondary', 'tertiary'] %}
-        <div data-bk-layout="s:6 l:4">
-          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
-
-          <ol class="font-xs">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m">
-              {{ colour|capitalize }}
-            </li>
-            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
-              lighter
-            </li>
-            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--light color-black pad-l-t">
-              light
-            </li>
-            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--dark color-white pad-l-t">
-              dark
-            </li>
-            <li data-bk-layout="3 l:p:sm" class="bg-{{ colour }}--darker color-white pad-l-t">
-              darker
-            </li>
-          </ol>
-
-          <ul data-bk-layout="p:t p:sm" class="color-{{ colour }}">
-            <li class="font-xl">Lorem Ipsum</li>
-            <li class="font-l">Lorem Ipsum</li>
-            <li class="font-m">Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li class="font-s">Lorem Ipsum</li>
-            <li class="font-xs">Lorem Ipsum</li>
-          </ul>
-        </div>
-      {% endfor %}
-
-
-      <section data-bk-layout="l:6" class="pad">
-        <h4 class="font-l">Colour comparison</h4>
-        <p class="margin-b font-s">Use the following swatch group to check for uniformity across the colour tints. Generally they should be close to each other but they don't have to be identical, it's best that primary colours are stronger than lesser levels.</p>
-        <ol>
           {% for colour in ['primary', 'secondary', 'tertiary'] %}
-            <li data-bk-layout class="w-20 bg-{{ colour }}--lighter pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }}--light pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }} pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }}--dark pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }}--darker pad-l-t">&nbsp;</li>
+            <ol data-bk-layout="s:6 l:3">
+              <li data-bk-layout class="bg-{{ colour }} pad-xl-b | color-white font-m font-light | margin-b">
+                <span class="pad-l-b block">{{ colour|capitalize }}</span>
+              </li>
+
+              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--darker color-white pad-s-t">
+                <span class="hide-text">darker</span>
+              </li>
+              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--dark color-white pad-s-t">
+                <span class="hide-text">dark</span>
+              </li>
+              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--light color-black pad-s-t">
+                <span class="hide-text">light</span>
+              </li>
+              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--lighter color-black | pad-s-t">
+                <span class="hide-text">lighter</span>
+              </li>
+            </ol>
           {% endfor %}
-        </ol>
-      </section>
 
-      <section data-bk-layout="l:6" class="pad desat">
-        <h4 class="font-l">Tonal comparison</h4>
-        <p class="margin-b font-s">Check colour tones for clashes, e.g. you don't want Tertiary level colour to be tonally stronger than the Primary colour. This is most important for accessibility reasons and making sure tone as well as colour works.</p>
-        <ol>
-          {% for colour in ['primary', 'secondary', 'tertiary'] %}
-            <li data-bk-layout class="w-20 bg-{{ colour }}--lighter pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }}--light pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }} pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }}--dark pad-l-t">&nbsp;</li>
-            <li data-bk-layout class="w-20 bg-{{ colour }}--darker pad-l-t">&nbsp;</li>
+        </section>
+      </div>
+
+
+      <div class="bg-grey pad-l w-100" id="standard-values">
+        <section class="site-container">
+
+          <h2 data-bk-layout class="font-xxl font-light">Predefined</h2>
+
+          <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary underline" class="rte">
+            <p>Black and white colour options are fixed utility classes that should not require changing. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
+          </div>
+
+          {% for colour in ['black', 'white'] %}
+            <ol data-bk-layout="s:6 l:3" class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
+              <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
+                {{ colour|capitalize }}
+              </li>
+              <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b">
+                Tinted
+              </li>
+            </ol>
           {% endfor %}
-        </ol>
-      </section>
 
-    </section>
-  </div>
-
-
-  <div class="bg-grey color-black  pad" id="standard-values">
-    <section class="site-container">
-
-      <h3 data-bk-layout="p:trl" class="font-l">Standard Values</h3>
-
-      <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary underline" class="rte">
-        <p>Black and white colour options are fixed utility classes that should never change. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
-      </div>
-
-      {% for colour in ['black', 'white'] %}
-        <div data-bk-layout="s:4">
-          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
-
-          <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
-              {{ colour|capitalize }}
-            </li>
-            <li data-bk-layout class="bg-{{ colour }}--tint pad-l-t">
-              tint
-            </li>
-          </ol>
-
-          <ul data-bk-layout="p:t p:sm" class="color-{{ colour }}">
-            <li class="font-xl">Lorem Ipsum</li>
-            <li class="font-l">Lorem Ipsum</li>
-            <li class="font-m">Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li class="font-s">Lorem Ipsum</li>
-            <li class="font-xs">Lorem Ipsum</li>
-          </ul>
-        </div>
-      {% endfor %}
-    </section>
-  </div>
-
-
-  <div class="bg-white  pad" id="grey-tones">
-    <section class="site-container">
-
-      <h3 data-bk-layout="p:trl" class="font-l">Grey Tones</h3>
-
-      <div data-bk-layout="l:7  l:pl:5" class="rte">
-        <p>As with black and white, greys are set colour values that typically won't be changed. However, unlike black and white they <i>can</i> be changed if needed to suit the design. The tones below have been selected to best meet most sitatuons.</p>
-      </div>
-
-      {% for colour in ['grey'] %}
-        <div data-bk-layout="s:6 l:4">
-          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
-
-          <ol class="font-xs">
-            <li data-bk-layout class="bg-{{ colour }} pad-xl-b color-white font-m">
-              {{ colour|capitalize }}
-            </li>
-            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--lighter color-black pad-l-t">
-              lighter
-            </li>
-            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--light color-black pad-l-t">
-              light
-            </li>
-            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--dark color-white pad-l-t">
-              dark
-            </li>
-            <li data-bk-layout="6 l:3 l:p:sm" class="bg-{{ colour }}--darker color-white pad-l-t">
-              darker
-            </li>
-          </ol>
-
-          <ul data-bk-layout="p:t p:sm" class="color-{{ colour }}">
-            <li class="font-xl">Lorem Ipsum</li>
-            <li class="font-l">Lorem Ipsum</li>
-            <li class="font-m">Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li class="font-s">Lorem Ipsum</li>
-            <li class="font-xs">Lorem Ipsum</li>
-          </ul>
-        </div>
-      {% endfor %}
-
-    </section>
-  </div>
-
-
-  <div class="bg-white--tint  pad" id="text-colour">
-    <section class="site-container">
-
-      <h3 data-bk-layout="p:trl" class="font-l">Default Text Colour</h3>
-
-      <div data-bk-layout="l:7  l:pl:1" data-bk-links="primary underline" class="rte">
-        <p>For text colours the lightest you can go on a white background is <code>#666</code> for AA compliancy or <code>#555</code> for AAA compliancy. It is advisable to keep the base text colour well above AAA compliancy.</p>
-
-        <p>On a black background, light text can go as dark as <code>999</code> for AAA compliancy and <code>666</code> for AA compliancy. Again it is advised to stick with AAA level compliancy.</p>
-
-        <p>For body text on mid-range and different colours you must check with a contrast testing tool. For more information see the <a href="../accessibility">Accessibility page</a>.</p>
-      </div>
-
-      <div data-bk-layout="s:4">
-        <ol class="font-m color-white">
-          <li data-bk-layout class="bg-text pad-xl-b">
-            Text
-          </li>
-        </ol>
-
-        <ul data-bk-layout="p:t p:sm" class="color-text">
-          <li class="font-xl">Lorem Ipsum</li>
-          <li class="font-l">Lorem Ipsum</li>
-          <li class="font-m">Lorem Ipsum</li>
-          <li>Lorem Ipsum</li>
-          <li class="font-s">Lorem Ipsum</li>
-          <li class="font-xs">Lorem Ipsum</li>
-        </ul>
-      </div>
-    </section>
-  </div>
-
-
-  <div class="bg-white  pad" id="alert-colours">
-    <section class="site-container">
-
-      <h3 data-bk-layout="p:trl" class="font-l">Alert Colours</h3>
-
-      <div data-bk-layout="l:8  l:pl:4" data-bk-links="primary underline" class="rte">
-        <p>For more information see the <a href="../alerts/">alerts section</a>.</p>
-      </div>
-
-      {% for colour in ['alert', 'alert--warn', 'alert--neutral', 'alert--positive'] %}
-        <div data-bk-layout="s:3">
-          {# <h4 class="font-l color-{{ colour }}">{{ colour|capitalize }}</h4> #}
-
-          <ol class="font-m">
-            <li data-bk-layout class="{{ colour }} alert--simple pad-xl-b">
-              {{ colour|capitalize }}
-            </li>
-          </ol>
-
-        </div>
-      {% endfor %}
-    </section>
-  </div>
-
-
-
-
-  {% for colour in ['primary', 'secondary', 'tertiary'] %}
-    <div class="bg-{{ colour }}--lighter align-c | pad-l">
-      <section class="site-container pad">
-        <div data-bk-layout="m:8 l:7">
-          <h3 class="font-xxl font-light color-{{ colour }}--dark | margin-b">Section Wrapper Example</h3>
-
-          <div data-bk-layout="p:t m:10" class="color-{{ colour }}--darker font-s">
-            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</p>
-
-            <p class="pad-t">
-              <a href="#" class="btn-{{ colour }}">CTA Button</a>
-            </p>
+          <div data-bk-layout="m:6">
+            <div data-bk-layout class="bg-white">
+              <p class="font-m margin-b">Grey</p>
+              {% for colour in ['grey'] %}
+                <ol data-bk-layout="p:0">
+                  <li data-bk-layout="" class="w-20 inline-block | bg-{{ colour }}--darker pad pad-l-b"><span class="hide-text">darker</span></li>
+                  <li class="w-20 inline-block | bg-{{ colour }}--dark pad pad-l-b"><span class="hide-text">dark</span></li>
+                  <li class="w-20 inline-block | bg-{{ colour }} pad pad-l-b"><span class="hide-text">standard</span></li>
+                  <li class="w-20 inline-block | bg-{{ colour }}--light pad pad-l-b"><span class="hide-text">light</span></li>
+                  <li class="w-20 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
+                </ol>
+              {% endfor %}
+            </div>
+              <div data-bk-layout class="bg-white">
+                <p class="font-s margin-b">White Tint next to lightest Grey</p>
+                {% for colour in ['grey'] %}
+                  <ol data-bk-layout="p:0">
+                    <li class="w-50 inline-block | bg-white--tint pad pad-l-b"><span class="hide-text">lighter</span></li>
+                    <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
+                  </ol>
+                {% endfor %}
+              </div>
           </div>
         </section>
-      </section>
+      </div>
     </div>
-  {% endfor %}
-
-
-
-
-{% include '_partials/_pagination.twig' %}
+  </div>
 
 {% endblock %}

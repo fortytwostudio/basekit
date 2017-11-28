@@ -19,27 +19,10 @@
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
-    <div class="position-over {{ pageHeaderColor|length ? pageHeaderColor : "bg-primary" }}{{ pageHeaderImg|length ? " bg-img" }}" {{ pageHeaderImg }}>
-      <header id="header" class="site-container">
-        <div data-bk-layout="to:m:p:0 m:p:r m:p:sm middle">
-
-          <div data-bk-layout="4 l:5" class="site-logo--container">
-            <h1 class="site-logo  logo">
-              <a class="site-logo__img  logo__img" href="{{ siteUrl }}">
-                {{ siteName }}
-              </a>
-            </h1>
-          </div>
-
-          {% include "includes/_nav-main.twig" %}
-        </div>
-      </header>
-    </div>
-
     {% block content %}
     {% endblock %}
 
-    {% include "includes/_site-footer.twig" %}
+    {# {% include "includes/_site-footer.twig" %} #}
 
     {# Not the latest version, because compatibility #}
     <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

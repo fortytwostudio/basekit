@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-$color-secondary: #d44950;
+$color-primary: #2593e8;
+$color-secondary: #22c09a;
+$color-tertiary: #fbae48;
 
 @import "basekit.scss";
 @import "core/third-party/scrim-linear-grad";
@@ -58,7 +60,6 @@ $color-secondary: #d44950;
 
 // Make item stick to browser edge
 [class*="stick-"] {
-  position: relative;
   position: sticky;
   z-index: $z-position-over;
 }
@@ -74,8 +75,6 @@ $color-secondary: #d44950;
 
 
 .scroll-x {
-  background-color: color(primary, dark);
-  text-align: center;
   z-index: $z-position-over;
 
   &:after {

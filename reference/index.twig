@@ -10,10 +10,11 @@
 {% endset %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
 <div class="bg-grey--lighter  pad" id="intro">
   <section class="site-container">
+
+    {% include '_partials/_quick-nav.twig' %}
 
     <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
 
