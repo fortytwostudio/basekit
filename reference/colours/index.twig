@@ -6,8 +6,8 @@
 
 {% block content %}
 
-  <div class="flex bg-grey--light">
-    <div class="flex w-15">
+  <div class="flex">
+    <div class="flex w-15 bg-grey--lighter">
       <h1>Basekit</h1>
       <p>Blurb about Basekit</p>
     </div>
@@ -49,7 +49,7 @@
       </div>
 
 
-      <div class="bg-grey pad-l w-100" id="standard-values">
+      <div class="bg-grey--light pad-l w-100" id="standard-values">
         <section class="site-container">
 
           <h2 data-bk-layout class="font-xxl font-light">Predefined</h2>
@@ -63,7 +63,7 @@
               <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
                 {{ colour|capitalize }}
               </li>
-              <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b">
+              <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b color-grey">
                 Tinted
               </li>
             </ol>
