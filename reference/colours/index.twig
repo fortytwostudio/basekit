@@ -6,110 +6,112 @@
 
 {% block content %}
 
-  <div class="flex">
-    <div class="flex w-15 bg-grey--lighter">
-      <h1>Basekit</h1>
-      <p>Blurb about Basekit</p>
-    </div>
+  <div class="pad pad-l-b w-100 bg-white" id="intro">
+    <section class="site-container">
 
-    <div class="flex w-85 bg-white">
-      <div class="pad pad-l-b w-100" id="intro">
-        <section class="site-container">
+      {% include '_partials/_quick-nav.twig' %}
 
-          {% include '_partials/_quick-nav.twig' %}
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">Brand Colours</h2>
 
-          <h2 data-bk-layout class="font-xxl font-light">Brand</h2>
-
-          <div data-bk-layout="s:9 m:8 l:7 l:pl:5" class="rte">
-            <p class="font-m">Primary and Secondary colour groups are often used for headings, links, button and background colours. Links and buttons may default to the primary colour with the secondary colour used on hover.</p>
-          </div>
-
-          {% for colour in ['primary', 'secondary', 'tertiary'] %}
-            <ol data-bk-layout="s:6 l:3">
-              <li data-bk-layout class="bg-{{ colour }} pad-xl-b | color-white font-m font-light | margin-b">
-                <span class="pad-l-b block">{{ colour|capitalize }}</span>
-              </li>
-
-              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--darker color-white pad-s-t">
-                <span class="hide-text">darker</span>
-              </li>
-              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--dark color-white pad-s-t">
-                <span class="hide-text">dark</span>
-              </li>
-              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--light color-black pad-s-t">
-                <span class="hide-text">light</span>
-              </li>
-              <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--lighter color-black | pad-s-t">
-                <span class="hide-text">lighter</span>
-              </li>
-            </ol>
-          {% endfor %}
-
-        </section>
+      <div data-bk-layout="s:9 m:8 l:7 l:pl:5" class="rte">
+        <p class="font-m">Brand colours change from project to project and will always be provided by a designer or the client's brand guidelines. The tertiary colour is optional but highly recommended for alternate “states” and backgrounds.</p>
       </div>
 
+      {% for colour in ['primary', 'secondary', 'tertiary'] %}
+        <ol data-bk-layout="s:6 l:3">
+          <li class="margin-b font-m color-{{ colour }}">
+            {{ colour|capitalize }}
+          </li>
 
-      <div class="bg-grey--light pad-l w-100" id="standard-values">
-        <section class="site-container">
+          <li data-bk-layout class="bg-{{ colour }} pad-xl | color-white font-m font-light bb bw-2">
+            <span class="hide-text">{{ colour|capitalize }}</span>
+          </li>
 
-          <h2 data-bk-layout class="font-xxl font-light">Predefined</h2>
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--darker color-white pad-s">
+            <span class="hide-text">darker</span>
+          </li>
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--dark color-white pad-s">
+            <span class="hide-text">dark</span>
+          </li>
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--light color-black pad-s">
+            <span class="hide-text">light</span>
+          </li>
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--lighter color-black | pad-s">
+            <span class="hide-text">lighter</span>
+          </li>
+        </ol>
+      {% endfor %}
 
-          <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary underline" class="rte">
-            <p>Black and white colour options are fixed utility classes that should not require changing. Do not set either the black or white Sass variable or class to anything other than absolute black or white, a tint is available as shown in the example.</p>
-          </div>
+      <div data-bk-layout="s:6 l:3" class="font-s rte | pad-l-t">
+        <p>Restricting the palette to three brand colours each with two darker and two lighter tones helps to balance flexibility in the design with reduced complexity and development time in the build.</p>
+        <p>Avoid using black or white as primary colours when there is a choice as this creates unecessary duplication.</p>
+      </div>
 
-          {% for colour in ['black', 'white'] %}
-            <ol data-bk-layout="s:6 l:3" class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
-              <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
-                {{ colour|capitalize }}
-              </li>
-              <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b color-grey">
-                Tinted
-              </li>
+    </section>
+  </div>
+
+
+  <div class="bg-grey--light pad-l w-100" id="standard-values">
+    <section class="site-container">
+
+      <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
+
+      <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary underline" class="rte">
+        <p class="font-m">These colours do <em>not change</em> on a per-project basis, this provides consistency for designers and developers and reduced project time.</p>
+
+        <p>The notification colours have been carefully chosen to conform to AA accessibility colour contrast requirements. While the black and white tints exist to provide a slightly less harsh option.</p>
+      </div>
+
+      {% for colour in ['black', 'white'] %}
+        <ol data-bk-layout="s:6 l:3" class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
+          <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
+            {{ colour|capitalize }}
+          </li>
+          <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b color-grey--dark">
+            Tinted
+          </li>
+        </ol>
+      {% endfor %}
+
+      <div data-bk-layout="m:6">
+        <div data-bk-layout class="bg-white">
+          <p class="font-m margin-b">Grey</p>
+          {% for colour in ['grey'] %}
+            <ol data-bk-layout="p:0">
+              <li data-bk-layout="" class="w-20 inline-block | bg-{{ colour }}--darker pad pad-l-b"><span class="hide-text">darker</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }}--dark pad pad-l-b"><span class="hide-text">dark</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }} pad pad-l-b"><span class="hide-text">standard</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }}--light pad pad-l-b"><span class="hide-text">light</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
             </ol>
           {% endfor %}
-
-          <div data-bk-layout="m:6">
-            <div data-bk-layout class="bg-white">
-              <p class="font-m margin-b">Grey</p>
-              {% for colour in ['grey'] %}
-                <ol data-bk-layout="p:0">
-                  <li data-bk-layout="" class="w-20 inline-block | bg-{{ colour }}--darker pad pad-l-b"><span class="hide-text">darker</span></li>
-                  <li class="w-20 inline-block | bg-{{ colour }}--dark pad pad-l-b"><span class="hide-text">dark</span></li>
-                  <li class="w-20 inline-block | bg-{{ colour }} pad pad-l-b"><span class="hide-text">standard</span></li>
-                  <li class="w-20 inline-block | bg-{{ colour }}--light pad pad-l-b"><span class="hide-text">light</span></li>
-                  <li class="w-20 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
-                </ol>
-              {% endfor %}
-            </div>
-              <div data-bk-layout class="bg-white">
-                <p class="font-s margin-b">White Tint next to lightest Grey</p>
-                {% for colour in ['grey'] %}
-                  <ol data-bk-layout="p:0">
-                    <li class="w-50 inline-block | bg-white--tint pad pad-l-b"><span class="hide-text">lighter</span></li>
-                    <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
-                  </ol>
-                {% endfor %}
-              </div>
+        </div>
+          <div data-bk-layout class="bg-white">
+            <p class="font-s margin-b">White Tint next to lightest Grey</p>
+            {% for colour in ['grey'] %}
+              <ol data-bk-layout="p:0">
+                <li class="w-50 inline-block | bg-white--tint pad pad-l-b"><span class="hide-text">lighter</span></li>
+                <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
+              </ol>
+            {% endfor %}
           </div>
-
-          <div data-bk-layout>
-            <div data-bk-layout="p:sm" class="bg-white">
-              <h3 data-bk-layout="p:sm p:trl" class="font-m margin-b">Notifications</h3>
-              {% for colour in ['', 'warn', 'neutral', 'positive'] %}
-                <div data-bk-layout="p:sm p:rbl s:3">
-                  <ol class="font-m">
-                    <li data-bk-layout class="alert--{{ colour }} alert--simple pad-xl-b bn">
-                      {{ colour ? colour|capitalize : 'Notice' }}
-                    </li>
-                  </ol>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        </section>
       </div>
-    </div>
+
+      <div data-bk-layout>
+        <div data-bk-layout="p:sm" class="bg-white">
+          <h3 data-bk-layout="p:sm p:trl" class="font-m margin-b">Notifications</h3>
+          {% for colour in ['', 'warn', 'neutral', 'positive'] %}
+            <div data-bk-layout="p:sm p:rbl s:3">
+              <ol class="font-m">
+                <li data-bk-layout class="alert--{{ colour }} alert--simple pad-xl-b bn">
+                  {{ colour ? colour|capitalize : 'Notice' }}
+                </li>
+              </ol>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
   </div>
 
 {% endblock %}

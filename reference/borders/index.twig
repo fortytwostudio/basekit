@@ -5,22 +5,20 @@
 
 {% block content %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
 
       {% include '_partials/_quick-nav.twig' %}
 
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">This simple utility classes provides a wide range of border configurations including setting border radius.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 25 } %}
     </section>
   </div>
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <section class="site-container">
       <div data-bk-layout="p:rl s:9 s:pl:3 m:8 m:pl:4 l:7 l:pl:5" class="pad-t">
         <h3 class="font-l">Standard Widths</h3>
@@ -148,7 +146,5 @@
       </div>
     </section>
   </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}

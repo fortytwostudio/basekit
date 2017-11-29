@@ -5,12 +5,12 @@
 
 {% block content %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
 
       {% include '_partials/_quick-nav.twig' %}
 
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Buttons can be tricky little buggers to get right. With the exception of the simple Primary and Secondary styles, buttons will almost always be styled depending on the project and can quickly become unwieldy.</p>
@@ -19,13 +19,10 @@
 
         <p>The best course of action (and this is really for the designers) is to start with and try to keep things simple. Don’t combine too many combinations and be wary of where buttons are used.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 50 } %}
-
     </section>
   </div>
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <section class="site-container">
 
       <div data-bk-layout="p:trl m:4"class="pad-b">
@@ -113,8 +110,7 @@
   </div>
 
 
-
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
 
       <div data-bk-links="primary underline-initial">
@@ -199,7 +195,5 @@
       </div>
     </div>
   </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}

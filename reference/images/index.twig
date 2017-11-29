@@ -5,11 +5,13 @@
 {% set pageHeaderImg = ' style="background-image: url(/imgs/placeholders/hero--narrow.jpg); background-blend-mode: multiply;"' %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">Logos</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">Logos</h2>
+
       <div data-bk-layout="s:9 m:8 l:7">
         <div data-bk-layout class="bg-grey">
           <h3 class="font-m | margin-b">Main site logo</h3>
@@ -54,14 +56,12 @@
           <iframe src="/demo/reference/" width="100%" height="600"></iframe>
         </div>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 0 } %}
     </section>
   </div>
 
 
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <section class="site-container">
       <h2 data-bk-layout class="font-xxl">Social Logos</h2>
       <ul>
@@ -101,10 +101,5 @@
       </ul>
     </section>
   </div>
-
-
-
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}

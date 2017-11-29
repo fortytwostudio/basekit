@@ -4,22 +4,20 @@
 {% set slug = "tables" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="alert alert--simple">Responsive tables are currently broken.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 60 } %}
-
     </section>
   </div>
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <section class="site-container">
       <div data-bk-layout>
 
@@ -250,7 +248,5 @@
 
     </section>
   </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}
