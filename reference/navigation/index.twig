@@ -4,11 +4,12 @@
 {% set slug = "nav" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-<div class="bg-white--tint pad">
+<div class="w-100 bg-white pad">
   <section class="site-container">
-    <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+    {% include '_partials/_quick-nav.twig' %}
+
+    <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
     <div data-bk-layout="s:9 m:8 l:7">
       <p>The basic <code>.nav</code> class. This simply inlines the list items and links by setting them to display block.</p>
@@ -59,12 +60,10 @@
         <li><a href="#" class="bg-grey--light">Item 4</a></li>
       </ul>
     </div>
-
-    {% include "_partials/_status.twig" with { value : 25 } %}
   </section>
 </div>
 
-<div class="bg-white pad">
+<div class="w-100 bg-white--tint pad">
   <div class="site-container">
     <div data-bk-layout>
       <h2 class="font-xl">Standard Navigation</h2>
@@ -135,8 +134,6 @@
     </div>
   </div>
 </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}
 

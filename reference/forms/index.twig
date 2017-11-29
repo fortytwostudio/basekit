@@ -4,24 +4,22 @@
 {% set slug = "forms" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte" data-bk-links="primary underline-initial exit">
         <p class="font-m">By default Basekit does not style forms. However, a scoping class to set normalised defaults is provided along with an example “theme” style.</p>
 
         <p>The examples below display a standard form style which has foundations in <a href="https://github.com/ireade/formhack" title="View Formhack on Github" target="_blank" rel="noopener">FormHack</a>, and an example theme style demonstrating how the standard forms can be overwritten and extended.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 90 } %}
-
     </section>
   </div>
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <div class="site-container">
       <form data-bk-layout="m:6" class="bk-form" action="POST">
         <h4 class="font-l">Standard Form</h4>
@@ -255,7 +253,7 @@
         <h4 class="font-l">Themed form</h4>
         <p><small>This form uses CSS that overrides and/or extends the standard form style.</small></p>
 
-        <fieldset data-bk-layout class="br-2 bg-tertiary--light margin-t">
+        <fieldset class="margin-t">
 
           <legend>Input Types</legend>
 
@@ -382,7 +380,7 @@
           </div>
         </fieldset>
 
-        <fieldset data-bk-layout class="br-2 bg-tertiary--light margin-t">
+        <fieldset class="margin-t">
           <legend>Textarea</legend>
           <div class="bk-form--ext__combined">
             <label for="ext-textarea">Input Type Textarea</label>
@@ -390,7 +388,7 @@
           </div>
         </fieldset>
 
-        <fieldset data-bk-layout class="br-2 bg-tertiary--light margin-t">
+        <fieldset class="margin-t">
           <legend>Buttons and Input Type Submit</legend>
 
           <div class="margin-b">
@@ -424,7 +422,7 @@
           <input type="image" src="https://placeholdit.imgix.net/~text?txtsize=16&txt=IMAGE%20INPUT&w=180&h=50&bg=004369&txtclr=ffffff">
         </fieldset>
 
-        <fieldset data-bk-layout class="br-2 bg-tertiary--light margin-t">
+        <fieldset class="margin-t">
           <legend>Select and Option Field Types</legend>
 
           <div class="bk-form--ext__combined  margin-b">
@@ -488,7 +486,4 @@
 
     </div>
   </div>
-
-{% include '_partials/_pagination.twig' %}
-
 {% endblock %}

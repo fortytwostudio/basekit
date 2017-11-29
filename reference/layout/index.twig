@@ -1,48 +1,43 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Layout" %}
+{% set title = "Grid Layout" %}
 {% set slug = "layout" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint lighter pad" id="intro">
+  <div class="w-100 bg-white lighter pad" id="intro">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Basekit layout system is based on a ”faux grid” idea and built with CSS <em>inline-block</em>. Rather than classes it is applied through the <em>data</em> attribute.</p>
 
         <p>Once HTML white-space has been removed, inline-block provides the flexibility and robustness that floats cans truggle with. Inline-block items can be vertically aligned and flow more consistently. The data attribute allows greater separation of layout styles from other CSS and classes, it also avoids cramming lots of stuff into the class attribute.</p>
+      </div>
 
-        <div data-bk-layout="to:m:p:0 m:6 m:p:r">
+        <div data-bk-layout="to:m:p:0 m:5">
           <div class="alert--simple alert--positive bn font-s">
-            <h3 class="font-bold font-upper font-n margin-b">Layout Guide</h3>
+            <h3 class="font-bold font-upper font-n">Layout Guide</h3>
 
             <p class="margin-b">Until this section is developed further, I've pulled togther a PDF document explaining how the default layout for Basekit works.</p>
 
             <p ><a href="/dl/basekit-layout.pdf" class="btn-primary arrow-dl">Basekit Layout Guide</a></p>
-          </div>
-        </div>
 
-        <div data-bk-layout="to:m:p:0 m:6 m:p:l">
-          <div class="alert--simple alert--positive bn font-s">
 
-            <h3 class="font-bold font-upper font-n margin-b">Breakpoints Visualised</h3>
+            <h3 class="font-bold font-upper font-n pad-t">Breakpoints Visualised</h3>
 
             <p class="margin-b">To help designers better understand which devices sit at which breakpoints here is another download that visualises common devices in each breakpoint. However it's important to keep in mind that these devices are not definitive and it changes regularly. The breakpoints used in Basekit are initial defaults chosen to sit between common screen sizes. It is possible to add additional breakpoints, sometimes named <i>tweakpoints</i> to fine tune layouts.</p>
 
             <p><a href="/dl/breakpoints-visualised.pdf" class="btn-primary arrow-dl">Breakpoints Visualised</a></p>
           </div>
         </div>
-      </div>
-
-      {% include "_partials/_status.twig" with { value : 75 } %}
 
     </section>
   </div>
 
-  <div class="bg-white pad" id="grid">
+  <div class="w-100 bg-white--tint  pad" id="grid">
     <section class="site-container">
 
       <h3 data-bk-layout="p:trl" class="font-l">The Grid</h3>
@@ -191,7 +186,7 @@
     </section>
   </div>
 
-  <div class="bg-white--tint pad" id="push-pull">
+  <div class="w-100 bg-white pad" id="push-pull">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Push Right &amp; Left</h3>
 
@@ -216,7 +211,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad" id="alignment">
+  <div class="w-100 bg-white--tint  pad" id="alignment">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Vertical Align Middle</h3>
 
@@ -362,7 +357,7 @@
     </section>
   </div>
 
-  <div class="bg-white--tint pad" id="padding">
+  <div class="w-100 bg-white pad" id="padding">
     <section class="site-container">
 
       <h3 data-bk-layout="p:trl" class="font-l">Padding</h3>
@@ -418,7 +413,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad" id="padding-size">
+  <div class="w-100 bg-white--tint  pad" id="padding-size">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Padding Sizes</h3>
 
@@ -439,7 +434,7 @@
     </section>
   </div>
 
-  <div class="bg-secondary--lighter pad" id="widths">
+  <div class="w-100 bg-secondary--lighter pad" id="widths">
     <section class="site-container">
 
       <h3 data-bk-layout="p:trl" class="font-l">Simple Widths</h3>
@@ -451,7 +446,7 @@
       </div>
 
       <ul data-bk-layout class="color-white">
-        {% for width in [20, 25, 33, 50, 66, 75, 80, 100] %}
+        {% for width in [15, 20, 25, 33, 50, 66, 75, 80, 85, 100] %}
           <li data-bk-layout="p:tb">
             <span data-bk-layout class="bg-secondary--dark w-{{ width }}">
               {{ width }}% width
@@ -519,7 +514,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad" id="padding-size" data-bk-links="primary underline-hover">
+  <div class="w-100 bg-white pad" id="padding-size" data-bk-links="primary underline-hover">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Site Container</h3>
 
@@ -540,7 +535,5 @@
       <p data-bk-layout><code>class="site-container <strong>w-100</strong>"</code> I will fit to the maxiumum width and 100% of the screen width if less than the maximum width.</p>
     </div>
   </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}

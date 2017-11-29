@@ -19,10 +19,22 @@
     <a class="skip-link" href="#content">Skip to content</a>
     <a class="skip-link" href="#main-nav">Skip to navigation</a>
 
-    {% block content %}
-    {% endblock %}
+    <div class="flex">
+      <div data-bk-layout="p:t" class="flex w-m-20 w-l-15 bg-grey--lighter">
+        <div data-bk-layout data-bk-links="primary underline-hover" class="font-xs">
+          <h1 class="font-l font-light margin-b">
+            <span class="hide">{{ siteName }} </span>Style Guide
+          </h1>
 
-    {# {% include "includes/_site-footer.twig" %} #}
+           <p>{{ siteName }} is built using Basekit, a frontend toolkit designed specifically for FortyTwo Studio web projects and balanced for flexibility, optimisation, and design consistency.</p>
+        </div>
+      </div>
+
+      <div class="flex w-m-80 w-l-85">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
 
     {# Not the latest version, because compatibility #}
     <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

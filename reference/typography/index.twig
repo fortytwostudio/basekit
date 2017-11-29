@@ -4,11 +4,12 @@
 {% set slug = "typography" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad" id="intro">
+  <div class="w-100 bg-white pad" id="intro">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Basekit offers various font classes for very targetted styling.</p>
@@ -17,40 +18,10 @@
 
         <p data-bk-links="primary underline-initial down">In addition to the font style classes, a <a href="#rte">rich text content wrapper</a> class is also available that scopes and styles content output from rich text editor fields.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 75 } %}
     </section>
   </div>
 
-  <div class="bg-tertiary--lighter pad" id="font-stacks">
-    <section class="site-container flex">
-      <h3 data-bk-layout class="font-l">Font Stacks</h3>
-
-      <div data-bk-layout="l:4" class="pad-b flex">
-        <div>
-          <h4 class="font-m pad-xs-b flex--start">Default <strong>sans-serif</strong></h4>
-
-          <p>-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif</p>
-        </div>
-      </div>
-      <div data-bk-layout="l:4" class="pad-b flex">
-        <div class="font-alt">
-          <h4 class="font-m pad-xs-b flex--start">Default <strong>serif</strong></h4>
-
-          <p>georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif</p>
-        </div>
-      </div>
-      <div data-bk-layout="l:4" class="pad-b flex">
-        <div class="font-mono">
-          <h4 class="font-m pad-xs-b flex--start">Default <strong>monospace</strong></h4>
-
-          <p>'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="bg-white--tint pad" id="font-sizes">
+  <div class="w-100 bg-white--tint pad" id="font-sizes">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Font Sizes</h3>
 
@@ -88,7 +59,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad" id="font-weights">
+  <div class="w-100 bg-white pad" id="font-weights">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Font Weights</h3>
 
@@ -113,7 +84,7 @@
     </section>
   </div>
 
-  <div class="bg-tertiary--lighter pad" id="font-kerning">
+  <div class="w-100 bg-tertiary--lighter pad" id="font-kerning">
     <section class="site-container flex">
       <h3 data-bk-layout class="font-l">Font Kerning</h3>
 
@@ -122,7 +93,7 @@
   </div>
 
 
-  <div class="bg-white--tint pad" id="multi-line">
+  <div class="w-100 bg-white--tint pad" id="multi-line">
     <section class="site-container">
 
       <h3 data-bk-layout="p:trl" class="font-l">Multi-line Examples</h3>
@@ -167,7 +138,7 @@
     </section>
   </div>
 
-  <div class="bg-white pad-t" id="alignment">
+  <div class="w-100 bg-white pad-t" id="alignment">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Alignment</h3>
 
@@ -214,7 +185,7 @@
     </section>
   </div>
 
-  <div class="bg-white--tint pad" id="font-styles">
+  <div class="w-100 bg-white--tint pad" id="font-styles">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Font Styles</h3>
 
@@ -268,7 +239,7 @@
     </section>
   </div>
 
-  <div class="bg-white  pad-t" id="fluid-fonts">
+  <div class="w-100 bg-white  pad-t" id="fluid-fonts">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Fluid font size + paragraphs</h3>
 
@@ -324,7 +295,7 @@
     </section>
   </div>
 
-  <div class="bg-white--tint  pad" id="rte">
+  <div class="w-100 bg-white--tint  pad" id="rte">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Rich-text editor / User content</h3>
 
@@ -359,7 +330,7 @@
     </section>
   </div>
 
-    <div class="bg-white pad" id="intro">
+    <div class="w-100 bg-white pad" id="intro">
       <section class="site-container">
         <h2 data-bk-layout class="font-xxl">Code</h2>
 
@@ -397,7 +368,7 @@
       </section>
     </div>
 
-  <div class="no-js-hide | bg-tertiary--light align-c pad-l">
+  <div class="no-js-hide | w-100 bg-tertiary--light align-c pad-l">
     <section class="site-container">
       <div data-bk-layout="l:6" data-bk-links="white dim underline">
         <h3 class="font-hero color-primary--darker pad-b">
@@ -414,7 +385,5 @@
       </div>
     </section>
   </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}

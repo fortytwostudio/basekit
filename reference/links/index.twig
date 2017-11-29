@@ -1,27 +1,25 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Links" %}
+{% set title = "Link Styles" %}
 {% set slug = "links" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">Similar to the Basekit layout attribute, links in Basekit are also applied using a data attribute: <code>data-bk-links</code>.</p>
 
         <p>This scoping to a data attribute allows simpler configuration and less stuff in the class attribute.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 80 } %}
-
     </section>
   </div>
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Links styles</h3>
 
@@ -223,7 +221,5 @@
       </div>
     </div>
   </section>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}

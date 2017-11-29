@@ -4,11 +4,12 @@
 {% set slug = "spacing" %}
 
 {% block content %}
-{% include '_partials/_quick-nav.twig' %}
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
-      <h2 data-bk-layout class="font-xxl">{{ title }}</h2>
+      {% include '_partials/_quick-nav.twig' %}
+
+      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
 
       <div data-bk-layout="s:9 m:8 l:7" class="rte">
         <p class="font-m">The space padding class offers a consistent group of options to apply white space above, below, or above and below content separate from the grid system or custom CSS.</p>
@@ -17,13 +18,10 @@
 
         <p>While this class is does not offer responsive breakpoint options, it is fluid from small screens up to the website max width, at which point it will lock to the defined value.</p>
       </div>
-
-      {% include "_partials/_status.twig" with { value : 75 } %}
-
     </section>
   </div>
 
-  <div class="bg-white pad">
+  <div class="w-100 bg-white--tint pad">
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-l">Spacing Examples</h3>
 
@@ -47,7 +45,7 @@
   </div>
 
 
-  <div class="bg-white--tint pad">
+  <div class="w-100 bg-white pad">
     <section class="site-container">
       <div data-bk-layout="m:5 m:pl:1" class="pad-b">
         <h3 class="font-l margin-b">Avilable classes</h3>
@@ -108,7 +106,5 @@
       </div>
     </section>
   </div>
-
-{% include '_partials/_pagination.twig' %}
 
 {% endblock %}
