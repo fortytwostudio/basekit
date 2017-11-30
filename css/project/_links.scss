@@ -123,6 +123,7 @@ a:not([class*="btn-"]) {
       outline: 1px dotted currentColor;
       outline-offset: 0.15em;
     }
+
     &:active {
       outline: 0;
     }
