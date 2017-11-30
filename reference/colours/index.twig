@@ -6,12 +6,12 @@
 
 {% block content %}
 
-  <div class="pad pad-l-b w-100" id="intro">
+  <div class="pad pad-lg-b w-100" id="intro">
     <section class="site-container">
 
       {% include '_partials/_quick-nav.twig' %}
 
-      <h2 data-bk-layout class="font-xxl font-light pad-l-t">Brand Colours</h2>
+      <h2 data-bk-layout class="font-xxl font-light pad-lg-t">Brand Colours</h2>
 
       <div data-bk-layout="s:9 m:8 l:7 l:pl:5" class="rte">
         <p class="font-md">Brand colours change from project to project and will always be provided by a designer or the client's brand guidelines. The tertiary colour is optional but highly recommended for alternate “states” and backgrounds.</p>
@@ -27,22 +27,22 @@
             <span class="hide-text">{{ colour|capitalize }}</span>
           </li>
 
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--darker color-white pad-s">
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--darker color-white pad-sm">
             <span class="hide-text">darker</span>
           </li>
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--dark color-white pad-s">
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--dark color-white pad-sm">
             <span class="hide-text">dark</span>
           </li>
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--light color-black pad-s">
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--light color-black pad-sm">
             <span class="hide-text">light</span>
           </li>
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--lighter color-black | pad-s">
+          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--lighter color-black | pad-sm">
             <span class="hide-text">lighter</span>
           </li>
         </ol>
       {% endfor %}
 
-      <div data-bk-layout="s:6 l:3" class="font-s rte | pad-l-t">
+      <div data-bk-layout="s:6 l:3" class="font-s rte | pad-lg-t">
         <p>Restricting the palette to three brand colours each with two darker and two lighter tones helps to balance flexibility in the design with reduced complexity and development time in the build.</p>
         <p>Avoid using black or white as primary colours when there is a choice as this creates unecessary duplication.</p>
       </div>
@@ -51,7 +51,7 @@
   </div>
 
 
-  <div class="bg-white--tint pad-l w-100 bt b-grey--light" id="standard-values">
+  <div class="bg-white--tint pad-lg w-100 bt b-grey--light" id="standard-values">
     <section class="site-container">
 
       <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
@@ -80,11 +80,11 @@
           <p class="font-md margin-b">Grey</p>
           {% for colour in ['grey'] %}
             <ol data-bk-layout="p:0">
-              <li data-bk-layout="" class="w-20 inline-block | bg-{{ colour }}--darker pad pad-l-b"><span class="hide-text">darker</span></li>
-              <li class="w-20 inline-block | bg-{{ colour }}--dark pad pad-l-b"><span class="hide-text">dark</span></li>
-              <li class="w-20 inline-block | bg-{{ colour }} pad pad-l-b"><span class="hide-text">standard</span></li>
-              <li class="w-20 inline-block | bg-{{ colour }}--light pad pad-l-b"><span class="hide-text">light</span></li>
-              <li class="w-20 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
+              <li data-bk-layout="" class="w-20 inline-block | bg-{{ colour }}--darker pad pad-lg-b"><span class="hide-text">darker</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }}--dark pad pad-lg-b"><span class="hide-text">dark</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }} pad pad-lg-b"><span class="hide-text">standard</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }}--light pad pad-lg-b"><span class="hide-text">light</span></li>
+              <li class="w-20 inline-block | bg-{{ colour }}--lighter pad pad-lg-b"><span class="hide-text">lighter</span></li>
             </ol>
           {% endfor %}
         </div>
@@ -93,8 +93,8 @@
           <p class="font-s margin-b">White Tint next to lightest Grey</p>
           {% for colour in ['grey'] %}
             <ol data-bk-layout="p:0">
-              <li class="w-50 inline-block | bg-white--tint pad pad-l-b"><span class="hide-text">lighter</span></li>
-              <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
+              <li class="w-50 inline-block | bg-white--tint pad pad-lg-b"><span class="hide-text">lighter</span></li>
+              <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-lg-b"><span class="hide-text">lighter</span></li>
             </ol>
           {% endfor %}
         </div>
