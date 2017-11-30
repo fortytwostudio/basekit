@@ -11,13 +11,13 @@
 
       <h2 data-bk-layout class="font-xxl font-light pad-lg-t">{{ title }}</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p class="font-md">Basekit layout system is based on a ”faux grid” idea and built with CSS <em>inline-block</em>. Rather than classes it is applied through the <em>data</em> attribute.</p>
 
         <p>Once HTML white-space has been removed, inline-block provides the flexibility and robustness that floats cans truggle with. Inline-block items can be vertically aligned and flow more consistently. The data attribute allows greater separation of layout styles from other CSS and classes, it also avoids cramming lots of stuff into the class attribute.</p>
       </div>
 
-        <div data-bk-layout="to:m:p:0 m:5">
+        <div data-bk-layout="to:md:p:0 md:5">
           <div class="alert--simple alert--positive bn font-s">
             <h3 class="font-bold font-upper font-nm">Layout Guide</h3>
 
@@ -42,7 +42,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">The Grid</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>By default BaseKit is based on the common twelve column layout, this provides a great flexibility when dividing the grid into columns. However Basekit is not resticted to any number of columns.</p>
 
         <p>The ”faux grid” idea mentioned above relates to there being one grid across all screen size (there are no ”tiers” as seen in other frameworks). If you want a four column grid at small screen size simply <i>fake</i> it by using three columns for each small screen column.</p>
@@ -190,7 +190,7 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Push Right &amp; Left</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>The <code>pr:</code> and <code>pl:</code> values allow you to push blocks towards the right or left.</p>
       </div>
 
@@ -215,7 +215,7 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Vertical Align Middle</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>In <code>data-bk-layout</code> simply specify <code>middle</code> to aling items along the middle.</p>
       </div>
 
@@ -238,7 +238,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Vertical Align Bottom</h3>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>bottom</code> to aling items to the bottom.</p>
       </div>
 
@@ -261,7 +261,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Align Right + Vertical Align Bottom</h3>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>right bottom</code> to aling items to the right and bottom.</p>
       </div>
 
@@ -284,7 +284,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Align Center + Vertical Align Middle</h3>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>middle center</code> to aling items this way.</p>
       </div>
 
@@ -313,7 +313,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Single Item Alignment</h3>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>To position one particular item to the bottom specify <code>self-bottom</code>in <code>data-bk-layout</code>. <strong>Currently this only works for bottom alignment</strong>.</p>
       </div>
 
@@ -331,7 +331,7 @@
         </ul>
       </div>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>Single item alignment will override any other alignment settings. Below the container specifies a <code>middle center</code> alignment but the second item is forced to the bottom.</p>
       </div>
 
@@ -362,51 +362,51 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Padding</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>Coloured edges indicate where padding has been applied. Unlike the spacer or margin classes the available values for grid padding provide a full range of options around every edge.</p>
       </div>
 
       <ul data-bk-layout="middle  p:0">
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:t" class="bg-primary" src="/imgs/placeholders/square.png?text=p:t" alt="Top">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:tr" class="bg-primary" src="/imgs/placeholders/square.png?text=p:tr" alt="Top Right">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:tb" class="bg-primary" src="/imgs/placeholders/square.png?text=p:tb" alt="Top Bottom">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:tl" class="bg-primary" src="/imgs/placeholders/square.png?text=p:tl" alt="Top Left">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:b" class="bg-primary" src="/imgs/placeholders/square.png?text=p:b" alt="Bottom">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:bl" class="bg-primary" src="/imgs/placeholders/square.png?text=p:bl" alt="Bottom Left">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:rl" class="bg-primary" src="/imgs/placeholders/square.png?text=p:rl" alt="Right Left">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:rb" class="bg-primary" src="/imgs/placeholders/square.png?text=p:rb" alt="Right Bottom">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:r" class="bg-primary" src="/imgs/placeholders/square.png?text=p:r" alt="Right">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:l" class="bg-primary" src="/imgs/placeholders/square.png?text=p:l" alt="Left">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:trb" class="bg-primary" src="/imgs/placeholders/square.png?text=p:trb" alt="Top Right Bottom">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:rbl" class="bg-primary" src="/imgs/placeholders/square.png?text=p:rbl" alt="Right Bottom Left">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:tbl" class="bg-primary" src="/imgs/placeholders/square.png?text=p:tbl" alt="Top Bottom Left">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:trl" class="bg-primary" src="/imgs/placeholders/square.png?text=p:trl" alt="Top Right Left">
         </li>
       </ul>
@@ -417,17 +417,17 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Padding Sizes</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>There are three configurable sizes of padding, the default value and small and large values. These are half and double the default padding value.</p>
 
         <p>Unlike the spacer class there is no “larger” option.</p>
       </div>
 
       <ul data-bk-layout="middle  p:0">
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:sm" class="bg-primary" src="/imgs/placeholders/square.png?text=p:sm" alt="Small Padding">
         </li>
-        <li data-bk-layout="s:4 l:3">
+        <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:lg" class="bg-primary" src="/imgs/placeholders/square.png?text=p:lg" alt="Large Padding">
         </li>
       </ul>
@@ -439,7 +439,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Simple Widths</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>This simple width class offers pre-defined width values for use without concern for the grid. Sticking with <code>data-bk-layout</code> is preferred to maintain consistency but sometimes simply setting 100% or 20% width is required. In fact, a 12 column grid (the default) can’t be broken into certain values (20% is 2.4 which would make a useless column width). Really the most useful classes here would be 20% and 100%.</p>
 
         <p>This class is also fully responsive with options across all defined breakpoints.</p>
@@ -518,7 +518,7 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Site Container</h3>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>The site container class makes sure the website does not expand beyond the defined maximum width while allowing you to break out if required.</p>
 
         <p><code>class="<strong>site-container</strong></code> is the primary class and limits the site content to the maximum width on large screens. But when a screen is less than the maxiumum width the website will never be larger than a predefined percentage of the screen width, 96% by default.</p>

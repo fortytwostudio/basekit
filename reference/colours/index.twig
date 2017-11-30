@@ -13,12 +13,12 @@
 
       <h2 data-bk-layout class="font-xxl font-light pad-lg-t">Brand Colours</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7 l:pl:5" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" class="rte">
         <p class="font-md">Brand colours change from project to project and will always be provided by a designer or the client's brand guidelines. The tertiary colour is optional but highly recommended for alternate “states” and backgrounds.</p>
       </div>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
-        <ol data-bk-layout="s:6 l:3">
+        <ol data-bk-layout="sm:6 lg:3">
           <li class="margin-b font-md color-{{ colour }}">
             {{ colour|capitalize }}
           </li>
@@ -27,22 +27,22 @@
             <span class="hide-text">{{ colour|capitalize }}</span>
           </li>
 
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--darker color-white pad-sm">
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--darker color-white pad-sm">
             <span class="hide-text">darker</span>
           </li>
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--dark color-white pad-sm">
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--dark color-white pad-sm">
             <span class="hide-text">dark</span>
           </li>
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--light color-black pad-sm">
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--light color-black pad-sm">
             <span class="hide-text">light</span>
           </li>
-          <li data-bk-layout="l:p:sm" class="bg-{{ colour }}--lighter color-black | pad-sm">
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--lighter color-black | pad-sm">
             <span class="hide-text">lighter</span>
           </li>
         </ol>
       {% endfor %}
 
-      <div data-bk-layout="s:6 l:3" class="font-s rte | pad-lg-t">
+      <div data-bk-layout="sm:6 lg:3" class="font-s rte | pad-lg-t">
         <p>Restricting the palette to three brand colours each with two darker and two lighter tones helps to balance flexibility in the design with reduced complexity and development time in the build.</p>
         <p>Avoid using black or white as primary colours when there is a choice as this creates unecessary duplication.</p>
       </div>
@@ -56,14 +56,14 @@
 
       <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
 
-      <div data-bk-layout="l:7  l:pl:5" data-bk-links="primary underline" class="rte">
+      <div data-bk-layout="lg:7 lg:pl:5" data-bk-links="primary underline" class="rte">
         <p class="font-md">These colours do <em>not change</em> on a per-project basis, this provides consistency for designers and developers and reduced project time.</p>
 
         <p>The notification colours have been carefully chosen to conform to AA accessibility colour contrast requirements. While the black and white tints exist to provide a slightly less harsh option.</p>
       </div>
 
       {% for colour in ['black', 'white'] %}
-        <div data-bk-layout="s:6 l:3">
+        <div data-bk-layout="sm:6 lg:3">
           <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }} bdr-a bdr-grey--light">
             <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-md">
               {{ colour|capitalize }}
@@ -75,12 +75,12 @@
         </div>
       {% endfor %}
 
-      <div data-bk-layout="m:6">
+      <div data-bk-layout="md:6">
         <div data-bk-layout class="bg-white bdr-a bdr-grey--light">
           <p class="font-md margin-b">Grey</p>
           {% for colour in ['grey'] %}
             <ol data-bk-layout="p:0">
-              <li data-bk-layout="" class="w-20 inline-block | bg-{{ colour }}--darker pad pad-lg-b"><span class="hide-text">darker</span></li>
+              <li data-bk-layout class="w-20 inline-block | bg-{{ colour }}--darker pad pad-lg-b"><span class="hide-text">darker</span></li>
               <li class="w-20 inline-block | bg-{{ colour }}--dark pad pad-lg-b"><span class="hide-text">dark</span></li>
               <li class="w-20 inline-block | bg-{{ colour }} pad pad-lg-b"><span class="hide-text">standard</span></li>
               <li class="w-20 inline-block | bg-{{ colour }}--light pad pad-lg-b"><span class="hide-text">light</span></li>
@@ -104,7 +104,7 @@
         <div data-bk-layout="p:sm" class="bg-white bdr-a bdr-grey--light">
           <h3 data-bk-layout="p:sm p:trl" class="font-md margin-b">Notifications</h3>
           {% for colour in ['', 'warn', 'neutral', 'positive'] %}
-            <div data-bk-layout="p:sm p:rbl s:3">
+            <div data-bk-layout="p:sm p:rbl sm:3">
               <ol class="font-md">
                 <li data-bk-layout class="alert--{{ colour }} alert--simple pad-xl-b bn">
                   {{ colour ? colour|capitalize : 'Notice' }}

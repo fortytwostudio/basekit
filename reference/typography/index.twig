@@ -11,7 +11,7 @@
 
       <h2 data-bk-layout class="font-xxl font-light pad-lg-t">{{ title }}</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p class="font-md">Basekit offers various font classes for very targetted styling.</p>
 
         <p>Fonts can be fluid or fixes. Fluid fonts will adjust in size between a specified min and max size limits depending on the screen size. Fixed fonts will remain the same size regardless of the screen size. Fluid fonts are ideal for headings short blocks of text while fixed fonts are best suited to long blocks of text.</p>
@@ -25,7 +25,7 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Font Sizes</h3>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>In Basekit all headings are set to the same size by default, since it is not necessarily true that you would want a large h1 and a small h4. Sometimes you might want them to be the same size, othertimes it may be have visual weight that does not consist with semantic weight.</p>
 
         <p>Due to this, Basekit abstracts out font weights and styles to specific utility classes which must be applied to get the desired style. Otherwise all headings and text sizes will, for the most part, remain the same. This also has the added advantage of being able to apply consistent styles to <em>any</em> text elements, regardless of the markup.</p>
@@ -35,7 +35,7 @@
 
       <ol data-bk-layout="p:0 bottom" class="flex">
         {% for size, val in {'Hero' : 'hero', 'Largest' : 'xxl', 'Larger' : 'xl', 'Large' : 'lg'} %}
-          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+          <li data-bk-layout="smd:6 md:4 lg:3" class="flex">
             <dl data-bk-layout="p:0 center" class="bdr-a bdr-grey--light bg-white flex flex--content-end">
               <dt data-bk-layout class="font-{{ val }}">Abz</dt>
               <dd data-bk-layout="p:sm" class="font-s bdr-t bdr-grey--light">{{ size }}</dd>
@@ -48,7 +48,7 @@
 
       <ol data-bk-layout="p:0 bottom" class="flex">
         {% for size, val in {'Medium': 'md', 'Normal': 'nm', 'Small': 'sm', 'Smaller': 'xs'} %}
-          <li data-bk-layout="s:6 m:4 l:3" class="flex">
+          <li data-bk-layout="smd:6 md:4 lg:3" class="flex">
             <dl data-bk-layout="p:0 center" class="bdr-a bdr-grey--light bg-white flex flex--content-end">
               <dt data-bk-layout class="font-{{ val }}">Abz</dt>
               <dd data-bk-layout="p:sm" class="font-s bdr-t bdr-grey--light">{{ size }}</dd>
@@ -64,7 +64,7 @@
       <h3 data-bk-layout="p:trl" class="font-lg">Font Weights</h3>
 
       {% for fontWeight in ['bold', 'normal', 'light'] %}
-        <div data-bk-layout="p:rl s:6 m:4" class="pad">
+        <div data-bk-layout="p:rl smd:6 md:4" class="pad">
           <ol class="bdr-a bdr-grey--light bg-white">
             <li data-bk-layout="p:0" class="font-s bdr-b bdr-grey--light">
               <div data-bk-layout class="font-s">{{ fontWeight|capitalize }}</div>
@@ -90,7 +90,7 @@
 
       <h3 data-bk-layout="p:trl" class="font-lg">Line Heights</h3>
 
-      <div data-bk-layout="l:8" class="rte">
+      <div data-bk-layout="lg:8" class="rte">
         <p>As fonts get increase or decrease in size from the default value their line-height also adjusts relative to the font size. At smaller font sizes this does not tend to be a problem, but at larger sizes the line height can increase too far.</p>
       </div>
 
@@ -135,12 +135,12 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Font Styles</h3>
 
-      <div data-bk-layout="l:7" class="rte">
+      <div data-bk-layout="lg:7" class="rte">
         <p>The following examples show how the specified classes can alter the style of a font. Additional classes can be created if required, or classes can be removed if they're not necessary.</p>
       </div>
 
       <ol class="flex">
-        <li data-bk-layout="m:4" class="pad flex">
+        <li data-bk-layout="md:4" class="pad flex">
           <div data-bk-layout="p:0" class="bdr-a bdr-grey--light bg-white">
             <p data-bk-layout class="bdr-b bdr-grey--light font-s">Upper</p>
             <div data-bk-layout>
@@ -152,7 +152,7 @@
         </li>
 
 
-        <li data-bk-layout="m:4" class="pad flex">
+        <li data-bk-layout="md:4" class="pad flex">
           <div data-bk-layout="p:0" class="bdr-a bdr-grey--light bg-white">
             <p data-bk-layout class="bdr-b bdr-grey--light font-s">Italic</p>
             <div data-bk-layout>
@@ -163,7 +163,7 @@
           </div>
         </li>
 
-        <li data-bk-layout="m:4" class="pad flex">
+        <li data-bk-layout="md:4" class="pad flex">
           <div data-bk-layout="p:0" class="bdr-a bdr-grey--light bg-white">
             <p data-bk-layout class="bdr-b bdr-grey--light font-s">Alt Font</p>
             <div data-bk-layout>
@@ -181,7 +181,7 @@
     <section class="site-container">
       <h3 data-bk-layout="p:trl" class="font-lg">Rich-text editor / User content</h3>
 
-      <div data-bk-layout="l:7" data-bk-links="primary underline" class="rte">
+      <div data-bk-layout="lg:7" data-bk-links="primary underline" class="rte">
         <p>Rich-text content is, typically, content output by the <strong>Content Management System</strong> and written by the user in a <strong>Rich-Text Editor</strong> field. Here we tightly scope the content from the rest of the website content to reduce conflicts or the need to reset styles.</p>
 
         <p>Link styles are handled by a separate <a href="../links/">link scope selector</a> rather than the <code>.rte</code> class, this allows greater freedom when styling links.</p>
@@ -189,13 +189,13 @@
         <p>The goal of the <code>.rte</code> scope class is to cover as many common situations as is sensible without creating too much unused CSS. Users should not have free reign with rich-text editors otherwise they can quickly cause mayhem.</p>
       </div>
 
-      <div data-bk-layout="m:6" id="rich-text-content">
+      <div data-bk-layout="md:6" id="rich-text-content">
         <div data-bk-layout data-bk-links="primary underline" class="rte bg-white | bdr-a bdr-grey--light">
           {% include "typography/_rte-content.twig" %}
         </div>
       </div>
 
-      <div data-bk-layout="m:6" id="rich-text-content-dark">
+      <div data-bk-layout="md:6" id="rich-text-content-dark">
         <div data-bk-layout data-bk-links="white dim underlin" class="rte bg-black--tint color-white--tint">
           {% include "typography/_rte-content.twig" %}
         </div>

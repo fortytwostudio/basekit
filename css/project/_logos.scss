@@ -22,12 +22,12 @@ $colophon-logo-height: 14px;
   height: rem($site-logo-height) / 2;
   width: rem($site-logo-width) / 2;
 
-  @include mq(m) {
+  @include mq(md) {
     height: rem($site-logo-height / 1.66666);
     width: rem($site-logo-width / 1.66666);
   }
 
-  @include mq(l) {
+  @include mq(lg) {
     height: rem($site-logo-height / 1.33333);
     width: rem($site-logo-width / 1.33333);
   }
