@@ -51,7 +51,7 @@
   </div>
 
 
-  <div class="bg-white--tint pad-lg w-100 bt b-grey--light" id="standard-values">
+  <div class="bg-white--tint pad-lg w-100 bdr-t bdr-grey--light" id="standard-values">
     <section class="site-container">
 
       <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
@@ -64,7 +64,7 @@
 
       {% for colour in ['black', 'white'] %}
         <div data-bk-layout="s:6 l:3">
-          <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }} ba b-grey--light">
+          <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }} bdr-a bdr-grey--light">
             <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-md">
               {{ colour|capitalize }}
             </li>
@@ -76,7 +76,7 @@
       {% endfor %}
 
       <div data-bk-layout="m:6">
-        <div data-bk-layout class="bg-white ba b-grey--light">
+        <div data-bk-layout class="bg-white bdr-a bdr-grey--light">
           <p class="font-md margin-b">Grey</p>
           {% for colour in ['grey'] %}
             <ol data-bk-layout="p:0">
@@ -89,7 +89,7 @@
           {% endfor %}
         </div>
 
-        <div data-bk-layout class="bg-white ba bt-0 b-grey--light">
+        <div data-bk-layout class="bg-white bdr-a bdr-0-t bdr-grey--light">
           <p class="font-s margin-b">White Tint next to lightest Grey</p>
           {% for colour in ['grey'] %}
             <ol data-bk-layout="p:0">
@@ -101,7 +101,7 @@
       </div>
 
       <div data-bk-layout>
-        <div data-bk-layout="p:sm" class="bg-white ba b-grey--light">
+        <div data-bk-layout="p:sm" class="bg-white bdr-a bdr-grey--light">
           <h3 data-bk-layout="p:sm p:trl" class="font-md margin-b">Notifications</h3>
           {% for colour in ['', 'warn', 'neutral', 'positive'] %}
             <div data-bk-layout="p:sm p:rbl s:3">
