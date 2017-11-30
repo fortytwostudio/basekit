@@ -6,7 +6,7 @@
 
 {% block content %}
 
-  <div class="pad pad-l-b w-100 bg-white" id="intro">
+  <div class="pad pad-l-b w-100" id="intro">
     <section class="site-container">
 
       {% include '_partials/_quick-nav.twig' %}
@@ -51,7 +51,7 @@
   </div>
 
 
-  <div class="bg-grey--light pad-l w-100" id="standard-values">
+  <div class="bg-white--tint pad-l w-100 bt b-grey--light" id="standard-values">
     <section class="site-container">
 
       <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
@@ -63,18 +63,20 @@
       </div>
 
       {% for colour in ['black', 'white'] %}
-        <ol data-bk-layout="s:6 l:3" class="font-s color-{{ cycle(['white', 'black'], loop.index0) }}">
-          <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
-            {{ colour|capitalize }}
-          </li>
-          <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b color-grey--dark">
-            Tinted
-          </li>
-        </ol>
+        <div data-bk-layout="s:6 l:3">
+          <ol class="font-s color-{{ cycle(['white', 'black'], loop.index0) }} ba b-grey--light">
+            <li data-bk-layout class="bg-{{ colour }} pad-xl-b font-m">
+              {{ colour|capitalize }}
+            </li>
+            <li data-bk-layout class="bg-{{ colour }}--tint pad-xl-b color-grey--dark">
+              Tinted
+            </li>
+          </ol>
+        </div>
       {% endfor %}
 
       <div data-bk-layout="m:6">
-        <div data-bk-layout class="bg-white">
+        <div data-bk-layout class="bg-white ba b-grey--light">
           <p class="font-m margin-b">Grey</p>
           {% for colour in ['grey'] %}
             <ol data-bk-layout="p:0">
@@ -86,19 +88,20 @@
             </ol>
           {% endfor %}
         </div>
-          <div data-bk-layout class="bg-white">
-            <p class="font-s margin-b">White Tint next to lightest Grey</p>
-            {% for colour in ['grey'] %}
-              <ol data-bk-layout="p:0">
-                <li class="w-50 inline-block | bg-white--tint pad pad-l-b"><span class="hide-text">lighter</span></li>
-                <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
-              </ol>
-            {% endfor %}
-          </div>
+
+        <div data-bk-layout class="bg-white ba bt-0 b-grey--light">
+          <p class="font-s margin-b">White Tint next to lightest Grey</p>
+          {% for colour in ['grey'] %}
+            <ol data-bk-layout="p:0">
+              <li class="w-50 inline-block | bg-white--tint pad pad-l-b"><span class="hide-text">lighter</span></li>
+              <li class="w-50 inline-block | bg-{{ colour }}--lighter pad pad-l-b"><span class="hide-text">lighter</span></li>
+            </ol>
+          {% endfor %}
+        </div>
       </div>
 
       <div data-bk-layout>
-        <div data-bk-layout="p:sm" class="bg-white">
+        <div data-bk-layout="p:sm" class="bg-white ba b-grey--light">
           <h3 data-bk-layout="p:sm p:trl" class="font-m margin-b">Notifications</h3>
           {% for colour in ['', 'warn', 'neutral', 'positive'] %}
             <div data-bk-layout="p:sm p:rbl s:3">
