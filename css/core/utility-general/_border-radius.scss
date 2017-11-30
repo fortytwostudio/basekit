@@ -1,15 +1,10 @@
-$br-0: 0 !default;
-$br-1: 3px !default;
-$br-2: 5px !default;
-$br-3: 8px !default;
-$br-4: 16px !default;
+$border-radius-sizes: (3px, 5px, 8px, 16px) !default;
 
-.br-0 { border-radius: $br-0; }
-.br-1 { border-radius: rem($br-1); }
-.br-2 { border-radius: rem($br-2); }
-.br-3 { border-radius: rem($br-3); }
-.br-4 { border-radius: rem($br-4); }
+@each $border-radius-size in $border-radius-sizes {
+  .br-#{index($border-radius-sizes, $border-radius-size)} { border-radius: $border-radius-size; }
+}
 
+.br-0 { border-radius: 0; }
 .br-100 { border-radius: 100%; }
 .br-pill { border-radius: 9999px; }
 
