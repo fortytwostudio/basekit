@@ -1,10 +1,9 @@
 // The structure of this is straight up pinched from http://tachyons.io/docs/themes/borders/
 
 $border-width-default: 1px !default;
-$border-width-1: 2px !default;
-$border-width-2: 4px !default;
+$border-widths: (2px, 4px, 6px) !default;
 
-.b {
+.bdr {
   &-primary { border-color: color(primary); }
   &-secondary { border-color: color(secondary); }
   &-tertiary { border-color: color(tertiary); }
@@ -14,17 +13,19 @@ $border-width-2: 4px !default;
   &-text { border-color: currentColor; }
 }
 
-.ba { border-style: solid; border-width: rem($border-width-default); }
-.bt { border-top-style: solid; border-top-width: rem($border-width-default); }
-.br { border-right-style: solid; border-right-width: rem($border-width-default); }
-.bb { border-bottom-style: solid; border-bottom-width: rem($border-width-default); }
-.bl { border-left-style: solid; border-left-width: rem($border-width-default); }
-.bn { border-width: 0; }
+@each $border-width in $border-widths {
+  .bdr-#{index($border-widths, $border-width)} { border-width: $border-width; }
+}
 
-.bw-1 { border-width: $border-width-1; }
-.bw-2 { border-width: $border-width-2; }
+.bdr-a { border-style: solid; border-width: rem($border-width-default); }
+.bdr-t { border-top-style: solid; border-top-width: rem($border-width-default); }
+.bdr-r { border-right-style: solid; border-right-width: rem($border-width-default); }
+.bdr-b { border-bottom-style: solid; border-bottom-width: rem($border-width-default); }
+.bdr-l { border-left-style: solid; border-left-width: rem($border-width-default); }
 
-.bt-0 { border-top-width: 0; }
-.br-0 { border-right-width: 0; }
-.bb-0 { border-bottom-width: 0; }
-.bl-0 { border-left-width: 0; }
+
+.bdr-0 { border-width: 0; }
+.bdr-0-t { border-top-width: 0; }
+.bdr-0-r { border-right-width: 0; }
+.bdr-0-b { border-bottom-width: 0; }
+.bdr-0-l { border-left-width: 0; }
