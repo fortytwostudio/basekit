@@ -2,7 +2,7 @@
 $fluid-font-mq-max: ($max-width * 1px);
 
 $fluid-fonts: (
-  l: (
+  lg: (
     minSize: 26px,
     maxSize: 32px,
     lineHeight: 1.2,
@@ -56,16 +56,16 @@ $fluid-fonts: (
     line-height: 1.6;
   }
 
-  &-s {
+  &-sm {
     font-size: rem($font-size - 2);
     line-height: 1.6;
   }
 
-  &-n {
+  &-nm {
     font-size: rem($font-size);
   }
 
-  &-m {
+  &-md {
     font-size: rem(22px);
     line-height: 1.4;
   }
@@ -104,33 +104,4 @@ $fluid-fonts: (
   &-kern {
     font-kerning: normal !important;
   }
-
-  // &-m {
-  //   @include fluid-type(font-size, 320px, $max-width + 0px, 18px, 22px);
-  //   line-height: (20 / 16);
-  // }
-  //
-  // &-l {
-  //   @include fluid-type(font-size, 320px, $max-width + 0px, 22px, 26px);
-  //   line-height: (19 / 16);
-  // }
-  //
-  // &-xl {
-  //   @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 36px);
-  //   line-height: (18 / 16);
-  // }
-  //
-  // &-xxl {
-  //   @include fluid-type(font-size, 320px, $max-width + 0px, 36px, 54px);
-  //   line-height: (17 / 16);
-  // }
-  //
-  // &-hero {
-  //   @include fluid-type(font-size, 320px, $max-width + 0px, 30px, 70px);
-  //   line-height: (16 / 16);
-  // }
-  //
-  // &-default {
-  //   font-family: $font-family;
-  // }
 }
