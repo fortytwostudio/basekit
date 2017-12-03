@@ -1,16 +1,14 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Alert Callouts" %}
+{% set title = "Alerts" %}
 {% set slug = "alerts" %}
 
 {% block content %}
 
-  <div class="w-100 bg-white pad">
+  <div class="w-100 bg-white lighter pad-lg-b" id="intro">
     <section class="site-container">
 
-      {% include '_partials/_quick-nav.twig' %}
-
-      <h2 data-bk-layout class="font-xxl font-light pad-lg-t">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p class="font-md">Callout “alerts” draw attention to important content.</p>

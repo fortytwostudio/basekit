@@ -1,17 +1,15 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Colour" %}
+{% set title = "Brand Colours" %}
 {% set slug = "colours" %}
 {% set pageHeaderColor = "bg-gradient" %}
 
 {% block content %}
 
-  <div class="pad pad-lg-b w-100" id="intro">
+  <div class="w-100 bg-white lighter pad-lg-b" id="intro">
     <section class="site-container">
 
-      {% include '_partials/_quick-nav.twig' %}
-
-      <h2 data-bk-layout class="font-xxl font-light pad-lg-t">Brand Colours</h2>
+      <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
       <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" class="rte">
         <p class="font-md">Brand colours change from project to project and will always be provided by a designer or the client's brand guidelines. The tertiary colour is optional but highly recommended for alternate “states” and backgrounds.</p>
@@ -42,16 +40,16 @@
         </ol>
       {% endfor %}
 
-      <div data-bk-layout="sm:6 lg:3" class="font-s rte | pad-lg-t">
-        <p>Restricting the palette to three brand colours each with two darker and two lighter tones helps to balance flexibility in the design with reduced complexity and development time in the build.</p>
-        <p>Avoid using black or white as primary colours when there is a choice as this creates unecessary duplication.</p>
+      <div data-bk-layout="sm:6 lg:3" class="font-sm rte | pad-lg-t">
+        <p>A palette of three brand colours each with two darker and two lighter tones provides a balance of flexibility in the design with reduced complexity and development time in the build.</p>
+        <p>Avoid using black or white as primary colours when there is a choice as this creates unecessary duplication with the below predefined colours.</p>
       </div>
 
     </section>
   </div>
 
 
-  <div class="bg-white--tint pad-lg w-100 bdr-t bdr-grey--light" id="standard-values">
+  <div class="bg-white--tint pad pad-lg-b w-100" id="standard-values">
     <section class="site-container">
 
       <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
@@ -114,6 +112,7 @@
           {% endfor %}
         </div>
       </div>
+
     </section>
   </div>
 

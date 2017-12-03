@@ -6,24 +6,67 @@ $border-widths: (2px, 4px, 6px) !default;
   &-primary { border-color: color(primary); }
   &-secondary { border-color: color(secondary); }
   &-tertiary { border-color: color(tertiary); }
+  &-white { border-color: color(white); }
   &-grey { border-color: color(grey); }
   &-grey--light { border-color: color(grey, light); }
   &-grey--dark { border-color: color(grey, dark); }
   &-text { border-color: currentColor; }
 }
 
-.bdr-a { border-style: solid; border-width: rem($border-width-default); }
-.bdr-t, .bdr-x { border-top-style: solid; border-top-width: rem($border-width-default); }
-.bdr-r, .bdr-y { border-right-style: solid; border-right-width: rem($border-width-default); }
-.bdr-b, .bdr-x { border-bottom-style: solid; border-bottom-width: rem($border-width-default); }
-.bdr-l, .bdr-y { border-left-style: solid; border-left-width: rem($border-width-default); }
+.bdr-a {
+  border-style: solid;
+  border-width: rem($border-width-default);
+}
+
+.bdr-t,
+.bdr-x {
+  border-top-style: solid;
+  border-top-width: rem($border-width-default);
+}
+
+.bdr-r,
+.bdr-y {
+  border-right-style: solid;
+  border-right-width: rem($border-width-default);
+}
+
+.bdr-b,
+.bdr-x {
+  border-bottom-style: solid;
+  border-bottom-width: rem($border-width-default);
+}
+
+.bdr-l,
+.bdr-y {
+  border-left-style: solid;
+  border-left-width: rem($border-width-default);
+}
+
 
 @each $border-width in $border-widths {
   .bdr-#{index($border-widths, $border-width)} { border-width: $border-width; }
 }
 
-.bdr-0 { border-width: 0; }
-.bdr-0-t, .bdr-0-y { border-top-width: 0; }
-.bdr-0-r, .bdr-0-x { border-right-width: 0; }
-.bdr-0-b, .bdr-0-y { border-bottom-width: 0; }
-.bdr-0-l, .bdr-0-x { border-left-width: 0; }
+.bdr-0 {
+  border-width: 0;
+}
+
+.bdr-0-t,
+.bdr-0-y {
+  border-top-width: 0;
+}
+
+.bdr-0-r,
+.bdr-0-x {
+  border-right-width: 0;
+}
+
+.bdr-0-b,
+.bdr-0-y {
+  border-bottom-width: 0;
+}
+
+.bdr-0-l,
+.bdr-0-x {
+  border-left-width: 0;
+}

@@ -3,7 +3,7 @@
     "url": "/demo/reference/colours/",
     "slug": "colours"
   }, {
-    "title": "Typography",
+    "title": "Fonts",
     "url": "/demo/reference/typography/",
     "slug": "typography"
   }, {
@@ -56,10 +56,10 @@
 }] %}
 
 {% if quickNav %}
-  <div data-bk-links="primary dim">
-    <ul data-bk-layout="p:rl p:sm" class="pad-xs nav nav-block font-s">
+  <div data-bk-links="white" class="w-100 pad">
+    <ul class="nav nav-block font-s">
       {% for item in quickNav %}
-        <li{{ item.slug == slug ? '  data-bk-links="secondary"' }}>
+        <li{{ item.slug == slug ? ' data-bk-links="white dim"' }}>
           <a href="{{ item.url }}">
             {{ item.title }}
           </a>

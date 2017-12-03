@@ -1,6 +1,6 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Typography" %}
+{% set title = "Fonts &amp; Typography" %}
 {% set slug = "typography" %}
 
 {% set fontSizesFluid = {'Hero' : 'hero', 'Extra Large' : 'xxl', 'Larger' : 'xl', 'Large' : 'lg'} %}
@@ -10,13 +10,10 @@
 
 {% block content %}
 
-  <div class="w-100 pad pad-lg-b" id="intro">
+  <div class="w-100 bg-white lighter pad-lg-b" id="intro">
     <section class="site-container">
 
-
-      {% include '_partials/_quick-nav.twig' %}
-
-      <h2 data-bk-layout class="font-xxl font-light pad-lg-t">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
       <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" class="font-md rte">
         <p>Basekit makes use of both fluid and fixed font sizes to ensure content is as responsive as possible to different browser and device sizes. Fluid sizes shrink or grow depending on the width of the browser, while fixed sizes remain the same size regardless of the browser or device size.</p>
