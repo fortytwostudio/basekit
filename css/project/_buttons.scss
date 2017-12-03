@@ -28,7 +28,24 @@ $bk-button-padding-compact: 0.25em 0.66em;
 
   &:hover,
   &:focus {
-    background-color: color(grey, light);
+    color: white;
+    background-color: color(primary);
+  }
+}
+
+.btn-bdr {
+  border: 1px solid currentColor;
+
+  &--primary {
+    border-color: color(primary) !important;
+  }
+
+  &--secondary {
+    border-color: color(secondary) !important;
+  }
+
+  &--white {
+    border-color: white !important;
   }
 }
 

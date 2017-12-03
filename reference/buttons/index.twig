@@ -12,185 +12,53 @@
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p class="font-md">Buttons can be tricky little buggers to get right. With the exception of the simple Primary and Secondary styles, buttons will almost always be styled depending on the project and can quickly become unwieldy.</p>
-
-        <p>Some projects demand complex button combinations while others may not demand more than the standard set. The trickiness comes when dealing with a button’s background colour, hover state colour, text colour (hover and normal states) <i>and</i> the colour of whatever the background is behind the button.</p>
-
-        <p>The best course of action (and this is really for the designers) is to start with and try to keep things simple. Don’t combine too many combinations and be wary of where buttons are used.</p>
       </div>
-    </section>
-  </div>
 
-  <div class="w-100 bg-white--tint pad">
-    <section class="site-container">
+      <div data-bk-layout="p:trl"class="pad-b">
+        <h2 class="font-md">Standard buttons</h2>
 
-      <div data-bk-layout="p:trl md:4"class="pad-b">
-        <h2 class="font-lg">Standard buttons</h2>
+        <ul>
+          <li data-bk-layout="p:trb auto"><a class="btn-primary" href="#">Primary Button</a></li>
+          <li data-bk-layout="p:trb auto"><a class="btn-secondary" href="#">Secondary Button</a></li>
+          <li data-bk-layout="p:trb auto"><a class="btn-bdr btn-empty" href="#">Empty Button</a></li>
+          <li data-bk-layout="p:trb auto"><a class="btn-empty" href="#">Empty Button</a></li>
+        </ul>
+      </div>
 
-        <div class="br-1 ba b-grey shadow bg-white margin-t">
-          <div data-bk-layout="p:lg">
-            <p>
-              <a class="btn-primary" href="#">Primary Button</a>
-            </p>
+      <div data-bk-layout="p:trl"class="pad-b">
+        <h2 class="font-md">Full width buttons</h2>
 
-            <p class="margin-t">
-              <a class="btn-secondary" href="#">Secondary Button</a>
-            </p>
-
-            <p class="margin-t">
-              <a class="btn-empty" href="#">Empty Button</a>
-            </p>
-          </div>
-
-          <dl data-bk-layout="p:sm" class="bt b-grey">
-            <dt class="inline w-auto">Usage</dt>
-            <dd class="float-r">
-              <code>class="<strong>btn-primary</strong>"</code>
-            </dd>
-          </dl>
-        </div>
+        <ul data-bk-layout="p:0 sm:8 md:6">
+          <li data-bk-layout="p:tr"><a class="btn-primary  w-100" href="#">Fit &amp; Left Text</a></li>
+          <li data-bk-layout="p:tr center"><a class="btn-primary  w-100" href="#">Fit &amp; Centre Text</a></li>
+          <li data-bk-layout="p:tr right"><a class="btn-primary  w-100" href="#">Fit &amp; Right Text</a></li>
+        </ul>
       </div>
 
 
-      <div data-bk-layout="p:trl md:4"class="pad-b">
-        <h2 class="font-lg">Form field buttons</h2>
-        <div class="br-1 ba b-grey shadow bg-white margin-t">
-          <div data-bk-layout="p:lg">
-            <p>
-              <button class="btn-primary" type="button" name="button">Button</button>
-            </p>
+      <div data-bk-layout="p:trl"class="pad-b">
+        <h2 class="font-md">Button sizes</h2>
 
-            <p class="margin-t">
-              <input class="btn-primary" type="submit" name="input" value="Submit Input">
-            </p>
+        <ul>
+          <li data-bk-layout="p:trb auto" class="font-xs"><a class="btn-primary" href="#">Extra Small</a></li>
+          <li data-bk-layout="p:trb auto" class="font-sm"><a class="btn-primary" href="#">Small</a></li>
+          <li data-bk-layout="p:trb auto"><a class="btn-primary" href="#">Normal</a></li>
+          <li data-bk-layout="p:trb auto" class="font-md"><a class="btn-primary" href="#">Medium</a></li>
+          <li data-bk-layout="p:trb auto" class="font-lg"><a class="btn-primary" href="#">Large</a></li>
+          <li data-bk-layout="p:trb auto" class="font-xl"><a class="btn-primary" href="#">Extra Large</a></li>
+        </ul>
+          <h2 class="font-md">Compact buttons</h2>
 
-            <p class="margin-t">
-              <input class="btn-primary" type="button" name="input" value="Button Input">
-            </p>
-          </div>
-
-          <dl data-bk-layout="p:sm" class="b-grey bt">
-            <dt class="inline w-auto">Usage</dt>
-            <dd class="float-r">
-              <code>&lt;button class="btn-primary"…</code>
-            </dd>
-          </dl>
-        </div>
+          <ul>
+            <li data-bk-layout="p:trb auto" class="font-xs"><a class="btn-primary btn-compact" href="#">Extra Small</a></li>
+            <li data-bk-layout="p:trb auto" class="font-sm"><a class="btn-primary btn-compact" href="#">Small</a></li>
+            <li data-bk-layout="p:trb auto"><a class="btn-primary btn-compact" href="#">Normal</a></li>
+            <li data-bk-layout="p:trb auto" class="font-md"><a class="btn-primary btn-compact" href="#">Medium</a></li>
+            <li data-bk-layout="p:trb auto" class="font-lg"><a class="btn-primary btn-compact" href="#">Large</a></li>
+            <li data-bk-layout="p:trb auto" class="font-xl"><a class="btn-primary btn-compact" href="#">Extra Large</a></li>
+          </ul>
       </div>
 
-
-
-      <div data-bk-layout="p:trl md:4"class="pad-b">
-        <h2 class="font-lg">Fit width</h2>
-        <div class="br-1 ba b-grey shadow bg-white margin-t">
-          <div data-bk-layout="p:lg">
-            <p>
-              <a class="btn-primary w-100" href="#">Fit width</a>
-            </p>
-
-            <p class="margin-t">
-              <a class="btn-primary w-100 align-c" href="#">Fit &amp; Centre Text</a>
-            </p>
-
-            <p class="margin-t">
-              <a class="btn-primary w-100 align-r" href="#">Fit &amp; Right Text</a>
-            </p>
-          </div>
-
-          <dl data-bk-layout="p:sm" class="b-grey bt">
-            <dt class="inline w-auto">Usage</dt>
-            <dd class="float-r">
-              <code>class="btn-primary <strong>w-100</strong>"</code>
-            </dd>
-          </dl>
-        </div>
-      </div>
-    </section>
-  </div>
-
-
-  <div class="w-100 bg-white pad">
-    <section class="site-container">
-
-      <div data-bk-links="primary underline-initial">
-        <h2 data-bk-layout="p:trl" class="font-lg">Button sizes</h2>
-
-        <p data-bk-layout="sm:9 sm:pl:3 md:8 md:pl:4 lg:7 lg:pl:5">Button sizes can be increased or decreased using the <a href="../typography/#font-sizes">font sizing class</a> and the padding will scale accordingly.</p>
-
-                <div data-bk-layout="p:rbl">
-                  <div class="br-1 ba b-grey shadow bg-white margin-t">
-                    <div data-bk-layout>
-                      <p data-bk-layout="auto" class="font-xs">
-                        <a class="btn-primary" href="#">Extra Small</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-s">
-                        <a class="btn-primary" href="#">Small</a>
-                      </p>
-
-                      <p data-bk-layout="auto">
-                        <a class="btn-primary" href="#">Default</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-md">
-                        <a class="btn-primary" href="#">Medium</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-lg">
-                        <a class="btn-primary" href="#">Large</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-xl">
-                        <a class="btn-primary" href="#">Extra Large</a>
-                      </p>
-                    </div>
-
-                    <dl data-bk-layout="p:sm" class="b-grey bt">
-                      <dt class="inline w-auto">Usage</dt>
-                      <dd class="float-r">
-                        Define a <a href="../typography/#font-sizes">font size class</a> on the parent of the button.
-                      </dd>
-                    </dl>
-                  </div>
-                </div>
-
-                <div data-bk-layout="p:rbl">
-                  <h3 class="font-lg pad-t">Compact Buttons</h3>
-                  <div class="br-1 ba b-grey shadow bg-white margin-t">
-                    <div data-bk-layout>
-                      <p data-bk-layout="auto" class="font-xs">
-                        <a class="btn-primary btn-compact" href="#">Extra Small</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-s">
-                        <a class="btn-primary btn-compact" href="#">Small</a>
-                      </p>
-
-                      <p data-bk-layout="auto">
-                        <a class="btn-primary btn-compact" href="#">Default</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-md">
-                        <a class="btn-primary btn-compact" href="#">Medium</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-lg">
-                        <a class="btn-primary btn-compact" href="#">Large</a>
-                      </p>
-
-                      <p data-bk-layout="auto" class="font-xl">
-                        <a class="btn-primary btn-compact" href="#">Extra Large</a>
-                      </p>
-                    </div>
-
-                    <dl data-bk-layout="p:sm" class="b-grey bt">
-                      <dt class="inline w-auto">Usage</dt>
-                      <dd class="float-r">
-                        Define a <a href="../typography/#font-sizes">font size class</a> on the parent of the button.
-                      </dd>
-                    </dl>
-                  </div>
-                </div>
-      </div>
     </div>
   </div>
 
