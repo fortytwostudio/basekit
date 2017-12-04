@@ -17,7 +17,7 @@
           {% if address.postalCode %}<span class="block">{{ address.postalCode }}</span>{% endif %}
 
           {% if siteEmail or siteTel %}
-            <ul{{ address|length ? ' class="pad-s-t"' }}>
+            <ul{{ address|length ? ' class="pad-sm-t"' }}>
               <li><a href="mailto:{{ siteEmail }}">{{ siteEmail }}</a></li>
               <li>{{ siteTel }}</li>
             </ul>
@@ -46,7 +46,7 @@
       {% endif %}
 
       {% if siteInfoNav|length %}
-        <ul class="font-xs pad-s-t">
+        <ul class="font-xs pad-sm-t">
           {% for item in siteInfoNav %}
             <li data-bk-layout="auto">
               <a href="{{ siteUrl }}{{ item.url }}">{{ item.title }}</a>

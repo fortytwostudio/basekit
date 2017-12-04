@@ -23,7 +23,7 @@ $spacer-max: ($max-width * 1px) !default;
     }
   }
 
-  &-s {
+  &-sm {
     &, &-t {
       padding-top: rem(($grid-gutter / 2) * 1px) / 2;
     }
@@ -33,7 +33,7 @@ $spacer-max: ($max-width * 1px) !default;
     }
   }
 
-  &-l {
+  &-lg {
     &, &-t {
       padding-top: rem(($grid-gutter * 2) * 1px) / 2;
     }
@@ -72,7 +72,7 @@ $spacer-max: ($max-width * 1px) !default;
       }
     }
 
-    &-s {
+    &-sm {
       &, &-t {
         padding-top: between((($grid-gutter / 2) * 1px) / 2, (($grid-gutter / 2) * 1px), $spacer-min, $spacer-max);
       }
@@ -82,7 +82,7 @@ $spacer-max: ($max-width * 1px) !default;
       }
     }
 
-    &-l {
+    &-lg {
       &, &-t {
         padding-top: between((($grid-gutter * 2) * 1px) / 2, (($grid-gutter * 2) * 1px), $spacer-min, $spacer-max);
       }
@@ -132,7 +132,7 @@ $spacer-max: ($max-width * 1px) !default;
       }
     }
 
-    &-s {
+    &-sm {
       &, &-t {
         padding-top: (($grid-gutter / 2) * 1px);
       }
@@ -142,7 +142,7 @@ $spacer-max: ($max-width * 1px) !default;
       }
     }
 
-    &-l {
+    &-lg {
       &, &-t {
         padding-top: (($grid-gutter * 2) * 1px);
       }

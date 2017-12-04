@@ -5,14 +5,13 @@
 
 {% block content %}
 
-  <div class="w-100 bg-white pad">
+  <div class="w-100 bg-white lighter pad-lg-b" id="intro">
     <section class="site-container">
-      {% include '_partials/_quick-nav.twig' %}
 
-      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="font-m">Similar to the Basekit layout attribute, links in Basekit are also applied using a data attribute: <code>data-bk-links</code>.</p>
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
+        <p class="font-md">Similar to the Basekit layout attribute, links in Basekit are also applied using a data attribute: <code>data-bk-links</code>.</p>
 
         <p>This scoping to a data attribute allows simpler configuration and less stuff in the class attribute.</p>
       </div>
@@ -21,13 +20,13 @@
 
   <div class="w-100 bg-white--tint pad">
     <section class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-l">Links styles</h3>
+      <h3 data-bk-layout="p:trl" class="font-lg">Links styles</h3>
 
-      <div data-bk-layout="m:8 l:7">
+      <div data-bk-layout="md:8 lg:7">
         <p>By default links are available in two main styles; primary and secondary. There are then various “modifiers” that can be applied to fine-tune link styles to suit their context.</p>
 
 
-        <h3 class="font-m pad-t">Undefined</h3>
+        <h3 class="font-md pad-t">Undefined</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links>
@@ -40,7 +39,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Primary</h3>
+        <h3 class="font-md pad-lg-t">Primary</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary">
@@ -53,7 +52,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Secondary</h3>
+        <h3 class="font-md pad-lg-t">Secondary</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="secondary">
@@ -66,7 +65,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">No Fade</h3>
+        <h3 class="font-md pad-lg-t">No Fade</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary no-fade">
@@ -79,7 +78,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Underline</h3>
+        <h3 class="font-md pad-lg-t">Underline</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary underline">
@@ -92,7 +91,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Underline Hover</h3>
+        <h3 class="font-md pad-lg-t">Underline Hover</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary underline-hover">
@@ -105,7 +104,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Underline Initial</h3>
+        <h3 class="font-md pad-lg-t">Underline Initial</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary underline-initial">
@@ -117,7 +116,7 @@
           </dd>
         </dl>
 
-        <h3 class="font-m pad-l-t">Dim</h3>
+        <h3 class="font-md pad-lg-t">Dim</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary dim">
@@ -130,7 +129,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Focus Style</h3>
+        <h3 class="font-md pad-lg-t">Focus Style</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="focus">
@@ -144,7 +143,7 @@
         </dl>
 
 
-        <h3 class="font-m pad-l-t">Active Style</h3>
+        <h3 class="font-md pad-lg-t">Active Style</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="focus active">
@@ -159,7 +158,7 @@
 
 
 
-        <h3 class="font-m pad-l-t">Dark Background</h3>
+        <h3 class="font-md pad-lg-t">Dark Background</h3>
 
         <dl class="br-1 shadow bg-white margin-t font-light" style="overflow:hidden;">
           <dt data-bk-layout="p:lg" data-bk-links="white underline-hover" class="color-grey bg-black--tint">
@@ -173,7 +172,7 @@
 
 
 
-        <h3 class="font-m pad-l-t">Dark Background Alternative</h3>
+        <h3 class="font-md pad-lg-t">Dark Background Alternative</h3>
 
         <dl class="br-1 shadow bg-white margin-t font-light" style="overflow:hidden;">
           <dt data-bk-layout="p:lg" data-bk-links="white dim underline-hover" class="color-white bg-black--tint">
@@ -187,7 +186,7 @@
 
 
 
-        <h3 class="font-m pad-l-t">Inherit</h3>
+        <h3 class="font-md pad-lg-t">Inherit</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="inherit dim underline" class="color-secondary--dark">
@@ -201,7 +200,7 @@
 
 
 
-        <h3 class="font-m pad-l-t">Big Text</h3>
+        <h3 class="font-md pad-lg-t">Big Text</h3>
 
         <dl class="br-1 ba b-grey shadow bg-white margin-t">
           <dt data-bk-layout="p:lg" data-bk-links="primary underline-initial" class="rte">
@@ -212,9 +211,9 @@
 
       </div>
 
-      <div data-bk-layout="m:4 l:4 l:pr:1" class="pad-b">
+      <div data-bk-layout="md:4 lg:4 lg:pr:1" class="pad-b">
         <div class="alert alert--simple font-s">
-          <h4 class="font-n margin-b"><strong>Note for developers</strong></h4>
+          <h4 class="font-nm margin-b"><strong>Note for developers</strong></h4>
 
           <p>These link styles will <strong>not</strong> apply to button links, because that would be silly.</p>
         </div>

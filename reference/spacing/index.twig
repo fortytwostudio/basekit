@@ -5,14 +5,13 @@
 
 {% block content %}
 
-  <div class="w-100 bg-white pad">
+  <div class="w-100 bg-white lighter pad-lg-b" id="intro">
     <section class="site-container">
-      {% include '_partials/_quick-nav.twig' %}
 
-      <h2 data-bk-layout class="font-xxl font-light pad-l-t">{{ title }}</h2>
+      <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
-      <div data-bk-layout="s:9 m:8 l:7" class="rte">
-        <p class="font-m">The space padding class offers a consistent group of options to apply white space above, below, or above and below content separate from the grid system or custom CSS.</p>
+      <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
+        <p class="font-md">The space padding class offers a consistent group of options to apply white space above, below, or above and below content separate from the grid system or custom CSS.</p>
 
         <p>Using this group of consistent sizes (based on the grid system $grid-gutter value) maintains consistency throughout a design while offering considerable flexibility.</p>
 
@@ -23,20 +22,20 @@
 
   <div class="w-100 bg-white--tint pad">
     <section class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-l">Spacing Examples</h3>
+      <h3 data-bk-layout="p:trl" class="font-lg">Spacing Examples</h3>
 
       <div data-bk-layout>
         <h4 class="font-bold pad-xs-b">Smaller <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter ∕ 4</span></h4>
         <div class="pad-xs-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad pad-xs-b">Small <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter ∕ 2</span></h4>
-        <div class="pad-s-t  bg-tertiary--light"></div>
+        <div class="pad-sm-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad pad-xs-b">Default <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter × 1</span></h4>
         <div class="pad-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad pad-xs-b">Large <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter × 2</span></h4>
-        <div class="pad-l-t  bg-tertiary--light"></div>
+        <div class="pad-lg-t  bg-tertiary--light"></div>
 
         <h4 class="font-bold pad pad-xs-b">Larger <span class="alert alert--inline alert--simple inline font-s font-normal float-r">Grid Gutter × 4</span></h4>
         <div class="pad-xl-t  bg-tertiary--light"></div>
@@ -47,40 +46,40 @@
 
   <div class="w-100 bg-white pad">
     <section class="site-container">
-      <div data-bk-layout="m:5 m:pl:1" class="pad-b">
-        <h3 class="font-l margin-b">Avilable classes</h3>
+      <div data-bk-layout="md:5 md:pl:1" class="pad-b">
+        <h3 class="font-lg margin-b">Avilable classes</h3>
 
-        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+        <dl data-bk-layout="p:r 6 sm:3 md:6 lg:3" class="margin-b">
           <dt>Default</dt>
           <dd><code>pad</code></dd>
           <dd><code>pad-t</code></dd>
           <dd><code>pad-b</code></dd>
         </dl>
-        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+        <dl data-bk-layout="p:r 6 sm:3 md:6 lg:3" class="margin-b">
           <dt>Smaller</dt>
           <dd><code>pad-xs</code></dd>
           <dd><code>pad-xs-t</code></dd>
           <dd><code>pad-xs-b</code></dd>
         </dl>
-        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+        <dl data-bk-layout="p:r 6 sm:3 md:6 lg:3" class="margin-b">
           <dt>Small</dt>
-          <dd><code>pad-s</code></dd>
-          <dd><code>pad-s-t</code></dd>
-          <dd><code>pad-s-b</code></dd>
+          <dd><code>pad-sm</code></dd>
+          <dd><code>pad-sm-t</code></dd>
+          <dd><code>pad-sm-b</code></dd>
         </dl>
-        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+        <dl data-bk-layout="p:r 6 sm:3 md:6 lg:3" class="margin-b">
           <dt>Large</dt>
-          <dd><code>pad-l</code></dd>
-          <dd><code>pad-l-t</code></dd>
-          <dd><code>pad-l-b</code></dd>
+          <dd><code>pad-lg</code></dd>
+          <dd><code>pad-lg-t</code></dd>
+          <dd><code>pad-lg-b</code></dd>
         </dl>
-        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+        <dl data-bk-layout="p:r 6 sm:3 md:6 lg:3" class="margin-b">
           <dt>Larger</dt>
           <dd><code>pad-xl</code></dd>
           <dd><code>pad-xl-t</code></dd>
           <dd><code>pad-xl-b</code></dd>
         </dl>
-        <dl data-bk-layout="p:r 6 s:3 m:6 l:3" class="margin-b">
+        <dl data-bk-layout="p:r 6 sm:3 md:6 lg:3" class="margin-b">
           <dt>Zero</dt>
           <dd><code>pad-0-t</code></dd>
           <dd><code>pad-0-t</code></dd>
@@ -90,16 +89,16 @@
         <p class="alert alert--simple alert--compact font-s">The zero class can also be used to remove grid <em>padding</em> from a <code>data-bk-layout</code> element (only x-axis of course).</p>
       </div>
 
-      <div data-bk-layout="m:5 m:pl:1">
-        <h3 class="font-l margin-b">Usage</h3>
+      <div data-bk-layout="md:5 md:pl:1">
+        <h3 class="font-lg margin-b">Usage</h3>
 
         <p>Classes can be combined to create various configuations:</p>
 
         <dl class="margin-t">
           <dt>Apply normal padding with small bottom padding</dt>
-          <dd><code>class="<strong>pad pad-s-b</strong>"</code></dd>
+          <dd><code>class="<strong>pad pad-sm-b</strong>"</code></dd>
           <dt class="margin-t">Apply small bottom padding with large top padding</dt>
-          <dd><code>class="<strong>pad-s pad-l-t</strong>"</code></dd>
+          <dd><code>class="<strong>pad-sm pad-lg-t</strong>"</code></dd>
           <dt class="margin-t">Just bottom padding</dt>
           <dd><code>class="<strong>pad-b</strong>"</code></dd>
         </dl>
