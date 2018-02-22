@@ -1,19 +1,20 @@
 {% if mainNav|length %}
-  <div data-bk-layout="p:0 8 md:10 right" class="nav-toggler-wrapper | no-js-dn">
-    <button id="nav-toggler" class="hamburger hamburger--squeeze | no-js-dn" type="button" aria-controls="nav-primary">
+  <div data-bk-layout="p:0 9 right" class="nav-toggler-wrapper | no-js-dn">
+    <button id="nav-toggler" class="hamburger hamburger--squeeze no-outline" type="button" aria-controls="nav-primary">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
   </div>
 
-  <div data-bk-layout="auto to:sm:p:0 md:p:tb md:p:sm 8 l:7 md:right" class="nav-primary-layout">
-    <nav id="nav-primary" data-bk-links="secondary" class="nav-primary font-sm font-upper font-light" tabindex="-1" aria-labelledby="nav-toggler">
-      {# <h2 class="hide">Website Navigation</h2> #}
+  <div data-bk-layout="auto to:lg:p:0 lg:p:r md:p:sm 9 lg:right" class="is-home nav-primary-layout">
+    <nav id="nav-primary" class="nav-primary" aria-labelledby="nav-toggler">
+      <h2 class="hide">Site Navigation</h2>
+
       <ul id="nav-primary-list" class="sm sm-bk">
         {% for item in mainNav %}
           <li tabindex="-1">
-            <a class="{{ slug is defined and slug == item.slug ? 'active current ' }}{{ item.children|length ? 'has-submenu'}}" href="{{ siteUrl ~ item.url }}"{{ item.external == "true" ? ' target="_blank" rel="noopener" title="Link opens in new tab"' }}>
+            <a class="{{ slug is defined and slug == item.slug ? 'active current ' }}{{ item.children|length ? 'has-children has-submenu'}}" href="{{ siteUrl ~ item.url }}">
               {% if item.children|length %}<span class="sub-arrow">+</span>{% endif %}
               {{ item.title }}
             </a>
@@ -21,9 +22,41 @@
               <ul>
                 {% for child in item.children %}
                   <li>
-                    <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                    <a href="{{ siteUrl ~ item.url ~ child.url }}" class="{{ slug is defined and slug == item.slug ? 'active current ' }}{{ item.children|length ? 'has-children has-submenu'}}">
+                      {% if item.children|length %}<span class="sub-arrow">+</span>{% endif %}
                       {{ child.title }}
                     </a>
+                    {% if item.children|length %}
+                      <ul>
+                        {% for child in item.children %}
+                          <li>
+                            <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                              {{ child.title }}
+                            </a>
+                          </li>
+                            <li>
+                              <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                                {{ child.title }}
+                              </a>
+                            </li>
+                              <li>
+                                <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                                  {{ child.title }}
+                                </a>
+                              </li>
+                                <li>
+                                  <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                                    {{ child.title }}
+                                  </a>
+                                </li>
+                                  <li>
+                                    <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                                      {{ child.title }}
+                                    </a>
+                                  </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
                   </li>
                 {% endfor %}
               </ul>

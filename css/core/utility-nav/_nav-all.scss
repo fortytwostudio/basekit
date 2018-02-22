@@ -1,0 +1,15 @@
+.sm {
+  position: relative;
+  z-index: $z-mobile-nav;
+
+  ul {
+    display: none;
+  }
+
+  li,
+  a {
+    display: block;
+    position: relative;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
+}

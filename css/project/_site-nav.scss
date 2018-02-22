@@ -1,118 +1,71 @@
-$nav-switch-point: md;
-
-$sm-bk-desktop-vp: $nav-switch-point;
-$sm-bk-font-family: $font-family;
-$sm-bk-base-color: color(primary);
-$sm-bk-gray-dark: color(primary, dark);
-$sm-bk-gray-darker: color(primary, darker);
-
-.nav-toggler-wrapper {
-  // Hide the hamburger toggler if JS isn't enabled
-  .no-js & { display: none; }
-
-  // At large screen sizes we just don't want the hamburger
-  @include mq($nav-switch-point) {
-    display: none;
-  }
-}
-// nav-primary-layout wraps the nav for styling and positioning purposes
-// nav-primary the nav tag
-
 // Apply only until the specified point so we don't have to reset anything later on
 @include mq($until: $nav-switch-point) {
 
-  // Absolute position the nav over content and make it full width
+  // Absolute position the nav over content
   .nav-primary-layout {
-    width: 100%;
-  }
+    .no-js & {
+      width: 100% !important;
 
-  .no-js {
-    .nav-primary-layout li {
-      display: inline-block;
-      vertical-align: middle;
-      width: 50%;
+      li {
+        display: inline-block;
+        width: auto;
+      }
     }
-  }
 
-  .js {
-    .nav-primary-layout {
-      left: 0;
+    .js & {
+      border-radius: 3px;
+      box-shadow: 0 12px 38px -8px rgba(black, 0.75);
+      max-width: 400px;
+      overflow: hidden;
       position: absolute;
-      right: 0;
-      // Push it down to the bottom of the header/container
+      right: 4%;
       top: 100%;
+      width: 92%;
       z-index: $z-mobile-nav;
 
       // Also make the content full width
       .nav-primary {
-        width: 100vw;
+        background-color: $sm-bk__desktop-bg;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        // Prepare the transition for the active class
+        // transition: visibility 0.5s ease-in-out, max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        visibility: hidden;
+
+        &.is-active {
+          opacity: 1;
+          max-height: 2000px;
+          visibility: visible;
+        }
       }
-    }
 
-    .nav-primary {
-      // If javascript is enabled hide the nav initially, however if JS is disabled users will see the nav
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      // Prepare the transition for the active class
-      transition: visibility 0.5s ease-in-out, max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-      visibility: hidden;
-
-      &.is-active {
-        max-height: 2000px;
-        opacity: 1;
-        visibility: visible;
+      // Main menu items separators
+      li:not(:first-child) {
+        border-top: 1px solid color(primary);
       }
     }
   }
-
 }
 
 // Desktop Nav, essentially
 @include mq($nav-switch-point) {
+  // Get rid of the hamburger at larger screen sizes
+  .nav-toggler-wrapper {
+    display: none;
+  }
+
   .nav-primary {
     // The top level nav list
     > ul {
-      display: flex;
-      justify-content: space-between;
-
-      // Its first items
       > li {
         display: inline-block;
         vertical-align: middle;
         width: auto;
       }
+      ul {
+        background-color: $sm-bk__desktop-bg;
+      }
     }
-  }
-}
-
-
-
-
-
-
-.skip-link {
-  background-color: #f1f1f1;
-  box-shadow: 0 0 1px 1px rgba(black, 0.2);
-  clip: rect(1px, 1px, 1px, 1px);
-  color: color(secondary) !important;
-  display: block;
-  font-weight: 700;
-  height: 1px;
-  left: -9999em;
-  overflow: hidden;
-  padding: 1em 1.25em;
-  position: absolute !important;
-  top: -9999em;
-  width: 1px;
-  word-wrap: normal !important;
-
-  &:focus {
-    clip: auto;
-    height: auto;
-    left: 6px;
-    top: 7px;
-    width: auto;
-    z-index: $z-max;
   }
 }
