@@ -1,0 +1,88 @@
+// ----------------------------------------------------------
+// :: 2.1. Collapsible mode (mobile first)
+// ----------------------------------------------------------
+
+// calc item height and sub menus toggle button size
+$sm-bk__item-height: $sm-bk__line-height + $sm-bk__collapsible-item-padding-vertical * 2;
+// set toggle button size to 80% of item height
+$sm-bk__toggle-size: floor($sm-bk__item-height * 0.8);
+$sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
+
+@include mq($until: $sm-bk__desktop-vp) {
+  .sm-bk {
+    // Set the MQ styles will apply up to so we don't have to unset stuff for desktop
+    a {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $sm-bk__collapsible-item-color;
+        padding: $sm-bk__collapsible-item-padding-vertical $sm-bk__collapsible-item-padding-horizontal;
+      }
+
+      &.current {
+        background: $sm-bk__collapsible-item-current-bg;
+      }
+
+      // make room for the toggle button (sub indicator)
+      &.has-submenu {
+        .js & {
+          padding-right: $sm-bk__collapsible-item-padding-horizontal + $sm-bk__toggle-size + $sm-bk__toggle-spacing;
+        }
+      }
+
+      // Toggle buttons (sub menu indicators)
+      .sub-arrow {
+        .no-js & {
+          display: none;
+        }
+
+        font: 900 #{$sm-bk__font-size-base}/#{$sm-bk__toggle-size} monospace !important;
+        height: $sm-bk__toggle-size;
+        left: auto;
+        margin-top: -(ceil($sm-bk__toggle-size / 2));
+        overflow: hidden;
+        position: absolute;
+        right: $sm-bk__toggle-spacing;
+        text-align: center;
+        top: 50%;
+        width: $sm-bk__toggle-size;
+      }
+
+      // Change + to - on sub menu expand
+      &.highlighted .sub-arrow:before {
+        content: '-';
+        display: block;
+      }
+    }
+
+    // Sub menus box
+    ul {
+      // Sub menus items
+      a {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          // Add indentation for sub menus
+          border-left: $sm-bk__collapsible-sub-item-indentation solid transparent;
+        }
+      }
+
+      @mixin sm-bk__sub-items-indentation($amount, $chainable: 'ul ', $level: 4, $chain: '') {
+        @for $i from 1 through $level {
+          $chain: $chain + $chainable;
+          #{$chain} a,
+          #{$chain} a:hover,
+          #{$chain} a:focus,
+          #{$chain} a:active {
+            border-left: ($amount * ($i + 1)) solid transparent;
+          }
+        }
+      }
+
+      // Add indentation for sub menus text for deeper levels
+      @include sm-bk__sub-items-indentation($sm-bk__collapsible-sub-item-indentation);
+    }
+  }
+}

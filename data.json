@@ -23,7 +23,7 @@
     "url": "/demo/",
     "slug": "about",
     "children": [{
-      "title": "Our History",
+      "title": "Our History and more info",
       "url": "#",
       "slug": "history"
     }, {
