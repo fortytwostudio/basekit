@@ -16,30 +16,13 @@
         <p>Once HTML white-space has been removed, inline-block provides the flexibility and robustness that floats cans truggle with. Inline-block items can be vertically aligned and flow more consistently. The data attribute allows greater separation of layout styles from other CSS and classes, it also avoids cramming lots of stuff into the class attribute.</p>
       </div>
 
-        <div data-bk-layout="to:md:p:0 md:5">
-          <div class="alert--simple alert--positive bn font-s">
-            <h3 class="font-bold font-upper font-nm">Layout Guide</h3>
-
-            <p class="margin-b">Until this section is developed further, I've pulled togther a PDF document explaining how the default layout for Basekit works.</p>
-
-            <p ><a href="/dl/basekit-layout.pdf" class="btn-primary arrow-dl">Basekit Layout Guide</a></p>
-
-
-            <h3 class="font-bold font-upper font-nm pad-t">Breakpoints Visualised</h3>
-
-            <p class="margin-b">To help designers better understand which devices sit at which breakpoints here is another download that visualises common devices in each breakpoint. However it's important to keep in mind that these devices are not definitive and it changes regularly. The breakpoints used in Basekit are initial defaults chosen to sit between common screen sizes. It is possible to add additional breakpoints, sometimes named <i>tweakpoints</i> to fine tune layouts.</p>
-
-            <p><a href="/dl/breakpoints-visualised.pdf" class="btn-primary arrow-dl">Breakpoints Visualised</a></p>
-          </div>
-        </div>
-
     </section>
   </div>
 
   <div class="w-100 bg-white--tint  pad" id="grid">
     <section class="site-container">
 
-      <h3 data-bk-layout="p:trl" class="font-lg">The Grid</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Layout Grid</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>By default BaseKit is based on the common twelve column layout, this provides a great flexibility when dividing the grid into columns. However Basekit is not resticted to any number of columns.</p>
@@ -187,7 +170,7 @@
 
   <div class="w-100 bg-white pad" id="push-pull">
     <section class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-lg">Push Right &amp; Left</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Push Right &amp; Left</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>The <code>pr:</code> and <code>pl:</code> values allow you to push blocks towards the right or left.</p>
@@ -212,7 +195,7 @@
 
   <div class="w-100 bg-white--tint  pad" id="alignment">
     <section class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-lg">Vertical Align Middle</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Vertical Align Middle</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>In <code>data-bk-layout</code> simply specify <code>middle</code> to aling items along the middle.</p>
@@ -235,7 +218,7 @@
         </ul>
       </div>
 
-      <h3 data-bk-layout="p:trl" class="font-lg">Vertical Align Bottom</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Vertical Align Bottom</h3>
 
       <div data-bk-layout="lg:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>bottom</code> to aling items to the bottom.</p>
@@ -258,7 +241,7 @@
         </ul>
       </div>
 
-      <h3 data-bk-layout="p:trl" class="font-lg">Align Right + Vertical Align Bottom</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Align Right + Vertical Align Bottom</h3>
 
       <div data-bk-layout="lg:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>right bottom</code> to aling items to the right and bottom.</p>
@@ -281,7 +264,7 @@
         </ul>
       </div>
 
-      <h3 data-bk-layout="p:trl" class="font-lg">Align Center + Vertical Align Middle</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Align Center + Vertical Align Middle</h3>
 
       <div data-bk-layout="lg:7" class="rte">
         <p>In <code>data-bk-layout</code> specify <code>middle center</code> to aling items this way.</p>
@@ -310,7 +293,7 @@
         </p>
       </div>
 
-      <h3 data-bk-layout="p:trl" class="font-lg">Single Item Alignment</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Single Item Alignment</h3>
 
       <div data-bk-layout="lg:7" class="rte">
         <p>To position one particular item to the bottom specify <code>self-bottom</code>in <code>data-bk-layout</code>. <strong>Currently this only works for bottom alignment</strong>.</p>
@@ -359,13 +342,16 @@
   <div class="w-100 bg-white pad" id="padding">
     <section class="site-container">
 
-      <h3 data-bk-layout="p:trl" class="font-lg">Padding</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Padding</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>Coloured edges indicate where padding has been applied. Unlike the spacer or margin classes the available values for grid padding provide a full range of options around every edge.</p>
       </div>
 
-      <ul data-bk-layout="middle  p:0">
+      <ul data-bk-layout="middle p:0">
+        <li data-bk-layout="sm:4 lg:3">
+          <img data-bk-layout="p:0" class="bg-primary" src="/imgs/placeholders/square.png?text=p:0" alt="Zeroed">
+        </li>
         <li data-bk-layout="sm:4 lg:3">
           <img data-bk-layout="p:t" class="bg-primary" src="/imgs/placeholders/square.png?text=p:t" alt="Top">
         </li>
@@ -414,7 +400,7 @@
 
   <div class="w-100 bg-white--tint  pad" id="padding-size">
     <section class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-lg">Padding Sizes</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Padding Sizes</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>There are three configurable sizes of padding, the default value and small and large values. These are half and double the default padding value.</p>
@@ -436,7 +422,7 @@
   <div class="w-100 bg-secondary--lighter pad" id="widths">
     <section class="site-container">
 
-      <h3 data-bk-layout="p:trl" class="font-lg">Simple Widths</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Simple Widths</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>This simple width class offers pre-defined width values for use without concern for the grid. Sticking with <code>data-bk-layout</code> is preferred to maintain consistency but sometimes simply setting 100% or 20% width is required. In fact, a 12 column grid (the default) can’t be broken into certain values (20% is 2.4 which would make a useless column width). Really the most useful classes here would be 20% and 100%.</p>
@@ -515,7 +501,7 @@
 
   <div class="w-100 bg-white pad" id="padding-size" data-bk-links="primary underline-hover">
     <section class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-lg">Site Container</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad pad-sm-b">Site Container</h3>
 
       <div data-bk-layout="sm:9 md:8 lg:7" class="rte">
         <p>The site container class makes sure the website does not expand beyond the defined maximum width while allowing you to break out if required.</p>

@@ -12,7 +12,7 @@
       <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
       <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" class="rte">
-        <p class="font-md">Brand colours change from project to project and will always be provided by a designer or the client's brand guidelines. The tertiary colour is optional but highly recommended for alternate “states” and backgrounds.</p>
+        <p class="font-md">Brand colours change from project to project and will always be provided by a designer or the client's brand guidelines. The tertiary colour is optional but highly recommended for active states and more variations.</p>
       </div>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
@@ -22,20 +22,20 @@
           </li>
 
           <li data-bk-layout class="bg-{{ colour }} pad-xl | color-white font-md font-light bdr-b bdr-2">
-            <span class="hide-text">{{ colour|capitalize }}</span>
+            <span class="hide">{{ colour|capitalize }}</span>
           </li>
 
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--darker color-white pad-sm">
-            <span class="hide-text">darker</span>
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--darker color-white pad-xs">
+            <span class="font-xs">darker</span>
           </li>
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--dark color-white pad-sm">
-            <span class="hide-text">dark</span>
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--dark color-white pad-xs">
+            <span class="font-xs">dark</span>
           </li>
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--light color-black pad-sm">
-            <span class="hide-text">light</span>
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--light color-black pad-xs">
+            <span class="font-xs">light</span>
           </li>
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--lighter color-black | pad-sm">
-            <span class="hide-text">lighter</span>
+          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--lighter color-black | pad-xs">
+            <span class="font-xs">lighter</span>
           </li>
         </ol>
       {% endfor %}
@@ -52,7 +52,7 @@
   <div class="bg-white--tint pad pad-lg-b w-100" id="standard-values">
     <section class="site-container">
 
-      <h2 data-bk-layout class="font-xxl font-light">Predefined Colours</h2>
+      <h2 data-bk-layout class="font-xl font-light color-primary pad pad-sm-b">Predefined Colours</h2>
 
       <div data-bk-layout="lg:7 lg:pl:5" data-bk-links="primary underline" class="rte">
         <p class="font-md">These colours do <em>not change</em> on a per-project basis, this provides consistency for designers and developers and reduced project time.</p>

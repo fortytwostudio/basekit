@@ -5,97 +5,120 @@
 {# Set the slug to empty to simulate an empty segment in Craft #}
 {% set slug = "reference" %}
 
-{% set external %}
- target="_blank" rel="noopener" title="Link opens in new tab"
-{% endset %}
-
 {% block content %}
 
 <div class="w-100 bg-white pad-lg" id="intro">
-  <section class="site-container">
+  <div class="site-container">
+    <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" data-bk-links="primary underline-hover">
 
-    <h2 class="hide">{{ title }}</h2>
+      <h2 class="font-xxl font-light  color-primary pad-b">Getting started</h2>
 
-    <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" data-bk-links="primary underline-hover" class="rte">
-      <p class="font-md">Basekit is a front-end toolkit designed for <a href="https://fortytwo.studio" class="arrow-exit" target="_blank" rel="noopener noreferrer">FortyTwo Studio</a> web projects, it uses:</p>
+        <div class="rte">
+          <p>To use Basekit you'll need to get familiar with and configure the following:</p>
 
-      <ul>
-        <li><a href="http://gulpjs.com/" class="arrow-exit" target="_blank" rel="noopener noreferrer">Gulp</a> to optimise and build project files</li>
-        <li><a href="http://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a> for CSS development</li>
-        <li><a href="https://twig.sensiolabs.org/" class="arrow-exit" target="_blank" rel="noopener noreferrer">Twig</a> for HTML/template development</li>
-      </ul>
+          <dl class="pad-sm-b">
+            <dt class="font-md"><a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">NPM</a> (and <a href="https://yarnpkg.com/en/" target="_blank" rel="noopener noreferrer">Yarn</a>)</dt>
+            <dd class="font-sm">Manages and installs everything you'll need, Yarn isn't required but it's nicer than NPM.</dd>
 
-      <p>While templates are built with Twig for later integration with Craft CMS, the core framework does not require Craft CMS.</p>
-    </div>
-  </section>
-</div>
+            <dt class="font-md"><a href="http://gulpjs.com/" target="_blank" rel="noopener noreferrer">Gulp JS</a></dt>
+            <dd class="font-sm">Actually does the legwork building and optimising project files, take a look through <em>gulpfile.js</em>.</dd>
 
+            <dt class="font-md"><a href="http://sass-lang.com/" target="_blank" rel="noopener noreferrer">Sass</a></dt>
+            <dd class="font-sm">Does the things CSS can't do (for now) and you'll find this is the core of Basekit.</dd>
 
-  <div class="w-100 bg-white--tint pad-lg">
-    <div class="site-container">
+            <dt class="font-md"><a href="https://twig.sensiolabs.org/" target="_blank" rel="noopener noreferrer">Twig</a></dt>
+            <dd class="font-sm">We use Craft CMS which uses the Twig, so Twig is included here for HTML templating.</dd>
+          </dl>
 
-      <h3 data-bk-layout="p:trl" class="font-xl font-light  color-primary">Getting started</h3>
+          <p>You'll also want to get setup with a local server (like <a href="https://laravel.com/docs/5.4/valet" target="_blank" rel="noopener noreferrer">Laravel Valet</a>) and make sure you've installed all the packages via NPM or Yarn.</p>
 
-      <div data-bk-layout="lg:8" data-bk-links="primary underline-hover" class="rte">
-
-        <p>Assuming you’ve setup a local server (we rather ❤️ <a href="https://laravel.com/docs/5.4/valet" class="arrow-exit" target="_blank" rel="noopener">Laravel Valet</a>) and you’ve downloaded Basekit to your project directory, <code>cd</code> into your project and run <code>$ npm install</code> to get the required packages.</p>
-
-        <p>Run <code>$ gulp</code> and the magic should start. At the moment this includes: Sass comiling to CSS, Twig compiling to HTML, Javascript to minified and combined basekit.js file, and finally browserSync will kick in. To make use of browserSync visit <em>http://localdomain.dev:3000/demo/</em> and you should see the start page. Remember to configure browserSync the Gulp File.</p>
-
-        <p>If everything went to plan you should be up and running and ready to configure your Sass and Twig.</p>
+          <p>Once ready you then run <code>$ gulp</code> from the CLI Gulp should watch for changes to your Sass, Twig and Javascript files, you can also make use of browserSync to automatically refresh the browser with changes.</p>
+        </div>
       </div>
     </div>
   </div>
 
 
-  <div class="w-100 bg-white pad-lg" data-bk-links="primary underline exit">
+  <div class="w-100 bg-white--tint pad-lg">
     <div class="site-container">
-      <h3 data-bk-layout="p:trl" class="font-xl font-light  color-primary">Directory Structure</h3>
+      <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" data-bk-links="primary underline-hover">
+        <h2 class="font-xl font-light  color-primary pad-sm-b">Key Concepts</h2>
 
-      <ul class="flex">
+        <div class="rte">
+          <p>Basekit uses a few frontend development concepts that have become popular in recent years.</p>
+
+          <h3>Single use classes</h3>
+
+          <p>First up is the idea of <strong>single use classes</strong> an example of which could be <code>.bg-primary--darker</code> or <code>.font-xl</code> both of which do one thing. Single use classes are created when appropriate, use your best judgement.</p>
+
+          <h3>Block Element Modifier</h3>
+
+          <p>If a single use class is not appropriate then it's recommended you make use of the <a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank" rel="noopener noreferrer">BEM methodology</a> for class naming. You'll find BEM naming is well documented and discussed across the internet and should be easily understood by any web developer.</p>
+
+          <p></p>An example of Basekit using BEM would be the <code>.position-over</code> block which has the <code>.position-over<strong>__item</strong></code> element and <code>.position-over__item<strong>--m</strong></code> modifiers. You'll find this in the /css/core/utility-layout/_position-over.scss file.</p>
+
+          <h3>Style Scoping</h3>
+
+          <p>There are two instances where Basekit strays from the normal class based convention and makes use of custom <code>data</code> attributes to tightly scope styles away from classes while offering greater flexibility. These are <code>data-bk-layout=""</code> and <code>data-bk-links=""</code></p>
+
+          <h3>In General</h3>
+
+          <p>You will find Basekit is intentionally heavy on the class (and data attribute) usage over writing custom CSS. This speeds up development, reduces repetition from project to project and creates a base standard to work from. However this does not mean that custom CSS is not an option, make your best judgement.</p>
+        </div>
+
+        <h2 class="font-xl font-light  color-primary pad-lg-t pad-sm-b">What Basekit is not</h2>
+
+        <div class="rte">
+          <p>It is not a framework like Bootstrap or Foundation. These are built to work for as many developers as possible and cover as many common situations as they can. Basekit has developed over many years specifically to solve problems for FortyTwo Studio web projects, as a result it does not include everything you may need to build a site depending on how you go about building sites.</p>
+
+          <p>On a wee side note… a CSS framework called <a href="http://tachyons.io/" target="_blank" rel="noopener noreferrer">Tachyons</a> is probably the biggest influence on Basekit's core concepts and goals. Take a nosey at it.</p>
+        </div>
+
+
+      {# <ul class="flex">
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">css</h4>
             <p>The core of Basekit, all your Sass is contained here.</p>
           </div>
         </li>
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">demo</h4>
             <p>Static templates and reference documentation get compile here.</p>
           </div>
         </li>
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">imgs</h4>
             <p>Logos, placeholders, UI images… but not content images unless the site will always be static.</p>
           </div>
         </li>
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">js</h4>
             <p>Numbered project javascript files compile to js/min/basekit.js.</p>
           </div>
         </li>
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">node_modules</h4>
             <p>Gulp dependencies, make sure this isn't committed to Git or you’ll not be happy.</p>
           </div>
         </li>
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">templates</h4>
             <p>Frontend template files, these compile to the demo/ directory.</p>
           </div>
         </li>
         <li data-bk-layout="sm:6 md:4" class="flex">
-          <div data-bk-layout class="ba b-grey--light br-1 bg-white--tint flex flex--content-start">
+          <div data-bk-layout class="ba b-grey--light br-1 bg-white flex flex--content-start">
             <h4 class="font-md font-bold pad-xs-b">bower_components</h4>
             <p>Contains and keeps the html5shiv snippet up to date.</p>
           </div>
         </li>
-      </ul>
+      </ul> #}
     </div>
   </div>
 

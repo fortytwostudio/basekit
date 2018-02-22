@@ -47,8 +47,8 @@ var hasError = notify.onError({
 // Update host and proxy to your local dev domain and append port :3000
 gulp.task('sync', function() {
   browserSync({
-    host: 'basekit.dev',
-    proxy: 'basekit.dev',
+    host: 'basekit.test',
+    proxy: 'basekit.test',
     startPath: '/demo/',
     open: false, // or 'external'
     notify: false, // enable/disable the annoying popup (within the site)
@@ -156,4 +156,5 @@ gulp.task('watch', function() {
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
 });
 
+gulp.task('ref', ['refbuild', 'sync']);
 gulp.task('default', ['watch', 'sync']);
