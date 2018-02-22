@@ -8,7 +8,7 @@ Basekit should go in the root web directory, i.e. blergh/public/--basekit-yo--
 
 ### Yarn
 
-Use Yarn not NPM.
+Use Yarn not NPM… if you want.
 
 ### gulpfile.js
 

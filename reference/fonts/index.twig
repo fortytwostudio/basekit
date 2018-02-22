@@ -1,7 +1,7 @@
 {% extends "_layout.twig" %}
 
-{% set title = "Fonts &amp; Typography" %}
-{% set slug = "typography" %}
+{% set title = "Typography" %}
+{% set slug = "fonts" %}
 
 {% set fontSizesFluid = {'Hero' : 'hero', 'Extra Large' : 'xxl', 'Larger' : 'xl', 'Large' : 'lg'} %}
 {% set fontSizesFixed = {'Medium': 'md', 'Normal': 'nm', 'Small': 'sm', 'Smaller': 'xs'} %}
@@ -10,16 +10,18 @@
 
 {% block content %}
 
-  <div class="w-100 bg-white lighter pad-lg-b" id="intro">
+  <div class="w-100 bg-white pad-lg-b" id="intro">
     <section class="site-container">
 
       <h2 data-bk-layout class="font-xxl font-light color-primary pad-lg-t">{{ title }}</h2>
 
       <div data-bk-layout="sm:9 md:8 lg:7 lg:pl:5" class="font-md rte">
-        <p>Basekit makes use of both fluid and fixed font sizes to ensure content is as responsive as possible to different browser and device sizes. Fluid sizes shrink or grow depending on the width of the browser, while fixed sizes remain the same size regardless of the browser or device size.</p>
+        <p>Basekit makes use of both fluid and fixed font sizes to ensure content is as responsive as possible to different browser and device sizes.</p>
+
+        <p>Fluid fonts shrink or grow between two defined dimensions depending on the width of the viewport. Fixed fonts on the other hand remain the same size regardless of the viewport width.</p>
       </div>
 
-      <h3 data-bk-layout="p:trl" class="font-md">Fluid Fonts</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad-t">Fluid Fonts</h3>
 
       <ol data-bk-layout="p:0 bottom" class="flex">
         {% for size, val in fontSizesFluid %}
@@ -33,7 +35,7 @@
       </ol>
 
 
-      <h3 data-bk-layout="p:trl" class="font-md">Fixed Fonts</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad-t">Fixed Fonts</h3>
 
       <ol data-bk-layout="p:0 bottom" class="flex">
         {% for size, val in fontSizesFixed %}
@@ -45,10 +47,14 @@
           </li>
         {% endfor %}
       </ol>
+    </section>
+  </div>
 
 
+  <div class="w-100 bg-white--tint pad-lg-b" id="intro">
+    <section class="site-container">
 
-      <h3 data-bk-layout class="font-md | pad-lg-t">Font Weights</h3>
+      <h3 data-bk-layout class="font-xl font-light color-primary pad-lg-t pad-sm-b">Font Weights</h3>
 
       {% for fontWeight in ['normal', 'bold', 'light'] %}
         <div data-bk-layout="p:rl smd:6 md:4" class="pad-b">
@@ -71,7 +77,7 @@
 
 
 
-      <h3 data-bk-layout="p:trl" class="font-md | pad-lg-t">Line Heights</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad-lg-t pad-sm-b">Line Heights</h3>
 
       <div data-bk-layout="p:rl lg:6" class="font-sm">
         <p>The following ensures that line height remains consistent and sensible at each font size.</p>
@@ -81,14 +87,14 @@
         {% for size, val in fontSizesAll %}
           <li data-bk-layout class="font-{{ val }} | margin-b">
             <h4 class="block font-xs font-mono">{{ size }}:</h4>
-            <p>Donec id elit non mi porta<br> gravida at eget metus<br> consectetur suada.</p>
+            <p>We’re an award winning design<br> and brand studio base in the<br> north east of Scotland.</p>
           </li>
         {% endfor %}
       </ol>
 
 
 
-      <h3 data-bk-layout="p:trl" class="font-md | pad-lg-t">Font Styles</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad-lg-t pad-sm-b">Font Styles</h3>
 
       <div data-bk-layout="p:rl lg:6" class="font-sm">
         <p>The following examples demonstrate and test optional font styles at each size</p>
@@ -114,7 +120,7 @@
 
 
 
-      <h3 data-bk-layout="p:trl" class="font-md | pad-lg-t">Rich Text</h3>
+      <h3 data-bk-layout="p:trl" class="font-xl font-light color-primary pad-lg-t pad-sm-b">Rich Text</h3>
 
       <div data-bk-layout="p:rl lg:6 lg:pl:6" class="font-sm">
         <p>Rich text content is typically output by the CMS (Content Management System) and written by the site manager in an editor field. Here we make sure that this content is correctly styled without interference from other styles or errors.</p>
@@ -122,13 +128,13 @@
 
       <div data-bk-layout="md:6" id="rich-text-content">
         <div data-bk-layout data-bk-links="primary underline" class="rte bg-white | bdr-a bdr-grey--light">
-          {% include "typography/_rte-content.twig" %}
+          {% include "fonts/_rte-content.twig" %}
         </div>
       </div>
 
       <div data-bk-layout="md:6" id="rich-text-content-dark">
         <div data-bk-layout data-bk-links="white dim underlin" class="rte bg-black--tint color-white--tint">
-          {% include "typography/_rte-content.twig" %}
+          {% include "fonts/_rte-content.twig" %}
         </div>
       </div>
 
