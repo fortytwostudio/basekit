@@ -8,12 +8,11 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
     <!--[if lt IE 9]><script src="/js/_html5shiv.min.js"></script><![endif]-->
+    <title>{{ siteName }} — {{ title }}</title>
 
     <link rel="stylesheet" href="/css/basekit-ref.css">
-    {% block headCSS %}{% endblock %}
 
-    {% include "includes/_head/_seo.twig" %}
-    {% include "includes/_head/_icons.twig" ignore missing %}
+    {% include "includes/_head/_icons.twig" %}
 
   <body id="start">
     <a class="skip-link" href="#content">Skip to content</a>

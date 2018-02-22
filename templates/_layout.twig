@@ -1,32 +1,30 @@
 {% spaceless %}
 <!doctype html>
 <html lang="en-gb" class="no-js">
-  <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+  <head prefix="og:http://ogp.me/ns# article:http://ogp.me/ns/article#">
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {# The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags #}
     <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
     <!--[if lt IE 9]><script src="/js/_html5shiv.min.js"></script><![endif]-->
+    <title>{{ siteName }} — {{ title }}</title>
 
     <link rel="stylesheet" href="/css/basekit.css">
-    {% block headCSS %}{% endblock %}
 
-    {% include "includes/_head/_seo.twig" %}
-    {% include "includes/_head/_icons.twig" ignore missing %}
-    {% include "includes/_head/_social.twig" ignore missing %}
-    {% include "includes/_head/_analytics.twig" %}
+    {% include "includes/_head/_icons.twig" %}
+    {% include "includes/_head/_social.twig" %}
   </head>
 
   <body id="start">
     <a class="skip-link" href="#content">Skip to content</a>
-    <a class="skip-link" href="#main-nav">Skip to navigation</a>
+    <a class="skip-link" href="#nav-primary">Skip to navigation</a>
 
-    <div class="position-over {{ pageHeaderColor|length ? pageHeaderColor : "bg-primary" }}">
-      <header id="header" class="site-container">
-        <div data-bk-layout="to:m:p:0 m:p:r m:p:sm middle">
+    <div class="position-over bg-white--tint">
+      <header id="site-header" class="site-container">
+        <div data-bk-layout="to:md:p:0 md:p:r md:p:sm middle">
 
-          <div data-bk-layout="4 l:5" class="site-logo--container">
+          <div data-bk-layout="4" class="site-logo--container">
             <h1 class="site-logo logo">
               <a class="site-logo__img logo__img" href="{{ siteUrl }}">
                 {{ siteName }}
@@ -35,6 +33,7 @@
           </div>
 
           {% include "includes/_nav-main.twig" %}
+
         </div>
       </header>
     </div>
@@ -45,7 +44,7 @@
     {% include "includes/_site-footer.twig" %}
 
     {# Not the latest version, because compatibility #}
-    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
     {# Remove if not needed, remember to check you're not loading plugins unused plugins too #}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     {# This is compiled by Gulp #}
@@ -53,6 +52,7 @@
 
     {% block jsBody %}
     {% endblock %}
+
   </body>
 </html>
 {% endspaceless %}
