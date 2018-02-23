@@ -30,7 +30,7 @@
                       <ul class="sm-bk__child-list">
                         {% for child in item.children %}
                           <li>
-                            <a href="{{ siteUrl ~ item.url ~ child.url }}">
+                            <a href="{{ siteUrl ~ item.url ~ child.url }}" class="{{ slug is defined and slug == child.slug ? 'current ' }}{{ item.children|length ? 'has-submenu'}}">
                               {{ child.title }}
                             </a>
                           </li>
