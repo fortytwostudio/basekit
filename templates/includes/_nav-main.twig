@@ -22,7 +22,7 @@
               <ul class="sm-bk__child-list">
                 {% for child in item.children %}
                   <li>
-                    <a href="{{ siteUrl ~ item.url ~ child.url }}" class="{{ slug is defined and slug == item.slug ? 'current ' }}{{ item.children|length ? 'has-submenu'}}">
+                    <a href="{{ siteUrl ~ item.url ~ child.url }}" class="{{ slug is defined and slug == child.slug ? 'current ' }}{{ item.children|length ? 'has-submenu'}}">
                       {% if item.children|length %}<span class="sub-arrow">+</span>{% endif %}
                       {{ child.title }}
                     </a>
@@ -34,26 +34,6 @@
                               {{ child.title }}
                             </a>
                           </li>
-                            <li>
-                              <a href="{{ siteUrl ~ item.url ~ child.url }}">
-                                {{ child.title }}
-                              </a>
-                            </li>
-                              <li>
-                                <a href="{{ siteUrl ~ item.url ~ child.url }}">
-                                  {{ child.title }}
-                                </a>
-                              </li>
-                                <li>
-                                  <a href="{{ siteUrl ~ item.url ~ child.url }}">
-                                    {{ child.title }}
-                                  </a>
-                                </li>
-                                  <li>
-                                    <a href="{{ siteUrl ~ item.url ~ child.url }}">
-                                      {{ child.title }}
-                                    </a>
-                                  </li>
                         {% endfor %}
                       </ul>
                     {% endif %}

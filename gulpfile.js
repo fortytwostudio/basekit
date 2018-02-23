@@ -65,7 +65,7 @@ gulp.task('sync', function() {
 gulp.task('scss', function() {
   gulp.src('css/*.scss')
     .pipe(plumber({errorHandler: hasError}))
-    .pipe(data(function(file){ return requireUncached('./data.json'); }))
+    .pipe(data(function(file){ return requireUncached('data.json'); }))
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({
       minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
