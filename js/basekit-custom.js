@@ -11,8 +11,7 @@ $(function () {
       subMenusMinWidth: "15em",
       subMenusMaxWidth: "20em",
       collapsibleBehavior: 'accordion',
-      // showOnClick: true,
-      // subMenusSubOffsetX: -10,
+      subMenusSubOffsetX: 0,
     });
 
     /// See https://github.com/kamem/jquery.smoothPageScroll

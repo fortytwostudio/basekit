@@ -9,9 +9,9 @@
 // ----------------------------------------------------------
 
 $sm-bk__base-color: #fff !default;
-$sm-bk__gray: darken($sm-bk__base-color, 6.5%) !default;
-$sm-bk__gray-dark: darken($sm-bk__base-color, 26.5%) !default;
-$sm-bk__gray-darker: darken($sm-bk__base-color, 66.5%) !default;
+$sm-bk__gray: darken($sm-bk__base-color, 16.5%) !default;
+$sm-bk__gray-dark: darken($sm-bk__base-color, 33%) !default;
+$sm-bk__gray-darker: darken($sm-bk__base-color, 66%) !default;
 
 
 // ----------------------------------------------------------
@@ -60,7 +60,7 @@ $sm-bk__collapsible-sub-item-indentation: 0.5em !default;
 // ----------------------------------------------------------
 
 // Menu box
-$sm-bk__desktop-bg: #f7f7f7 !default;
+$sm-bk__desktop-bg: $sm-bk__base-color !default;
 
 // Items
 $sm-bk__desktop-item-color: $sm-bk__gray-darker !default;

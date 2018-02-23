@@ -13,21 +13,21 @@
 
       <ul id="nav-primary-list" class="sm sm-bk">
         {% for item in mainNav %}
-          <li tabindex="-1">
-            <a class="{{ slug is defined and slug == item.slug ? 'active current ' }}{{ item.children|length ? 'has-children has-submenu'}}" href="{{ siteUrl ~ item.url }}">
+          <li class="sm-bk__top-level-item">
+            <a class="{{ slug is defined and slug == item.slug ? 'current ' }}{{ item.children|length ? 'has-submenu'}}" href="{{ siteUrl ~ item.url }}">
               {% if item.children|length %}<span class="sub-arrow">+</span>{% endif %}
               {{ item.title }}
             </a>
             {% if item.children|length %}
-              <ul>
+              <ul class="sm-bk__child-list">
                 {% for child in item.children %}
                   <li>
-                    <a href="{{ siteUrl ~ item.url ~ child.url }}" class="{{ slug is defined and slug == item.slug ? 'active current ' }}{{ item.children|length ? 'has-children has-submenu'}}">
+                    <a href="{{ siteUrl ~ item.url ~ child.url }}" class="{{ slug is defined and slug == item.slug ? 'current ' }}{{ item.children|length ? 'has-submenu'}}">
                       {% if item.children|length %}<span class="sub-arrow">+</span>{% endif %}
                       {{ child.title }}
                     </a>
                     {% if item.children|length %}
-                      <ul>
+                      <ul class="sm-bk__child-list">
                         {% for child in item.children %}
                           <li>
                             <a href="{{ siteUrl ~ item.url ~ child.url }}">

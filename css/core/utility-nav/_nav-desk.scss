@@ -1,80 +1,76 @@
-// ----------------------------------------------------------
-// :: 2.2. Desktop mode
-// ----------------------------------------------------------
-
 @include mq($sm-bk__desktop-vp) {
+  // The top level list
   .sm-bk {
-    a {
-      &,
-      &:hover,
-      &:focus,
-      &:active,
+    .has-submenu {
+      // Simply make relative so we can anchor sub menus to the link
+      position: relative;
+      // Make some space for the indicator
+      padding-right: $sm-bk__desktop-item-padding-horizontal + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
+
+      // This class is applied via the JS plugin and keeps the item highlighted as long as you're on a child
       &.highlighted {
-        padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
-      }
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.highlighted {
-        background: $sm-bk__desktop-item-hover-bg;
-      }
-
-      &.current {
-        background: $sm-bk__desktop-item-current-bg;
-        // color: $sm-bk__desktop-item-current-color;
-      }
-
-      // Make room for the sub arrows
-      &.has-submenu {
-        .js & {
-          padding-right: $sm-bk__desktop-item-padding-horizontal + 8px + $sm-bk__desktop-arrow-spacing;
-          position: relative;
-        }
-      }
-
-      // Sub menu indicators
-      .sub-arrow {
-        .no-js & {
-          display: none;
-        }
-
-        font: #{$sm-bk__font-size-small}/16px monospace !important;
-        height: 16px;
-        margin-top: -8px;
-        overflow: hidden;
-        position: absolute;
-        right: $sm-bk__desktop-item-padding-horizontal;
-        text-align: center;
-        top: 50%;
-        width: 10px;
+        color: $sm-bk__desktop-item-color;
+        background-color: $sm-bk__desktop-item-hover-bg;
       }
     }
 
-    // Sub menu boxes
-    ul {
-      font-size: 0.872rem;
+    // Any child lists
+    &__child-list {
+      background-color: $sm-bk__desktop-bg;
+      box-shadow: 0 2px 8px -2px rgba(black, 0.4);
       line-height: 1.4;
       position: absolute;
       text-align: left;
 
-      // No need for additional room for the sub arrows
-      &.has-submenu {
-        padding-right: $sm-bk__desktop-item-padding-horizontal;
-      }
-
-      // Sub menus items separators
-      > li:not(:first-child) {
-        // border-left: 0;
+      li:not(:first-child) {
         border-top: $sm-bk__desktop-separators-size solid $sm-bk__desktop-separators-color;
       }
+
+      a {
+        &,
+        &:hover,
+        &:focus,
+        &.current,
+        &.highlighted {
+          color: $sm-bk__desktop-item-color;
+          padding-top: $sm-bk__desktop-item-padding-vertical;
+          // Right padding is handled above
+          padding-bottom: $sm-bk__desktop-item-padding-vertical;
+          padding-left: $sm-bk__desktop-item-padding-horizontal;
+        }
+
+        &:hover,
+        &:focus,
+        &.current,
+        &.highlighted {
+          background-color: $sm-bk__desktop-item-hover-bg;
+        }
+      }
+    }
+
+    // Sub menu indicator styling
+    .sub-arrow {
+      font: #{$sm-bk__font-size-base} / 16px monospace !important;
+      height: 16px;
+      margin-top: -8px;
+      overflow: hidden;
+      position: absolute;
+      right: $sm-bk__desktop-item-padding-horizontal / 2;
+      text-align: center;
+      top: 50%;
+      width: 0.8em;
+
+      // Simply bin it if JS is not enabled
+      .no-js & { display: none; }
     }
 
 
 
+
+
     // Scrolling arrows containers for tall sub menus - test sub menu: "Sub test" -> "more..." in the default download package
-    span.scroll-up,
-    span.scroll-down {
+    .scroll-up,
+    .scroll-down {
       position: absolute;
       display: none;
       visibility: hidden;
@@ -83,8 +79,8 @@
       height: 20px;
       // width and position will be set automatically by the script
     }
-    span.scroll-up-arrow,
-    span.scroll-down-arrow {
+    .scroll-up-arrow,
+    .scroll-down-arrow {
       position: absolute;
       top: 0px;
       left: 50%;
@@ -97,7 +93,7 @@
       border-style: dashed dashed solid dashed;
       border-color: transparent transparent white transparent;
     }
-    span.scroll-down-arrow {
+    .scroll-down-arrow {
       top: 8px;
       border-style: solid dashed dashed dashed;
       border-color: white transparent transparent transparent;

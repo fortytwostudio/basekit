@@ -1,65 +1,58 @@
 @import
-// DEFAULT VARIABLES
-// NOTE: Additional variables can be found within individual .scss files
-"core/vars/fonts",
-"core/vars/colour",
-"core/vars/layout",
-"core/vars/transitions",
+  // THIRD PARTY TOOLS
+  "core/third-party/between",
+  "core/third-party/family",
+  "core/third-party/font-face",
+  "core/third-party/hamburgers/hamburgers",
+  "core/third-party/media-queries",
+  "core/third-party/unit-conversion",
 
-// THIRD PARTY TOOLS
-"core/third-party/between",
-"core/third-party/family",
-"core/third-party/font-face",
-"core/third-party/hamburgers/hamburgers",
-"core/third-party/media-queries",
-"core/third-party/unit-conversion",
+  // MIXINS & FUNCTONS, USEFUL THINGS
+  "core/tools/aspect-ratio",
+  "core/tools/hider",
+  "core/tools/percentage",
+  "core/tools/poly-fluid-sizing",
+  "core/tools/rem",
+  "core/tools/reverse-list",
+  "core/tools/viewport-units",
 
-// MIXINS & FUNCTONS, USEFUL THINGS
-"core/tools/aspect-ratio",
-"core/tools/hider",
-"core/tools/percentage",
-"core/tools/poly-fluid-sizing",
-"core/tools/rem",
-"core/tools/reverse-list",
-"core/tools/viewport-units",
+  // GLOBALS
+  "core/global/document",
+  "core/global/text",
+  "core/global/media",
+  "core/global/tables",
+  "core/global/code",
 
-// GLOBALS
-"core/global/document",
-"core/global/text",
-"core/global/media",
-"core/global/tables",
-"core/global/code",
+  // LAYOUT GRID
+  "core/utility-layout/grid-layout",
+  "core/utility-layout/display",
+  "core/utility-layout/margins",
+  "core/utility-layout/padding-spacer",
+  "core/utility-layout/site-width",
+  "core/utility-layout/float",
+  "core/utility-layout/hide-content",
+  "core/utility-layout/position-over",
+  "core/utility-layout/fit-media",
+  "core/utility-layout/full-width",
+  "core/utility-layout/widths",
+  "core/utility-layout/overflow",
 
-// LAYOUT GRID
-"core/utility-layout/grid-layout",
-"core/utility-layout/display",
-"core/utility-layout/margins",
-"core/utility-layout/padding-spacer",
-"core/utility-layout/site-width",
-"core/utility-layout/float",
-"core/utility-layout/hide-content",
-"core/utility-layout/position-over",
-"core/utility-layout/fit-media",
-"core/utility-layout/full-width",
-"core/utility-layout/widths",
-"core/utility-layout/overflow",
+  // UTILITY CLASSES
+  "core/utility-general/alerts",
+  "core/utility-general/nav",
+  "core/utility-general/borders",
+  "core/utility-general/border-radius",
+  "core/utility-general/box-shadow",
+  // "core/utility-general/linter",
+  "core/utility-general/links",
+  "core/utility-text/alignment",
+  "core/utility-text/list-styles",
+  "core/utility-text/user-content-rte",
+  "core/utility-text/overflow-text",
+  "core/utility-text/hide-text",
 
-// UTILITY CLASSES
-"core/utility-general/alerts",
-"core/utility-general/nav",
-"core/utility-general/borders",
-"core/utility-general/border-radius",
-"core/utility-general/box-shadow",
-// "core/utility-general/linter",
-"core/utility-general/links",
-"core/utility-text/alignment",
-"core/utility-text/list-styles",
-"core/utility-text/user-content-rte",
-"core/utility-text/overflow-text",
-"core/utility-text/hide-text",
-
-// MAIN FRAMEWORK
-"core/utility-nav/_nav-vars",
-"core/utility-nav/_nav-all",
-"core/utility-nav/_nav-mobile",
-"core/utility-nav/_nav-desk";
+  // MAIN FRAMEWORK
+  "core/utility-nav/_nav-vars",
+  "core/utility-nav/_nav-all",
+  "core/utility-nav/_nav-mobile",
+  "core/utility-nav/_nav-desk";
