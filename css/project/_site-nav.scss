@@ -61,5 +61,15 @@
         width: auto;
       }
     }
+
+    a {
+      &:hover,
+      &:focus,
+      &.current,
+      &.highlighted {
+        background-color: $sm-bk__desktop-item-hover-bg;
+        color: $sm-bk__desktop-item-color;
+      }
+    }
   }
 }

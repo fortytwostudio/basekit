@@ -13,7 +13,7 @@
   "mainNav": [{
     "title": "Home",
     "url": "",
-    "slug": ""
+    "slug": "home"
   }, {
     "title": "Services",
     "url": "#",
@@ -21,7 +21,7 @@
   }, {
     "title": "About Us",
     "url": "",
-    "slug": "about",
+    "slug": "",
     "children": [{
       "title": "Our History and more info",
       "url": "#",
