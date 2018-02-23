@@ -7,24 +7,21 @@
 // ----------------------------------------------------------
 // :: 1.1. Colors
 // ----------------------------------------------------------
-
 $sm-bk__base-color: #fff !default;
-$sm-bk__gray: darken($sm-bk__base-color, 6.5%) !default;
-$sm-bk__gray-dark: darken($sm-bk__base-color, 26.5%) !default;
-$sm-bk__gray-darker: darken($sm-bk__base-color, 66.5%) !default;
+$sm-bk__gray: darken($sm-bk__base-color, 16.5%) !default;
+$sm-bk__gray-dark: darken($sm-bk__base-color, 33%) !default;
+$sm-bk__gray-darker: darken($sm-bk__base-color, 66%) !default;
 
 
 // ----------------------------------------------------------
 // :: 1.2. Breakpoints
 // ----------------------------------------------------------
-
 $sm-bk__desktop-vp:  $nav-switch-point !default;    // switch from collapsible to desktop
 
 
 // ----------------------------------------------------------
 // :: 1.3. Typography
 // ----------------------------------------------------------
-
 $sm-bk__font-family: $font-family !default;
 $sm-bk__font-size-base: $font-size !default;
 $sm-bk__font-size-small: $font-size !default;
@@ -34,7 +31,6 @@ $sm-bk__line-height: 1.1 !default;
 // ----------------------------------------------------------
 // :: 1.5. Collapsible main menu
 // ----------------------------------------------------------
-
 // Items
 $sm-bk__collapsible-item-color: $sm-bk__gray-darker !default;
 $sm-bk__collapsible-item-current-color: $sm-bk__base-color !default;
@@ -50,7 +46,6 @@ $sm-bk__collapsible-separators-color: rgba(0, 0, 0, 0.05) !default;
 // ----------------------------------------------------------
 // :: 1.6. Collapsible sub menus
 // ----------------------------------------------------------
-
 // Items text indentation for deeper levels
 $sm-bk__collapsible-sub-item-indentation: 0.5em !default;
 
@@ -58,9 +53,8 @@ $sm-bk__collapsible-sub-item-indentation: 0.5em !default;
 // ----------------------------------------------------------
 // :: 1.7. Desktop main menu and sub menus
 // ----------------------------------------------------------
-
 // Menu box
-$sm-bk__desktop-bg: #f7f7f7 !default;
+$sm-bk__desktop-bg: $sm-bk__base-color !default;
 
 // Items
 $sm-bk__desktop-item-color: $sm-bk__gray-darker !default;

@@ -1,17 +1,20 @@
-// Apply only until the specified point so we don't have to reset anything later on
+// —————————————————————————————————————————————————————————————————————————————
+// MOBILE NAV
+// Apply only until the specified breakpoint so we don't have to reset style
+// later on at the desktop size
+// —————————————————————————————————————————————————————————————————————————————
 @include mq($until: $nav-switch-point) {
-
-  // Absolute position the nav over content
   .nav-primary-layout {
+    // Basic styling for no-js situations
     .no-js & {
       width: 100% !important;
-
       li {
         display: inline-block;
         width: auto;
       }
     }
 
+    // Only style up the nav fully if js is enabled.
     .js & {
       border-radius: 3px;
       box-shadow: 0 12px 38px -8px rgba(black, 0.75);
@@ -20,6 +23,7 @@
       position: absolute;
       right: 4%;
       top: 100%;
+      top: calc(100% - 0.5rem);
       width: 92%;
       z-index: $z-mobile-nav;
 
@@ -29,8 +33,6 @@
         max-height: 0;
         opacity: 0;
         overflow: hidden;
-        // Prepare the transition for the active class
-        // transition: visibility 0.5s ease-in-out, max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
         visibility: hidden;
 
         &.is-active {
@@ -39,21 +41,16 @@
           visibility: visible;
         }
       }
-
-      // Main menu items separators
-      li:not(:first-child) {
-        border-top: 1px solid color(primary);
-      }
     }
   }
 }
 
-// Desktop Nav, essentially
+// —————————————————————————————————————————————————————————————————————————————
+// DESKTOP
+// —————————————————————————————————————————————————————————————————————————————
 @include mq($nav-switch-point) {
   // Get rid of the hamburger at larger screen sizes
-  .nav-toggler-wrapper {
-    display: none;
-  }
+  .nav-toggler-wrapper { display: none; }
 
   .nav-primary {
     // The top level nav list
@@ -63,8 +60,15 @@
         vertical-align: middle;
         width: auto;
       }
-      ul {
-        background-color: $sm-bk__desktop-bg;
+    }
+
+    a {
+      &:hover,
+      &:focus,
+      &.current,
+      &.highlighted {
+        background-color: $sm-bk__desktop-item-hover-bg;
+        color: $sm-bk__desktop-item-color;
       }
     }
   }

@@ -5,8 +5,13 @@ $(function () {
     });
 
     // Smart Menus script yo
+    // https://www.smartmenus.org/docs/
     $("#nav-primary-list").smartmenus({
-      subIndicators: false
+      subIndicators: false,
+      subMenusMinWidth: "15em",
+      subMenusMaxWidth: "20em",
+      collapsibleBehavior: 'accordion',
+      subMenusSubOffsetX: 0,
     });
 
     /// See https://github.com/kamem/jquery.smoothPageScroll

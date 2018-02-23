@@ -1,3 +1,7 @@
+// THIS IS STUCK HERE UNTIL I FIGURE OUT HOW TO CONVERT IT TO A MORE ROBUST FUNCTION AND MOVE ELSEWHERE
+@function color($scheme, $tone: base) {
+  @return map-get(map-get($color-scheme, $scheme), $tone);
+}
 // —————————————————————————————————————————————————————————————————————————————
 // COLOURS
 // —————————————————————————————————————————————————————————————————————————————
@@ -68,8 +72,3 @@ $color-scheme: (
     base: $color-body
   )
 );
-
-// THIS IS STUCK HERE UNTIL I FIGURE OUT HOW TO CONVERT IT TO A MORE ROBUST FUNCTION AND MOVE ELSEWHERE
-@function color($scheme, $tone: base) {
-  @return map-get(map-get($color-scheme, $scheme), $tone);
-}

@@ -11,6 +11,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 @include mq($until: $sm-bk__desktop-vp) {
   .sm-bk {
     // Set the MQ styles will apply up to so we don't have to unset stuff for desktop
+
     a {
       &,
       &:hover,
@@ -56,8 +57,18 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       }
     }
 
+
+    // Main menu items separators
+    li {
+      border-top: $sm-bk__desktop-separators-size solid $sm-bk__desktop-separators-color;
+    }
+    // Nae the first one though
+    > li:first-child {
+      border: 0;
+    }
+
     // Sub menus box
-    ul {
+    &__child-list {
       // Sub menus items
       a {
         &,

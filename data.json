@@ -12,16 +12,16 @@
 
   "mainNav": [{
     "title": "Home",
-    "url": "/demo/reference/",
-    "slug": "reference"
+    "url": "",
+    "slug": "home"
   }, {
     "title": "Services",
     "url": "#",
     "slug": "services"
   }, {
     "title": "About Us",
-    "url": "/demo/",
-    "slug": "about",
+    "url": "",
+    "slug": "",
     "children": [{
       "title": "Our History and more info",
       "url": "#",
@@ -29,7 +29,7 @@
     }, {
       "title": "The Board",
       "url": "#",
-      "slug": "board"
+      "slug": ""
     }, {
       "title": "Our Staff",
       "url": "#",
@@ -39,10 +39,6 @@
     "title": "Contact",
     "url": "#contact",
     "scrollTo": "true"
-  }, {
-    "title": "Github",
-    "url": "https://github.com/fortytwostudio/basekit",
-    "external": "true"
   }],
 
   "footerNav": [{
