@@ -12,8 +12,8 @@
 
     <link rel="stylesheet" href="/css/basekit.css">
 
-    {% include "includes/_head/_icons.twig" %}
-    {% include "includes/_head/_social.twig" %}
+    {% include "includes/global/_icons.twig" %}
+    {% include "includes/global/_seo-social.twig" %}
   </head>
 
   <body id="start">
@@ -32,7 +32,7 @@
             </h1>
           </div>
 
-          {% include "includes/_nav-main.twig" %}
+          {% include "includes/global/_nav.twig" %}
 
         </div>
       </header>
@@ -41,7 +41,7 @@
     {% block content %}
     {% endblock %}
 
-    {% include "includes/_site-footer.twig" %}
+    {% include "includes/global/_footer.twig" %}
 
     {# Not the latest version, because compatibility #}
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
