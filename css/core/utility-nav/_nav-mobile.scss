@@ -8,6 +8,18 @@ $sm-bk__item-height: $sm-bk__line-height + $sm-bk__collapsible-item-padding-vert
 $sm-bk__toggle-size: floor($sm-bk__item-height * 0.8);
 $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
+@mixin sm-bk__sub-items-indentation($amount, $chainable: 'ul ', $level: 4, $chain: '') {
+  @for $i from 1 through $level {
+    $chain: $chain + $chainable;
+    #{$chain} a,
+    #{$chain} a:hover,
+    #{$chain} a:focus,
+    #{$chain} a:active {
+      border-left: ($amount * ($i + 1)) solid transparent;
+    }
+  }
+}
+
 @include mq($until: $sm-bk__desktop-vp) {
   .sm-bk {
     // Set the MQ styles will apply up to so we don't have to unset stuff for desktop
@@ -77,18 +89,6 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
         &:active {
           // Add indentation for sub menus
           border-left: $sm-bk__collapsible-sub-item-indentation solid transparent;
-        }
-      }
-
-      @mixin sm-bk__sub-items-indentation($amount, $chainable: 'ul ', $level: 4, $chain: '') {
-        @for $i from 1 through $level {
-          $chain: $chain + $chainable;
-          #{$chain} a,
-          #{$chain} a:hover,
-          #{$chain} a:focus,
-          #{$chain} a:active {
-            border-left: ($amount * ($i + 1)) solid transparent;
-          }
         }
       }
 
