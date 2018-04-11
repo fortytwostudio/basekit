@@ -16,34 +16,35 @@
       </div>
 
       {% for colour in ['primary', 'secondary', 'tertiary'] %}
-        <ol data-bk-layout="sm:6 lg:3">
-          <li class="margin-b font-md color-{{ colour }}">
-            {{ colour|capitalize }}
-          </li>
+        <div data-bk-layout="p:sm p:r sm:6 lg:4">
+          <ol data-bk-layout="p:sm">
+            <li data-bk-layout="p:sm p:trl" class="font-md color-{{ colour }}">
+              {{ colour|capitalize }}
+            </li>
 
-          <li data-bk-layout class="bg-{{ colour }} pad-xl | color-white font-md font-light bdr-b bdr-2">
-            <span class="hide">{{ colour|capitalize }}</span>
-          </li>
+            <li data-bk-layout="p:sm p:tl">
+              <span class="hide-text bg-{{ colour }} pad-xl | color-white font-md font-light">{{ colour|capitalize }}</span>
+            </li>
 
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--darker color-white pad-xs">
-            <span class="font-xs">darker</span>
-          </li>
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--dark color-white pad-xs">
-            <span class="font-xs">dark</span>
-          </li>
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--light color-black pad-xs">
-            <span class="font-xs">light</span>
-          </li>
-          <li data-bk-layout="lg:p:sm" class="bg-{{ colour }}--lighter color-black | pad-xs">
-            <span class="font-xs">lighter</span>
-          </li>
-        </ol>
+            <li data-bk-layout="p:sm p:tl 3">
+              <span class="hide-text block bg-{{ colour }}--darker color-white pad">darker</span>
+            </li>
+            <li data-bk-layout="p:sm p:tl 3">
+              <span class="hide-text block bg-{{ colour }}--dark color-white pad">dark</span>
+            </li>
+            <li data-bk-layout="p:sm p:tl 3">
+              <span class="hide-text block bg-{{ colour }}--light color-black pad">light</span>
+            </li>
+            <li data-bk-layout="p:sm p:tl 3">
+              <span class="hide-text block bg-{{ colour }}--lighter color-black pad">lighter</span>
+            </li>
+          </ol>
+        </div>
       {% endfor %}
 
-      <div data-bk-layout="sm:6 lg:3" class="font-sm rte | pad-lg-t">
-        <p>A palette of three brand colours each with two darker and two lighter tones provides a balance of flexibility in the design with reduced complexity and development time in the build.</p>
-        <p>Avoid using black or white as primary colours when there is a choice as this creates unecessary duplication with the below predefined colours.</p>
-      </div>
+      <p data-bk-layout="sm:6 lg:6" class="rte | pad-t">
+        A palette of three brand colours each with two darker and two lighter tones provides a balance of flexibility in the design with reduced complexity and development time in the build.
+      </p>
 
     </section>
   </div>

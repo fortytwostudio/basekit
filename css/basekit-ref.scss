@@ -2,9 +2,9 @@
 
 // $mq-breakpoints: (sm: 568px, md: 850px, lg: 1200px);
 
-$color-primary: #2593e8; // 432f6b
-$color-secondary: #22c09a;
-$color-tertiary: #fbae48;
+$color-primary: hsl(349, 64%, 58%); // 432f6b
+$color-secondary: hsl(321, 13%, 44%);
+$color-tertiary: hsl(31, 22%, 63%);
 
 @import "basekit.scss";
 @import "core/third-party/scrim-linear-grad";
