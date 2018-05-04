@@ -1,0 +1,20 @@
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#
+#   # Send would-be 404 requests to Craft
+#   RewriteCond %{REQUEST_FILENAME} !-f
+#   RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+#   RewriteRule (.+) index.php?p=$1 [QSA,L]
+# </IfModule>
+
+# <FilesMatch ".(eot|ttf|otf|woff)">
+#   # Stop Craft 3 from screwing up CMS icons when logged in on a non-primary
+#   # multi-site as admin.
+#   Header set Access-Control-Allow-Origin "*"
+# </FilesMatch>
+
+<filesMatch ".(ico|pdf|jpg|jpeg|png|gif|js|css|svg|eot|ttf|otf|woff|mp4|ogg|webm)$">
+  # Cache for 30 days
+  Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
