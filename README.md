@@ -6,9 +6,11 @@ The FortyTwo Studio frontend toolkit.
 
 Basekit should go in the root web directory, i.e. blergh/public/--basekit-yo--
 
-### Yarn
+### NPM/Yarn
 
 Use Yarn not NPM… if you want.
+
+Install gulp-cli globally first then gulp within the project directory. I always forget to do that 🙄
 
 ### gulpfile.js
 
