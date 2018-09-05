@@ -1,27 +1,34 @@
 {
-  "name": "basekit-gulp-workflow",
+  "name": "basekit",
   "version": "2.0.0",
   "description": "Basekit Gulp Workflow",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fortytwostudio/basekit.git"
-  },
-  "keywords": [
-    "gulp",
-    "framework",
-    "frontend",
-    "fortytwo studio",
-    "html",
-    "css",
-    "sass",
-    "twig"
-  ],
-  "author": "FortyTwo Studio",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fortytwostudio/basekit/issues"
-  },
+  "main": "gulpfile.js",
   "homepage": "http://basekit.fortytwo.studio",
+  "author": "FortyTwo Studio",
+  "copyright": "FortyTwo Studio Ltd",
+  "license": "UNLICENSED",
+  "paths": {
+    "src": {
+      "base": "./src/",
+      "sass": "./src/sass/",
+      "twig": "./src/twig/",
+      "js": "./src/js/",
+      "css": "./src/css/",
+      "json": "./src/json/"
+    },
+    "dist": {
+      "base": "./public/",
+      "css": "./public/assets/css/",
+      "js": "./public/assets/js/",
+      "fonts": "./public/assets/fonts/",
+      "img": "./public/assets/imgs/"
+    }
+  },
+  "vars": {
+    "scssName": "basekit.scss",
+    "cssName": "basekit.css",
+    "jsName": "basekit.js"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -33,5 +40,12 @@
     "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fortytwostudio/basekit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fortytwostudio/basekit/issues"
   }
 }
