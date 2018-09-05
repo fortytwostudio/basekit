@@ -1,6 +1,6 @@
 // Set the path to compile assets to or leave blank to compile to same folder
 // var publicPath = '../public/';
-var publicPath = '';
+var publicPath = 'public/';
 
 var gulp            = require('gulp'),
     // Sass for writing and pre-processing CSS
@@ -22,10 +22,7 @@ var gulp            = require('gulp'),
     // Stops stream from ending on error
     plumber         = require('gulp-plumber'),
     // Send noficitations to the system and CLI
-    notify          = require('gulp-notify'),
-    // Sync changes to the Browser
-    browserSync     = require('browser-sync');
-
+    notify          = require('gulp-notify');
 
 // De-caching so that the data.json file can be watched correctly
 // See this https://github.com/colynb/gulp-data/issues/17
@@ -35,36 +32,9 @@ function requireUncached($module) {
 }
 
 
-// Configure macOS native error notification for gulp-plumber to handle
-var hasError = notify.onError({
-  title: 'Error',
-  message: '<%= error.message %>',
-  sound: "Basso"
-});
-
-
-// browserSync config so we don't have to cmd+r
-// Update host and proxy to your local dev domain and append port :3000
-gulp.task('sync', function() {
-  browserSync({
-    host: 'basekit.test',
-    proxy: 'basekit.test',
-    startPath: '/demo/',
-    open: false, // or 'external'
-    notify: false, // enable/disable the annoying popup (within the site)
-    scrollRestoreTechnique: "cookie",
-    logLevel: "silent",
-    // logLevel: "info",
-    reloadDelay: 100, // Slight delays to prevent things going nuts, not sure why they go nuts :/
-    reloadDebounce: 500
-  });
-});
-
-
 // Compile Sass (with Nano and Autoprefixer)
 gulp.task('scss', function() {
   gulp.src('css/*.scss')
-    .pipe(plumber({errorHandler: hasError}))
     .pipe(data(function(file){ return requireUncached('./data.json'); }))
     .pipe(sass().on('error', sass.logError))
     .pipe(nano({
@@ -76,7 +46,6 @@ gulp.task('scss', function() {
       }
     }))
     .pipe(gulp.dest(publicPath + 'css'))
-    .pipe(browserSync.reload({ stream: true })) // Reload and inject
     .pipe(size({ showFiles: true })) // Show file size before gzip
     .pipe(size({ gzip: true, showFiles: true })); // Show file size after gzip
 });
@@ -85,11 +54,9 @@ gulp.task('scss', function() {
 // Minify and combine javascript files for production, unless they start with an _
 gulp.task('js', function() {
   gulp.src('js/[^_]*.js')
-    .pipe(plumber({errorHandler: hasError}))
     .pipe(concat('basekit.js')) // Combine all (none _) js files into this file
     .pipe(uglify()) // Minify the file
     .pipe(gulp.dest(publicPath + 'js/min')) // Output it here
-    .pipe(browserSync.reload({ stream: true })) // Reload and inject
     .pipe(size({ gzip: true, showFiles: true }) // Show file size after gzip
   );
 });
@@ -100,7 +67,6 @@ gulp.task('js', function() {
 gulp.task('twig', function() {
   // run the Twig template parser on .twig files that don't start with an _
   return gulp.src('./templates/**/[^_]*.twig')
-  .pipe(plumber({errorHandler: hasError}))
   // Uncached data for populating Twig files
   .pipe(data(function(file){ return requireUncached('./data.json'); }))
   // Let gulp-twig know where the base template directory is
@@ -125,15 +91,12 @@ gulp.task('twig', function() {
   .pipe(plumber.stop())
   // Output minified file
   .pipe(gulp.dest(publicPath + 'demo'))
-  // Reload the site
-  .pipe(browserSync.reload({ stream: true }))
 });
 
 
 
 gulp.task('reference', function() {
   return gulp.src('./reference/**/[^_]*.twig')
-  .pipe(plumber({errorHandler: hasError}))
   .pipe(data(function(file){ return requireUncached('./reference/data.json'); }))
   .pipe(twig({
     base: 'reference',
@@ -141,7 +104,6 @@ gulp.task('reference', function() {
   }))
   .pipe(plumber.stop())
   .pipe(gulp.dest(publicPath + 'demo/reference'))
-  .pipe(browserSync.reload({ stream: true }))
 });
 
 
@@ -156,5 +118,5 @@ gulp.task('watch', function() {
   gulp.watch(['templates/**/*.twig', 'templates/**/*.json'], { interval: 500 }, ['twig']);
 });
 
-gulp.task('ref', ['refbuild', 'sync']);
-gulp.task('default', ['watch', 'sync']);
+gulp.task('ref', ['refbuild']);
+gulp.task('default', ['watch']);

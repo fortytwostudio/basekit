@@ -1,9 +1,12 @@
 {
   "siteName": "Widgets Co",
+
   "sitePath": "/demo/",
   "basekitPath": "/basekit/",
+
   "siteEmail": "info@yourdomain.com",
   "siteTel": "01224 000 000",
+
   "address": {
     "org": "FortyTwo Studio",
     "street": "126 Crown Street",
