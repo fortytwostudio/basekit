@@ -4,7 +4,7 @@ The FortyTwo Studio frontend toolkit.
 
 ## Things you'll want to look at / consider first:
 
-Basekit should go in the root web directory, i.e. blergh/public/--basekit-yo--
+Basekit should go in the public web directory, i.e. /website/public/--basekit-files--
 
 ### NPM/Yarn
 
