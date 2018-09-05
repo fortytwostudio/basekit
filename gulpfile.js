@@ -10,6 +10,16 @@ const uglify  = require('gulp-uglify'); // Minify that single JS file
 const htmlmin = require('gulp-htmlmin'); // Minify and clean up HTML files
 const size    = require('gulp-size'); // Report file sizes in the CLI
 
+// const banner = [
+//     "/**",
+//     " * @project        <%= pkg.name %>",
+//     " * @author         <%= pkg.author %>",
+//     " * @build          " + $.moment().format("llll") + " ET",
+//     " * @release        " + $.gitRevSync.long() + " [" + $.gitRevSync.branch() + "]",
+//     " *",
+//     " */",
+//     ""
+// ].join("\n");
 
 // PATHS
 // ————————————————————————————————————————————————————————————————————————————————————
