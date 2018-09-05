@@ -1,7 +1,7 @@
 {
   "siteName": "Widgets Co",
-  "siteUrl": "/demo/",
-  "basekitUrl": "/basekit/",
+  "sitePath": "/demo/",
+  "basekitPath": "/basekit/",
   "siteEmail": "info@yourdomain.com",
   "siteTel": "01224 000 000",
   "address": {
