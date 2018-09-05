@@ -1,24 +1,27 @@
-var gulp    = require('gulp');
-var data    = require('gulp-data'); // Data storage for Twig templates and Sass
-var twig    = require('gulp-twig');
-var sass    = require('gulp-sass');
-var nano    = require('gulp-cssnano'); // Nano for optimising and post-processing CSS
-var concat  = require('gulp-concat'); // Join JS file into a single file
-var uglify  = require('gulp-uglify'); // Minify that single JS file
-var htmlmin = require('gulp-htmlmin'); // Minify and clean up HTML files
-var size    = require('gulp-size'); // Report file sizes in the CLI
+const pkg   = require("./package.json");
+const gulp  = require('gulp');
+
+const data    = require('gulp-data'); // Data storage for Twig templates and Sass
+const twig    = require('gulp-twig');
+const sass    = require('gulp-sass');
+const nano    = require('gulp-cssnano'); // Nano for optimising and post-processing CSS
+const concat  = require('gulp-concat'); // Join JS file into a single file
+const uglify  = require('gulp-uglify'); // Minify that single JS file
+const htmlmin = require('gulp-htmlmin'); // Minify and clean up HTML files
+const size    = require('gulp-size'); // Report file sizes in the CLI
 
 
 // PATHS
 // ————————————————————————————————————————————————————————————————————————————————————
-var sassSrcPath   = './src/sass';
-var twigSrcPath   = './src/twig';
-var jsSrcPath     = './src/js';
+const sassSrcPath   = './src/sass';
+const twigSrcPath   = './src/twig';
+const jsSrcPath     = './src/js';
 
-var publicPath    = './public/';
-var htmlDestPath  = publicPath + 'demo';
-var cssDestPath   = publicPath + 'assets/css';
-var jsDestPath    = publicPath + 'assets/js';
+const publicPath    = './public/';
+const htmlDestPath  = publicPath + 'demo';
+const cssDestPath   = publicPath + 'assets/css';
+const jsDestPath    = publicPath + 'assets/js';
+
 
 // CACHING
 // ————————————————————————————————————————————————————————————————————————————————————
@@ -40,8 +43,7 @@ gulp.task('sass', function() {
       minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
       autoprefixer: {
         add: true, // Enable adding browser prefixes
-        // Browser support: must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
-        browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ]
+        browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ] // Browser support: must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
       }
     }))
     .pipe(gulp.dest(cssDestPath))
