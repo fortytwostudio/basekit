@@ -33,7 +33,7 @@ $colophon-logo-height: 14px;
   }
 
   &__img {
-    background-image: url("../imgs/logos/site-logo.svg");
+    background-image: url("/assets/imgs/logos/site-logo.svg");
   }
 }
 
@@ -43,6 +43,6 @@ $colophon-logo-height: 14px;
   width: rem($colophon-logo-width);
 
   &__img {
-    background-image: url("../imgs/logos/colophon-logo.svg");
+    background-image: url("/assets/imgs/logos/colophon-logo.svg");
   }
 }

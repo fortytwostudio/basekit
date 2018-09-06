@@ -25,16 +25,6 @@
       </div>
     {% endif %}
 
-    {% if footerNav|length %}
-      <ul data-bk-layout="6 sm:4">
-        {% for item in footerNav %}
-          <li>
-            <a href="{{ item.url }}">{{ item.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-
     {% if socialLinks|length %}
       <ul data-bk-layout="6 sm:4">
         {% for item in socialLinks %}
