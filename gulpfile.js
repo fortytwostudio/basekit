@@ -105,16 +105,16 @@ gulp.task('cleanup', () => {
       .pipe($.clean());
 });
 
+// WATCH ONLY SASS CHANGES
+// ————————————————————————————————————————————————————————————————————————————————————
+gulp.task('watch-sass', () => {
+  gulp.watch(pkg.paths.src.sass + '**/*.scss', ['sass']);
+});
+
 // WRAP INTO WATCH TASK
 // ————————————————————————————————————————————————————————————————————————————————————
 gulp.task("default", () => {
   gulp.watch([pkg.paths.src.sass + '**/*.scss', pkg.paths.src.base + pkg.vars.dataName], ['sass']);
   gulp.watch(pkg.paths.src.js + '*.js', ['js']);
   gulp.watch([pkg.paths.src.twig + '**/*.twig', pkg.paths.src.base + pkg.vars.dataName], ['twig']);
-});
-
-// WATCH ONLY SASS CHANGES
-// ————————————————————————————————————————————————————————————————————————————————————
-gulp.task('watch-sass', () => {
-  gulp.watch(pkg.paths.src.sass + '**/*.scss', ['sass']);
 });
