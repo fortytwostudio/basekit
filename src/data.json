@@ -1,9 +1,6 @@
 {
   "siteName": "Basekit Project",
-
   "sitePath": "/demo/",
-  "basekitPath": "/basekit/",
-
   "siteEmail": "info@yourdomain.com",
   "siteTel": "01224 000 000",
 
@@ -43,36 +40,6 @@
     "title": "Contact",
     "url": "#contact",
     "scrollTo": "true"
-  }],
-
-  "footerNav": [{
-    "title": "Home",
-    "url": "/demo/reference/",
-    "slug": "reference"
-  }, {
-    "title": "Services",
-    "url": "#",
-    "slug": "services"
-  }, {
-    "title": "About Us",
-    "url": "/demo/",
-    "slug": "about"
-  }, {
-    "title": "Contact",
-    "url": "#contact",
-    "scrollTo": "true"
-  }, {
-    "title": "Github",
-    "url": "https://github.com/fortytwostudio/basekit",
-    "external": "true"
-  }],
-
-  "siteInfoNav": [{
-    "title": "Terms &amp; Conditions",
-    "url": "terms/"
-  }, {
-    "title": "Privacy Policy",
-    "url": "privacy/"
   }],
 
   "socialLinks": [{
