@@ -36,7 +36,7 @@ const banner = [
 // Compile Sass (with Nano and Autoprefixer)
 gulp.task("sass", () => {
   return gulp.src(pkg.paths.src.sass + '*.scss')
-    .pipe($.data(function(file){ return requireUncached('./data.json'); }))
+    .pipe($.data(function(file){ return requireUncached(pkg.paths.src.base + pkg.vars.dataName); }))
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.cssnano({
       minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
@@ -58,7 +58,7 @@ gulp.task("sass", () => {
 // This is quite long-winded and not ideal, but does the job for now
 gulp.task('twig', () => {
   return gulp.src(pkg.paths.src.twig + '**/[^_]*.twig') // run the Twig template parser on .twig files that don't start with an _
-  .pipe($.data(function(file){ return requireUncached('./data.json'); })) // Uncached data for populating Twig files
+  .pipe($.data(function(file){ return requireUncached(pkg.paths.src.base + pkg.vars.dataName); })) // Uncached data for populating Twig files
   .pipe($.twig({ base: pkg.paths.src.twig, cache: false })) // Let gulp-twig know where the base template directory is
   .pipe($.htmlmin({
     collapseWhitespace: true,
@@ -101,9 +101,9 @@ gulp.task('cleanup', () => {
 // WRAP INTO WATCH TASK
 // ————————————————————————————————————————————————————————————————————————————————————
 gulp.task("default", () => {
-  gulp.watch(pkg.paths.src.sass + '**/*.scss', ['sass']);
+  gulp.watch([pkg.paths.src.sass + '**/*.scss', pkg.paths.src.base + pkg.vars.dataName], ['sass']);
   gulp.watch(pkg.paths.src.js + '*.js', ['js']);
-  gulp.watch([pkg.paths.src.twig + '**/*.twig', pkg.paths.src.twig + '**/*.json'], ['twig']);
+  gulp.watch([pkg.paths.src.twig + '**/*.twig', pkg.paths.src.base + pkg.vars.dataName], ['twig']);
 });
 
 // WATCH ONLY SASS CHANGES

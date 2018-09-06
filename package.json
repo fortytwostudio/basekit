@@ -28,7 +28,8 @@
   "vars": {
     "scssName": "basekit.scss",
     "cssName": "basekit.css",
-    "jsName": "basekit.min.js"
+    "jsName": "basekit.min.js",
+    "dataName": "data.json"
   },
   "devDependencies": {
     "git-rev-sync": "^1.12.0",
