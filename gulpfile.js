@@ -1,4 +1,7 @@
+// package vars
 const pkg   = require("./package.json");
+
+// gulp
 const gulp  = require('gulp');
 
 // load all plugins in "devDependencies" into the variable $
@@ -7,6 +10,15 @@ const $ = require("gulp-load-plugins")({
   scope: ["devDependencies"]
 });
 
+// function to uncache modules/data
+function requireUncached($module) {
+  delete require.cache[require.resolve($module)];
+  return require($module);
+}
+
+// HEADER BANNER
+// ————————————————————————————————————————————————————————————————————————————————————
+// A timestamped info comment that get's added to the top of CSS and JS files.
 const banner = [
     "/**",
     " * @project        <%= pkg.name %>",
@@ -18,16 +30,6 @@ const banner = [
     " */",
     ""
 ].join("\n");
-
-
-// CACHING
-// ————————————————————————————————————————————————————————————————————————————————————
-// De-caching so that the data.json file can be watched correctly
-// See this https://github.com/colynb/gulp-data/issues/17
-function requireUncached($module) {
-  delete require.cache[require.resolve($module)];
-  return require($module);
-}
 
 // SASS/CSS
 // ————————————————————————————————————————————————————————————————————————————————————
@@ -49,23 +51,6 @@ gulp.task("sass", () => {
     .pipe($.size({ showFiles: true })) // Show file size
     .pipe($.size({ gzip: true, showFiles: true })); // Show file size after gzip
 });
-
-
-// JAVASCRIPT
-// ————————————————————————————————————————————————————————————————————————————————————
-// Minify and combine javascript files for production, unless they start with an _
-gulp.task('js', () => {
-  return gulp.src(pkg.paths.src.js + '[^_]*.js') // ignore underscored files
-    .pipe($.concat(pkg.vars.jsName)) // Combine all (none _) js files into this file
-    .pipe($.uglify()) // Minify the file
-    .pipe($.header(banner, {pkg: pkg}))
-
-    .pipe($.gulp.dest(pkg.paths.dist.js)) // Output it here
-    .pipe($.size({ showFiles: true })) // Show file size before gzip
-    .pipe($.size({ gzip: true, showFiles: true }) // Show file size after gzip
-  );
-});
-
 
 // TWIG/HTML
 // ————————————————————————————————————————————————————————————————————————————————————
@@ -90,6 +75,28 @@ gulp.task('twig', () => {
   .pipe($.gulp.dest(pkg.paths.dist.html)) // Output minified file to public directory
 });
 
+// JAVASCRIPT
+// ————————————————————————————————————————————————————————————————————————————————————
+// Minify and combine javascript files for production, unless they start with an _
+gulp.task('js', () => {
+  return gulp.src(pkg.paths.src.js + '[^_]*.js') // ignore underscored files
+    .pipe($.concat(pkg.vars.jsName)) // Combine all (none _) js files into this file
+    .pipe($.uglify()) // Minify the file
+    .pipe($.header(banner, {pkg: pkg}))
+
+    .pipe($.gulp.dest(pkg.paths.dist.js)) // Output it here
+    .pipe($.size({ showFiles: true })) // Show file size before gzip
+    .pipe($.size({ gzip: true, showFiles: true }) // Show file size after gzip
+  );
+});
+
+// CLEANUP
+// ————————————————————————————————————————————————————————————————————————————————————
+// Remove the compiled twig destination content.
+gulp.task('cleanup', () => {
+    return gulp.src(pkg.paths.dist.html, {read: false})
+      .pipe($.clean());
+});
 
 // WRAP INTO WATCH TASK
 // ————————————————————————————————————————————————————————————————————————————————————
@@ -101,6 +108,6 @@ gulp.task("default", () => {
 
 // WATCH ONLY SASS CHANGES
 // ————————————————————————————————————————————————————————————————————————————————————
-gulp.task('watch-sass', function() {
+gulp.task('watch-sass', () => {
   gulp.watch(pkg.paths.src.sass + '**/*.scss', ['sass']);
 });
