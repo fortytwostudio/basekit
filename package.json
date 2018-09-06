@@ -32,6 +32,7 @@
     "dataName": "data.json"
   },
   "devDependencies": {
+    "fancy-log": "^1.3.2",
     "git-rev-sync": "^1.12.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",

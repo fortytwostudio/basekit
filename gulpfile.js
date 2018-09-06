@@ -47,9 +47,8 @@ gulp.task("sass", () => {
     }))
     .pipe($.header(banner, {pkg: pkg}))
 
-    .pipe($.gulp.dest(pkg.paths.dist.css))
-    .pipe($.size({ showFiles: true })) // Show file size
-    .pipe($.size({ gzip: true, showFiles: true })); // Show file size after gzip
+    .pipe($.gulp.dest(pkg.paths.dist.css) // Show file size after gzip
+  );
 });
 
 // TWIG/HTML
@@ -84,9 +83,17 @@ gulp.task('js', () => {
     .pipe($.uglify()) // Minify the file
     .pipe($.header(banner, {pkg: pkg}))
 
-    .pipe($.gulp.dest(pkg.paths.dist.js)) // Output it here
-    .pipe($.size({ showFiles: true })) // Show file size before gzip
-    .pipe($.size({ gzip: true, showFiles: true }) // Show file size after gzip
+    .pipe($.gulp.dest(pkg.paths.dist.js) // Output it here
+  );
+});
+
+// CHECK FILE SIZES
+// ————————————————————————————————————————————————————————————————————————————————————
+// Report full and gzip file sizes
+gulp.task('size', () => {
+  return gulp.src([pkg.paths.dist.js + pkg.vars.jsName, pkg.paths.dist.css + pkg.vars.cssName])
+    .pipe($.size({ title: '➡', showFiles: true, showTotal: false })) // Show file size before gzip
+    .pipe($.size({ title: '→', gzip: true, showFiles: true, showTotal: false }) // Show file size after gzip
   );
 });
 
