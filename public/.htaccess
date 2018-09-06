@@ -1,3 +1,4 @@
+# Craft's default config:
 # <IfModule mod_rewrite.c>
 #   RewriteEngine On
 #
@@ -8,13 +9,14 @@
 #   RewriteRule (.+) index.php?p=$1 [QSA,L]
 # </IfModule>
 
+# Uncomment this is Craft does some weird stuff over SSL with font files:
 # <FilesMatch ".(eot|ttf|otf|woff)">
 #   # Stop Craft 3 from screwing up CMS icons when logged in on a non-primary
 #   # multi-site as admin.
 #   Header set Access-Control-Allow-Origin "*"
 # </FilesMatch>
 
-<filesMatch ".(ico|pdf|jpg|jpeg|png|gif|js|css|svg|eot|ttf|otf|woff|mp4|ogg|webm)$">
-  # Cache for 30 days
-  Header set Cache-Control "max-age=2592000, public"
-</filesMatch>
+# Better caching for static files. Set to 30 days:
+# <filesMatch ".(ico|pdf|jpg|jpeg|png|gif|js|css|svg|eot|ttf|otf|woff|mp4|ogg|webm)$">
+#   Header set Cache-Control "max-age=2592000, public"
+# </filesMatch>
