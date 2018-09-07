@@ -17,12 +17,12 @@
       "json": "./src/json/"
     },
     "dist": {
-      "base": "../public/",
-      "html": "../public/demo/",
-      "css": "../public/assets/css/",
-      "js": "../public/assets/js/",
-      "fonts": "../public/assets/fonts/",
-      "img": "../public/assets/imgs/"
+      "base": "./public/",
+      "html": "./public/demo/",
+      "css": "./public/assets/css/",
+      "js": "./public/assets/js/",
+      "fonts": "./public/assets/fonts/",
+      "img": "./public/assets/imgs/"
     }
   },
   "vars": {
