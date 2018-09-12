@@ -42,7 +42,7 @@ gulp.task("sass", () => {
       minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
       autoprefixer: {
         add: true, // Enable adding browser prefixes
-        browsers: [ '> 0.5% in GB', 'last 3 versions', 'ie >= 9' ] // Browser support: must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
+        browsers: [ '> 0.5% in GB', 'last 3 major versions', 'not ie 9' ] // Browser support: must be 0.5% usage in UK, going back 3 versions, but make sure IE is not dropped off
       }
     }))
     .pipe($.header(banner, {pkg: pkg}))
