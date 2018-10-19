@@ -110,8 +110,37 @@ $bk-push-left: true !default;
   @include attr-module($bk-grid-name, #{$ga-value}#{"left"}) {
     text-align: left;
   }
-
 }
+
+
+
+
+/// Flex box options
+///
+/// @todo More options
+/// @access private
+@mixin grid-flex($gf-value: null) {
+  @include attr-module($bk-grid-name, #{$gf-value}#{"flex"}) {
+    display: flex;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"wrap"}) {
+    flex-wrap: wrap;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"col"}) {
+    flex-direction: column;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"start"}) {
+    order: -1;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"fill"}) {
+    flex-grow: 2;
+  }
+}
+
 
 
 /// Generate grid columns.
@@ -257,6 +286,7 @@ $bk-push-left: true !default;
 }
 
 // Output the _base_ set of properties (mobile first, no MQ)
+@include grid-flex;
 @include grid-columns;
 @include grid-padding;
 @include grid-indent;
@@ -266,11 +296,11 @@ $bk-push-left: true !default;
 @each $breakpoint, $gw-value in $mq-breakpoints {
   // @if $gw-value != null {
     @include mq($breakpoint) {
+      @include grid-flex("#{$breakpoint}:");
       @include grid-columns("#{$breakpoint}:");
       @include grid-padding("#{$breakpoint}:");
       @include grid-indent("#{$breakpoint}:");
       @include grid-alignments("#{$breakpoint}:");
-      // @include grid-display("#{$breakpoint}:");
     }
   // }
 }
@@ -280,11 +310,11 @@ $bk-push-left: true !default;
   @each $breakpoint, $gw-value in reverse($mq-breakpoints) {
     // @if $gw-value != null {
       @include mq($until: $breakpoint) {
+        @include grid-flex("to:#{$breakpoint}:");
         @include grid-columns("to:#{$breakpoint}:");
         @include grid-padding("to:#{$breakpoint}:");
         @include grid-indent("to:#{$breakpoint}:");
         @include grid-alignments("to:#{$breakpoint}:");
-        // @include grid-display("to:#{$breakpoint}:");
       }
     // }
   }
