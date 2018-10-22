@@ -1,0 +1,13 @@
+// Other sizes to try: 60px by 15px, or 64px by 16px
+$colophon-logo-width: 56px !default;
+$colophon-logo-height: 14px !default;
+
+// styles for the footer "FortyTwo" logo
+.colophon-logo {
+  height: rem($colophon-logo-height);
+  width: rem($colophon-logo-width);
+
+  &__img {
+    background-image: url("/assets/imgs/logos/colophon-logo.svg");
+  }
+}
