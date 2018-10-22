@@ -85,7 +85,7 @@ $fluid-fonts: (
     font-weight: 200;
   }
 
-  &-normal {
+  &-regular {
     font-weight: 400;
   }
 
@@ -97,11 +97,11 @@ $fluid-fonts: (
     font-style: italic;
   }
 
-  &-upper {
-    text-transform: uppercase;
+  &-normal {
+    font-style: normal;
   }
 
-  &-kern {
-    font-kerning: normal !important;
+  &-upper {
+    text-transform: uppercase;
   }
 }
