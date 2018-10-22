@@ -1,61 +1,64 @@
-@import
-  // THIRD PARTY TOOLS
-  "core/third-party/between",
-  "core/third-party/family",
-  "core/third-party/font-face",
-  "core/third-party/hamburgers/hamburgers",
-  "core/third-party/media-queries",
-  "core/third-party/unit-conversion",
+@import "core/vars/fonts";
+@import "core/vars/colour";
+@import "core/vars/layout";
+@import "core/vars/transitions";
+
+// THIRD PARTY TOOLS
+@import "core/third-party/between";
+@import "core/third-party/family";
+@import "core/third-party/font-face";
+@import "core/third-party/hamburgers/hamburgers";
+@import "core/third-party/media-queries";
+@import "core/third-party/unit-conversion";
 
   // MIXINS & FUNCTONS, USEFUL THINGS
-  "core/tools/aspect-ratio",
-  "core/tools/hider",
-  "core/tools/percentage",
-  "core/tools/poly-fluid-sizing",
-  "core/tools/rem",
-  "core/tools/reverse-list",
-  "core/tools/viewport-units",
+@import "core/tools/aspect-ratio";
+@import "core/tools/hider";
+@import "core/tools/percentage";
+@import "core/tools/poly-fluid-sizing";
+@import "core/tools/rem";
+@import "core/tools/reverse-list";
+@import "core/tools/viewport-units";
 
-  // GLOBALS
-  "core/global/document",
-  "core/global/text",
-  "core/global/media",
-  "core/global/tables",
-  "core/global/code",
+// GLOBALS
+@import "core/global/document";
+@import "core/global/text";
+@import "core/global/media";
+@import "core/global/tables";
+@import "core/global/code";
 
-  // LAYOUT GRID
-  "core/utility-layout/grid-layout",
-  "core/utility-layout/display",
-  "core/utility-layout/margins",
-  "core/utility-layout/padding-spacer",
-  "core/utility-layout/site-width",
-  "core/utility-layout/float",
-  "core/utility-layout/hide-content",
-  "core/utility-layout/position-over",
-  "core/utility-layout/fit-media",
-  "core/utility-layout/full-width",
-  "core/utility-layout/widths",
-  "core/utility-layout/overflow",
+// LAYOUT GRID
+@import "core/utility-layout/grid-layout";
+@import "core/utility-layout/display";
+@import "core/utility-layout/margins";
+@import "core/utility-layout/padding-spacer";
+@import "core/utility-layout/site-width";
+@import "core/utility-layout/float";
+@import "core/utility-layout/hide-content";
+@import "core/utility-layout/position-over";
+@import "core/utility-layout/fit-media";
+@import "core/utility-layout/full-width";
+@import "core/utility-layout/widths";
+@import "core/utility-layout/overflow";
 
-  // UTILITY CLASSES
-  "core/utility-general/alerts",
-  "core/utility-general/nav",
-  "core/utility-general/borders",
-  "core/utility-general/border-radius",
-  "core/utility-general/box-shadow",
-  // "core/utility-general/linter",
-  "core/utility-general/links",
-  "core/utility-general/arrows",
-  "core/utility-general/fortytwo-logo",
-  "core/utility-general/forms",
-  "core/utility-text/alignment",
-  "core/utility-text/list-styles",
-  "core/utility-text/user-content-rte",
-  "core/utility-text/overflow-text",
-  "core/utility-text/hide-text",
+// UTILITY CLASSES
+@import "core/utility-general/alerts";
+@import "core/utility-general/nav";
+@import "core/utility-general/borders";
+@import "core/utility-general/border-radius";
+@import "core/utility-general/box-shadow";
+@import "core/utility-general/links";
+@import "core/utility-general/arrows";
+@import "core/utility-general/fortytwo-logo";
+@import "core/utility-general/forms";
+@import "core/utility-text/alignment";
+@import "core/utility-text/list-styles";
+@import "core/utility-text/user-content-rte";
+@import "core/utility-text/overflow-text";
+@import "core/utility-text/hide-text";
 
-  // MAIN FRAMEWORK
-  "core/utility-nav/_nav-vars",
-  "core/utility-nav/_nav-all",
-  "core/utility-nav/_nav-mobile",
-  "core/utility-nav/_nav-desk";
+// MAIN FRAMEWORK
+@import "core/utility-nav/_nav-vars";
+@import "core/utility-nav/_nav-all";
+@import "core/utility-nav/_nav-mobile";
+@import "core/utility-nav/_nav-desk";
