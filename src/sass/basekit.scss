@@ -1,9 +1,12 @@
 @import "core/import";
 
+// Default layout variables, delete these from here if you're happy.
+// —————————————————————————————————————————————————————————————————————————————
 // $site-width: 96%;
 // $grid-columns: 12;
 // $grid-column-width: 74;
 // $grid-gutter: 40;
+// —————————————————————————————————————————————————————————————————————————————
 
 // Import project specific styles…
 @import "project/text";
