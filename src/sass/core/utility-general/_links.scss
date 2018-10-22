@@ -1,7 +1,153 @@
+// Link Style Utility
+// —————————————————————————————————————————————————————————————————————————————
+//
+// Links in BaseKit are *unstyled by default* which I do to avoid juggling UI
+// links and CMS generated link styles. This utility tightly scopes link styling
+// to where you need it. You won't ever have to override link styles again.
+
+$link-dim-value: 0.6 !default;
+
+// We do not want any of these styles to apply to the button class which can
+// also be used on links.
+a:not([class*="btn-"]) {
+  // I'm being specific here rather than just transitioning *all* because all
+  // can have unwanted restults in cetain situations (i.e. transitoning
+  // backgrounds).
+  transition: color $speed-slow,
+              text-decoration $speed-slow,
+              opacity $speed-slow;
+
+  // Standard Colours
+  // ———————————————————————————————————————————————————————————————————————————
+  //
+  // Simple white links for use on dark backgrounds, you'll want to combine this
+  // with `dim` if the surrounding text is also white.
+  [data-bk-links~="white"] & {
+    color: white;
+
+    &:focus,
+    &:hover {
+      color: white;
+    }
+  }
+
+  // The next three provide standard colour styles.
+  [data-bk-links~="primary"] & {
+    color: color(primary);
+
+    &:focus,
+    &:hover {
+      color: color(secondary);
+    }
+  }
+
+  [data-bk-links~="secondary"] & {
+    color: color(secondary);
+
+    &:focus,
+    &:hover {
+      color: color(primary);
+    }
+  }
+
+  [data-bk-links~="tertiary"] & {
+    color: color(tertiary);
+
+    &:focus,
+    &:hover {
+      color: color(primary);
+    }
+  }
+
+  // Useful utilities
+  // ———————————————————————————————————————————————————————————————————————————
+  //
+  // Allow links to inherit the surrounding text colour.
+  // Commented out for now as it's a little redundant and possibly confusing.
+  // [data-bk-links~="inherit"] & {
+  //   color: inherit;
+  // }
+
+  // Underline child links, notice this uses *= so that the styles applied here
+  // also apply to the following hover version.
+  [data-bk-links*="underline"] & {
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+
+  // Switch things around so that underline is on hover
+  [data-bk-links~="underline-hover"] & {
+    text-decoration-color: transparent;
+
+    &:hover,
+    &:focus {
+      // Underline should use the current link colour.
+      text-decoration-color: currentColor;
+    }
+  }
+
+  // Underline only on the intitial state and hidden when hovered over.
+  [data-bk-links~="underline-initial"] & {
+    text-decoration-color: currentColor;
+
+    &:hover,
+    &:focus {
+      text-decoration-color: transparent;
+    }
+  }
+
+  // Force underline text off if required (e.g. the link is inside a container
+  // with underline enabled but you want this specific links not to have an
+  // underline).
+  [data-bk-links~="no-underline"] & {
+    text-decoration: none;
+  }
+
+  // Bin the transition states.
+  // Commented out for now due to lack of use.
+  // [data-bk-links~="no-fade"] & {
+  //   transition: none;
+  // }
+
+  // Apply a subtle dimming effect to the link, I find this is often used with
+  // white text on a dark background when the links are also white.
+  [data-bk-links~="dim"] & {
+    opacity: $link-dim-value;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  // Apply a customised focus outline for accessibility purposes.
+  // Commented out due to lack of use.
+  // [data-bk-links~="focus"] & {
+  //   &:focus {
+  //     outline: 1px dotted currentColor;
+  //     outline-offset: 0.15em;
+  //   }
+  //
+  //   &:active {
+  //     outline: 0;
+  //   }
+  // }
+
+  // Get rid of the link outline.
+  // Commented out due to lack of use.
+  // [data-bk-links~="no-focus"] & {
+  //   outline: 0;
+  // }
+}
+
+// Standalone class to remove link outlines.
+// Commented out due to lack of use.
 .no-outline {
   outline: 0;
 }
 
+// Accessibility focused skip link styles. These only appear when focused by the
+// user but should be accessible to non-sighted users.
 .skip-link {
   background-color: #f1f1f1;
   box-shadow: 0 0 1px 1px rgba(black, 0.2);
