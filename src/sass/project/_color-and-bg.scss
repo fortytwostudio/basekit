@@ -1,3 +1,10 @@
+// $color-primary: red;
+// $color-secondary: blue;
+// $color-tertiary: lime;
+// $color-body: #f7f7f7;
+// $hamburger-layer-color: #333;
+
+
 .color {
   @each $scheme-key, $color-value in $color-scheme {
     &-#{$scheme-key} {

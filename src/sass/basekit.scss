@@ -1,36 +1,9 @@
 @import "core/import";
 
-// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif !default;
-// $font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif !default;
-
-// $color-primary: red;
-// $color-secondary: blue;
-// $color-tertiary: lime;
-$color-body: #f7f7f7;
-// $color-text: #333;
-$hamburger-layer-color: #333;
-
+// $site-width: 96%;
 // $grid-columns: 12;
 // $grid-column-width: 74;
 // $grid-gutter: 40;
-// $mq-breakpoints: DON'T BOTHER CHANGING THE BREAKPOINTS :P
-
-// At which breakpoint should the nav switch to a hamburger?
-// $nav-switch-point: lg;
-// $sm-bk__base-color: color(primary, light) !default;
-// $sm-bk__gray: darken($sm-bk__base-color, 16.5%) !default;
-// $sm-bk__gray-dark: darken($sm-bk__base-color, 33%) !default;
-// $sm-bk__gray-darker: darken($sm-bk__base-color, 66%) !default;
-
-// $sm-bk__desktop-bg: color(primary);
-// $sm-bk__desktop-item-color: white;
-// $sm-bk__desktop-item-hover-bg: color(primary, dark);
-// $sm-bk__desktop-item-current-color: white;
-// $sm-bk__desktop-item-current-bg: color(primary, dark);
-// // $sm-bk__desktop-item-padding-vertical: 4px;
-// // $sm-bk__desktop-item-padding-horizontal: 10px;
-// $sm-bk__desktop-separators-color: color(primary, light);
-
 
 // Import project specific styles…
 @import "project/text";
