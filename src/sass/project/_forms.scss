@@ -1,0 +1,103 @@
+// $form-element-bg-color: white;
+//
+// .bk-form--ext {
+//   label {
+//     color: #666;
+//     font-size: 87.5%;
+//     text-transform: uppercase;
+//   }
+//
+//   &__combined {
+//     label {
+//       background: $form-element-bg-color;
+//       border-radius: $fh-border-radius $fh-border-radius 0 0;
+//       box-shadow: 0 -0.25em 0.75em -0.5em rgba(black, 0.1);
+//       color: #999;
+//       font-size: 75%;
+//       padding: ($fh-input-height / 5) ($fh-input-height / 4) ($fh-input-height / 15);
+//
+//       &.required {
+//         &:after {
+//           content: "required";
+//           float: right;
+//           text-transform: lowercase;
+//         }
+//       }
+//     }
+//
+//     input[type="text"],
+//     input[type="email"],
+//     input[type="password"],
+//     input[type="search"],
+//     input[type="color"],
+//     input[type="date"],
+//     input[type="datetime-local"],
+//     input[type="month"],
+//     input[type="number"],
+//     input[type="tel"],
+//     input[type="time"],
+//     input[type="url"],
+//     input[type="week"],
+//     input[list],
+//     input[type="file"],
+//     select,
+//     textarea  {
+//       appearance: none;
+//       background-clip: padding-box;
+//       background-color: $form-element-bg-color !important;
+//       border: 0;
+//       border-bottom: 3px solid white;
+//       border-radius: 0 0 $fh-border-radius $fh-border-radius;
+//       box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.075);
+//       transition: $speed-normal;
+//
+//       &:focus {
+//         border-color: color(tertiary, dark);
+//         border-radius: 0;
+//         box-shadow: 0 0.5em 0.5em -0.25em rgba(color(tertiary), 0.25);
+//       }
+//     }
+//
+//     label[disabled],
+//     input[disabled],
+//     textarea[disabled],
+//     select[disabled],
+//     select[disabled] option,
+//     select[disabled] optgroup,
+//     option[disabled] {
+//       background-color: rgba(color(grey, light), 0.66) !important;
+//       border-color: rgba(color(grey, light), 0.66) !important;
+//       color: color(grey, dark) !important;
+//     }
+//   }
+//
+//   button,
+//   input[type="button"],
+//   input[type="submit"],
+//   input[type="reset"],
+//   input[type="image"] {
+//     background-color: color(tertiary, darker);
+//     border: 0;
+//     border-radius: $fh-border-radius;
+//     color: white;
+//     font-weight: 200;
+//     text-transform: uppercase;
+//     transition: $speed-slow;
+//   }
+//
+//   button:hover,
+//   input[type="button"]:hover,
+//   input[type="submit"]:hover,
+//   input[type="reset"]:hover,
+//   input[type="image"]:hover,
+//   button:focus,
+//   input[type="button"]:focus,
+//   input[type="submit"]:focus,
+//   input[type="reset"]:focus,
+//   input[type="image"]:focus {
+//     background-color: color(primary);
+//     box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.2);
+//     color: white;
+//     transition: $speed-normal;
+//   }
+// }
