@@ -13,9 +13,8 @@ a:not([class*="btn-"]) {
   // I'm being specific here rather than just transitioning *all* because all
   // can have unwanted restults in cetain situations (i.e. transitoning
   // backgrounds).
-  transition: color $speed-slow,
-              text-decoration $speed-slow,
-              opacity $speed-slow;
+  transition-duration: $speed-slow;
+  transition-property: color, opacity;
 
   // Standard Colours
   // ———————————————————————————————————————————————————————————————————————————
@@ -72,6 +71,7 @@ a:not([class*="btn-"]) {
   // also apply to the following hover version.
   [data-bk-links*="underline"] & {
     text-decoration: underline;
+    text-decoration-color: currentColor;
     text-decoration-skip: ink;
   }
 
@@ -100,7 +100,7 @@ a:not([class*="btn-"]) {
   // with underline enabled but you want this specific links not to have an
   // underline).
   [data-bk-links~="no-underline"] & {
-    text-decoration: none;
+    text-decoration-line: none;
   }
 
   // Bin the transition states.
