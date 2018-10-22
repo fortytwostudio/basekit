@@ -1,45 +1,44 @@
+// Arrow utiltiy class
+// —————————————————————————————————————————————————————————————————————————————
 @include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-regular", 400, normal, svg ttf woff);
 @include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-bold", 700, normal, svg ttf woff);
 @include font-face("Basekit Arrows", "../fonts/arrows/bk-arrows-thin", 200, normal, svg ttf woff);
 
 [class*="arrow-"] {
-  &:before,
-  &:after,
-  a:before,
-  a:after {
+  &:before, &:after,
+  a:before, a:after {
     display: inline-block;
     font-family: "Basekit Arrows", $font-family !important;
   }
-  // a:before {
-  //   margin-right: 0.2em;
-  // }
-  // a:after {
-  //   margin-left: 0.2em;
-  // }
 }
 
 .arrow {
+  // Arrow on the right side, pointing right.
   &-r:after {
     content: "\2009 →";
   }
 
+  // Arrow on the left side, pointing left.
   &-l:before {
     content: "←\2009";
   }
 
+  // Arrow on the right side, kind of pointing away… ¯\_(ツ)_/¯
   &-exit:after {
     content: "\2009 ↗︎";
   }
 
+  // Arrow on the right side, pointing down.
   &-down:after {
     content: "\2009 ↓";
   }
 
-  // Same as above but applies an upward arrow instead
+  // Same as above but applies an upward arrow instead… :D
   &-up:after {
     content: "\2009 ↑";
   }
 
+  // The down arrow but animated with a subtle effect.
   &-dl {
     &:after {
       border-bottom: em(2px) solid currentColor;

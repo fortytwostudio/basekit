@@ -1,4 +1,7 @@
-@import "core/vars/fonts", "core/vars/colour", "core/vars/layout", "core/vars/transitions";
+@import "core/vars/fonts";
+@import "core/vars/colour";
+@import "core/vars/layout";
+@import "core/vars/transitions";
 
 $nav-switch-point: lg;
 // $sm-bk__base-color: color(primary, light) !default;
@@ -33,7 +36,6 @@ $hamburger-layer-color: #333;
 
 @import "core/import";
 
-@import "project/arrows";
 @import "project/text";
 @import "project/color-and-bg";
 @import "project/logos";
