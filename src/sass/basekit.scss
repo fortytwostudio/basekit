@@ -18,6 +18,12 @@
 // $font-weight-headings: $font-weight;
 //
 // $nav-switch-point: lg;
+//
+$site-logo-width: 205px;
+$site-logo-height: 47px;
+
+$bk-button-padding: 0.66em 1.25em;
+$bk-button-padding-compact: 0.25em 0.66em;
 
 // Core Basekit files and variables:
 @import "core/import";
