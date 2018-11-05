@@ -47,7 +47,7 @@ gulp.task("sass", () => {
       }
     }))
     .pipe($.header(banner, {pkg: pkg}))
-
+    .pipe($.size({ title: '📦', gzip: true, showFiles: true, showTotal: false }))
     .pipe($.gulp.dest(pkg.paths.dist.css) // Show file size after gzip
   );
 });

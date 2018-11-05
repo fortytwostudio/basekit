@@ -1,14 +1,13 @@
-@import "core/import";
-
-// Default layout variables, delete these from here if you're happy.
+// Common project overrides
 // —————————————————————————————————————————————————————————————————————————————
-// $site-width: 96%;
+// $site-width: 90%;
 // $grid-columns: 12;
 // $grid-column-width: 74;
 // $grid-gutter: 40;
-// —————————————————————————————————————————————————————————————————————————————
 
-// Import project specific styles…
+// Core Basekit files and variables:
+@import "core/import";
+// Your unique project files and customisations
 @import "project/text";
 @import "project/color-and-bg";
 @import "project/site-logo";
