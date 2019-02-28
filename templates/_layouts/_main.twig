@@ -1,0 +1,45 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/imgs/web-icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/web-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/web-icons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/imgs/web-icons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/imgs/web-icons/safari-pinned-tab.svg?v=2" color="#cd1719">
+    <meta name="application-name" content="TECA">
+    <meta name="msapplication-TileColor" content="#cd1719">
+    <meta name="theme-color" content="#cd1719">
+
+    <link href="/assets/css/basekit.css?9283562895" rel="stylesheet">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Skip to Content</a>
+    <a class="skip-link" href="#nav-primary">Skip to Navigation</a>
+
+    {% include '_includes/_site/_header' %}
+
+    <section id="content">
+      {% block content %}
+      {% endblock %}
+    </section>
+
+    {% include '_includes/_site/_footer' %}
+
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="/assets/js/basekit.min.js"></script>
+
+    {% block footerJs %}
+    {% endblock %}
+
+  </body>
+</html>
+{% endspaceless %}
