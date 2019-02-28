@@ -10,33 +10,11 @@ const $ = require("gulp-load-plugins")({
   scope: ["devDependencies"]
 });
 
-// function to uncache modules/data
-function requireUncached($module) {
-  delete require.cache[require.resolve($module)];
-  return require($module);
-}
-
-// HEADER BANNER
-// ————————————————————————————————————————————————————————————————————————————————————
-// A timestamped info comment that get's added to the top of CSS and JS files.
-const banner = [
-    "/**",
-    " * @project        <%= pkg.name %>",
-    " * @author         <%= pkg.author %>",
-    " * @version        <%= pkg.version %>",
-    " * @build          " + $.moment().format("llll") + " ET",
-    " * @release        " + $.gitRevSync.long() + " [" + $.gitRevSync.branch() + "]",
-    " *",
-    " */",
-    ""
-].join("\n");
-
 // SASS/CSS
 // ————————————————————————————————————————————————————————————————————————————————————
 // Compile Sass (with Nano and Autoprefixer)
 gulp.task("sass", () => {
   return gulp.src(pkg.paths.src.sass + '*.scss')
-    .pipe($.data(function(file){ return requireUncached(pkg.paths.src.base + pkg.vars.dataName); }))
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.cssnano({
       minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
@@ -46,9 +24,7 @@ gulp.task("sass", () => {
         // http://browserl.ist/?q=%3E+0.5%25+in+GB%2C+last+3+major+versions%2C+not+ie+9&chrome_dont_add_custom_search_engines_srsly=
       }
     }))
-    .pipe($.header(banner, {pkg: pkg}))
-    .pipe($.size({ title: '📦', gzip: true, showFiles: true, showTotal: false }))
-    .pipe($.gulp.dest(pkg.paths.dist.css) // Show file size after gzip
+    .pipe($.gulp.dest(pkg.paths.dist.css)
   );
 });
 
@@ -59,7 +35,6 @@ gulp.task('js', () => {
   return gulp.src(pkg.paths.src.js + '[^_]*.js') // ignore underscored files
     .pipe($.concat(pkg.vars.jsName)) // Combine all (none _) js files into this file
     .pipe($.uglify()) // Minify the file
-    .pipe($.header(banner, {pkg: pkg}))
 
     .pipe($.gulp.dest(pkg.paths.dist.js) // Output it here
   );
@@ -77,13 +52,13 @@ gulp.task('size', () => {
 
 // WATCH ONLY SASS CHANGES
 // ————————————————————————————————————————————————————————————————————————————————————
-gulp.task('watch-sass', () => {
-  gulp.watch(pkg.paths.src.sass + '**/*.scss', ['sass']);
+gulp.task('css', function() {
+  gulp.watch(pkg.paths.src.sass + '**/*.scss', gulp.series('sass'));
 });
 
 // WRAP INTO WATCH TASK
 // ————————————————————————————————————————————————————————————————————————————————————
 gulp.task("default", () => {
-  gulp.watch([pkg.paths.src.sass + '**/*.scss', pkg.paths.src.base + pkg.vars.dataName], ['sass']);
-  gulp.watch(pkg.paths.src.js + '*.js', ['js']);
+  gulp.watch(pkg.paths.src.sass + '**/*.scss', gulp.series('sass'));
+  gulp.watch(pkg.paths.src.js + '*.js', gulp.series('js'));
 });

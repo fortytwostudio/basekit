@@ -1,6 +1,9 @@
-$bk-button-padding: 0.66em 1.25em !default;
-$bk-button-padding-compact: 0.25em 0.66em !default;
+$bk-button-padding: 0.66em 1.25em                                      !default;
+$bk-button-padding-compact: 0.25em 0.66em                              !default;
 
+//****************************************************************************//
+
+// Default style for any element that has a class starting with btn-
 [class*="btn-"] {
   appearance: none;
   background-color: transparent;
@@ -15,6 +18,8 @@ $bk-button-padding-compact: 0.25em 0.66em !default;
   transition: all $speed-normal ease-in-out;
   vertical-align: middle;
 }
+
+//****************************************************************************//
 
 @if $bk-button-padding-compact {
   .btn-compact {
@@ -37,15 +42,15 @@ $bk-button-padding-compact: 0.25em 0.66em !default;
   border: 1px solid currentColor;
 
   &--primary {
-    border-color: color(primary) !important;
+    border-color: color(primary);
   }
 
   &--secondary {
-    border-color: color(secondary) !important;
+    border-color: color(secondary);
   }
 
   &--white {
-    border-color: white !important;
+    border-color: white;
   }
 }
 

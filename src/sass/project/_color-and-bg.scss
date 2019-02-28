@@ -38,6 +38,11 @@
 
 
 .bg {
+  &-img {
+    background-position: center center;
+    background-size: cover;
+  }
+  
   @each $scheme-key, $color-value in $color-scheme {
     &-#{$scheme-key} {
       background-color: color($scheme-key);
@@ -62,11 +67,6 @@
     &-#{$scheme-key}--tint {
       background-color: color($scheme-key, tint);
     }
-  }
-
-  &-img {
-    background-position: center center;
-    background-size: cover;
   }
 }
 
