@@ -1,0 +1,19 @@
+{% set entry = craft.entries.section('pageNotFound').one %}
+
+{% extends '_layouts/_main' %}
+
+{% block content %}
+
+  <section data-bk-links="primary" class="site-container align-c pad-xl" id="content">
+    <div data-bk-layout="md:6">
+      <h1 class="font-mega pad-b">{{ entry.title }}</h1>
+
+      {% if entry.body %}
+        <div class="rte">
+          {{ entry.body }}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+{% endblock %}
