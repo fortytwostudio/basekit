@@ -1,0 +1,48 @@
+<nav>
+  <div class="site-container">
+    <h3 class="hide">Page navigation</h3>
+
+    {% if pageInfo.totalPages > 1 %}
+      <nav data-bk-layout="p:0 middle center">
+        {% if pageInfo.currentPage > 1 %}
+          <ol data-bk-layout="p:0 md:3" class="nav-block">
+            {% if pageInfo.currentPage > 2 and pageInfo.totalPages > 2 %}
+              <li><a href="{{ pageInfo.firstUrl }}">First Page</a></li>
+            {% endif %}
+
+            {% if pageInfo.prevUrl %}
+              <li><a href="{{ pageInfo.prevUrl }}">Previous Page</a></li>
+            {% endif %}
+          </ol>
+        {% endif %}
+
+        <ol data-bk-layout="p:0 md:6{{ pageInfo.currentPage == 1 ? ' md:pr:3'}}{{ pageInfo.currentPage == pageInfo.totalPages ? ' md:pl:3' }}" class="nav-block">
+          {% for page, url in pageInfo.getPrevUrls(5) %}
+            <li><a href="{{ url }}">{{ page }}</a></li>
+          {% endfor %}
+
+          <li data-bk-layout="auto">{{ pageInfo.currentPage }}</li>
+
+          {% for page, url in pageInfo.getNextUrls(5) %}
+            <li><a href="{{ url }}">{{ page }}</a></li>
+          {% endfor %}
+        </ol>
+
+
+        {% if pageInfo.currentPage < pageInfo.totalPages %}
+          <ol data-bk-layout="p:0 md:3" class="nav-block">
+            {% if pageInfo.nextUrl %}
+              <li><a href="{{ pageInfo.nextUrl }}">Next Page</a></li>
+            {% endif %}
+
+            {% if pageInfo.currentPage < (pageInfo.totalPages - 1) and pageInfo.totalPages > 2 %}
+              <li><a href="{{ pageInfo.lastUrl }}">Last Page</a></li>
+            {% endif %}
+
+          </ol>
+        {% endif %}
+
+      </nav>
+    {% endif %}
+  </div>
+</nav>

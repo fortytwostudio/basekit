@@ -1,0 +1,11 @@
+{
+	"buttons": [ "" ],
+  "toolbar": false,
+	"pastePlainText": true,
+  "plugins": [ "counter", "limiter" ],
+  "limiter": 160,
+  "buttonsTextLabeled": false,
+  "placeholder": "Edit me…",
+  "enterKey": false,
+  "autoparse": false
+}

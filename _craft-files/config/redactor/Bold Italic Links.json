@@ -1,0 +1,10 @@
+{
+  "buttons": [ "bold", "italic", "link" ],
+	"pastePlainText": true,
+  "buttonsTextLabeled": false,
+  "placeholder": "Edit me…",
+  "enterKey": false,
+  "autoparseVideo": false,
+  "autoparseImages": false,
+  "linkNewTab": true
+}

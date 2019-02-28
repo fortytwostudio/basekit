@@ -1,0 +1,54 @@
+{
+  "buttons": [
+    "html",
+    "bold",
+    "italic",
+    "lists",
+    "file",
+    "link",
+    "format"
+  ],
+  "formatting": [],
+  "formattingAdd": {
+    "heading": {
+      "title": "Normal Heading",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h3",
+        "class":
+        "font-lg margin-b"
+      }
+    },
+    "heading-lg": {
+      "title": "Larger Heading",
+      "api": "module.block.format",
+      "args": {
+        "tag": "h3",
+        "class":
+        "font-xl margin-b"
+      }
+    },
+    "paragraph": {
+      "title": "Paragraph",
+      "api": "module.block.format",
+      "args": {
+        "tag": "p",
+        "class": ""
+      }
+    }
+  },
+  "replaceTags": {
+    "b": "strong",
+    "i": "em",
+    "strike": "del",
+    "u": "em"
+  },
+  "toolbarFixed": true,
+  "plugins": [ "counter", "specialchars" ],
+  "buttonsTextLabeled": false,
+  "placeholder": "Edit me…",
+  "structure": true,
+  "autoparseVideo": false,
+  "autoparseImages": false,
+  "linkNewTab": true
+}

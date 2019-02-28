@@ -1,0 +1,31 @@
+{# Stolen from https://gist.github.com/Chrisedmo/55d09e12cb60b95067b2694eac60edef #}
+
+{# can define custom sizes, if required #}
+{# {% set outputWidths = [580, 690, 768] %}
+{# {% set aspectRatio = (3/5) %} #}
+
+{# Usage: #}
+{# {{ srcset(entry.image, (1/1), [580, 690, 768]) }} #}
+
+{% macro srcset(image, aspectRatio, outputWidths) %}
+  {# setup #}
+  {%- set outputWidths = outputWidths | default([640, 1000, 1440]) -%}
+  {%- set srcset = [] -%}
+
+  {# if output width is smaller than or equal to the original image width #}
+  {%- for outputWidth in outputWidths -%}
+    {# Removed this conditional for now because I DO want it to scale up, I'll work on it later… #}
+    {# {%- if outputWidth <= image.width -%} #}
+      {%- if aspectRatio -%}
+        {%- set transformOptions = { width: outputWidth, height: outputWidth * aspectRatio } -%}
+      {%- else -%}
+        {%- set transformOptions = { width: outputWidth } -%}
+      {%- endif -%}
+
+      {%- set srcset = srcset | merge([image.url(transformOptions) ~ ' ' ~ outputWidth ~ 'w']) -%}
+    {# {%- endif -%} #}
+  {%- endfor -%}
+
+  {# output srcset #}
+  {{- srcset | join(', ') -}}
+{% endmacro %}

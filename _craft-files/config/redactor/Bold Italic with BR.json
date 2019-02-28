@@ -1,0 +1,10 @@
+{
+	"buttons": [ "bold", "italic" ],
+	"pastePlainText": true,
+  "toolbarFixed": true,
+  "buttonsTextLabeled": false,
+  "placeholder": "Edit me…",
+  "enterKey": true,
+  "autoparseVideo": false,
+  "autoparseImages": false
+}

@@ -1,0 +1,6 @@
+{
+  "HTML.ForbiddenElements": ["&nbsp;", "br"],
+  "AutoFormat.RemoveEmpty.RemoveNbsp": true,
+  "AutoFormat.RemoveEmpty": true,
+  "Attr.AllowedFrameTargets": ["_blank"]
+}

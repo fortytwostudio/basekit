@@ -1,0 +1,16 @@
+{
+  "buttons": [ "html", "bold", "italic", "ul", "ol", "link" ],
+  "pasteBlockTags": [ "p", "ul", "ol", "li" ],
+  "pasteInlineTags": [ "strong", "em", "a" ],
+  "replaceTags": {
+    "b": "strong",
+    "i": "em",
+    "strike": "del",
+    "u": "em"
+  },
+  "buttonsTextLabeled": false,
+  "placeholder": "Edit me…",
+  "autoparseVideo": false,
+  "autoparseImages": false,
+  "linkNewTab": true
+}

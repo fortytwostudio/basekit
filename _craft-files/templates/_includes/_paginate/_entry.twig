@@ -1,0 +1,25 @@
+<nav>
+  <div class="site-container">
+    <h3 class="hide">Entry pagination navigation</h3>
+
+    {% set prevEntry = entry.getPrev(section) %}
+    {% set nextEntry = entry.getNext(section) %}
+
+    {% if prevEntry %}
+      <p data-bk-layout="p:l 6">
+        <a data-bk-layout href="{{ prevEntry.url }}" title="{{ prevEntry.title }}">
+          <span class="font-arrow">←</span> <span class="hide">Previous</span>
+        </a>
+
+      </p>
+    {% endif %}
+
+    {% if nextEntry %}
+      <p data-bk-layout="p:r 6 right {{ not prevEntry ? ' pr:6' }}">
+        <a data-bk-layout href="{{ nextEntry.url }}" title="{{ nextEntry.title }}">
+          <span class="hide">Next</span> <span class="font-arrow">→</span>
+        </a>
+      </p>
+    {% endif %}
+  </div>
+</nav>

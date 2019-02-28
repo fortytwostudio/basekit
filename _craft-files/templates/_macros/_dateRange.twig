@@ -1,0 +1,24 @@
+{# Stolen from https://github.com/timknight/craft-macro-kit and reformatted with UK date format #}
+
+{#
+  dateRange
+  Generates a date range for two numbers. If the start and end date have a matching month, the month isn't repeated.
+  @param {datetime} start (the first date)
+  @param {datetime} end (the end date) (optional)
+  @param {string} dash (range separator) (optional)
+#}
+
+{%- macro dateRange(start, end, dash) -%}
+  {%- set dash = dash|default("–") -%}
+  {%- if end -%}
+    {{- start|date('j') -}}
+    {{- dash|raw -}}
+    {%- if start|date('M') == end|date('M') -%}
+      {{- end|date('j M, Y') -}}
+    {%- else -%}
+      {{- end|date('j M, Y') -}}
+    {%- endif -%}
+  {%- else -%}
+    {{- start|date('j M, Y') -}}
+  {%- endif -%}
+{%- endmacro -%}

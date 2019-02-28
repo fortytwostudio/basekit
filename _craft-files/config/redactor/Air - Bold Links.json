@@ -1,0 +1,9 @@
+{
+  "buttons": [ "bold", "link" ],
+	"pastePlainText": true,
+  "enterKey": false,
+  "autoparseVideo": false,
+  "autoparseImages": false,
+  "linkNewTab": true,
+  "air": true
+}
