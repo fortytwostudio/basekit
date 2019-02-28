@@ -52,29 +52,6 @@ gulp.task("sass", () => {
   );
 });
 
-// TWIG/HTML
-// ————————————————————————————————————————————————————————————————————————————————————
-// Compile Twig templates to an static frontend for demonstration.
-// This is quite long-winded and not ideal, but does the job for now
-gulp.task('twig', () => {
-  return gulp.src(pkg.paths.src.twig + '**/[^_]*.twig') // run the Twig template parser on .twig files that don't start with an _
-  .pipe($.data(function(file){ return requireUncached(pkg.paths.src.base + pkg.vars.dataName); })) // Uncached data for populating Twig files
-  .pipe($.twig({ base: pkg.paths.src.twig, cache: false })) // Let gulp-twig know where the base template directory is
-  .pipe($.htmlmin({
-    collapseWhitespace: true,
-    removeComments: true,
-    removeAttributeQuotes: true,
-    removeEmptyAttributes: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributes: true,
-    collapseBooleanAttributes: true,
-    quoteCharacter: '\'',
-    minifyJS: true,
-    minifyCSS: true
-  })) // Minify the files for development use
-  .pipe($.gulp.dest(pkg.paths.dist.html)) // Output minified file to public directory
-});
-
 // JAVASCRIPT
 // ————————————————————————————————————————————————————————————————————————————————————
 // Minify and combine javascript files for production, unless they start with an _
@@ -98,14 +75,6 @@ gulp.task('size', () => {
   );
 });
 
-// CLEANUP
-// ————————————————————————————————————————————————————————————————————————————————————
-// Remove the compiled twig destination content.
-gulp.task('cleanup', () => {
-    return gulp.src(pkg.paths.dist.html, {read: false})
-      .pipe($.clean());
-});
-
 // WATCH ONLY SASS CHANGES
 // ————————————————————————————————————————————————————————————————————————————————————
 gulp.task('watch-sass', () => {
@@ -117,5 +86,4 @@ gulp.task('watch-sass', () => {
 gulp.task("default", () => {
   gulp.watch([pkg.paths.src.sass + '**/*.scss', pkg.paths.src.base + pkg.vars.dataName], ['sass']);
   gulp.watch(pkg.paths.src.js + '*.js', ['js']);
-  gulp.watch([pkg.paths.src.twig + '**/*.twig', pkg.paths.src.base + pkg.vars.dataName], ['twig']);
 });

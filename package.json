@@ -11,14 +11,12 @@
     "src": {
       "base": "./src/",
       "sass": "./src/sass/",
-      "twig": "./src/twig/",
       "js": "./src/js/",
       "css": "./src/css/",
       "json": "./src/json/"
     },
     "dist": {
       "base": "./public/",
-      "html": "./public/demo/",
       "css": "./public/assets/css/",
       "js": "./public/assets/js/",
       "fonts": "./public/assets/fonts/",
@@ -34,16 +32,13 @@
   "devDependencies": {
     "git-rev-sync": "^1.12.0",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-data": "^1.3.1",
     "gulp-header": "^2.0.5",
-    "gulp-htmlmin": "^5.0.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-sass": "^4.0.1",
     "gulp-size": "^3.0.0",
-    "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.1",
     "moment": "^2.22.2"
   },
