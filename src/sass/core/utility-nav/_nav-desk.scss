@@ -4,35 +4,51 @@
     .has-submenu {
       // Simply make relative so we can anchor sub menus to the link
       position: relative;
-      // Make some space for the indicator
-      padding-right: $sm-bk__desktop-item-padding-horizontal + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
+
+      .js & {
+        // Make some space for the indicator
+        padding-right: $sm-bk__desktop-item-padding-horizontal + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
+      }
 
       // This class is applied via the JS plugin and keeps the item highlighted as long as you're on a child
       &.highlighted {
-        color: $sm-bk__desktop-item-color;
-        background-color: $sm-bk__desktop-item-hover-bg;
+        background-color: black;
       }
     }
 
     // Any child lists
     &__child-list {
-      background-color: $sm-bk__desktop-bg;
-      box-shadow: 0 2px 8px -2px rgba(black, 0.4);
+      box-shadow: 0 8px 8px -2px rgba(black, 0.4);
       line-height: 1.4;
       position: absolute;
       text-align: left;
 
       li:not(:first-child) {
-        border-top: $sm-bk__desktop-separators-size solid $sm-bk__desktop-separators-color;
+        border-top: $sm-bk__desktop-separators-size solid #2a2a2a;
+      }
+
+      li:first-child > a {
+        border-radius: 5px 5px 0 0;
+      }
+
+      li:last-child > a {
+        border-radius: 0 0 5px 5px;
+      }
+
+      li:only-child > a {
+        border-radius: 5px;
       }
 
       a {
+        background-color: color(black, tint);
+        color: white;
+
         &,
         &:hover,
         &:focus,
         &.current,
         &.highlighted {
-          color: $sm-bk__desktop-item-color;
+          color: white;
           padding-top: $sm-bk__desktop-item-padding-vertical;
           // Right padding is handled above
           padding-bottom: $sm-bk__desktop-item-padding-vertical;
@@ -43,7 +59,10 @@
         &:focus,
         &.current,
         &.highlighted {
-          background-color: $sm-bk__desktop-item-hover-bg;
+          background-color: black;
+        }
+        &.current {
+          font-weight: 600;
         }
       }
     }

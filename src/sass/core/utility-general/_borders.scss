@@ -4,6 +4,7 @@ $border-widths: (2px, 4px, 6px) !default;
 
 .bdr {
   &-primary { border-color: color(primary); }
+  &-primary--light { border-color: color(primary, light); }
   &-secondary { border-color: color(secondary); }
   &-tertiary { border-color: color(tertiary); }
   &-white { border-color: color(white); }

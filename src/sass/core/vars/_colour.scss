@@ -9,7 +9,7 @@ $color-primary: #3b668b !default;   // hsl(206, 37%, 39%)
 $color-secondary: #f67280 !default; // hsl(352, 37%, 39%)
 $color-tertiary: #c9c27d !default;  // hsl(52, 37%, 39%)
 
-$color-grey: #ccc !default;
+$color-grey: #e7e8eb !default;
 
 /// Set the body background colour here, if you want to add an image you should configure
 /// the $color-body-media currently in settings/media.scss
@@ -30,32 +30,33 @@ $color-scheme: (
   primary: (
     base: $color-primary,
     // By mixing the colour with white we ensure that whatever the colour, it never becomes white. This can be a problem when using the lighten() function if the source colour is already quite light.
-    lighter: mix($color-primary, white, 11%),
-    light: mix($color-primary, white, 55%),
+    lighter: mix($color-primary, white, 6%),
+    light: mix($color-primary, white, 45%),
     // As with mixing a colour with white, the same goes for mixing with black.
-    dark: mix($color-primary, black, 75%),
-    darker: mix($color-primary, black, 50%)
+    dark: mix($color-primary, black, 60%),
+    darker: mix($color-primary, black, 30%)
   ),
   secondary: (
     base: $color-secondary,
-    lighter: mix($color-secondary, white, 15%),
-    light: mix($color-secondary, white, 55%),
-    dark: mix($color-secondary, black, 75%),
-    darker: mix($color-secondary, black, 50%)
+    lighter: mix($color-secondary, white, 8%),
+    light: mix($color-secondary, white, 45%),
+    dark: mix($color-secondary, black, 60%),
+    darker: mix($color-secondary, black, 40%)
   ),
   tertiary: (
     base: $color-tertiary,
-    lighter: mix($color-tertiary, white, 20%),
-    light: mix($color-tertiary, white, 55%),
-    dark: mix($color-tertiary, black, 75%),
-    darker: mix($color-tertiary, black, 50%)
+    lighter: mix($color-tertiary, white, 10%),
+    light: mix($color-tertiary, white, 45%),
+    dark: mix($color-tertiary, black, 60%),
+    darker: mix($color-tertiary, black, 40%)
   ),
   grey: (
     base: $color-grey,
-    lighter: mix($color-grey, white, 25%),
-    light: mix($color-grey, white, 60%),
-    dark: mix($color-grey, black, 60%),
-    darker: mix($color-grey, black, 40%)
+    lighter: #f4f7f9,
+    light: #eef0f2,
+    dark: #9b9fa5,
+    darker: #515255,
+    darkest: #39393b
   ),
   white: (
     base: white,

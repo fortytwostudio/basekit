@@ -13,8 +13,13 @@ a:not([class*="btn-"]) {
   // I'm being specific here rather than just transitioning *all* because all
   // can have unwanted restults in cetain situations (i.e. transitoning
   // backgrounds).
-  transition-duration: $speed-slow;
-  transition-property: color, opacity;
+  transition-duration: $speed-slow * 1.5;
+  transition-property: color, opacity, border-color;
+
+  &:focus,
+  &:hover {
+    transition-duration: $speed-normal;
+  }
 
   // Standard Colours
   // ———————————————————————————————————————————————————————————————————————————
@@ -29,6 +34,14 @@ a:not([class*="btn-"]) {
       color: white;
     }
   }
+  [data-bk-links~="black"] & {
+    color: black;
+
+    &:focus,
+    &:hover {
+      color: color(primary);
+    }
+  }
 
   // The next three provide standard colour styles.
   [data-bk-links~="primary"] & {
@@ -36,7 +49,7 @@ a:not([class*="btn-"]) {
 
     &:focus,
     &:hover {
-      color: color(secondary);
+      color: color(primary, darker);
     }
   }
 
@@ -45,12 +58,21 @@ a:not([class*="btn-"]) {
 
     &:focus,
     &:hover {
-      color: color(primary);
+      color: color(secondary, darker);
     }
   }
 
   [data-bk-links~="tertiary"] & {
     color: color(tertiary);
+
+    &:focus,
+    &:hover {
+      color: color(tertiary, darker);
+    }
+  }
+
+  [data-bk-links~="grey"] & {
+    color: color(grey, darker);
 
     &:focus,
     &:hover {

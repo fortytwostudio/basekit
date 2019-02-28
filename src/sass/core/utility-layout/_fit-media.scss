@@ -28,9 +28,17 @@ $fit-media-fallback-css: true !default;
   object-fit: $fit;
 }
 
-// Utility Class to apply easily anywhere
+
+// Utility Class
 //
-.fit-media {
+.fit-media,
+.fit-iframe > iframe,
+.fit-video > video {
   transform-style: preserve-3d;
   @include fit-media;
+}
+
+.video-ratio {
+  padding: 56.25% 0 0 0;
+  position: relative;
 }

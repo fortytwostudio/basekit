@@ -37,4 +37,33 @@
     margin-right: auto;
   }
 
+  &-sm {
+
+    &-t {
+      margin-top: rem(($margin / 2) + 0px);
+    }
+
+    &-r {
+      margin-right: rem(($margin / 2) + 0px);
+    }
+
+    &-b {
+      margin-bottom: rem(($margin / 2) + 0px);
+    }
+
+    &-l {
+      margin-left: rem(($margin / 2) + 0px);
+    }
+
+    &-tb {
+      margin-top: rem(($margin / 2) + 0px);
+      margin-bottom: rem(($margin / 2) + 0px);
+    }
+
+    &-rl {
+      margin-right: rem(($margin / 2) + 0px);
+      margin-left: rem(($margin / 2) + 0px);
+    }
+  }
+
 }

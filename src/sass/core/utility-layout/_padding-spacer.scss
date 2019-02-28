@@ -14,7 +14,8 @@ $spacer-max: ($max-width * 1px) !default;
     padding-bottom: rem($grid-gutter * 1px) / 2;
   }
 
-  &-xs {
+  &-xs,
+  &-xxs {
     &, &-t {
       padding-top: rem(($grid-gutter / 4) * 1px) / 2;
     }
@@ -61,6 +62,16 @@ $spacer-max: ($max-width * 1px) !default;
 
     &, &-b {
       padding-bottom: between(($grid-gutter * 1px) / 2, ($grid-gutter * 1px), $spacer-min, $spacer-max);
+    }
+
+    &-xxs {
+      &, &-t {
+        padding-top: between((($grid-gutter / 6) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+      }
+
+      &, &-b {
+        padding-bottom: between((($grid-gutter / 6) * 1px) / 2, (($grid-gutter / 4) * 1px), $spacer-min, $spacer-max);
+      }
     }
 
     &-xs {
@@ -121,6 +132,16 @@ $spacer-max: ($max-width * 1px) !default;
 
     &, &-b {
       padding-bottom: ($grid-gutter * 1px);
+    }
+
+    &-xxs {
+      &, &-t {
+        padding-top: (($grid-gutter / 6) * 1px);
+      }
+
+      &, &-b {
+        padding-bottom: (($grid-gutter / 6) * 1px);
+      }
     }
 
     &-xs {

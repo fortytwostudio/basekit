@@ -5,7 +5,7 @@
 // calc item height and sub menus toggle button size
 $sm-bk__item-height: $sm-bk__line-height + $sm-bk__collapsible-item-padding-vertical * 2;
 // set toggle button size to 80% of item height
-$sm-bk__toggle-size: floor($sm-bk__item-height * 0.8);
+$sm-bk__toggle-size: $sm-bk__item-height;
 $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
 @mixin sm-bk__sub-items-indentation($amount, $chainable: 'ul ', $level: 4, $chain: '') {
@@ -25,6 +25,8 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
     // Set the MQ styles will apply up to so we don't have to unset stuff for desktop
 
     a {
+      transition: all $speed-slow ease-in-out;
+
       &,
       &:hover,
       &:focus,
@@ -33,8 +35,17 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
         padding: $sm-bk__collapsible-item-padding-vertical $sm-bk__collapsible-item-padding-horizontal;
       }
 
+      &:hover,
+      &:focus,
+      &:active,
       &.current {
-        background: $sm-bk__collapsible-item-current-bg;
+        background: color(grey, light);
+        color: color(primary);
+        transition-duration: $speed-fast;
+      }
+
+      &.current {
+        font-weight: 600;
       }
 
       // make room for the toggle button (sub indicator)
@@ -50,7 +61,8 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
           display: none;
         }
 
-        font: 900 #{$sm-bk__font-size-base}/#{$sm-bk__toggle-size} monospace !important;
+        color: color(primary);
+        font: 700 #{$sm-bk__font-size-base * 1.5}/#{$sm-bk__toggle-size} monospace !important;
         height: $sm-bk__toggle-size;
         left: auto;
         margin-top: -(ceil($sm-bk__toggle-size / 2));
@@ -71,7 +83,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
 
     // Main menu items separators
-    li {
+    > li {
       border-top: $sm-bk__desktop-separators-size solid $sm-bk__desktop-separators-color;
     }
     // Nae the first one though
@@ -81,6 +93,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
     // Sub menus box
     &__child-list {
+      background-color: color(grey, lighter);
       // Sub menus items
       a {
         &,

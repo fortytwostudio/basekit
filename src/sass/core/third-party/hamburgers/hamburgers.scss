@@ -12,10 +12,10 @@
 $hamburger-layer-color                     : #fff !default;
 $hamburger-padding-x                       : 15px !default;
 $hamburger-padding-y                       : 15px !default;
-$hamburger-layer-width                     : 40px !default;
+$hamburger-layer-width                     : 32px !default;
 $hamburger-layer-height                    : 4px !default;
 $hamburger-layer-spacing                   : 6px !default;
-$hamburger-layer-border-radius             : 4px !default;
+$hamburger-layer-border-radius             : 20px !default;
 $hamburger-hover-opacity                   : 0.75 !default;
 $hamburger-hover-transition-duration       : 0.2s !default;
 $hamburger-hover-transition-timing-function: ease-in-out !default;
@@ -50,9 +50,9 @@ $hamburger-types: (
   // spring-r,
   // stand,
   // stand-r,
-  // spin,
+  spin,
   // spin-r,
-  squeeze,
+  // squeeze,
   // vortex,
   // vortex-r
 ) !default;
@@ -63,13 +63,13 @@ $hamburger-types: (
 
 // Hamburger types
 // ==================================================
-@import "types/squeeze";
+// @import "types/squeeze";
 
 // Alternatives:
 //
 // @import "types/slider";
 // @import "types/slider-r";
-// @import "types/spin";
+@import "types/spin";
 // @import "types/spin-r";
 
 // Not so impressed by these:

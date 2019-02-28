@@ -11,15 +11,15 @@ $font-default-bottom-margin: $margin !default;
   //   margin-bottom: rem($font-default-bottom-margin + 0px);
   // }
 
-  > h1, > h2, > h3, > h4, > h5, > h6 {
-    font-size: rem(22px);
-    font-weight: 700;
-    line-height: (21px / $font-size);
-
-    &:not(:first-child) {
-      margin-top: rem(($font-default-bottom-margin * 2) * 1px);
-    }
-  }
+  // > h1, > h2, > h3, > h4, > h5, > h6 {
+  //   font-size: rem(22px);
+  //   font-weight: 700;
+  //   line-height: (21px / $font-size);
+  //
+  //   &:not(:first-child) {
+  //     margin-top: rem(($font-default-bottom-margin * 2) * 1px);
+  //   }
+  // }
 
   hr {
     background-color: rgba(mix(white, black, 50%), 0.5);
