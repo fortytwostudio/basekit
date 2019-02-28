@@ -1,0 +1,63 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>document.documentElement.className=document.documentElement.className.replace("no-js","js")</script>
+    <title>{{ siteName }} Style Guide</title>
+
+    <link href="/assets/css/basekit.css?293847" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="no-x-overflow">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="skip-link" href="#nav-primary">Skip to navigation</a>
+
+    {% include '_includes/_site/_header' %}
+
+    <div class="site-container pad" id="content">
+      <h2 class="font-xl" data-bk-layout>TECA Colour Scheme</h2>
+
+      <div data-bk-layout class="pad-sm-b">
+        <h3>Primary</h3>
+        {% for color in ["primary--darker", "primary--dark", "primary", "primary--light", "primary--lighter"]  %}
+          <div data-bk-layout="1 p:0">
+            <div class="bg-{{ color }}" data-bk-layout="p:lg">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div data-bk-layout class="pad-sm-b">
+        <h3>Secondary</h3>
+        {% for color in ["secondary--darker", "secondary--dark", "secondary", "secondary--light", "secondary--lighter"]  %}
+          <div data-bk-layout="1 p:0">
+            <div class="bg-{{ color }}" data-bk-layout="p:lg">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div data-bk-layout class="pad-sm-b">
+        <h3>Supplementary</h3>
+        {% for color in ["tertiary--darker", "tertiary--dark", "tertiary", "tertiary--light", "tertiary--lighter"]  %}
+          <div data-bk-layout="1 p:0">
+            <div class="bg-{{ color }}" data-bk-layout="p:lg">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div data-bk-layout class="pad-sm-b">
+        <h3>Black</h3>
+        <p>Black with associated shades is already a standard colour in Basekit so it shouldn't be set as a primary, secondary or supplementary colour.</p>
+      </div>
+    </div>
+
+  </div>
+  </body>
+</html>
+{% endspaceless %}
