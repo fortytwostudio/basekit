@@ -1,20 +1,13 @@
-$code-bg-color: rgba(mix(white, black, 50%), 0.25) !default;
-$code-text-color: currentColor !default;
-$code-border: "1px solid " + rgba(mix(white, black, 50%), 0.75) !default; // or just  "0";
-$code-font-size: 87.5% !default;
+$code-bg-color: rgba(mix(white, black, 50%), 0.25)                     !default;
+$code-text-color: currentColor                                         !default;
+$code-border: "1px solid " + rgba(mix(white, black, 50%), 0.75)        !default;
+$code-font-size: 87.5%                                                 !default;
 
 pre {
   white-space: pre-wrap;
 }
 
 code {
-  // background-color: $code-bg-color;
-  // border: unquote($code-border);
-  // border-radius: em(2px);
-  // color: $code-text-color;
-  // display: inline-block;
-  // font-size: $code-font-size;
-  // padding: 0 em(5px);
   background-color: mix($color-grey, white, 35%);
   border: 1px solid mix($color-grey, white, 50%);
   border-radius: 0.2rem;
