@@ -1,0 +1,13 @@
+@include mq(lg) {
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: $z-position-over;
+
+    &--b {
+      bottom: 0;
+      position: sticky;
+      z-index: $z-position-over;
+    }
+  }
+}

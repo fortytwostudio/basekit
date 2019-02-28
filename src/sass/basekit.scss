@@ -27,6 +27,7 @@ $bk-button-padding-compact: 0.25em 0.66em;
 
 // Core Basekit files and variables:
 @import "core/import";
+
 // Your unique project files and customisations
 @import "project/text";
 @import "project/color-and-bg";
@@ -34,3 +35,10 @@ $bk-button-padding-compact: 0.25em 0.66em;
 @import "project/buttons";
 @import "project/site-nav";
 @import "project/forms";
+
+@import "project/_utils/accordion";
+@import "project/_utils/fit-image";
+@import "project/_utils/overflows";
+@import "project/_utils/sticky";
+@import "project/_utils/cursor";
+

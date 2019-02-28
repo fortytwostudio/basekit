@@ -1,0 +1,51 @@
+.js {
+  .accordion {
+    $icon-width: 1.4rem;
+
+    &-title {
+      cursor: pointer;
+      position: relative;
+      padding-left: $icon-width + 0.5rem;
+      transition: color 0.2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: color(primary);
+        text-decoration: underline;
+        outline: 0;
+      }
+
+      &:before {
+        bottom: 0;
+        content: "→";
+        display: block;
+        font-family: "Basekit Arrows", $font-family;
+        font-size: $icon-width;
+        height: $icon-width;
+        left: 0;
+        line-height: $icon-width;
+        position: absolute;
+        text-align: center;
+        top: ($icon-width / 3);
+        transform-origin: center;
+        transform: rotate(0deg);
+        transition: transform 0.2s ease-in-out;
+        width: $icon-width;
+      }
+    }
+
+    &-active {
+      color: color(primary);
+      text-decoration: underline;
+
+      &:before {
+        transform: rotate(405deg);
+      }
+    }
+
+    &-content {
+      display: none;
+      padding-left: $icon-width + 0.5rem;
+    }
+  }
+}
