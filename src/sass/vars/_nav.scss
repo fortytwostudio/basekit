@@ -1,3 +1,13 @@
+// Basic nav class configs
+$nav-rl-pad: 1em;
+$nav-tb-pad: 0.5em;
+$nav-crumb-pad: 0.5em;
+
+
+// ----------------------------------------------------------
+// :: Main Dropdown Nav Variables
+// ----------------------------------------------------------
+
 $nav-switch-point: lg !default;
 
 // -----------------------------------------------------------------------------------------------------------------
@@ -35,7 +45,7 @@ $sm-bk__line-height: 1.1 !default;
 // Items
 $sm-bk__collapsible-item-color: $sm-bk__gray-darker !default;
 $sm-bk__collapsible-item-current-color: white !default;
-$sm-bk__collapsible-item-current-bg: color(primary) !default;
+$sm-bk__collapsible-item-current-bg: $color-primary !default;
 $sm-bk__collapsible-item-disabled-color: darken($sm-bk__base-color, 20%) !default;
 $sm-bk__collapsible-item-padding-vertical: 13px !default;
 $sm-bk__collapsible-item-padding-horizontal: 20px !default;
@@ -68,7 +78,7 @@ $sm-bk__desktop-item-padding-horizontal: 20px !default;
 
 // Items separators
 $sm-bk__desktop-separators-size: 1px !default;
-$sm-bk__desktop-separators-color: color(grey) !default;
+$sm-bk__desktop-separators-color: $color-grey !default;
 
 // Sub menu indicators
 $sm-bk__desktop-arrow-spacing: 4px !default;

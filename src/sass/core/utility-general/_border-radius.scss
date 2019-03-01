@@ -1,5 +1,3 @@
-$border-radius-sizes: (3px, 5px, 8px, 16px) !default;
-
 @each $border-radius-size in $border-radius-sizes {
   .br-#{index($border-radius-sizes, $border-radius-size)} { border-radius: $border-radius-size; }
 }

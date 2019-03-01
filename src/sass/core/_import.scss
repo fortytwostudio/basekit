@@ -1,8 +1,3 @@
-@import "core/vars/fonts";
-@import "core/vars/colour";
-@import "core/vars/layout";
-@import "core/vars/transitions";
-
 // THIRD PARTY TOOLS
 @import "core/third-party/between";
 @import "core/third-party/family";
@@ -58,7 +53,6 @@
 @import "core/utility-text/hide-text";
 
 // MAIN FRAMEWORK
-@import "core/utility-nav/_nav-vars";
 @import "core/utility-nav/_nav-all";
 @import "core/utility-nav/_nav-mobile";
 @import "core/utility-nav/_nav-desk";

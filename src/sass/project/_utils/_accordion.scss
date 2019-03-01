@@ -10,7 +10,7 @@
 
       &:hover,
       &:focus {
-        color: color(primary);
+        color: $color-primary;
         text-decoration: underline;
         outline: 0;
       }
@@ -35,7 +35,7 @@
     }
 
     &-active {
-      color: color(primary);
+      color: $color-primary;
       text-decoration: underline;
 
       &:before {

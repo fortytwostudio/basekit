@@ -1,9 +1,3 @@
-$tables-width: 1px !default;
-$tables-responsive: true !default;
-$tables-overflow: true !default;
-$tables-responsive-bp: sm !default;
-$tables-color: #eee !default;
-
 table {
   border-collapse: collapse;
   border-left: $tables-width solid $tables-color;

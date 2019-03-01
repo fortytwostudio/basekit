@@ -4,9 +4,7 @@
 // Links in BaseKit are *unstyled by default* which I do to avoid juggling UI
 // links and CMS generated link styles. This utility tightly scopes link styling
 // to where you need it. You won't ever have to override link styles again.
-
-$link-dim-value: 0.6 !default;
-
+//
 // We do not want any of these styles to apply to the button class which can
 // also be used on links.
 a:not([class*="btn-"]) {
@@ -39,44 +37,44 @@ a:not([class*="btn-"]) {
 
     &:focus,
     &:hover {
-      color: color(primary);
+      color: $color-primary;
     }
   }
 
   // The next three provide standard colour styles.
   [data-bk-links~="primary"] & {
-    color: color(primary);
+    color: $color-primary;
 
     &:focus,
     &:hover {
-      color: color(primary, darker);
+      color: $color-primary--darker;
     }
   }
 
   [data-bk-links~="secondary"] & {
-    color: color(secondary);
+    color: $color-secondary;
 
     &:focus,
     &:hover {
-      color: color(secondary, darker);
+      color: $color-secondary--darker;
     }
   }
 
   [data-bk-links~="tertiary"] & {
-    color: color(tertiary);
+    color: $color-tertiary;
 
     &:focus,
     &:hover {
-      color: color(tertiary, darker);
+      color: $color-tertiary--darker;
     }
   }
 
   [data-bk-links~="grey"] & {
-    color: color(grey, darker);
+    color: $color-grey--darker;
 
     &:focus,
     &:hover {
-      color: color(primary);
+      color: $color-primary;
     }
   }
 
@@ -174,7 +172,7 @@ a:not([class*="btn-"]) {
   background-color: #f1f1f1;
   box-shadow: 0 0 1px 1px rgba(black, 0.2);
   clip: rect(1px, 1px, 1px, 1px);
-  color: color(secondary) !important;
+  color: $color-secondary !important;
   display: block;
   font-weight: 700;
   height: 1px;

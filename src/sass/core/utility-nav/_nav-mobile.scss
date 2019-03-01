@@ -39,8 +39,8 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       &:focus,
       &:active,
       &.current {
-        background: color(grey, light);
-        color: color(primary);
+        background: $color-grey--light;
+        color: $color-primary;
         transition-duration: $speed-fast;
       }
 
@@ -61,7 +61,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
           display: none;
         }
 
-        color: color(primary);
+        color: $color-primary;
         font: 700 #{$sm-bk__font-size-base * 1.5}/#{$sm-bk__toggle-size} monospace !important;
         height: $sm-bk__toggle-size;
         left: auto;
@@ -93,7 +93,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
     // Sub menus box
     &__child-list {
-      background-color: color(grey, lighter);
+      background-color: $color-grey--lighter;
       // Sub menus items
       a {
         &,

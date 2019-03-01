@@ -1,6 +1,3 @@
-// Output CSS for the fit-media fallback.
-$fit-media-fallback-css: true !default;
-
 @mixin fit-media($fit-pct: 100%, $fit-flip-position: left, $fit-adjust-z-index: $z-fit-media) {
   position: absolute;
   z-index: $fit-adjust-z-index;

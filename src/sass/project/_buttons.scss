@@ -1,8 +1,3 @@
-$bk-button-padding: 0.66em 1.25em                                      !default;
-$bk-button-padding-compact: 0.25em 0.66em                              !default;
-
-//****************************************************************************//
-
 // Default style for any element that has a class starting with btn-
 [class*="btn-"] {
   appearance: none;
@@ -29,12 +24,12 @@ $bk-button-padding-compact: 0.25em 0.66em                              !default;
 
 .btn-empty {
   background-color: transparent;
-  color: color(primary);
+  color: $color-primary;
 
   &:hover,
   &:focus {
     color: white;
-    background-color: color(primary);
+    background-color: $color-primary;
   }
 }
 
@@ -42,11 +37,11 @@ $bk-button-padding-compact: 0.25em 0.66em                              !default;
   border: 1px solid currentColor;
 
   &--primary {
-    border-color: color(primary);
+    border-color: $color-primary;
   }
 
   &--secondary {
-    border-color: color(secondary);
+    border-color: $color-secondary;
   }
 
   &--white {
@@ -56,22 +51,22 @@ $bk-button-padding-compact: 0.25em 0.66em                              !default;
 
 
 .btn-primary {
-  background-color: color(primary);
+  background-color: $color-primary;
   color: white;
 
   &:hover,
   &:focus {
-    background-color: color(primary, darker);
+    background-color: $color-primary--darker;
   }
 }
 
 
 .btn-secondary {
-  background-color: color(secondary);
+  background-color: $color-secondary;
   color: white;
 
   &:hover,
   &:focus {
-    background-color: color(secondary, darker);
+    background-color: $color-secondary--darker;
   }
 }

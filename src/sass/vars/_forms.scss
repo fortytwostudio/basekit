@@ -1,0 +1,54 @@
+// Config -----------------------------
+
+// FONTS
+// Set family to same as global
+$fh-font-family: inherit !default;
+// Allow size to inherit the containing or global font size
+$fh-font-size: inherit !default;
+// Set color to global text color
+$fh-font-color: $color-text !default;
+
+// BORDERS
+// Nice rem border radius so they scale, set to 0 to disable
+$fh-border-radius: em(3px) !default;
+// Thickness, obviously
+$fh-border-width: 1px !default;
+// You'll rarely change this
+$fh-border-style: solid !default;
+// Set borders to a % of the text color
+$fh-border-color: lighten($fh-font-color, 50%) !default;
+
+// FIELD TYPES
+// We want to set a uniform hight, in ems so it scales
+$fh-input-height: 2.5em !default; // 16 * 2.5 = 40px
+// Best to make it 100% then adjust the container width, however some field types like number may need adjustments
+$fh-input-width: 100% !default;
+// Default input background
+$fh-input-bg-color: #fff !default;
+// The clicked/tapped/focused colours
+$fh-focus-bg-color: #eee !default;
+$fh-focus-border-color: darken($fh-border-color, 25%) !default;
+$fh-focus-font-color: $fh-font-color !default;
+
+// VENDOR SELECT STYLING
+// Use the default select dropdown arrows or roll our own?
+$fh-allow-select-vendor-styling: false !default;
+
+// FIELDSET & LEGENDS
+// Set true to remove fieldset styling and hide the legend text
+$fh-fieldset-bare: true !default;
+
+// BUTTONS
+// If you've read the above comments then this stuff should make sense :P
+$fh-button-height: 2.5em !default;
+$fh-button-width: 100% !default;
+$fh-button-max-width: em(140px) !default;
+$fh-button-font-weight: 700 !default;
+$fh-button-font-color: $fh-font-color !default;
+$fh-button-bg-color: $fh-focus-bg-color !default;
+$fh-button-hover-bg-color: $fh-border-color !default;
+$fh-button-hover-font-color: $fh-font-color !default;
+
+// LAYOUT
+// We pretty much always want block layout
+$fh-display: block !default;

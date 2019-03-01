@@ -1,9 +1,3 @@
-// Configure the list utility class
-$list-bullet: "disc" !default;
-$list-bullet-position: "outside" !default;
-$list-number: "decimal-leading-zero" !default;
-$list-number-position: "outside" !default;
-
 .list {
   &--bull {
     margin-left: rem(20px);

@@ -1,16 +1,3 @@
-// Fine tune the position over utility class options.
-// Find this in core/utility.position-over.scss
-$position-over-css: true !default;
-$position-over-tr: true !default;
-$position-over-br: true !default;
-$position-over-bl: true !default;
-$position-over-m: true !default;
-$position-over-ml: true !default;
-$position-over-mr: true !default;
-$position-over-mb: true !default;
-$position-over-mt: true !default;
-$position-over-fit-height: true !default;
-
 @mixin position-over($fom-anchor-to: top-left, $fom-setup: null, $fom-adjust-z-index: $z-position-over) {
 
   @if $fom-setup != basic {

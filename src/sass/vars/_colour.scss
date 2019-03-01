@@ -1,0 +1,89 @@
+// Default colour variables
+//****************************************************************************//
+
+$color-body: #1a1a1a !default;
+$color-text: #333 !default;
+
+$color-primary: #3b668b !default;
+$color-primary--light: mix($color-primary, white, 6%) !default;
+$color-primary--lighter: mix($color-primary, white, 45%) !default;
+$color-primary--dark: mix($color-primary, black, 60%) !default;
+$color-primary--darker: mix($color-primary, black, 30%) !default;
+
+$color-secondary: #f67280 !default;
+$color-secondary--lighter: mix($color-secondary, white, 8%) !default;
+$color-secondary--light: mix($color-secondary, white, 45%) !default;
+$color-secondary--dark: mix($color-secondary, black, 60%) !default;
+$color-secondary--darker: mix($color-secondary, black, 40%) !default;
+
+$color-tertiary: #c9c27d !default;
+$color-tertiary--lighter: mix($color-tertiary, white, 10%) !default;
+$color-tertiary--light: mix($color-tertiary, white, 45%) !default;
+$color-tertiary--dark: mix($color-tertiary, black, 60%) !default;
+$color-tertiary--darker: mix($color-tertiary, black, 40%) !default;
+
+$color-grey: #e7e8eb !default;
+$color-grey--lighter: #f4f7f9 !default;
+$color-grey--light: #eef0f2 !default;
+$color-grey--dark: #9b9fa5 !default;
+$color-grey--darker: #515255 !default;
+$color-grey--darkest: #39393b !default;
+
+$color-white: white !default;
+$color-white--tint: mix(black, white, 3%) !default;
+$color-black: black !default;
+$color-black--tint: mix(white, black, 10%) !default;
+
+$alert: #fbf4b7 !default;
+$alert--warn: #fed0d0 !default;
+$alert--neutral: #cdddf4 !default;
+$alert--positive: #cdf0cb !default;
+$alert--muted: #e9e9e9 !default;
+
+// Colour map for use with the color function
+//****************************************************************************//
+$color-scheme: (
+  primary: (
+    base: $color-primary,
+    lighter: $color-primary--light,
+    light: $color-primary--lighter,
+    dark: $color-primary--dark,
+    darker: $color-primary--darker
+  ),
+  secondary: (
+    base: $color-secondary,
+    lighter: $color-secondary--lighter,
+    light: $color-secondary--light,
+    dark: $color-secondary--dark,
+    darker: $color-secondary--darker
+  ),
+  tertiary: (
+    base: $color-tertiary,
+    lighter: $color-tertiary--lighter,
+    light: $color-tertiary--light,
+    dark: $color-tertiary--dark,
+    darker: $color-tertiary--darker
+  ),
+  grey: (
+    base: $color-grey,
+    lighter: $color-grey--lighter,
+    light: $color-grey--light,
+    dark: $color-grey--dark,
+    darker: $color-grey--darker,
+    darkest: $color-grey--darkest
+  ),
+  white: (
+    base: $color-white,
+    tint: $color-white--tint
+  ),
+  black: (
+    base: $color-black,
+    tint: $color-black--tint
+  ),
+  text: (
+    base: $color-text
+  ),
+  body: (
+    base: $color-body
+  )
+);

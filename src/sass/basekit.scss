@@ -5,7 +5,7 @@
 // $grid-column-width: 74;
 // $grid-gutter: 40;
 // $site-width-name: site-container;
-//
+
 // $color-primary: #3b668b;
 // $color-secondary: #f67280;
 // $color-tertiary: #c9c27d;
@@ -26,6 +26,7 @@ $bk-button-padding: 0.66em 1.25em;
 $bk-button-padding-compact: 0.25em 0.66em;
 
 // Core Basekit files and variables:
+@import "vars/import";
 @import "core/import";
 
 // Your unique project files and customisations
@@ -41,4 +42,3 @@ $bk-button-padding-compact: 0.25em 0.66em;
 @import "project/_utils/overflows";
 @import "project/_utils/sticky";
 @import "project/_utils/cursor";
-

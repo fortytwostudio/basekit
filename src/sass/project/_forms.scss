@@ -52,9 +52,9 @@
 //       transition: $speed-normal;
 //
 //       &:focus {
-//         border-color: color(tertiary, dark);
+//         border-color: $color-tertiary--dark;
 //         border-radius: 0;
-//         box-shadow: 0 0.5em 0.5em -0.25em rgba(color(tertiary), 0.25);
+//         box-shadow: 0 0.5em 0.5em -0.25em rgba($color-tertiary, 0.25);
 //       }
 //     }
 //
@@ -65,9 +65,9 @@
 //     select[disabled] option,
 //     select[disabled] optgroup,
 //     option[disabled] {
-//       background-color: rgba(color(grey, light), 0.66) !important;
-//       border-color: rgba(color(grey, light), 0.66) !important;
-//       color: color(grey, dark) !important;
+//       background-color: rgba($color-grey--light, 0.66) !important;
+//       border-color: rgba($color-grey--light, 0.66) !important;
+//       color: $color-grey--dark !important;
 //     }
 //   }
 //
@@ -76,7 +76,7 @@
 //   input[type="submit"],
 //   input[type="reset"],
 //   input[type="image"] {
-//     background-color: color(tertiary, darker);
+//     background-color: $color-tertiary--darker;
 //     border: 0;
 //     border-radius: $fh-border-radius;
 //     color: white;
@@ -95,7 +95,7 @@
 //   input[type="submit"]:focus,
 //   input[type="reset"]:focus,
 //   input[type="image"]:focus {
-//     background-color: color(primary);
+//     background-color: $color-primary;
 //     box-shadow: 0 0.5em 0.5em -0.25em rgba(black, 0.2);
 //     color: white;
 //     transition: $speed-normal;

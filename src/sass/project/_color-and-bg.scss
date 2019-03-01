@@ -1,12 +1,6 @@
-// Some default colour variables, delete these from here if you're happy.
-// —————————————————————————————————————————————————————————————————————————————
-// $color-primary: red;
-// $color-secondary: blue;
-// $color-tertiary: lime;
-// $color-body: #f7f7f7;
-// $hamburger-layer-color: #333;
-// —————————————————————————————————————————————————————————————————————————————
-
+@function color($scheme, $tone: base) {
+  @return map-get(map-get($color-scheme, $scheme), $tone);
+}
 
 .color {
   @each $scheme-key, $color-value in $color-scheme {
@@ -42,7 +36,7 @@
     background-position: center center;
     background-size: cover;
   }
-  
+
   @each $scheme-key, $color-value in $color-scheme {
     &-#{$scheme-key} {
       background-color: color($scheme-key);

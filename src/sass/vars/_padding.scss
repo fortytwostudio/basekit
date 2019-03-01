@@ -1,0 +1,5 @@
+$spacer-name: pad !default;
+$spacer-min: 500px !default;
+
+// This can't be a lower number than the above $spacer-min value
+$spacer-max: ($max-width * 1px) !default;
