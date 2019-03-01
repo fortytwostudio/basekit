@@ -1,9 +1,9 @@
 [submodule "_craft-files/craft-scripts"]
-	path = _craft-files/craft-scripts
-	url = git@github.com:nystudio107/craft-scripts.git
+  path = _craft-files/craft-scripts
+  url = https://github.com/nystudio107/craft-scripts.git
 [submodule "_craft-files/config/redactor"]
-	path = _craft-files/config/redactor
-	url = https://github.com/RyanRoberts/redactor.git
+  path = _craft-files/config/redactor
+  url = https://github.com/RyanRoberts/redactor.git
 [submodule "_craft-files/config/htmlpurifier"]
-	path = _craft-files/config/htmlpurifier
-	url = https://github.com/RyanRoberts/htmlpurifier.git
+  path = _craft-files/config/htmlpurifier
+  url = https://github.com/RyanRoberts/htmlpurifier.git
