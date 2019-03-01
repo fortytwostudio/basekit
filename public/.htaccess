@@ -1,35 +1,31 @@
-# Craft CMS:
-# —————————
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#
-#   Force www (on SSL):
-#   RewriteCond %{SERVER_PORT} ^443$
-#   RewriteCond %{HTTP_HOST} ^WEBSITENAME.COM$
-#   RewriteRule (.*) https://www.WEBSITENAME.COM/$1 [R=301,L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-#   Force trailing slash (SSL again):
-#   RewriteCond %{SERVER_PORT} ^443$
-#   RewriteCond %{REQUEST_FILENAME} !-f
-#   RewriteRule ^(.*[^/])$ https://{HTTP_HOST}/$1/ [L,R=301]
-#
-#   Send would-be 404 requests to Craft:
-#   RewriteCond %{REQUEST_FILENAME} !-f
-#   RewriteCond %{REQUEST_FILENAME} !-d
-#   RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
-#   RewriteRule (.+) index.php?p=$1 [QSA,L]
-# </IfModule>
+# Force www (on SSL):
+# RewriteCond %{SERVER_PORT} ^443$
+# RewriteCond %{HTTP_HOST} ^WEBSITENAME.COM$
+# RewriteRule (.*) https://www.WEBSITENAME.COM/$1 [R=301,L]
 
-# Uncomment this is Craft does some weird stuff over SSL with font files:
-# ———————————————————————————————————————————————————————————————————————
+# Force trailing slash (SSL again):
+  RewriteCond %{SERVER_PORT} ^443$
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*[^/])$ https://{HTTP_HOST}/$1/ [L,R=301]
+
+# Send would-be 404 requests to Craft:
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+  RewriteRule (.+) index.php?p=$1 [QSA,L]
+</IfModule>
+
+# Better caching for static files. Set to 30 days:
+<filesMatch ".(ico|pdf|jpg|jpeg|png|gif|js|css|svg|eot|ttf|otf|woff|mp4|ogg|webm)$">
+ Header set Cache-Control "max-age=2592000, public"
+</filesMatch>
+
+# Uncomment this if Craft does some weird stuff over SSL with font files:
 # <FilesMatch ".(eot|ttf|otf|woff)">
 #   # Stop Craft 3 from screwing up CMS icons when logged in on a non-primary
 #   # multi-site as admin.
 #   Header set Access-Control-Allow-Origin "*"
 # </FilesMatch>
-
-# Better caching for static files. Set to 30 days:
-# ————————————————————————————————————————————————
-# <filesMatch ".(ico|pdf|jpg|jpeg|png|gif|js|css|svg|eot|ttf|otf|woff|mp4|ogg|webm)$">
-#   Header set Cache-Control "max-age=2592000, public"
-# </filesMatch>
