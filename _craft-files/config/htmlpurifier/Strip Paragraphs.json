@@ -1,8 +1,0 @@
-{
-  "HTML.ForbiddenElements": ["&nbsp;", "br", "p"],
-  "AutoFormat.RemoveEmpty.RemoveNbsp": true,
-  "AutoFormat.RemoveEmpty": true,
-  "AutoFormat.RemoveSpansWithoutAttributes": true,
-  "HTML.Nofollow": false,
-  "Attr.AllowedFrameTargets": ["_blank"]
-}
