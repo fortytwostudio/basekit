@@ -8,7 +8,7 @@ Currently Basekit has a unique layout model based on `inline-block` and the `dat
 
 Basekit should go in your web root alongside other non-public files, it will compile CSS, JS and HTML (if required) to the public directory which can be configured in the package.json file.
 
-Remember to run `$ git submodule init` and `$ git submodule update` once you've pulled down this repo to make sure the submodules are also included and up to date.
+Basekit uses [Git Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules). Remember to run `$ git submodule init` and `$ git submodule update` once you've pulled down this repo to make sure the submodules are also included and up to date.
 
 ### NPM/Yarn
 
