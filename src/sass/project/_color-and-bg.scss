@@ -1,33 +1,39 @@
-@function color($scheme, $tone: base) {
-  @return map-get(map-get($color-scheme, $scheme), $tone);
-}
+// @function color($scheme, $tone: base) {
+//   @return map-get(map-get($color-scheme, $scheme), $tone);
+// }
 
 .color {
-  @each $scheme-key, $color-value in $color-scheme {
-    &-#{$scheme-key} {
-      color: color($scheme-key);
-    }
+  &-primary { color: $color-primary;}
+  &-primary--lighter { color: $color-primary--lighter; }
+  &-primary--light { color: $color-primary--light; }
+  &-primary--dark { color: $color-primary--dark; }
+  &-primary--darker { color: $color-primary--darker; }
 
-    &-#{$scheme-key}--light {
-      color: color($scheme-key, light);
-    }
+  &-secondary { color: $color-secondary;}
+  &-secondary--lighter { color: $color-secondary--lighter; }
+  &-secondary--light { color: $color-secondary--light; }
+  &-secondary--dark { color: $color-secondary--dark; }
+  &-secondary--darker { color: $color-secondary--darker; }
 
-    &-#{$scheme-key}--lighter {
-      color: color($scheme-key, lighter);
-    }
+  &-tertiary { color: $color-tertiary;}
+  &-tertiary--lighter { color: $color-tertiary--lighter; }
+  &-tertiary--light { color: $color-tertiary--light; }
+  &-tertiary--dark { color: $color-tertiary--dark; }
+  &-tertiary--darker { color: $color-tertiary--darker; }
 
-    &-#{$scheme-key}--dark {
-      color: color($scheme-key, dark);
-    }
+  &-grey { color: $color-grey;}
+  &-grey--lighter { color: $color-grey--lighter; }
+  &-grey--light { color: $color-grey--light; }
+  &-grey--dark { color: $color-grey--dark; }
+  &-grey--darker { color: $color-grey--darker; }
 
-    &-#{$scheme-key}--darker {
-      color: color($scheme-key, darker);
-    }
+  &-white { color: $color-white; }
+  &-white--tint { color: $color-white--tint; }
 
-    &-#{$scheme-key}--tint {
-      color: color($scheme-key, tint);
-    }
-  }
+  &-black { color: $color-black; }
+  &-black--tint { color: $color-black--tint; }
+
+  &-text { color: $color-text; }
 }
 
 
@@ -37,31 +43,39 @@
     background-size: cover;
   }
 
-  @each $scheme-key, $color-value in $color-scheme {
-    &-#{$scheme-key} {
-      background-color: color($scheme-key);
-    }
+  &-primary { background-color: $color-primary;}
+  &-primary--lighter { background-color: $color-primary--lighter; }
+  &-primary--light { background-color: $color-primary--light; }
+  &-primary--dark { background-color: $color-primary--dark; }
+  &-primary--darker { background-color: $color-primary--darker; }
 
-    &-#{$scheme-key}--light {
-      background-color: color($scheme-key, light);
-    }
+  &-secondary { background-color: $color-secondary;}
+  &-secondary--lighter { background-color: $color-secondary--lighter; }
+  &-secondary--light { background-color: $color-secondary--light; }
+  &-secondary--dark { background-color: $color-secondary--dark; }
+  &-secondary--darker { background-color: $color-secondary--darker; }
 
-    &-#{$scheme-key}--lighter {
-      background-color: color($scheme-key, lighter);
-    }
+  &-tertiary { background-color: $color-tertiary;}
+  &-tertiary--lighter { background-color: $color-tertiary--lighter; }
+  &-tertiary--light { background-color: $color-tertiary--light; }
+  &-tertiary--dark { background-color: $color-tertiary--dark; }
+  &-tertiary--darker { background-color: $color-tertiary--darker; }
 
-    &-#{$scheme-key}--dark {
-      background-color: color($scheme-key, dark);
-    }
+  &-grey { background-color: $color-grey;}
+  &-grey--lighter { background-color: $color-grey--lighter; }
+  &-grey--light { background-color: $color-grey--light; }
+  &-grey--dark { background-color: $color-grey--dark; }
+  &-grey--darker { background-color: $color-grey--darker; }
 
-    &-#{$scheme-key}--darker {
-      background-color: color($scheme-key, darker);
-    }
+  &-white { background-color: $color-white; }
+  &-white--tint { background-color: $color-white--tint; }
 
-    &-#{$scheme-key}--tint {
-      background-color: color($scheme-key, tint);
-    }
-  }
+  &-black { background-color: $color-black; }
+  &-black--tint { background-color: $color-black--tint; }
+
+  &-text { background-color: $color-text; }
+
+  &-body { background-color: $color-body; }
 }
 
 // $blend-modes: (

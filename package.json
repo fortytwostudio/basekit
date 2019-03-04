@@ -4,9 +4,15 @@
   "description": "Basekit Gulp Workflow",
   "main": "gulpfile.js",
   "homepage": "http://basekit.fortytwo.studio",
-  "author": "FortyTwo Studio",
-  "copyright": "FortyTwo Studio Ltd",
+  "author": "Ryan Roberts",
+  "copyright": "Ryan Roberts",
   "license": "UNLICENSED",
+  "scripts": {
+    "watch:sass": "sass --style=compressed --watch --no-source-map src/sass/basekit.scss public/assets/css/basekit.css",
+    "sass": "sass --style=compressed --no-source-map src/sass/basekit.scss public/assets/css/basekit.css",
+    "postcss": "postcss --config postcss.config.js public/assets/css/basekit.css --output public/assets/css/basekit.css",
+    "build": "npm run sass && npm run postcss"
+  },
   "paths": {
     "src": {
       "base": "./src/",
@@ -28,15 +34,13 @@
     "jsName": "basekit.min.js"
   },
   "devDependencies": {
-    "git-rev-sync": "^1.12.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-load-plugins": "^1.5.0",
     "gulp-sass": "^4.0.1",
     "gulp-size": "^3.0.0",
-    "gulp-uglify": "^3.0.1",
-    "moment": "^2.22.2"
+    "gulp-uglify": "^3.0.1"
   },
   "repository": {
     "type": "git",
