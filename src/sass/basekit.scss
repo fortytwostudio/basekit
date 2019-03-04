@@ -1,6 +1,6 @@
 // Common project overrides
 // —————————————————————————————————————————————————————————————————————————————
-// $site-width: 90%;
+// $site-width: 80%;
 // $grid-columns: 12;
 // $grid-column-width: 74;
 // $grid-gutter: 40;
@@ -12,18 +12,13 @@
 // $color-grey: #ccc;
 // $color-body: #1a1a1a;
 // $color-text: #333;
-//
+
 // $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif;
-// $font-size: 16px;
+
 // $font-weight-headings: $font-weight;
 //
-// $nav-switch-point: lg;
-//
-$site-logo-width: 205px;
-$site-logo-height: 47px;
-
-$bk-button-padding: 0.66em 1.25em;
-$bk-button-padding-compact: 0.25em 0.66em;
+// $site-logo-width: 205px;
+// $site-logo-height: 47px;
 
 // Core Basekit files and variables:
 @import "vars/import";
