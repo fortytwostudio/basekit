@@ -19,3 +19,7 @@ Install gulp-cli globally first then run `$ yarn` within your project root direc
 ### Gulp
 
 Run `$ gulp` from this directory to start compiling Sass, JS and Twig to the public directory. You can also run `$ gulp css` if you're only working with stylesheets.
+
+### NPM Scripts
+
+Basekit includes support for compiling the Sass/CSS via NPM scripts, take a look in the package.json. It's currently incomplete but faster than Gulp.
