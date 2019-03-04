@@ -8,9 +8,9 @@
   "copyright": "Ryan Roberts",
   "license": "UNLICENSED",
   "scripts": {
+    "sass": "sass --no-source-map src/sass/basekit.scss public/assets/css/basekit.css",
     "watch:sass": "sass --style=compressed --watch --no-source-map src/sass/basekit.scss public/assets/css/basekit.css",
-    "sass": "sass --style=compressed --no-source-map src/sass/basekit.scss public/assets/css/basekit.css",
-    "postcss": "postcss --config postcss.config.js public/assets/css/basekit.css --output public/assets/css/basekit.css",
+    "postcss": "postcss --no-map --config postcss.config.js public/assets/css/basekit.css --output public/assets/css/basekit.css",
     "build": "npm run sass && npm run postcss"
   },
   "paths": {
