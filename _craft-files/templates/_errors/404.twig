@@ -1,19 +1,13 @@
-{% set entry = craft.entries.section('pageNotFound').one %}
+{% extends "_layouts/_errors" %}
 
-{% extends '_layouts/_main' %}
+{% set title = "Page Not Found" %}
 
 {% block content %}
 
-  <section data-bk-links="primary" class="site-container align-c pad-xl" id="content">
-    <div data-bk-layout="md:6">
-      <h1 class="font-mega pad-b">{{ entry.title }}</h1>
+  <h1>{{ title }}</h1>
 
-      {% if entry.body %}
-        <div class="rte">
-          {{ entry.body }}
-        </div>
-      {% endif %}
-    </div>
-  </section>
+  <p>We couldn't find the page you’re looking, unfortunatly it may no longer exist or there may be a mispelling in the page URL.</p>
+
+  <p>Apologies for the inconvenience but you can try again from the site menu or <a href="/">visit the homepage</a>.</p>
 
 {% endblock %}
