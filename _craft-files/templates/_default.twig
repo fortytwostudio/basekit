@@ -1,9 +1,17 @@
-{% extends '_layouts/_main' %}
+{% if entry is defined %}
 
-{% block content %}
+  {% extends '_layouts/_main' %}
 
-  <div class="site-container pad" id="content">
-    <h2 class="font-xl">{{ entry.title }}</h2>
-  </div>
+  {% block content %}
 
-{% endblock %}
+    <div class="site-container pad" id="content">
+      <h2 class="font-xl">{{ entry.title }}</h2>
+    </div>
+
+  {% endblock %}
+
+{% else %}
+
+  {% redirect "home" %}
+
+{% endif %}
