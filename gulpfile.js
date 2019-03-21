@@ -28,29 +28,6 @@ gulp.task("sass", () => {
   );
 });
 
-
-// JAVASCRIPT
-// ————————————————————————————————————————————————————————————————————————————————————
-// Minify and combine javascript files for production, unless they start with an _
-gulp.task('js', () => {
-  return gulp.src(pkg.paths.src.js + '[^_]*.js') // ignore underscored files
-    .pipe($.concat(pkg.vars.jsName)) // Combine all (none _) js files into this file
-    .pipe($.uglify()) // Minify the file
-
-    .pipe($.gulp.dest(pkg.paths.dist.js) // Output it here
-  );
-});
-
-// CHECK FILE SIZES
-// ————————————————————————————————————————————————————————————————————————————————————
-// Report full and gzip file sizes
-gulp.task('size', () => {
-  return gulp.src([pkg.paths.dist.js + pkg.vars.jsName, pkg.paths.dist.css + pkg.vars.cssName])
-    .pipe($.size({ title: '➡', showFiles: true, showTotal: false })) // Show file size before gzip
-    .pipe($.size({ title: '→', gzip: true, showFiles: true, showTotal: false }) // Show file size after gzip
-  );
-});
-
 // WATCH ONLY SASS CHANGES
 // ————————————————————————————————————————————————————————————————————————————————————
 gulp.task('css', function() {
@@ -61,5 +38,4 @@ gulp.task('css', function() {
 // ————————————————————————————————————————————————————————————————————————————————————
 gulp.task("default", () => {
   gulp.watch(pkg.paths.src.sass + '**/*.scss', gulp.series('sass'));
-  gulp.watch(pkg.paths.src.js + '*.js', gulp.series('js'));
 });
