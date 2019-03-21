@@ -2,17 +2,11 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol {
+ul, ol {
   list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   // Match document font size by default, overriding the browser defaults.
   font-size: (($font-size / ($font-size * 0 + 1)) / 16) * 1rem;
   font-weight: $font-weight-headings;
