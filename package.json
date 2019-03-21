@@ -17,21 +17,16 @@
     "src": {
       "base": "./src/",
       "sass": "./src/sass/",
-      "js": "./src/js/",
       "css": "./src/css/"
     },
     "dist": {
       "base": "./public/",
-      "css": "./public/assets/css/",
-      "js": "./public/assets/js/",
-      "fonts": "./public/assets/fonts/",
-      "img": "./public/assets/imgs/"
+      "css": "./public/assets/css/"
     }
   },
   "vars": {
     "scssName": "basekit.scss",
     "cssName": "basekit.css",
-    "jsName": "basekit.min.js"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
