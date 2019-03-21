@@ -6,6 +6,8 @@
   width: $site-width;
 }
 
+// Below, use .w-100 class instead ¯\_(ツ)_/¯
+//
 // While maintaining the website's max-width, allow it to fit 100% of the screen width when it is less than the website max width
 // .#{$site-width-name}--100 {
 //   width: 100% !important;
