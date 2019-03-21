@@ -1,5 +1,8 @@
 module.exports = {
   plugins: {
+    cssDeclarationSorter: {
+      order: 'alphabetically'
+    },
     cssnano: {
       minifySelectors: false
     },
