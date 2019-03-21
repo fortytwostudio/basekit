@@ -72,9 +72,9 @@
 /// @todo More options
 /// @access private
 @mixin grid-flex($gf-value: null) {
-  @include attr-module($bk-grid-name, #{$gf-value}#{"flex"}) {
-    display: flex;
-  }
+  // @include attr-module($bk-grid-name, #{$gf-value}#{"flex"}) {
+  //   display: flex;
+  // }
 
   @include attr-module($bk-grid-name, #{$gf-value}#{"wrap"}) {
     flex-wrap: wrap;
@@ -262,7 +262,7 @@
   }
 
   // Disable padding completely on the module
-  @include attr-module($bk-grid-name, #{$gg-value}#{"p:0"}) {
+  @include attr-module($bk-grid-name, #{$gg-value}#{"np"}) {
     padding: 0;
   }
 
@@ -335,6 +335,7 @@
 // And reduce the default padding
 @include attr-module($bk-grid-name) {
   width: 100%;
+  display: flex;
   // display: inline-block;
   // vertical-align: top;
   // padding: (($margin / 2) / 16) * 1rem;

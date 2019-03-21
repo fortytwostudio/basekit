@@ -20,14 +20,15 @@
   <a class=skip-link href=#nav-primary>Skip to navigation</a>
 
   <div class='position-over bg-white--tint'>
-    <header id=site-header class=site-container>
-      <div data-bk-layout='to:md:p:0 md:p:r md:p:sm middle'>
-        <div data-bk-layout=3 class=site-logo--container>
+    <header id=site-header class=container>
+      <div data-bk-layout='flex wrap np i:center j:between' class="bg-primary">
+        <div data-bk-layout='auto' class=site-logo--container>
           <h1 class='site-logo logo'><a class='site-logo__img logo__img' href=''>Basekit Project</a></h1>
         </div>
 
-        <div data-bk-layout='p:0 9 right' class='nav-toggler-wrapper | no-js-dn'><button id=nav-toggler class='hamburger hamburger--squeeze no-outline' type=button aria-controls=nav-primary><span class=hamburger-box><span class=hamburger-inner></span></span></button></div>
-        <div data-bk-layout='auto to:lg:p:0 lg:p:r md:p:sm 9 lg:right' class='is-home nav-primary-layout'>
+        <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'><button id=nav-toggler class='hamburger hamburger--squeeze no-outline' type=button aria-controls=nav-primary><span class=hamburger-box><span class=hamburger-inner></span></span></button></div>
+
+        <div data-bk-layout='np auto' class='is-home nav-primary-layout'>
           <nav id=nav-primary class=nav-primary aria-labelledby=nav-toggler>
             <h2 class=hide>Site Navigation</h2>
             <ul id=nav-primary-list class='sm sm-bk'>
@@ -66,82 +67,79 @@
     </header>
   </div>
   <div class=bg-white>
-    <div class='site-container pad-lg'>
-      <div data-bk-layout="p:0 flex wrap">
-        <div data-bk-layout="end 6 sm:3 md:1" class="bdr-a bg-grey--light">01</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">02 And lets look at more</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">03</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">04</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">05</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">06</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">07</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">08</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">09</div>
-        <div data-bk-layout="start 6 sm:3 md:1" class="bdr-a bg-grey--light">10</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">11</div>
-        <div data-bk-layout="6 sm:3 md:1" class="bdr-a">12</div>
-      </div>
+    <div class='container pad-lg'>
+      <div data-bk-layout="end 6 sm:3 md:1" class="bdr-a bg-grey--light">01</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">02 And lets look at more</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">03</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">04</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">05</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">06</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">07</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">08</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">09</div>
+      <div data-bk-layout="start 6 sm:3 md:1" class="bdr-a bg-grey--light">10</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">11</div>
+      <div data-bk-layout="6 sm:3 md:1" class="bdr-a">12</div>
     </div>
-      <div class='site-container pad-lg'>
-        <div data-bk-layout="p:0 flex wrap">
-          <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a bg-grey--light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</div>
-          <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-          <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</div>
-          <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a">Sint occaecat cupidatat non proident, lorem ipsum dolor sit amet, consectetursunt in culpa qui.</div>
-        </div>
-      </div>
+
+    <div class='container pad-b'>
+      <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a bg-grey--light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.</div>
+      <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.</div>
+      <div data-bk-layout="sm:6 md:4 lg:3 grow" class="bdr-a">Sint occaecat cupidatat non proident, lorem ipsum dolor sit amet, consectetursunt in culpa qui.</div>
+    </div>
 
 
-    <div class='site-container pad'>
+    <div class='container pad'>
       <div data-bk-layout='sm:9 md:8 lg:6' data-bk-links='primary underline-initial'>
         <p class=pad-sm-b>See the <a href=/README.md>README </a> file.</p> </div> <form data-bk-layout=flex class=bk-form><label for=text>Website Search</label><input data-bk-layout=fill type=text placeholder='Enter your search term' name=text id=text><button>Submit</button></form>
             <div data-bk-layout='flex wrap'>
               <div data-bk-layout='flex col sm:6 md:4'>
                 <h3>Card Title</h3>
-                <div data-bk-layout='fill p:0'>
+                <div data-bk-layout='fill np'>
                   <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div><a href=#>Read more…</a><img data-bk-layout='start p:0' src=https://via.placeholder.com/1000x450 alt>
+                </div><a href=#>Read more…</a><img data-bk-layout='start np' src=https://via.placeholder.com/1000x450 alt>
               </div>
               <div data-bk-layout='flex col sm:6 md:4'>
-                <h3>Card Title</h3><img data-bk-layout='start p:0' src=https://via.placeholder.com/1000x450 alt>
-                <div data-bk-layout='fill p:0'>
+                <h3>Card Title</h3><img data-bk-layout='start np' src=https://via.placeholder.com/1000x450 alt>
+                <div data-bk-layout='fill np'>
                   <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div><a href=#>Read more…</a>
               </div>
               <div data-bk-layout='flex col sm:6 md:4'>
-                <h3>Card Title</h3><img data-bk-layout='start p:0' src=https://via.placeholder.com/1000x450 alt>
-                <div data-bk-layout='fill p:0'>
+                <h3>Card Title</h3><img data-bk-layout='start np' src=https://via.placeholder.com/1000x450 alt>
+                <div data-bk-layout='fill np'>
                   <p>Maecenas faucibus mollis interdum.</p>
                 </div><a href=#>Read more…</a>
               </div>
               <div data-bk-layout='flex col sm:6 md:4'>
                 <h3>Card Title</h3><img src=https://via.placeholder.com/1000x450 alt>
-                <div data-bk-layout='fill p:0'>
+                <div data-bk-layout='fill np'>
                   <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div><a href=#>Read more…</a>
               </div>
               <div data-bk-layout='flex col sm:6 md:4'>
                 <h3>Card Title</h3><img src=https://via.placeholder.com/1000x450 alt>
-                <div data-bk-layout='fill p:0'>
+                <div data-bk-layout='fill np'>
                   <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   <p>Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div><a href=#>Read more…</a>
               </div>
               <div data-bk-layout='flex col sm:6 md:4'>
                 <h3>Card Title</h3><img src=https://via.placeholder.com/1000x450 alt>
-                <div data-bk-layout='fill p:0'>
+                <div data-bk-layout='fill np'>
                   <p>Maecenas faucibus mollis interdum.</p>
                 </div><a href=#>Read more…</a>
               </div>
             </div>
       </div>
     </div>
-    <footer id=site-footer data-bk-links='secondary underline-hover' class='site-container pad'>
+    <footer id=site-footer data-bk-links='secondary underline-hover' class='container pad'>
       <div data-bk-layout=md:3>
         <h1 class='site-logo logo inline-block'><span class='site-logo__img logo__img'>Basekit Project</span></h1>
       </div>
-      <div data-bk-layout='p:0 md:9'>
+      <div data-bk-layout='np md:9'>
         <div data-bk-layout=sm:4><span class=block>FortyTwo Studio</span><span class=block>126 Crown Street</span><span class=block>Aberdeen</span><span class=block>AB11 6HQ</span>
           <ul class=pad-sm-t>
             <li><a href=mailto:info@yourdomain.com>info@yourdomain.com</a></li>
