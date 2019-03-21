@@ -13,21 +13,6 @@
     "postcss": "postcss --no-map --config postcss.config.js public/assets/css/basekit.css --output public/assets/css/basekit.css",
     "build": "npm run sass && npm run postcss"
   },
-  "paths": {
-    "src": {
-      "base": "./src/",
-      "sass": "./src/sass/",
-      "css": "./src/css/"
-    },
-    "dist": {
-      "base": "./public/",
-      "css": "./public/assets/css/"
-    }
-  },
-  "vars": {
-    "scssName": "basekit.scss",
-    "cssName": "basekit.css",
-  },
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-cssnano": "^2.1.3",
