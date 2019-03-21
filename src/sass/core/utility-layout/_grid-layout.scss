@@ -88,16 +88,113 @@
     flex-direction: column;
   }
 
+  @include attr-module($bk-grid-name, #{$gf-value}#{"col:rev"}) {
+    flex-direction: column-reverse;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"row"}) {
+    flex-direction: row;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"row:rev"}) {
+    flex-direction: row-reverse;
+  }
+
+
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"j:start"}) {
+    justify-content: flex-start;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"j:end"}) {
+    justify-content: flex-end;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"j:center"}) {
+    justify-content: center;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"j:between"}) {
+    justify-content: space-between;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"j:around"}) {
+    justify-content: space-around;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"j:even"}) {
+    justify-content: space-evenly;
+  }
+
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"i:start"}) {
+    align-items: flex-start;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"i:end"}) {
+    align-items: flex-end;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"i:center"}) {
+    align-items: center;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"i:stretch"}) {
+    align-items: stretch;
+  }
+
+
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"c:start"}) {
+    align-content: flex-start;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"c:end"}) {
+    align-content: flex-end;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"c:center"}) {
+    align-content: center;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"c:stretch"}) {
+    align-content: stretch;
+  }
+
+
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"s:start"}) {
+    align-self: flex-start;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"s:end"}) {
+    align-self: flex-end;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"s:center"}) {
+    align-self: center;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"s:stretch"}) {
+    align-self: stretch;
+  }
+
+
+
   @include attr-module($bk-grid-name, #{$gf-value}#{"start"}) {
     order: -1;
   }
 
-  @include attr-module($bk-grid-name, #{$gf-value}#{"fill"}) {
-    flex-grow: 2;
+  @include attr-module($bk-grid-name, #{$gf-value}#{"end"}) {
+    order: 99;
   }
 
-  @include attr-module($bk-grid-name, #{$gf-value}#{"grow:1"}) {
+  @include attr-module($bk-grid-name, #{$gf-value}#{"grow"}) {
     flex-grow: 1;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"fill"}) {
+    flex-grow: 2;
   }
 
   @include attr-module($bk-grid-name, #{$gf-value}#{"shrink"}) {
@@ -238,8 +335,8 @@
 // And reduce the default padding
 @include attr-module($bk-grid-name) {
   width: 100%;
-  display: inline-block;
-  vertical-align: top;
+  // display: inline-block;
+  // vertical-align: top;
   // padding: (($margin / 2) / 16) * 1rem;
   padding: ($margin / 16) * 1rem;
 
@@ -255,7 +352,7 @@
 @include grid-columns;
 @include grid-padding;
 @include grid-indent;
-@include grid-alignments;
+// @include grid-alignments;
 
 // Iterate through the media queries and output properties for each without the base props
 @each $breakpoint, $gw-value in $mq-breakpoints {
@@ -265,7 +362,7 @@
       @include grid-columns("#{$breakpoint}:");
       @include grid-padding("#{$breakpoint}:");
       @include grid-indent("#{$breakpoint}:");
-      @include grid-alignments("#{$breakpoint}:");
+      // @include grid-alignments("#{$breakpoint}:");
     }
   // }
 }
@@ -279,7 +376,7 @@
         @include grid-columns("to:#{$breakpoint}:");
         @include grid-padding("to:#{$breakpoint}:");
         @include grid-indent("to:#{$breakpoint}:");
-        @include grid-alignments("to:#{$breakpoint}:");
+        // @include grid-alignments("to:#{$breakpoint}:");
       }
     // }
   }
