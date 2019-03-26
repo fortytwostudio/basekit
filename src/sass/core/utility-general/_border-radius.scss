@@ -1,12 +1,38 @@
-@each $border-radius-size in $border-radius-sizes {
-  .br-#{index($border-radius-sizes, $border-radius-size)} { border-radius: $border-radius-size; }
+@each $border-radius-size, $border-radius-value in $border-radius-sizes {
+  .br-#{$border-radius-size} {
+    border-radius: $border-radius-value;
+  }
 }
 
-.br-0 { border-radius: 0; }
-.br-100, .br-round { border-radius: 100%; }
-.br-pill { border-radius: 9999px; }
+.br-0 {
+  border-radius: 0;
+}
 
-.br-b { border-top-left-radius: 0; border-top-right-radius: 0; }
-.br-t { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
-.br-r { border-top-left-radius: 0; border-bottom-left-radius: 0; }
-.br-l { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.br-100,
+.br-round {
+  border-radius: $br-round;
+}
+
+.br-pill {
+  border-radius: $br-pill;
+}
+
+.br-b {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.br-t {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.br-r {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.br-l {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
