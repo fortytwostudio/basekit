@@ -4,19 +4,19 @@
 $color-body: #1a1a1a !default;
 $color-text: #333 !default;
 
-$color-primary: #3b668b !default;
-$color-primary--light: mix($color-primary, white, 6%) !default;
-$color-primary--lighter: mix($color-primary, white, 45%) !default;
+$color-primary: #0246AD !default;
+$color-primary--lighter: mix($color-primary, white, 6%) !default;
+$color-primary--light: mix($color-primary, white, 45%) !default;
 $color-primary--dark: mix($color-primary, black, 60%) !default;
 $color-primary--darker: mix($color-primary, black, 30%) !default;
 
-$color-secondary: #f67280 !default;
+$color-secondary: #FF6679 !default;
 $color-secondary--lighter: mix($color-secondary, white, 8%) !default;
 $color-secondary--light: mix($color-secondary, white, 45%) !default;
 $color-secondary--dark: mix($color-secondary, black, 60%) !default;
 $color-secondary--darker: mix($color-secondary, black, 40%) !default;
 
-$color-tertiary: #c9c27d !default;
+$color-tertiary: #4AF2A1 !default;
 $color-tertiary--lighter: mix($color-tertiary, white, 10%) !default;
 $color-tertiary--light: mix($color-tertiary, white, 45%) !default;
 $color-tertiary--dark: mix($color-tertiary, black, 60%) !default;
