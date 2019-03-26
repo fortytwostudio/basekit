@@ -1,82 +1,35 @@
-[class*="alert"] {
-  background-color: $alert;
-  border: 1px solid darken($alert, 35%);
-  color: black;
-  margin-bottom: rem(4px);
-  margin-top: rem(4px);
-  padding: rem(($margin / 2) * 1px);
-  position: relative;
-
-  @include mq(sm) {
-    padding: rem($margin * 1px) rem(($margin * 1.4) * 1px);
-  }
-
-  &:before {
-    background: inherit;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 1px 0 0 1px;
-    content: "";
-    height: 15px;
-    left: rem(($margin * 1.5) * 1px);
-    position: absolute;
-    top: rem(-16px);
-    transform: rotate(45deg) skew(12deg, 12deg);
-    transform-origin: 0 100%;
-    width: 15px;
-  }
-}
-
 .alert {
-  &--warn {
-    background-color: $alert--warn;
-    border-color: darken($alert--warn, 12%);
-  }
+  &-t,
+  &-b {
+    position: relative;
 
-  &--neutral {
-    background-color: $alert--neutral;
-    border-color: darken($alert--neutral, 15%);
-  }
-
-  &--positive {
-    background-color: $alert--positive;
-    border-color: darken($alert--muted, 12%);
-  }
-
-  &--above {
     &:before {
-      border-width: 0 1px 1px 0;
+      background: inherit;
+      border-color: inherit;
+      border-style: inherit;
+      border-width: $border-width-default 0 0 $border-width-default;
+      content: "";
+      height: 15px;
+      left: rem(($margin * 1.5) * 1px);
+      position: absolute;
+      top: rem(-16px);
+      transform: rotate(45deg) skew(12deg, 12deg);
+      transform-origin: 0 100%;
+      width: 15px;
+    }
+  }
+
+  &-b {
+    &:before {
+      border-width: 0 $border-width-default $border-width-default 0;
       top: auto;
-      bottom: rem(-1px);
+      bottom: rem(-$border-width-default);
     }
   }
 
-  &--compact {
-    padding: rem(($margin / 4) * 1px);
-
-    @include mq(sm) {
-      padding: rem(($margin / 2) * 1px);
-    }
-  }
-
-  &--simple {
-    margin-bottom: 0;
-    margin-top: 0;
-
+  &-nb {
     &:before {
-      content: none;
+      border-width: 0;
     }
-  }
-
-  &--ib {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: em(10px);
-  }
-
-  &--inline {
-    padding: 0 em(4px);
-    vertical-align: baseline;
-    white-space: pre-wrap;
   }
 }
