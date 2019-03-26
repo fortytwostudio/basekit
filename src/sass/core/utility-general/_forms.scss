@@ -33,9 +33,9 @@
     cursor: pointer;
     display: $fh-display;
 
-    &.required {
+    &[required] {
       &:after {
-        color: darken($alert--warn, 35%);
+        color: #CE1919;
         content: "*";
         font-size: 112.5%;
         line-height: 1;
