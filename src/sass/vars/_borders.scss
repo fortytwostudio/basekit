@@ -1,2 +1,20 @@
 $border-width-default: 1px !default;
-$border-widths: (2px, 4px, 6px) !default;
+
+// src/sass/core/utility-general/_border-radius.scss
+// —————————————————————————————————————————————————————————————————————————————
+
+// Set your radius values, more can be added if you include them in the map
+// below. xs and xl aren't included in the map so they aren't available as
+// classes for your markup.
+$bdr-sm: 3px !default;
+$bdr-md: 4px !default;
+$bdr-lg: 6px !default;
+
+// Include them in this map to have Sass generate the relevant classes. You can
+// also add them straight into here if you are never likely to use the
+// standalone variables.
+$borders: (
+  sm: $bdr-sm,
+  md: $bdr-md,
+  lg: $bdr-lg
+) !default;

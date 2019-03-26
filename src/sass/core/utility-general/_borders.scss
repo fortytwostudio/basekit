@@ -1,47 +1,86 @@
 .bdr {
-  &-primary { border-color: $color-primary; }
-  &-primary--light { border-color: $color-primary--light; }
-  &-secondary { border-color: $color-secondary; }
-  &-tertiary { border-color: $color-tertiary; }
-  &-white { border-color: $color-white; }
-  &-grey { border-color: $color-grey; }
-  &-grey--light { border-color: $color-grey--light; }
-  &-grey--dark { border-color: $color-grey--dark; }
-  &-text { border-color: currentColor; }
+  &-primary {
+    border-color: $color-primary;
+  }
+
+  &-primary--light {
+    border-color: $color-primary--light;
+  }
+
+  &-secondary {
+    border-color: $color-secondary;
+  }
+
+  &-tertiary {
+    border-color: $color-tertiary;
+  }
+
+  &-white {
+    border-color: $color-white;
+  }
+
+  &-grey {
+    border-color: $color-grey;
+  }
+
+  &-grey--light {
+    border-color: $color-grey--light;
+  }
+
+  &-grey--dark {
+    border-color: $color-grey--dark;
+  }
+
+  &-text {
+    border-color: currentColor;
+  }
+
+  &-alert {
+    border-color: $alert--dark;
+  }
+
+  &-negative {
+    border-color: $alert-negative--dark;
+  }
+
+  &-positive {
+    border-color: $alert-positive--dark;
+  }
 }
 
 .bdr-a {
   border-style: solid;
-  border-width: rem($border-width-default);
+  border-width: $border-width-default;
 }
 
 .bdr-t,
 .bdr-x {
   border-top-style: solid;
-  border-top-width: rem($border-width-default);
+  border-top-width: $border-width-default;
 }
 
 .bdr-r,
 .bdr-y {
   border-right-style: solid;
-  border-right-width: rem($border-width-default);
+  border-right-width: $border-width-default;
 }
 
 .bdr-b,
 .bdr-x {
   border-bottom-style: solid;
-  border-bottom-width: rem($border-width-default);
+  border-bottom-width: $border-width-default;
 }
 
 .bdr-l,
 .bdr-y {
   border-left-style: solid;
-  border-left-width: rem($border-width-default);
+  border-left-width: $border-width-default;
 }
 
-
-@each $border-width in $border-widths {
-  .bdr-#{index($border-widths, $border-width)} { border-width: $border-width; }
+@each $border-size, $border-value in $borders {
+  .bdr-#{$border-size} {
+    border-width: $border-value;
+  }
 }
 
 .bdr-0 {
