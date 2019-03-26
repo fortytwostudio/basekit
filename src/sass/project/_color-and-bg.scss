@@ -34,6 +34,10 @@
   &-black--tint { color: $color-black--tint; }
 
   &-text { color: $color-text; }
+
+  &-alert { color: $alert--text; }
+  &-negative { color: $alert-negative--text; }
+  &-positive { color: $alert-positive--text; }
 }
 
 
@@ -76,6 +80,10 @@
   &-text { background-color: $color-text; }
 
   &-body { background-color: $color-body; }
+
+  &-alert { background-color: $alert; }
+  &-negative { background-color: $alert-negative; }
+  &-positive { background-color: $alert-positive; }
 }
 
 // $blend-modes: (
