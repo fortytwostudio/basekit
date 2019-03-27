@@ -1,0 +1,8 @@
+// Set some base z-index layers to work with
+$z-min: 1 !default;
+$z-content: 100 !default;
+$z-fit-media: 200 !default;
+$z-position-over: 300 !default;
+$z-mobile-nav: 400 !default;
+$z-mobile-nav-toggle: 500 !default;
+$z-max: 600 !default;
