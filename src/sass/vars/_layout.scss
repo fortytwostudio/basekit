@@ -1,3 +1,9 @@
+$mq-breakpoints: (
+  sm: 520px,
+  md: 720px,
+  lg: 960px
+) !default;
+
 // Once lower than the max-width the site width will never be larger than this.
 $site-width: 96% !default;
 
