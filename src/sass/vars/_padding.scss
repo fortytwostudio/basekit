@@ -1,5 +1,14 @@
 $spacer-name: pad !default;
-$spacer-min: 500px !default;
 
-// This can't be a lower number than the above $spacer-min value
+// Default padding spacer is twice the grid's gutter size, you can change this
+// suite your needs. For example 1.5 may also work.
+$spacer-size: ($grid-gutter * 1px) * 2;
+
+// Then we calculate as appropriate for the additional sizes
+$spacer-size-xs: $spacer-size / 4;
+$spacer-size-sm: $spacer-size / 2;
+$spacer-size-lg: $spacer-size * 2;
+$spacer-size-xl: $spacer-size * 4;
+
+$spacer-min: map-get($mq-breakpoints, sm) !default;
 $spacer-max: ($max-width * 1px) !default;
