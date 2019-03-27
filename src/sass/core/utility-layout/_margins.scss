@@ -1,68 +1,93 @@
-.margin {
-
-  // margin: rem($margin + 0px);
+.mar {
+  &-auto {
+    margin: auto;
+  }
 
   &-0 {
     margin: 0;
   }
 
   &-t {
-    margin-top: rem($margin + 0px);
+    margin-top: $margin-size;
   }
 
   &-r {
-    margin-right: rem($margin + 0px);
+    margin-right: $margin-size;
   }
 
   &-b {
-    margin-bottom: rem($margin + 0px);
+    margin-bottom: $margin-size;
   }
 
   &-l {
-    margin-left: rem($margin + 0px);
+    margin-left: $margin-size;
   }
 
   &-tb {
-    margin-top: rem($margin + 0px);
-    margin-bottom: rem($margin + 0px);
+    margin-top: $margin-size;
+    margin-bottom: $margin-size;
   }
 
   &-rl {
-    margin-right: rem($margin + 0px);
-    margin-left: rem($margin + 0px);
-  }
-
-  &-auto {
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: $margin-size;
+    margin-left: $margin-size;
   }
 
   &-sm {
 
     &-t {
-      margin-top: rem(($margin / 2) + 0px);
+      margin-top: $margin-size / 2;
     }
 
     &-r {
-      margin-right: rem(($margin / 2) + 0px);
+      margin-right: $margin-size / 2;
     }
 
     &-b {
-      margin-bottom: rem(($margin / 2) + 0px);
+      margin-bottom: $margin-size / 2;
     }
 
     &-l {
-      margin-left: rem(($margin / 2) + 0px);
+      margin-left: $margin-size / 2;
     }
 
     &-tb {
-      margin-top: rem(($margin / 2) + 0px);
-      margin-bottom: rem(($margin / 2) + 0px);
+      margin-top: $margin-size / 2;
+      margin-bottom: $margin-size / 2;
     }
 
     &-rl {
-      margin-right: rem(($margin / 2) + 0px);
-      margin-left: rem(($margin / 2) + 0px);
+      margin-right: $margin-size / 2;
+      margin-left: $margin-size / 2;
+    }
+  }
+
+  &-lg {
+
+    &-t {
+      margin-top: $margin-size * 1.5;
+    }
+
+    &-r {
+      margin-right: $margin-size * 1.5;
+    }
+
+    &-b {
+      margin-bottom: $margin-size * 1.5;
+    }
+
+    &-l {
+      margin-left: $margin-size * 1.5;
+    }
+
+    &-tb {
+      margin-top: $margin-size * 1.5;
+      margin-bottom: $margin-size * 1.5;
+    }
+
+    &-rl {
+      margin-right: $margin-size * 1.5;
+      margin-left: $margin-size * 1.5;
     }
   }
 
