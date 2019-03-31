@@ -20,31 +20,38 @@
 $fluid-font-mq-max: ($max-width * 1px);
 
 $fluid-fonts: (
+  md: (
+    minSize: 18px,
+    maxSize: 22px,
+    lineHeight: 1.25,
+    mqMin: 320px,
+    mqMax: $fluid-font-mq-max,
+  ),
   lg: (
-    minSize: 26px,
-    maxSize: 32px,
-    lineHeight: 1.2,
+    minSize: 20px,
+    maxSize: 26px,
+    lineHeight: 1.25,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   xl: (
-    minSize: 32px,
-    maxSize: 44px,
-    lineHeight: 1.175,
+    minSize: 22px,
+    maxSize: 32px,
+    lineHeight: 1.3,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   xxl: (
-    minSize: 44px,
-    maxSize: 62px,
-    lineHeight: 1.15,
+    minSize: 32px,
+    maxSize: 50px,
+    lineHeight: 1.1,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   ),
   hero: (
-    minSize: 52px,
-    maxSize: 92px,
-    lineHeight: 1.05,
+    minSize: 38px,
+    maxSize: 72px,
+    lineHeight: 1.1,
     mqMin: 320px,
     mqMax: $fluid-font-mq-max,
   )
@@ -70,10 +77,6 @@ $fluid-fonts: (
     font-size: rem($font-size);
   }
 
-  &-md {
-    font-size: rem(22px);
-    line-height: 1.4;
-  }
 
   @each $font in $fluid-fonts {
     &-#{nth($font, 1)} {
@@ -82,9 +85,9 @@ $fluid-fonts: (
     }
   }
 
-  &-alt {
-    font-family: $font-family--serif;
-  }
+  // &-alt {
+  //   font-family: $font-family--serif;
+  // }
 
   &-light {
     font-weight: 200;
