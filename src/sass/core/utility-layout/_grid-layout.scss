@@ -72,9 +72,10 @@
 /// @todo More options
 /// @access private
 @mixin grid-flex($gf-value: null) {
-  // @include attr-module($bk-grid-name, #{$gf-value}#{"flex"}) {
-  //   display: flex;
-  // }
+  // unset the display flex to block if needed lol
+  @include attr-module($bk-grid-name, #{$gf-value}#{"block"}) {
+    display: block;
+  }
 
   @include attr-module($bk-grid-name, #{$gf-value}#{"wrap"}) {
     flex-wrap: wrap;
@@ -159,6 +160,14 @@
 
   @include attr-module($bk-grid-name, #{$gf-value}#{"c:stretch"}) {
     align-content: stretch;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"c:between"}) {
+    align-content: space-between;
+  }
+
+  @include attr-module($bk-grid-name, #{$gf-value}#{"c:around"}) {
+    align-content: space-around;
   }
 
 
