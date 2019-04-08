@@ -14,12 +14,8 @@
 @import "tools/reverse-list";
 @import "tools/viewport-units";
 
-// GLOBALS
-@import "global/document";
-@import "global/text";
-@import "global/media";
-@import "global/tables";
-// @import "global/code";
+// GLOBALS RESET
+@import "utility-general/reset";
 
 // LAYOUT GRID
 @import "utility-layout/site-width";
