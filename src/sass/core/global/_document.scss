@@ -7,11 +7,12 @@ html {
   &,
   &:before,
   &:after {
-    // It's rare that bg repeat is needed in most designs so for convinience let's just disable it.
+    // It's rare that bg repeat is needed in most designs so for convinience
+    // let's just disable repeating globally.
     background-repeat: no-repeat;
     // Inherit the html box sizing.
     box-sizing: inherit;
-    // Default padding and margins suck, we'll disable them.
+    // Dirty reset but small and fast enough.
     margin: 0;
     padding: 0;
   }
@@ -22,13 +23,9 @@ body {
   background-color: $color-body;
   color: $color-text;
   font-family: $font-family;
-
-  // Convert the font-size variable from pixels to em.
   font-size: (($font-size / ($font-size * 0 + 1)) / 16) * 1em;
-
   line-height: $font-line-height;
   text-rendering: optimizeLegibility;
-
   // Prevents iOS (in particular) from screwing with the intended text sizing.
   text-size-adjust: 100%;
 }
