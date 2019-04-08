@@ -41,3 +41,60 @@ textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // Match document font size by default, overriding the browser defaults.
+  font-size: (($font-size / ($font-size * 0 + 1)) / 16) * 1rem;
+  font-weight: $font-weight-headings;
+  // Match document line height, overriding the browser defaults.
+  line-height: $font-line-height;
+}
+
+img,
+picture,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+// pre {
+//   white-space: pre-wrap;
+// }
+//
+// code {
+//   background-color: $code-bg-color;
+//   border-radius: 0.2rem;
+//   border: $code-border;
+//   color: $code-text-color;
+//   display: inline-block;
+//   font-family: $font-family--mono;
+//   font-size: $code-font-size;
+//   padding: 0.15rem 0.3333rem;
+//   white-space: pre-wrap;
+// }
+
+table {
+  border-collapse: collapse;
+  border-left: $tables-width solid $tables-color;
+  border-spacing: 0;
+  border-top: $tables-width solid $tables-color;
+  min-width: 100%;
+}
+
+th,
+td {
+  border-bottom: $tables-width solid $tables-color;
+  border-right: $tables-width solid $tables-color;
+  min-width: 4em;
+  padding: rem($margin * 1px);
+  vertical-align: top;
+}
