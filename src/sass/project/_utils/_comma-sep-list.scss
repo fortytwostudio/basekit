@@ -1,0 +1,3 @@
+.csl > li:not(:last-child)::after {
+  content: ",";
+}
