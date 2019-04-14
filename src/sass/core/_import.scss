@@ -15,39 +15,39 @@
 @import "tools/viewport-units";
 
 // GLOBALS RESET
-@import "utility-general/reset";
+@import "utilities/general/reset";
 
 // LAYOUT GRID
-@import "utility-layout/site-width";
-@import "utility-layout/grid-layout";
-@import "utility-layout/display";
-@import "utility-layout/margins";
-@import "utility-layout/padding-spacer";
-@import "utility-layout/float";
-@import "utility-layout/hide-content";
-@import "utility-layout/position-over";
-@import "utility-layout/fit-media";
-// @import "utility-layout/full-width";
-@import "utility-layout/widths";
-@import "utility-layout/overflow";
+@import "utilities/layout/site-width";
+@import "utilities/layout/grid-layout";
+@import "utilities/layout/display";
+@import "utilities/layout/margins";
+@import "utilities/layout/padding-spacer";
+@import "utilities/layout/float";
+@import "utilities/layout/hide-content";
+@import "utilities/layout/position-over";
+@import "utilities/layout/fit-media";
+// @import "utilities/layout/full-width";
+@import "utilities/layout/widths";
+@import "utilities/layout/overflow";
 
 // UTILITY CLASSES
-@import "utility-general/forms";
-@import "utility-general/alerts";
-@import "utility-general/nav";
-@import "utility-general/borders";
-@import "utility-general/border-radius";
-@import "utility-general/box-shadow";
-@import "utility-general/links";
-@import "utility-general/arrows";
-@import "utility-general/fortytwo-logo";
-@import "utility-text/alignment";
-@import "utility-text/list-styles";
-@import "utility-text/user-content-rte";
-// @import "utility-text/overflow-text";
-@import "utility-text/hide-text";
+@import "utilities/general/forms";
+@import "utilities/general/alerts";
+@import "utilities/general/nav";
+@import "utilities/general/borders";
+@import "utilities/general/border-radius";
+@import "utilities/general/box-shadow";
+@import "utilities/general/links";
+@import "utilities/general/arrows";
+@import "utilities/general/fortytwo-logo";
+@import "utilities/text/alignment";
+@import "utilities/text/list-styles";
+@import "utilities/text/user-content-rte";
+// @import "utilities/text/overflow-text";
+@import "utilities/text/hide-text";
 
 // MAIN FRAMEWORK
-@import "utility-nav/_nav-all";
-@import "utility-nav/_nav-mobile";
-@import "utility-nav/_nav-desk";
+@import "utilities/nav/_nav-all";
+@import "utilities/nav/_nav-mobile";
+@import "utilities/nav/_nav-desk";
