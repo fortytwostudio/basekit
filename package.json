@@ -1,6 +1,6 @@
 {
   "name": "Basekit",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Basekit Gulp Workflow",
   "main": "gulpfile.js",
   "homepage": "http://basekit.fortytwo.studio",
