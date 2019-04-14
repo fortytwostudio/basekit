@@ -159,37 +159,3 @@ a:not([class*="btn-"]) {
   //   outline: 0;
   // }
 }
-
-// Standalone class to remove link outlines.
-// Commented out due to lack of use.
-.no-outline {
-  outline: 0;
-}
-
-// Accessibility focused skip link styles. These only appear when focused by the
-// user but should be accessible to non-sighted users.
-.skip-link {
-  background-color: #f1f1f1;
-  box-shadow: 0 0 1px 1px rgba(black, 0.2);
-  clip: rect(1px, 1px, 1px, 1px);
-  color: $color-secondary !important;
-  display: block;
-  font-weight: 700;
-  height: 1px;
-  left: -9999em;
-  overflow: hidden;
-  padding: 1em 1.25em;
-  position: absolute !important;
-  top: -9999em;
-  width: 1px;
-  word-wrap: normal !important;
-
-  &:focus {
-    clip: auto;
-    height: auto;
-    left: 6px;
-    top: 7px;
-    width: auto;
-    z-index: $z-max;
-  }
-}
