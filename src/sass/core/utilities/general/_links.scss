@@ -8,15 +8,11 @@
 // We do not want any of these styles to apply to the button class which can
 // also be used on links.
 a:not([class*="btn-"]) {
-  // I'm being specific here rather than just transitioning *all* because all
-  // can have unwanted restults in cetain situations (i.e. transitoning
-  // backgrounds).
-  transition-duration: $speed-slow * 1.5;
-  transition-property: color, opacity, border-color, background-color;
+  transition-duration: $link-transition-duration;
+  transition-property: $link-transition-props;
 
-  &:focus,
-  &:hover {
-    transition-duration: $speed-normal;
+  &:focus, &:hover {
+    transition-duration: $link-transition-duration-hover;
   }
 
   // Standard Colours
@@ -144,12 +140,6 @@ a:not([class*="btn-"]) {
       text-decoration-line: none;
     }
   }
-
-  // Bin the transition states.
-  // Commented out for now due to lack of use.
-  // [data-bk-links~="no-fade"] & {
-  //   transition: none;
-  // }
 
   // Apply a subtle dimming effect to the link, I find this is often used with
   // white text on a dark background when the links are also white.
