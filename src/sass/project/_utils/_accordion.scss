@@ -1,34 +1,36 @@
 $easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 
-.accordion-button {
-  border: 0;
-  cursor: pointer;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  transition: 0.5s $easeInOutCubic;
-  width: 100%;
+.js {
+  .accordion-button {
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    transition: 0.5s $easeInOutCubic;
+    width: 100%;
 
-  &::after {
-    content: "+";
-  }
-
-  &.is-open {
     &::after {
-      content: "–";
+      content: "+";
+    }
+
+    &.is-open {
+      &::after {
+        content: "–";
+      }
     }
   }
-}
 
-.accordion-panel {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: 0.7s $easeInOutCubic;
+  .accordion-panel {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.7s $easeInOutCubic;
 
-  &.is-open {
-    max-height: 2000px;
-    opacity: 1;
+    &.is-open {
+      max-height: 2000px;
+      opacity: 1;
+    }
   }
 }
 

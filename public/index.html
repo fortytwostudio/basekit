@@ -77,7 +77,7 @@
 
         <div data-bk-layout="p:trl" class="filter-dropdown">
           <button type="button"
-            class="filter-dropdown-button btn-primary br-md font-bold"
+            class="filter-dropdown-button btn-primary br-md font-bold no-js-dn"
             data-toggle-class="is-open"
             data-toggle-target-next
             data-toggle-outside
@@ -104,9 +104,11 @@
           </div>
         </div>
 
+
+
         <div data-bk-layout="p:trl">
           <button type="button"
-            class="dialog-trigger btn-primary br-md font-bold"
+            class="dialog-trigger btn-primary br-md font-bold no-js-dn"
             data-toggle-class
             data-toggle-target="#dialog"
             data-toggle-target-only
@@ -114,13 +116,13 @@
             Open
           </button>
 
-        <!-- This dialog anywhere you want in the page -->
             <div class="dialog"
               id="dialog"
               role="dialog"
               aria-labelledby="dialogTitle"
               aria-describedby="dialogContent"
               aria-hidden="true">
+
               <section data-bk-layout="md:8 lg:6" class="dialog-container bg-white br-md shadow">
                 <div id="dialogContent" class="dialog-content rte">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -128,7 +130,7 @@
                   <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat.</p>
                 </div>
 
-                <footer data-bk-layout="p:t" class="dialog-footer">
+                <footer data-bk-layout="p:t" class="dialog-footer no-js-dn">
                   <button class="btn-primary br-md font-bold" type="button" data-toggle-trigger-off>Close</button>
                 </footer>
               </section>
@@ -139,7 +141,7 @@
 
 
         <div data-bk-layout="p:trl" class="tabs" role="tablist">
-          <button type="button"
+          <a href="#tabPanel_4"
             id="tab_4"
             data-toggle-class
             data-toggle-target="#tabPanel_4"
@@ -149,11 +151,11 @@
             role="tab"
             aria-selected="true"
             aria-controls="tabPanel_4"
-            class="is-active btn-secondary br-md br-t font-bold mar-sm-r">
+            class="tab-button is-active btn-secondary br-md br-t font-bold mar-sm-r">
             Tab One
-          </button>
+          </a>
 
-          <button type="button"
+          <a href="#tabPanel_5"
             id="tab_5"
             data-toggle-class
             data-toggle-target="#tabPanel_5"
@@ -162,10 +164,11 @@
             role="tab"
             aria-selected="false"
             aria-controls="tabPanel_5"
-            class="btn-secondary br-md br-t font-bold mar-sm-r">
+            class="tab-button btn-secondary br-md br-t font-bold mar-sm-r">
             Tab 2
-          </button>
-          <button type="button"
+          </a>
+
+          <a href="#tabPanel_6"
             id="tab_6"
             data-toggle-class
             data-toggle-target="#tabPanel_6"
@@ -174,9 +177,9 @@
             role="tab"
             aria-selected="false"
             aria-controls="tabPanel_6"
-            class="btn-secondary br-md br-t font-bold mar-sm-r">
+            class="tab-button btn-secondary br-md br-t font-bold mar-sm-r">
             Third Tab
-          </button>
+          </a>
         </div>
 
         <div data-bk-layout="p:rbl" class="tab-panel is-active" id="tabPanel_4" role="tabpanel" aria-labelledby="tab_4" aria-hidden="false">
@@ -210,9 +213,8 @@
 
         <div data-bk-layout="md:8 lg:6">
 
-          <button type="button"
+          <h3 id="buttonForPanel_1"
           class="accordion-button font-md"
-          id="buttonForPanel_1"
           data-toggle-class="is-open"
           data-toggle-target-parent="#panel_1"
           data-toggle-group="accordion"
@@ -222,16 +224,15 @@
           aria-controls="panel_1"
           aria-expanded="false">
             First Panel
-          </button>
+          </h3>
           <div class="accordion-panel" id="panel_1" role="region" aria-labelledby="buttonForPanel_1" aria-hidden="true">
             <div data-bk-layout="p:b">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus odio, vitae faucibus dui tempor in. Duis vitae luctus mi. Phasellus ultrices rhoncus lectus, non vehicula tortor sodales id.
             </div>
           </div>
 
-          <button type="button"
+          <h3 id="buttonForPanel_2"
           class="accordion-button font-md"
-          id="buttonForPanel_2"
           data-toggle-class="is-open"
           data-toggle-target-parent="#panel_2"
           data-toggle-group="accordion"
@@ -240,16 +241,15 @@
           aria-controls="panel_2"
           aria-expanded="false">
             Second Panel
-          </button>
+          </h3>
           <div class="accordion-panel" id="panel_2" role="region" aria-labelledby="buttonForPanel_2" aria-hidden="true">
             <div data-bk-layout="p:b">
               In in erat blandit ante mollis tincidunt. Quisque ac tempus nisi, a ultricies metus. Suspendisse et quam nec mauris feugiat luctus. Curabitur porta sem vitae nulla congue malesuada.
             </div>
           </div>
 
-          <button type="button"
+          <h3 id="buttonForPanel_3"
           class="accordion-button font-md"
-          id="buttonForPanel_3"
           data-toggle-class="is-open"
           data-toggle-target-parent="#panel_3"
           data-toggle-group="accordion"
@@ -258,7 +258,7 @@
           aria-controls="panel_3"
           aria-expanded="false">
             Third Panel
-          </button>
+          </h3>
           <div class="accordion-panel" id="panel_3" role="region" aria-labelledby="buttonForPanel_3" aria-hidden="true">
             <div data-bk-layout="p:b">
               Nam posuere tortor a augue vulputate, at blandit ipsum tincidunt. Donec dictum eros ligula, id congue justo porta eget. Aliquam vel erat venenatis, ornare nisi vel, convallis libero.
