@@ -12,7 +12,7 @@ a:not([class*="btn-"]) {
   // can have unwanted restults in cetain situations (i.e. transitoning
   // backgrounds).
   transition-duration: $speed-slow * 1.5;
-  transition-property: color, opacity, border-color;
+  transition-property: color, opacity, border-color, background-color;
 
   &:focus,
   &:hover {
@@ -26,55 +26,81 @@ a:not([class*="btn-"]) {
   // with `dim` if the surrounding text is also white.
   [data-bk-links~="white"] & {
     color: white;
+  }
 
-    &:focus,
-    &:hover {
+  [data-bk-links~="h:white"] & {
+    &:focus, &:hover {
       color: white;
     }
   }
+
   [data-bk-links~="black"] & {
     color: black;
+  }
 
-    &:focus,
-    &:hover {
+  [data-bk-links~="h:black"] & {
+    &:focus, &:hover {
+      color: black;
+    }
+  }
+
+  [data-bk-links~="primary"] & {
+    color: $color-primary;
+  }
+
+  [data-bk-links~="h:primary"] & {
+    &:focus, &:hover {
       color: $color-primary;
     }
   }
 
-  // The next three provide standard colour styles.
-  [data-bk-links~="primary"] & {
-    color: $color-primary;
+  [data-bk-links~="bg-primary"] & {
+    background-color: $color-primary;
+  }
 
-    &:focus,
-    &:hover {
-      color: $color-primary--darker;
+  [data-bk-links~="h:bg-primary"] & {
+    &:focus, &:hover {
+      background-color: $color-primary;
     }
   }
 
   [data-bk-links~="secondary"] & {
     color: $color-secondary;
+  }
 
-    &:focus,
-    &:hover {
-      color: $color-secondary--darker;
+  [data-bk-links~="h:secondary"] & {
+    &:focus, &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  [data-bk-links~="bg-secondary"] & {
+    background-color: $color-secondary;
+  }
+
+  [data-bk-links~="h:bg-secondary"] & {
+    &:focus, &:hover {
+      background-color: $color-secondary;
     }
   }
 
   [data-bk-links~="tertiary"] & {
     color: $color-tertiary;
+  }
 
-    &:focus,
-    &:hover {
-      color: $color-tertiary--darker;
+  [data-bk-links~="h:tertiary"] & {
+    &:focus, &:hover {
+      color: $color-tertiary;
     }
   }
 
   [data-bk-links~="grey"] & {
-    color: $color-grey--darker;
+    color: $color-grey;
+  }
 
-    &:focus,
-    &:hover {
-      color: $color-primary;
+  [data-bk-links~="h:grey"] & {
+    &:focus, &:hover {
+      color: $color-grey;
     }
   }
 
@@ -89,30 +115,20 @@ a:not([class*="btn-"]) {
 
   // Underline child links, notice this uses *= so that the styles applied here
   // also apply to the following hover version.
-  [data-bk-links*="underline"] & {
+  [data-bk-links~="underline"] & {
     text-decoration: underline;
     text-decoration-color: currentColor;
     text-decoration-skip: ink;
   }
 
-  // Switch things around so that underline is on hover
-  [data-bk-links~="underline-hover"] & {
-    text-decoration-color: transparent;
+  [data-bk-links~="h:underline"] & {
+    // text-decoration-color: transparent;
 
     &:hover,
     &:focus {
-      // Underline should use the current link colour.
+      text-decoration: underline;
       text-decoration-color: currentColor;
-    }
-  }
-
-  // Underline only on the intitial state and hidden when hovered over.
-  [data-bk-links~="underline-initial"] & {
-    text-decoration-color: currentColor;
-
-    &:hover,
-    &:focus {
-      text-decoration-color: transparent;
+      text-decoration-skip: ink;
     }
   }
 
@@ -121,6 +137,12 @@ a:not([class*="btn-"]) {
   // underline).
   [data-bk-links~="no-underline"] & {
     text-decoration-line: none;
+  }
+
+  [data-bk-links~="h:no-underline"] & {
+    &:focus, &:hover {
+      text-decoration-line: none;
+    }
   }
 
   // Bin the transition states.
@@ -133,29 +155,21 @@ a:not([class*="btn-"]) {
   // white text on a dark background when the links are also white.
   [data-bk-links~="dim"] & {
     opacity: $link-dim-value;
+  }
 
-    &:focus,
-    &:hover {
-      opacity: 1;
+  [data-bk-links~="h:dim"] & {
+    &:focus, &:hover {
+      opacity: $link-dim-value;
     }
   }
 
-  // Apply a customised focus outline for accessibility purposes.
-  // Commented out due to lack of use.
-  // [data-bk-links~="focus"] & {
-  //   &:focus {
-  //     outline: 1px dotted currentColor;
-  //     outline-offset: 0.15em;
-  //   }
-  //
-  //   &:active {
-  //     outline: 0;
-  //   }
-  // }
+  [data-bk-links~="no-dim"] & {
+    opacity: 1;
+  }
 
-  // Get rid of the link outline.
-  // Commented out due to lack of use.
-  // [data-bk-links~="no-focus"] & {
-  //   outline: 0;
-  // }
+  [data-bk-links~="h:no-dim"] & {
+    &:focus, &:hover {
+      opacity: 1;
+    }
+  }
 }
