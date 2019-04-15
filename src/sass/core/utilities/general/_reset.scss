@@ -73,13 +73,14 @@ iframe {
 code {
   background-color: $code-bg-color;
   border-radius: 0.2rem;
-  border: $code-border;
+  border: unquote($code-border);
   color: $code-text-color;
   display: inline-block;
   font-family: $font-family--mono;
   font-size: $code-font-size;
   padding: 0.15rem 0.3333rem;
   white-space: pre-wrap;
+  vertical-align: middle;
 }
 
 table {
