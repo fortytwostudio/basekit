@@ -5,7 +5,8 @@ const gulp      = require('gulp'),
       uglify    = require('gulp-uglify'),
       concat    = require('gulp-concat'),
       order     = require('gulp-order'),
-      imagemin  = require('gulp-imagemin');
+      imagemin  = require('gulp-imagemin'),
+      replace   = require('gulp-replace');
 
 // CSS: the main task used for Basekit, this will compile and optimise your sass
 // into the public css directory as a single file.

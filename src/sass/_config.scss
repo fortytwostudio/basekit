@@ -1,0 +1,534 @@
+// This file is a replication of the ./sass/core/_vars.scss defaults. Comment
+// out the variables you want to change in here and you will override the
+// default core variables without changing the core files.
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // COLOUR SCHEME
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $color-body: #1a1a1a;
+// $color-text: #333;
+//
+// $color-primary: #0246AD;
+// $color-primary--lighter: mix($color-primary, white, 6%);
+// $color-primary--light: mix($color-primary, white, 45%);
+// $color-primary--dark: mix($color-primary, black, 60%);
+// $color-primary--darker: mix($color-primary, black, 30%);
+//
+// $color-secondary: #FF6679;
+// $color-secondary--lighter: mix($color-secondary, white, 8%);
+// $color-secondary--light: mix($color-secondary, white, 45%);
+// $color-secondary--dark: mix($color-secondary, black, 60%);
+// $color-secondary--darker: mix($color-secondary, black, 40%);
+//
+// $color-tertiary: #4AF2A1;
+// $color-tertiary--lighter: mix($color-tertiary, white, 10%);
+// $color-tertiary--light: mix($color-tertiary, white, 45%);
+// $color-tertiary--dark: mix($color-tertiary, black, 60%);
+// $color-tertiary--darker: mix($color-tertiary, black, 40%);
+//
+// $color-grey: #e7e8eb;
+// $color-grey--lighter: #f4f7f9;
+// $color-grey--light: #eef0f2;
+// $color-grey--dark: #9b9fa5;
+// $color-grey--darker: #515255;
+//
+// $color-white: white;
+// $color-white--tint: mix(black, white, 3%);
+// $color-black: black;
+// $color-black--tint: mix(white, black, 10%);
+//
+// // The following alert, warning and positive colours are AAA contrast compliant.
+// // Use the standard alert to draw attention.
+// $alert: #fbf4b7;
+// $alert--dark: #F2DA0F;
+// $alert--text: #4E3F00;
+//
+// // Use warning when something goes wrong.
+// $alert-negative: #fed0d0;
+// $alert-negative--dark: #FD9493;
+// $alert-negative--text: #520100;
+//
+// // Use positive to show a successful action.
+// $alert-positive: #cdf0cb;
+// $alert-positive--dark: #9EE29B;
+// $alert-positive--text: #034900;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // SITE WIDTH
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Ouput the site's max width utility class and define the name.
+// // e.g. rename this to wrapper or wrap if you want those class names.
+$site-width-name: container;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // LAYOUT
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $mq-breakpoints: (
+//   sm: 520px,
+//   md: 720px,
+//   lg: 960px
+// );
+//
+// // Define the column count for of your design.
+// $grid-columns: 12;
+// $grid-column-width: 60;
+// $grid-gutter: 40;
+//
+// $margin: $grid-gutter / 2;
+//
+// // Once lower than the max-width the site width will never be larger than this.
+// $site-width: calc(100% - #{$grid-gutter * 1px});
+// // Halved gutter width for small screens
+// $site-width-sm: calc(100% - #{$grid-gutter / 2 * 1px});
+// // Fallback value for old browsers
+// $site-width-fallback: 96%;
+//
+// // Don't touch this if you don't know what it does… $max-width gets used often.
+// $max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns);
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // TRANSITION SPEEDS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Set a standard range of animation speeds
+// $speed-normal: 0.25s;
+// $speed-fast: 0.1s;
+// $speed-slow: 0.5s;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // BORDER RADIUS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Set your radius values, more can be added if you include them in the map
+// // below. xs and xl aren't included in the map so they aren't available as
+// // classes for your markup.
+// $br-xs: 2px;
+// $br-sm: 3px;
+// $br-md: 5px;
+// $br-lg: 8px;
+// $br-xl: 16px;
+//
+// // Include them in this map to have Sass generate the relevant classes. You can
+// // also add them straight into here if you are never likely to use the
+// // standalone variables.
+// $border-radius-sizes: (
+//   sm: $br-sm,
+//   md: $br-md,
+//   lg: $br-lg
+// );
+//
+// // The pill br class will have rounded sides with a flat top/bottom.
+// $br-pill: 1000px;
+//
+// // The round class will create a circle (if the object is square).
+// $br-round: 100%;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // BORDERS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $border-width-default: 1px;
+//
+// $bdr-sm: 3px;
+// $bdr-md: 4px;
+// $bdr-lg: 6px;
+//
+// $borders: (
+//   sm: $bdr-sm,
+//   md: $bdr-md,
+//   lg: $bdr-lg
+// );
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // BUTTONS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $bk-button-padding: 0.66em 1.25em;
+// $bk-button-padding-compact: 0.25em 0.66em;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // CODE
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $code-bg-color: rgba(128,128,128,0.1);
+// $code-text-color: currentColor;
+// $code-border: "1px solid " + rgba(mix(white, black, 50%), 0.5);
+// $code-font-size: 0.875rem;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // DISPLAY
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Output the display (block, inline-block) utility class.
+// $display-responsive: false;
+// $display-block-class: true;
+// $display-inline-block-class: true;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // FIT MEDIA
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Output CSS for the fit-media fallback.
+// $fit-media-fallback-css: true;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // FLOATS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Output the float utility class… ooh nasty.
+// $floats-responsive: false;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // FONTS & TYPOGRAPHY
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif;
+//
+// $font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif;
+//
+// $font-family--mono: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+//
+// $font-size: 16px;
+//
+// $font-line-height: 1.5625;
+//
+// $font-weight: 400;
+//
+// $font-weight-headings: $font-weight;
+//
+// // Output debugging class for rich text editor content.
+// $rte-debugging: false;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // FORMS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // FONTS
+// // Set family to same as global
+// $fh-font-family: inherit;
+// // Allow size to inherit the containing or global font size
+// $fh-font-size: inherit;
+// // Set color to global text color
+// $fh-font-color: $color-text;
+//
+// // BORDERS
+// // Nice rem border radius so they scale, set to 0 to disable
+// $fh-border-radius: em(3px);
+// // Thickness, obviously
+// $fh-border-width: 1px;
+// // You'll rarely change this
+// $fh-border-style: solid;
+// // Set borders to a % of the text color
+// $fh-border-color: lighten($fh-font-color, 50%);
+//
+// // FIELD TYPES
+// // We want to set a uniform hight, in ems so it scales
+// $fh-input-height: 2.5em; // 16 * 2.5 = 40px
+// // Best to make it 100% then adjust the container width, however some field types like number may need adjustments
+// $fh-input-width: 100%;
+// // Default input background
+// $fh-input-bg-color: #fff;
+// // The clicked/tapped/focused colours
+// $fh-focus-bg-color: #eee;
+// $fh-focus-border-color: darken($fh-border-color, 25%);
+// $fh-focus-font-color: $fh-font-color;
+//
+// // VENDOR SELECT STYLING
+// // Use the default select dropdown arrows or roll our own?
+// $fh-allow-select-vendor-styling: false;
+//
+// // FIELDSET & LEGENDS
+// // Set true to remove fieldset styling and hide the legend text
+// $fh-fieldset-bare: true;
+//
+// // BUTTONS
+// // If you've read the above comments then this stuff should make sense :P
+// $fh-button-height: 2.5em;
+// $fh-button-width: 100%;
+// $fh-button-max-width: em(140px);
+// $fh-button-font-weight: 700;
+// $fh-button-font-color: $fh-font-color;
+// $fh-button-bg-color: $fh-focus-bg-color;
+// $fh-button-hover-bg-color: $fh-border-color;
+// $fh-button-hover-font-color: $fh-font-color;
+//
+// // LAYOUT
+// // We pretty much always want block layout
+// $fh-display: block;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // FORTYTWO LOGO
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Other sizes to try: 60px by 15px, or 64px by 16px
+// $colophon-logo-width: 56px;
+// $colophon-logo-height: 14px;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // GRID LAYOUT
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// /// Name your layout data attribute, should start with `data-`.
+// ///
+// /// @example
+// ///   <div data-bk="…">
+// $bk-grid-name: data-bk-layout;
+//
+// /// Enable or disable max-width breakpoint CSS. In simpler designs you may not
+// /// ever utilise max-width breakpoints, set this `false` in that case to save
+// /// users downloading unnecessary CSS.
+// ///
+// /// @example
+// ///   <div data-bk="to:m:8  to:l:6">
+// $bk-grid-mq-to: true;
+//
+// /// By default columns get a (half gutter) margin around them, this variable
+// /// defines the smaller size margin. Typically it will be half but you can tweak
+// /// as necessary.
+// ///
+// /// @todo Consider variable name confusion.
+// /// @access private
+// $bk-grid-padding-small: $margin / 2;
+//
+// /// By default columns get a (half `$gutter`) margin around them, this variable
+// /// defines the larger size margin. Typically it will be double but you can
+// /// tweak as necessary.
+// ///
+// /// @todo Consider variable name confusion.
+// /// @access private
+// $bk-grid-padding-large: $margin * 2;
+//
+// /// Columns can be pushed (left or right) using padding CSS, you'll never want
+// /// to push the a layout the total number of columns so here we subtract one
+// /// from the number.
+// /// @access private
+// $bk-push-columns: $grid-columns - 1;
+//
+// /// Enable/Disable push (towards the right |-->) CSS.
+// $bk-push-right: true;
+//
+// /// Enable/Disable push (towards the left <--|) CSS.
+// /// Use cases for this are quite small since blocks naturally position over to
+// /// the left. However, it can be useful if you align blocks with
+// /// `text-align: right` and then need to push a block to the left.
+// $bk-push-left: true;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // LINKS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $link-dim-value: 0.5;
+// $link-transition-duration: ($speed-slow * 1.5);
+// $link-transition-duration-hover: $speed-normal;
+// $link-transition-props: unquote('color, opacity, border-color, background-color');
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // LIST STYLES
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Configure the list utility class
+// $list-bullet: "disc";
+// $list-bullet-position: "outside";
+// $list-number: "decimal-leading-zero";
+// $list-number-position: "outside";
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // MARGIN
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $margin-size: ($margin / 16) * 1rem;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // NAVIGATION
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Basic nav class configs
+// $nav-rl-pad: 1em;
+// $nav-tb-pad: 0.5em;
+// $nav-crumb-pad: 0.5em;
+//
+//
+// // ----------------------------------------------------------
+// // :: Main Dropdown Nav Variables
+// // ----------------------------------------------------------
+//
+// $nav-switch-point: lg;
+//
+// // -----------------------------------------------------------------------------------------------------------------
+// // 1. Theme Quick Settings (Variables)
+// // (for further control, you will need to dig into the actual CSS in 2.)
+// // -----------------------------------------------------------------------------------------------------------------
+//
+// // ----------------------------------------------------------
+// // :: 1.1. Colors
+// // ----------------------------------------------------------
+// $sm-bk__base-color: #fff;
+// $sm-bk__gray: darken($sm-bk__base-color, 16.5%);
+// $sm-bk__gray-dark: darken($sm-bk__base-color, 33%);
+// $sm-bk__gray-darker: darken($sm-bk__base-color, 66%);
+//
+//
+// // ----------------------------------------------------------
+// // :: 1.2. Breakpoints
+// // ----------------------------------------------------------
+// $sm-bk__desktop-vp:  $nav-switch-point;    // switch from collapsible to desktop
+//
+//
+// // ----------------------------------------------------------
+// // :: 1.3. Typography
+// // ----------------------------------------------------------
+// $sm-bk__font-family: $font-family;
+// $sm-bk__font-size-base: $font-size;
+// $sm-bk__font-size-small: $font-size;
+// $sm-bk__line-height: 1.1;
+//
+//
+// // ----------------------------------------------------------
+// // :: 1.5. Collapsible main menu
+// // ----------------------------------------------------------
+// // Items
+// $sm-bk__collapsible-item-color: $sm-bk__gray-darker;
+// $sm-bk__collapsible-item-current-color: white;
+// $sm-bk__collapsible-item-current-bg: $color-primary;
+// $sm-bk__collapsible-item-disabled-color: darken($sm-bk__base-color, 20%);
+// $sm-bk__collapsible-item-padding-vertical: 13px;
+// $sm-bk__collapsible-item-padding-horizontal: 20px;
+//
+// // Items separators
+// $sm-bk__collapsible-separators-color: rgba(0, 0, 0, 0.05);
+//
+//
+// // ----------------------------------------------------------
+// // :: 1.6. Collapsible sub menus
+// // ----------------------------------------------------------
+// // Items text indentation for deeper levels
+// $sm-bk__collapsible-sub-item-indentation: 0.5em;
+//
+//
+// // ----------------------------------------------------------
+// // :: 1.7. Desktop main menu and sub menus
+// // ----------------------------------------------------------
+// // Menu box
+// $sm-bk__desktop-bg: $sm-bk__base-color;
+//
+// // Items
+// $sm-bk__desktop-item-color: $sm-bk__gray-darker;
+// $sm-bk__desktop-item-hover-bg: $sm-bk__gray;
+// $sm-bk__desktop-item-current-color: $sm-bk__base-color;
+// $sm-bk__desktop-item-current-bg: $sm-bk__gray-darker;
+// $sm-bk__desktop-item-disabled-color: darken($sm-bk__base-color, 20%);
+// $sm-bk__desktop-item-padding-vertical: 11px;
+// $sm-bk__desktop-item-padding-horizontal: 20px;
+//
+// // Items separators
+// $sm-bk__desktop-separators-size: 1px;
+// $sm-bk__desktop-separators-color: $color-grey;
+//
+// // Sub menu indicators
+// $sm-bk__desktop-arrow-spacing: 4px;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // PADDING SPACER
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $spacer-name: pad;
+//
+// // Default padding spacer is twice the grid's gutter size, you can change this
+// // suite your needs. For example 1.5 may also work.
+// $spacer-size: ($grid-gutter * 1px) * 2;
+//
+// // Then we calculate as appropriate for the additional sizes
+// $spacer-size-xs: $spacer-size / 4;
+// $spacer-size-sm: $spacer-size / 2;
+// $spacer-size-lg: $spacer-size * 2;
+// $spacer-size-xl: $spacer-size * 4;
+//
+// $spacer-min: map-get($mq-breakpoints, sm);
+// $spacer-max: ($max-width * 1px);
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // POSITION OVER
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Fine tune the position over utility class options.
+// // Find this in core/utility.position-over.scss
+// $position-over-css: true;
+// $position-over-tr: false;
+// $position-over-br: false;
+// $position-over-bl: false;
+// $position-over-m: true;
+// $position-over-ml: true;
+// $position-over-mr: false;
+// $position-over-mb: false;
+// $position-over-mt: false;
+// $position-over-fit-height: false;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // SITE LOGO
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $site-logo-width: 205px;
+// $site-logo-height: 47px;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // TABLES
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $tables-width: 1px;
+// $tables-color: #eee;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // USER CONTENT / RICH TEXT
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Set a default bottom margin size for consistency across text elements.
+// $font-default-bottom-margin: $margin;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // WIDTHS
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $widths: (15, 20, 25, 33.333333, 50, 66.666666, 75, 80, 85, 100);
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // Z-INDEX
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Set some base z-index layers to work with
+// $z-min: 1;
+// $z-content: 100;
+// $z-fit-media: 200;
+// $z-position-over: 300;
+// $z-mobile-nav: 400;
+// $z-mobile-nav-toggle: 500;
+// $z-max: 600;
+//
