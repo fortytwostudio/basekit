@@ -12,7 +12,7 @@ a:not([class*="btn-"]) {
   // can have unwanted restults in cetain situations (i.e. transitoning
   // backgrounds).
   transition-duration: $speed-slow * 1.5;
-  transition-property: color, opacity, border-color;
+  transition-property: color, opacity, border-color, background-color;
 
   &:focus,
   &:hover {
@@ -54,6 +54,16 @@ a:not([class*="btn-"]) {
     }
   }
 
+  [data-bk-links~="bg-primary"] & {
+    background-color: $color-primary;
+  }
+
+  [data-bk-links~="h:bg-primary"] & {
+    &:focus, &:hover {
+      background-color: $color-primary;
+    }
+  }
+
   [data-bk-links~="secondary"] & {
     color: $color-secondary;
   }
@@ -61,6 +71,16 @@ a:not([class*="btn-"]) {
   [data-bk-links~="h:secondary"] & {
     &:focus, &:hover {
       color: $color-secondary;
+    }
+  }
+
+  [data-bk-links~="bg-secondary"] & {
+    background-color: $color-secondary;
+  }
+
+  [data-bk-links~="h:bg-secondary"] & {
+    &:focus, &:hover {
+      background-color: $color-secondary;
     }
   }
 
@@ -95,13 +115,13 @@ a:not([class*="btn-"]) {
 
   // Underline child links, notice this uses *= so that the styles applied here
   // also apply to the following hover version.
-  [data-bk-links*="underline"] & {
+  [data-bk-links~="underline"] & {
     text-decoration: underline;
     text-decoration-color: currentColor;
     text-decoration-skip: ink;
   }
 
-  [data-bk-links*="h:underline"] & {
+  [data-bk-links~="h:underline"] & {
     // text-decoration-color: transparent;
 
     &:hover,
