@@ -114,7 +114,7 @@ a:not([class*="btn-"]) {
   [data-bk-links~="underline"] & {
     text-decoration: underline;
     text-decoration-color: currentColor;
-    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
   }
 
   [data-bk-links~="h:underline"] & {
@@ -124,7 +124,7 @@ a:not([class*="btn-"]) {
     &:focus {
       text-decoration: underline;
       text-decoration-color: currentColor;
-      text-decoration-skip: ink;
+      text-decoration-skip-ink: auto;
     }
   }
 
