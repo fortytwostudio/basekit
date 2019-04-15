@@ -1,3 +1,5 @@
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
 .filter-dropdown {
   display: inline-block;
   perspective: 1000px;
@@ -9,7 +11,7 @@
     &::after {
       content: "↓";
       display: inline-block;
-      transition: transform .25s ease-out;
+      transition: transform .25s $easeInOutCubic;
     }
 
     &.is-open::after {
@@ -23,8 +25,8 @@
     position: absolute;
     top: 100%;
     transform-origin: center top;
-    transform: scaleY(0);
-    transition: .25s ease-in-out;
+    transform: scaleY(0.75);
+    transition: .25s $easeInOutCubic;
     visibility: hidden;
     z-index: 1;
 
