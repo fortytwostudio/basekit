@@ -1,6 +1,6 @@
 // Your variable overrides, comment out what you want to change and change it
 // in this file. Previously this was done here in the basekit.scss file.
-@import "config";
+@import "project/config";
 
 // Core Basekit files, try not to directly change anything here.
 @import "core/import";
@@ -14,8 +14,14 @@
 @import "project/forms";
 
 // Project utilities that may get moved into core if they're used often.
-@import "project/_utils/accordion";
+// @import "project/_utils/accordion";
 @import "project/_utils/fit-image";
 @import "project/_utils/overflows";
 @import "project/_utils/sticky";
 @import "project/_utils/cursor";
+
+// Newly added and work in combination with easy toggle state
+@import "project/_utils/dropdown";
+@import "project/_utils/dialog";
+@import "project/_utils/tabs";
+@import "project/_utils/accordion";

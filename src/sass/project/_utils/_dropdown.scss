@@ -1,0 +1,41 @@
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+.js {
+  .filter-dropdown {
+    display: inline-block;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: 1;
+
+    &-button {
+      &::after {
+        content: "✕";
+        display: inline-block;
+        transform: rotate(45deg);
+        transition: transform .25s $easeInOutCubic;
+      }
+
+      &.is-open::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    &-list {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      transform-origin: center top;
+      transform: scaleY(0.75);
+      transition: .25s $easeInOutCubic;
+      visibility: hidden;
+      z-index: 1;
+
+      &.is-open {
+        opacity: 1;
+        transform: scaleY(1);
+        visibility: visible;
+      }
+    }
+  }
+}

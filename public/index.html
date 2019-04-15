@@ -23,10 +23,26 @@
       <header id=site-header class=container>
         <div data-bk-layout='wrap np i:center j:between' class="bg-primary">
           <div data-bk-layout='auto' class=site-logo--container>
-            <h1 class='site-logo logo'><a class='site-logo__img logo__img' href=''>Basekit Project</a></h1>
+            <h1 class='site-logo logo'><a class='site-logo__img logo__img' href='/'>Basekit Project</a></h1>
           </div>
 
-          <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'><button id=nav-toggler class='hamburger hamburger--squeeze no-outline' type=button aria-controls=nav-primary><span class=hamburger-box><span class=hamburger-inner></span></span></button></div>
+          <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'>
+            <button id="nav-toggler"
+              type=button
+              class='hamburger hamburger--spin'
+              data-toggle-is-active
+              data-toggle-target="#nav-primary"
+              data-toggle-outside
+              data-toggle-escape
+              data-toggle-arrows
+              aria-haspopup="navigation"
+              aria-controls="nav-primary"
+              aria-expanded="false">
+              <span class=hamburger-box>
+                <span class=hamburger-inner></span>
+              </span>
+            </button>
+          </div>
 
           <div data-bk-layout='np auto' class='is-home nav-primary-layout'>
             <nav id=nav-primary class=nav-primary aria-labelledby=nav-toggler>
@@ -66,6 +82,211 @@
         </div>
       </header>
     </div>
+
+
+
+
+
+    <div class=bg-white>
+      <div class="container pad">
+        <h3 data-bk-layout="p:rl" class="font-lg">Dropdown toggler</h3>
+
+        <div data-bk-layout="p:trl" class="filter-dropdown">
+          <button type="button"
+            class="filter-dropdown-button btn-primary br-md font-bold no-js-dn"
+            data-toggle-class="is-open"
+            data-toggle-target-next
+            data-toggle-outside
+            data-toggle-escape
+            id="filterDropdown"
+            aria-haspopup="listbox"
+            aria-controls="filterDropdownList"
+            aria-expanded="false">
+            Filters
+          </button>
+
+          <div data-bk-layout="p:rbl auto sm:5 md:3" class="filter-dropdown-list" id="filterDropdownList" role="listbox" aria-labelledby="filterDropdown" aria-hidden="true">
+            <ul data-bk-links="primary h:secondary" class="mar-sm-t nav nav-block nav-stack bg-grey--light shadow w-100 br-md">
+              <li><a href="#">Lorem ipsum</a></li>
+              <li><a href="#">Dolor sit</a></li>
+              <li><a href="#">Consectetur</a></li>
+              <li><a href="#">Dipisicing</a></li>
+              <li><a href="#">Elit</a></li>
+              <li><a href="#">Tempor</a></li>
+              <li><a href="#">Magna aliqua</a></li>
+              <li><a href="#">Donec nec</a></li>
+              <li><a href="#">Dolor erat</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+        <div data-bk-layout="p:trl">
+          <button type="button"
+            class="dialog-trigger btn-primary br-md font-bold no-js-dn"
+            data-toggle-class
+            data-toggle-target="#dialog"
+            data-toggle-target-only
+            data-toggle-escape>
+            Open
+          </button>
+
+            <div class="dialog"
+              id="dialog"
+              role="dialog"
+              aria-labelledby="dialogTitle"
+              aria-describedby="dialogContent"
+              aria-hidden="true">
+
+              <section data-bk-layout="md:8 lg:6" class="dialog-container bg-white br-md shadow">
+                <div id="dialogContent" class="dialog-content rte">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat.</p>
+                </div>
+
+                <footer data-bk-layout="p:t" class="dialog-footer no-js-dn">
+                  <button class="btn-primary br-md font-bold" type="button" data-toggle-trigger-off>Close</button>
+                </footer>
+              </section>
+            </div>
+
+          </section>
+        </div>
+
+
+        <div data-bk-layout="p:trl" class="tabs" role="tablist">
+          <a href="#tabPanel_4"
+            id="tab_4"
+            data-toggle-class
+            data-toggle-target="#tabPanel_4"
+            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-arrows
+            data-toggle-is-active
+            role="tab"
+            aria-selected="true"
+            aria-controls="tabPanel_4"
+            class="tab-button is-active btn-secondary br-md br-t font-bold mar-sm-r">
+            Tab One
+          </a>
+
+          <a href="#tabPanel_5"
+            id="tab_5"
+            data-toggle-class
+            data-toggle-target="#tabPanel_5"
+            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-arrows
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabPanel_5"
+            class="tab-button btn-secondary br-md br-t font-bold mar-sm-r">
+            Tab 2
+          </a>
+
+          <a href="#tabPanel_6"
+            id="tab_6"
+            data-toggle-class
+            data-toggle-target="#tabPanel_6"
+            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-arrows
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabPanel_6"
+            class="tab-button btn-secondary br-md br-t font-bold mar-sm-r">
+            Third Tab
+          </a>
+        </div>
+
+        <div data-bk-layout="p:rbl" class="tab-panel is-active" id="tabPanel_4" role="tabpanel" aria-labelledby="tab_4" aria-hidden="false">
+          <div data-bk-layout="md:p:lg" class="bg-primary color-white br-sm br-b rte">
+            <h3 class="font-bold font-md">Panel 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus odio, vitae faucibus dui tempor in. Duis vitae luctus mi. Phasellus ultrices rhoncus lectus, non vehicula tortor sodales id.</p>
+          </div>
+        </div>
+
+        <div data-bk-layout="p:rbl" class="tab-panel" id="tabPanel_5" role="tabpanel" aria-labelledby="tab_5" aria-hidden="true">
+          <div data-bk-layout="md:p:lg" class="bg-primary color-white br-sm br-b rte">
+            <h3 class="font-bold font-md">Panel 2</h3>
+            <p>In in erat blandit ante mollis tincidunt. Quisque ac tempus nisi, a ultricies metus. Suspendisse et quam nec mauris feugiat luctus. Curabitur porta sem vitae nulla congue malesuada.</p>
+          </div>
+        </div>
+
+        <div data-bk-layout="p:rbl" class="tab-panel" id="tabPanel_6" role="tabpanel" aria-labelledby="tab_6" aria-hidden="true">
+          <div data-bk-layout="md:p:lg" class="bg-primary color-white br-sm br-b rte">
+            <h3 class="font-bold font-md">Panel 3</h3>
+            <p>Nam posuere tortor a augue vulputate, at blandit ipsum tincidunt. Donec dictum eros ligula, id congue justo porta eget. Aliquam vel erat venenatis, ornare nisi vel, convallis libero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="bg-grey--light">
+      <div class="container pad-sm">
+
+        <div data-bk-layout="md:8 lg:6">
+
+          <h3 id="buttonForPanel_1"
+          class="accordion-button font-md"
+          data-toggle-class="is-open"
+          data-toggle-target-parent="#panel_1"
+          data-toggle-group="accordion"
+          data-toggle-escape
+          data-toggle-arrows
+          data-toggle-is-active
+          aria-controls="panel_1"
+          aria-expanded="false">
+            First Panel
+          </h3>
+          <div class="accordion-panel" id="panel_1" role="region" aria-labelledby="buttonForPanel_1" aria-hidden="true">
+            <div data-bk-layout="p:b">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus odio, vitae faucibus dui tempor in. Duis vitae luctus mi. Phasellus ultrices rhoncus lectus, non vehicula tortor sodales id.
+            </div>
+          </div>
+
+          <h3 id="buttonForPanel_2"
+          class="accordion-button font-md"
+          data-toggle-class="is-open"
+          data-toggle-target-parent="#panel_2"
+          data-toggle-group="accordion"
+          data-toggle-escape
+          data-toggle-arrows
+          aria-controls="panel_2"
+          aria-expanded="false">
+            Second Panel
+          </h3>
+          <div class="accordion-panel" id="panel_2" role="region" aria-labelledby="buttonForPanel_2" aria-hidden="true">
+            <div data-bk-layout="p:b">
+              In in erat blandit ante mollis tincidunt. Quisque ac tempus nisi, a ultricies metus. Suspendisse et quam nec mauris feugiat luctus. Curabitur porta sem vitae nulla congue malesuada.
+            </div>
+          </div>
+
+          <h3 id="buttonForPanel_3"
+          class="accordion-button font-md"
+          data-toggle-class="is-open"
+          data-toggle-target-parent="#panel_3"
+          data-toggle-group="accordion"
+          data-toggle-escape
+          data-toggle-arrows
+          aria-controls="panel_3"
+          aria-expanded="false">
+            Third Panel
+          </h3>
+          <div class="accordion-panel" id="panel_3" role="region" aria-labelledby="buttonForPanel_3" aria-hidden="true">
+            <div data-bk-layout="p:b">
+              Nam posuere tortor a augue vulputate, at blandit ipsum tincidunt. Donec dictum eros ligula, id congue justo porta eget. Aliquam vel erat venenatis, ornare nisi vel, convallis libero.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
 
 
 
@@ -445,10 +666,12 @@
     </footer>
 
     <script src=//code.jquery.com/jquery-2.2.4.min.js></script>
-    <script src=//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js></script>
+    <!-- <script src=//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js></script> -->
     <script src=/assets/js/jquery.smartmenus.js></script>
-    <script src=/assets/js/jquery.smoothPageScroll.js></script>
-    <script src=/assets/js/basekit.js></script>
+    <!-- <script src=/assets/js/jquery.smoothPageScroll.js></script> -->
+    <script src=/assets/js/basekit.min.js></script>
+
+    <script src="/assets/js/easy-toggle-state.es6.min.js"></script>
 
   </body>
 </html>
