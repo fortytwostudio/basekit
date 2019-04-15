@@ -1,15 +1,16 @@
 // const pkg   = require("./package.json");
-const gulp      = require('gulp'),
-      nano      = require('gulp-cssnano'),
-      sass      = require('gulp-sass'),
-      uglify    = require('gulp-uglify'),
-      concat    = require('gulp-concat'),
-      order     = require('gulp-order'),
-      imagemin  = require('gulp-imagemin'),
-      replace   = require('gulp-replace');
+const gulp          = require('gulp'),
+      nano          = require('gulp-cssnano'),
+      sass          = require('gulp-sass'),
+      uglify        = require('gulp-uglify'),
+      concat        = require('gulp-concat'),
+      order         = require('gulp-order'),
+      imagemin      = require('gulp-imagemin'),
+      replace       = require('gulp-replace'),
+      cleanCSS      = require('gulp-clean-css'),
+      autoprefixer  = require('gulp-autoprefixer');
 
-// CSS: the main task used for Basekit, this will compile and optimise your sass
-// into the public css directory as a single file.
+// This is an older task that uses the slowe CSSNano
 gulp.task("css", () => {
   return gulp
     .src("./src/sass/*.scss")
@@ -18,11 +19,29 @@ gulp.task("css", () => {
       cssDeclarationSorter: {
         order: 'alphabetically'
       },
-      minifySelectors: false, // This was interfering with the global selector so I've disabled it: http://cssnano.co/optimisations/minifySelectors/
-      autoprefixer: {
-        browsers: [ '> 0.5% in GB', 'last 3 versions', 'not ie 9' ]
-        // http://browserl.ist/?q=%3E+0.5%25+in+GB%2C+last+3+major+versions%2C+not+ie+9&chrome_dont_add_custom_search_engines_srsly=
-      }
+      minifySelectors: false
+    }))
+    .pipe(autoprefixer({
+      // https://browserl.ist/?q=%3E+0.5%25+in+GB%2C+last+2+versions%2C+Firefox+ESR%2C+not+dead
+      browsers: [ '> 0.5% in GB', 'last 2 versions', 'Firefox ESR' ]
+    }))
+    .pipe(gulp.dest("./public/assets/css/")
+  );
+});
+
+// And this is the newer one that uses Clean-CSS
+gulp.task("cleancss", () => {
+  return gulp
+    .src("./src/sass/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(cleanCSS({
+      compatibility: '*',
+      // format: 'beautify',
+      level: 2
+    }))
+    .pipe(autoprefixer({
+      // https://browserl.ist/?q=%3E+0.5%25+in+GB%2C+last+2+versions%2C+Firefox+ESR%2C+not+dead
+      browsers: [ '> 0.5% in GB', 'last 2 versions', 'Firefox ESR' ]
     }))
     .pipe(gulp.dest("./public/assets/css/")
   );
@@ -66,7 +85,7 @@ gulp.task("images", () => {
 
 // Watch CSS, JS and Images for changes and run their related task.
 gulp.task("default", () => {
-  gulp.watch("./src/sass/**/*.scss", gulp.series("css"));
+  gulp.watch("./src/sass/**/*.scss", gulp.series("cleancss"));
   gulp.watch("./src/js/**/*.js", gulp.series("js"));
   gulp.watch("./src/imgs/**/*", gulp.series("images"));
 });
