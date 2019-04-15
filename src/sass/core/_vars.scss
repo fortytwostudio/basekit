@@ -1,0 +1,528 @@
+// —————————————————————————————————————————————————————————————————————————————
+// LAYOUT
+// —————————————————————————————————————————————————————————————————————————————
+
+$mq-breakpoints: (
+  sm: 520px,
+  md: 720px,
+  lg: 960px
+) !default;
+
+// Define the column count for of your design.
+$grid-columns: 12 !default;
+$grid-column-width: 60 !default;
+$grid-gutter: 40 !default;
+
+$margin: $grid-gutter / 2 !default;
+
+// Once lower than the max-width the site width will never be larger than this.
+$site-width: calc(100% - #{$grid-gutter * 1px}) !default;
+// Halved gutter width for small screens
+$site-width-sm: calc(100% - #{$grid-gutter / 2 * 1px}) !default;
+// Fallback value for old browsers
+$site-width-fallback: 96% !default;
+
+// Don't touch this if you don't know what it does… $max-width gets used often.
+$max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns) !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// TRANSITION SPEEDS
+// —————————————————————————————————————————————————————————————————————————————
+
+// Set a standard range of animation speeds
+$speed-normal: 0.25s !default;
+$speed-fast: 0.1s !default;
+$speed-slow: 0.5s !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// BORDER RADIUS
+// —————————————————————————————————————————————————————————————————————————————
+
+// Set your radius values, more can be added if you include them in the map
+// below. xs and xl aren't included in the map so they aren't available as
+// classes for your markup.
+$br-xs: 2px !default;
+$br-sm: 3px !default;
+$br-md: 5px !default;
+$br-lg: 8px !default;
+$br-xl: 16px !default;
+
+// Include them in this map to have Sass generate the relevant classes. You can
+// also add them straight into here if you are never likely to use the
+// standalone variables.
+$border-radius-sizes: (
+  sm: $br-sm,
+  md: $br-md,
+  lg: $br-lg
+) !default;
+
+// The pill br class will have rounded sides with a flat top/bottom.
+$br-pill: 1000px !default;
+
+// The round class will create a circle (if the object is square).
+$br-round: 100% !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// BORDERS
+// —————————————————————————————————————————————————————————————————————————————
+
+$border-width-default: 1px !default;
+
+$bdr-sm: 3px !default;
+$bdr-md: 4px !default;
+$bdr-lg: 6px !default;
+
+$borders: (
+  sm: $bdr-sm,
+  md: $bdr-md,
+  lg: $bdr-lg
+) !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// BUTTONS
+// —————————————————————————————————————————————————————————————————————————————
+
+$bk-button-padding: 0.66em 1.25em !default;
+$bk-button-padding-compact: 0.25em 0.66em !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// CODE
+// —————————————————————————————————————————————————————————————————————————————
+
+$code-bg-color: rgba(128,128,128,0.1) !default;
+$code-text-color: currentColor !default;
+$code-border: "1px solid " + rgba(mix(white, black, 50%), 0.5) !default;
+$code-font-size: 0.875rem !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// COLOUR SCHEME
+// —————————————————————————————————————————————————————————————————————————————
+
+$color-body: #1a1a1a !default;
+$color-text: #333 !default;
+
+$color-primary: #0246AD !default;
+$color-primary--lighter: mix($color-primary, white, 6%) !default;
+$color-primary--light: mix($color-primary, white, 45%) !default;
+$color-primary--dark: mix($color-primary, black, 60%) !default;
+$color-primary--darker: mix($color-primary, black, 30%) !default;
+
+$color-secondary: #FF6679 !default;
+$color-secondary--lighter: mix($color-secondary, white, 8%) !default;
+$color-secondary--light: mix($color-secondary, white, 45%) !default;
+$color-secondary--dark: mix($color-secondary, black, 60%) !default;
+$color-secondary--darker: mix($color-secondary, black, 40%) !default;
+
+$color-tertiary: #4AF2A1 !default;
+$color-tertiary--lighter: mix($color-tertiary, white, 10%) !default;
+$color-tertiary--light: mix($color-tertiary, white, 45%) !default;
+$color-tertiary--dark: mix($color-tertiary, black, 60%) !default;
+$color-tertiary--darker: mix($color-tertiary, black, 40%) !default;
+
+$color-grey: #e7e8eb !default;
+$color-grey--lighter: #f4f7f9 !default;
+$color-grey--light: #eef0f2 !default;
+$color-grey--dark: #9b9fa5 !default;
+$color-grey--darker: #515255 !default;
+
+$color-white: white !default;
+$color-white--tint: mix(black, white, 3%) !default;
+$color-black: black !default;
+$color-black--tint: mix(white, black, 10%) !default;
+
+// The following alert, warning and positive colours are AAA contrast compliant.
+// Use the standard alert to draw attention.
+$alert: #fbf4b7 !default;
+$alert--dark: #F2DA0F !default;
+$alert--text: #4E3F00 !default;
+
+// Use warning when something goes wrong.
+$alert-negative: #fed0d0 !default;
+$alert-negative--dark: #FD9493 !default;
+$alert-negative--text: #520100 !default;
+
+// Use positive to show a successful action.
+$alert-positive: #cdf0cb !default;
+$alert-positive--dark: #9EE29B !default;
+$alert-positive--text: #034900 !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// DISPLAY
+// —————————————————————————————————————————————————————————————————————————————
+
+// Output the display (block, inline-block) utility class.
+$display-responsive: false !default;
+$display-block-class: true !default;
+$display-inline-block-class: true !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// FIT MEDIA
+// —————————————————————————————————————————————————————————————————————————————
+
+// Output CSS for the fit-media fallback.
+$fit-media-fallback-css: true !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// FLOATS
+// —————————————————————————————————————————————————————————————————————————————
+
+// Output the float utility class… ooh nasty.
+$floats-responsive: false !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// FONTS & TYPOGRAPHY
+// —————————————————————————————————————————————————————————————————————————————
+
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif !default;
+
+$font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif !default;
+
+$font-family--mono: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !default;
+
+$font-size: 16px !default;
+
+$font-line-height: 1.5625 !default;
+
+$font-weight: 400 !default;
+
+$font-weight-headings: $font-weight !default;
+
+// Output debugging class for rich text editor content.
+$rte-debugging: false !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// FORMS
+// —————————————————————————————————————————————————————————————————————————————
+
+// FONTS
+// Set family to same as global
+$fh-font-family: inherit !default;
+// Allow size to inherit the containing or global font size
+$fh-font-size: inherit !default;
+// Set color to global text color
+$fh-font-color: $color-text !default;
+
+// BORDERS
+// Nice rem border radius so they scale, set to 0 to disable
+$fh-border-radius: em(3px) !default;
+// Thickness, obviously
+$fh-border-width: 1px !default;
+// You'll rarely change this
+$fh-border-style: solid !default;
+// Set borders to a % of the text color
+$fh-border-color: lighten($fh-font-color, 50%) !default;
+
+// FIELD TYPES
+// We want to set a uniform hight, in ems so it scales
+$fh-input-height: 2.5em !default; // 16 * 2.5 = 40px
+// Best to make it 100% then adjust the container width, however some field types like number may need adjustments
+$fh-input-width: 100% !default;
+// Default input background
+$fh-input-bg-color: #fff !default;
+// The clicked/tapped/focused colours
+$fh-focus-bg-color: #eee !default;
+$fh-focus-border-color: darken($fh-border-color, 25%) !default;
+$fh-focus-font-color: $fh-font-color !default;
+
+// VENDOR SELECT STYLING
+// Use the default select dropdown arrows or roll our own?
+$fh-allow-select-vendor-styling: false !default;
+
+// FIELDSET & LEGENDS
+// Set true to remove fieldset styling and hide the legend text
+$fh-fieldset-bare: true !default;
+
+// BUTTONS
+// If you've read the above comments then this stuff should make sense :P
+$fh-button-height: 2.5em !default;
+$fh-button-width: 100% !default;
+$fh-button-max-width: em(140px) !default;
+$fh-button-font-weight: 700 !default;
+$fh-button-font-color: $fh-font-color !default;
+$fh-button-bg-color: $fh-focus-bg-color !default;
+$fh-button-hover-bg-color: $fh-border-color !default;
+$fh-button-hover-font-color: $fh-font-color !default;
+
+// LAYOUT
+// We pretty much always want block layout
+$fh-display: block !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// FORTYTWO LOGO
+// —————————————————————————————————————————————————————————————————————————————
+
+// Other sizes to try: 60px by 15px, or 64px by 16px
+$colophon-logo-width: 56px !default;
+$colophon-logo-height: 14px !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// GRID LAYOUT
+// —————————————————————————————————————————————————————————————————————————————
+
+/// Name your layout data attribute, should start with `data-`.
+///
+/// @example
+///   <div data-bk="…">
+$bk-grid-name: data-bk-layout !default;
+
+/// Enable or disable max-width breakpoint CSS. In simpler designs you may not
+/// ever utilise max-width breakpoints, set this `false` in that case to save
+/// users downloading unnecessary CSS.
+///
+/// @example
+///   <div data-bk="to:m:8  to:l:6">
+$bk-grid-mq-to: true !default;
+
+/// By default columns get a (half gutter) margin around them, this variable
+/// defines the smaller size margin. Typically it will be half but you can tweak
+/// as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-small: $margin / 2 !default;
+
+/// By default columns get a (half `$gutter`) margin around them, this variable
+/// defines the larger size margin. Typically it will be double but you can
+/// tweak as necessary.
+///
+/// @todo Consider variable name confusion.
+/// @access private
+$bk-grid-padding-large: $margin * 2 !default;
+
+/// Columns can be pushed (left or right) using padding CSS, you'll never want
+/// to push the a layout the total number of columns so here we subtract one
+/// from the number.
+/// @access private
+$bk-push-columns: $grid-columns - 1 !default;
+
+/// Enable/Disable push (towards the right |-->) CSS.
+$bk-push-right: true !default;
+
+/// Enable/Disable push (towards the left <--|) CSS.
+/// Use cases for this are quite small since blocks naturally position over to
+/// the left. However, it can be useful if you align blocks with
+/// `text-align: right` and then need to push a block to the left.
+$bk-push-left: true !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// LINKS
+// —————————————————————————————————————————————————————————————————————————————
+
+$link-dim-value: 0.5 !default;
+$link-transition-duration: ($speed-slow * 1.5) !default;
+$link-transition-duration-hover: $speed-normal !default;
+$link-transition-props: unquote('color, opacity, border-color, background-color') !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// LIST STYLES
+// —————————————————————————————————————————————————————————————————————————————
+
+// Configure the list utility class
+$list-bullet: "disc" !default;
+$list-bullet-position: "outside" !default;
+$list-number: "decimal-leading-zero" !default;
+$list-number-position: "outside" !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// MARGIN
+// —————————————————————————————————————————————————————————————————————————————
+
+$margin-size: ($margin / 16) * 1rem !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// NAVIGATION
+// —————————————————————————————————————————————————————————————————————————————
+
+// Basic nav class configs
+$nav-rl-pad: 1em !default;
+$nav-tb-pad: 0.5em !default;
+$nav-crumb-pad: 0.5em !default;
+
+
+// ----------------------------------------------------------
+// :: Main Dropdown Nav Variables
+// ----------------------------------------------------------
+
+$nav-switch-point: lg !default;
+
+// -----------------------------------------------------------------------------------------------------------------
+// 1. Theme Quick Settings (Variables)
+// (for further control, you will need to dig into the actual CSS in 2.)
+// -----------------------------------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------
+// :: 1.1. Colors
+// ----------------------------------------------------------
+$sm-bk__base-color: #fff !default;
+$sm-bk__gray: darken($sm-bk__base-color, 16.5%) !default;
+$sm-bk__gray-dark: darken($sm-bk__base-color, 33%) !default;
+$sm-bk__gray-darker: darken($sm-bk__base-color, 66%) !default;
+
+
+// ----------------------------------------------------------
+// :: 1.2. Breakpoints
+// ----------------------------------------------------------
+$sm-bk__desktop-vp:  $nav-switch-point !default;    // switch from collapsible to desktop
+
+
+// ----------------------------------------------------------
+// :: 1.3. Typography
+// ----------------------------------------------------------
+$sm-bk__font-family: $font-family !default;
+$sm-bk__font-size-base: $font-size !default;
+$sm-bk__font-size-small: $font-size !default;
+$sm-bk__line-height: 1.1 !default;
+
+
+// ----------------------------------------------------------
+// :: 1.5. Collapsible main menu
+// ----------------------------------------------------------
+// Items
+$sm-bk__collapsible-item-color: $sm-bk__gray-darker !default;
+$sm-bk__collapsible-item-current-color: white !default;
+$sm-bk__collapsible-item-current-bg: $color-primary !default;
+$sm-bk__collapsible-item-disabled-color: darken($sm-bk__base-color, 20%) !default;
+$sm-bk__collapsible-item-padding-vertical: 13px !default;
+$sm-bk__collapsible-item-padding-horizontal: 20px !default;
+
+// Items separators
+$sm-bk__collapsible-separators-color: rgba(0, 0, 0, 0.05) !default;
+
+
+// ----------------------------------------------------------
+// :: 1.6. Collapsible sub menus
+// ----------------------------------------------------------
+// Items text indentation for deeper levels
+$sm-bk__collapsible-sub-item-indentation: 0.5em !default;
+
+
+// ----------------------------------------------------------
+// :: 1.7. Desktop main menu and sub menus
+// ----------------------------------------------------------
+// Menu box
+$sm-bk__desktop-bg: $sm-bk__base-color !default;
+
+// Items
+$sm-bk__desktop-item-color: $sm-bk__gray-darker !default;
+$sm-bk__desktop-item-hover-bg: $sm-bk__gray !default;
+$sm-bk__desktop-item-current-color: $sm-bk__base-color !default;
+$sm-bk__desktop-item-current-bg: $sm-bk__gray-darker !default;
+$sm-bk__desktop-item-disabled-color: darken($sm-bk__base-color, 20%) !default;
+$sm-bk__desktop-item-padding-vertical: 11px !default;
+$sm-bk__desktop-item-padding-horizontal: 20px !default;
+
+// Items separators
+$sm-bk__desktop-separators-size: 1px !default;
+$sm-bk__desktop-separators-color: $color-grey !default;
+
+// Sub menu indicators
+$sm-bk__desktop-arrow-spacing: 4px !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// PADDING SPACER
+// —————————————————————————————————————————————————————————————————————————————
+
+$spacer-name: pad !default;
+
+// Default padding spacer is twice the grid's gutter size, you can change this
+// suite your needs. For example 1.5 may also work.
+$spacer-size: ($grid-gutter * 1px) * 2 !default;
+
+// Then we calculate as appropriate for the additional sizes
+$spacer-size-xs: $spacer-size / 4 !default;
+$spacer-size-sm: $spacer-size / 2 !default;
+$spacer-size-lg: $spacer-size * 2 !default;
+$spacer-size-xl: $spacer-size * 4 !default;
+
+$spacer-min: map-get($mq-breakpoints, sm) !default;
+$spacer-max: ($max-width * 1px) !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// POSITION OVER
+// —————————————————————————————————————————————————————————————————————————————
+
+// Fine tune the position over utility class options.
+// Find this in core/utility.position-over.scss
+$position-over-css: true !default;
+$position-over-tr: false !default;
+$position-over-br: false !default;
+$position-over-bl: false !default;
+$position-over-m: true !default;
+$position-over-ml: true !default;
+$position-over-mr: false !default;
+$position-over-mb: false !default;
+$position-over-mt: false !default;
+$position-over-fit-height: false !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// SITE LOGO
+// —————————————————————————————————————————————————————————————————————————————
+
+$site-logo-width: 205px !default;
+$site-logo-height: 47px !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// SITE WIDTH
+// —————————————————————————————————————————————————————————————————————————————
+
+// Ouput the site's max width utility class and define the name.
+$site-width-name: site-container !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// TABLES
+// —————————————————————————————————————————————————————————————————————————————
+
+$tables-width: 1px !default;
+$tables-color: #eee !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// USER CONTENT / RICH TEXT
+// —————————————————————————————————————————————————————————————————————————————
+
+// Set a default bottom margin size for consistency across text elements.
+$font-default-bottom-margin: $margin !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// WIDTHS
+// —————————————————————————————————————————————————————————————————————————————
+
+$widths: (15, 20, 25, 33.333333, 50, 66.666666, 75, 80, 85, 100) !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// Z-INDEX
+// —————————————————————————————————————————————————————————————————————————————
+
+// Set some base z-index layers to work with
+$z-min: 1 !default;
+$z-content: 100 !default;
+$z-fit-media: 200 !default;
+$z-position-over: 300 !default;
+$z-mobile-nav: 400 !default;
+$z-mobile-nav-toggle: 500 !default;
+$z-max: 600 !default;
+
