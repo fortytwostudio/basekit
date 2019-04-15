@@ -72,218 +72,36 @@
 
 
     <div class=bg-white>
-      <div class="container pad">
-        <style>
-          .example-dialog-trigger {
-  display: inline-block;
-  padding: 0;
-  overflow: hidden;
-  border: none;
-  background: none;
-  color: var(--theme); /* You probably need to change this! */
-  text-decoration: underline;
-}
-.example-dialog-trigger:hover,
-.example-dialog-trigger:focus {
-  text-decoration: none;
-}
-.example-dialog {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  display: flex;
-  padding: 1em;
-  background-color: rgba(0,0,0,.75);
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transition: .25s ease-out;
-}
-.example-dialog.is-active {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-.example-dialog-container {
-  width: 100%;
-  max-width: 30em;
-  margin: auto;
-  transform: translateY(-1em) scale(.95);
-  background-color: white;
-  transition: transform .25s ease-out;
-}
-.example-dialog.is-active .example-dialog-container {
-  transform: translateY(0) scale(1);
-}
-.example-dialog-header,
-.example-dialog-content,
-.example-dialog-footer {
-  padding: .5em 1em;
-}
-.example-dialog-header {
-  background-color: var(--theme);
-  color: white;
-  font-weight: bold;
-}
-.example-dialog-header h5 {
-  margin: 0;
-  font: inherit;
-}
-.example-dialog-footer {
-  background-color: whitesmoke;
-  text-align: right;
-}
-.example-dialog-footer button {
-  display: inline-block;
-  padding: .25em .5em;
-  border: none;
-  background-color: var(--theme);
-  color: white;
-}
-.example-dialog-footer button:hover,
-.example-dialog-footer button:focus {
-  background-color: white ;
-  color: var(--theme);
-}
+      <div class="container pad-t">
+        <h3 data-bk-layout="p:rl" class="font-lg">Dropdown toggler</h3>
 
-.example-dropdown {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-.example-dropdown-button {
-  display: inline-block;
-  padding: 0;
-  overflow: hidden;
-  border: none;
-  background: none;
-  color: var(--theme); /* You probably need to change this! */
-  text-decoration: underline;
-}
-.example-dropdown-button:hover,
-.example-dropdown-button:focus {
-  text-decoration: none;
-}
-.example-dropdown-button::after {
-  display: inline-block;
-  content: "\25be";
-  transition: transform .25s ease-out;
-}
-.example-dropdown-button.is-open::after {
-  transform: rotate(180deg);
-}
-.example-dropdown-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  display: block;
-  width: max-content;
-  min-width: 100%;
-  max-width: 15em;
-  max-height: 13em;
-  overflow: auto;
-  padding: 0;
-  margin: 0;
-  transform: rotateX(-20deg);
-  transform-origin: center top;
-  background-color: white;
-  perspective: 1000px;
-  box-shadow: 0 .125em .25em rgba(0,0,0,.5);
-  list-style: none;
-  visibility: hidden;
-  opacity: 0;
-  transition: .25s ease-in;
-}
-.example-dropdown-list.is-open {
-  transform: rotateX(0);
-  visibility: visible;
-  opacity: 1;
-  transition-timing-function: ease-out;
-}
-.example-dropdown-list li {
-  border-bottom: 1px solid whitesmoke;
-}
-.example-dropdown-list li:last-child {
-  border-bottom: none;
-}
-.example-dropdown-list button {
-  display: block;
-  width: 100%;
-  padding: .25em .5em;
-  box-sizing: border-box;
-  border: none;
-  background: none;
-  text-align: left;
-}
-.example-dropdown-list button:hover,
-.example-dropdown-list button:focus {
-  color: var(--theme); /* You probably need to change this too! */
-}
-
-        </style>
-        <div data-bk-layout="block" class="example-dropdown">
+        <div data-bk-layout="p:trl" class="filter-dropdown">
           <button type="button"
-            class="example-dropdown-button"
+            class="filter-dropdown-button btn-primary br-md font-bold"
             data-toggle-class="is-open"
             data-toggle-target-next
             data-toggle-outside
             data-toggle-escape
-            id="dropdownButton"
+            id="filterDropdown"
             aria-haspopup="listbox"
-            aria-controls="dropdownList"
+            aria-controls="filterDropdownList"
             aria-expanded="false">
-            Select something here
+            Filters
           </button>
-          <ul class="example-dropdown-list"
-            id="dropdownList"
-            role="listbox"
-            aria-labelledby="dropdownButton"
-            aria-hidden="true">
-          <li data-bk-links="primary" class="pad-xs-b">
-            <a href="#">Primary</a> — <code>primary</code>
-          </li>
 
-          <li data-bk-links="primary h:secondary" class="pad-xs-b">
-            <a href="#">Link Style</a> — <code>primary h:secondary</code>
-          </li>
-
-          <li data-bk-links="primary underline h:secondary" class="pad-xs-b">
-            <a href="#">Link Style</a> — <code>primary underline h:secondary</code>
-          </li>
-
-          <li data-bk-links="primary underline h:secondary h:no-underline" class="pad-xs-b">
-            <a href="#">Link Style</a> — <code>primary underline h:secondary h:no-underline</code>
-          </li>
-
-          <li data-bk-links="secondary no-underline h:primary h:underline" class="pad-xs-b">
-            <a href="#">Link Style</a> — <code>secondary no-underline h:primary h:underline</code>
-          </li>
-
-          <li data-bk-links="white bg-primary h:bg-secondary" class="pad-xs-b">
-            <a data-bk-layout="p:sm auto" class="inline-block" href="#">Link Style</a> — <code>white bg-primary h:bg-secondary</code>
-          </li>
-
-          <li data-bk-links="primary dim" class="pad-xs-b">
-            <a href="#">Link Style</a> — <code>primary dim</code>
-          </li>
-
-          <li data-bk-links="primary dim h:no-dim" class="pad-xs-b">
-            <a href="#">Link Style</a> — <code>primary dim h:no-dim</code>
-          </li>
-
-          <li data-bk-links="white dim h:no-dim" class="pad-xs-b">
-            <div data-bk-layout="p:sm i:center" class="bg-black--tint color-white--tint">
-              <a href="#">Link Style</a> — <code>white dim h:no-dim</code>
-            </div>
-          </li>
-            <!-- Several options -->
-          </ul>
+          <div data-bk-layout="p:rbl auto sm:5 md:3" class="filter-dropdown-list" id="filterDropdownList" role="listbox" aria-labelledby="filterDropdown" aria-hidden="true">
+            <ul data-bk-links="primary h:secondary" class="mar-sm-t nav nav-block nav-stack bg-grey--light shadow w-100 br-md">
+              <li><a href="#">Lorem ipsum</a></li>
+              <li><a href="#">Dolor sit</a></li>
+              <li><a href="#">Consectetur</a></li>
+              <li><a href="#">Dipisicing</a></li>
+              <li><a href="#">Elit</a></li>
+              <li><a href="#">Tempor</a></li>
+              <li><a href="#">Magna aliqua</a></li>
+              <li><a href="#">Donec nec</a></li>
+              <li><a href="#">Dolor erat</a></li>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -292,22 +110,38 @@
 
 
     <div class=bg-white>
-      <div class="container pad">
+      <div class="container pad-t">
 
-        <button type="button"
-        class="example-dialog-trigger"
-        data-toggle-class
-        data-toggle-target="#dialog"
-        data-toggle-target-only
-        data-toggle-escape>
-        Click to see the awesomeness
-        </button>
+        <div data-bk-layout="p:trl">
+          <button type="button"
+            class="dialog-trigger btn-primary br-md font-bold"
+            data-toggle-class
+            data-toggle-target="#dialog"
+            data-toggle-target-only
+            data-toggle-escape>
+            Open
+          </button>
 
         <!-- This dialog anywhere you want in the page -->
-        <div class="example-dialog" id="dialog">
-          <section class="example-dialog-container">
-            <!-- Your content here, like text or form. -->
-            <button type="button" data-toggle-trigger-off>close</button>
+            <div class="dialog"
+              id="dialog"
+              role="dialog"
+              aria-labelledby="dialogTitle"
+              aria-describedby="dialogContent"
+              aria-hidden="true">
+              <section data-bk-layout="md:8 lg:6" class="dialog-container bg-white br-md shadow">
+                <div id="dialogContent" class="dialog-content rte">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat.</p>
+                </div>
+
+                <footer data-bk-layout="p:t" class="dialog-footer">
+                  <button class="btn-primary br-md font-bold" type="button" data-toggle-trigger-off>Close</button>
+                </footer>
+              </section>
+            </div>
+
           </section>
         </div>
 
@@ -320,75 +154,143 @@
     <div class=bg-white>
       <div class="container pad">
 
-          <style>
-            .example-tabs button {
-              padding: .25em .5em;
-              border: none;
-              background-color: white;
-            }
-            .example-tabs button:hover,
-            .example-tabs button:focus {
-              text-decoration: underline;
-            }
-            .example-tabs button.is-active {
-              background-color: red;  /* You probably need to change this! */
-            }
-            .example-tab-panel {
-              display: none;
-              z-index: 1;
-              padding: .5em;
-              background-color: white;
-            }
-            .example-tab-panel.is-active {
-              display: block;
-            }
-          </style>
-        <div class="example-tabs" role="tablist">
+        <div data-bk-layout="p:trl" class="tabs" role="tablist">
           <button type="button"
-            id="tab_1"
+            id="tab_4"
             data-toggle-class
-            data-toggle-target="#tabPanel_1"
-            data-toggle-radio-group="tabsGroup"
+            data-toggle-target="#tabPanel_4"
+            data-toggle-radio-group="tabsGroup_2"
             data-toggle-arrows
             data-toggle-is-active
             role="tab"
             aria-selected="true"
-            aria-controls="tabPanel_1">
-            tab 1
+            aria-controls="tabPanel_4"
+            class="is-active btn-secondary br-md br-t font-bold mar-sm-r">
+            Tab One
           </button>
+
           <button type="button"
-            id="tab_2"
+            id="tab_5"
             data-toggle-class
-            data-toggle-target="#tabPanel_2"
-            data-toggle-radio-group="tabsGroup"
+            data-toggle-target="#tabPanel_5"
+            data-toggle-radio-group="tabsGroup_2"
             data-toggle-arrows
             role="tab"
             aria-selected="false"
-            aria-controls="tabPanel_2">
-            tab 2
+            aria-controls="tabPanel_5"
+            class="btn-secondary br-md br-t font-bold mar-sm-r">
+            Tab 2
           </button>
-          <!-- … -->
-        </div>
-        <div data-bk-layout="block" class="example-tab-panel"
-          id="tabPanel_1"
-          role="tabpanel"
-          aria-labelledby="tab_1"
-          aria-hidden="false">
-          Panel 1<br>
-          Lorem ipsum dolor sit amet…
-        </div>
-        <div data-bk-layout="block" class="example-tab-panel"
-          id="tabPanel_2"
-          role="tabpanel"
-          aria-labelledby="tab_2"
-          aria-hidden="true">
-          Panel 2<br>
-          In in erat blandit ante mollis tincidunt…
+          <button type="button"
+            id="tab_6"
+            data-toggle-class
+            data-toggle-target="#tabPanel_6"
+            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-arrows
+            role="tab"
+            aria-selected="false"
+            aria-controls="tabPanel_6"
+            class="btn-secondary br-md br-t font-bold mar-sm-r">
+            Third Tab
+          </button>
         </div>
 
+        <div data-bk-layout="p:rbl" class="tab-panel is-active" id="tabPanel_4" role="tabpanel" aria-labelledby="tab_4" aria-hidden="false">
+          <div data-bk-layout="md:p:lg" class="bg-primary color-white br-sm br-b rte">
+            <h3 class="font-bold font-md">Panel 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus odio, vitae faucibus dui tempor in. Duis vitae luctus mi. Phasellus ultrices rhoncus lectus, non vehicula tortor sodales id.</p>
+          </div>
+        </div>
+
+        <div data-bk-layout="p:rbl" class="tab-panel" id="tabPanel_5" role="tabpanel" aria-labelledby="tab_5" aria-hidden="true">
+          <div data-bk-layout="md:p:lg" class="bg-primary color-white br-sm br-b rte">
+            <h3 class="font-bold font-md">Panel 2</h3>
+            <p>In in erat blandit ante mollis tincidunt. Quisque ac tempus nisi, a ultricies metus. Suspendisse et quam nec mauris feugiat luctus. Curabitur porta sem vitae nulla congue malesuada.</p>
+          </div>
+        </div>
+
+        <div data-bk-layout="p:rbl" class="tab-panel" id="tabPanel_6" role="tabpanel" aria-labelledby="tab_6" aria-hidden="true">
+          <div data-bk-layout="md:p:lg" class="bg-primary color-white br-sm br-b rte">
+            <h3 class="font-bold font-md">Panel 3</h3>
+            <p>Nam posuere tortor a augue vulputate, at blandit ipsum tincidunt. Donec dictum eros ligula, id congue justo porta eget. Aliquam vel erat venenatis, ornare nisi vel, convallis libero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="bg-grey--light">
+      <div class="container pad-sm">
+
+        <div data-bk-layout="md:8 lg:6">
+
+          <button type="button"
+          class="accordion-button font-md"
+          id="buttonForPanel_1"
+          data-toggle-class="is-open"
+          data-toggle-target-parent="#panel_1"
+          data-toggle-group="accordion"
+          data-toggle-escape
+          data-toggle-arrows
+          data-toggle-is-active
+          aria-controls="panel_1"
+          aria-expanded="false">
+            First Panel
+          </button>
+          <div class="accordion-panel" id="panel_1" role="region" aria-labelledby="buttonForPanel_1" aria-hidden="true">
+            <div data-bk-layout="p:b">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper faucibus odio, vitae faucibus dui tempor in. Duis vitae luctus mi. Phasellus ultrices rhoncus lectus, non vehicula tortor sodales id.
+            </div>
+          </div>
+
+          <button type="button"
+          class="accordion-button font-md"
+          id="buttonForPanel_2"
+          data-toggle-class="is-open"
+          data-toggle-target-parent="#panel_2"
+          data-toggle-group="accordion"
+          data-toggle-escape
+          data-toggle-arrows
+          aria-controls="panel_2"
+          aria-expanded="false">
+            Second Panel
+          </button>
+          <div class="accordion-panel" id="panel_2" role="region" aria-labelledby="buttonForPanel_2" aria-hidden="true">
+            <div data-bk-layout="p:b">
+              In in erat blandit ante mollis tincidunt. Quisque ac tempus nisi, a ultricies metus. Suspendisse et quam nec mauris feugiat luctus. Curabitur porta sem vitae nulla congue malesuada.
+            </div>
+          </div>
+
+          <button type="button"
+          class="accordion-button font-md"
+          id="buttonForPanel_3"
+          data-toggle-class="is-open"
+          data-toggle-target-parent="#panel_3"
+          data-toggle-group="accordion"
+          data-toggle-escape
+          data-toggle-arrows
+          aria-controls="panel_3"
+          aria-expanded="false">
+            Third Panel
+          </button>
+          <div class="accordion-panel" id="panel_3" role="region" aria-labelledby="buttonForPanel_3" aria-hidden="true">
+            <div data-bk-layout="p:b">
+              Nam posuere tortor a augue vulputate, at blandit ipsum tincidunt. Donec dictum eros ligula, id congue justo porta eget. Aliquam vel erat venenatis, ornare nisi vel, convallis libero.
+            </div>
+          </div>
+
+        </div>
 
       </div>
     </div>
+
+
+
+
+
+
 
     <div class=bg-white>
       <div class="container pad">

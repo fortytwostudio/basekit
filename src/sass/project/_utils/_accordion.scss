@@ -1,51 +1,86 @@
-.js {
-  .accordion {
-    $icon-width: 1.4rem;
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
 
-    &-title {
-      cursor: pointer;
-      position: relative;
-      padding-left: $icon-width + 0.5rem;
-      transition: color 0.2s ease-in-out;
+.accordion-button {
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  transition: 0.5s $easeInOutCubic;
+  width: 100%;
 
-      &:hover,
-      &:focus {
-        color: $color-primary;
-        text-decoration: underline;
-        outline: 0;
-      }
+  &::after {
+    content: "+";
+  }
 
-      &:before {
-        bottom: 0;
-        content: "→";
-        display: block;
-        font-family: "Basekit Arrows", $font-family;
-        font-size: $icon-width;
-        height: $icon-width;
-        left: 0;
-        line-height: $icon-width;
-        position: absolute;
-        text-align: center;
-        top: ($icon-width / 3);
-        transform-origin: center;
-        transform: rotate(0deg);
-        transition: transform 0.2s ease-in-out;
-        width: $icon-width;
-      }
-    }
-
-    &-active {
-      color: $color-primary;
-      text-decoration: underline;
-
-      &:before {
-        transform: rotate(405deg);
-      }
-    }
-
-    &-content {
-      display: none;
-      padding-left: $icon-width + 0.5rem;
+  &.is-open {
+    &::after {
+      content: "–";
     }
   }
 }
+
+.accordion-panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.7s $easeInOutCubic;
+
+  &.is-open {
+    max-height: 2000px;
+    opacity: 1;
+  }
+}
+
+
+// .js {
+//   .accordion {
+//     $icon-width: 1.4rem;
+//
+//     &-title {
+//       cursor: pointer;
+//       position: relative;
+//       padding-left: $icon-width + 0.5rem;
+//       transition: color 0.2s ease-in-out;
+//
+//       &:hover,
+//       &:focus {
+//         color: $color-primary;
+//         text-decoration: underline;
+//         outline: 0;
+//       }
+//
+//       &:before {
+//         bottom: 0;
+//         content: "→";
+//         display: block;
+//         font-family: "Basekit Arrows", $font-family;
+//         font-size: $icon-width;
+//         height: $icon-width;
+//         left: 0;
+//         line-height: $icon-width;
+//         position: absolute;
+//         text-align: center;
+//         top: ($icon-width / 3);
+//         transform-origin: center;
+//         transform: rotate(0deg);
+//         transition: transform 0.2s ease-in-out;
+//         width: $icon-width;
+//       }
+//     }
+//
+//     &-active {
+//       color: $color-primary;
+//       text-decoration: underline;
+//
+//       &:before {
+//         transform: rotate(405deg);
+//       }
+//     }
+//
+//     &-content {
+//       display: none;
+//       padding-left: $icon-width + 0.5rem;
+//     }
+//   }
+// }

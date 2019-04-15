@@ -1,0 +1,13 @@
+.tabs {
+  & button.is-active {
+    background-color: $color-primary;  /* You probably need to change this! */
+    color: white;
+  }
+}
+.tab-panel {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
