@@ -86,8 +86,10 @@ $borders: (
 // BUTTONS
 // —————————————————————————————————————————————————————————————————————————————
 
-$bk-button-padding: 0.66em 1.25em !default;
-$bk-button-padding-compact: 0.25em 0.66em !default;
+$bk-button-padding-base: 0.4em !default;
+$bk-button-padding: $bk-button-padding-base ($bk-button-padding-base * 2) !default;
+$bk-button-padding-lg: ($bk-button-padding-base * 1.5) ($bk-button-padding-base * 3) !default;
+$bk-button-padding-sm: ($bk-button-padding-base / 4) ($bk-button-padding-base * 1.5) !default;
 
 
 // —————————————————————————————————————————————————————————————————————————————
@@ -322,10 +324,10 @@ $bk-push-left: true !default;
 // LINKS
 // —————————————————————————————————————————————————————————————————————————————
 
-$link-dim-value: 0.5 !default;
-$link-transition-duration: ($speed-slow * 1.5) !default;
-$link-transition-duration-hover: $speed-normal !default;
-$link-transition-props: unquote('color, opacity, border-color, background-color') !default;
+$link-opacity-value: 0.5 !default;
+$link-transition-duration: ($speed-slow * 1.75) !default;
+$link-transition-hover-duration: $speed-slow !default;
+$link-transition-props: all !default;
 
 
 // —————————————————————————————————————————————————————————————————————————————

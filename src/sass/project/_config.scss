@@ -153,8 +153,10 @@ $site-width-name: container;
 // // BUTTONS
 // // —————————————————————————————————————————————————————————————————————————————
 //
-// $bk-button-padding: 0.66em 1.25em;
-// $bk-button-padding-compact: 0.25em 0.66em;
+// $bk-button-padding-base: 0.4em;
+// $bk-button-padding: $bk-button-padding-base ($bk-button-padding-base * 2);
+// $bk-button-padding-lg: ($bk-button-padding-base * 1.5) ($bk-button-padding-base * 3);
+// $bk-button-padding-sm: ($bk-button-padding-base / 4) ($bk-button-padding-base * 1.5);
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
@@ -336,9 +338,9 @@ $site-width-name: container;
 // // LINKS
 // // —————————————————————————————————————————————————————————————————————————————
 //
-// $link-dim-value: 0.5;
-// $link-transition-duration: ($speed-slow * 1.5);
-// $link-transition-duration-hover: $speed-normal;
+// $link-opacity-value: 0.5;
+// $link-transition-duration: ($speed-slow * 1.75);
+// $link-transition-hover-duration: $speed-slow;
 // $link-transition-props: unquote('color, opacity, border-color, background-color');
 //
 //

@@ -87,6 +87,8 @@
 }
 
 .bdr {
+  border-color: currentColor;
+
   &-primary { border-color: $color-primary;}
   &-primary--lighter { border-color: $color-primary--lighter; }
   &-primary--light { border-color: $color-primary--light; }

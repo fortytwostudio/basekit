@@ -1,72 +1,60 @@
 // Default style for any element that has a class starting with btn-
+.btn,
 [class*="btn-"] {
-  appearance: none;
   background-color: transparent;
-  border: inherit;
   color: inherit;
-  cursor: pointer;
   display: inline-block;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   padding: $bk-button-padding;
-  transition: all $speed-normal ease-in-out;
   vertical-align: middle;
 }
 
-//****************************************************************************//
+// button[class*="btn-"],
+// input[class*="btn-"] {
+//   appearance: none;
+//   border: inherit;
+//   cursor: pointer;
+// }
 
-@if $bk-button-padding-compact {
-  .btn-compact {
-    padding: $bk-button-padding-compact;
-  }
+.btn-sm {
+  padding: $bk-button-padding-sm;
 }
 
-.btn-empty {
-  background-color: transparent;
-  color: $color-primary;
-
-  &:hover,
-  &:focus {
-    color: white;
-    background-color: $color-primary;
-  }
+.btn-lg {
+  padding: $bk-button-padding-lg;
 }
 
-.btn-bdr {
-  border: 1px solid currentColor;
-
-  &--primary {
-    border-color: $color-primary;
-  }
-
-  &--secondary {
-    border-color: $color-secondary;
-  }
-
-  &--white {
-    border-color: white;
-  }
-}
+// .btn-empty {
+//   background-color: transparent;
+//   color: $color-primary;
+//
+//   &:hover,
+//   &:focus {
+//     color: white;
+//     background-color: $color-primary;
+//   }
+// }
 
 
-.btn-primary {
-  background-color: $color-primary;
-  color: white;
-
-  &:hover,
-  &:focus {
-    background-color: $color-primary--darker;
-  }
-}
-
-
-.btn-secondary {
-  background-color: $color-secondary;
-  color: white;
-
-  &:hover,
-  &:focus {
-    background-color: $color-secondary--darker;
-  }
-}
+// .btn-primary {
+//   background-color: $color-primary;
+//   color: white;
+//
+//   &:hover,
+//   &:focus {
+//     background-color: $color-primary--darker;
+//   }
+// }
+//
+//
+// .btn-secondary {
+//   background-color: $color-secondary;
+//   color: white;
+//
+//   &:hover,
+//   &:focus {
+//     background-color: $color-secondary--darker;
+//   }
+// }

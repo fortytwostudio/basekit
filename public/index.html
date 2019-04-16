@@ -23,7 +23,7 @@
       <header id=site-header class=container>
         <div data-bk-layout='wrap np i:center j:between' class="bg-primary">
           <div data-bk-layout='auto' class=site-logo--container>
-            <h1 class='site-logo logo'><a class='site-logo__img logo__img' href='/'>Basekit Project</a></h1>
+            <h1 class='site-logo logo'><a style="filter: invert(100%);" class='site-logo__img logo__img' href='/'>Basekit Project</a></h1>
           </div>
 
           <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'>
@@ -92,18 +92,21 @@
         <h3 data-bk-layout="p:rl" class="font-lg">Dropdown</h3>
 
         <div data-bk-layout="p:trl" class="filter-dropdown">
-          <button type="button"
-            class="filter-dropdown-button btn-primary br-md font-bold no-js-dn"
-            data-toggle-class="is-open"
-            data-toggle-target="#filterDropdownList"
-            data-toggle-outside
-            data-toggle-escape
-            id="filterDropdown"
-            aria-haspopup="listbox"
-            aria-controls="filterDropdownList"
-            aria-expanded="false">
-            Filters
-          </button>
+          <p data-bk-links="white bg-primary h:bg-secondary" class="no-js-dn">
+            <a role="button"
+              href="#filterDropdownList"
+              class="filter-dropdown-button btn-primary br-md font-bold"
+              data-toggle-class="is-open"
+              data-toggle-target="#filterDropdownList"
+              data-toggle-outside
+              data-toggle-escape
+              id="filterDropdown"
+              aria-haspopup="listbox"
+              aria-controls="filterDropdownList"
+              aria-expanded="false">
+              Filters
+            </a>
+          </p>
 
           <div data-bk-layout="p:rbl auto sm:5 md:3" class="filter-dropdown-list" id="filterDropdownList" role="listbox" aria-labelledby="filterDropdown" aria-hidden="true">
             <ul data-bk-links="primary h:secondary" class="mar-sm-t nav nav-block nav-stack bg-grey--light shadow w-100 br-md">
@@ -124,14 +127,17 @@
         <h3 data-bk-layout="p:trl" class="font-lg">Modal/Dialog</h3>
 
         <div data-bk-layout="p:trl">
-          <button type="button"
-            class="dialog-trigger btn-primary br-md font-bold no-js-dn"
-            data-toggle-class
-            data-toggle-target="#dialog"
-            data-toggle-target-only
-            data-toggle-escape>
-            Open
-          </button>
+          <p data-bk-links="white bg-primary h:bg-secondary" class="no-js-dn">
+            <a role="button"
+              href="#dialog"
+              class="dialog-trigger btn br-md font-bold"
+              data-toggle-class
+              data-toggle-target="#dialog"
+              data-toggle-target-only
+              data-toggle-escape>
+              Open
+            </a>
+          </p>
 
             <div class="dialog"
               id="dialog"
@@ -171,7 +177,7 @@
             role="tab"
             aria-selected="true"
             aria-controls="tabPanel_4"
-            class="tab-button is-active btn-secondary br-md br-t font-bold mar-sm-r">
+            class="tab-button is-active btn br-md br-t font-bold mar-sm-r">
             Tab One
           </a>
 
@@ -184,7 +190,7 @@
             role="tab"
             aria-selected="false"
             aria-controls="tabPanel_5"
-            class="tab-button btn-secondary br-md br-t font-bold mar-sm-r">
+            class="tab-button btn br-md br-t font-bold mar-sm-r">
             Tab 2
           </a>
 
@@ -197,7 +203,7 @@
             role="tab"
             aria-selected="false"
             aria-controls="tabPanel_6"
-            class="tab-button btn-secondary br-md br-t font-bold mar-sm-r">
+            class="tab-button btn br-md br-t font-bold mar-sm-r">
             Third Tab
           </a>
         </div>
@@ -343,7 +349,54 @@
               <a href="#">Link Style</a> — <code>white dim h:no-dim</code>
             </div>
           </li>
+        </ul>
 
+
+        <div data-bk-layout="col" class="rte">
+          <h3 class="font-lg">Button class</h3>
+          <p>The button class is used in combination with <code>data-bk-links</code>. The button class itself is just a structural class.</p>
+        </div>
+
+        <ul data-bk-layout="col">
+          <li data-bk-links="white bg-primary h:bg-secondary" class="pad-xs-b">
+            <a class="btn" href="#">Button Link</a>
+          </li>
+
+          <li data-bk-links="primary h:secondary" class="pad-xs-b">
+            <a class="btn bdr bdr-a bdr-sm" href="#">Button Link</a>
+          </li>
+
+          <li data-bk-links="black h:primary bg-grey h:bg-tertiary" class="pad-xs-b">
+            <a class="btn" href="#">Button Link</a>
+          </li>
+
+          <li data-bk-links="white bg-primary dim h:no-dim" class="pad-xs-b">
+            <a class="btn" href="#">Button Link</a>
+          </li>
+
+          <li data-bk-links="primary bg-grey h:white h:bg-primary" class="pad-xs-b font-xs font-upper">
+            <a class="btn-sm br-pill" href="#">Pill Style</a>
+            <a class="btn-sm br-pill" href="#">Btn</a>
+            <a class="btn-sm br-pill" href="#">Link</a>
+          </li>
+
+          <li data-bk-links="white bg-primary" class="pad-xs-b">
+            <a class="btn-lg br-sm" href="#">Large Button</a>
+          </li>
+
+          <li data-bk-links="white bg-primary" class="pad-xs-b font-md">
+            <a class="btn-lg br-lg" href="#">Button Link</a>
+          </li>
+
+          <li data-bk-layout="np nowrap" data-bk-links="white bg-primary h:bg-secondary" class="pad-xs-b">
+            <a class="btn br-lg br-l" href="#">Large Button</a>
+            <a class="btn bdr-l" href="#">Large Button</a>
+            <a class="btn br-lg br-r bdr-l" href="#">Large Button</a>
+          </li>
+
+          <li class="pad-xs-b font-xs">
+            * form buttons don't currently work with the button class or data-bk-links.
+          </li>
         </ul>
       </div>
     </head>

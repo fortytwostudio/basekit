@@ -7,158 +7,188 @@
 //
 // We do not want any of these styles to apply to the button class which can
 // also be used on links.
-a:not([class*="btn-"]) {
+
+// a:not([class*="btn-"])
+a {
   transition-duration: $link-transition-duration;
   transition-property: $link-transition-props;
 
-  &:focus, &:hover {
-    transition-duration: $link-transition-duration-hover;
+  &:hover, &:focus {
+    transition-duration: $link-transition-hover-duration;
   }
 
   // Standard Colours
   // ———————————————————————————————————————————————————————————————————————————
-  //
-  // Simple white links for use on dark backgrounds, you'll want to combine this
-  // with `dim` if the surrounding text is also white.
   [data-bk-links~="white"] & {
     color: white;
-  }
-
-  [data-bk-links~="h:white"] & {
-    &:focus, &:hover {
-      color: white;
-    }
-  }
-
-  [data-bk-links~="black"] & {
-    color: black;
-  }
-
-  [data-bk-links~="h:black"] & {
-    &:focus, &:hover {
-      color: black;
-    }
-  }
-
-  [data-bk-links~="primary"] & {
-    color: $color-primary;
-  }
-
-  [data-bk-links~="h:primary"] & {
-    &:focus, &:hover {
-      color: $color-primary;
-    }
-  }
-
-  [data-bk-links~="bg-primary"] & {
-    background-color: $color-primary;
-  }
-
-  [data-bk-links~="h:bg-primary"] & {
-    &:focus, &:hover {
-      background-color: $color-primary;
-    }
-  }
-
-  [data-bk-links~="secondary"] & {
-    color: $color-secondary;
-  }
-
-  [data-bk-links~="h:secondary"] & {
-    &:focus, &:hover {
-      color: $color-secondary;
-    }
-  }
-
-  [data-bk-links~="bg-secondary"] & {
-    background-color: $color-secondary;
-  }
-
-  [data-bk-links~="h:bg-secondary"] & {
-    &:focus, &:hover {
-      background-color: $color-secondary;
-    }
-  }
-
-  [data-bk-links~="tertiary"] & {
-    color: $color-tertiary;
-  }
-
-  [data-bk-links~="h:tertiary"] & {
-    &:focus, &:hover {
-      color: $color-tertiary;
-    }
   }
 
   [data-bk-links~="grey"] & {
     color: $color-grey;
   }
 
+  [data-bk-links~="black"] & {
+    color: black;
+  }
+
+  [data-bk-links~="primary"] & {
+    color: $color-primary;
+  }
+
+  [data-bk-links~="secondary"] & {
+    color: $color-secondary;
+  }
+
+  [data-bk-links~="tertiary"] & {
+    color: $color-tertiary;
+  }
+
+  // Background Colours
+  // ———————————————————————————————————————————————————————————————————————————
+  [data-bk-links~="bg-white"] & {
+    background-color: white;
+  }
+
+  [data-bk-links~="bg-grey"] & {
+    background-color: $color-grey;
+  }
+
+  [data-bk-links~="bg-black"] & {
+    background-color: black;
+  }
+
+  [data-bk-links~="bg-primary"] & {
+    background-color: $color-primary;
+  }
+
+  [data-bk-links~="bg-secondary"] & {
+    background-color: $color-secondary;
+  }
+
+  [data-bk-links~="bg-tertiary"] & {
+    background-color: $color-tertiary;
+  }
+
+  // Standard Hover Colours
+  // ———————————————————————————————————————————————————————————————————————————
+  [data-bk-links~="h:white"] & {
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+
   [data-bk-links~="h:grey"] & {
-    &:focus, &:hover {
+    &:hover, &:focus {
       color: $color-grey;
     }
   }
 
-  // Useful utilities
-  // ———————————————————————————————————————————————————————————————————————————
-  //
-  // Allow links to inherit the surrounding text colour.
-  // Commented out for now as it's a little redundant and possibly confusing.
-  // [data-bk-links~="inherit"] & {
-  //   color: inherit;
-  // }
+  [data-bk-links~="h:black"] & {
+    &:hover, &:focus {
+      color: black;
+    }
+  }
 
-  // Underline child links, notice this uses *= so that the styles applied here
-  // also apply to the following hover version.
+  [data-bk-links~="h:primary"] & {
+    &:hover, &:focus {
+      color: $color-primary;
+    }
+  }
+
+  [data-bk-links~="h:secondary"] & {
+    &:hover, &:focus {
+      color: $color-secondary;
+    }
+  }
+
+  [data-bk-links~="h:tertiary"] & {
+    &:hover, &:focus {
+      color: $color-tertiary;
+    }
+  }
+
+  // Standard Hover Background Colours
+  // ———————————————————————————————————————————————————————————————————————————
+  [data-bk-links~="h:bg-white"] & {
+    &:hover, &:focus {
+      background-color: white;
+    }
+  }
+
+  [data-bk-links~="h:bg-grey"] & {
+    &:hover, &:focus {
+      background-color: $color-grey;
+    }
+  }
+
+  [data-bk-links~="h:bg-black"] & {
+    &:hover, &:focus {
+      background-color: black;
+    }
+  }
+
+  [data-bk-links~="h:bg-primary"] & {
+    &:hover, &:focus {
+      background-color: $color-primary;
+    }
+  }
+
+  [data-bk-links~="h:bg-secondary"] & {
+    &:hover, &:focus {
+      background-color: $color-secondary;
+    }
+  }
+
+  [data-bk-links~="h:bg-tertiary"] & {
+    &:hover, &:focus {
+      background-color: $color-tertiary;
+    }
+  }
+
+  // Link Utilities
+  // ———————————————————————————————————————————————————————————————————————————
   [data-bk-links~="underline"] & {
     text-decoration: underline;
     text-decoration-color: currentColor;
     text-decoration-skip-ink: auto;
   }
 
-  [data-bk-links~="h:underline"] & {
-    // text-decoration-color: transparent;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-      text-decoration-color: currentColor;
-      text-decoration-skip-ink: auto;
-    }
-  }
-
-  // Force underline text off if required (e.g. the link is inside a container
-  // with underline enabled but you want this specific links not to have an
-  // underline).
   [data-bk-links~="no-underline"] & {
     text-decoration-line: none;
   }
 
-  [data-bk-links~="h:no-underline"] & {
-    &:focus, &:hover {
-      text-decoration-line: none;
-    }
-  }
-
-  // Apply a subtle dimming effect to the link, I find this is often used with
-  // white text on a dark background when the links are also white.
   [data-bk-links~="dim"] & {
-    opacity: $link-dim-value;
-  }
-
-  [data-bk-links~="h:dim"] & {
-    &:focus, &:hover {
-      opacity: $link-dim-value;
-    }
+    opacity: $link-opacity-value;
   }
 
   [data-bk-links~="no-dim"] & {
     opacity: 1;
   }
 
+  // Link Hover Utilities
+  // ———————————————————————————————————————————————————————————————————————————
+  [data-bk-links~="h:underline"] & {
+    &:hover, &:focus {
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-decoration-skip-ink: auto;
+    }
+  }
+
+  [data-bk-links~="h:no-underline"] & {
+    &:hover, &:focus {
+      text-decoration-line: none;
+    }
+  }
+
+  [data-bk-links~="h:dim"] & {
+    &:hover, &:focus {
+      opacity: $link-opacity-value;
+    }
+  }
+
   [data-bk-links~="h:no-dim"] & {
-    &:focus, &:hover {
+    &:hover, &:focus {
       opacity: 1;
     }
   }
