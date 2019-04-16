@@ -89,13 +89,13 @@
 
     <div class=bg-white>
       <div class="container pad">
-        <h3 data-bk-layout="p:rl" class="font-lg">Dropdown toggler</h3>
+        <h3 data-bk-layout="p:rl" class="font-lg">Dropdown</h3>
 
         <div data-bk-layout="p:trl" class="filter-dropdown">
           <button type="button"
             class="filter-dropdown-button btn-primary br-md font-bold no-js-dn"
             data-toggle-class="is-open"
-            data-toggle-target-next
+            data-toggle-target="#filterDropdownList"
             data-toggle-outside
             data-toggle-escape
             id="filterDropdown"
@@ -121,6 +121,7 @@
         </div>
 
 
+        <h3 data-bk-layout="p:trl" class="font-lg">Modal/Dialog</h3>
 
         <div data-bk-layout="p:trl">
           <button type="button"
@@ -156,12 +157,15 @@
         </div>
 
 
+
+
+        <h3 data-bk-layout="p:trl" class="font-lg">Tabs</h3>
         <div data-bk-layout="p:trl" class="tabs" role="tablist">
           <a href="#tabPanel_4"
             id="tab_4"
             data-toggle-class
             data-toggle-target="#tabPanel_4"
-            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-group="tabsGroup_2"
             data-toggle-arrows
             data-toggle-is-active
             role="tab"
@@ -175,7 +179,7 @@
             id="tab_5"
             data-toggle-class
             data-toggle-target="#tabPanel_5"
-            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-group="tabsGroup_2"
             data-toggle-arrows
             role="tab"
             aria-selected="false"
@@ -188,7 +192,7 @@
             id="tab_6"
             data-toggle-class
             data-toggle-target="#tabPanel_6"
-            data-toggle-radio-group="tabsGroup_2"
+            data-toggle-group="tabsGroup_2"
             data-toggle-arrows
             role="tab"
             aria-selected="false"
@@ -217,6 +221,9 @@
             <h3 class="font-bold font-md">Panel 3</h3>
             <p>Nam posuere tortor a augue vulputate, at blandit ipsum tincidunt. Donec dictum eros ligula, id congue justo porta eget. Aliquam vel erat venenatis, ornare nisi vel, convallis libero.</p>
           </div>
+        </div>
+
+
         </div>
       </div>
     </div>
@@ -665,13 +672,12 @@
       </div>
     </footer>
 
-    <script src=//code.jquery.com/jquery-2.2.4.min.js></script>
+    <script type="text/javascript" src=//code.jquery.com/jquery-2.2.4.min.js></script>
     <!-- <script src=//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js></script> -->
-    <script src=/assets/js/jquery.smartmenus.js></script>
-    <!-- <script src=/assets/js/jquery.smoothPageScroll.js></script> -->
-    <script src=/assets/js/basekit.min.js></script>
+    <script type="text/javascript" src=/assets/js/jquery.smartmenus.min.js></script>
+    <script type="text/javascript" src=/assets/js/basekit.js></script>
 
-    <script src="/assets/js/easy-toggle-state.es6.min.js"></script>
+    <script type="text/javascript" src="/assets/js/easy-toggle-state.es6.min.js"></script>
 
   </body>
 </html>
