@@ -51,18 +51,18 @@ gulp.task("cleancss", () => {
 // scripts and JS files in the js/plugins directory so basekit.js comes last.
 // Order your plugin JS files by renaming them with a number (01, 02, 03, etc)
 // to have them concat into that specific order.
-gulp.task("js", () => {
-  return gulp
-    .src("./src/js/**/*.js")
-    .pipe(order([
-        'plugins/*.js',
-        'basekit.js'
-      ]))
-    .pipe(concat('basekit.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest("./public/assets/js/")
-  );
-});
+// gulp.task("js", () => {
+//   return gulp
+//     .src("./src/js/**/*.js")
+//     .pipe(order([
+//         'plugins/*.js',
+//         'basekit.js'
+//       ]))
+//     .pipe(concat('basekit.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest("./public/assets/js/")
+//   );
+// });
 
 // IMAGES: Optimisation of various image file types.
 gulp.task("images", () => {
@@ -86,6 +86,6 @@ gulp.task("images", () => {
 // Watch CSS, JS and Images for changes and run their related task.
 gulp.task("default", () => {
   gulp.watch("./src/sass/**/*.scss", gulp.series("cleancss"));
-  gulp.watch("./src/js/**/*.js", gulp.series("js"));
+  // gulp.watch("./src/js/**/*.js", gulp.series("js"));
   gulp.watch("./src/imgs/**/*", gulp.series("images"));
 });

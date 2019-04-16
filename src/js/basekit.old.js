@@ -13,15 +13,15 @@
 
   // Smart Menus script yo
   // https://www.smartmenus.org/docs/
-  $("#nav-primary-list").smartmenus({
-    subIndicators: false,
-    subMenusMinWidth: "15em",
-    subMenusMaxWidth: "20em",
-    collapsibleBehavior: 'accordion',
-    subMenusSubOffsetX: -1,
-    mainMenuSubOffsetY: 1,
-    showFunction: function($ul, complete) { $ul.fadeIn(250, complete); },
-  });
+  // $("#nav-primary-list").smartmenus({
+  //   subIndicators: false,
+  //   subMenusMinWidth: "15em",
+  //   subMenusMaxWidth: "20em",
+  //   collapsibleBehavior: 'accordion',
+  //   subMenusSubOffsetX: -1,
+  //   mainMenuSubOffsetY: 1,
+  //   showFunction: function($ul, complete) { $ul.fadeIn(250, complete); },
+  // });
 
   /// See https://github.com/kamem/jquery.smoothPageScroll
   // Smooth scroll any links with a #
