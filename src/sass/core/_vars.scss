@@ -27,13 +27,20 @@ $max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns
 
 
 // —————————————————————————————————————————————————————————————————————————————
+// MARGIN
+// —————————————————————————————————————————————————————————————————————————————
+
+$margin-size: ($margin / 16) * 1rem !default;
+
+
+// —————————————————————————————————————————————————————————————————————————————
 // TRANSITION SPEEDS
 // —————————————————————————————————————————————————————————————————————————————
 
 // Set a standard range of animation speeds
+$speed-slow: 0.5s !default;
 $speed-normal: 0.25s !default;
 $speed-fast: 0.1s !default;
-$speed-slow: 0.5s !default;
 
 
 // —————————————————————————————————————————————————————————————————————————————
@@ -342,20 +349,13 @@ $list-number-position: "outside" !default;
 
 
 // —————————————————————————————————————————————————————————————————————————————
-// MARGIN
-// —————————————————————————————————————————————————————————————————————————————
-
-$margin-size: ($margin / 16) * 1rem !default;
-
-
-// —————————————————————————————————————————————————————————————————————————————
 // NAVIGATION
 // —————————————————————————————————————————————————————————————————————————————
 
 // Basic nav class configs
-$nav-rl-pad: 1em !default;
-$nav-tb-pad: 0.5em !default;
-$nav-crumb-pad: 0.5em !default;
+$nav-rl-pad: $margin-size !default;
+$nav-tb-pad: ($margin-size / 2) !default;
+$nav-crumb-pad: ($margin-size / 2) !default;
 
 
 // ----------------------------------------------------------
