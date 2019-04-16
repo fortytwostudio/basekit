@@ -5,19 +5,14 @@
 // —————————————————————————————————————————————————————————————————————————————
 @include mq($until: $nav-switch-point) {
   .nav-primary-layout {
-    // Basic styling for no-js situations
-    .no-js & {
-      width: 100% !important;
-
-      li {
-        display: inline-block;
-        width: auto;
-      }
+    li {
+      display: inline-block;
+      width: 100%;
     }
 
     // Only style up the nav fully if js is enabled.
     .js & {
-      border-radius: 3px;
+      border-radius: 8px;
       box-shadow: 0 12px 38px -8px rgba(black, 0.75);
       max-width: 400px;
       overflow: hidden;
@@ -59,17 +54,31 @@
         display: inline-block;
         vertical-align: middle;
         width: auto;
+        margin-left: 0.75em;
+
+        > a {
+          border-radius: $br-sm;
+          color: white;
+          padding: ($margin-size / 2) $margin-size;
+          transition: $speed-slow ease-in-out;
+          transition-property: color, background-color;
+
+          &:hover,
+          &:focus,
+          &.current,
+          &.highlighted {
+            background-color: white;
+            color: $color-primary;
+            transition-duration: $speed-fast;
+          }
+
+          &.current {
+            background-color: rgba(white, 0.25);
+            color: white;
+          }
+        }
       }
     }
 
-    a {
-      &:hover,
-      &:focus,
-      &.current,
-      &.highlighted {
-        background-color: $sm-bk__desktop-item-hover-bg;
-        color: $sm-bk__desktop-item-color;
-      }
-    }
   }
 }

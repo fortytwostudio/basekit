@@ -4,65 +4,53 @@
     .has-submenu {
       // Simply make relative so we can anchor sub menus to the link
       position: relative;
-
-      .js & {
-        // Make some space for the indicator
-        padding-right: $sm-bk__desktop-item-padding-horizontal + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
-      }
-
-      // This class is applied via the JS plugin and keeps the item highlighted as long as you're on a child
-      &.highlighted {
-        background-color: black;
-      }
+      // Make some space for the indicator
+      padding-right: $sm-bk__desktop-item-padding-horizontal + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
     }
 
     // Any child lists
     &__child-list {
-      box-shadow: 0 8px 8px -2px rgba(black, 0.4);
+      background-color: $color-tertiary;
+      box-shadow: 0 2px 8px -2px rgba(black, 0.4);
       line-height: 1.4;
       position: absolute;
       text-align: left;
+      border-radius: 4px;
 
-      li:not(:first-child) {
-        border-top: $sm-bk__desktop-separators-size solid #2a2a2a;
+      // This class is applied via the JS plugin and keeps the item highlighted as long as you're on a child
+      &.highlighted {
+        color: white;
+        background-color: $color-secondary;
       }
 
       li:first-child > a {
-        border-radius: 5px 5px 0 0;
+        border-radius: 4px 4px 0 0;
       }
 
       li:last-child > a {
-        border-radius: 0 0 5px 5px;
+        border-radius: 0 0 4px 4px;
       }
 
-      li:only-child > a {
-        border-radius: 5px;
+      li:not(:first-child) {
+        border-top: $sm-bk__desktop-separators-size solid rgba(white, 0.15);
       }
 
       a {
-        background-color: $color-black--tint;
-        color: white;
-
         &,
         &:hover,
         &:focus,
         &.current,
         &.highlighted {
           color: white;
-          padding-top: $sm-bk__desktop-item-padding-vertical;
-          // Right padding is handled above
-          padding-bottom: $sm-bk__desktop-item-padding-vertical;
-          padding-left: $sm-bk__desktop-item-padding-horizontal;
+          padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
+          transition: background-color $speed-normal ease-in-out;
         }
 
         &:hover,
         &:focus,
         &.current,
         &.highlighted {
-          background-color: black;
-        }
-        &.current {
-          font-weight: 600;
+          background-color: $color-secondary;
         }
       }
     }
@@ -71,7 +59,7 @@
     .sub-arrow {
       font: #{$sm-bk__font-size-base} / 16px monospace !important;
       height: 16px;
-      margin-top: -8px;
+      margin-top: -6px;
       overflow: hidden;
       position: absolute;
       right: $sm-bk__desktop-item-padding-horizontal / 2;
