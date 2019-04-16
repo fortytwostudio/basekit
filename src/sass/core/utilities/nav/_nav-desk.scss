@@ -1,9 +1,17 @@
 @include mq($sm-bk__desktop-vp) {
   // The top level list
   .sm-bk {
+    // So we can attach the child navs to the top level
+    position: relative;
+    z-index: $z-mobile-nav;
+
+    &__top-level-item {
+      position: relative;
+    }
+
     .has-submenu {
       // Simply make relative so we can anchor sub menus to the link
-      position: relative;
+      // position: relative;
       // Make some space for the indicator
       padding-right: $sm-bk__desktop-item-padding-horizontal + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
     }
@@ -11,40 +19,30 @@
     // Any child lists
     &__child-list {
       background-color: $color-tertiary;
-      box-shadow: 0 2px 8px -2px rgba(black, 0.4);
-      line-height: 1.4;
+      // box-shadow: 0 2px 8px -2px rgba(black, 0.4);
+      // line-height: 1.4;
       position: absolute;
-      text-align: left;
-      border-radius: 4px;
+      // text-align: left;
+      // border-radius: 4px;
 
-      // This class is applied via the JS plugin and keeps the item highlighted as long as you're on a child
-      &.highlighted {
-        color: white;
-        background-color: $color-secondary;
-      }
-
-      li:first-child > a {
-        border-radius: 4px 4px 0 0;
-      }
-
-      li:last-child > a {
-        border-radius: 0 0 4px 4px;
-      }
-
-      li:not(:first-child) {
-        border-top: $sm-bk__desktop-separators-size solid rgba(white, 0.15);
-      }
+      // li:first-child > a {
+      //   border-radius: 4px 4px 0 0;
+      // }
+      //
+      // li:last-child > a {
+      //   border-radius: 0 0 4px 4px;
+      // }
+      //
+      // li:not(:first-child) {
+      //   border-top: $sm-bk__desktop-separators-size solid rgba(white, 0.15);
+      // }
 
       a {
-        &,
-        &:hover,
-        &:focus,
-        &.current,
-        &.highlighted {
-          color: white;
-          padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
-          transition: background-color $speed-normal ease-in-out;
-        }
+        color: white;
+        display: block;
+        padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
+        position: relative;
+        transition: background-color $speed-normal ease-in-out;
 
         &:hover,
         &:focus,

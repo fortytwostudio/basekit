@@ -8,7 +8,7 @@ $sm-bk__item-height: $sm-bk__line-height + $sm-bk__collapsible-item-padding-vert
 $sm-bk__toggle-size: floor($sm-bk__item-height * 0.8);
 $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
-@mixin sm-bk__sub-items-indentation($amount, $chainable: 'ul ', $level: 4, $chain: '') {
+@mixin sm-bk__sub-items-indentation($amount, $chainable: 'ul ', $level: 3, $chain: '') {
   @for $i from 1 through $level {
     $chain: $chain + $chainable;
     #{$chain} a,
@@ -19,10 +19,9 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
     }
   }
 }
-
+//
 @include mq($until: $sm-bk__desktop-vp) {
   .sm-bk {
-    // Set the MQ styles will apply up to so we don't have to unset stuff for desktop
 
     a {
       &,
@@ -30,7 +29,9 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       &:focus,
       &:active {
         color: $sm-bk__collapsible-item-color;
+        display: block;
         padding: $sm-bk__collapsible-item-padding-vertical $sm-bk__collapsible-item-padding-horizontal;
+        width: 100%;
       }
 
       &.current {
@@ -40,17 +41,12 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
       // make room for the toggle button (sub indicator)
       &.has-submenu {
-        .js & {
-          padding-right: $sm-bk__collapsible-item-padding-horizontal + $sm-bk__toggle-size + $sm-bk__toggle-spacing;
-        }
+        position: relative;
+        padding-right: $sm-bk__collapsible-item-padding-horizontal + $sm-bk__toggle-size + $sm-bk__toggle-spacing;
       }
 
       // Toggle buttons (sub menu indicators)
       .sub-arrow {
-        .no-js & {
-          display: none;
-        }
-
         font: 900 #{$sm-bk__font-size-base}/#{$sm-bk__toggle-size} monospace !important;
         height: $sm-bk__toggle-size;
         left: auto;
@@ -70,31 +66,14 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       }
     }
 
-
-    // Main menu items separators
-    li {
-      border-top: $sm-bk__desktop-separators-size solid $sm-bk__collapsible-separators-color;
-    }
-    // Nae the first one though
-    > li:first-child {
-      border: 0;
-    }
-
     // Sub menus box
     &__child-list {
-      // Sub menus items
       a {
-        &,
-        &:hover,
-        &:focus,
-        &:active {
-          // Add indentation for sub menus
-          border-left: $sm-bk__collapsible-sub-item-indentation solid transparent;
-        }
+        border-left: $sm-bk__collapsible-sub-item-indentation solid transparent;
       }
 
-      // Add indentation for sub menus text for deeper levels
       @include sm-bk__sub-items-indentation($sm-bk__collapsible-sub-item-indentation);
     }
+
   }
 }

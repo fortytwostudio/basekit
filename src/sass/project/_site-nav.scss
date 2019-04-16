@@ -12,7 +12,7 @@
 
     // Only style up the nav fully if js is enabled.
     .js & {
-      border-radius: 8px;
+      // border-radius: 8px;
       box-shadow: 0 12px 38px -8px rgba(black, 0.75);
       max-width: 400px;
       overflow: hidden;
@@ -34,6 +34,13 @@
           max-height: 2000px;
           opacity: 1;
           visibility: visible;
+        }
+
+        &-list {
+          // Main menu items separators
+          li:not(:first-child) {
+            border-top: $sm-bk__desktop-separators-size solid $sm-bk__collapsible-separators-color;
+          }
         }
       }
     }
