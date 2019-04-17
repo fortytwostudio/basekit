@@ -31,11 +31,11 @@
               type="button"
               class="hamburger hamburger--spin"
               data-toggle-class
-              data-toggle-target="#nav-primary"
+              data-toggle-target="#nav-primary-container"
               data-toggle-outside
               data-toggle-escape
               aria-haspopup="navigation"
-              aria-controls="nav-primary"
+              aria-controls="nav-primary-container"
               aria-expanded="false">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
@@ -44,11 +44,11 @@
           </div>
 
 
-          <div data-bk-layout='np auto' class='is-home nav-primary-layout'>
-            <nav id=nav-primary class=nav-primary aria-labelledby=nav-toggler>
-              <h2 class=hide>Site Navigation</h2>
+          <div data-bk-layout="np auto" class="nav-primary-container" id="nav-primary-container">
+            <nav class="nav-primary" id="nav-primary">
+              <h2 class="hide">Site Navigation</h2>
 
-              <ul id="nav-primary-list" class="sm sm-bk nav-primary-list">
+              <ul class="sm sm-bk nav-primary-list" id="nav-primary-list">
                 <li class="sm-bk__top-level-item">
                   <a href="#">Home</a>
                 </li>
@@ -59,7 +59,6 @@
 
                 <li class="sm-bk__top-level-item">
                   <a class="current has-submenu" href="#">
-                    <span class="sub-arrow">+</span>
                     About Us
                   </a>
                   <ul class="sm-bk__child-list">
@@ -69,14 +68,12 @@
 
                     <li>
                       <a href="#" class="current has-submenu">
-                        <span class="sub-arrow">+</span>
                         Our History
                       </a>
                       <ul class="sm-bk__child-list">
                         <li><a href="#">Our History and more info</a></li>
                         <li>
                           <a href="#" class="current has-submenu">
-                            <span class="sub-arrow">+</span>
                             The Board
                           </a>
                           <ul class="sm-bk__child-list">
@@ -108,7 +105,6 @@
 
                     <li>
                       <a href="#" class="has-submenu">
-                        <span class="sub-arrow">+</span>
                         Our Staff
                       </a>
                       <ul class="sm-bk__child-list">
@@ -116,7 +112,6 @@
                         <li><a href="#">Sub page item</a></li>
                         <li>
                           <a href="#" class="has-submenu">
-                            <span class="sub-arrow">+</span>
                             Sub page item
                           </a>
                           <ul class="sm-bk__child-list">

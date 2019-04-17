@@ -16,6 +16,7 @@
 @import "tools/rem";
 @import "tools/reverse-list";
 @import "tools/viewport-units";
+@import "tools/nav-item-indentation";
 
 // GLOBALS RESET
 @import "utilities/general/reset";
@@ -52,6 +53,4 @@
 @import "utilities/text/hide-text";
 
 // MAIN FRAMEWORK
-@import "utilities/nav/_nav-all";
-@import "utilities/nav/_nav-mobile";
-@import "utilities/nav/_nav-desk";
+@import "utilities/nav/_primary-navigation";

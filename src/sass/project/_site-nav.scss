@@ -4,69 +4,73 @@
 // later on at the desktop size
 // —————————————————————————————————————————————————————————————————————————————
 @include mq($until: $nav-switch-point) {
-  .nav-primary-layout {
-    li {
-      display: inline-block;
-      width: 100%;
+  a {
+    color: white;
+    padding: $nav-dd-vertical-padding $nav-dd-horizontal-padding;
+    -webkit-tap-highlight-color: rgba(black, 0);
+
+    &.current {
+      background-color: $color-primary--light;
     }
 
-    // Only style up the nav fully if js is enabled.
-    .js & {
-      // border-radius: 8px;
+    &.highlighted,
+    &:hover,
+    &:focus {
+      background-color: $color-primary--darker;
+    }
+  }
+
+  // Only style up the nav fully if js is enabled.
+  .js {
+    .nav-primary {
+      background-color: $color-primary--dark;
+      border-radius: 8px;
       box-shadow: 0 12px 38px -8px rgba(black, 0.75);
-      max-width: 400px;
-      overflow: hidden;
-      position: absolute;
-      right: 4%;
-      top: calc(100% - 0.5rem);
-      // width: 92%;
-      z-index: $z-mobile-nav;
 
-      // Also make the content full width
-      .nav-primary {
-        background-color: $sm-bk__desktop-bg;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
 
-        &.is-active {
-          max-height: 2000px;
-          opacity: 1;
-          visibility: visible;
-        }
-
-        &-list {
-          // Main menu items separators
-          li:not(:first-child) {
-            border-top: $sm-bk__desktop-separators-size solid $sm-bk__collapsible-separators-color;
-          }
-        }
+      li:not(:first-child) {
+        border-top: 1px solid rgba(black, 0.1);
       }
     }
   }
 }
 
 // —————————————————————————————————————————————————————————————————————————————
-// DESKTOP
+// DESKTOP TOP LEVEL
 // —————————————————————————————————————————————————————————————————————————————
 @include mq($nav-switch-point) {
   // Get rid of the hamburger at larger screen sizes
   .nav-toggler-wrapper { display: none; }
 
   .nav-primary {
-    // The top level nav list
     > ul {
+        li ul {
+          background-color: rgba(orange, 0.33);
+        //   box-shadow: 0 2px 8px -2px rgba(black, 0.4);
+        //   line-height: 1.4;
+        //   position: absolute;
+        //   text-align: left;
+        //   border-radius: 4px;
+        //
+        //   li:first-child > a {
+        //     border-radius: 4px 4px 0 0;
+        //   }
+        //
+        //   li:last-child > a {
+        //     border-radius: 0 0 4px 4px;
+        //   }
+        //
+        //   li:not(:first-child) {
+        //     border-top: $sm-bk__desktop-separators-size solid rgba(white, 0.15);
+        //   }
+        }
+
       > li {
-        display: inline-block;
-        vertical-align: middle;
-        width: auto;
-        margin-left: 0.75em;
 
         > a {
           border-radius: $br-sm;
           color: white;
-          padding: ($margin-size / 2) $margin-size;
+          padding: ($nav-dd-vertical-padding / 2) $nav-dd-horizontal-padding;
           transition: $speed-slow ease-in-out;
           transition-property: color, background-color;
 
