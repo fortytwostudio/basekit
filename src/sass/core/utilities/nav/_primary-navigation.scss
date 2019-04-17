@@ -19,11 +19,6 @@
   padding-right: 2em;
 
   &::after {
-    position: absolute;
-    top: 50%;
-    right: 0.5em;
-    margin-top: -0.5em;
-
     background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+');
     background-position: contain;
     background-size: contain;
@@ -31,16 +26,28 @@
     content: '';
     display: inline-block;
     height: 1em;
-    transition: transform $speed-fast ease-in-out;
+    margin-top: -0.5em;
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
     transform: rotate(0);
+    transition: transform $speed-fast ease-in-out;
     vertical-align: bottom;
     width: 1em;
   }
 }
 
-// Add the dropdown indicator if JS is enabled.
-.js .nav-primary .highlighted.has-submenu::after {
-  transform: rotate(45deg);
+@include mq($until: $nav-switch-point) {
+  .js .nav-primary {
+    .has-submenu::after {
+        transform: rotate(0);
+        transition: transform $speed-fast ease-in-out;
+    }
+    // Add the dropdown indicator if JS is enabled.
+    .highlighted.has-submenu::after {
+      transform: rotate(45deg);
+    }
+  }
 }
 
 
@@ -56,9 +63,9 @@ $sm-bk__toggle-size: floor($sm-bk__item-height * 0.8);
 $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
 @include mq($until: $nav-switch-point) {
-  // Hide and display the nav container
   .js {
-    .nav-primary-container {
+    // Hide and display the nav container
+    .nav-primary {
       display: block;
       max-height: 0;
       max-width: 300px;
@@ -71,7 +78,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       width: 92%;
       z-index: $z-mobile-nav;
 
-      &.is-active {
+      &.is-open {
         max-height: 9000px;
         opacity: 1;
         overflow: visible;
@@ -83,9 +90,10 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       }
     }
 
-    .nav-primary-list {
+    .nav-primary__list {
       a {
         display: block;
+        position: relative;
         width: 100%;
       }
 
