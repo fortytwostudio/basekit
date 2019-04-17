@@ -38,7 +38,6 @@
 // UTILITY CLASSES
 @import "utilities/general/forms";
 // @import "utilities/general/alerts"; // Removing this
-@import "utilities/general/nav";
 @import "utilities/general/borders";
 @import "utilities/general/border-radius";
 @import "utilities/general/box-shadow";
@@ -53,4 +52,5 @@
 @import "utilities/text/hide-text";
 
 // MAIN FRAMEWORK
+@import "utilities/nav/nav";
 @import "utilities/nav/_primary-navigation";
