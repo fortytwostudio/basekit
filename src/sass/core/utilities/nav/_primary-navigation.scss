@@ -8,6 +8,10 @@
       display: block;
     }
   }
+
+  a {
+    -webkit-tap-highlight-color: rgba(black, 0);
+  }
 }
 
 // Add the dropdown indicator if JS is enabled.
@@ -22,6 +26,7 @@
   content: '';
   display: inline-block;
   height: 1em;
+  margin-left: ($margin-size / 2);
   vertical-align: bottom;
   width: 1em;
 }
@@ -45,46 +50,47 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
 @include mq($until: $nav-switch-point) {
   // Hide and display the nav container
-  .nav-primary-container {
-    display: block;
-    max-height: 0;
-    max-width: 300px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    right: 4%;
-    top: calc(100% - 0.5rem);
-    visibility: hidden;
-    width: 92%;
-    z-index: $z-mobile-nav;
-
-    &.is-active {
-      max-height: 9000px;
-      opacity: 1;
-      overflow: visible;
-      visibility: visible;
-    }
-
-    li {
-      width: 100%;
-    }
-  }
-
-  .sm-bk {
-    a {
+  .js {
+    .nav-primary-container {
       display: block;
-      width: 100%;
-    }
+      max-height: 0;
+      max-width: 300px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 4%;
+      top: calc(100% - 0.5rem);
+      visibility: hidden;
+      width: 92%;
+      z-index: $z-mobile-nav;
 
-    // Sub menus box
-    &__child-list {
-      a {
-        border-left: $margin-size solid transparent;
+      &.is-active {
+        max-height: 9000px;
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
       }
 
-      @include recursively-indentation-child-items-by($margin-size);
+      li {
+        width: 100%;
+      }
     }
 
+    .nav-primary-list {
+      a {
+        display: block;
+        width: 100%;
+      }
+
+      // Sub menus box
+      ul {
+        a {
+          border-left: $margin-size solid transparent;
+        }
+
+        @include recursively-indentation-child-items-by($margin-size);
+      }
+    }
   }
 }
 
@@ -97,18 +103,18 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
   // The top level list
   .sm-bk {
     // So we can attach the child navs to the top level
-    position: relative;
-    z-index: $z-mobile-nav;
+    // position: relative;
 
     &__top-level-item {
       position: relative;
+      z-index: $z-mobile-nav;
     }
 
     .has-submenu {
       // Simply make relative so we can anchor sub menus to the link
       // position: relative;
       // Make some space for the indicator
-      padding-right: 20px + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
+      // padding-right: 20px + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
     }
 
     // Any child lists
@@ -116,36 +122,26 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
       position: absolute;
 
       a {
-        color: white;
         display: block;
-        padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
         position: relative;
-        transition: background-color $speed-normal ease-in-out;
-
-        &:hover,
-        &:focus,
-        &.current,
-        &.highlighted {
-          background-color: $color-secondary;
-        }
       }
     }
 
-    // Sub menu indicator styling
-    .sub-arrow {
-      font: 900 #{$font-size}/#{$sm-bk__toggle-size} monospace !important;
-      height: 16px;
-      margin-top: -6px;
-      overflow: hidden;
-      position: absolute;
-      right: $sm-bk__desktop-item-padding-horizontal / 2;
-      text-align: center;
-      top: 50%;
-      width: 0.8em;
-
-      // Simply bin it if JS is not enabled
-      .no-js & { display: none; }
-    }
+    // // Sub menu indicator styling
+    // .sub-arrow {
+    //   font: 900 #{$font-size}/#{$sm-bk__toggle-size} monospace !important;
+    //   height: 16px;
+    //   margin-top: -6px;
+    //   overflow: hidden;
+    //   position: absolute;
+    //   right: $sm-bk__desktop-item-padding-horizontal / 2;
+    //   text-align: center;
+    //   top: 50%;
+    //   width: 0.8em;
+    //
+    //   // Simply bin it if JS is not enabled
+    //   .no-js & { display: none; }
+    // }
 
 
 

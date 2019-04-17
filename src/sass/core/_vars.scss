@@ -363,15 +363,15 @@ $nav-crumb-pad: ($margin-size / 2) !default;
 // DROPDOWN NAV
 // —————————————————————————————————————————————————————————————————————————————
 $nav-switch-point: lg !default;
-$nav-dd-vertical-padding: $margin-size !default;
-$nav-dd-horizontal-padding: $margin-size !default;
+$nav-dd-vertical-padding: $margin-size / 1.5 !default;
+$nav-dd-horizontal-padding: $margin-size / 1.5 !default;
 
 // ----------------------------------------------------------
 // :: 1.7. Desktop main menu and sub menus
 // ----------------------------------------------------------
 // Items
 $sm-bk__desktop-item-padding-vertical: $margin-size !default;
-$sm-bk__desktop-item-padding-horizontal: $margin-size !default;
+$sm-bk__desktop-item-padding-horizontal: $margin-size / 1.5 !default;
 
 // Sub menu indicators
 $sm-bk__desktop-arrow-spacing: 4px !default;

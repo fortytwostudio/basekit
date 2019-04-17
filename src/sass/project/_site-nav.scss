@@ -4,19 +4,20 @@
 // later on at the desktop size
 // —————————————————————————————————————————————————————————————————————————————
 @include mq($until: $nav-switch-point) {
-  a {
-    color: white;
-    padding: $nav-dd-vertical-padding $nav-dd-horizontal-padding;
-    -webkit-tap-highlight-color: rgba(black, 0);
+  .nav-primary {
+    a {
+      color: white;
+      padding: $nav-dd-vertical-padding $nav-dd-horizontal-padding;
 
-    &.current {
-      background-color: $color-primary--light;
-    }
+      &.current {
+        background-color: $color-primary--light;
+      }
 
-    &.highlighted,
-    &:hover,
-    &:focus {
-      background-color: $color-primary--darker;
+      &.highlighted,
+      &:hover,
+      &:focus {
+        background-color: $color-primary--darker;
+      }
     }
   }
 
@@ -29,7 +30,7 @@
 
 
       li:not(:first-child) {
-        border-top: 1px solid rgba(black, 0.1);
+        border-top: 1px solid rgba(white, 0.1);
       }
     }
   }
@@ -42,54 +43,58 @@
   // Get rid of the hamburger at larger screen sizes
   .nav-toggler-wrapper { display: none; }
 
-  .nav-primary {
-    > ul {
-        li ul {
-          background-color: rgba(orange, 0.33);
-        //   box-shadow: 0 2px 8px -2px rgba(black, 0.4);
-        //   line-height: 1.4;
-        //   position: absolute;
-        //   text-align: left;
-        //   border-radius: 4px;
-        //
-        //   li:first-child > a {
-        //     border-radius: 4px 4px 0 0;
-        //   }
-        //
-        //   li:last-child > a {
-        //     border-radius: 0 0 4px 4px;
-        //   }
-        //
-        //   li:not(:first-child) {
-        //     border-top: $sm-bk__desktop-separators-size solid rgba(white, 0.15);
-        //   }
-        }
+  .nav-primary-list {
+    // Top level items only
+    > li > a {
+      border-radius: $br-sm;
+      color: white;
+      padding: ($nav-dd-vertical-padding / 1.5) $nav-dd-horizontal-padding;
+      transition: $speed-slow ease-in-out;
+      transition-property: color, background-color;
 
-      > li {
+      &:hover,
+      &:focus,
+      &.highlighted {
+        background-color: white;
+        color: $color-primary;
+      }
 
-        > a {
-          border-radius: $br-sm;
-          color: white;
-          padding: ($nav-dd-vertical-padding / 2) $nav-dd-horizontal-padding;
-          transition: $speed-slow ease-in-out;
-          transition-property: color, background-color;
-
-          &:hover,
-          &:focus,
-          &.current,
-          &.highlighted {
-            background-color: white;
-            color: $color-primary;
-            transition-duration: $speed-fast;
-          }
-
-          &.current {
-            background-color: rgba(white, 0.25);
-            color: white;
-          }
-        }
+      &.current {
+        background-color: rgba(white, 0.25);
+        color: white;
       }
     }
 
+    li ul {
+      box-shadow: 0 2px 8px -2px rgba(black, 0.4);
+
+      a {
+        padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
+        color: white;
+        background-color: $color-primary;
+
+        &:hover,
+        &:focus,
+        &.highlighted {
+          background-color: $color-primary--darker;
+        }
+
+        &.current {
+          background-color: $color-primary--light;
+        }
+      }
+
+      li:first-child > a {
+        border-radius: 4px 4px 0 0;
+      }
+
+      li:last-child > a {
+        border-radius: 0 0 4px 4px;
+      }
+
+      li:not(:first-child) {
+        border-top: 1px solid $color-primary--dark;
+      }
+    }
   }
 }
