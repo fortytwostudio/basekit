@@ -15,20 +15,27 @@
 }
 
 // Add the dropdown indicator if JS is enabled.
-.js .nav-primary .has-submenu::after {
-  float: right;
-  transition: transform $speed-fast ease-in-out;
+.js .nav-primary .has-submenu {
+  padding-right: 2em;
 
-  background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+');
-  background-position: contain;
-  background-size: contain;
-  color: white;
-  content: '';
-  display: inline-block;
-  height: 1em;
-  margin-left: ($margin-size / 2);
-  vertical-align: bottom;
-  width: 1em;
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    margin-top: -0.5em;
+
+    background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+');
+    background-position: contain;
+    background-size: contain;
+    color: white;
+    content: '';
+    display: inline-block;
+    height: 1em;
+    transition: transform $speed-fast ease-in-out;
+    transform: rotate(0);
+    vertical-align: bottom;
+    width: 1em;
+  }
 }
 
 // Add the dropdown indicator if JS is enabled.
