@@ -43,7 +43,7 @@
   // Get rid of the hamburger at larger screen sizes
   .nav-toggler-wrapper { display: none; }
 
-  .nav-primary-list {
+  .nav-primary__list {
     // Top level items only
     > li > a {
       border-radius: $br-sm;

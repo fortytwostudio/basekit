@@ -20,48 +20,50 @@
     <a class=skip-link href=#nav-primary>Skip to navigation</a>
 
     <div class='position-over bg-white--tint'>
-      <header id=site-header class=container>
-        <div data-bk-layout='wrap np i:center j:between' class="bg-primary">
-          <div data-bk-layout='auto' class=site-logo--container>
-            <h1 class='site-logo logo'><a style="filter: invert(100%);" class='site-logo__img logo__img' href='/'>Basekit Project</a></h1>
-          </div>
+      <div class="bg-black--tint">
+        <header id=site-header class=container>
+          <div data-bk-layout='wrap np i:center j:between'>
 
-          <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'>
-            <button id="nav-toggler"
-              type="button"
-              class="hamburger hamburger--spin"
-              data-toggle-class
-              data-toggle-target="#nav-primary"
-              data-toggle-outside
-              data-toggle-escape
-              aria-haspopup="navigation"
-              aria-controls="nav-primary"
-              aria-expanded="false">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
-          </div>
+            <div data-bk-layout="auto" class="site-logo--container">
+              <h1 class="site-logo logo">
+                <a class="site-logo__img logo__img" href="/">Basekit Project</a>
+              </h1>
+            </div>
 
+            <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'>
+              <button id="nav-toggler"
+                type="button"
+                class="hamburger hamburger--spin"
+                data-toggle-class="is-open"
+                data-toggle-target="#nav-primary"
+                data-toggle-outside
+                data-toggle-escape
+                aria-haspopup="navigation"
+                aria-controls="nav-primary"
+                aria-expanded="false">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
 
-          <div data-bk-layout="np auto" class="nav-primary-container" id="nav-primary">
-            <nav class="nav-primary">
+            <nav class="nav-primary" id="nav-primary">
               <h2 class="hide">Site Navigation</h2>
 
-              <ul class="sm sm-bk nav-primary-list" id="nav-primary-list">
-                <li class="sm-bk__top-level-item">
+              <ul class="sm sm-bk nav-primary__list" id="nav-primary-list">
+                <li class="nav-primary__top-level-item">
                   <a href="#home">Home</a>
                 </li>
 
-                <li class="sm-bk__top-level-item">
+                <li class="nav-primary__top-level-item">
                   <a href="#services">Services</a>
                 </li>
 
-                <li class="sm-bk__top-level-item">
+                <li class="nav-primary__top-level-item">
                   <a class="current has-submenu" href="#about">
                     About Us
                   </a>
-                  <ul class="sm-bk__child-list">
+                  <ul class="nav-primary__child-list">
                     <li>
                       <a href="#">The Board</a>
                     </li>
@@ -70,13 +72,13 @@
                       <a href="#" class="current has-submenu">
                         Our History
                       </a>
-                      <ul class="sm-bk__child-list">
+                      <ul class="nav-primary__child-list">
                         <li><a href="#">Our History and more info</a></li>
                         <li>
                           <a href="#" class="current has-submenu">
                             The Board
                           </a>
-                          <ul class="sm-bk__child-list">
+                          <ul class="nav-primary__child-list">
                             <li><a href="#">Sub page item</a></li>
                             <li><a href="#">Sub page item</a></li>
                             <li><a href="#">Sub page item</a></li>
@@ -107,14 +109,14 @@
                       <a href="#" class="has-submenu">
                         Our Staff
                       </a>
-                      <ul class="sm-bk__child-list">
+                      <ul class="nav-primary__child-list">
                         <li><a href="#">Sub page item</a></li>
                         <li><a href="#">Sub page item</a></li>
                         <li>
                           <a href="#" class="has-submenu">
                             Sub page item with a really long title to see how it breaks
                           </a>
-                          <ul class="sm-bk__child-list">
+                          <ul class="nav-primary__child-list">
                             <li><a href="#">Sub page item</a></li>
                             <li><a href="#">Sub page item</a></li>
                           </ul>
@@ -128,14 +130,15 @@
                   </ul>
                 </li>
 
-                <li class="sm-bk__top-level-item">
+                <li class="nav-primary__top-level-item">
                   <a href="#">Contact</a>
                 </li>
               </ul>
             </nav>
+
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
     </div>
 
 

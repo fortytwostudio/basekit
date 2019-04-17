@@ -116,7 +116,7 @@ $sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
 
 @include mq($nav-switch-point) {
   // The top level list
-  .sm-bk {
+  .nav-primary {
     // So we can attach the child navs to the top level
     // position: relative;
 
