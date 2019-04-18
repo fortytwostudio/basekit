@@ -1,4 +1,4 @@
-@mixin recursively-indentation-child-items-by($amount, $chainable: 'ul ', $level: 3, $chain: '') {
+@mixin recursively-indent-child-items-by($amount, $chainable: 'ul ', $level: 3, $chain: '') {
   @for $i from 1 through $level {
     $chain: $chain + $chainable;
     #{$chain} a,

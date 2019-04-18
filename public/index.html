@@ -19,133 +19,160 @@
     <a class=skip-link href=#content>Skip to content</a>
     <a class=skip-link href=#nav-primary>Skip to navigation</a>
 
-    <div class='position-over bg-white--tint'>
-      <div class="bg-black--tint">
-        <header id=site-header class=container>
-          <div data-bk-layout='wrap np i:center j:between'>
+    <div class="bg-black--tint">
+      <header id="site-header" class="position-over container">
+        <div data-bk-layout='wrap np i:center j:between'>
 
-            <div data-bk-layout="auto" class="site-logo--container">
-              <h1 class="site-logo logo">
-                <a class="site-logo__img logo__img" href="/">Basekit Project</a>
-              </h1>
-            </div>
-
-            <div data-bk-layout='np auto' class='nav-toggler-wrapper | no-js-dn'>
-              <button id="nav-toggler"
-                type="button"
-                class="hamburger hamburger--spin"
-                data-toggle-class="is-open"
-                data-toggle-target="#nav-primary"
-                data-toggle-outside
-                data-toggle-escape
-                aria-haspopup="navigation"
-                aria-controls="nav-primary"
-                aria-expanded="false">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-              </button>
-            </div>
-
-            <nav class="nav-primary" id="nav-primary">
-              <h2 class="hide">Site Navigation</h2>
-
-              <ul class="sm sm-bk nav-primary__list" id="nav-primary-list">
-                <li class="nav-primary__top-level-item">
-                  <a href="#home">Home</a>
-                </li>
-
-                <li class="nav-primary__top-level-item">
-                  <a href="#services">Services</a>
-                </li>
-
-                <li class="nav-primary__top-level-item">
-                  <a class="current has-submenu" href="#about">
-                    About Us
-                  </a>
-                  <ul class="nav-primary__child-list">
-                    <li>
-                      <a href="#">The Board</a>
-                    </li>
-
-                    <li>
-                      <a href="#" class="current has-submenu">
-                        Our History
-                      </a>
-                      <ul class="nav-primary__child-list">
-                        <li><a href="#">Our History and more info</a></li>
-                        <li>
-                          <a href="#" class="current has-submenu">
-                            The Board
-                          </a>
-                          <ul class="nav-primary__child-list">
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Our Staff</a></li>
-                        <li><a href="#">Our Staff</a></li>
-                        <li><a href="#">Our Staff</a></li>
-                        <li><a href="#">Our Staff</a></li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a href="#" class="has-submenu">
-                        Our Staff
-                      </a>
-                      <ul class="nav-primary__child-list">
-                        <li><a href="#">Sub page item</a></li>
-                        <li><a href="#">Sub page item</a></li>
-                        <li>
-                          <a href="#" class="has-submenu">
-                            Sub page item with a really long title to see how it breaks
-                          </a>
-                          <ul class="nav-primary__child-list">
-                            <li><a href="#">Sub page item</a></li>
-                            <li><a href="#">Sub page item</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li>
-                      <a href="#">Our Socials</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-primary__top-level-item">
-                  <a href="#">Contact</a>
-                </li>
-              </ul>
-            </nav>
-
+          <div data-bk-layout="auto" class="site-logo--container">
+            <h1 class="site-logo logo">
+              <a class="site-logo__img logo__img" href="/">Basekit Project</a>
+            </h1>
           </div>
-        </header>
-      </div>
+
+
+          <div data-bk-layout="np auto" class='nav-toggler-wrapper | no-js-dn'>
+            <button id="nav-toggler"
+              type="button"
+              class="hamburger hamburger--spin"
+              data-toggle-class="is-active"
+              data-toggle-target="#nav-primary"
+              data-toggle-outside
+              data-toggle-escape
+              aria-haspopup="navigation"
+              aria-controls="nav-primary"
+              aria-expanded="false">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+
+          <nav class="nav-primary" id="nav-primary">
+            <h2 class="hide">Site Navigation</h2>
+
+            <ul class="nav-primary__list" id="nav-primary-list">
+              <li class="nav-primary__top-level-item">
+                <a href="#home">Home</a>
+              </li>
+
+              <li class="nav-primary__top-level-item">
+                <a href="#services">Services</a>
+              </li>
+
+              <li class="nav-primary__top-level-item">
+                <a class="current has-submenu" href="#about">
+                  About Us
+                </a>
+                <ul class="nav-primary__child-list">
+                  <li>
+                    <a href="#">The Board</a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="current has-submenu">
+                      Our History
+                    </a>
+                    <ul class="nav-primary__child-list">
+                      <li><a href="#">Our History and more info</a></li>
+                      <li>
+                        <a href="#" class="current has-submenu">
+                          The Board
+                        </a>
+                        <ul class="nav-primary__child-list">
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Our Staff</a></li>
+                      <li><a href="#">Our Staff</a></li>
+                      <li><a href="#">Our Staff</a></li>
+                      <li><a href="#">Our Staff</a></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#" class="has-submenu">
+                      Our Staff
+                    </a>
+                    <ul class="nav-primary__child-list">
+                      <li><a href="#">Sub page item</a></li>
+                      <li><a href="#">Sub page item</a></li>
+                      <li>
+                        <a href="#" class="has-submenu">
+                          Sub page item with a really long title to see how it breaks
+                        </a>
+                        <ul class="nav-primary__child-list">
+                          <li><a href="#">Sub page item</a></li>
+                          <li><a href="#">Sub page item</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="#">Our Socials</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-primary__top-level-item">
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
     </div>
 
-
-
-
-
-    <div class=bg-white>
+    <div class="bg-white">
       <div class="container pad font-upper">
         <ul data-bk-layout="md:6 block" data-bk-links="primary h:secondary" class="nav">
           <li><a href="#">One</a></li>

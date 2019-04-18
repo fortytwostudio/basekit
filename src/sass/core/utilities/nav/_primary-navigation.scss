@@ -1,196 +1,105 @@
 .nav-primary {
-  li ul {
-    // By default we'll hide all child items by default to prevent broken
-    // layouts with JS disabled for whatever reason.
+  // By default we'll hide all child items by to prevent broken layouts if JS
+  // is disabled for whatever reason. Users should always be able to find
+  // child pages in other ways than the nav.
+  &__child-list {
     display: none;
-
-    li {
-      display: block;
-    }
-  }
-
-  a {
-    -webkit-tap-highlight-color: rgba(black, 0);
   }
 }
 
-// Add the dropdown indicator if JS is enabled.
-.js .nav-primary .has-submenu {
-  padding-right: 2em;
-
-  &::after {
-    background-image:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+');
-    background-position: contain;
-    background-size: contain;
-    color: white;
-    content: '';
-    display: inline-block;
-    height: 1em;
-    margin-top: -0.5em;
-    position: absolute;
-    right: 0.5em;
-    top: 50%;
-    transform: rotate(0);
-    transition: transform $speed-fast ease-in-out;
-    vertical-align: bottom;
-    width: 1em;
-  }
-}
-
+// Small screen (mobile) nav
+// —————————————————————————————————————————————————————————————————————————————
 @include mq($until: $nav-switch-point) {
   .js .nav-primary {
-    .has-submenu::after {
-        transform: rotate(0);
-        transition: transform $speed-fast ease-in-out;
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    z-index: $z-mobile-nav;
+
+    &.is-active {
+      max-height: 9000px;
+      opacity: 1;
+      overflow: visible;
+      visibility: visible;
     }
-    // Add the dropdown indicator if JS is enabled.
-    .highlighted.has-submenu::after {
-      transform: rotate(45deg);
-    }
-  }
-}
 
-
-// ----------------------------------------------------------
-// :: 2.1. Collapsible mode (mobile first)
-// ----------------------------------------------------------
-
-// calc item height and sub menus toggle button size
-// line height + vertical padding * 2
-$sm-bk__item-height: (1.1 + $nav-dd-vertical-padding) * 2;
-// set toggle button size to 80% of item height
-$sm-bk__toggle-size: floor($sm-bk__item-height * 0.8);
-$sm-bk__toggle-spacing: floor($sm-bk__item-height * 0.1);
-
-@include mq($until: $nav-switch-point) {
-  .js {
-    // Hide and display the nav container
-    .nav-primary {
+    li {
+      width: 100%;
       display: block;
-      max-height: 0;
-      max-width: 300px;
-      opacity: 0;
-      overflow: hidden;
-      position: absolute;
-      right: 4%;
-      top: calc(100% - 0.5rem);
-      visibility: hidden;
-      width: 92%;
-      z-index: $z-mobile-nav;
-
-      &.is-open {
-        max-height: 9000px;
-        opacity: 1;
-        overflow: visible;
-        visibility: visible;
-      }
-
-      li {
-        width: 100%;
-      }
     }
 
-    .nav-primary__list {
+    &__list {
       a {
         display: block;
         position: relative;
         width: 100%;
       }
+    }
 
-      // Sub menus box
-      ul {
-        a {
-          border-left: $margin-size solid transparent;
-        }
-
-        @include recursively-indentation-child-items-by($margin-size);
+    &__child-list {
+      a {
+        border-left: $margin-size solid transparent;
       }
+
+      @include recursively-indent-child-items-by($margin-size);
     }
   }
 }
 
 
-// ----------------------------------------------------------
-// :: 2.2. Desktop Nav
-// ----------------------------------------------------------
-
+// Larger screen (desktop) nav
+// —————————————————————————————————————————————————————————————————————————————
 @include mq($nav-switch-point) {
-  // The top level list
+  // Get rid of the hamburger
+  .nav-toggler-wrapper { display: none; }
+  
   .nav-primary {
-    // So we can attach the child navs to the top level
-    // position: relative;
-
     &__top-level-item {
       position: relative;
       z-index: $z-mobile-nav;
-    }
-
-    .has-submenu {
-      // Simply make relative so we can anchor sub menus to the link
-      // position: relative;
-      // Make some space for the indicator
-      // padding-right: 20px + $sm-bk__desktop-arrow-spacing + $sm-bk__desktop-arrow-spacing !important;
     }
 
     // Any child lists
     &__child-list {
       position: absolute;
 
+      li,
       a {
         display: block;
         position: relative;
       }
     }
 
-    // // Sub menu indicator styling
-    // .sub-arrow {
-    //   font: 900 #{$font-size}/#{$sm-bk__toggle-size} monospace !important;
-    //   height: 16px;
-    //   margin-top: -6px;
-    //   overflow: hidden;
-    //   position: absolute;
-    //   right: $sm-bk__desktop-item-padding-horizontal / 2;
-    //   text-align: center;
-    //   top: 50%;
-    //   width: 0.8em;
-    //
-    //   // Simply bin it if JS is not enabled
-    //   .no-js & { display: none; }
-    // }
-
-
-
-
-
-    // Scrolling arrows containers for tall sub menus - test sub menu: "Sub test" -> "more..." in the default download package
+    // These kick in if you have a ridiculous number of menu items in a dropdown
     .scroll-up,
     .scroll-down {
-      position: absolute;
-      display: none;
-      visibility: hidden;
-      overflow: hidden;
       background: rgba(black, 0.75);
+      display: none;
       height: 20px;
-      // width and position will be set automatically by the script
+      overflow: hidden;
+      position: absolute;
+      visibility: hidden;
     }
     .scroll-up-arrow,
     .scroll-down-arrow {
-      position: absolute;
-      top: 0px;
+      border-color: transparent transparent white transparent;
+      border-style: dashed dashed solid dashed;
+      border-width: 6px;
+      height: 0;
       left: 50%;
       margin-left: -6px;
-      // we will use one-side border to create a triangle so that we don't use a real background image, of course, you can use a real image if you like too
-      width: 0;
-      height: 0;
       overflow: hidden;
-      border-width: 6px; // tweak size of the arrow
-      border-style: dashed dashed solid dashed;
-      border-color: transparent transparent white transparent;
+      position: absolute;
+      top: 0px;
+      width: 0;
     }
     .scroll-down-arrow {
-      top: 8px;
-      border-style: solid dashed dashed dashed;
       border-color: white transparent transparent transparent;
+      border-style: solid dashed dashed dashed;
+      top: 8px;
     }
   }
 }

@@ -363,24 +363,34 @@ $nav-crumb-pad: ($margin-size / 2) !default;
 // DROPDOWN NAV
 // —————————————————————————————————————————————————————————————————————————————
 $nav-switch-point: lg !default;
-$nav-dd-vertical-padding: $margin-size / 1.5 !default;
-$nav-dd-horizontal-padding: $margin-size / 1.5 !default;
 
-// ----------------------------------------------------------
-// :: 1.7. Desktop main menu and sub menus
-// ----------------------------------------------------------
-// Items
-$sm-bk__desktop-item-padding-vertical: $margin-size !default;
-$sm-bk__desktop-item-padding-horizontal: $margin-size / 1.5 !default;
+$nav-primary-dd-vertical-padding: $margin-size / 1.5 !default;
+$nav-primary-dd-horizontal-padding: $margin-size / 1.5 !default;
 
-// Sub menu indicators
-$sm-bk__desktop-arrow-spacing: 4px !default;
+$nav-primary-desktop-item-padding-vertical: $margin-size / 1.25 !default;
+$nav-primary-desktop-item-padding-horizontal: $margin-size / 1.5 !default;
+
+$nav-primary-child-indicator: true;
+$nav-primary-child-indicator-image-url: "url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+')";
+
+
+// —————————————————————————————————————————————————————————————————————————————
+// HAMBURGER
+// —————————————————————————————————————————————————————————————————————————————
+$hamburger-layer-color: #fff !default;
+$hamburger-padding-x: $margin-size !default;
+$hamburger-padding-y: $margin-size !default;
+$hamburger-layer-width: 2rem !default;
+$hamburger-layer-height: 4px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-layer-border-radius: 0 !default;
+$hamburger-hover-opacity: 1 !default;
+$hamburger-hover-transition-duration: 0 !default;
 
 
 // —————————————————————————————————————————————————————————————————————————————
 // PADDING SPACER
 // —————————————————————————————————————————————————————————————————————————————
-
 $spacer-name: pad !default;
 
 // Default padding spacer is twice the grid's gutter size, you can change this
@@ -428,7 +438,7 @@ $site-logo-height: 47px !default;
 // —————————————————————————————————————————————————————————————————————————————
 
 // Ouput the site's max width utility class and define the name.
-$site-width-name: site-container !default;
+$site-width-name: container !default;
 
 
 // —————————————————————————————————————————————————————————————————————————————

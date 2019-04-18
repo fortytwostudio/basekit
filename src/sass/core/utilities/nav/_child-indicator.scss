@@ -1,0 +1,41 @@
+@if $nav-primary-child-indicator == true {
+  .js .nav-primary {
+    .has-submenu {
+      padding-right: 2em;
+
+      &::after {
+        background-image: unquote($nav-primary-child-indicator-image-url);
+        background-position: contain;
+        background-size: contain;
+        color: white;
+        content: '';
+        display: inline-block;
+        height: 1em;
+        margin-top: -0.5em;
+        opacity: 0.5;
+        position: absolute;
+        right: 0.5em;
+        top: 50%;
+        transform: rotate(0);
+        transition: opacity $speed-fast ease-in-out;
+        vertical-align: bottom;
+        width: 1em;
+      }
+
+      &.highlighted::after {
+        opacity: 1;
+      }
+
+      @include mq($until: $nav-switch-point) {
+        &::after {
+          transform: rotate(0);
+          transition: transform $speed-fast ease-in-out;
+        }
+
+        &.highlighted::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,34 @@
+.nav-primary {
+  a {
+    color: white;
+  }
+}
+// A bit of an experimental hack to add a background fill behind the nav and
+// hamburger toggle.
+.hamburger {
+  &-box {
+    z-index: $z-mobile-nav-toggle;
+  }
+
+  &.is-active {
+    &::before {
+      content: "";
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-height: 100vh;
+      min-width: 100vw;
+      overflow: auto;
+      z-index: $z-mobile-nav - 10;
+      background-color: rgba($color-primary--darker, 0.95);
+      pointer-events: none;
+    }
+  }
+}
+
 // —————————————————————————————————————————————————————————————————————————————
 // MOBILE NAV
 // Apply only until the specified breakpoint so we don't have to reset style
@@ -6,31 +37,42 @@
 @include mq($until: $nav-switch-point) {
   .nav-primary {
     a {
-      color: white;
-      padding: $nav-dd-vertical-padding $nav-dd-horizontal-padding;
+      padding: $nav-primary-dd-vertical-padding $nav-primary-dd-horizontal-padding;
+
+      &:hover,
+      &:focus,
+      &.highlighted {
+        background-color: $color-secondary--dark;
+      }
 
       &.current {
-        background-color: $color-primary--light;
-      }
-
-      &.highlighted,
-      &:hover,
-      &:focus {
-        background-color: $color-primary--darker;
+        font-weight: 900;
       }
     }
-  }
 
-  // Only style up the nav fully if js is enabled.
-  .js {
-    .nav-primary {
-      background-color: $color-primary--dark;
-      border-radius: 8px;
-      box-shadow: 0 12px 38px -8px rgba(black, 0.75);
+    // Only style up the nav fully if js is enabled.
+    .js & {
+      background-color: $color-secondary;
+      border-radius: $br-md;
+      box-shadow: 0 12px 38px -8px rgba(black, 1);
+      max-width: 400px;
+      overflow: hidden;
+      right: ($margin / 16) * 1rem;
+      top: calc(100% - #{($margin / 32) * 1rem});
+      width: calc(100% - #{($grid-gutter / 16) * 1rem});
 
+      li {
+        &:first-child > a {
+          border-radius: $br-md $br-md 0 0;
+        }
 
-      li:not(:first-child) {
-        border-top: 1px solid rgba(white, 0.1);
+        &:last-child > a {
+          border-radius: 0 0 $br-md $br-md;
+        }
+
+        &:not(:first-child) {
+          border-top: 1px solid rgba(white, 0.1);
+        }
       }
     }
   }
@@ -40,60 +82,58 @@
 // DESKTOP TOP LEVEL
 // —————————————————————————————————————————————————————————————————————————————
 @include mq($nav-switch-point) {
-  // Get rid of the hamburger at larger screen sizes
-  .nav-toggler-wrapper { display: none; }
 
-  .nav-primary__list {
-    // Top level items only
-    > li > a {
-      border-radius: $br-sm;
-      color: white;
-      padding: ($nav-dd-vertical-padding / 1.5) $nav-dd-horizontal-padding;
-      transition: $speed-slow ease-in-out;
-      transition-property: color, background-color;
-
-      &:hover,
-      &:focus,
-      &.highlighted {
-        background-color: white;
-        color: $color-primary;
-      }
-
-      &.current {
-        background-color: rgba(white, 0.25);
-        color: white;
-      }
-    }
-
-    li ul {
-      box-shadow: 0 2px 8px -2px rgba(black, 0.4);
-
-      a {
-        padding: $sm-bk__desktop-item-padding-vertical $sm-bk__desktop-item-padding-horizontal;
-        color: white;
-        background-color: $color-primary;
+  .nav-primary {
+    &__top-level-item {
+      > a {
+        border-radius: $br-md;
+        padding: ($nav-primary-desktop-item-padding-vertical / 1.5) $nav-primary-desktop-item-padding-horizontal;
+        transition: $speed-slow ease-in-out;
+        transition-property: color, background-color;
 
         &:hover,
         &:focus,
         &.highlighted {
-          background-color: $color-primary--darker;
+          background-color: rgba(white, 0.25);
         }
 
         &.current {
-          background-color: $color-primary--light;
+          background-color: rgba(white, 0.1);
+        }
+      }
+    }
+
+    &__child-list {
+      background-color: $color-secondary;
+      border-radius: $br-md;
+      box-shadow: 0 12px 38px -8px rgba(black, 1);
+
+      a {
+        padding: $nav-primary-desktop-item-padding-vertical $nav-primary-desktop-item-padding-horizontal;
+
+        &:hover,
+        &:focus,
+        &.highlighted {
+          background-color: $color-secondary--dark;
+        }
+
+        &.current {
+          font-weight: 900;
         }
       }
 
-      li:first-child > a {
-        border-radius: 4px 4px 0 0;
-      }
+      li {
+        &:first-child > a {
+          border-radius: $br-md $br-md 0 0;
+        }
 
-      li:last-child > a {
-        border-radius: 0 0 4px 4px;
-      }
+        &:last-child > a {
+          border-radius: 0 0 $br-md $br-md;
+        }
 
-      li:not(:first-child) {
-        border-top: 1px solid $color-primary--dark;
+        &:not(:first-child) {
+          border-top: 1px solid rgba(white, 0.1);
+        }
       }
     }
   }

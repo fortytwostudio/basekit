@@ -1,70 +1,3 @@
-// This file is a replication of the ./sass/core/_vars.scss defaults. Comment
-// out the variables you want to change in here and you will override the
-// default core variables without changing the core files.
-//
-//
-// // —————————————————————————————————————————————————————————————————————————————
-// // COLOUR SCHEME
-// // —————————————————————————————————————————————————————————————————————————————
-//
-// $color-body: #1a1a1a;
-// $color-text: #333;
-//
-// $color-primary: #0246AD;
-// $color-primary--lighter: mix($color-primary, white, 6%);
-// $color-primary--light: mix($color-primary, white, 45%);
-// $color-primary--dark: mix($color-primary, black, 60%);
-// $color-primary--darker: mix($color-primary, black, 30%);
-//
-// $color-secondary: #FF6679;
-// $color-secondary--lighter: mix($color-secondary, white, 8%);
-// $color-secondary--light: mix($color-secondary, white, 45%);
-// $color-secondary--dark: mix($color-secondary, black, 60%);
-// $color-secondary--darker: mix($color-secondary, black, 40%);
-//
-// $color-tertiary: #4AF2A1;
-// $color-tertiary--lighter: mix($color-tertiary, white, 10%);
-// $color-tertiary--light: mix($color-tertiary, white, 45%);
-// $color-tertiary--dark: mix($color-tertiary, black, 60%);
-// $color-tertiary--darker: mix($color-tertiary, black, 40%);
-//
-// $color-grey: #e7e8eb;
-// $color-grey--lighter: #f4f7f9;
-// $color-grey--light: #eef0f2;
-// $color-grey--dark: #9b9fa5;
-// $color-grey--darker: #515255;
-//
-// $color-white: white;
-// $color-white--tint: mix(black, white, 3%);
-// $color-black: black;
-// $color-black--tint: mix(white, black, 10%);
-//
-// // The following alert, warning and positive colours are AAA contrast compliant.
-// // Use the standard alert to draw attention.
-// $alert: #fbf4b7;
-// $alert--dark: #F2DA0F;
-// $alert--text: #4E3F00;
-//
-// // Use warning when something goes wrong.
-// $alert-negative: #fed0d0;
-// $alert-negative--dark: #FD9493;
-// $alert-negative--text: #520100;
-//
-// // Use positive to show a successful action.
-// $alert-positive: #cdf0cb;
-// $alert-positive--dark: #9EE29B;
-// $alert-positive--text: #034900;
-//
-//
-// // —————————————————————————————————————————————————————————————————————————————
-// // SITE WIDTH
-// // —————————————————————————————————————————————————————————————————————————————
-//
-// // Ouput the site's max width utility class and define the name.
-// // e.g. rename this to wrapper or wrap if you want those class names.
-$site-width-name: container;
-//
-//
 // // —————————————————————————————————————————————————————————————————————————————
 // // LAYOUT
 // // —————————————————————————————————————————————————————————————————————————————
@@ -94,13 +27,20 @@ $site-width-name: container;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
+// // MARGIN
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $margin-size: ($margin / 16) * 1rem;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
 // // TRANSITION SPEEDS
 // // —————————————————————————————————————————————————————————————————————————————
 //
 // // Set a standard range of animation speeds
+// $speed-slow: 0.5s;
 // $speed-normal: 0.25s;
 // $speed-fast: 0.1s;
-// $speed-slow: 0.5s;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
@@ -167,6 +107,59 @@ $site-width-name: container;
 // $code-text-color: currentColor;
 // $code-border: "1px solid " + rgba(mix(white, black, 50%), 0.5);
 // $code-font-size: 0.875rem;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // COLOUR SCHEME
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// $color-body: #1a1a1a;
+// $color-text: #333;
+//
+// $color-primary: #0246AD;
+// $color-primary--lighter: mix($color-primary, white, 6%);
+// $color-primary--light: mix($color-primary, white, 45%);
+// $color-primary--dark: mix($color-primary, black, 60%);
+// $color-primary--darker: mix($color-primary, black, 30%);
+//
+// $color-secondary: #FF6679;
+// $color-secondary--lighter: mix($color-secondary, white, 8%);
+// $color-secondary--light: mix($color-secondary, white, 45%);
+// $color-secondary--dark: mix($color-secondary, black, 60%);
+// $color-secondary--darker: mix($color-secondary, black, 40%);
+//
+// $color-tertiary: #4AF2A1;
+// $color-tertiary--lighter: mix($color-tertiary, white, 10%);
+// $color-tertiary--light: mix($color-tertiary, white, 45%);
+// $color-tertiary--dark: mix($color-tertiary, black, 60%);
+// $color-tertiary--darker: mix($color-tertiary, black, 40%);
+//
+// $color-grey: #e7e8eb;
+// $color-grey--lighter: #f4f7f9;
+// $color-grey--light: #eef0f2;
+// $color-grey--dark: #9b9fa5;
+// $color-grey--darker: #515255;
+//
+// $color-white: white;
+// $color-white--tint: mix(black, white, 3%);
+// $color-black: black;
+// $color-black--tint: mix(white, black, 10%);
+//
+// // The following alert, warning and positive colours are AAA contrast compliant.
+// // Use the standard alert to draw attention.
+// $alert: #fbf4b7;
+// $alert--dark: #F2DA0F;
+// $alert--text: #4E3F00;
+//
+// // Use warning when something goes wrong.
+// $alert-negative: #fed0d0;
+// $alert-negative--dark: #FD9493;
+// $alert-negative--text: #520100;
+//
+// // Use positive to show a successful action.
+// $alert-positive: #cdf0cb;
+// $alert-positive--dark: #9EE29B;
+// $alert-positive--text: #034900;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
@@ -341,7 +334,7 @@ $site-width-name: container;
 // $link-opacity-value: 0.5;
 // $link-transition-duration: ($speed-slow * 1.75);
 // $link-transition-hover-duration: $speed-slow;
-// $link-transition-props: unquote('color, opacity, border-color, background-color');
+// $link-transition-props: all;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
@@ -356,106 +349,48 @@ $site-width-name: container;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
-// // MARGIN
+// // NAV CLASS
 // // —————————————————————————————————————————————————————————————————————————————
+// // Button padding for the .nav-block class
+// $nav-rl-pad: $margin-size;
+// $nav-tb-pad: ($margin-size / 2);
 //
-// $margin-size: ($margin / 16) * 1rem;
+// // Spacer padding for the breadcrumb nav class
+// $nav-crumb-pad: ($margin-size / 2);
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
-// // NAVIGATION
+// // DROPDOWN NAV
 // // —————————————————————————————————————————————————————————————————————————————
-//
-// // Basic nav class configs
-// $nav-rl-pad: 1em;
-// $nav-tb-pad: 0.5em;
-// $nav-crumb-pad: 0.5em;
-//
-//
-// // ----------------------------------------------------------
-// // :: Main Dropdown Nav Variables
-// // ----------------------------------------------------------
-//
 // $nav-switch-point: lg;
 //
-// // -----------------------------------------------------------------------------------------------------------------
-// // 1. Theme Quick Settings (Variables)
-// // (for further control, you will need to dig into the actual CSS in 2.)
-// // -----------------------------------------------------------------------------------------------------------------
+// $nav-primary-dd-vertical-padding: $margin-size / 1.5;
+// $nav-primary-dd-horizontal-padding: $margin-size / 1.5;
 //
-// // ----------------------------------------------------------
-// // :: 1.1. Colors
-// // ----------------------------------------------------------
-// $sm-bk__base-color: #fff;
-// $sm-bk__gray: darken($sm-bk__base-color, 16.5%);
-// $sm-bk__gray-dark: darken($sm-bk__base-color, 33%);
-// $sm-bk__gray-darker: darken($sm-bk__base-color, 66%);
+// $nav-primary-desktop-item-padding-vertical: $margin-size / 1.25;
+// $nav-primary-desktop-item-padding-horizontal: $margin-size / 1.5;
+//
+// $nav-primary-child-indicator: true;
+// $nav-primary-child-indicator-image-url: "url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+')";
 //
 //
-// // ----------------------------------------------------------
-// // :: 1.2. Breakpoints
-// // ----------------------------------------------------------
-// $sm-bk__desktop-vp:  $nav-switch-point;    // switch from collapsible to desktop
-//
-//
-// // ----------------------------------------------------------
-// // :: 1.3. Typography
-// // ----------------------------------------------------------
-// $sm-bk__font-family: $font-family;
-// $sm-bk__font-size-base: $font-size;
-// $sm-bk__font-size-small: $font-size;
-// $sm-bk__line-height: 1.1;
-//
-//
-// // ----------------------------------------------------------
-// // :: 1.5. Collapsible main menu
-// // ----------------------------------------------------------
-// // Items
-// $sm-bk__collapsible-item-color: $sm-bk__gray-darker;
-// $sm-bk__collapsible-item-current-color: white;
-// $sm-bk__collapsible-item-current-bg: $color-primary;
-// $sm-bk__collapsible-item-disabled-color: darken($sm-bk__base-color, 20%);
-// $sm-bk__collapsible-item-padding-vertical: 13px;
-// $sm-bk__collapsible-item-padding-horizontal: 20px;
-//
-// // Items separators
-// $sm-bk__collapsible-separators-color: rgba(0, 0, 0, 0.05);
-//
-//
-// // ----------------------------------------------------------
-// // :: 1.6. Collapsible sub menus
-// // ----------------------------------------------------------
-// // Items text indentation for deeper levels
-// $sm-bk__collapsible-sub-item-indentation: 0.5em;
-//
-//
-// // ----------------------------------------------------------
-// // :: 1.7. Desktop main menu and sub menus
-// // ----------------------------------------------------------
-// // Menu box
-// $sm-bk__desktop-bg: $sm-bk__base-color;
-//
-// // Items
-// $sm-bk__desktop-item-color: $sm-bk__gray-darker;
-// $sm-bk__desktop-item-hover-bg: $sm-bk__gray;
-// $sm-bk__desktop-item-current-color: $sm-bk__base-color;
-// $sm-bk__desktop-item-current-bg: $sm-bk__gray-darker;
-// $sm-bk__desktop-item-disabled-color: darken($sm-bk__base-color, 20%);
-// $sm-bk__desktop-item-padding-vertical: 11px;
-// $sm-bk__desktop-item-padding-horizontal: 20px;
-//
-// // Items separators
-// $sm-bk__desktop-separators-size: 1px;
-// $sm-bk__desktop-separators-color: $color-grey;
-//
-// // Sub menu indicators
-// $sm-bk__desktop-arrow-spacing: 4px;
+// // —————————————————————————————————————————————————————————————————————————————
+// // HAMBURGER
+// // —————————————————————————————————————————————————————————————————————————————
+// $hamburger-layer-color: #fff;
+// $hamburger-padding-x: $margin-size;
+// $hamburger-padding-y: $margin-size;
+// $hamburger-layer-width: 2rem;
+// $hamburger-layer-height: 4px;
+// $hamburger-layer-spacing: 6px;
+// $hamburger-layer-border-radius: 0;
+// $hamburger-hover-opacity: 1;
+// $hamburger-hover-transition-duration: 0;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
 // // PADDING SPACER
 // // —————————————————————————————————————————————————————————————————————————————
-//
 // $spacer-name: pad;
 //
 // // Default padding spacer is twice the grid's gutter size, you can change this
@@ -496,6 +431,14 @@ $site-width-name: container;
 //
 // $site-logo-width: 205px;
 // $site-logo-height: 47px;
+//
+//
+// // —————————————————————————————————————————————————————————————————————————————
+// // SITE WIDTH
+// // —————————————————————————————————————————————————————————————————————————————
+//
+// // Ouput the site's max width utility class and define the name.
+// $site-width-name: container;
 //
 //
 // // —————————————————————————————————————————————————————————————————————————————
