@@ -1,3 +1,0 @@
-@function vw($target, $parent) {
-  @return (($target * 1px) / ($parent * 1px)) * 100vw;
-}

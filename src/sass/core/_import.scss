@@ -9,64 +9,61 @@
 @import "third-party/unit-conversion";
 
   // MIXINS & FUNCTONS, USEFUL THINGS
-@import "tools/aspect-ratio";
-@import "tools/hider";
-@import "tools/percentage";
-@import "tools/poly-fluid-sizing";
-@import "tools/rem";
-@import "tools/reverse-list";
-@import "tools/viewport-units";
-@import "tools/nav-item-indentation";
+@import "mixins/aspect-ratio";
+@import "mixins/hider";
+@import "mixins/poly-fluid-sizing";
+@import "mixins/rem";
+@import "mixins/nav-item-indentation";
 
 // GLOBALS RESET
-@import "utilities/general/reset";
+@import "general/reset";
 
 // LAYOUT GRID
-@import "utilities/layout/site-width";
-@import "utilities/layout/grid-layout";
-@import "utilities/layout/display";
-@import "utilities/layout/margins";
-@import "utilities/layout/padding-spacer";
-@import "utilities/layout/float";
-@import "utilities/layout/hide-content";
-@import "utilities/layout/position-over";
-@import "utilities/layout/fit-media";
-// @import "utilities/layout/full-width";
-@import "utilities/layout/widths";
-@import "utilities/layout/overflow";
-@import "utilities/layout/full-bleed";
-@import "utilities/layout/fit-image";
-@import "utilities/layout/align-center-center";
+@import "layout/site-width";
+@import "layout/grid-layout";
+@import "layout/display";
+@import "layout/margins";
+@import "layout/padding-spacer";
+@import "layout/float";
+@import "layout/hide-content";
+@import "layout/position-over";
+@import "layout/fit-media";
+// @import "layout/full-width";
+@import "layout/widths";
+@import "layout/overflow";
+@import "layout/full-bleed";
+@import "layout/fit-image";
+@import "layout/align-center-center";
 
 // UTILITY CLASSES
-@import "utilities/general/buttons";
-@import "utilities/general/dropdown";
-@import "utilities/general/dialog";
-@import "utilities/general/tabs";
-@import "utilities/general/accordion";
-// @import "utilities/general/alerts"; // DEPRECATED
-// @import "utilities/text/overflow-text";
-@import "utilities/general/forms";
-@import "utilities/general/borders";
-@import "utilities/general/border-radius";
-@import "utilities/general/box-shadow";
-@import "utilities/general/links";
-@import "utilities/general/skip-links";
-@import "utilities/general/arrows";
-@import "utilities/general/fortytwo-logo";
+@import "general/buttons";
+@import "general/dropdown";
+@import "general/dialog";
+@import "general/tabs";
+@import "general/accordion";
+// @import "general/alerts"; // DEPRECATED
+// @import "text/overflow-text";
+@import "general/forms";
+@import "general/borders";
+@import "general/border-radius";
+@import "general/box-shadow";
+@import "general/links";
+@import "general/skip-links";
+@import "general/arrows";
+@import "general/fortytwo-logo";
 
 // Recently moved from project folder to here
-@import "utilities/general/colors";
+@import "general/colors";
 
-@import "utilities/text/alignment";
-@import "utilities/text/list-styles";
-@import "utilities/text/user-content-rte";
-@import "utilities/text/hide-text";
+@import "text/alignment";
+@import "text/list-styles";
+@import "text/user-content-rte";
+@import "text/hide-text";
 
 
-@import "utilities/text/typography";
+@import "text/typography";
 
 // MAIN FRAMEWORK
-@import "utilities/nav/nav";
-@import "utilities/nav/_primary-navigation";
-@import "utilities/nav/_child-indicator";
+@import "nav/nav";
+@import "nav/_primary-navigation";
+@import "nav/_child-indicator";

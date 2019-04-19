@@ -1,8 +1,0 @@
-// A simple function to switch the order of lists
-@function reverse($list) {
-  $result: ();
-  @for $i from length($list) * -1 through -1 {
-    $result: append($result, nth($list, abs($i)));
-  }
-  @return $result;
-}
