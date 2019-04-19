@@ -1,10 +1,10 @@
 .js {
-  // .tab-button {
-  //   .is-active {
-  //     background-color: $color-primary;
-  //     color: white;
-  //   }
-  // }
+  .tab-button {
+    &.is-active {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
 
   .tab-panel {
     display: none;
