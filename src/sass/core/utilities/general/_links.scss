@@ -10,11 +10,13 @@
 
 // a:not([class*="btn-"])
 a {
-  transition-duration: $link-transition-duration;
-  transition-property: $link-transition-props;
+  [data-bk-links] & {
+    transition-duration: $link-transition-duration;
+    transition-property: $link-transition-props;
 
-  &:hover, &:focus {
-    transition-duration: $link-transition-hover-duration;
+    &:hover, &:focus {
+      transition-duration: $link-transition-hover-duration;
+    }
   }
 
   // Standard Colours
