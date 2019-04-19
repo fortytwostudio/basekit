@@ -29,32 +29,11 @@ $hamburger-hover-filter    : opacity(50%) !default;
 // Types (Remove or comment out what you don’t need)
 // ==================================================
 $hamburger-types: (
-  // 3dx,
-  // 3dx-r,
-  // 3dy,
-  // 3dy-r,
-  // arrow,
-  // arrow-r,
-  // arrowalt,
-  // arrowalt-r,
-  // boring,
-  // collapse,
-  // collapse-r,
-  // elastic,
-  // elastic-r,
-  // emphatic,
-  // emphatic-r,
   // slider,
   // slider-r,
-  // spring,
-  // spring-r,
-  // stand,
-  // stand-r,
   spin,
   // spin-r,
-  // squeeze,
-  // vortex,
-  // vortex-r
+  // squeeze
 ) !default;
 
 // Base Hamburger (We need this)
@@ -63,38 +42,11 @@ $hamburger-types: (
 
 // Hamburger types
 // ==================================================
-// @import "types/squeeze";
-
-// Alternatives:
-//
-// @import "types/slider";
 // @import "types/slider-r";
-@import "types/spin";
+// @import "types/slider";
 // @import "types/spin-r";
-
-// Not so impressed by these:
-//
-// @import "types/3dx";
-// @import "types/3dx-r";
-// @import "types/3dy";
-// @import "types/3dy-r";
-// @import "types/arrow";
-// @import "types/arrow-r";
-// @import "types/arrowalt";
-// @import "types/arrowalt-r";
-// @import "types/boring";
-// @import "types/collapse";
-// @import "types/collapse-r";
-// @import "types/elastic";
-// @import "types/elastic-r";
-// @import "types/emphatic";
-// @import "types/emphatic-r";
-// @import "types/spring";
-// @import "types/spring-r";
-// @import "types/stand";
-// @import "types/stand-r";
-// @import "types/vortex";
-// @import "types/vortex-r";
+@import "types/spin";
+// @import "types/squeeze";
 
 // ==================================================
 // Cooking up additional types:
