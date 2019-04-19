@@ -12,4 +12,8 @@
       list-style: unquote($list-number) unquote($list-number-position) none;
     }
   }
+
+  &--comma > li:not(:last-child)::after {
+    content: ",";
+  }
 }

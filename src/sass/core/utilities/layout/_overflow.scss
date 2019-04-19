@@ -1,15 +1,22 @@
-.ofh {
+.of-hide {
   overflow: hidden;
 }
 
-.ofv {
+.of-vis {
   overflow: visible;
 }
 
-.ofa {
+.of-auto {
   overflow: auto;
 }
 
-.ofs {
+.of-scroll {
   overflow: scroll;
+}
+
+// A hacky fix to prevent iOS and other mobile browser from allowing the whole
+// site to overflow horizontally thanks to the utility nav.
+.of-hide-x {
+  overflow-x: hidden;
+  position: relative;
 }

@@ -125,25 +125,3 @@
   &-negative { border-color: $alert-negative--dark; }
   &-positive { border-color: $alert-positive--dark; }
 }
-
-// $blend-modes: (
-//   // normal,
-//   multiply,
-//   screen,
-//   overlay,
-//   darken,
-//   lighten,
-//   // color-dodge,
-//   // color-burn,
-//   soft-light
-// );
-//
-// @each $mode in $blend-modes {
-//   .bg-bm-#{$mode} {
-//     background-blend-mode: $mode;
-//   }
-//
-//   .mix-bm-#{$mode} {
-//     mix-blend-mode: $mode;
-//   }
-// }

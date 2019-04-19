@@ -34,10 +34,19 @@
 // @import "utilities/layout/full-width";
 @import "utilities/layout/widths";
 @import "utilities/layout/overflow";
+@import "utilities/layout/full-bleed";
+@import "utilities/layout/fit-image";
+@import "utilities/layout/align-center-center";
 
 // UTILITY CLASSES
+@import "utilities/general/buttons";
+@import "utilities/general/dropdown";
+@import "utilities/general/dialog";
+@import "utilities/general/tabs";
+@import "utilities/general/accordion";
+// @import "utilities/general/alerts"; // DEPRECATED
+// @import "utilities/text/overflow-text";
 @import "utilities/general/forms";
-// @import "utilities/general/alerts"; // Removing this
 @import "utilities/general/borders";
 @import "utilities/general/border-radius";
 @import "utilities/general/box-shadow";
@@ -45,11 +54,17 @@
 @import "utilities/general/skip-links";
 @import "utilities/general/arrows";
 @import "utilities/general/fortytwo-logo";
+
+// Recently moved from project folder to here
+@import "utilities/general/colors";
+
 @import "utilities/text/alignment";
 @import "utilities/text/list-styles";
 @import "utilities/text/user-content-rte";
-// @import "utilities/text/overflow-text";
 @import "utilities/text/hide-text";
+
+
+@import "utilities/text/typography";
 
 // MAIN FRAMEWORK
 @import "utilities/nav/nav";
