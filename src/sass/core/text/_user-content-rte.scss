@@ -18,14 +18,6 @@
   //   }
   // }
 
-  hr {
-    background-color: rgba(mix(white, black, 50%), 0.5);
-    border: 0;
-    height: 1px;
-    margin-bottom: rem($margin * 2px);
-    margin-top: rem($margin * 2px);
-  }
-
   ul {
     margin-left: em($font-size * 1.25);
     // margin-bottom: rem($font-default-bottom-margin + 0px);
@@ -50,22 +42,22 @@
     }
   }
 
-  li {
-    p  {
-      margin-bottom: em(($margin / 2) * 1px);
-    }
-  }
-
-  dt {
-    font-weight: 700;
-
-    // &:after {
-    //   content: ":"
-    // }
-  }
-  dd + dt {
-    margin-top: em($margin * 1px)
-  }
+  // li {
+  //   p  {
+  //     margin-bottom: em(($margin / 2) * 1px);
+  //   }
+  // }
+  //
+  // dt {
+  //   font-weight: 700;
+  //
+  //   // &:after {
+  //   //   content: ":"
+  //   // }
+  // }
+  // dd + dt {
+  //   margin-top: em($margin * 1px)
+  // }
 
   // See: http://allthingssmitty.com/2016/11/28/use-attribute-selectors-with-empty-links/
   a[href]:empty::before {
