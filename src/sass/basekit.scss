@@ -6,22 +6,5 @@
 @import "core/import";
 
 // Your project specific and often changed files.
-@import "project/text";
-@import "project/colors";
 @import "project/site-logo";
-@import "project/buttons";
 @import "project/site-nav";
-@import "project/forms";
-
-// Project utilities that may get moved into core if they're used often.
-// @import "project/_utils/accordion";
-@import "project/_utils/fit-image";
-@import "project/_utils/overflows";
-@import "project/_utils/sticky";
-@import "project/_utils/cursor";
-
-// Newly added and work in combination with easy toggle state
-@import "project/_utils/dropdown";
-@import "project/_utils/dialog";
-@import "project/_utils/tabs";
-@import "project/_utils/accordion";
