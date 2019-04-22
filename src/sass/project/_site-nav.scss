@@ -42,7 +42,7 @@
       &:hover,
       &:focus,
       &.highlighted {
-        background-color: $color-secondary--dark;
+        background-color: $color-primary--dark;
       }
 
       &.current {
@@ -52,7 +52,7 @@
 
     // Only style up the nav fully if js is enabled.
     .js & {
-      background-color: $color-secondary;
+      background-color: $color-primary;
       border-radius: $br-md;
       box-shadow: 0 12px 38px -8px rgba(black, 1);
       max-width: 400px;
@@ -104,7 +104,7 @@
     }
 
     &__child-list {
-      background-color: $color-secondary;
+      background-color: $color-primary;
       border-radius: $br-md;
       box-shadow: 0 12px 38px -8px rgba(black, 1);
 
@@ -114,7 +114,7 @@
         &:hover,
         &:focus,
         &.highlighted {
-          background-color: $color-secondary--dark;
+          background-color: $color-primary--dark;
         }
 
         &.current {

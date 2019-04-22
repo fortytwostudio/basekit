@@ -37,12 +37,16 @@ a {
     color: $color-primary;
   }
 
-  [data-bk-links~="secondary"] & {
-    color: $color-secondary;
+  @if variable-exists(color-secondary) {
+    [data-bk-links~="secondary"] & {
+      color: $color-secondary;
+    }
   }
 
-  [data-bk-links~="tertiary"] & {
-    color: $color-tertiary;
+  @if variable-exists(color-tertiary) {
+    [data-bk-links~="tertiary"] & {
+      color: $color-tertiary;
+    }
   }
 
   // Background Colours
@@ -63,12 +67,16 @@ a {
     background-color: $color-primary;
   }
 
-  [data-bk-links~="bg-secondary"] & {
-    background-color: $color-secondary;
+  @if variable-exists(color-secondary) {
+    [data-bk-links~="bg-secondary"] & {
+      background-color: $color-secondary;
+    }
   }
 
-  [data-bk-links~="bg-tertiary"] & {
-    background-color: $color-tertiary;
+  @if variable-exists(color-tertiary) {
+    [data-bk-links~="bg-tertiary"] & {
+      background-color: $color-tertiary;
+    }
   }
 
   // Standard Hover Colours
@@ -97,15 +105,19 @@ a {
     }
   }
 
-  [data-bk-links~="h:secondary"] & {
-    &:hover, &:focus {
-      color: $color-secondary;
+  @if variable-exists(color-secondary) {
+    [data-bk-links~="h:secondary"] & {
+      &:hover, &:focus {
+        color: $color-secondary;
+      }
     }
   }
 
-  [data-bk-links~="h:tertiary"] & {
-    &:hover, &:focus {
-      color: $color-tertiary;
+  @if variable-exists(color-tertiary) {
+    [data-bk-links~="h:tertiary"] & {
+      &:hover, &:focus {
+        color: $color-tertiary;
+      }
     }
   }
 
@@ -135,15 +147,19 @@ a {
     }
   }
 
-  [data-bk-links~="h:bg-secondary"] & {
-    &:hover, &:focus {
-      background-color: $color-secondary;
+  @if variable-exists(color-secondary) {
+    [data-bk-links~="h:bg-secondary"] & {
+      &:hover, &:focus {
+        background-color: $color-secondary;
+      }
     }
   }
 
-  [data-bk-links~="h:bg-tertiary"] & {
-    &:hover, &:focus {
-      background-color: $color-tertiary;
+  @if variable-exists(color-tertiary) {
+    [data-bk-links~="h:bg-tertiary"] & {
+      &:hover, &:focus {
+        background-color: $color-tertiary;
+      }
     }
   }
 

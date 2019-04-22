@@ -9,17 +9,21 @@
   &-primary--dark { color: $color-primary--dark; }
   &-primary--darker { color: $color-primary--darker; }
 
-  &-secondary { color: $color-secondary;}
-  &-secondary--lighter { color: $color-secondary--lighter; }
-  &-secondary--light { color: $color-secondary--light; }
-  &-secondary--dark { color: $color-secondary--dark; }
-  &-secondary--darker { color: $color-secondary--darker; }
+  @if variable-exists(color-secondary) {
+    &-secondary { color: $color-secondary;}
+    &-secondary--lighter { color: $color-secondary--lighter; }
+    &-secondary--light { color: $color-secondary--light; }
+    &-secondary--dark { color: $color-secondary--dark; }
+    &-secondary--darker { color: $color-secondary--darker; }
+  }
 
-  &-tertiary { color: $color-tertiary;}
-  &-tertiary--lighter { color: $color-tertiary--lighter; }
-  &-tertiary--light { color: $color-tertiary--light; }
-  &-tertiary--dark { color: $color-tertiary--dark; }
-  &-tertiary--darker { color: $color-tertiary--darker; }
+  @if variable-exists(color-tertiary) {
+    &-tertiary { color: $color-tertiary;}
+    &-tertiary--lighter { color: $color-tertiary--lighter; }
+    &-tertiary--light { color: $color-tertiary--light; }
+    &-tertiary--dark { color: $color-tertiary--dark; }
+    &-tertiary--darker { color: $color-tertiary--darker; }
+  }
 
   &-grey { color: $color-grey;}
   &-grey--lighter { color: $color-grey--lighter; }
@@ -53,17 +57,21 @@
   &-primary--dark { background-color: $color-primary--dark; }
   &-primary--darker { background-color: $color-primary--darker; }
 
-  &-secondary { background-color: $color-secondary;}
-  &-secondary--lighter { background-color: $color-secondary--lighter; }
-  &-secondary--light { background-color: $color-secondary--light; }
-  &-secondary--dark { background-color: $color-secondary--dark; }
-  &-secondary--darker { background-color: $color-secondary--darker; }
+  @if variable-exists(color-secondary) {
+    &-secondary { background-color: $color-secondary;}
+    &-secondary--lighter { background-color: $color-secondary--lighter; }
+    &-secondary--light { background-color: $color-secondary--light; }
+    &-secondary--dark { background-color: $color-secondary--dark; }
+    &-secondary--darker { background-color: $color-secondary--darker; }
+  }
 
-  &-tertiary { background-color: $color-tertiary;}
-  &-tertiary--lighter { background-color: $color-tertiary--lighter; }
-  &-tertiary--light { background-color: $color-tertiary--light; }
-  &-tertiary--dark { background-color: $color-tertiary--dark; }
-  &-tertiary--darker { background-color: $color-tertiary--darker; }
+  @if variable-exists(color-tertiary) {
+    &-tertiary { background-color: $color-tertiary;}
+    &-tertiary--lighter { background-color: $color-tertiary--lighter; }
+    &-tertiary--light { background-color: $color-tertiary--light; }
+    &-tertiary--dark { background-color: $color-tertiary--dark; }
+    &-tertiary--darker { background-color: $color-tertiary--darker; }
+  }
 
   &-grey { background-color: $color-grey;}
   &-grey--lighter { background-color: $color-grey--lighter; }
@@ -95,17 +103,21 @@
   &-primary--dark { border-color: $color-primary--dark; }
   &-primary--darker { border-color: $color-primary--darker; }
 
-  &-secondary { border-color: $color-secondary;}
-  &-secondary--lighter { border-color: $color-secondary--lighter; }
-  &-secondary--light { border-color: $color-secondary--light; }
-  &-secondary--dark { border-color: $color-secondary--dark; }
-  &-secondary--darker { border-color: $color-secondary--darker; }
+  @if variable-exists(color-secondary) {
+    &-secondary { border-color: $color-secondary;}
+    &-secondary--lighter { border-color: $color-secondary--lighter; }
+    &-secondary--light { border-color: $color-secondary--light; }
+    &-secondary--dark { border-color: $color-secondary--dark; }
+    &-secondary--darker { border-color: $color-secondary--darker; }
+  }
 
-  &-tertiary { border-color: $color-tertiary;}
-  &-tertiary--lighter { border-color: $color-tertiary--lighter; }
-  &-tertiary--light { border-color: $color-tertiary--light; }
-  &-tertiary--dark { border-color: $color-tertiary--dark; }
-  &-tertiary--darker { border-color: $color-tertiary--darker; }
+  @if variable-exists(color-tertiary) {
+    &-tertiary { border-color: $color-tertiary;}
+    &-tertiary--lighter { border-color: $color-tertiary--lighter; }
+    &-tertiary--light { border-color: $color-tertiary--light; }
+    &-tertiary--dark { border-color: $color-tertiary--dark; }
+    &-tertiary--darker { border-color: $color-tertiary--darker; }
+  }
 
   &-grey { border-color: $color-grey;}
   &-grey--lighter { border-color: $color-grey--lighter; }
