@@ -116,29 +116,29 @@
 // $color-body: #1a1a1a;
 // $color-text: #333;
 //
-// $color-primary: #0246AD;
-// $color-primary--lighter: mix($color-primary, white, 6%);
-// $color-primary--light: mix($color-primary, white, 45%);
-// $color-primary--dark: mix($color-primary, black, 60%);
-// $color-primary--darker: mix($color-primary, black, 30%);
+// $color-primary: #6585ed;
+// $color-primary--lighter: scale-color($color-primary, $lightness: 85%);
+// $color-primary--light: scale-color($color-primary, $lightness: 50%);
+// $color-primary--dark: scale-color($color-primary, $lightness: -40%, $saturation: -20%);
+// $color-primary--darker: scale-color($color-primary, $lightness: -66%);
 //
-// $color-secondary: #FF6679;
-// $color-secondary--lighter: mix($color-secondary, white, 8%);
-// $color-secondary--light: mix($color-secondary, white, 45%);
-// $color-secondary--dark: mix($color-secondary, black, 60%);
-// $color-secondary--darker: mix($color-secondary, black, 40%);
+// $color-secondary: #f5756c;
+// $color-secondary--lighter: scale-color($color-secondary, $lightness: 85%);
+// $color-secondary--light: scale-color($color-secondary, $lightness: 50%);
+// $color-secondary--dark: scale-color($color-secondary, $lightness: -45%, $saturation: -25%);
+// $color-secondary--darker: scale-color($color-secondary, $lightness: -66%);
 //
-// $color-tertiary: #4AF2A1;
-// $color-tertiary--lighter: mix($color-tertiary, white, 10%);
-// $color-tertiary--light: mix($color-tertiary, white, 45%);
-// $color-tertiary--dark: mix($color-tertiary, black, 60%);
-// $color-tertiary--darker: mix($color-tertiary, black, 40%);
+// $color-tertiary: #50bcb6;
+// $color-tertiary--lighter: scale-color($color-tertiary, $lightness: 85%);
+// $color-tertiary--light: scale-color($color-tertiary, $lightness: 50%);
+// $color-tertiary--dark: scale-color($color-tertiary, $lightness: -40%);
+// $color-tertiary--darker: scale-color($color-tertiary, $lightness: -66%);
 //
-// $color-grey: #e7e8eb;
-// $color-grey--lighter: #f4f7f9;
-// $color-grey--light: #eef0f2;
-// $color-grey--dark: #9b9fa5;
-// $color-grey--darker: #515255;
+// $color-grey: lightgrey;
+// $color-grey--lighter: scale-color($color-grey, $lightness: 70%);
+// $color-grey--light: scale-color($color-grey, $lightness: 40%);
+// $color-grey--dark: scale-color($color-grey, $lightness: -40%);
+// $color-grey--darker: scale-color($color-grey, $lightness: -66%);
 //
 // $color-white: white;
 // $color-white--tint: mix(black, white, 3%);

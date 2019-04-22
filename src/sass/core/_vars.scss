@@ -116,29 +116,29 @@ $code-font-size: 0.875rem !default;
 $color-body: #1a1a1a !default;
 $color-text: #333 !default;
 
-$color-primary: #0246AD !default;
-$color-primary--lighter: mix($color-primary, white, 6%) !default;
-$color-primary--light: mix($color-primary, white, 45%) !default;
-$color-primary--dark: mix($color-primary, black, 60%) !default;
-$color-primary--darker: mix($color-primary, black, 30%) !default;
+$color-primary: #6585ed !default;
+$color-primary--lighter: scale-color($color-primary, $lightness: 85%) !default;
+$color-primary--light: scale-color($color-primary, $lightness: 50%) !default;
+$color-primary--dark: scale-color($color-primary, $lightness: -40%, $saturation: -20%) !default;
+$color-primary--darker: scale-color($color-primary, $lightness: -66%) !default;
 
-$color-secondary: #FF6679 !default;
-$color-secondary--lighter: mix($color-secondary, white, 8%) !default;
-$color-secondary--light: mix($color-secondary, white, 45%) !default;
-$color-secondary--dark: mix($color-secondary, black, 60%) !default;
-$color-secondary--darker: mix($color-secondary, black, 40%) !default;
+$color-secondary: #f5756c !default;
+$color-secondary--lighter: scale-color($color-secondary, $lightness: 85%) !default;
+$color-secondary--light: scale-color($color-secondary, $lightness: 50%) !default;
+$color-secondary--dark: scale-color($color-secondary, $lightness: -45%, $saturation: -25%) !default;
+$color-secondary--darker: scale-color($color-secondary, $lightness: -66%) !default;
 
-$color-tertiary: #4AF2A1 !default;
-$color-tertiary--lighter: mix($color-tertiary, white, 10%) !default;
-$color-tertiary--light: mix($color-tertiary, white, 45%) !default;
-$color-tertiary--dark: mix($color-tertiary, black, 60%) !default;
-$color-tertiary--darker: mix($color-tertiary, black, 40%) !default;
+$color-tertiary: #50bcb6 !default;
+$color-tertiary--lighter: scale-color($color-tertiary, $lightness: 85%) !default;
+$color-tertiary--light: scale-color($color-tertiary, $lightness: 50%) !default;
+$color-tertiary--dark: scale-color($color-tertiary, $lightness: -40%) !default;
+$color-tertiary--darker: scale-color($color-tertiary, $lightness: -66%) !default;
 
-$color-grey: #e7e8eb !default;
-$color-grey--lighter: #f4f7f9 !default;
-$color-grey--light: #eef0f2 !default;
-$color-grey--dark: #9b9fa5 !default;
-$color-grey--darker: #515255 !default;
+$color-grey: lightgrey;
+$color-grey--lighter: scale-color($color-grey, $lightness: 70%) !default;
+$color-grey--light: scale-color($color-grey, $lightness: 40%) !default;
+$color-grey--dark: scale-color($color-grey, $lightness: -40%) !default;
+$color-grey--darker: scale-color($color-grey, $lightness: -66%) !default;
 
 $color-white: white !default;
 $color-white--tint: mix(black, white, 3%) !default;
