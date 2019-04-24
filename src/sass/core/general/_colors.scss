@@ -4,25 +4,53 @@
 
 .color {
   &-primary { color: $color-primary;}
-  &-primary--lighter { color: $color-primary--lighter; }
-  &-primary--light { color: $color-primary--light; }
-  &-primary--dark { color: $color-primary--dark; }
-  &-primary--darker { color: $color-primary--darker; }
+  // Some conditionals to avoid creating classes if the colours are identical.
+  // Sometimes designers like to use black for example, you can't darken that.
+  @if $color-primary--light != $color-primary {
+    &-primary--light { color: $color-primary--light; }
+  }
+  @if $color-primary--lighter != $color-primary {
+    &-primary--lighter { color: $color-primary--lighter; }
+  }
+  @if $color-primary--dark != $color-primary {
+    &-primary--dark { color: $color-primary--dark; }
+  }
+  @if $color-primary--darker != $color-primary {
+    &-primary--darker { color: $color-primary--darker; }
+  }
 
   @if variable-exists(color-secondary) {
     &-secondary { color: $color-secondary;}
-    &-secondary--lighter { color: $color-secondary--lighter; }
-    &-secondary--light { color: $color-secondary--light; }
-    &-secondary--dark { color: $color-secondary--dark; }
-    &-secondary--darker { color: $color-secondary--darker; }
+
+    @if $color-secondary--light != $color-secondary {
+      &-secondary--light { color: $color-secondary--light; }
+    }
+    @if $color-secondary--lighter != $color-secondary {
+      &-secondary--lighter { color: $color-secondary--lighter; }
+    }
+    @if $color-secondary--dark != $color-secondary {
+      &-secondary--dark { color: $color-secondary--dark; }
+    }
+    @if $color-secondary--darker != $color-secondary {
+      &-secondary--darker { color: $color-secondary--darker; }
+    }
   }
 
   @if variable-exists(color-tertiary) {
     &-tertiary { color: $color-tertiary;}
-    &-tertiary--lighter { color: $color-tertiary--lighter; }
-    &-tertiary--light { color: $color-tertiary--light; }
-    &-tertiary--dark { color: $color-tertiary--dark; }
-    &-tertiary--darker { color: $color-tertiary--darker; }
+
+    @if $color-tertiary--light != $color-tertiary {
+      &-tertiary--light { color: $color-tertiary--light; }
+    }
+    @if $color-tertiary--lighter != $color-tertiary {
+      &-tertiary--lighter { color: $color-tertiary--lighter; }
+    }
+    @if $color-tertiary--dark != $color-tertiary {
+      &-tertiary--dark { color: $color-tertiary--dark; }
+    }
+    @if $color-tertiary--darker != $color-tertiary {
+      &-tertiary--darker { color: $color-tertiary--darker; }
+    }
   }
 
   &-grey { color: $color-grey;}
@@ -52,25 +80,53 @@
   }
 
   &-primary { background-color: $color-primary;}
-  &-primary--lighter { background-color: $color-primary--lighter; }
-  &-primary--light { background-color: $color-primary--light; }
-  &-primary--dark { background-color: $color-primary--dark; }
-  &-primary--darker { background-color: $color-primary--darker; }
+  // Some conditionals to avoid creating classes if the colours are identical.
+  // Sometimes designers like to use black for example, you can't darken that.
+  @if $color-primary--light != $color-primary {
+    &-primary--light { background-color: $color-primary--light; }
+  }
+  @if $color-primary--lighter != $color-primary {
+    &-primary--lighter { background-color: $color-primary--lighter; }
+  }
+  @if $color-primary--dark != $color-primary {
+    &-primary--dark { background-color: $color-primary--dark; }
+  }
+  @if $color-primary--darker != $color-primary {
+    &-primary--darker { background-color: $color-primary--darker; }
+  }
 
   @if variable-exists(color-secondary) {
     &-secondary { background-color: $color-secondary;}
-    &-secondary--lighter { background-color: $color-secondary--lighter; }
-    &-secondary--light { background-color: $color-secondary--light; }
-    &-secondary--dark { background-color: $color-secondary--dark; }
-    &-secondary--darker { background-color: $color-secondary--darker; }
+
+    @if $color-secondary--light != $color-secondary {
+      &-secondary--light { background-color: $color-secondary--light; }
+    }
+    @if $color-secondary--lighter != $color-secondary {
+      &-secondary--lighter { background-color: $color-secondary--lighter; }
+    }
+    @if $color-secondary--dark != $color-secondary {
+      &-secondary--dark { background-color: $color-secondary--dark; }
+    }
+    @if $color-secondary--darker != $color-secondary {
+      &-secondary--darker { background-color: $color-secondary--darker; }
+    }
   }
 
   @if variable-exists(color-tertiary) {
     &-tertiary { background-color: $color-tertiary;}
-    &-tertiary--lighter { background-color: $color-tertiary--lighter; }
-    &-tertiary--light { background-color: $color-tertiary--light; }
-    &-tertiary--dark { background-color: $color-tertiary--dark; }
-    &-tertiary--darker { background-color: $color-tertiary--darker; }
+
+    @if $color-tertiary--light != $color-tertiary {
+      &-tertiary--light { background-color: $color-tertiary--light; }
+    }
+    @if $color-tertiary--lighter != $color-tertiary {
+      &-tertiary--lighter { background-color: $color-tertiary--lighter; }
+    }
+    @if $color-tertiary--dark != $color-tertiary {
+      &-tertiary--dark { background-color: $color-tertiary--dark; }
+    }
+    @if $color-tertiary--darker != $color-tertiary {
+      &-tertiary--darker { background-color: $color-tertiary--darker; }
+    }
   }
 
   &-grey { background-color: $color-grey;}
@@ -98,25 +154,53 @@
   border-color: currentColor;
 
   &-primary { border-color: $color-primary;}
-  &-primary--lighter { border-color: $color-primary--lighter; }
-  &-primary--light { border-color: $color-primary--light; }
-  &-primary--dark { border-color: $color-primary--dark; }
-  &-primary--darker { border-color: $color-primary--darker; }
+  // Some conditionals to avoid creating classes if the colours are identical.
+  // Sometimes designers like to use black for example, you can't darken that.
+  @if $color-primary--light != $color-primary {
+    &-primary--light { border-color: $color-primary--light; }
+  }
+  @if $color-primary--lighter != $color-primary {
+    &-primary--lighter { border-color: $color-primary--lighter; }
+  }
+  @if $color-primary--dark != $color-primary {
+    &-primary--dark { border-color: $color-primary--dark; }
+  }
+  @if $color-primary--darker != $color-primary {
+    &-primary--darker { border-color: $color-primary--darker; }
+  }
 
   @if variable-exists(color-secondary) {
     &-secondary { border-color: $color-secondary;}
-    &-secondary--lighter { border-color: $color-secondary--lighter; }
-    &-secondary--light { border-color: $color-secondary--light; }
-    &-secondary--dark { border-color: $color-secondary--dark; }
-    &-secondary--darker { border-color: $color-secondary--darker; }
+
+    @if $color-secondary--light != $color-secondary {
+      &-secondary--light { border-color: $color-secondary--light; }
+    }
+    @if $color-secondary--lighter != $color-secondary {
+      &-secondary--lighter { border-color: $color-secondary--lighter; }
+    }
+    @if $color-secondary--dark != $color-secondary {
+      &-secondary--dark { border-color: $color-secondary--dark; }
+    }
+    @if $color-secondary--darker != $color-secondary {
+      &-secondary--darker { border-color: $color-secondary--darker; }
+    }
   }
 
   @if variable-exists(color-tertiary) {
     &-tertiary { border-color: $color-tertiary;}
-    &-tertiary--lighter { border-color: $color-tertiary--lighter; }
-    &-tertiary--light { border-color: $color-tertiary--light; }
-    &-tertiary--dark { border-color: $color-tertiary--dark; }
-    &-tertiary--darker { border-color: $color-tertiary--darker; }
+
+    @if $color-tertiary--light != $color-tertiary {
+      &-tertiary--light { border-color: $color-tertiary--light; }
+    }
+    @if $color-tertiary--lighter != $color-tertiary {
+      &-tertiary--lighter { border-color: $color-tertiary--lighter; }
+    }
+    @if $color-tertiary--dark != $color-tertiary {
+      &-tertiary--dark { border-color: $color-tertiary--dark; }
+    }
+    @if $color-tertiary--darker != $color-tertiary {
+      &-tertiary--darker { border-color: $color-tertiary--darker; }
+    }
   }
 
   &-grey { border-color: $color-grey;}

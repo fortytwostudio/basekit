@@ -1,4 +1,22 @@
-// // —————————————————————————————————————————————————————————————————————————————
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // LAYOUT
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $mq-breakpoints: (
+// //   sm: 520px,
+// //   md: 720px,
+// //   lg: 960px
+// // );
+// //
+// // // Define the column count for of your design.
+// // $grid-columns: 12;
+// // $grid-column-width: 60;
+// // $grid-gutter: 40;
+// //
+// // $margin: $grid-gutter / 2;
+// //
+// // // Once lower than the max-width the site width will never be larger than this.
+// // $site-width: calc(100% - #{$gri// —————————————————————————————————————————————————————————————————————————————
 // // LAYOUT
 // // —————————————————————————————————————————————————————————————————————————————
 //
@@ -432,7 +450,7 @@
 // $site-logo-width: 205px;
 // $site-logo-height: 47px;
 //
-//
+// 
 // // —————————————————————————————————————————————————————————————————————————————
 // // SITE WIDTH
 // // —————————————————————————————————————————————————————————————————————————————
@@ -477,3 +495,464 @@
 // $z-mobile-nav-toggle: 500;
 // $z-max: 600;
 //
+// d-gutter * 1px});
+// // // Halved gutter width for small screens
+// // $site-width-sm: calc(100% - #{$grid-gutter / 2 * 1px});
+// // // Fallback value for old browsers
+// // $site-width-fallback: 96%;
+// //
+// // // Don't touch this if you don't know what it does… $max-width gets used often.
+// // $max-width: ($grid-column-width * $grid-columns) + ($grid-gutter * $grid-columns);
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // MARGIN
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $margin-size: ($margin / 16) * 1rem;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // TRANSITION SPEEDS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Set a standard range of animation speeds
+// // $speed-slow: 0.5s;
+// // $speed-normal: 0.25s;
+// // $speed-fast: 0.1s;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // BORDER RADIUS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Set your radius values, more can be added if you include them in the map
+// // // below. xs and xl aren't included in the map so they aren't available as
+// // // classes for your markup.
+// // $br-xs: 2px;
+// // $br-sm: 3px;
+// // $br-md: 5px;
+// // $br-lg: 8px;
+// // $br-xl: 16px;
+// //
+// // // Include them in this map to have Sass generate the relevant classes. You can
+// // // also add them straight into here if you are never likely to use the
+// // // standalone variables.
+// // $border-radius-sizes: (
+// //   sm: $br-sm,
+// //   md: $br-md,
+// //   lg: $br-lg
+// // );
+// //
+// // // The pill br class will have rounded sides with a flat top/bottom.
+// // $br-pill: 1000px;
+// //
+// // // The round class will create a circle (if the object is square).
+// // $br-round: 100%;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // BORDERS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $border-width-default: 1px;
+// //
+// // $bdr-sm: 3px;
+// // $bdr-md: 4px;
+// // $bdr-lg: 6px;
+// //
+// // $borders: (
+// //   sm: $bdr-sm,
+// //   md: $bdr-md,
+// //   lg: $bdr-lg
+// // );
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // BUTTONS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $bk-button-padding-base: 0.4em;
+// // $bk-button-padding: $bk-button-padding-base ($bk-button-padding-base * 2);
+// // $bk-button-padding-lg: ($bk-button-padding-base * 1.5) ($bk-button-padding-base * 3);
+// // $bk-button-padding-sm: ($bk-button-padding-base / 4) ($bk-button-padding-base * 1.5);
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // CODE
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $code-bg-color: rgba(128,128,128,0.1);
+// // $code-text-color: currentColor;
+// // $code-border: "1px solid " + rgba(mix(white, black, 50%), 0.5);
+// // $code-font-size: 0.875rem;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // COLOUR SCHEME
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $color-body: #1a1a1a;
+// // $color-text: #333;
+// //
+// // $color-primary: #6585ed;
+// // $color-primary--lighter: scale-color($color-primary, $lightness: 85%);
+// // $color-primary--light: scale-color($color-primary, $lightness: 50%);
+// // $color-primary--dark: scale-color($color-primary, $lightness: -40%, $saturation: -20%);
+// // $color-primary--darker: scale-color($color-primary, $lightness: -66%);
+// //
+// // $color-secondary: #f5756c;
+// // $color-secondary--lighter: scale-color($color-secondary, $lightness: 85%);
+// // $color-secondary--light: scale-color($color-secondary, $lightness: 50%);
+// // $color-secondary--dark: scale-color($color-secondary, $lightness: -45%, $saturation: -25%);
+// // $color-secondary--darker: scale-color($color-secondary, $lightness: -66%);
+// //
+// // $color-tertiary: #50bcb6;
+// // $color-tertiary--lighter: scale-color($color-tertiary, $lightness: 85%);
+// // $color-tertiary--light: scale-color($color-tertiary, $lightness: 50%);
+// // $color-tertiary--dark: scale-color($color-tertiary, $lightness: -40%);
+// // $color-tertiary--darker: scale-color($color-tertiary, $lightness: -66%);
+// //
+// // $color-grey: lightgrey;
+// // $color-grey--lighter: scale-color($color-grey, $lightness: 70%);
+// // $color-grey--light: scale-color($color-grey, $lightness: 40%);
+// // $color-grey--dark: scale-color($color-grey, $lightness: -40%);
+// // $color-grey--darker: scale-color($color-grey, $lightness: -66%);
+// //
+// // $color-white: white;
+// // $color-white--tint: mix(black, white, 3%);
+// // $color-black: black;
+// // $color-black--tint: mix(white, black, 10%);
+// //
+// // // The following alert, warning and positive colours are AAA contrast compliant.
+// // // Use the standard alert to draw attention.
+// // $alert: #fbf4b7;
+// // $alert--dark: #F2DA0F;
+// // $alert--text: #4E3F00;
+// //
+// // // Use warning when something goes wrong.
+// // $alert-negative: #fed0d0;
+// // $alert-negative--dark: #FD9493;
+// // $alert-negative--text: #520100;
+// //
+// // // Use positive to show a successful action.
+// // $alert-positive: #cdf0cb;
+// // $alert-positive--dark: #9EE29B;
+// // $alert-positive--text: #034900;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // DISPLAY
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Output the display (block, inline-block) utility class.
+// // $display-responsive: false;
+// // $display-block-class: true;
+// // $display-inline-block-class: true;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // FIT MEDIA
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Output CSS for the fit-media fallback.
+// // $fit-media-fallback-css: true;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // FLOATS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Output the float utility class… ooh nasty.
+// // $floats-responsive: false;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // FONTS & TYPOGRAPHY
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'arial', sans-serif;
+// //
+// // $font-family--serif: georgia, 'nimbus roman no9 l', freeserif, times, 'times new roman', serif;
+// //
+// // $font-family--mono: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+// //
+// // $font-size: 16px;
+// //
+// // $font-line-height: 1.5625;
+// //
+// // $font-weight: 400;
+// //
+// // $font-weight-headings: $font-weight;
+// //
+// // // Output debugging class for rich text editor content.
+// // $rte-debugging: false;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // FORMS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // FONTS
+// // // Set family to same as global
+// // $fh-font-family: inherit;
+// // // Allow size to inherit the containing or global font size
+// // $fh-font-size: inherit;
+// // // Set color to global text color
+// // $fh-font-color: $color-text;
+// //
+// // // BORDERS
+// // // Nice rem border radius so they scale, set to 0 to disable
+// // $fh-border-radius: em(3px);
+// // // Thickness, obviously
+// // $fh-border-width: 1px;
+// // // You'll rarely change this
+// // $fh-border-style: solid;
+// // // Set borders to a % of the text color
+// // $fh-border-color: lighten($fh-font-color, 50%);
+// //
+// // // FIELD TYPES
+// // // We want to set a uniform hight, in ems so it scales
+// // $fh-input-height: 2.5em; // 16 * 2.5 = 40px
+// // // Best to make it 100% then adjust the container width, however some field types like number may need adjustments
+// // $fh-input-width: 100%;
+// // // Default input background
+// // $fh-input-bg-color: #fff;
+// // // The clicked/tapped/focused colours
+// // $fh-focus-bg-color: #eee;
+// // $fh-focus-border-color: darken($fh-border-color, 25%);
+// // $fh-focus-font-color: $fh-font-color;
+// //
+// // // VENDOR SELECT STYLING
+// // // Use the default select dropdown arrows or roll our own?
+// // $fh-allow-select-vendor-styling: false;
+// //
+// // // FIELDSET & LEGENDS
+// // // Set true to remove fieldset styling and hide the legend text
+// // $fh-fieldset-bare: true;
+// //
+// // // BUTTONS
+// // // If you've read the above comments then this stuff should make sense :P
+// // $fh-button-height: 2.5em;
+// // $fh-button-width: 100%;
+// // $fh-button-max-width: em(140px);
+// // $fh-button-font-weight: 700;
+// // $fh-button-font-color: $fh-font-color;
+// // $fh-button-bg-color: $fh-focus-bg-color;
+// // $fh-button-hover-bg-color: $fh-border-color;
+// // $fh-button-hover-font-color: $fh-font-color;
+// //
+// // // LAYOUT
+// // // We pretty much always want block layout
+// // $fh-display: block;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // FORTYTWO LOGO
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Other sizes to try: 60px by 15px, or 64px by 16px
+// // $colophon-logo-width: 56px;
+// // $colophon-logo-height: 14px;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // GRID LAYOUT
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // /// Name your layout data attribute, should start with `data-`.
+// // ///
+// // /// @example
+// // ///   <div data-bk="…">
+// // $bk-grid-name: data-bk-layout;
+// //
+// // /// Enable or disable max-width breakpoint CSS. In simpler designs you may not
+// // /// ever utilise max-width breakpoints, set this `false` in that case to save
+// // /// users downloading unnecessary CSS.
+// // ///
+// // /// @example
+// // ///   <div data-bk="to:m:8  to:l:6">
+// // $bk-grid-mq-to: true;
+// //
+// // /// By default columns get a (half gutter) margin around them, this variable
+// // /// defines the smaller size margin. Typically it will be half but you can tweak
+// // /// as necessary.
+// // ///
+// // /// @todo Consider variable name confusion.
+// // /// @access private
+// // $bk-grid-padding-small: $margin / 2;
+// //
+// // /// By default columns get a (half `$gutter`) margin around them, this variable
+// // /// defines the larger size margin. Typically it will be double but you can
+// // /// tweak as necessary.
+// // ///
+// // /// @todo Consider variable name confusion.
+// // /// @access private
+// // $bk-grid-padding-large: $margin * 2;
+// //
+// // /// Columns can be pushed (left or right) using padding CSS, you'll never want
+// // /// to push the a layout the total number of columns so here we subtract one
+// // /// from the number.
+// // /// @access private
+// // $bk-push-columns: $grid-columns - 1;
+// //
+// // /// Enable/Disable push (towards the right |-->) CSS.
+// // $bk-push-right: true;
+// //
+// // /// Enable/Disable push (towards the left <--|) CSS.
+// // /// Use cases for this are quite small since blocks naturally position over to
+// // /// the left. However, it can be useful if you align blocks with
+// // /// `text-align: right` and then need to push a block to the left.
+// // $bk-push-left: true;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // LINKS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $link-opacity-value: 0.5;
+// // $link-transition-duration: ($speed-slow * 1.75);
+// // $link-transition-hover-duration: $speed-slow;
+// // $link-transition-props: all;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // LIST STYLES
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Configure the list utility class
+// // $list-bullet: "disc";
+// // $list-bullet-position: "outside";
+// // $list-number: "decimal-leading-zero";
+// // $list-number-position: "outside";
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // NAV CLASS
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // Button padding for the .nav-block class
+// // $nav-rl-pad: $margin-size;
+// // $nav-tb-pad: ($margin-size / 2);
+// //
+// // // Spacer padding for the breadcrumb nav class
+// // $nav-crumb-pad: ($margin-size / 2);
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // DROPDOWN NAV
+// // // —————————————————————————————————————————————————————————————————————————————
+// // $nav-switch-point: lg;
+// //
+// // $nav-primary-dd-vertical-padding: $margin-size / 1.5;
+// // $nav-primary-dd-horizontal-padding: $margin-size / 1.5;
+// //
+// // $nav-primary-desktop-item-padding-vertical: $margin-size / 1.25;
+// // $nav-primary-desktop-item-padding-horizontal: $margin-size / 1.5;
+// //
+// // $nav-primary-child-indicator: true;
+// // $nav-primary-child-indicator-image-url: "url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49ImFyY3MiIHN0cm9rZS13aWR0aD0iMyIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNXYxNE01IDEyaDE0Ii8+PC9zdmc+')";
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // HAMBURGER
+// // // —————————————————————————————————————————————————————————————————————————————
+// // $hamburger-layer-color: #fff;
+// // $hamburger-padding-x: $margin-size;
+// // $hamburger-padding-y: $margin-size;
+// // $hamburger-layer-width: 2rem;
+// // $hamburger-layer-height: 4px;
+// // $hamburger-layer-spacing: 6px;
+// // $hamburger-layer-border-radius: 0;
+// // $hamburger-hover-opacity: 1;
+// // $hamburger-hover-transition-duration: 0;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // PADDING SPACER
+// // // —————————————————————————————————————————————————————————————————————————————
+// // $spacer-name: pad;
+// //
+// // // Default padding spacer is twice the grid's gutter size, you can change this
+// // // suite your needs. For example 1.5 may also work.
+// // $spacer-size: ($grid-gutter * 1px) * 2;
+// //
+// // // Then we calculate as appropriate for the additional sizes
+// // $spacer-size-xs: $spacer-size / 4;
+// // $spacer-size-sm: $spacer-size / 2;
+// // $spacer-size-lg: $spacer-size * 2;
+// // $spacer-size-xl: $spacer-size * 4;
+// //
+// // $spacer-min: map-get($mq-breakpoints, sm);
+// // $spacer-max: ($max-width * 1px);
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // POSITION OVER
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Fine tune the position over utility class options.
+// // // Find this in core/utility.position-over.scss
+// // $position-over-css: true;
+// // $position-over-tr: false;
+// // $position-over-br: false;
+// // $position-over-bl: false;
+// // $position-over-m: true;
+// // $position-over-ml: true;
+// // $position-over-mr: false;
+// // $position-over-mb: false;
+// // $position-over-mt: false;
+// // $position-over-fit-height: false;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // SITE LOGO
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $site-logo-width: 205px;
+// // $site-logo-height: 47px;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // SITE WIDTH
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Ouput the site's max width utility class and define the name.
+// // $site-width-name: container;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // TABLES
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $tables-width: 1px;
+// // $tables-color: #eee;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // USER CONTENT / RICH TEXT
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Set a default bottom margin size for consistency across text elements.
+// // $font-default-bottom-margin: $margin;
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // WIDTHS
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // $widths: (15, 20, 25, 33.333333, 50, 66.666666, 75, 80, 85, 100);
+// //
+// //
+// // // —————————————————————————————————————————————————————————————————————————————
+// // // Z-INDEX
+// // // —————————————————————————————————————————————————————————————————————————————
+// //
+// // // Set some base z-index layers to work with
+// // $z-min: 1;
+// // $z-content: 100;
+// // $z-fit-media: 200;
+// // $z-position-over: 300;
+// // $z-mobile-nav: 400;
+// // $z-mobile-nav-toggle: 500;
+// // $z-max: 600;
+// //
