@@ -1,0 +1,32 @@
+/**
+ * ASPECT RATIO
+ * A utility that provides you with a predictable aspect ratio
+ *
+ * ratio-wide: a 16:9 aspect
+ * ratio-square: a perfect square
+ */
+[class*='ar-'] {
+  display: block;
+  position: relative;
+
+  > * {
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    // object-position: left;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.ar {
+  &-wide {
+    padding-top: 56.25%;
+  }
+
+  &-sq {
+    padding-top: 100%;
+  }
+}
