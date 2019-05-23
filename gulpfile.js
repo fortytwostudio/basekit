@@ -36,7 +36,7 @@ gulp.task("cleancss", () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(cleanCSS({
       compatibility: '*',
-      // format: 'beautify',
+      format: 'beautify',
       level: 2
     }))
     .pipe(autoprefixer({
