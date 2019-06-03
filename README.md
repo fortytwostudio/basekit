@@ -2,7 +2,7 @@
 
 Basekit is a "frontend toolkit" of sorts used by the developers at [FortyTwo Studio](https://www.fortytwo.studio). It has come about over many years to suit the way we work and aims to speed up development time.
 
-Currently Basekit has a unique layout model based on flex box and the `data-bk-layout` attribute.
+Currently Basekit has a unique layout model based on flex box and the `data-bk-layout` attribute. Check https://github.com/philipwalton/flexbugs if you run into problems.
 
 ## First things first:
 

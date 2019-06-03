@@ -8,3 +8,54 @@
 // Your project specific and often changed files.
 @import "project/site-logo";
 @import "project/site-nav";
+
+._bgc {
+  &\:1 {
+    background-color: $color-primary;
+
+    &\:hover {
+      &:hover, &:focus {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &\:2 {
+    background-color: $color-secondary;
+
+    &\:hover {
+      &:hover, &:focus {
+        background-color: $color-secondary;
+      }
+    }
+  }
+
+  &\:3 {
+    background-color: $color-tertiary;
+
+    &\:hover {
+      &:hover, &:focus {
+        background-color: $color-tertiary;
+      }
+    }
+  }
+}
+
+._anim {
+  &\:bgc {
+    transition: background-color;
+  }
+}
+._speed {
+  &\:slow {
+    transition-duration: $speed-slow;
+  }
+
+  &\:normal {
+    transition-duration: $speed-normal;
+  }
+
+  &\:fast {
+    transition-duration: $speed-fast;
+  }
+}
